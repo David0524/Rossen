@@ -1,0 +1,16 @@
+[
+  {
+    "beat_id": "05-06-b03",
+    "clip_role": "victim_interview",
+    "orientation": "horizontal",
+    "queries": {
+      "anchor": ["retired police officer PayPal scam $10,000"],
+      "news": ["retired officer loses savings PayPal scam",
+               "former police officer scammed out of thousands",
+               "police officer falls for PayPal scam"],
+      "victim": ["I was a cop and I got scammed",
+                 "he spent his career busting criminals then got scammed"],
+      "platform": ["#paypalscam cop", "retired cop scammed"]
+    }
+  }
+]
