@@ -13,8 +13,8 @@ Outcomes: PICK (verified outcue) · LOCATED (case found, no caption-able source)
 | Beat | Role | Or. | Outcome | Why / source |
 |---|---|---|---|---|
 | F2b-b01 | victim_interview | H | LOCATED | Del Mastro $5,400 case on ABC7 SF (news_web); no captioned YT twin |
-| F2b-b02 | explainer_demo | H | SWAP | Ann Dickherber demo not discretely uploaded; FOX4 Dallas generic expert only |
-| F2b-b03 | evidence | H | SWAP | Rachel/MO recorded call is FOX2 St. Louis (news_web); KATU Hillsboro = diff. family |
+| F2b-b02 | explainer_demo | H | PICK (swap) | FOX4 Dallas gMXuQ4MusPk 2:00-2:12 "it's my voice artificially generated" (Greg Bull/Noviello; script rewritten off Dickherber) |
+| F2b-b03 | victim_interview | H | PICK (swap) | KATU sPIIFyPyKKE 1:37-2:30 "It's your child" (Tina/Hillsboro $2,500; reframed from raw-audio to recount) |
 | F2b-b04 | authority_report | H | LOCATED | Olathe PD kids-voice case on KMBC/KCTV (news_web); no captioned YT twin |
 | F2b-b05 | victim_interview | H | LOCATED | Schildhorn on FOX29/CNN (news_web); YouTube only AI-slop reposts |
 | F2b-b06 | victim_interview | H | PICK | WFLA As4nS5aOVnw 0:38-1:02 "so she gave it to them" (Brightwell $15K, exact) |
@@ -25,7 +25,7 @@ Outcomes: PICK (verified outcue) · LOCATED (case found, no caption-able source)
 | F2b-b11 | evidence | V | EMPTY | No nurse/coach/tuition scam-text screen recording (vertical evidence) |
 | F2b-b12 | explainer_demo | H | EMPTY | No Target Circle barcode-scan demo (KPRC hit = boarding-pass barcodes) |
 
-**Yield:** 3 PICK / 3 LOCATED / 2 SWAP / 4 EMPTY of 12.
+**Yield:** 5 PICK (incl. 2 approved swaps) / 3 LOCATED / 4 EMPTY of 12.
 **Pattern:** vertical `evidence` 0/2 (both empty) — worst category, again. Named
 victims frequently source only to news_web (no captions) — LOCATED, not PICK.
 `authority_report` on <2-week-old federal alerts (b07) too new for captioned video.

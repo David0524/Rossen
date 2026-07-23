@@ -1,38 +1,14 @@
 [
-  {
-    "beat_id": "F2b-b06",
-    "url": "https://www.youtube.com/watch?v=As4nS5aOVnw",
-    "title": "AI Voice Scam Tricks Mother Out of Thousands | Deep Dive",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "uploader": "WFLA News Channel 8",
-    "segments": [
-      {"in": "0:38", "out": "1:02", "outcue": "so she gave it to them"}
-    ],
-    "fit_note": "Exact case: Sharon Brightwell, Dover FL, cloned daughter's voice, $15,000 bail. On camera. This WFLA cut does not show the courier-at-the-door detail; FOX13 Tampa's version does but is news_web (no captions)."
-  },
-  {
-    "beat_id": "F2b-b09",
-    "url": "https://www.youtube.com/watch?v=rkZMNuoNfqA",
-    "title": "FTC: Scammers stole $445M from older Americans",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "uploader": "WPRI 12 News",
-    "segments": [
-      {"in": "1:25", "out": "1:48", "outcue": "deposit money into a Bitcoin ATM"}
-    ],
-    "fit_note": "Delivers FTC impersonation + the Bitcoin-ATM payload the beat sets up. Does NOT cover the specific 'fake FTC agents / badge photo' framing (FOX59/CBS4 Indy have it but returned no captions)."
-  },
-  {
-    "beat_id": "F2b-b10",
-    "url": "https://www.youtube.com/watch?v=JUbuCpPGX3g",
-    "title": "Where's The Money: Beware these back-to-school shopping scams",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "uploader": "WCNC Charlotte",
-    "segments": [
-      {"in": "0:27", "out": "0:55", "outcue": "the S standing for secure"}
-    ],
-    "fit_note": "Delivers the fake-store/clickbait-website + malware payload. Not the IRS-CI/Hardeman Atlanta framing specifically (that VO attribution can ride over this footage)."
-  }
+  {"beat_id":"F2b-b01","status":"manual_clip","url":"https://abc7news.com/post/bay-area-mom-thousands-scammers-use-ai-mimic-daughters-voice-fake-kidnapping-part-growing-trend/19154381/","platform":"news_web","source_type":"affiliate","uploader":"ABC7 San Francisco","note":"Exact case: Deborah Del Mastro, Bay Area, $5,400, cloned daughter Sarah. No captions — pull on-camera soundbite manually."},
+  {"beat_id":"F2b-b02","status":"pick_swap","url":"https://www.youtube.com/watch?v=gMXuQ4MusPk","platform":"youtube","source_type":"affiliate","uploader":"FOX 4 Dallas-Fort Worth","segments":[{"in":"2:00","out":"2:12","outcue":"it's my voice artificially generated"}],"note":"SWAP: expert Greg Bull (TNS) + reporter Steve Noviello clones his own voice on air. Script updated off Ann Dickherber."},
+  {"beat_id":"F2b-b03","status":"pick_swap","url":"https://www.youtube.com/watch?v=sPIIFyPyKKE","platform":"youtube","source_type":"affiliate","uploader":"KATU News","segments":[{"in":"1:37","out":"2:30","outcue":"It's your child"}],"note":"SWAP: Tina, Hillsboro OR, husband wired $2,500. Recount, not raw call audio. Script updated off Rachel/Missouri."},
+  {"beat_id":"F2b-b04","status":"manual_clip","url":"https://www.kmbc.com/article/olathe-police-warn-scam-child-abduction-money/70238283","platform":"news_web","source_type":"affiliate","uploader":"KMBC 9 (Kansas City)","note":"Exact case: Olathe PD kids-voice kidnapping reports. No captions — pull manually."},
+  {"beat_id":"F2b-b05","status":"manual_clip","url":"https://www.fox29.com/news/philadelphia-attorney-raises-awareness-after-nearly-falling-victim-to-elaborate-phone-scam","platform":"news_web","source_type":"affiliate","uploader":"FOX 29 Philadelphia","note":"Exact case: Gary Schildhorn, Philadelphia attorney, cloned son's voice. No captions — pull manually."},
+  {"beat_id":"F2b-b06","status":"pick","url":"https://www.youtube.com/watch?v=As4nS5aOVnw","platform":"youtube","source_type":"affiliate","uploader":"WFLA News Channel 8","segments":[{"in":"0:38","out":"1:02","outcue":"so she gave it to them"}],"note":"Exact case: Sharon Brightwell, Dover FL, $15,000. Courier detail not in this cut."},
+  {"beat_id":"F2b-b07","status":"empty","note":"FBI IC3 alert I-072026-PSA only 5 days old; no case-match video yet."},
+  {"beat_id":"F2b-b08","status":"empty","note":"Vertical evidence: no fake-IC3-site/deepfake-official screen recording found."},
+  {"beat_id":"F2b-b09","status":"pick","url":"https://www.youtube.com/watch?v=rkZMNuoNfqA","platform":"youtube","source_type":"affiliate","uploader":"WPRI 12","segments":[{"in":"1:25","out":"1:48","outcue":"deposit money into a Bitcoin ATM"}],"note":"FTC impersonation + Bitcoin-ATM payload. Not the specific fake-agent/badge framing."},
+  {"beat_id":"F2b-b10","status":"pick","url":"https://www.youtube.com/watch?v=JUbuCpPGX3g","platform":"youtube","source_type":"affiliate","uploader":"WCNC Charlotte","segments":[{"in":"0:27","out":"0:55","outcue":"the S standing for secure"}],"note":"Back-to-school fake-store/malware payload. Not IRS-CI/Hardeman specific."},
+  {"beat_id":"F2b-b11","status":"empty","note":"Vertical evidence: no nurse/coach/tuition scam-text screen recording found."},
+  {"beat_id":"F2b-b12","status":"empty","note":"No Target Circle barcode-scan demo (KPRC hit was boarding-pass barcodes)."}
 ]

@@ -50,3 +50,14 @@
 
 - Search ran long (~7 min) — Brave free-tier is serialized at ~1 req/s; 12 beats × 2 endpoints. Expected, not a fault.
 - CLI reality: the pipeline's `captions` and `clip` subcommands do not exist in `rossen_harvest` (only `search`/`harvest`/`eval`). Used the package's `transcripts` module for captions and yt-dlp+ffmpeg for cutting.
+
+---
+
+## Post-approval update (swaps applied + Bible doc generated)
+
+- **b02 swapped** → FOX4 Dallas (Greg Bull / Steve Noviello). Script lines rewritten off Ann Dickherber/Wentzville. Pick: `gMXuQ4MusPk` 2:00–2:12, outcue "it's my voice artificially generated".
+- **b03 swapped** → KATU (Tina, Hillsboro OR, husband wired $2,500). Script reframed from "actual audio, have a listen" to a recount (KATU does not play raw call audio). Pick: `sPIIFyPyKKE` 1:37–2:30, outcue "It's your child".
+- **b01/b04/b05** included as manual-clip links (exact cases, no captions): ABC7 SF, KMBC, FOX29.
+- **Deliverable:** `F2_TOP_STORIES_07292026_BIBLE_updated.docx` — every beat filled in, video hyperlinks + timestamps embedded in blue, empty beats flagged in red. This is now the standard output format.
+
+**Final tally:** 5 picks (b02,b03,b06,b09,b10) · 3 manual-clip (b01,b04,b05) · 4 empty (b07,b08,b11,b12).
