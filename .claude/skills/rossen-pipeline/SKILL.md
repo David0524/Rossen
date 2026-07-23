@@ -86,9 +86,22 @@ Flag anything uncertain rather than picking. An empty beat costs less than a wro
 
 Wait for user approval before continuing.
 
-### Phase 6: Download and handoff
+### Phase 6: Download and cut
 
-Download flagged clips. Deliver the final package: picks.json, downloaded clips, transcript files.
+Download flagged clips. For each proposed segment, trim to the in/out span and, for vertical beats whose only source is a landscape repost, crop the pillar-boxed vertical back to full-screen 9:16.
+
+Use `cut/crop_vertical.sh`. Always run its `frame` mode first on a landscape source to confirm where the subject sits before trusting the center-crop:
+
+```
+cut/crop_vertical.sh frame -i SRC.mp4 -t 0:30            # eyeball the layout
+cut/crop_vertical.sh cut -i SRC.mp4 -s 0:00 -e 1:11 -o out.mp4 --vertical
+```
+
+`--native` when the source is already 9:16 (trim only), `--crop W:H:X:Y` or `--x <px>` when the subject is offset. Snap the out point to the verbatim outcue, not the raw seconds — copies are topped and tailed differently.
+
+**Sourcing note.** Aggregator reposts (New York Post, and AI-narrator channels like "Glitz Gazette", "KnowKNEWZ") frequently carry the only findable copy but re-narrate over the audio or are DRM/bot-walled from download. The clean, clearable source is usually the subject's own social (Instagram) or the originating outlet. Flag this for the producer rather than shipping a repost's re-encode.
+
+Deliver the final package: picks.json, cut clips, transcript files.
 
 ## The feedback loop
 
