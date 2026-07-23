@@ -17,17 +17,45 @@ import argparse
 import csv
 import json
 import logging
+import os
 import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 
+from .brave import BraveBackend, from_brave
 from .cache import Cache
 from .candidates import Candidate
 from .dedupe import dedupe_by_beat
 from .youtube import DEFAULT_CONCURRENCY, YouTubeBackend, harvest_beat
 
 log = logging.getLogger("rossen_harvest")
+
+# Beats needing coverage YouTube cannot give: network/affiliate video on the
+# outlet's own site, and the vertical platforms whose search is otherwise
+# closed. Brave is the leg that reaches these.
+BRAVE_PLATFORMS = {"news_web", "tiktok", "instagram", "facebook", "x", "reddit"}
+
+# Which registers each Brave endpoint runs.
+#
+# The WEB endpoint indexes ordinary pages, which is where a native TikTok,
+# Instagram or X *post* actually lives, as well as network/affiliate video
+# on the outlet's own site. So it runs the noun-heavy news/anchor strings
+# AND the emotional victim/platform strings that name a specific social post.
+#
+# The VIDEO endpoint is YouTube-heavy — it reliably surfaces YouTube and
+# Shorts but rarely a native TikTok/IG post — so it takes the short-form
+# and confrontation registers to widen YouTube/Shorts discovery.
+#
+# The two overlap on victim/platform on purpose: a vertical beat should get
+# both a shot at the native social post (web) and at YouTube coverage (video).
+BRAVE_WEB_REGISTERS = {"anchor", "news", "victim", "platform"}
+BRAVE_VIDEO_REGISTERS = {"platform", "shorts", "victim", "confrontation"}
+
+
+def _beat_needs_brave(beat: dict) -> bool:
+    plats = set(beat.get("platforms") or [])
+    return beat.get("orientation") == "vertical" or bool(plats & BRAVE_PLATFORMS)
 
 _YT_ID = re.compile(
     r"(?:v=|/shorts/|youtu\.be/|/embed/)([A-Za-z0-9_-]{11})"
@@ -47,23 +75,59 @@ def cmd_harvest(args) -> int:
         beats = [beats]
 
     cache = Cache(args.db)
-    backend = YouTubeBackend(cache=cache, limit=args.limit)
+    yt = YouTubeBackend(cache=cache, limit=args.limit)
+
+    # Brave leg: web (network/affiliate sites) and video (social/short-form).
+    brave_key = os.environ.get("BRAVE_API_KEY")
+    use_brave = bool(brave_key) and not args.no_brave
+    web = vid = None
+    if use_brave:
+        web = BraveBackend(brave_key, cache=cache, limit=args.brave_count, kind="web")
+        vid = BraveBackend(brave_key, cache=cache, limit=args.brave_count, kind="video")
+
+    needs_brave = [b for b in beats if _beat_needs_brave(b)]
+    if needs_brave and not use_brave:
+        why = "BRAVE_API_KEY is not set" if not brave_key else "Brave disabled with --no-brave"
+        log.warning(
+            "DEGRADED: %d of %d beats need web/social/vertical coverage but %s. "
+            "Running YouTube-only — no TikTok, Instagram, X, Facebook, Reddit, "
+            "off-YouTube network video, and no coverage at all for vertical beats.",
+            len(needs_brave), len(beats), why,
+        )
 
     all_cands: list[Candidate] = []
     for beat in beats:
-        if beat.get("orientation") == "vertical":
-            log.info("skipping %s: vertical, YouTube backend does not apply",
-                     beat["beat_id"])
-            continue
-        all_cands.extend(
-            harvest_beat(beat, backend, concurrency=args.concurrency)
-        )
+        if beat.get("orientation") != "vertical":
+            all_cands.extend(
+                harvest_beat(beat, yt, concurrency=args.concurrency)
+            )
+        elif not use_brave:
+            log.info("skipping %s: vertical and no Brave backend", beat["beat_id"])
+
+        if use_brave and _beat_needs_brave(beat):
+            all_cands.extend(harvest_beat(
+                beat, web, normalize=from_brave, registers=BRAVE_WEB_REGISTERS,
+                cap=args.brave_cap, concurrency=2, jitter=(0, 0),
+            ))
+            all_cands.extend(harvest_beat(
+                beat, vid, normalize=from_brave, registers=BRAVE_VIDEO_REGISTERS,
+                cap=args.brave_cap, concurrency=2, jitter=(0, 0),
+            ))
 
     kept = dedupe_by_beat(all_cands)
     cache.save_candidates(kept)
 
     print(f"{len(all_cands)} raw -> {len(kept)} after dedupe "
-          f"across {len({c.beat_id for c in kept})} beats")
+          f"across {len({c.beat_id for c in kept})} beats "
+          f"({'youtube + brave' if use_brave else 'youtube only'})")
+
+    by_platform: dict[str, int] = defaultdict(int)
+    for c in kept:
+        by_platform[c.platform] += 1
+    if by_platform:
+        print("  by platform: " + " · ".join(
+            f"{p} {n}" for p, n in sorted(by_platform.items(), key=lambda x: -x[1])))
+
     for beat_id in sorted({c.beat_id for c in kept}):
         n = sum(1 for c in kept if c.beat_id == beat_id)
         print(f"  {beat_id}: {n}")
@@ -207,9 +271,16 @@ def main(argv=None) -> int:
     p.add_argument("--concurrency", type=int, default=DEFAULT_CONCURRENCY)
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    h = sub.add_parser("harvest", help="run queries, dedupe, store")
+    h = sub.add_parser("harvest", aliases=["search"],
+                       help="run queries across YouTube + Brave, dedupe, store")
     h.add_argument("queries")
     h.add_argument("--out")
+    h.add_argument("--no-brave", action="store_true",
+                   help="YouTube only, skip the Brave web/social/vertical leg")
+    h.add_argument("--brave-count", type=int, default=20,
+                   help="results per Brave request (max 20)")
+    h.add_argument("--brave-cap", type=int, default=8,
+                   help="max queries per beat per Brave endpoint (protects quota)")
     h.set_defaults(func=cmd_harvest)
 
     e = sub.add_parser("eval", help="Task 1: measure recall@30")

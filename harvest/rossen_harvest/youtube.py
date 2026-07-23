@@ -69,23 +69,37 @@ class YouTubeBackend:
 
 def harvest_beat(
     beat: dict,
-    backend: YouTubeBackend,
+    backend,
     *,
     concurrency: int = DEFAULT_CONCURRENCY,
     jitter: tuple[float, float] = (0.2, 0.8),
+    normalize=from_ytdlp,
+    registers: set[str] | None = None,
+    cap: int | None = None,
 ) -> list[Candidate]:
-    """Run every query for one beat and return normalized candidates.
+    """Run a beat's queries through one backend and return normalized candidates.
 
     `beat` is the query-generator output: beat_id plus a `queries` dict
-    of register -> list of query strings. Orientation is a hard filter
-    upstream, so if this beat is vertical it should not reach here.
+    of register -> list of query strings.
+
+    `normalize` turns one raw backend entry into a Candidate; it defaults
+    to the YouTube shape but any backend passes its own (see `from_brave`).
+    `registers` restricts which registers run, so a backend can take only
+    the registers it is good at. `cap` truncates the job list, which
+    matters for rate-limited APIs where every query costs quota.
+
+    Orientation is a hard filter upstream for the YouTube backend: a
+    vertical beat should not reach it. Brave has no such restriction.
     """
     beat_id = beat["beat_id"]
     jobs: list[tuple[str, str]] = [
         (register, q)
         for register, queries in beat.get("queries", {}).items()
+        if registers is None or register in registers
         for q in queries
     ]
+    if cap is not None:
+        jobs = jobs[:cap]
     if not jobs:
         return []
 
@@ -93,11 +107,12 @@ def harvest_beat(
 
     def run(job: tuple[str, str]) -> list[Candidate]:
         register, query = job
-        time.sleep(random.uniform(*jitter))
+        if jitter != (0, 0):
+            time.sleep(random.uniform(*jitter))
         entries = backend.search(query)
         cands = []
         for rank, entry in enumerate(entries, start=1):
-            c = from_ytdlp(
+            c = normalize(
                 entry, beat_id=beat_id, query=query, register=register, rank=rank
             )
             if c:
@@ -108,5 +123,6 @@ def harvest_beat(
         for result in pool.map(run, jobs):
             out.extend(result)
 
-    log.info("beat %s: %d queries -> %d raw candidates", beat_id, len(jobs), len(out))
+    log.info("beat %s: %d queries via %s -> %d raw candidates",
+             beat_id, len(jobs), getattr(backend, "platform", "?"), len(out))
     return out

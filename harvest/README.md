@@ -45,10 +45,46 @@ and platform registers earn their place.
 
 ## Production harvest
 
-    python -m rossen_harvest harvest queries.json --out candidates.json
+    python -m rossen_harvest search queries.json --out candidates.json
 
-Dedupes and writes to `harvest.db`. Vertical beats are skipped, since
-the orientation marker is a hard platform constraint.
+(`search` and `harvest` are the same command.) Runs two backends, dedupes
+across both, and writes to `harvest.db`.
+
+- **YouTube** (`youtube.py`) — horizontal beats, as before.
+- **Brave** (`brave.py`) — the leg YouTube cannot reach: network and
+  affiliate video on the outlet's own site (`news_web`), and the vertical
+  platforms. A beat is routed to Brave when its `platforms` include any of
+  `news_web, tiktok, instagram, facebook, x, reddit`, or when it is
+  vertical. **Vertical beats are no longer skipped** — Brave is their only
+  search coverage.
+
+Brave needs `BRAVE_API_KEY` in the environment. Without it, the run prints
+a `DEGRADED` warning naming every beat that lost coverage and continues
+YouTube-only rather than failing. `--no-brave` forces YouTube-only
+deliberately.
+
+### What Brave does and does not surface
+
+Confirmed against the live API:
+
+- **Strong:** off-YouTube network/affiliate video (`news_web`), Reddit
+  threads, and — for a *named* person — the press coverage that points to
+  their own social post. This is the self-recorded-beat workflow: search
+  the name, find the coverage, hand the producer the native post link.
+- **Partial:** the Brave *video* endpoint is YouTube-heavy. It widens
+  YouTube and Shorts discovery but rarely returns a native TikTok or
+  Instagram post for a generic query.
+- **Still a gap:** generic discovery of native TikTok/IG/X *posts* (not
+  tied to a named person or a news story) needs an authenticated scraper
+  or a paid social-search API. Brave is a real but partial answer there,
+  and the routing is honest about it rather than pretending otherwise.
+
+Two Brave endpoints run per eligible beat: web (news/anchor plus the
+victim/platform strings that name a specific social post) and video
+(short-form and confrontation strings). Per-endpoint query count is capped
+by `--brave-cap` (default 8) because the free tier rate-limits at roughly
+one request per second; calls are serialized and spaced automatically, and
+every result is cached like any other query.
 
 ## Notes
 
@@ -68,10 +104,14 @@ the orientation marker is a hard platform constraint.
 
 
     python3 tests/test_offline.py
+    python3 tests/test_brave.py
 
-33 offline tests covering normalization, compilation detection, wire
-package collapse, cache TTL, and URL parsing. The network call itself is
-not covered and has never been executed. See below.
+33 offline tests covering YouTube normalization, compilation detection,
+wire package collapse, cache TTL, and URL parsing, plus 32 for Brave:
+platform/id detection, date and duration parsing, web and video result
+normalization, and cross-backend dedupe (a Brave-found YouTube URL
+collapses with the yt-dlp candidate for the same video). The Brave
+network call is exercised live on first real run, not in the suite.
 
 ## NOT VALIDATED
 
