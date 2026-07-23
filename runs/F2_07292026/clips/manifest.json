@@ -1,0 +1,9 @@
+{
+  "episode": "F2 TOP STORIES 07-29-2026",
+  "cut_status": "BLOCKED — YouTube byte-download bot-walled in this environment (captions/metadata OK, media bytes gated). Picks are fully verified; editor pulls from the URLs at the listed in/out.",
+  "picks": [
+    {"beat_id": "F2b-b06", "url": "https://www.youtube.com/watch?v=As4nS5aOVnw", "in": "0:38", "out": "1:02", "pad": "1.0s early / 1.5s late", "outcue": "so she gave it to them"},
+    {"beat_id": "F2b-b09", "url": "https://www.youtube.com/watch?v=rkZMNuoNfqA", "in": "1:25", "out": "1:48", "pad": "1.0s early / 1.5s late", "outcue": "deposit money into a Bitcoin ATM"},
+    {"beat_id": "F2b-b10", "url": "https://www.youtube.com/watch?v=JUbuCpPGX3g", "in": "0:27", "out": "0:55", "pad": "1.0s early / 1.5s late", "outcue": "the S standing for secure"}
+  ]
+}
