@@ -21,21 +21,45 @@ Never flag from pass one alone. Metadata will tell you a clip is plausible. It w
 
 Fail any of these and the candidate is out regardless of other merit.
 
-- **Orientation mismatch.** A horizontal beat cannot take a vertical source. Non-negotiable, the producer typed it in the script.
+- **Orientation mismatch.** A horizontal beat cannot take a vertical source. Non-negotiable, the producer typed it in the script. **One exception:** a Short carrying `surfaced_for: horizontal` from the query generator was crossed deliberately, because Shorts routinely hold the raw victim moment that a four-minute affiliate package buries at 1:30. Do not auto-fail it. Score it, and put the framing question in the pass-one `cannot_determine` note so a human rules on pillarbox versus punch-in.
 - **Duration floor.** Source under 25 seconds cannot yield a usable segment for any role except `evidence`, where 10 seconds is fine.
 - **Duration ceiling by role.** A 45 minute podcast episode is not a `victim_interview` candidate even if the title matches. Over 20 minutes, demote hard unless role is `explainer_demo/creator_long`.
+- **Shorts are exempt from duration scoring entirely.** 30 to 60 seconds is the format, not a red flag. See below.
 - **Compilation and aggregator channels.** Titles like "Top 10 Scams", "Scam Compilation", "SCAMMERS GET DESTROYED #47". These are re-uploads of other people's footage, which is a clearance problem and usually a quality problem. Out.
 - **AI slop.** Synthetic voiceover over stock footage, channel names that are generic keyword strings, upload cadence of many per day. Increasingly common on scam topics. Out.
 - **Obvious reposts.** Same title as an earlier upload from a credible source. Keep the original, drop the repost. Earliest upload date wins.
 
 ### Scoring signals
 
-**Channel credibility.** The single strongest metadata signal.
-- Local affiliate call letters, KXAS, WFAA, ABC7, News 4 — highest tier for `victim_interview`, `confrontation_bust`, `debunk`
-- Network and wire — highest tier for `authority_report`
-- Established fraud-focused creators — highest for `explainer_demo/creator_long`
-- Individual person accounts — right for `first_person_rant`, `evidence`, `creator_short`
-- Unknown channel, generic name, no history — heavy demote
+**Source type.** Tag every candidate with exactly one, from the title, channel name and channel history. This tag drives credibility scoring and gets carried through to the output.
+
+| Tag | What it looks like |
+|---|---|
+| `affiliate` | Local call letters — KXAS, WFAA, ABC7, News 4 |
+| `network` | Network and wire — ABC News, NBC News, AP, Reuters |
+| `creator_long` | Established fraud, consumer or finance channel, long-form, real back catalog |
+| `creator_short` | Same kind of channel, Shorts or vertical output |
+| `first_person` | Individual account, the person it happened to, no production apparatus |
+| `raw_footage` | Doorbell, dashcam, security, screen recording, bystander phone video |
+
+**Channel credibility is scored relative to the role, not on an absolute ladder.** There is no tier that is best everywhere. Each role has a natural source type and that type gets the top of the range; the others are scored against how well they substitute, not against affiliates.
+
+| Role | Natural source types | Weak for this role |
+|---|---|---|
+| `victim_interview` | affiliate, first_person | network studio-only |
+| `confrontation_bust` | first_person, raw_footage, creator_short | network |
+| `evidence` | raw_footage, first_person | affiliate, network |
+| `explainer_demo/creator_long` | **creator_long** | affiliate, network |
+| `explainer_demo/creator_short` | **creator_short**, first_person | affiliate, network |
+| `first_person_rant` | **first_person**, creator_short | affiliate, network |
+| `authority_report` | network, affiliate | first_person, raw_footage |
+| `debunk` | affiliate, network, creator_long | raw_footage |
+
+The three bolded cells are the correction. A well-produced creator video is not a degraded affiliate package for those roles — it is the right source, and it should score at the top of the range there. A channel like Holy Schmidt doing a careful walkthrough of how a Social Security imposter call actually runs is exactly what `explainer_demo` asks for, and no affiliate produces that. Stop reading "commentary" as a demerit for roles whose whole point is a person explaining something on camera.
+
+What still demotes a creator, in any role: no back catalog, generic keyword channel name, engagement-farming title, reaction content with no original reporting, or a channel whose upload cadence says content mill. Judge the work, not the fact that it came from an individual.
+
+Unknown channel, generic name, no history — heavy demote, unchanged, for every role.
 
 **Title syntax fit.** Does the title read like the register that should have found it? An affiliate headline for a victim interview. A first-person caption for a rant. A title that is a keyword salad is a bad sign regardless of relevance.
 
@@ -50,33 +74,29 @@ Fail any of these and the candidate is out regardless of other merit.
 
 So the show wants roughly a minute of usable material. A source needs to comfortably contain that plus setup. For horizontal news packages, 2 to 6 minutes is the sweet spot. Under 90 seconds is usually a headline read with no interview in it. Over 10 minutes and the moment is buried.
 
+**Shorts do not get scored on duration.** The "under 90 seconds is a headline read" rule is a fact about affiliate uploads and it does not transfer. A 45-second Short is not a truncated package; it is a complete piece of content whose whole runtime is the moment. Judge it on channel, title register and role fit alone, and never demote a Short for being 30 to 60 seconds long — that is the format performing as designed.
+
+The median aired segment is 67 seconds against a 60-second ceiling, so a strong Short will usually be played closer to whole than trimmed. Treat near-total usable runtime as a point in its favor, not as a sign there is no runway.
+
 **Upload recency.** For `authority_report` and `debunk`, recency is close to decisive; the beat exists because something happened this week. For `victim_interview` and `evidence`, age is nearly irrelevant. A 2023 affiliate package about an FBI imposter scam plays fine today.
 
 **View count.** Weak signal, use as a tiebreak only. High views on TikTok correlate with watchability. High views on YouTube often just mean an old upload. Never let views override channel credibility.
 
-### Source-type tagging
-
-Tag every candidate with one of: `affiliate`, `network`, `creator_long`, `creator_short`, `first_person`, `raw_footage`, `shorts`. This tag persists through pass two into the final picks so the producer can see the source mix at a glance. Assign based on channel and duration:
-
-- `affiliate` — local station call letters (KXAS, ABC7, WFAA, CBS Texas, etc.)
-- `network` — national outlet (ABC News, CBS News, NBC, CNN, Forbes, CNBC)
-- `creator_long` — established individual channel, duration over 60s
-- `creator_short` — individual channel, duration under 60s or YouTube Short
-- `first_person` — the person in the video is the subject, not a commentator
-- `raw_footage` — bodycam, doorbell cam, security cam, screen recording, no narration
-- `shorts` — YouTube Short (duration under 60s, vertical, `#shorts` in title or metadata)
-
 ### Diversity floor
 
-After scoring, if all 5 survivors are the same source type, replace the weakest survivor with the strongest candidate from a different source type. The goal is not to override the producer's preference for affiliates — it is to make sure they see at least one alternative and can make a conscious choice rather than a default one.
+Apply after scoring, before writing the shortlist.
 
-Tag any forced-in candidate with `diversity_floor: true` so the producer knows why it is in the shortlist.
+**If all five survivors are `affiliate`, drop the fifth and promote the highest-scoring non-affiliate candidate that cleared the hard filters.** Any of `creator_long`, `creator_short`, `first_person`, `raw_footage` qualifies. Same rule if all five are `affiliate` and `network` combined — wire and local are one monoculture, not two.
 
-When the beat role naturally fits a non-affiliate source type, this floor is unnecessary. `first_person_rant` should be first-person content. `evidence` should be raw footage. `explainer_demo/creator_short` should be a creator. Only force diversity when the natural role is being served by a monoculture.
+The affiliate lean is Jeff's preference and it is a good one; affiliates title predictably, shoot clean audio and clear easily. But five packages of the same shape means pass two gets to choose only between near-identical framings, and the raw moment that actually plays — someone crying in a driveway, a screen recording of the text thread — never reaches the transcript pass to compete.
+
+Two limits on the floor. It promotes, it never invents: if no non-affiliate candidate cleared the hard filters, ship four and say why, rather than reaching back past a filter for filler. And it is a floor, not a quota — if the promoted candidate scores 30 points below the affiliate it displaced, note that in its one-line reason so pass two does not treat the shortlist as five peers.
 
 ### Pass one output
 
-Five candidates, each with a score 0 to 100, a source type tag, a one-line reason, and an explicit note of what you cannot tell from metadata. That last field matters; it tells pass two what to look for.
+Five candidates, each with a score 0 to 100, a `source_type` tag, a one-line reason, and an explicit note of what you cannot tell from metadata. That last field matters; it tells pass two what to look for.
+
+Also report the source-type distribution of the shortlist, and flag any candidate promoted by the diversity floor.
 
 ## Pass two: transcript grade
 
@@ -125,6 +145,8 @@ Jeff talks into the clip, so the clip must land quickly once it starts. Find the
 | horizontal (news packages) | 34s | 0s to 152s |
 | vertical (TikTok, Facebook) | 0s | 0s to 14s |
 
+Shorts behave like the vertical row and more so: the hook is at 0:00 because the format punishes anything else, so expect an in-point at or near the top and do not go hunting for a buried moment that is not there.
+
 News packages open with an anchor toss and a reporter standup that always gets cut. The usable material starts about half a minute in. Vertical social clips start at the top, because the creator already front-loaded the hook. Use this as a prior when scanning the transcript: on a horizontal candidate, do not conclude the clip is weak because the first 30 seconds are generic.
 
 ## Output
@@ -134,6 +156,8 @@ News packages open with an anchor toss and a reporter standup that always gets c
   "beat_id": "05-06-b03",
   "pass": 2,
   "flagged": "https://www.youtube.com/watch?v=I3667lq1L2o",
+  "source_mix": {"affiliate": 3, "first_person": 1, "creator_short": 1},
+  "diversity_floor_applied": true,
   "ranked": [
     {
       "url": "https://www.youtube.com/watch?v=I3667lq1L2o",
@@ -147,12 +171,11 @@ News packages open with an anchor toss and a reporter standup that always gets c
         {"in": "0:21", "out": "1:20", "outcue": "when I sent the money out"}
       ],
       "reasoning": "Retired officer on camera at home, names the dollar figure, audible, affiliate package. Matches the setup line exactly.",
-      "diversity_floor": false,
       "flags": []
     }
   ],
   "rejected": [
-    {"url": "...", "source_type": "creator_long", "score": 41, "reason": "studio two-shot, no victim on camera"}
+    {"url": "...", "source_type": "network", "score": 41, "reason": "studio two-shot, no victim on camera"}
   ],
   "cannot_determine": ["whether the second half of the package repeats the same soundbite"]
 }
@@ -163,6 +186,18 @@ News packages open with an anchor toss and a reporter standup that always gets c
 Propose multiple segments when the best material is split. Four of 24 aired beats were butt-cuts pulling 2 to 3 slices from one source, so this is normal, not an edge case.
 
 **Do not do timecode arithmetic in your head.** Report the timestamps the transcript gives you and let the pipeline snap them to scene boundaries.
+
+## Episode-level source mix
+
+Per-beat tags are for the grader. The number the producer acts on is the mix across the whole episode, so report it once at the end of pass two, before the per-beat table:
+
+```
+Source mix, 10 beats:  affiliate 8 · first_person 1 · creator_long 1
+```
+
+Call it out in words when one type takes 70% or more of the picks — "8 of 10 picks are affiliate" — and name the beats where the runner-up was a different source type, so a producer who wants variety knows exactly which swaps are cheap. Do not editorialize past that. A monoculture may be the right answer for a given episode; the job here is to make it visible rather than to break it up on your own initiative.
+
+Report the same line for beats where the diversity floor fired and the promoted candidate did not survive pass two. That pattern repeating across episodes means the floor is promoting filler and the hard filters upstream need a look, not that variety is unavailable.
 
 ## When nothing is good enough
 

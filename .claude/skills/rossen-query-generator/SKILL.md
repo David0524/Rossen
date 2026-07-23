@@ -1,6 +1,6 @@
 ---
 name: rossen-query-generator
-description: Generate multi-register search queries for a Rossen Reports clip beat so the right footage surfaces in the top thirty results on YouTube, TikTok, Facebook, Instagram, and Reddit. Use immediately after beat extraction, or whenever the user has beat text or a script line and needs search terms, is asking why a clip is not surfacing, wants a clip pull list, or asks anything like "how would I find footage for this." Optimizes for recall, not precision.
+description: Generate multi-register search queries for a Rossen Reports clip beat so the right footage surfaces in the top thirty results on YouTube, YouTube Shorts, TikTok, Facebook, Instagram, and Reddit. Use immediately after beat extraction, or whenever the user has beat text or a script line and needs search terms, is asking why a clip is not surfacing, wants a clip pull list, or asks anything like "how would I find footage for this." Optimizes for recall, not precision.
 ---
 
 # Rossen Reports query generator
@@ -25,26 +25,52 @@ Generate all four per beat. Six to ten strings each. Weight by role using the ta
 
 **Anchor register.** The literal proper nouns from the beat: company, dollar figure, agency, state, regulatory action, product name. *Temu $232 million fine*. *Maryland dynamic pricing ban*. *Meta 10% revenue scams*. When the beat has a dated news anchor this register has the highest hit rate of the four and it costs one query. Always check for it first.
 
+### The platform register has two dialects
+
+Platform register splits by destination. TikTok-flavored and Shorts-flavored strings are not interchangeable and both get generated whenever the platform register runs.
+
+**Shorts dialect.** Shorter than TikTok, hashtag-heavy, emotion-forward. Three to five words plus one or two hashtags, and the emotional payload goes in the words, not the mechanism. `#scamalert she lost everything`, `#shorts grandma scammed crying`, `mom fell for it #scam`. Lead with the feeling and the person. Do not describe the fraud type — Shorts titles almost never do. A Shorts title is written to stop a thumb, so it reads like a reaction, not a report.
+
 ## Per-role weighting
 
 | Role | Lead register | Also run | Platforms |
 |---|---|---|---|
-| `victim_interview` | news | victim | youtube, news_web |
-| `confrontation_bust` | platform | news | youtube, tiktok |
-| `evidence` | platform | victim | tiktok, facebook, reddit |
-| `explainer_demo/creator_short` | platform | victim | tiktok, instagram |
+| `victim_interview` | news | victim | youtube, shorts, news_web |
+| `confrontation_bust` | platform | news | youtube, shorts, tiktok |
+| `evidence` | platform | victim | tiktok, shorts, facebook, reddit |
+| `explainer_demo/creator_short` | platform | victim | shorts, tiktok, instagram |
 | `explainer_demo/creator_long` | news | anchor | youtube |
 | `authority_report` | anchor | news | youtube, news_web |
 | `debunk` | anchor | news | youtube, news_web |
-| `first_person_rant` | victim | platform | tiktok, instagram |
+| `first_person_rant` | victim | platform | shorts, tiktok, instagram |
 
-Orientation from the beat record is a hard filter. Horizontal beats do not get TikTok queries. Vertical beats do not get YouTube long-form queries.
+Orientation from the beat record is a hard filter on **TikTok, Instagram and Facebook**. Horizontal beats do not get TikTok queries. Vertical beats do not get YouTube long-form queries.
+
+**Shorts are the exception, and run on every orientation.** A four-minute affiliate package buries the raw victim moment at 1:30 under a reporter standup and a b-roll walk-and-talk. A 45-second Short of the same woman crying about her retirement is the moment with nothing on top of it. That is what goes on air. So generate Shorts queries for every vertical beat, every beat where the platform register runs, and every horizontal beat as well.
+
+Tag Shorts candidates surfaced against a horizontal beat as `orientation: vertical, surfaced_for: horizontal` so the grader knows the producer's orientation call is being deliberately crossed and can rule on framing rather than silently failing it.
 
 ## Platform syntax differences
 
 **YouTube.** Tolerates long natural-language strings. Affiliates title predictably and index well, so news register plus role noun works: `retired police officer scammed PayPal`. This is the single highest-yield platform for the show and should get the most queries.
 
-**TikTok.** Short. Three to five words. Hashtags help, full sentences hurt. `#scamalert paypal`, `fake bill marketplace`. Search is caption-driven, so lead with the object and the emotion, not the mechanism.
+**YouTube Shorts.** Same index as YouTube, different title conventions and a hard duration ceiling, so it is worth searching as its own platform rather than hoping Shorts fall out of a long-form query. They do not — long-form queries are noun-heavy and Shorts titles are not.
+
+Emit Shorts queries as explicit search strings so the harvest step can run them directly:
+
+```bash
+yt-dlp "ytsearch30:<query> #shorts" \
+  --match-filter "duration < 60" \
+  --flat-playlist --dump-json
+```
+
+Every Shorts query string carries the `#shorts` suffix and every Shorts query runs under `--match-filter "duration < 60"`. Without the filter the `#shorts` token alone leaks long-form uploads that merely mention Shorts in the description; without the suffix the duration filter leaves you searching all of YouTube and discarding 90% of it.
+
+Two operational notes. `--flat-playlist` sometimes returns null durations, in which case the match filter silently passes everything — drop `--flat-playlist` for Shorts runs if the returned set looks long-form. And a 60-second ceiling is the format definition, not a quality signal; see the grader's triage rules.
+
+Write them into the output as ordinary query strings under a `shorts` register. The suffix and the filter are the harvest step's job to apply, not something to bake into every string by hand.
+
+**TikTok.** Short. Three to five words. Hashtags help, full sentences hurt. `#scamalert paypal`, `fake bill marketplace`. Search is caption-driven, so lead with the object and the emotion, not the mechanism. Distinct from the Shorts dialect: TikTok tolerates the mechanism as the object, Shorts wants the person and the feeling.
 
 **Facebook and Instagram.** Weakest search. Lean on hashtags and creator handles. Expect low yield and do not spend query budget here.
 
@@ -53,20 +79,6 @@ Orientation from the beat record is a hard filter. Horizontal beats do not get T
 ## Confrontation vocabulary
 
 This role has its own lexicon that shares nothing with the others and it is worth its own list: *caught on camera*, *confronts*, *busted*, *exposed*, *called out*, *sting operation*, *undercover*, *scammer gets caught*, *I confronted the*.
-
-## YouTube Shorts queries
-
-Generate 2-3 Shorts-specific queries per beat regardless of orientation. Shorts often contain the raw emotional moment — a victim crying, a doorbell cam clip, a creator's 30-second warning — that a longer affiliate package buries or lacks entirely.
-
-Shorts queries follow platform-register syntax (short, hashtag-heavy) but target YouTube specifically:
-
-- `#shorts gold scam victim`
-- `#scamalert retirement savings gone`
-- `grandma scammed gold #shorts`
-
-Search with `yt-dlp --match-filter "duration<60" "ytsearch15:QUERY"` to filter to short-form results.
-
-Add `"shorts"` to the platform map for every beat. Even horizontal beats can use a Short as a supplementary source — the show has aired vertical-within-horizontal before.
 
 ## Output
 
@@ -83,12 +95,20 @@ Add `"shorts"` to the platform map for every beat. Even horizontal beats can use
     "victim": ["I was a cop and I got scammed",
                "he spent his career busting criminals then got scammed"],
     "platform": ["#paypalscam cop", "retired cop scammed"],
-    "shorts": ["#shorts cop scammed gold", "#scamalert retired officer"]
+    "shorts": ["#scamalert retired cop robbed",
+               "cop lost his savings #shorts",
+               "#paypalscam he cried",
+               "30 years a cop then this #scam"]
   },
   "platform_map": {
     "youtube": ["anchor", "news", "victim"],
-    "shorts": ["shorts", "platform"],
+    "shorts": ["shorts", "victim"],
     "news_web": ["anchor", "news"]
+  },
+  "shorts_search": {
+    "suffix": "#shorts",
+    "match_filter": "duration < 60",
+    "surfaced_for": "horizontal"
   }
 }
 ```
