@@ -54,6 +54,20 @@ Orientation from the beat record is a hard filter. Horizontal beats do not get T
 
 This role has its own lexicon that shares nothing with the others and it is worth its own list: *caught on camera*, *confronts*, *busted*, *exposed*, *called out*, *sting operation*, *undercover*, *scammer gets caught*, *I confronted the*.
 
+## YouTube Shorts queries
+
+Generate 2-3 Shorts-specific queries per beat regardless of orientation. Shorts often contain the raw emotional moment — a victim crying, a doorbell cam clip, a creator's 30-second warning — that a longer affiliate package buries or lacks entirely.
+
+Shorts queries follow platform-register syntax (short, hashtag-heavy) but target YouTube specifically:
+
+- `#shorts gold scam victim`
+- `#scamalert retirement savings gone`
+- `grandma scammed gold #shorts`
+
+Search with `yt-dlp --match-filter "duration<60" "ytsearch15:QUERY"` to filter to short-form results.
+
+Add `"shorts"` to the platform map for every beat. Even horizontal beats can use a Short as a supplementary source — the show has aired vertical-within-horizontal before.
+
 ## Output
 
 ```json
@@ -68,10 +82,12 @@ This role has its own lexicon that shares nothing with the others and it is wort
              "police officer falls for PayPal scam"],
     "victim": ["I was a cop and I got scammed",
                "he spent his career busting criminals then got scammed"],
-    "platform": ["#paypalscam cop", "retired cop scammed"]
+    "platform": ["#paypalscam cop", "retired cop scammed"],
+    "shorts": ["#shorts cop scammed gold", "#scamalert retired officer"]
   },
   "platform_map": {
     "youtube": ["anchor", "news", "victim"],
+    "shorts": ["shorts", "platform"],
     "news_web": ["anchor", "news"]
   }
 }

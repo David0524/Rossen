@@ -97,6 +97,49 @@ One JSON object per beat.
 
 `expected_segments` comes from counting `BUTT` markers when back-filling a past script. For a new script, default 1 and let the timecode extractor decide.
 
+## Sourcability scan
+
+Run this immediately after extraction, before handing beats to the query generator. The purpose is to catch dead-end beats early — victims who never did a TV interview, events too recent for YouTube — so the producer can swap or plan instead of discovering the gap at grading time.
+
+### What to check
+
+For every beat that names a specific person (`victim_interview`, `first_person_rant`, and any beat where the script says "listen to him/her" or "watch what she says"):
+
+1. Run `yt-dlp --print id --print title "ytsearch5:FIRSTNAME LASTNAME scam"` (and a variant without "scam" if the name is distinctive enough).
+2. If zero results mention the person → `sourcability: none`. The person has no video presence. This beat will be empty unless the show produces its own interview.
+3. If results exist but are all creator commentary or narrated readouts (generic channel names, the person is discussed but never appears) → `sourcability: commentary_only`. There is coverage but no on-camera interview. Flag it.
+4. If at least one result is from an affiliate or network and the title suggests an interview package → `sourcability: high`. Proceed normally.
+
+For beats that reference an event, company, or regulatory action rather than a named person (`authority_report`, `evidence`, `debunk`):
+
+1. Run `yt-dlp --print id --print title "ytsearch5:COMPANY_OR_EVENT scam"`.
+2. These are almost always sourceable. Flag only if the event is very recent (within the last 2 weeks) and nothing surfaces.
+
+For vertical beats, also check YouTube Shorts: `yt-dlp --print id --print title --match-filter "duration<60" "ytsearch5:TOPIC #shorts"`.
+
+### Output
+
+Add two fields to every beat record:
+
+```json
+{
+  "sourcability": "high | commentary_only | none | unchecked",
+  "sourcability_note": "ABC7 Chicago affiliate package found with Owen on camera"
+}
+```
+
+### What happens when sourcability is low
+
+Do not silently proceed. Surface the problem in the Checkpoint 1 beat table with a row color or flag. The producer's options:
+
+- **Swap victim.** The script says "listen to this woman who lost $400k." There are dozens of women who lost comparable amounts and DID do a TV interview. Suggest two or three with confirmed YouTube affiliate coverage. The script writer adjusts the name and dollar figure.
+- **Mark as show-produced.** The show will interview this person themselves. Remove the beat from the clip pipeline entirely — it becomes a production task, not a search task.
+- **Drop the beat.** If neither option works, cut it. An empty beat at Checkpoint 1 costs nothing. An empty beat discovered at Checkpoint 3 wasted every search and download in between.
+
+### Why this matters
+
+In the F2 pipeline run, three beats (b01, b04, b05) reached Checkpoint 3 as `flagged: null` after full search, download, and transcript grading. All three failures were predictable from a five-second YouTube search: the Winnebago County case was 15 days old with no YouTube upload, the Cook couple and Barry Heitin had only print coverage. The sourcability scan would have caught all three at Checkpoint 1 and saved the entire downstream effort.
+
 ## Back-filling past scripts
 
 When the script already contains aired URLs and timecodes, also emit `aired_url`, `aired_platform`, and a `segments` array of in/out/outcue objects. These rows are the eval set. The outcue phrase is the verification anchor for the timecode extractor: a correct out point is one where the outcue text appears in the Whisper transcript within about a second of the proposed timestamp.

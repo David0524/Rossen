@@ -54,9 +54,29 @@ So the show wants roughly a minute of usable material. A source needs to comfort
 
 **View count.** Weak signal, use as a tiebreak only. High views on TikTok correlate with watchability. High views on YouTube often just mean an old upload. Never let views override channel credibility.
 
+### Source-type tagging
+
+Tag every candidate with one of: `affiliate`, `network`, `creator_long`, `creator_short`, `first_person`, `raw_footage`, `shorts`. This tag persists through pass two into the final picks so the producer can see the source mix at a glance. Assign based on channel and duration:
+
+- `affiliate` — local station call letters (KXAS, ABC7, WFAA, CBS Texas, etc.)
+- `network` — national outlet (ABC News, CBS News, NBC, CNN, Forbes, CNBC)
+- `creator_long` — established individual channel, duration over 60s
+- `creator_short` — individual channel, duration under 60s or YouTube Short
+- `first_person` — the person in the video is the subject, not a commentator
+- `raw_footage` — bodycam, doorbell cam, security cam, screen recording, no narration
+- `shorts` — YouTube Short (duration under 60s, vertical, `#shorts` in title or metadata)
+
+### Diversity floor
+
+After scoring, if all 5 survivors are the same source type, replace the weakest survivor with the strongest candidate from a different source type. The goal is not to override the producer's preference for affiliates — it is to make sure they see at least one alternative and can make a conscious choice rather than a default one.
+
+Tag any forced-in candidate with `diversity_floor: true` so the producer knows why it is in the shortlist.
+
+When the beat role naturally fits a non-affiliate source type, this floor is unnecessary. `first_person_rant` should be first-person content. `evidence` should be raw footage. `explainer_demo/creator_short` should be a creator. Only force diversity when the natural role is being served by a monoculture.
+
 ### Pass one output
 
-Five candidates, each with a score 0 to 100, a one-line reason, and an explicit note of what you cannot tell from metadata. That last field matters; it tells pass two what to look for.
+Five candidates, each with a score 0 to 100, a source type tag, a one-line reason, and an explicit note of what you cannot tell from metadata. That last field matters; it tells pass two what to look for.
 
 ## Pass two: transcript grade
 
@@ -117,6 +137,7 @@ News packages open with an anchor toss and a reporter standup that always gets c
   "ranked": [
     {
       "url": "https://www.youtube.com/watch?v=I3667lq1L2o",
+      "source_type": "affiliate",
       "score": 88,
       "tone": 9,
       "authenticity": 9,
@@ -126,11 +147,12 @@ News packages open with an anchor toss and a reporter standup that always gets c
         {"in": "0:21", "out": "1:20", "outcue": "when I sent the money out"}
       ],
       "reasoning": "Retired officer on camera at home, names the dollar figure, audible, affiliate package. Matches the setup line exactly.",
+      "diversity_floor": false,
       "flags": []
     }
   ],
   "rejected": [
-    {"url": "...", "score": 41, "reason": "studio two-shot, no victim on camera"}
+    {"url": "...", "source_type": "creator_long", "score": 41, "reason": "studio two-shot, no victim on camera"}
   ],
   "cannot_determine": ["whether the second half of the package repeats the same soundbite"]
 }
