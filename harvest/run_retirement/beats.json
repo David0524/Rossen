@@ -1,0 +1,348 @@
+[
+  {
+    "beat_id": "ret-b01",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "THIS HAPPENED IN WISCONSIN THIS MONTH — SHE LOST MORE THAN $400,000",
+    "script_text": "A WOMAN IN WINNEBAGO COUNTY, WISCONSIN JUST LOST OVER $400,000 IN RETIREMENT SAVINGS. / REPORTED JULY 8TH. IT WENT ON FOR THREE MONTHS. / THE CALLERS CLAIMED TO BE THE BETTER BUSINESS BUREAU, THEN THE F-B-I. / SHE HANDED HER RETIREMENT SAVINGS TO A COURIER AT HER OWN FRONT DOOR. / LISTEN TO WHAT HAPPENED TO HER.",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Winnebago County Wisconsin woman loses $400,000 retirement phantom hacker gold courier",
+    "visual_spec": "older woman on camera at home, local affiliate interview setup, lower-third",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": false,
+    "priority": 1,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "Winnebago County Wisconsin retirement scam $400,000",
+        "Wisconsin woman loses $400,000 gold bars FBI impersonation"
+      ],
+      "news": [
+        "woman loses retirement savings gold courier front door",
+        "elderly woman loses 400000 phantom hacker scam",
+        "retiree hands gold bars to courier FBI impersonation",
+        "woman scammed retirement savings BBB then FBI callers",
+        "Wisconsin woman loses life savings gold bar scam"
+      ],
+      "victim": [
+        "they told me to buy gold and hand it to a courier",
+        "I lost my retirement to fake FBI agents",
+        "a man came to my door to pick up my gold"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "victim"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "ret-b02",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "A 79-YEAR-OLD VIETNAM VETERAN — THEY MADE HIM GIFT-WRAP HIS OWN GOLD",
+    "script_text": "KRIS OWEN IS A 79-YEAR-OLD VIETNAM VETERAN FROM INDIANA. / BACK IN 2023 A POP-UP TOLD HIM HIS INFORMATION HAD BEEN COMPROMISED. / HE BOUGHT $80,000 IN GOLD BARS AND SHIPPED THEM TO THE AGENT. / THEY TOLD HIM TO WRAP THE GOLD IN CHRISTMAS PAPER SO NOBODY WOULD KNOW. / HE TOLD ABC NEWS THE WHOLE STORY.",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Kris Owen 79 Vietnam veteran Indiana $80,000 gold bars scam ABC News Christmas paper",
+    "visual_spec": "elderly veteran on camera at home describing gold bar loss, national/affiliate interview setup",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": false,
+    "priority": 1,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "Kris Owen Vietnam veteran gold bars scam",
+        "Kris Owen Indiana $80,000 gold scam ABC News"
+      ],
+      "news": [
+        "Vietnam veteran loses 80000 in gold bar scam",
+        "veteran tricked into wrapping gold in Christmas paper scam",
+        "Indiana man ships gold bars to fake federal agent",
+        "elderly veteran gold bar scam pop up warning",
+        "79 year old veteran loses savings gold bars"
+      ],
+      "victim": [
+        "they told me to wrap the gold in Christmas paper",
+        "I shipped 80000 in gold to a federal agent",
+        "a pop up said my information was compromised"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "victim"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "ret-b03",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "A TEXAS WIDOWER LOST $2 MILLION — AND DIED BEFORE HE GOT A DOLLAR BACK",
+    "script_text": "ROBERT BROWN WAS A 78-YEAR-OLD RETIRED WIDOWER IN TEXAS. / CBS NEWS TEXAS TOLD HIS STORY BACK IN FEBRUARY. / IT STARTED WITH AN EMAIL SAYING HIS PAYPAL ACCOUNT WAS COMPROMISED. / HE CONVERTED $2 MILLION INTO GOLD BARS AND HANDED THEM TO COURIERS. / HIS DAUGHTER KATIE BROWN SAYS IT CLEANED OUT HIS RETIREMENT SAVINGS. / HE DIED LAST NOVEMBER WITHOUT RECOVERING ANY OF IT.",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Robert Brown Texas 78 widower $2 million gold bars PayPal email CBS News Texas daughter Katie Brown",
+    "visual_spec": "daughter on camera describing father's $2M loss, CBS affiliate interview setup",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": false,
+    "priority": 1,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "Robert Brown Texas $2 million gold bar scam",
+        "Katie Brown father gold bar scam CBS Texas"
+      ],
+      "news": [
+        "Texas widower loses 2 million in gold bar scam",
+        "daughter says gold scam cleaned out fathers retirement",
+        "man converts 2 million to gold bars handed to couriers",
+        "PayPal email scam drains retirement gold bars Texas",
+        "Texas man loses life savings gold bar scam dies"
+      ],
+      "victim": [
+        "my dad lost everything to a gold bar scam",
+        "they emptied my fathers retirement savings",
+        "he died before he got any of it back"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "victim"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "ret-b04",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "A MAINE COUPLE FED $1.3 MILLION INTO BITCOIN MACHINES AND GOLD BOXES",
+    "script_text": "LARRY AND BARBARA COOK LIVE IN CHINA, MAINE. THEY WERE BOTH 80. / FROM OCTOBER 2023 TO APRIL 2024 THEY MOVED MONEY MORE THAN 30 TIMES. / A MAN CALLING HIMSELF RYAN TERRY SAID HE WAS A FEDERAL TRADE COMMISSION INVESTIGATOR. / LARRY HAS MACULAR DEGENERATION. HE FED $10,000 INTO A BITCOIN ATM ONE BILL AT A TIME. / SIX TIMES COURIERS CAME FOR BOXES OF CASH AND GOLD. / IN ALL THEY LOST $1.3 MILLION.",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Larry Barbara Cook China Maine 80 $1.3 million bitcoin ATM gold couriers Ryan Terry FTC investigator",
+    "visual_spec": "elderly couple on camera at home describing loss, affiliate interview setup",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": false,
+    "priority": 1,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "Larry Barbara Cook China Maine $1.3 million scam",
+        "Maine couple loses 1.3 million bitcoin ATM gold scam"
+      ],
+      "news": [
+        "Maine couple loses retirement to bitcoin ATM gold scam",
+        "elderly couple fed cash into bitcoin machine scam",
+        "couple loses 1.3 million to fake FTC investigator",
+        "80 year old couple gold and cash courier scam Maine",
+        "Maine retirees lose life savings bitcoin gold scam"
+      ],
+      "victim": [
+        "a man said he was from the FTC",
+        "I fed 10000 into a bitcoin machine one bill at a time",
+        "couriers kept coming to our house for boxes of gold"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "victim"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "ret-b05",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "A RETIRED LAWYER LOST $740,000 — AND HE THOUGHT HE WAS HELPING THE FEDS",
+    "script_text": "BARRY HEITIN IS A 76-YEAR-OLD RETIRED LAWYER. A MAN WHO READ CONTRACTS FOR A LIVING. / THE NEW YORK TIMES PROFILED HIM IN 2024. / HE LOST ABOUT $740,000 IN THREE MONTHS. / THEY DON'T MAKE YOU FEEL ROBBED. THEY MAKE YOU FEEL HELPFUL. / LISTEN TO HIM.",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Barry Heitin 76 retired lawyer $740,000 New York Times 2024 government impersonation",
+    "visual_spec": "retired lawyer on camera describing loss; NYT profile subject, possibly network follow-up",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": true,
+    "priority": 2,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "Barry Heitin retired lawyer $740,000 scam",
+        "Barry Heitin New York Times gold bar scam"
+      ],
+      "news": [
+        "retired lawyer loses 740000 government impersonation scam",
+        "attorney tricked into gold bar scam helping federal agents",
+        "man loses life savings thinking he was helping the FBI",
+        "retired lawyer phantom hacker scam savings",
+        "lawyer scammed out of retirement gold bars"
+      ],
+      "victim": [
+        "I thought I was helping the government",
+        "they made me feel helpful not robbed",
+        "I read contracts for a living and still got scammed"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "victim"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "ret-b06",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "SOMEONE CALLED HER 401(K) COMPANY AND PRETENDED TO BE HER (ACCOUNT TAKEOVER)",
+    "script_text": "PAULA DISBERRY WORKED FOR COLGATE-PALMOLIVE. HER 401(K) HELD $751,430. / A WOMAN PHONED THE PLAN'S RECORDKEEPER, ALIGHT SOLUTIONS, AND SAID SHE WAS PAULA. / BNY MELLON MAILED A CHECK TO AN ADDRESS IN LAS VEGAS. THE REAL PAULA WAS IN SOUTH AFRICA. / HEIDE BARTNETT, A FORMER ABBOTT LABORATORIES EMPLOYEE, SUED OVER A $245,000 PAYOUT. / IN FEBRUARY 2026 THE GAO TOLD THE LABOR DEPARTMENT TO FIX THIS. / HERE'S WHAT WE KNOW RIGHT NOW ABOUT HOW THESE 401(K) ACCOUNTS GET TAKEN OVER.",
+    "orientation": "horizontal",
+    "clip_role": "authority_report",
+    "news_anchor": "Paula Disberry Colgate-Palmolive 401k stolen Alight Solutions lawsuit; Heide Bartnett Abbott; GAO 401k theft 2026",
+    "visual_spec": "network/business news anchor or reporter over 401k statement b-roll, lawsuit graphics",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "Paula Disberry Colgate 401k stolen lawsuit",
+        "Alight Solutions 401k fraud lawsuit",
+        "Heide Bartnett Abbott Laboratories 401k stolen",
+        "GAO 401k theft retirement accounts 2026"
+      ],
+      "news": [
+        "401k account drained by impersonator lawsuit",
+        "hackers steal retirement 401k accounts recordkeeper",
+        "workers sue after 401k emptied by fraud",
+        "stolen 401k retirement savings recordkeeper lawsuit",
+        "401k account takeover fraud how it happens"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "ret-b07",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "FAKE 401(K) SECURITY ALERT TEXTS",
+    "script_text": "SCAMMERS ARE SENDING FAKE 401(K) SECURITY ALERTS BY TEXT. / THE BIG RECORDKEEPERS — FIDELITY, EMPOWER, VANGUARD, PRINCIPAL — ARE THE NAMES THEY COPY. / THE TEXT SAYS A WITHDRAWAL WAS REQUESTED AND GIVES YOU A LINK TO CANCEL IT. / THE LINK IS A FAKE LOGIN PAGE THAT TAKES YOUR PASSWORD. / HAVE A LOOK AT ONE OF THESE FAKE 401(K) ALERT TEXTS.",
+    "orientation": "vertical",
+    "clip_role": "evidence",
+    "news_anchor": "fake 401k withdrawal alert text scam Fidelity Empower Vanguard Principal phishing",
+    "visual_spec": "vertical screen recording of a phishing text message on a phone, fake 401k withdrawal alert",
+    "platforms": ["tiktok", "facebook", "reddit"],
+    "offsite_likely": false,
+    "priority": 2,
+    "expected_segments": 1,
+    "queries": {
+      "platform": [
+        "fake 401k text scam",
+        "401k withdrawal alert text scam",
+        "fake Fidelity text scam",
+        "#scamalert 401k text",
+        "401k phishing text screenshot"
+      ],
+      "victim": [
+        "I got a text about a 401k withdrawal I didnt make",
+        "fake 401k security alert text message"
+      ]
+    },
+    "platform_map": {
+      "tiktok": ["platform", "victim"],
+      "facebook": ["platform"],
+      "reddit": ["platform"]
+    }
+  },
+  {
+    "beat_id": "ret-b08",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "REGULATORS SAY ONE COMPANY DID THIS TO 1,600 PEOPLE (GOLD IRA)",
+    "script_text": "THE C-F-T-C AND 30 STATE REGULATORS SUED A LOS ANGELES COMPANY CALLED METALS.COM. / IT ALSO OPERATED AS CHASE METALS AND BARRICK CAPITAL. / THE COMPLAINT SAYS THEY TOOK MORE THAN $185 MILLION FROM AT LEAST 1,600 PEOPLE. / MORE THAN $140 MILLION OF THAT WAS RETIREMENT SAVINGS. / MARKUPS RAN 100 PERCENT TO OVER 300 PERCENT ABOVE SPOT. / THE PRINCIPALS, LUCAS ASHER AND SIMON BATASHVILI, ARE CHARGED. / HERE'S WHAT WE KNOW RIGHT NOW.",
+    "orientation": "horizontal",
+    "clip_role": "authority_report",
+    "news_anchor": "Metals.com Chase Metals Barrick Capital CFTC 30 states $185 million 1600 people gold IRA Lucas Asher Simon Batashvili",
+    "visual_spec": "news anchor or reporter over gold bars b-roll, regulator/lawsuit graphics",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "Metals.com CFTC lawsuit gold scam",
+        "Chase Metals Barrick Capital gold IRA fraud",
+        "Lucas Asher Simon Batashvili gold scam",
+        "Metals.com 1600 victims 185 million gold"
+      ],
+      "news": [
+        "gold IRA company overcharged customers lawsuit",
+        "CFTC sues gold dealer retirement savings fraud",
+        "self directed gold IRA scam regulators 185 million",
+        "gold IRA markup scam elderly retirement savings",
+        "precious metals dealer fraud lawsuit retirement"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "ret-b09",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "GOOD NEWS — THE COURIERS ARE GETTING CAUGHT AT THE FRONT DOOR",
+    "script_text": "GARY CHRISTOPHER, 59, OF PORT SAINT LUCIE, FLORIDA, FLEW TO PHOENIX IN APRIL. / HIS JOB WAS TO PICK UP $600,000 IN GOLD FROM A 78-YEAR-OLD WOMAN. / SHE HAD ALREADY LOST OVER $400,000 TO A MAN IMPERSONATING A FORMER U-S ATTORNEY. / SHE GOT SUSPICIOUS AND CALLED THE F-B-I. / AGENTS WERE WAITING AT HER HOUSE AND ARRESTED HIM AT SKY HARBOR AIRPORT. / WATCH WHAT HAPPENS WHEN THE COURIER SHOWS UP AND THE F-B-I IS ALREADY INSIDE.",
+    "orientation": "horizontal",
+    "clip_role": "confrontation_bust",
+    "news_anchor": "Gary Christopher 59 Port St Lucie Florida gold courier arrested Sky Harbor Phoenix FBI $600,000 retirement scam",
+    "visual_spec": "news package with arrest/surveillance footage or mugshot, FBI takedown of gold courier",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": false,
+    "priority": 1,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "Gary Christopher gold courier arrested Phoenix",
+        "Sky Harbor gold courier FBI arrest retirement scam",
+        "Gary Christopher Port St Lucie gold scam arrest"
+      ],
+      "news": [
+        "FBI arrests gold courier at Phoenix airport scam",
+        "gold courier caught picking up retirees savings",
+        "courier arrested at victims home gold bar scam",
+        "man arrested collecting gold from elderly victim FBI",
+        "gold bar courier arrested retirement scam sting"
+      ],
+      "platform": [
+        "gold courier caught on camera arrested",
+        "FBI sting gold bar courier busted"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "platform"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "ret-b10",
+    "episode": "retirement-scam-2026-07-23",
+    "segment_title": "AND IT HAPPENED AGAIN THIS MONTH IN PENNSYLVANIA (DOORSTEP PICKUP ON CAMERA)",
+    "script_text": "A MAN IN FRANKLIN PARK, PENNSYLVANIA PULLED $500,000 OUT OF HIS RETIREMENT FUND. / HE HANDED OVER $300,000 IN GOLD ON APRIL 24TH, $70,000 IN CASH ON JUNE 25TH, $77,000 ON JULY 1ST. / FRANKLIN PARK POLICE WERE WAITING AND ARRESTED THE COURIER ON THE PORCH. / THESE PICKUPS GET CAUGHT ON DOORBELL AND SECURITY CAMERAS ALL THE TIME. / HERE YOU CAN SEE ONE OF THESE FRANKLIN PARK DOORSTEP PICKUPS ON A HOME SECURITY CAMERA.",
+    "orientation": "vertical",
+    "clip_role": "evidence",
+    "news_anchor": "Franklin Park Pennsylvania gold courier doorstep pickup home security camera arrest retirement scam",
+    "visual_spec": "vertical doorbell/home security cam footage of a courier at a front door collecting a box",
+    "platforms": ["tiktok", "facebook", "reddit"],
+    "offsite_likely": false,
+    "priority": 2,
+    "expected_segments": 1,
+    "queries": {
+      "platform": [
+        "Franklin Park gold pickup doorbell",
+        "gold courier doorbell camera arrest",
+        "scammer picks up gold front door camera",
+        "#doorbell gold scam pickup",
+        "courier caught doorbell camera gold scam"
+      ],
+      "victim": [
+        "a man came to my door to pick up gold caught on camera",
+        "doorbell camera gold courier scam"
+      ]
+    },
+    "platform_map": {
+      "tiktok": ["platform", "victim"],
+      "facebook": ["platform"],
+      "reddit": ["platform"]
+    }
+  }
+]
