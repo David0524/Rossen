@@ -88,6 +88,10 @@ Wait for user approval before continuing.
 
 ### Phase 6: Download and cut
 
+**Self-recorded clips: link the source, don't scrape it.** When the asset is something the subject filmed and posted themselves (a `first_person_rant`, or any beat where the subject recorded their own phone video), the deliverable is a **direct link to the original post on the subject's own social account** — Instagram first, then X/TikTok. Do not download and crop a YouTube repost of it. Find the subject's handle, locate the post, and hand over the permalink (or the profile link plus the post date and a caption fragment if the permalink can't be pinned). The producer clears and pulls the native-vertical original from there. This is faster, higher quality, and sidesteps the clearance problem entirely — a repost's re-encode is never the thing to ship.
+
+The download-and-cut path below is only for the other case: an affiliate/network package or field footage where no clean subject-posted original exists.
+
 Download flagged clips. For each proposed segment, trim to the in/out span and, for vertical beats whose only source is a landscape repost, crop the pillar-boxed vertical back to full-screen 9:16.
 
 Use `cut/crop_vertical.sh`. Always run its `frame` mode first on a landscape source to confirm where the subject sits before trusting the center-crop:

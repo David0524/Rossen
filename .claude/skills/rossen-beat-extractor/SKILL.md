@@ -117,6 +117,12 @@ For beats that reference an event, company, or regulatory action rather than a n
 
 For vertical beats, also check YouTube Shorts: `yt-dlp --print id --print title --match-filter "duration<60" "ytsearch5:TOPIC #shorts"`.
 
+### Self-recorded beats: check the subject's own social first
+
+If the script says the subject filmed themselves (*"he recorded this on his phone,"* *"she posted this to her followers,"* any `first_person_rant` where nobody is interviewing them) — before running any YouTube search, check whether the subject has a public Instagram, X, or TikTok account and whether they posted the clip there. A web search for `"NAME" instagram scam video` or `"NAME" posted video scam` usually surfaces it, often via press coverage that names the platform and date even when the exact permalink isn't indexable.
+
+Tag this `source_native: instagram | x | tiktok | none`. When a native post exists, that is the pick — not a YouTube repost. Aggregator channels (New York Post, and AI-narrator repost channels) frequently carry the only *findable* copy on YouTube, but they either re-narrate over the subject's own audio or are DRM/bot-walled from download, and neither is a clean, clearable source. Hand the producer the direct link to the original post (or profile + date + caption fragment if the exact permalink can't be pinned) instead of scraping and cropping a repost.
+
 ### Output
 
 Add two fields to every beat record:
