@@ -1,117 +1,232 @@
 [
-  {
-    "beat_id": "08-05-b01",
-    "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=DZ06YW82Qh8",
-    "title": "Amazon Late Delivery Refund How To Receive",
-    "platform": "youtube",
-    "source_type": "creator_long",
-    "segments": [
-      {"in": "0:00", "out": "0:36", "outcue": "purchase but the catch is the next"},
-      {"in": "0:49", "out": "2:08", "outcue": "my item didn't arrive as promised"}
-    ]
-  },
-  {
-    "beat_id": "08-05-b02",
-    "status": "empty",
-    "reason": "No vertical evidence of Amazon phantom delivery on YouTube. Needs TikTok/Instagram search."
-  },
-  {
-    "beat_id": "08-05-b03",
-    "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=23OPFKfjQ5I",
-    "title": "They say Amazon shipped fake product and refuses refund until 'correct' item returned",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "segments": [
-      {"in": "0:00", "out": "1:06", "outcue": "a little bit of a slap in the face"}
-    ],
-    "flags": ["script says 'HER' but victim is male — gender mismatch", "CBC Canadian network — clearance check needed"]
-  },
-  {
-    "beat_id": "08-05-b04",
-    "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=ttBoYQjmaVc",
-    "title": "Amazon customers could be getting some money back after 'record-breaking' settlement",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "segments": [
-      {"in": "0:14", "out": "1:33", "outcue": "a clear and conspicuous button to help people decline or cancel their subscription"}
-    ]
-  },
-  {
-    "beat_id": "08-05-b05",
-    "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=mff8NrTcRw0",
-    "title": "Refund checks from an Amazon Prime settlement are arriving in mailboxes now",
-    "platform": "youtube",
-    "source_type": "creator_short",
-    "segments": [
-      {"in": "0:00", "out": "0:52", "outcue": "the checks have to be cashed in within 60 days"}
-    ],
-    "flags": ["WEAK FIT — news explainer not first-person reaction"]
-  },
-  {
-    "beat_id": "08-05-b06",
-    "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=ggDHtb-4GWQ",
-    "title": "Consumer Reports: Amazon must follow new rules for recalled products",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "segments": [
-      {"in": "0:38", "out": "1:50", "outcue": "hold online marketplaces accountable in the future"}
-    ]
-  },
-  {
-    "beat_id": "08-05-b07",
-    "status": "empty",
-    "reason": "No Lakkzoom immersion water heater fire footage. Too recent (July 22, 2026)."
-  },
-  {
-    "beat_id": "08-05-b08",
-    "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=ytkn-av0Dd8",
-    "title": "Beware of grill brush dangers",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "segments": [
-      {"in": "1:05", "out": "1:41", "outcue": "after ingesting bristles hidden in food"},
-      {"in": "1:41", "out": "2:10", "outcue": "I saw a metal bristle right on the grate"}
-    ]
-  },
-  {
-    "beat_id": "08-05-b09",
-    "status": "download_pending",
-    "url": "https://www.youtube.com/shorts/55hbVRTDICA",
-    "title": "NEW Amazon Scam: Your Product Was Recalled",
-    "platform": "youtube",
-    "source_type": "creator_short",
-    "segments": [
-      {"in": "0:00", "out": "0:38", "outcue": "they go on a shopping spree in your name in real time"}
-    ],
-    "flags": ["from Rossen Reports channel — confirm using own content as source"]
-  },
-  {
-    "beat_id": "08-05-b10",
-    "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=g6n6rFw1MHk",
-    "title": "Amazon refund emails are real, but beware of scams",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "segments": [
-      {"in": "0:00", "out": "0:43", "outcue": "it is going to be an automatic process"}
-    ]
-  },
-  {
-    "beat_id": "08-05-b11",
-    "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=erKRMlCUNkc",
-    "title": "Back-to-class: how to save money on school supplies during Ohio's tax-free weekend",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "segments": [
-      {"in": "0:23", "out": "1:40", "outcue": "like i said this is running the whole"}
-    ],
-    "flags": ["reporter is female, script says 'WATCH HIM'"]
-  }
+ {
+  "beat_id": "08-05-b01",
+  "segment_title": "AMAZON GUARANTEED DELIVERY REFUND \u2014 HOW TO CLAIM IT",
+  "clip_role": "explainer_demo/creator_long",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=_8W0-cK5XTQ",
+  "platform": "youtube",
+  "source_type": "creator_long",
+  "uploader": "In the Black",
+  "title": "DO THIS every time an Amazon package arrives late",
+  "swapped": false,
+  "segments": [
+   {
+    "in": "1:02",
+    "out": "1:41",
+    "outcue": "worth a shot though"
+   },
+   {
+    "in": "2:34",
+    "out": "3:53",
+    "outcue": "10 credit easy"
+   }
+  ],
+  "note": "fit is the general late-delivery credit, not specifically the guaranteed-delivery shipping-fee refund"
+ },
+ {
+  "beat_id": "08-05-b02",
+  "segment_title": "\"DELIVERED.\" EXCEPT IT WASN'T \u2014 PHANTOM DELIVERY",
+  "clip_role": "victim_interview",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=yEfQr9uDnH8",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "uploader": "KXAN",
+  "title": "Missing gifts, misleading tracking: KXAN investigates packages that never arrive",
+  "swapped": true,
+  "segments": [
+   {
+    "in": "0:43",
+    "out": "1:15",
+    "outcue": "still hasn't received it"
+   }
+  ],
+  "note": "about a shipping company (LSO), not Amazon's own delivery scan; setup lines rewritten to the 'packages that never arrive' framing"
+ },
+ {
+  "beat_id": "08-05-b03",
+  "segment_title": "WHEN AMAZON SAYS NO \u2014 THE A-TO-Z GUARANTEE",
+  "clip_role": "victim_interview",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=IuxwwAdVGB8",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "uploader": "WSPA 7News",
+  "title": "Amazon buyers warn watch out for the \"empty box\" scam",
+  "swapped": false,
+  "segments": [
+   {
+    "in": "0:34",
+    "out": "0:55",
+    "outcue": "reimburse us"
+   }
+  ],
+  "note": "not literally an A-to-Z claim denial; it is the adjacent third-party-seller no-refund case"
+ },
+ {
+  "beat_id": "08-05-b04",
+  "segment_title": "AND NOW \u2014 THE $2.5 BILLION CHECK (FTC SETTLEMENT)",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=zTgyswYFvsY",
+  "platform": "youtube",
+  "source_type": "network",
+  "uploader": "ABC News",
+  "title": "Amazon issuing checks to eligible Prime members",
+  "swapped": false,
+  "segments": [
+   {
+    "in": "0:16",
+    "out": "1:00",
+    "outcue": "get a check in the mail"
+   }
+  ],
+  "note": null
+ },
+ {
+  "beat_id": "08-05-b05",
+  "segment_title": "THE SIZE OF THESE CHECKS \u2014 PEOPLE POSTING PAYOUTS",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=IOqVtw1War4",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "uploader": "WUSA9",
+  "title": "Amazon settlement checks: Where's the money?",
+  "swapped": true,
+  "segments": [
+   {
+    "in": "0:03",
+    "out": "0:30",
+    "outcue": "capped at $51"
+   }
+  ],
+  "note": "does not show the 'under a dollar' payouts; re-framed to 'here's what the checks are and how to know yours is real'"
+ },
+ {
+  "beat_id": "08-05-b06",
+  "segment_title": "THE RECALLED PRODUCTS ALREADY IN YOUR HOUSE \u2014 CPSC DISTRIBUTOR RULING",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=o_iCvhqaWiI",
+  "platform": "youtube",
+  "source_type": "network",
+  "uploader": "WKYC Channel 3",
+  "title": "Consumer Reports: Amazon updates rules surrounding recalled items",
+  "swapped": false,
+  "segments": [
+   {
+    "in": "1:01",
+    "out": "1:41",
+    "outcue": "injury or death"
+   },
+   {
+    "in": "1:57",
+    "out": "2:22",
+    "outcue": "products out of homes"
+   }
+  ],
+  "note": "Consumer Reports franchise piece; the airable core is 1:01-2:22, the tail drifts into a review-writing tangent"
+ },
+ {
+  "beat_id": "08-05-b07",
+  "segment_title": "235 FIRES \u2014 LAKKZOOM IMMERSION WATER HEATERS",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=N1D4PvPen9w",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "uploader": "KSNT News",
+  "title": "Power banks recalled over fire, explosion danger: CPSC",
+  "swapped": true,
+  "segments": [
+   {
+    "in": "0:01",
+    "out": "0:37",
+    "outcue": "full refund or gift card"
+   }
+  ],
+  "note": "news readout, not raw fire footage; product changed from Lakkzoom heater to Anker power bank \u2014 the 98K units / 235 fires / July 22 specifics are rewritten out of the setup"
+ },
+ {
+  "beat_id": "08-05-b08",
+  "segment_title": "IT IS NOT JUST AMAZON \u2014 CUISINART GRILL BRUSH RECALL",
+  "clip_role": "evidence",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=j7i0NTk3Qwk",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "uploader": "WKBN27",
+  "title": "Guilford Lake woman recovering after swallowing a grill brush bristle",
+  "swapped": false,
+  "segments": [
+   {
+    "in": "0:01",
+    "out": "0:37",
+    "outcue": "off the market"
+   }
+  ],
+  "note": "victim is about a grill brush generally, not the specific Cuisinart/Conair recalled model; the injury is the point"
+ },
+ {
+  "beat_id": "08-05-b09",
+  "segment_title": "THE FAKE RECALL TEXT THAT DRAINS YOUR BANK ACCOUNT",
+  "clip_role": "evidence",
+  "orientation": "vertical",
+  "url": "https://www.youtube.com/watch?v=LPF9ETVTrSw",
+  "platform": "youtube",
+  "source_type": "creator_short",
+  "uploader": "Ryan Mack",
+  "title": "Amazon Refund Text SCAM: Don't Click That Link!",
+  "swapped": false,
+  "segments": [
+   {
+    "in": "0:00",
+    "out": "0:52",
+    "outcue": "Stay sharp"
+   }
+  ],
+  "note": "creator explainer over the text, not a pure raw screen-record; strongest available vertical evidence"
+ },
+ {
+  "beat_id": "08-05-b10",
+  "segment_title": "FAKE SETTLEMENT REFUND SCAM \u2014 FTC WARNING",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=WZYjk1fX5hs",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "uploader": "News 19 WLTX",
+  "title": "How to spot a class action settlement email scam",
+  "swapped": false,
+  "segments": [
+   {
+    "in": "0:04",
+    "out": "1:37",
+    "outcue": "just a few dollars"
+   }
+  ],
+  "note": null
+ },
+ {
+  "beat_id": "08-05-b11",
+  "segment_title": "TAX FREE WEEKEND \u2014 HOW MUCH YOU SAVE",
+  "clip_role": "explainer_demo/creator_long",
+  "orientation": "horizontal",
+  "url": "https://www.youtube.com/watch?v=erKRMlCUNkc",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "uploader": "WTOL 11",
+  "title": "Ohio tax-free weekend: reporter shows savings at checkout",
+  "swapped": false,
+  "segments": [
+   {
+    "in": "0:23",
+    "out": "1:37",
+    "outcue": "cents on the dollar"
+   }
+  ],
+  "note": null
+ }
 ]

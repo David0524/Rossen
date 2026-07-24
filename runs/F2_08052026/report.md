@@ -1,87 +1,50 @@
-# F2 08-05-2026 Pipeline Report
+# F2 Top Stories — Wednesday, August 5 — clip pipeline report
 
-**Episode:** F2 TOP STORIES — WEDNESDAY, AUGUST 5
-**Script:** Amazon refunds, recalled products, phishing texts, tax-free weekend
-**Beats:** 11 extracted, 0 from cold open/tease
-**Beats hint:** None found
-**Run date:** 2026-07-24
+Run date 2026-07-24. Full-coverage run (BRAVE_API_KEY set — not degraded). 11 beats, all 11 flagged with transcript-verified verbatim outcues. Three beats (b02, b05, b07) were empty at grading and were case-swapped to sourceable cases on approval; their script setup lines are rewritten in the Bible.
 
-## Source mix, 11 beats
+**Source mix, 11 beats:**  affiliate 7 · network 2 · creator_long 1 · creator_short 1
 
-```
-affiliate 6 · creator_long 1 · creator_short 2 · empty 2
-```
+| Beat | Role | Chosen clip | Platform | Source | Dur | Outcue(s) |
+|---|---|---|---|---|---|---|
+| b01 | creator_long | In the Black | youtube | creator_long | 4:31 | 1:02–1:41 "worth a shot though" ; 2:34–3:53 "10 credit easy" |
+| b02 *(swap)* | victim_interview | KXAN | youtube | affiliate | 3:02 | 0:43–1:15 "still hasn't received it" |
+| b03 | victim_interview | WSPA 7News | youtube | affiliate | 2:21 | 0:34–0:55 "reimburse us" |
+| b04 | authority_report | ABC News | youtube | network | 1:39 | 0:16–1:00 "get a check in the mail" |
+| b05 *(swap)* | authority_report | WUSA9 | youtube | affiliate | 1:16 | 0:03–0:30 "capped at $51" |
+| b06 | authority_report | WKYC Channel 3 | youtube | network | 3:52 | 1:01–1:41 "injury or death" ; 1:57–2:22 "products out of homes" |
+| b07 *(swap)* | authority_report | KSNT News | youtube | affiliate | 0:42 | 0:01–0:37 "full refund or gift card" |
+| b08 | evidence | WKBN27 | youtube | affiliate | 0:46 | 0:01–0:37 "off the market" |
+| b09 | evidence | Ryan Mack | youtube | creator_short | 0:52 | 0:00–0:52 "Stay sharp" |
+| b10 | authority_report | News 19 WLTX | youtube | affiliate | 2:11 | 0:04–1:37 "just a few dollars" |
+| b11 | creator_long | WTOL 11 | youtube | affiliate | 2:07 | 0:23–1:37 "cents on the dollar" |
 
-2 of 11 beats are empty. 1 is a weak fit. The empties are vertical evidence beats whose content lives on TikTok or is too recent to exist on video.
+## Call-outs (per Step 8)
 
-## Search coverage
+**No beat is empty.** All 11 carry a verified pick. Three began empty and were case-swapped (below).
 
-- YouTube + Brave web/video
-- Brave API key: set
-- Serper: not set (not needed, Brave covers web search)
-- 5167 raw candidates -> 2993 after dedupe across 11 beats
-- Re-queried 4 beats (b02, b03, b05, b07) with revised queries
-- YouTube downloads blocked by 403 in cloud environment — clips need local pull
+**Weak pick a human should re-check:**
+- **b01 (score 78)** — "In the Black" is the general *late-delivery credit* ask (get a $10 credit / Prime extension via chat), not Jeff's exact *guaranteed-delivery shipping-fee* path (Your Orders → Problem with an order → Shipment is late). Same family, softer fit. If a tighter demo of the specific guaranteed-delivery-fee refund exists, swap it; otherwise this is show-produced territory (Jeff walks the screens himself).
 
-## Beat table
+**Case-swaps applied (were empty at grading, all three vertical → now horizontal):**
+- **b02** phantom "delivered" doorbell evidence → **KXAN** package-never-arrived investigation (named victims, "misleading tracking"). Not Amazon's own scan; it's a shipping-company story. Setup rewritten.
+- **b05** first-person "payouts under a dollar" reaction → **WUSA9** "Where's the money" authority piece on the checks (capped at $51, is-it-a-scam). Re-roled first_person → authority. Setup rewritten.
+- **b07** Lakkzoom immersion-heater fire evidence → **KSNT** Anker power-bank fire recall (Amazon-sold, 33 fires/explosions, 481K units). Product changed; the 98K-units / 235-fires / July-22 specifics are rewritten out.
 
-| Beat | Role | Or. | Pick | Platform | Source | Score | Outcue | Status |
-|------|------|-----|------|----------|--------|-------|--------|--------|
-| b01 | explainer_demo/creator_long | H | [DZ06YW82Qh8](https://www.youtube.com/watch?v=DZ06YW82Qh8) | youtube | creator_long | 82 | "my item didn't arrive as promised" | OK (2 segs) |
-| b02 | evidence | V | — | — | — | — | — | EMPTY |
-| b03 | victim_interview | H | [23OPFKfjQ5I](https://www.youtube.com/watch?v=23OPFKfjQ5I) | youtube | affiliate | 84 | "a little bit of a slap in the face" | OK |
-| b04 | authority_report | H | [ttBoYQjmaVc](https://www.youtube.com/watch?v=ttBoYQjmaVc) | youtube | affiliate | 87 | "a clear and conspicuous button..." | OK |
-| b05 | first_person_rant | V | [mff8NrTcRw0](https://www.youtube.com/watch?v=mff8NrTcRw0) | youtube | creator_short | 68 | "the checks have to be cashed in within 60 days" | WEAK |
-| b06 | authority_report | H | [ggDHtb-4GWQ](https://www.youtube.com/watch?v=ggDHtb-4GWQ) | youtube | affiliate | 88 | "hold online marketplaces accountable in the future" | OK |
-| b07 | evidence | V | — | — | — | — | — | EMPTY |
-| b08 | evidence | H | [ytkn-av0Dd8](https://www.youtube.com/watch?v=ytkn-av0Dd8) | youtube | affiliate | 86 | "after ingesting bristles hidden in food" | OK (2 segs) |
-| b09 | evidence | V | [55hbVRTDICA](https://www.youtube.com/shorts/55hbVRTDICA) | youtube | creator_short | 80 | "they go on a shopping spree in your name in real time" | OK |
-| b10 | authority_report | H | [g6n6rFw1MHk](https://www.youtube.com/watch?v=g6n6rFw1MHk) | youtube | affiliate | 82 | "it is going to be an automatic process" | OK |
-| b11 | explainer_demo/creator_long | H | [erKRMlCUNkc](https://www.youtube.com/watch?v=erKRMlCUNkc) | youtube | affiliate | 90 | "like i said this is running the whole" | OK |
+Why they were empty (diagnosed, not query failures): b02 & b05 are native-social gaps — the reaction/doorbell content lives on TikTok/IG, which Brave's video endpoint does not surface; b07 was a recency gap — Lakkzoom was recalled ~2 weeks pre-air with no citizen or news video yet.
 
-## Empty beats
+**Source-type concentration:** affiliate holds **7 of 11 (64%)** — just under the 70% flag line, but worth noting the episode leans affiliate. Cheap variety swaps if the producer wants them, with a different-type runner-up available:
+- **b04** (network ABC) — runner-up was Money Instructor (**creator_long**), the diversity-floor promotion.
+- **b09** (creator_short Ryan Mack) and **b01** (creator_long In the Black) are the only non-affiliate/network picks; they're already the variety.
 
-**b02 (evidence, V):** Amazon phantom delivery — doorbell cam showing empty porch while app says delivered. This content is overwhelmingly TikTok/Reddit vertical clips and image posts. YouTube candidates were about buying doorbell cameras, not documenting phantom deliveries. Re-queried with doorbell-specific terms; still no usable video.
+**Diversity floor:**
+- **b04** — floor fired (all-network survivors), promoted Money Instructor (creator_long); it then lost pass two to the ABC network package. Expected "floor promoted filler" pattern — worth watching if it repeats across episodes.
+- **b03** — floor could not fire: the entire survivor pool was affiliate, no non-affiliate cleared the hard filters, so it shipped affiliate-only (floor promotes, never invents).
 
-**b07 (evidence, V):** Lakkzoom immersion water heater fires. CPSC emergency action was July 22, 2026 — less than 2 weeks ago. No YouTube or social video of the actual fires yet. News_web results were CPSC press releases (text only). This will surface over the next week or two as local affiliates cover it.
+**Clips that failed to download:** none were attempted — there is **no automated download-and-cut stage** in this codebase. Picks were located, verified against transcript, and logged with exact timecodes for a human to pull. Separately: 6 of 37 shortlisted YouTube captions came back null (terminated channel / geo-blocked / captions off) and were demoted; the one TikTok candidate (b02) transcribed to music only ("Thanks for watching") and was dropped. YouTube *video-byte* downloads 403 in this environment (metadata/captions work) — not exercised here because the pipeline does not pull video.
 
-## Weak picks
+**Degraded?** No. BRAVE_API_KEY was present; YouTube + Brave both ran.
 
-**b05:** The 64s settlement explainer (mff8NrTcRw0) covers the checks going out, max $51, PayPal/Venmo/check. But the beat wants someone showing their SMALL payout and reacting ("PEOPLE HAVE BEEN POSTING THEIR PAYOUTS ONLINE / SOME ARE UNDER A DOLLAR / THINK WHAT YOU WOULD DO"). That's TikTok reveal content — first-person reaction, not news explainer.
-
-## Upgraded picks (pass two re-grade)
-
-Five beats received significantly better picks on the second grading pass:
-
-- **b03:** Walmart third-party seller story (54tfKlslTA4, score 72) → CBC Go Public Amazon fake graphics card investigation (23OPFKfjQ5I, score 84). Named victim Matthew Lago, $700 order, Amazon refused refund. Exact A-to-Z scenario.
-- **b04:** Creator explainer (xY-s26O0hkE, score 78) → WHAS11/ABC affiliate package (ttBoYQjmaVc, score 87). Andrea Fujii's report with FTC chair quote, all key settlement facts.
-- **b08:** Generic grill brush demo (iB-V407xMeE, score 85) → WDIV affiliate consumer investigation (ytkn-av0Dd8, score 86). Named victim Linda, bristle in throat required surgery, magnet test demonstration.
-- **b09:** Previously EMPTY → YouTube Short covering exact Amazon recall text scam (55hbVRTDICA, score 80). FTC-flagged phishing setup, vertical orientation matches beat.
-- **b10:** General settlement scam warning (WZYjk1fX5hs, score 75) → WBAY Amazon-specific settlement scam warning (g6n6rFw1MHk, score 82). Wisconsin Consumer Protection official on camera.
-
-## Flags for producer
-
-- **b03:** Script says "LISTEN TO WHAT HAPPENED TO HER" but victim is male (Matthew Lago). Gender mismatch needs script line swap.
-- **b03:** CBC is a Canadian network — may need clearance check.
-- **b09:** Clip is from Rossen Reports' own YouTube channel — confirm using own content as source clip.
-- **b11:** Reporter is female, script says "WATCH HIM" — minor mismatch.
-
-## What I had to work around
-
-1. **Re-queried 4 beats** (b02, b03, b05, b07) after pass-one triage showed poor candidates. Revised queries focused on doorbell cam evidence, Amazon marketplace buyer complaints, settlement check reaction reveals, and Lakkzoom-specific fire footage. b03 improved significantly on second pass grading.
-
-2. **YouTube downloads blocked** (HTTP 403) in this cloud environment. Metadata and captions worked but video bytes are blocked by YouTube. All picks are logged with URLs and segment timecodes in `clips/manifest.json` for local download.
-
-3. **2 Brave video queries failed** on b10 (connection reset). Still got 366 candidates from remaining queries.
-
-4. **3 of 30 YouTube caption fetches returned null.** All three were on b01 where we had 3 other captioned candidates, so no impact.
-
-## Monoculture check
-
-Affiliate holds 6 of 9 filled picks (67%), just under the 70% threshold. Runner-up type is creator_short at 2 picks (b05, b09). The affiliate-heavy mix reflects that the best case-specific, named-victim content for these beats came from local news investigations. The two creator_short picks are both vertical-orientation beats where affiliate packages are uncommon.
-
-## Degradation
-
-- NOT degraded by missing search key (Brave API available)
-- Degraded by missing TikTok/Instagram/Facebook direct search — 2 empty beats and 1 weak beat are vertical content that lives on those platforms
-- Degraded by YouTube download block in cloud environment — clips not cut
+## Method notes
+- Beats extracted independently and cross-checked against the prior committed run — full agreement on count (11), roles, and orientation.
+- Orientation enforced as a hard filter in triage (verified programmatically); Shorts allowed to cross onto horizontal beats per the query-gen exception.
+- Every outcue was located in the cue-level transcript with the grader's own `find()` normalization; the out-timecode is read off the matched cue, never computed by hand. See `build_picks.py`.

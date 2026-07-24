@@ -87,10 +87,31 @@ PICKS = {
    "flags":[]},
 }
 
-EMPTY = {
- "08-05-b02": "No clean vertical clip of the exact phenomenon (app says 'delivered', no truck ever came, doorbell proves it). Pool returned Reddit text threads and porch-THEFT clips (a person visibly stealing a package) — a different story. Native social gap, not a query failure.",
- "08-05-b05": "No first-person vertical reaction to a tiny payout ('some under a dollar'). Pool returned news-anchor settlement readouts and Reddit text. The reaction content lives on native TikTok/IG, which the Brave video endpoint does not surface. Native social gap, not a query failure.",
- "08-05-b07": "No footage of the actual recalled product (Lakkzoom immersion water heater). Pool returned generic water-heater-fire Reddit text and OTHER product recalls (Navien/Camplux tankless — wrong object). The product was recalled July 22, ~2 weeks pre-air, with no citizen or news video yet. Recency/availability gap, not a query failure.",
+# The three beats that were empty, now case-swapped (approved) to sourceable
+# cases. Orientation changes V->H; script setup lines are rewritten in the
+# Bible build. `swapped_from` records what the original beat asked for.
+SWAPS = {
+ "08-05-b02": {"url":"https://www.youtube.com/watch?v=yEfQr9uDnH8","platform":"youtube",
+   "title":"Missing gifts, misleading tracking: KXAN investigates packages that never arrive","uploader":"KXAN",
+   "source_type":"affiliate","score":74,"orientation":"horizontal","clip_role":"victim_interview",
+   "segments":[("0:43","still hasn't received it")],
+   "swapped_from":"vertical evidence: Amazon 'delivered' doorbell-cam phantom delivery (no sourceable native clip)",
+   "reasoning":"Named victims (Sin Taylor, Brick Hundley) on camera who paid for shipping, saw tracking say the package moved, and never received it; BBB investigating 'misleading tracking.' Closest sourceable case to the 'says delivered but never came' beat.",
+   "flags":["about a shipping company (LSO), not Amazon's own delivery scan; setup lines rewritten to the 'packages that never arrive' framing"]},
+ "08-05-b05": {"url":"https://www.youtube.com/watch?v=IOqVtw1War4","platform":"youtube",
+   "title":"Amazon settlement checks: Where's the money?","uploader":"WUSA9",
+   "source_type":"affiliate","score":79,"orientation":"horizontal","clip_role":"authority_report",
+   "segments":[("0:03","capped at $51")],
+   "swapped_from":"vertical first_person_rant: people posting tiny settlement payouts 'under a dollar' (native-social gap)",
+   "reasoning":"Affiliate 'Where's the money' segment on the actual checks: part of the $2.5B settlement, payouts capped at $51, when they went out, and that the FTC will never ask you to pay to receive one. Re-roled from first-person reaction to authority on the checks themselves.",
+   "flags":["does not show the 'under a dollar' payouts; re-framed to 'here's what the checks are and how to know yours is real'"]},
+ "08-05-b07": {"url":"https://www.youtube.com/watch?v=N1D4PvPen9w","platform":"youtube",
+   "title":"Power banks recalled over fire, explosion danger: CPSC","uploader":"KSNT News",
+   "source_type":"affiliate","score":80,"orientation":"horizontal","clip_role":"authority_report",
+   "segments":[("0:01","full refund or gift card")],
+   "swapped_from":"vertical evidence: Lakkzoom immersion water heater fire (product recalled July 22, no citizen video yet)",
+   "reasoning":"Current, Amazon-sold recall with real fire history: 33 reports of fires and explosions from Anker power banks, 481,000 units recalled, stop-using guidance. Replaces the un-sourceable Lakkzoom heater while keeping the 'recalled product that catches fire' beat.",
+   "flags":["news readout, not raw fire footage; product changed from Lakkzoom heater to Anker power bank — the 98K units / 235 fires / July 22 specifics are rewritten out of the setup"]},
 }
 
 picks = []
@@ -109,8 +130,21 @@ for bid, spec in PICKS.items():
                   "title": spec["title"], "uploader": spec["uploader"],
                   "source_type": spec["source_type"], "score": spec["score"],
                   "segments": segs, "reasoning": spec["reasoning"], "flags": spec["flags"]})
-for bid, reason in EMPTY.items():
-    picks.append({"beat_id": bid, "flagged": None, "empty_reason": reason})
+for bid, spec in SWAPS.items():
+    segs = []
+    for in_tc, outcue in spec["segments"]:
+        r = find_cue(spec["url"], outcue)
+        if not r:
+            problems.append(f"{bid} SWAP: OUTCUE NOT FOUND: {outcue!r}"); continue
+        start, end, matched = r
+        segs.append({"in": in_tc, "out": fmt(end), "outcue": outcue,
+                     "_verified_at": fmt(start), "_matched_cue": matched})
+    picks.append({"beat_id": bid, "flagged": spec["url"], "platform": spec["platform"],
+                  "title": spec["title"], "uploader": spec["uploader"],
+                  "source_type": spec["source_type"], "score": spec["score"],
+                  "orientation": spec["orientation"], "clip_role": spec["clip_role"],
+                  "swapped": True, "swapped_from": spec["swapped_from"],
+                  "segments": segs, "reasoning": spec["reasoning"], "flags": spec["flags"]})
 
 picks.sort(key=lambda p: p["beat_id"])
 json.dump(picks, open("picks.json", "w"), indent=1)
