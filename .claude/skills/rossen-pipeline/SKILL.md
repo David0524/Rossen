@@ -56,10 +56,26 @@ curl -s -o /dev/null -w "brave HTTP %{http_code}\n" \
 **These three YouTube paths fail independently.** Search is a different
 endpoint from the video page, which is different again from media bytes, and
 in a shared-egress environment (a cloud container behind a pooled IP) they
-degrade in that order — search survives longest, media dies first. Observed
-live on 2026-07-24: search fine, captions and media both bot-walled, on an IP
-where a prior run of this same pipeline had pulled 53/59 captions successfully.
-Nothing in the code changed. The IP's reputation did.
+degrade in that order — search survives longest, media dies first.
+
+**Distinguish throttling from blocking before you report either.** The
+"Sign in to confirm you're not a bot" response is returned for *both*, and
+they need opposite responses. Measured on 2026-07-24: a rapid diagnostic
+burst — a dozen `--list-subs` calls in a couple of minutes, several of them
+looping over player clients — drove the caption path to **0 of 6** on video
+IDs a prior run had captioned successfully. It looked exactly like a hard IP
+block. Twenty minutes later the ordinary `fetch_many` path, hitting the same
+host at its normal pace, returned **11 of 12**. Nothing was fixed; the burst
+had simply tripped a rate limiter.
+
+So: probe **once** per path, never in a loop, and never iterate player
+clients as a first move — that iteration is itself what trips the limiter.
+If a probe fails, wait several minutes and retry once through the real code
+path (`fetch_many`) before concluding anything. Report a hard block only
+after a spaced-out retry through the normal path also fails. Calling a
+throttle a block costs a whole run: it converts every pick to an unverified
+outcue and pushes the producer toward a degraded deliverable they did not
+need to accept.
 
 **If captions are bot-walled, say so at Checkpoint 1 and stop for a ruling.**
 Do not run search and grade into a dead end: without captions there is no

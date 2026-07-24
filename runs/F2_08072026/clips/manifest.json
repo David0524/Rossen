@@ -1,0 +1,71 @@
+{
+  "episode": "F2-08-07-2026",
+  "generated": "2026-07-24",
+  "stage": "handoff",
+  "what_this_is": "A hand-written pull list. NOTHING WAS DOWNLOADED OR CUT. There is no download-and-cut code path in rossen_harvest (`--help` lists exactly two subcommands, harvest/search and eval). Picks were located, graded against transcript, and logged with exact timecodes for someone else to pull manually in the edit bay.",
+  "beats": [
+    {
+      "beat_id": "b01",
+      "status": "pick",
+      "url": "https://www.youtube.com/watch?v=cEMIokXkpwA",
+      "title": "Florida man helps deputies catch scammer during undercover sting",
+      "platform": "youtube",
+      "uploader": "FOX 13 Tampa Bay",
+      "source_type": "affiliate",
+      "source_duration": 166,
+      "butt_cut_with": "b02",
+      "segments": [
+        {"in": "0:35", "out": "1:10", "length": "35s",
+         "outcue": "come by to pick it up", "outcue_verified": true}
+      ],
+      "note": "SAME SOURCE AS b02 — pull the file once, cut two slices."
+    },
+    {
+      "beat_id": "b02",
+      "status": "pick",
+      "url": "https://www.youtube.com/watch?v=cEMIokXkpwA",
+      "title": "Florida man helps deputies catch scammer during undercover sting",
+      "platform": "youtube",
+      "uploader": "FOX 13 Tampa Bay",
+      "source_type": "affiliate",
+      "source_duration": 166,
+      "butt_cut_with": "b01",
+      "segments": [
+        {"in": "1:16", "out": "2:07", "length": "51s",
+         "outcue": "charged with grand theft", "outcue_verified": true}
+      ],
+      "note": "SAME SOURCE AS b01. Courier arrival lands at 1:34 inside this segment."
+    },
+    {
+      "beat_id": "b03",
+      "status": "show_produced",
+      "url": null,
+      "segments": [],
+      "note": "PRODUCTION TASK, not a clip pull. Screen-record a live fake IC3/FBI recovery page. Must show the two tells the script names: every other link bounces to the home page, and the intake form is one single step (name, phone, email, scam type, amount lost)."
+    },
+    {
+      "beat_id": "b04",
+      "status": "manual_clip",
+      "url": "https://www.cbsnews.com/newyork/video/l-i-romance-scam-victim-who-lost-468000-says-she-was-scammed-again-while-looking-for-help/",
+      "title": "L.I. romance scam victim who lost $468,000 says she was scammed again while looking for help",
+      "platform": "news_web",
+      "uploader": "CBS News New York",
+      "source_type": "network",
+      "source_duration": 112,
+      "reporter": "Tim McNicholas",
+      "segments": [
+        {"in": null, "out": null, "outcue": null, "outcue_verified": false}
+      ],
+      "note": "MANUAL CLIP — no captions. CBS video page, not YouTube, so no caption track exists and no timecode is proposed. Editor sets in/out on pull. Longer 197s cut of the same case available at https://www.cbsnews.com/newyork/video/scam-victim-loses-even-more-to-fake-online-romance-scam-support-group/",
+      "clearance": "CBS News New York — network clearance required."
+    }
+  ],
+  "source_mix": {"affiliate": 2, "network": 1, "show_produced": 1},
+  "totals": {
+    "beats": 4,
+    "picks_with_verified_timecode": 2,
+    "manual_clips_no_timecode": 1,
+    "show_produced": 1,
+    "empty": 0
+  }
+}

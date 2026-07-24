@@ -1,0 +1,106 @@
+[
+  {
+    "beat_id": "b01",
+    "flagged": "https://www.youtube.com/watch?v=cEMIokXkpwA",
+    "title": "Florida man helps deputies catch scammer during undercover sting",
+    "platform": "youtube",
+    "uploader": "FOX 13 Tampa Bay",
+    "source_type": "affiliate",
+    "duration": 166,
+    "butt_cut_with": "b02",
+    "butt_note": "b01 and b02 are two consecutive slices of ONE source, which is what the script's BUTT marker asks for. b01 carries the mechanic, b02 carries the sting and the arrest.",
+    "score": 90,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+      {
+        "in": "0:35",
+        "out": "1:10",
+        "outcue": "come by to pick it up",
+        "outcue_verified": true,
+        "outcue_cue_span": "65.20-70.00s",
+        "verification": "Transcript.find() against auto-captions, source=auto, 76 cues"
+      }
+    ],
+    "reasoning": "Delivers the script's mechanic end to end in 35 seconds: a call from someone claiming to be police, a friend supposedly in jail, a trip to the bank, cash sealed in a box, and a driver sent to collect it. That is the 'how they operate' explanation b01 sets up. Riverview/Hillsborough County keeps the story in the Tampa Bay market, adjacent to Manatee.",
+    "requires_script_change": true,
+    "script_change": "b01's setup names Xin Liu, Manatee County, $3.5M/40 victims and Detective Gary Cummings. None of that is in this clip. Setup lines rewritten to the Bruce Fredy / Hillsborough County case.",
+    "flags": ["case swapped from Manatee County — no video exists for the original"],
+    "cannot_determine": []
+  },
+  {
+    "beat_id": "b02",
+    "flagged": "https://www.youtube.com/watch?v=cEMIokXkpwA",
+    "title": "Florida man helps deputies catch scammer during undercover sting",
+    "platform": "youtube",
+    "uploader": "FOX 13 Tampa Bay",
+    "source_type": "affiliate",
+    "duration": 166,
+    "butt_cut_with": "b01",
+    "score": 92,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+      {
+        "in": "1:16",
+        "out": "2:07",
+        "outcue": "charged with grand theft",
+        "outcue_verified": true,
+        "outcue_cue_span": "123.16-127.28s",
+        "verification": "Transcript.find() against auto-captions, source=auto, 76 cues"
+      }
+    ],
+    "reasoning": "The beat asks to watch what happens when the courier shows up to collect, and this is exactly that: victim calls the sheriff, deputies stage undercover at the house, fake money goes in the box, and the courier's arrival lands mid-segment at 1:34 ('Here come the guy who come to pick up' — verified at 94.60-99.08s, inside this segment). Runs through the pursuit to Orlando and the arrest. Ends on a hard verified outcue.",
+    "requires_script_change": true,
+    "script_change": "b02's setup names a 79-year-old Manatee victim already out $200,000 in crypto and a $30,000 cash demand. Rewritten to the Fredy case: three $7,500 pickups, the third one stung.",
+    "flags": ["case swapped from Manatee County — no video exists for the original"],
+    "cannot_determine": []
+  },
+  {
+    "beat_id": "b03",
+    "flagged": null,
+    "reason": "SHOW-PRODUCED, approved at Checkpoint 1. This is a screen-recording-of-a-webpage beat, not footage of an event. No third-party clip can be guaranteed to show the tells the script calls out (every link bounces to the home page, one-step intake form). The team screen-records a live fake IC3/FBI recovery page themselves. Removed from the clip pipeline as a production assignment, not logged as a search failure.",
+    "disposition": "production_task",
+    "segments": []
+  },
+  {
+    "beat_id": "b04",
+    "flagged": "https://www.cbsnews.com/newyork/video/l-i-romance-scam-victim-who-lost-468000-says-she-was-scammed-again-while-looking-for-help/",
+    "title": "L.I. romance scam victim who lost $468,000 says she was scammed again while looking for help",
+    "platform": "news_web",
+    "uploader": "CBS News New York",
+    "source_type": "network",
+    "duration": 112,
+    "reporter": "Tim McNicholas (investigative)",
+    "score": 130,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 10,
+    "manual_clip": true,
+    "segments": [
+      {
+        "in": null,
+        "out": null,
+        "outcue": null,
+        "outcue_verified": false,
+        "verification": "NOT POSSIBLE — CBS video page, not YouTube. No caption track exists to verify against, so no timecode and no outcue are proposed. Per Step 8 this ships as MANUAL CLIP — no captions. An editor sets in/out on pull."
+      }
+    ],
+    "reasoning": "Exact case match on every specific the script asserts: Long Island, $468,000, romance scam, and the re-victimization turn where seeking recovery help became the second scam. Nothing else found came close on fit — the captioned-YouTube alternatives are a different victim (WKMG Apopka, a repeat romance scam rather than a recovery scam) or have no re-victimization angle at all (GMA). Corroborates the script's own note.",
+    "requires_script_change": false,
+    "flags": ["MANUAL CLIP — no captions, no verified timecode", "vintage unconfirmed — script flags this as a 2024 package and asks confirm-or-swap; the page did not expose a publication date"],
+    "alternate_captioned_fallback": {
+      "url": "https://www.youtube.com/watch?v=1PMMquJVs9Q",
+      "uploader": "WKMG News 6 ClickOrlando",
+      "note": "NOT the pick. Logged only because it is fully verifiable if CBS cannot be cleared. Different victim, and the second scam is a repeat romance scam rather than a recovery scam, so it does not deliver the script's turn.",
+      "outcue": "I feel manipulated",
+      "outcue_verified": true,
+      "outcue_cue_span": "158.32-162.48s"
+    }
+  }
+]
