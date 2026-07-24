@@ -20,6 +20,7 @@ This drifts. Update it from every post-mortem where an aired clip failed to surf
 | dynamic pricing | surveillance pricing, digital price tags | I got charged more than the guy behind me | price changed on me |
 | deceptive advertising | middleman website, lead generation scam | that's not what I ordered | fake local, dropshipper |
 | stolen goods resale | blacklisted device, stolen phone resale | the phone got bricked | IMEI blacklisted, phone is stolen |
+| online seller / delivery fraud | florist scam, online retailer scam, undelivered order | the flowers never showed up, they took my money | fake shop, never got my order, online scam site |
 
 ## Confrontation lexicon
 
@@ -33,3 +34,4 @@ caught on camera · confronts · busted · exposed · called out · sting operat
 - YouTube tolerates full sentences and rewards affiliate headline syntax.
 - Affiliate wire packages appear on dozens of Nexstar and Sinclair channels with near-identical titles. Dedupe within YouTube by fuzzy title, and keep the earliest upload date, since that is usually the originating station and it matters for clearance.
 - Network news video often lives on the network's own site rather than YouTube. `authority_report` beats need a web search leg, not just `ytsearch30:`.
+- **Investigative-franchise naming is its own register.** A local station's consumer-investigative unit often titles a package with its house brand instead of plain headline syntax — `"11 Investigates Online Florist"`, `"7 On Your Side"`, `"Action 9 Uncovers"`. A recall miss traced to exactly this: the query generator's news register produced grammatical headlines, but the aired title led with the franchise name. When a beat plausibly comes from a consumer-investigative desk (fake sellers, deceptive delivery, refund fraud — the kind of story with a dedicated franchise), add a query pattern of `<franchise name> <topic>` — e.g. `investigates online florist scam`, `on your side florist never delivered` — alongside the normal news-register string.

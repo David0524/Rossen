@@ -13,6 +13,21 @@ The script is always upstream and finalized. Never infer that a clip existed fir
 
 A `.docx` or plain text script. Convert with `pandoc -t plain --wrap=none`. Scripts are near-entirely uppercase, dash-bulleted, and carry production markers in triple parens.
 
+**`pandoc` is frequently not installed** — this has hit multiple independent runs of this pipeline. Check with `which pandoc` before relying on it. Fallback: unzip the `.docx` and extract `word/document.xml` with Python's `zipfile`, then strip the XML tags:
+
+```python
+import zipfile, re
+from xml.etree import ElementTree as ET
+z = zipfile.ZipFile("script.docx")
+xml = z.read("word/document.xml").decode("utf-8")
+ns = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+tree = ET.fromstring(xml)
+lines = ["".join(n.text or "" for n in p.iter(ns + "t")) for p in tree.iter(ns + "p")]
+script_text = "\n".join(lines)
+```
+
+This loses pandoc's paragraph-style hints (bold, headers) but preserves every line and marker, which is all the extraction below needs.
+
 ## Markers, and what each one means
 
 | Marker | Meaning |
