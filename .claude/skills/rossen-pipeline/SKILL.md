@@ -97,11 +97,28 @@ and what it displaced.
 
 ## Step 5 — Captions
 
-Write the shortlist to `shortlist.json`, then:
+**There is no `captions` subcommand.** `python3 -m rossen_harvest --help`
+lists only `harvest`/`search` and `eval` — caption fetching is a library
+call, not CLI. Write the shortlist to `shortlist.json`, then call
+`transcripts.fetch_many` directly:
 
-```bash
-python3 -m rossen_harvest captions shortlist.json --out transcripts.json
+```python
+from rossen_harvest.transcripts import fetch_many
+from rossen_harvest.cache import Cache
+import json
+
+shortlist = json.load(open("shortlist.json"))
+youtube_ids = [c["url"].split("v=")[-1].split("&")[0] for c in shortlist
+               if c["platform"] == "youtube"]
+
+transcripts = fetch_many(youtube_ids, cache=Cache("harvest.db"))
 ```
+
+**`fetch_many` takes bare video IDs, not full URLs.** It builds the
+`https://www.youtube.com/watch?v=` prefix internally, so passing a full URL
+double-prepends it into an invalid one and every fetch silently returns
+None — this has actually happened in a prior run. Strip each URL down to
+just the ID before calling it.
 
 No downloads, no Whisper, about a second per clip. 5-10% of clips have
 captions disabled and come back null. Demote those, do not guess at
