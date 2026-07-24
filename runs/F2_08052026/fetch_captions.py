@@ -1,59 +1,47 @@
-"""Fetch captions for shortlisted YouTube candidates."""
+#!/usr/bin/env python3
+"""Step 5 — captions. YouTube caption fetch (metadata-cheap).
+
+fetch_many takes BARE video IDs, not URLs (it prepends watch?v= itself);
+a full URL double-prepends and silently returns None. Saves cue-level
+transcripts (start,text) so pass-two outcue verification uses real
+timestamps, not guesses.
+"""
 import json, re, sys
 sys.path.insert(0, "/home/user/Rossen/harvest")
-from pathlib import Path
-from rossen_harvest.transcripts import fetch_many, Transcript
+from rossen_harvest.transcripts import fetch_many
 from rossen_harvest.cache import Cache
 
-shortlist = json.loads(Path("shortlist.json").read_text())
-
-# Extract YouTube video IDs from shortlist
+sl = json.load(open("shortlist.json"))
+cache = Cache("harvest.db")
 YT_ID = re.compile(r"(?:v=|/shorts/|youtu\.be/|/embed/)([A-Za-z0-9_-]{11})")
 
-yt_candidates = []
-for c in shortlist:
-    url = c.get("url") or ""
-    m = YT_ID.search(url)
+yt = []
+for c in sl:
+    if c["platform"] != "youtube":
+        continue
+    m = YT_ID.search(c["url"] or "")
     if m:
-        c["video_id"] = m.group(1)
-        yt_candidates.append(c)
-    else:
-        c["video_id"] = None
+        yt.append((c["url"], m.group(1)))
 
-video_ids = [c["video_id"] for c in yt_candidates if c["video_id"]]
-print(f"Fetching captions for {len(video_ids)} YouTube candidates...")
+ids = list({i for _, i in yt})
+print(f"YouTube ids to fetch: {len(ids)}")
+tr = fetch_many(ids, cache=cache)
 
-cache = Cache("harvest.db")
-transcripts = fetch_many(video_ids, cache=cache, concurrency=4)
-
-# Build output
-output = {}
-got = 0
-null = 0
-for vid, t in transcripts.items():
-    if t:
-        got += 1
-        output[vid] = {
-            "video_id": vid,
-            "source": t.source,
+out = {}
+got = null = 0
+for url, i in yt:
+    t = tr.get(i)
+    if t and t.cues and t.source != "none":
+        out[url] = {
+            "video_id": i, "source": t.source, "n_cues": len(t.cues),
             "duration": t.duration,
-            "full_text": t.full_text()[:3000],
-            "cues": [{"start": c.start, "end": c.end, "text": c.text, "timecode": c.timecode}
-                     for c in t.cues],
-            "prompt": t.as_prompt(),
+            "cues": [{"start": round(c.start, 2), "end": round(c.end, 2), "text": c.text} for c in t.cues],
         }
+        got += 1
     else:
+        out[url] = None
         null += 1
-        output[vid] = None
 
-Path("transcripts.json").write_text(json.dumps(output, indent=2, default=str))
-print(f"Captions fetched: {got} success, {null} null")
-
-# Report which candidates got captions
-for c in shortlist:
-    vid = c.get("video_id")
-    has_caption = vid and vid in output and output[vid] is not None
-    title = (c.get("title") or "")[:60]
-    platform = c.get("platform", "?")
-    status = "OK" if has_caption else ("N/A (non-YT)" if not vid else "NULL")
-    print(f"  {c['beat_id']} [{platform:8}] {status:12} {title}")
+print(f"captions: {got} with text, {null} null/disabled")
+json.dump(out, open("transcripts.json", "w"), indent=1)
+print("wrote transcripts.json")

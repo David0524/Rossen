@@ -1,0 +1,14 @@
+{
+ "https://www.tiktok.com/@dailymail/video/7580027830365342989": {
+  "source": "whisper",
+  "n_cues": 1,
+  "duration": 15.200000000000001,
+  "cues": [
+   {
+    "start": 0.0,
+    "end": 15.2,
+    "text": "Thanks for watching!"
+   }
+  ]
+ }
+}

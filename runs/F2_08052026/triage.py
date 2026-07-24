@@ -1,248 +1,158 @@
-"""Pass-one metadata triage: 2993 candidates → 5 per beat."""
-import json, re, sys
-from pathlib import Path
-from collections import defaultdict
+#!/usr/bin/env python3
+"""Pass-one metadata triage for F2 08-05.
 
-beats = {b["beat_id"]: b for b in json.loads(Path("beats.json").read_text())}
-cands = json.loads(Path("candidates.json").read_text())
+Applies hard filters, tags source_type, scores title-fit against
+beat-specific term groups, and emits the top candidates per beat for
+human review. Selection of the final 5 + diversity floor is done by hand
+on the printed shortlists — this only narrows the field and surfaces the
+metadata a human can't eyeball across 3000 rows.
+"""
+import json, re, collections
 
-# --- source type tagging ---
-AFFILIATE_PAT = re.compile(
-    r"\b(KXAS|WFAA|ABC7|WCVB|WNBC|KNBC|KABC|KGO|WLS|KPRC|KHOU|WSVN|WPVI|"
-    r"WPLG|KPIX|KTLA|WHDH|WBRC|WEWS|WKYC|WHIO|KFOR|KOCO|KOTV|News\s*\d|"
-    r"FOX\s*\d|CBS\s*\d|NBC\s*\d|ABC\s*\d|Action\s*News|Eyewitness|"
-    r"Local\s*\d+|WXYZ|WTVD|WSB|KMOV|WDAF|KCTV|KSHB|KSDK|WDIV|WXIA|"
-    r"11Alive|12News|13News|WFLA|WFTS|WBNS|WLWT|WCPO|WOIO|WSYX|"
-    r"WTHR|WISH|WRTV|WAVE|WHAS|WDRB|WLKY|FOX\s*News|CNN)\b",
-    re.I
-)
-NETWORK_PAT = re.compile(
-    r"\b(ABC News|NBC News|CBS News|CNBC|MSNBC|PBS|Reuters|AP|"
-    r"Associated Press|NPR|Bloomberg|Today\.com|TODAY|Good Morning America|"
-    r"CBS Mornings|Nightly News|CNN|BBC|FOX Business|Yahoo Finance)\b",
-    re.I
-)
-CREATOR_PAT = re.compile(
-    r"\b(explained|how to|tutorial|walkthrough|breakdown|review|analysis)\b", re.I
-)
-COMPILATION_PAT = re.compile(
-    r"\b(top\s*\d+|compilation|#\d+|destroyed|montage|best of|worst of)\b", re.I
-)
+C = json.load(open("candidates.json"))
+BEATS = {b["beat_id"]: b for b in json.load(open("beats.json"))}
 
-def tag_source(c):
-    title = c.get("title") or ""
-    uploader = c.get("uploader") or c.get("channel") or ""
-    combined = f"{title} {uploader}"
-    platform = c.get("platform", "youtube")
+# --- source_type tagging -------------------------------------------------
+NETWORK = re.compile(r"\b(abc news|nbc news|cbs news|cnbc|cnn|reuters|associated press|"
+                     r"\bap\b|today|good morning america|gma|fox business|fox news|"
+                     r"msnbc|bloomberg|wall street journal|wsj|"
+                     r"washington post|nbc nightly|world news)\b", re.I)
+AFFIL_CALL = re.compile(r"\b([KW][A-Z]{2,4})\b")  # KHOU, WFAA, WDIV, etc.
+AFFIL_WORDS = re.compile(r"\b(news ?\d{1,2}|channel ?\d{1,2}|abc ?\d|nbc ?\d|cbs ?\d|"
+                         r"fox ?\d{1,2}|eyewitness news|action news|on your side|"
+                         r"7 on your side|news center|first coast|live ?\d|"
+                         r"first alert|\d{1,2} news)\b", re.I)
+RAW_WORDS = re.compile(r"\b(doorbell|ring cam|security cam|surveillance|dash ?cam|"
+                       r"screen recording|caught on camera|caught on cam|cctv)\b", re.I)
 
-    if platform in ("news_web", "reddit"):
-        if "reddit" in (c.get("url") or ""):
-            return "reddit_post"
-        return "news_web"
-
-    if NETWORK_PAT.search(combined):
-        return "network"
-    if AFFILIATE_PAT.search(combined):
-        return "affiliate"
-
-    dur = c.get("duration") or 0
-    if isinstance(dur, str):
-        try: dur = float(dur)
-        except: dur = 0
-
-    if dur and dur < 65:
+def source_type(x):
+    up = (x.get("uploader") or "")
+    title = (x.get("title") or "")
+    plat = x["platform"]
+    dur = x["duration"] if isinstance(x["duration"], (int, float)) else None
+    if plat == "tiktok":
         return "creator_short"
-    if CREATOR_PAT.search(title):
-        return "creator_long"
-    # Check for first-person indicators
-    first_person = re.search(r"\b(my |I |me |got scammed|lost my|happened to me|can't believe)\b", title, re.I)
-    if first_person:
+    if plat in ("facebook", "instagram"):
         return "first_person"
-    return "unknown"
+    if plat == "reddit":
+        return "raw_footage"
+    if plat == "news_web":
+        if NETWORK.search(up) or NETWORK.search(title):
+            return "network"
+        return "affiliate"  # most news_web is local affiliate coverage
+    # youtube
+    if NETWORK.search(up):
+        return "network"
+    if x.get("is_affiliate") or AFFIL_CALL.search(up) or AFFIL_WORDS.search(up):
+        return "affiliate"
+    if RAW_WORDS.search(title):
+        return "raw_footage"
+    if dur is not None and dur <= 75:
+        return "creator_short"   # Shorts / vertical
+    return "creator_long"
 
-# --- hard filters ---
-def hard_filter(c, beat):
-    title = (c.get("title") or "").lower()
-    dur = c.get("duration")
-    if isinstance(dur, str):
-        try: dur = float(dur)
-        except: dur = None
+# --- orientation gate ----------------------------------------------------
+def orientation_of(x):
+    plat = x["platform"]
+    dur = x["duration"] if isinstance(x["duration"], (int, float)) else None
+    if plat in ("tiktok", "instagram", "facebook", "reddit"):
+        return "vertical"
+    if plat == "news_web":
+        return "horizontal"  # affiliate article/embedded package
+    if dur is not None and dur <= 60:
+        return "shorts"       # vertical, Shorts-exempt
+    return "horizontal"
 
-    role = beat["clip_role"]
-    orientation = beat["orientation"]
-
-    # Compilation / aggregator
-    if COMPILATION_PAT.search(title):
-        return "compilation"
-
-    # Duration floor
-    if dur is not None:
-        if dur < 10:
-            return "too_short"
-        if role != "evidence" and dur < 25:
-            return "too_short"
-        # Duration ceiling
-        if dur > 1200 and role != "explainer_demo/creator_long":
-            return "too_long"
-
-    # AI slop indicators
-    if re.search(r"(AI voice|stock footage|generated)", title, re.I):
-        return "ai_slop"
-
-    return None
-
-# --- scoring ---
-NATURAL_SOURCE = {
-    "victim_interview": {"affiliate", "first_person"},
-    "confrontation_bust": {"first_person", "raw_footage", "creator_short"},
-    "evidence": {"raw_footage", "first_person", "reddit_post"},
-    "explainer_demo/creator_long": {"creator_long"},
-    "explainer_demo/creator_short": {"creator_short", "first_person"},
-    "first_person_rant": {"first_person", "creator_short"},
-    "authority_report": {"network", "affiliate", "news_web"},
-    "debunk": {"affiliate", "network", "creator_long"},
+# --- beat-specific fit terms --------------------------------------------
+FIT = {
+ "08-05-b01": {"core":[r"amazon"], "groups":[r"refund|owes|money back|late|delivery|guarantee|a.?to.?z|credit|shipping"]},
+ "08-05-b02": {"core":[r"amazon|package|delivery|delivered"], "groups":[r"delivered|marked delivered", r"never|not received|missing|stolen|no package|didn.?t (arrive|come)|empty", r"doorbell|porch|camera|caught"]},
+ "08-05-b03": {"core":[r"amazon"], "groups":[r"refund|a.?to.?z|claim|denied|refuse|seller|third.?party|scam|dispute|money back"]},
+ "08-05-b04": {"core":[r"amazon|ftc|prime"], "groups":[r"settlement|ftc|federal trade|2\.5 ?billion|class action|refund|\$51|\b51\b|payout|prime"]},
+ "08-05-b05": {"core":[r"amazon|prime|settlement"], "groups":[r"settlement|refund|check|payout|prime", r"cent|dollar|penn|small|tiny|got|paid|how much|amount"]},
+ "08-05-b06": {"core":[r"amazon"], "groups":[r"cpsc|consumer product safety|distributor|recall|400,?000|dangerous|hazard|safety|failed to notify"]},
+ "08-05-b07": {"core":[r"immersion|lakkzoom|water heater|bucket heater|heater rod|heating rod|heating element"], "groups":[r"fire|recall|caught|burn|ignite|explode|hazard|melt"]},
+ "08-05-b08": {"core":[r"grill brush|bristle|cuisinart|wire brush"], "groups":[r"recall|bristle|food|swallow|wire|danger|throat|hospital|injur"]},
+ "08-05-b09": {"core":[r"amazon"], "groups":[r"text|sms|message", r"scam|phishing|fake|fraud", r"recall|refund|inspection"]},
+ "08-05-b10": {"core":[r"amazon|ftc|settlement"], "groups":[r"settlement|refund|ftc|prime", r"scam|fake|warning|phish|fraud|paypal|imposter"]},
+ "08-05-b11": {"core":[r"tax.?free|sales tax holiday|tax holiday|no sales tax"], "groups":[r"back to school|weekend|shopping|save|saving|states|school supplies|haul|2024|2025|2026"]},
 }
 
-def score(c, beat):
-    s = 50  # base
-    role = beat["clip_role"]
-    src = c.get("source_type", "unknown")
-    title = (c.get("title") or "").lower()
-    dur = c.get("duration")
-    if isinstance(dur, str):
-        try: dur = float(dur)
-        except: dur = None
+def fit_score(x, bid):
+    t = (x.get("title") or "").lower()
+    spec = FIT[bid]
+    core_ok = any(re.search(p, t) for p in spec["core"])
+    if not core_ok:
+        return 0, False
+    g = sum(1 for grp in spec["groups"] if re.search(grp, t))
+    return g, True
 
-    # Source type fit
-    natural = NATURAL_SOURCE.get(role, set())
-    if src in natural:
-        s += 20
-    elif src in ("affiliate", "network", "news_web"):
-        s += 10
-    elif src == "unknown":
-        s -= 15
+ROLE_CRED = {
+ "victim_interview":        {"affiliate":10,"first_person":9,"creator_long":6,"network":5,"creator_short":6,"raw_footage":5},
+ "authority_report":        {"network":10,"affiliate":9,"creator_long":6,"first_person":3,"creator_short":4,"raw_footage":2},
+ "evidence":               {"raw_footage":10,"first_person":9,"creator_short":8,"affiliate":6,"network":5,"creator_long":6},
+ "explainer_demo/creator_long":{"creator_long":10,"affiliate":6,"network":6,"creator_short":6,"first_person":6,"raw_footage":3},
+ "first_person_rant":      {"first_person":10,"creator_short":9,"affiliate":4,"network":3,"creator_long":6,"raw_footage":6},
+}
+def role_cred(role, st): return ROLE_CRED.get(role, {}).get(st, 5)
 
-    # Title relevance - check beat keywords
-    beat_keywords = set()
-    for word in re.findall(r'\w+', beat.get("segment_title", "").lower()):
-        if len(word) > 3:
-            beat_keywords.add(word)
-    anchor_words = set()
-    for word in re.findall(r'\w+', (beat.get("news_anchor") or "").lower()):
-        if len(word) > 3:
-            anchor_words.add(word)
+def dur_fit(x, role):
+    dur = x["duration"] if isinstance(x["duration"], (int, float)) else None
+    if dur is None: return 0
+    if role in ("evidence","first_person_rant") or dur <= 60: return 0
+    if role == "explainer_demo/creator_long":
+        return 3 if 60 <= dur <= 1800 else -3
+    if 90 <= dur <= 360: return 4
+    if 60 <= dur < 90:  return 1
+    if 360 < dur <= 600: return 1
+    if dur > 1200: return -6
+    return 0
 
-    title_words = set(re.findall(r'\w+', title))
-    keyword_hits = len(title_words & (beat_keywords | anchor_words))
-    s += min(keyword_hits * 4, 20)
+results = collections.defaultdict(list)
+dropped = collections.Counter()
 
-    # Duration fit
-    if dur is not None and src != "creator_short":
-        if 120 <= dur <= 360:
-            s += 8
-        elif 60 <= dur <= 600:
-            s += 4
-        elif dur > 600:
-            s -= 5
+for x in C:
+    bid = x["beat_id"]; beat = BEATS[bid]
+    role = beat["clip_role"]; beat_or = beat["orientation"]
+    st = source_type(x); cand_or = orientation_of(x)
+    if x.get("looks_like_compilation"):
+        dropped["compilation"] += 1; continue
+    fit_g, core_ok = fit_score(x, bid)
+    if not core_ok:
+        dropped["offtopic"] += 1; continue
+    if beat_or == "horizontal":
+        if cand_or == "vertical" and x["platform"] in ("tiktok","instagram","facebook","reddit"):
+            dropped["orient_h_reject_vertical"] += 1; continue
+    else:
+        if cand_or == "horizontal" and x["platform"] == "youtube":
+            dropped["orient_v_reject_horiz_yt"] += 1; continue
+    dur = x["duration"] if isinstance(x["duration"], (int, float)) else None
+    if dur is not None and dur < 25 and role != "evidence":
+        dropped["too_short"] += 1; continue
+    score = role_cred(role, st)*6 + fit_g*10 + dur_fit(x, role)
+    x2 = dict(x); x2["_st"]=st; x2["_cand_or"]=cand_or; x2["_fit"]=fit_g; x2["_score"]=score
+    results[bid].append(x2)
 
-    # View count tiebreak
-    views = c.get("view_count") or c.get("views") or 0
-    if isinstance(views, str):
-        try: views = int(views)
-        except: views = 0
-    if views > 100000:
-        s += 3
-    elif views > 10000:
-        s += 1
+def norm(t): return re.sub(r"[^a-z0-9 ]","",(t or "").lower()).strip()
+for bid in results:
+    seen={}; uniq=[]
+    for x in sorted(results[bid], key=lambda r:-r["_score"]):
+        k=(norm(x["title"])[:60], x["_st"])
+        if k in seen: continue
+        seen[k]=1; uniq.append(x)
+    results[bid]=uniq
 
-    # Platform bonus for matching beat expectation
-    platform = c.get("platform", "youtube")
-    if role == "authority_report" and platform == "news_web":
-        s += 8
-    if role == "evidence" and platform == "reddit":
-        s += 5
-
-    return max(0, min(100, s))
-
-# --- main triage ---
-by_beat = defaultdict(list)
-for c in cands:
-    by_beat[c["beat_id"]].append(c)
-
-shortlist = []
-triage_report = {}
-
-for beat in beats.values():
-    bid = beat["beat_id"]
-    pool = by_beat.get(bid, [])
-
-    # Tag source types
-    for c in pool:
-        c["source_type"] = tag_source(c)
-
-    # Hard filter
-    passed = []
-    filtered_reasons = defaultdict(int)
-    for c in pool:
-        reason = hard_filter(c, beat)
-        if reason:
-            filtered_reasons[reason] += 1
-        else:
-            passed.append(c)
-
-    # Score
-    for c in passed:
-        c["triage_score"] = score(c, beat)
-
-    passed.sort(key=lambda x: -x["triage_score"])
-
-    # Take top 5
-    top5 = passed[:5]
-
-    # Diversity floor
-    source_types = [c["source_type"] for c in top5]
-    mono = all(st in ("affiliate", "network", "news_web") for st in source_types)
-    diversity_applied = False
-    promoted = None
-
-    if mono and len(top5) == 5:
-        # Find highest-scoring non-affiliate/network
-        for c in passed[5:]:
-            if c["source_type"] not in ("affiliate", "network", "news_web"):
-                promoted = c
-                top5 = top5[:4] + [c]
-                diversity_applied = True
-                break
-
-    mix = defaultdict(int)
-    for c in top5:
-        mix[c["source_type"]] += 1
-
-    triage_report[bid] = {
-        "total": len(pool),
-        "passed_filter": len(passed),
-        "filtered": dict(filtered_reasons),
-        "source_mix": dict(mix),
-        "diversity_floor": diversity_applied,
-        "promoted": promoted["title"][:60] if promoted else None,
-    }
-
-    for c in top5:
-        shortlist.append(c)
-
-    # Print summary
-    print(f"\n{bid} ({beat['clip_role']}, {beat['orientation']})")
-    print(f"  {len(pool)} total -> {len(passed)} passed filters -> top 5")
-    if filtered_reasons:
-        print(f"  filtered: {dict(filtered_reasons)}")
-    print(f"  source mix: {dict(mix)}")
-    if diversity_applied:
-        print(f"  DIVERSITY FLOOR: promoted {promoted['title'][:50]}")
-    for i, c in enumerate(top5):
-        dur = c.get("duration", "?")
-        title = (c.get("title") or "")[:70]
-        print(f"  {i+1}. [{c['triage_score']}] {c['source_type']:15} [{dur}s] {title}")
-
-Path("shortlist.json").write_text(json.dumps(shortlist, indent=2, default=str))
-Path("triage_report.json").write_text(json.dumps(triage_report, indent=2))
-print(f"\nWrote shortlist.json ({len(shortlist)} candidates) and triage_report.json")
+print("DROPPED:", dict(dropped)); print()
+out={}
+for bid in sorted(results):
+    rk=sorted(results[bid], key=lambda r:-r["_score"]); out[bid]=rk[:14]
+    beat=BEATS[bid]
+    print(f"\n===== {bid}  {beat['clip_role']}  [{beat['orientation']}]  ({len(rk)} survived) =====")
+    print("  top-14 source mix:", dict(collections.Counter(x["_st"] for x in rk[:14])))
+    for i,x in enumerate(rk[:14]):
+        dur=x["duration"] if isinstance(x["duration"],(int,float)) else "?"
+        print(f"  {i+1:>2}. [{x['_score']:>3}] {x['_st']:<13} {x['_cand_or']:<10} d={str(dur):<5} fit={x['_fit']} "
+              f"{x['platform']:<8} {(x.get('uploader') or '')[:24]:<24} | {(x.get('title') or '')[:66]}")
+json.dump({k:[{kk:vv for kk,vv in x.items() if not kk.startswith('thumbnail')} for x in v] for k,v in out.items()},
+          open("triage_report.json","w"), indent=1, default=str)
+print("\nwrote triage_report.json")

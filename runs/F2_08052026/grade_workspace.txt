@@ -1,0 +1,310 @@
+==========================================================================================
+08-05-b01  role=explainer_demo/creator_long  orient=horizontal
+SETUP: AMAZON'S OWN GUARANTEED DELIVERY TERMS SAY IF THEY MISS THAT DATE, YOUR SHIPPING FEES MAY BE REFUNDED. / HERE IS THE EXACT PATH AMAZON PUBLISHES… GO TO YOUR ORDERS… SELECT THE LATE ORDER… CLICK PROBLEM WITH AN ORDER… THEN SHIPPING OR DELIVERY ISSUES… THEN SHIPMENT IS LATE. / IF YOU'RE A PRIME MEMBER
+==========================================================================================
+
+--- creator_long | youtube | d=270 | In the Black
+    DO THIS every time a Amazon package arrives late
+    https://www.youtube.com/watch?v=_8W0-cK5XTQ
+    source=auto dur=271.44 cues=139
+    TEXT: what's up everybody my name is kina and once again i'm waiting on a late amazon delivery if you've had this experience stick around and i'll show you the best way to get compensated for your late deliveries let's start the video okay these tips might not actually take you to the moon but they will add up especially if late deliveries are a common occurrence in your household it can be frustrating shelling out 120 each year for fast amazon prime deliveries only to be stuck waiting for an important package pretty much anybody who's used prime for any significant period of time has had this frustrating experience i certainly have and personally for most deliveries it really doesn't matter a day or two of waiting is okay but every once in a while i really need the item that day and that's when i get bothered in the past i've successfully gotten three different types of compensation by reaching out to amazon via their chat feature online amazon used to extend your prime membership by a month for reaching out and asking every time there's a late package and i would regularly get four to si
+
+--- creator_long | youtube | d=167 | CBC News
+    They say Amazon shipped fake product and refuses refund until 'correct' item returned
+    https://www.youtube.com/watch?v=23OPFKfjQ5I
+    source=auto dur=168.08 cues=69
+    TEXT: Matthew Lago built this computer himself with parts ordered from Amazon but says when he opened the package supposedly containing the graphics card it been tampered with it was actually a bit of a shock for sure um they had done a really good job repackaging the Box instead of electrical Hardware he says the plastic casing was filled with something that looked like putty 700 bucks spent for nothing we were kind of dumbfounded we looked at this and and we said wow this is kind of unbelievable uh you know we kind of expected that Amazon would have better quality controls better procedures to ensure that something like this doesn't happen Matthew's dad emails Amazon and sends the fake part back for a refund the retail giant writes back saying it threw out the returned item to protect employees and that the refund will only be processed when it receives the real graphics card the one Lego says he never got that's a little bit of a slap in the face I find because really they're they're basically shutting this down and saying that there's nothing else to discuss and so unfortunately I I be
+
+--- creator_long | youtube | d=190 | In 30 Minutes
+    Amazon refund requests for beginners (step by step)
+    https://www.youtube.com/watch?v=r3Hy-CRsMzY
+    source=auto dur=189.159 cues=90
+    TEXT: this is ian from in 30 minutes guides today i'm going to show you how to get a refund for an item you've ordered on amazon if this video helps please take a moment to subscribe and like it let's get started go to amazon.com make sure that you're logged in in the top right corner of the screen you'll see returns and orders you can also click on accounts and lists and click on orders it will bring you to the orders page the most recent orders first now one thing you should be aware of is that not every item can be returned for a refund it's only recent items in this case it's items that are left that were delivered within a month so basically let's say i wanted to return these socks and get a refund click on return or replace items okay you'll see a continue button but you can't click it what you want to do is select this select the check mark and then it says why are you returning this choose a response okay let's say that they were defective or maybe they're too large you can leave a comment here i'm not going to do that continue now amazon wants you to doesn't want to give you money
+
+--- creator_long | youtube | d=495 | Ashish Consumer Help
+    How To Get A 100% Refund For An Amazon Missing Product
+    https://www.youtube.com/watch?v=l4_QpLs_3nE
+    [caption NULL - unavailable/disabled]
+
+--- creator_long | youtube | d=122 | HD4K Studios
+    Amazon Refunds: 3 Proven Methods
+    https://www.youtube.com/watch?v=AYzCv8WqWow
+    source=auto dur=121.84 cues=51
+    TEXT: method number one I didn't receive the package the most common method or excuse that will get you whatever you want if it's below $100 to $300 go to chat or phone try chat first tell them hey rep I have a problem with this order I didn't receive it the rep will most likely refund it right away or send a replacement or maybe after asking you if you checked with your neighbors and family members which in this case just say you already did or you don't have family members Pros easy and basic cons you can't can't really use these on large items by size or expensive items starting from $700 or more without getting into an investigation method number two I received nothing inside of the package only use this method when the item was being tracked and when you receive it most likely the item was signed upon receiving this will get you from $100 to $500 or depending upon the level of the rep the rep will ask for an investigation with the carrier but before he can do that tell the rep that you already called the carrier and they told me if they didn't do anything and it was already like that 
+==========================================================================================
+08-05-b02  role=evidence  orient=vertical
+SETUP: YOUR PHONE BUZZES. DELIVERED. THERE'S EVEN A PHOTO OF YOUR FRONT DOOR. YOU GO OUTSIDE… AND THERE IS NOTHING THERE. / AND PEOPLE ARE POSTING THE PROOF. DOORBELL CAMERA ROLLING, NO TRUCK, NO DRIVER, NO PACKAGE… WHILE THE AMAZON APP SAYS IT'S SITTING AT THEIR FRONT DOOR. / HAVE A LOOK.
+==========================================================================================
+
+--- raw_footage | youtube | d=38 | YouTube
+    Fake delivery driver steals packages off porches | Doorbell cam video - YouTube
+    https://www.youtube.com/watch?v=z93FhlulThI
+    source=auto dur=38.899 cues=8
+    TEXT: foreign [Applause] get out of there what are you doing get out of there get out of here leave that package I'm calling the cops yeah the guy came back he went away but I think he grabbed
+
+--- raw_footage | youtube | d=59 | Just Adam
+    Why Doesn’t My Amazon Driver ring my doorbell? - YouTube
+    https://www.youtube.com/watch?v=wV1iQfXwUdY
+    source=auto dur=60.76 cues=33
+    TEXT: Why doesn't my Amazon delivery driver ring my doorbell? There's honestly a couple reasons why we don't ring doorbells. So, first of all, usually we have a notes thing that says, "Don't ring doorbell." And usually the majority of our stops say, "Don't ring the doorbell." So, we don't ring the doorbell. Second, I would say 90% of the houses I deliver to have a Ring camera. And if you I have a Ring camera, you know if if you have a Ring camera, they're going to get a notification to their phone knowing that you're there. So, why ring the doorbell if they already got a notification? Text message or a doorbell ring, same thing. Third, a lot of people have dogs and it usually makes the dogs go crazy. And fourth, if you're wondering why we leave packages out at a gate, like let's say if you have a gate to your yard, we're petrified of dogs. And if you do have a dog, we usually know because someone reports a dog at a house and it puts in the app so the next driver knows. So, these are tons of reasons why we don't ring the doorbell and another reason why we leave it at the gate. So, it's just
+
+--- creator_short | tiktok | d=None | TikTok
+    A fake delivery driver in a UPS vest was caught on a Ring camera stealing a family’s Christmas package from their porch in Fargo, North Dakota, on November 25. The homeowner checked the footage after finding the UPS-delivered box—containing $100 worth of gifts—missing. 🎥 Shannon Lee Hendrickson via Storyful #deliverydriver #doorbellcamera | TikTok
+    https://www.tiktok.com/@dailymail/video/7580027830365342989
+    [no caption path - metadata only]
+==========================================================================================
+08-05-b03  role=victim_interview  orient=horizontal
+SETUP: MOST OF WHAT YOU BUY THERE ISN'T SOLD BY AMAZON — IT'S SOLD BY THIRD-PARTY SELLERS. SO WHEN IT GOES WRONG, PEOPLE GET BOUNCED BETWEEN AMAZON AND A SELLER WHO WON'T ANSWER. / THAT'S WHAT THE A-TO-Z GUARANTEE IS FOR. / BUT PEOPLE GET DENIED. AND WHEN THEY GET DENIED, THEY GIVE UP. DON'T GIVE UP. ESCAL
+==========================================================================================
+
+--- affiliate | youtube | d=132 | KHOU 11
+    Amazon faces lawsuit over refund policy many customers didn’t know about
+    https://www.youtube.com/watch?v=jqiH22C5mgM
+    source=auto dur=133.36 cues=59
+    TEXT: Welcome back everybody. Your time now is 6:52 as we take a live look over downtown Houston this morning. Traffic surprisingly moving well there. If you've ever returned any items from Amazon, you need to hear this story. There's a new lawsuit against the company when it comes to refunds. John Morie shares what that means for you and me and her and everybody so that we don't waste our money. When you return something to Amazon, you typically get a credit right away. But now, a new lawsuit claims that Amazon may be reneggging on some of those credits. Shoppers love the convenience of dropping Amazon returns off at stores like Kohl's, Staples, and Whole Foods, and getting an instant refund. I think it'll be a lot uh more convenient. I live close. But a year ago, Bill Mittenorf told me he never got a refund because his drop off disappeared. I got a receipt, but it has no tracking information on it whatsoever. Now, Amazon's facing a class action lawsuit, claiming the company's been giving some customers refunds, then taking the money back weeks later. Amazon, according to the suit, claime
+
+--- affiliate | youtube | d=141 | WSPA 7News
+    Amazon buyers warn watch out for the "empty box" scam
+    https://www.youtube.com/watch?v=IuxwwAdVGB8
+    source=auto dur=141.92 cues=72
+    TEXT: Now, we've told you many times how scammers often hide behind a trusted name. In tonight's warning, this involves Amazon. Some customers have reported getting a delivery they paid for. When they open the box, nothing's inside. you imagine? It's an attempt to circumvent Amazon's guarantee policy, and it is working in some cases. How to avoid getting taken in this 7 News Consumer Watch. When buying is as easy as a click of the button, the small print can be an afterthought, and you might not realize so many of the products you buy on Amazon are really from a third-party seller. That's how Becky Allen says she lost a couple hundred in one transaction. So, we ordered a DVD box set of movies for my son, um, and they sent us ones from a foreign country. Uh, we went back and forth with them trying to get at least reimbursed or the right CD sent, and they never did send the right CDs or reimburse us. She paid for something her family couldn't even use. Now, some buyers report getting nothing but a box. That is awful. Really, especially what if it was something expensive? The third-party sell
+
+--- affiliate | youtube | d=118 | WCNC
+    Charlotte man accused of $290K Amazon scam
+    https://www.youtube.com/watch?v=Y642Oow6tnA
+    source=auto dur=119.32 cues=59
+    TEXT: This is a This is just a crazy story. A Charlotte man accused of stealing nearly $300,000 from Amazon and lawyers say he did it all just through the company's returns policy. The new court documents show Hudson Hammock is accused of defrauding Amazon of $290,000. Now lawyers uh say Hammock didn't go into a warehouse and he didn't hack any computers. Instead, they say he engaged in elaborate return scheme. He's accused of ordering expensive items through Amazon then starting a return but instead of returning the item he purchased, they say he would send back a similar item which was often cheaper or broken. Hammock then would either keep the more expensive item or resell the product online. Court documents suggest he did this more than 270 times and some of the items have some pretty steep price tags. The documents say he bought a $3,500 coffee machine then returned it but with a $1,500 one. They claim he also exchanged a $2,700 laptop for a $400 one. And one of the strangest items, a spray paint system. He allegedly kept one that was worth $1,200 and sent back one worth $350. Now thi
+
+--- affiliate | youtube | d=114 | WCPO 9
+    Beware of fake Amazon 3rd party sellers
+    https://www.youtube.com/watch?v=VWUXuMsT1NE
+    source=auto dur=115.92 cues=53
+    TEXT: Most of us will either buy something or received a gift in a familiar Amazon box this holiday season. But tonight, some Amazon merchants are warning about fake thirdparty vendors who are copying legitimate company websites and selling you counterfeit goods. Style and Apply is a decal making company, but it says this and about 2,000 other images were stolen last month, copied and then sold through a third-party seller on Amazon. You can see the difference between the the finished work here. Shannon Jones points out the original has clean lines, the knockoffs lines run together, and the vinyl is already separating from the page. No one else has the authority to sell these uh designs besides us. They're ours. Not only was the knockoff poorly made, it came in this plastic wrapper with a shipping label that says China. His own product comes in this sturdy tube. And we can't do anything to stop that until, like I said, we submit proof that this is going on. When you find these sellers, they look legitimate. You have to go deeper down to realize they're not quite who they say they are. An o
+
+--- affiliate | youtube | d=252 | FOX 32 Chicago
+    Amazon cranking out refunds for purchases made years ago | ChicagoNOW - YouTube
+    https://www.youtube.com/watch?v=8r5kEDE0H2Q
+    source=auto dur=251.92 cues=111
+    TEXT: Let's start by running through this Amazon stuff. Are you a big Amazon? Huge. Okay, so you got boxes just galore on your front doorstep or and in my garage. It's a mess. All right, so let's talk about this. Amazon is issuing long delayed refunds to some US customers for unresolved returns, including purchases as far back as 2018. So, Amazon is refunding customers who returns were never properly refunded due to payment problems or inability to verify the returned items, which is interesting because I feel like they're usually on top of their game with that. So, refunds apply to customers across the United States. The issue was identified internally by Amazon. That's interesting. Amazon disclosed that 1.1 billion related to these unresolved returns during its May 1st earnings call. So, they have $1.1 billion in refunds. Yeah, which is like a nickel to this company. So they found some returns with refunds either not completed or never issued due to missing payment confirmation or item verification. So after reviewing, Amazon decided to resolve the issue by refunding customers to maintai
+==========================================================================================
+08-05-b04  role=authority_report  orient=horizontal
+SETUP: IN SEPTEMBER 2025, AMAZON SETTLED WITH THE FEDERAL TRADE COMMISSION FOR $2.5 BILLION. THE F-T-C ALLEGED AMAZON ENROLLED TENS OF MILLIONS OF PEOPLE IN PRIME WITHOUT THEIR CONSENT AND MADE IT DELIBERATELY HARD TO CANCEL. / $1.5 BILLION GOES BACK TO CUSTOMERS. ABOUT 35 MILLION PEOPLE WERE HARMED. UP TO
+==========================================================================================
+
+--- network | youtube | d=99 | ABC News
+    Amazon issuing checks to eligible Prime members
+    https://www.youtube.com/watch?v=zTgyswYFvsY
+    source=auto dur=99.92 cues=51
+    TEXT: We're going to turn now to Amazon cutting checks to eligible Prime members as part of a $2.5 billion settlement over allegations it misled customers. Elizabeth Schelsey is back with who's eligible and when that refund could arrive. Good morning again, Elizabeth. >> Good morning again, Rebecca. So, the Federal Trade Commission tells us that automatic refunds are now going out to millions of Amazon Prime customers. This is part of that massive $2.5 billion settlement reached in September where the FTC accused Amazon of tricking customers into signing up for Prime and then making it too hard to cancel the subscription. At the time, Amazon did not admit wrongdoing, saying in a statement that Amazon and our executives have always followed the law and the settlement allows us to move forward and focus on innovating for customers. So now Amazon is starting to pay out customers up to $51 per person. If you're entitled to an automatic refund, you should get an email from Amazon asking you to claim the money through PayPal or Venmo. You can also choose to get a check in the mail. And this appl
+
+--- network | youtube | d=107 | Good Morning America
+    Who's eligible to get money from $2.5 billion Amazon settlement
+    https://www.youtube.com/watch?v=nL9OTUoyurg
+    source=auto dur=108.0 cues=48
+    TEXT: to the multibillion dollar settlement with Amazon over alleged deceptive practices by the company. Sam is here with details. Sam, a lot of folks talking about this one. >> Big numbers, Deborah. Good morning to you. Good morning to you. So, Amazon has agreed to pay a stunning $2.5 billion dollars to settle claims it tricked people into enrolling into Amazon Prime. Now, the deal coming just a few days after the trial between Amazon and the Federal Trade Commission actually began. The FTC alleges Amazon enrolled people in Prime without their consent, then purposely made it difficult to cancel without admitting any wrongdoing. Now, Amazon agreed to pay a record $1 billion penalty to the FTC and refund a billion half dollars to some 35 million of its users. Amazon also says has to make changes to its enrollment and cancellation practices, which it says it already has done. So, who's eligible to get some of this money? anyone who signed up for Prime between June 23rd, get these dates, 2019 and June 23rd of this year, or if you tried and failed to cancel Prime during that same time period, 
+
+--- network | youtube | d=198 | TODAY
+    Amazon tricked consumers into signing up for Prime: FTC lawsuit
+    https://www.youtube.com/watch?v=KfCU5PUjvME
+    source=auto dur=199.04 cues=105
+    TEXT: Retail giant Amazon hit with a lawsuit. The Federal Trade Commission announced it is suing Amazon alleging the company intentionally duped millions of customers into signing up for Amazon Prime without consent and then sabotaging attempts to cancel. All right, NBC's Vicky Nguyen is here with more. Hey Vicky, good morning. So I lay out this lawsuit. Sounds like they're saying not we Amazon, you tricked people into signing up and then you made it almost impossible for them to cancel. This is the essence of the FTC complaint. I'm still reeling from the connection of what happened in the olden days to this because it is such a parallel, right? The FTC is like you got roped into this thing and you didn't know how to get out of it. That's essentially what the FTC is alleging in this lawsuit. And one of the ways the FTC enforces the law is by suing companies. There's a really strong language in this lawsuit. They're alleging that Amazon duped millions of consumers into unknowingly signing up for Prime memberships by making it difficult to just make a straight purchase. When you went to the 
+
+--- network | youtube | d=294 | CBS News
+    FTC accuses Amazon of tricking consumers into enrolling in Prime
+    https://www.youtube.com/watch?v=_B1ujEswTS4
+    source=auto dur=295.1 cues=131
+    TEXT: pftc is suing Amazon over at the tactics it allegedly uses to enroll customers in its prime program and making it difficult for them to opt out the lawsuit accuses the online retailer abusing quote manipulative user interface designs called Dark patterns to get customers signed up for automatically renewed subscriptions Ashley Gold is a technology reporter axios and she joins us now to talk about this uh so we sort of described it in the introduction there Ashley but dark pattern yeah what is what are patterns and I I'm trying to remember I mean I signed up for Prime on my own and I love it and I don't I know well I guess the difference well with us and other people is we haven't tried to yeah unsubscribe but I I take it that it's pretty challenging so how does that work so dark patterns are what um agencies like the FTC and researchers call all the different ways websites that sell you a product or a recurring subscription try to make it a little harder for you to get rid of that or to cancel that could be an option that's sort of hidden in the corner not able to be seen it could be
+
+--- creator_long | youtube | d=345 | Money Instructor
+    Amazon $2.5 Billion Settlement – How to Claim Your Cash
+    https://www.youtube.com/watch?v=nKDKiQEokuY
+    source=auto dur=346.479 cues=148
+    TEXT: Hey everyone, imagine this. You could be owed money right now and you might not even know it. That's because Amazon is being forced to return part of a massive settlement to customers and millions of people could be eligible for refunds. Think about it. If you've ever had Prime but barely used it, or if you remember struggling to cancel it, there's a real chance some of that money could end up in your pocket. And we're not just talking about a couple bucks. Some refunds are already being estimated at $50 or more. So, if you've ever felt like you were paying for something you didn't really use, stay with me because I'll explain exactly who qualifies, how to check if you're one of them, and the steps you need to take so you don't miss out. Before we go on, let me ask you something. If Amazon sent you a refund tomorrow, what would you put it toward? Groceries, gas, a nice dinner? Drop your answer in the comments. I'd love to hear it. And while you're down there, make sure to hit subscribe so you don't miss future updates like this. Now, here's the background you should know. The FDC, th
+==========================================================================================
+08-05-b05  role=first_person_rant  orient=vertical
+SETUP: $51 IS THE MAXIMUM. IT IS NOT WHAT EVERYBODY GETS. / PEOPLE HAVE BEEN POSTING THEIR PAYOUTS ONLINE. SOME ARE UNDER A DOLLAR. / THINK WHAT YOU WOULD DO.
+==========================================================================================
+
+--- creator_short | youtube | d=42 | Jim Maisano - College Hoops Chat!
+    Amazon may owe you money! You may get a refund! Watch video to learn more! - YouTube
+    https://www.youtube.com/shorts/vSIiCAfBA9g
+    [caption NULL - unavailable/disabled]
+
+--- creator_short | youtube | d=25 | CBS Chicago
+    Amazon Prime customers can file for refund in $2.5B settlement | Money Watch - YouTube
+    https://www.youtube.com/watch?v=lN_NvELxXnY
+    source=auto dur=25.92 cues=11
+    TEXT: Amazon Prime customers can now file refund claims after the company reached a $2.5 billion settlement with the FTC. It stems from claims by the FTC that Amazon duped customers into signing up for Prime and then made it hard to cancel the membership. Most Amazon customers will receive automatic payments, but others may have to go to subscription membership settlement.com to sign
+
+--- creator_short | youtube | d=38 | 9NEWS
+    Amazon Prime settlement with FTC opens door for refunds for customers - YouTube
+    https://www.youtube.com/watch?v=Wf72U9S-OjY
+    source=auto dur=39.68 cues=18
+    TEXT: If you're an Amazon customer, you might be getting some money back. >> Oh, a new FTC settlement opens the door for refunds tied to Amazon Prime signups. The FTC says Amazon made it easy to sign up for Prime, but difficult to cancel. As part of the deal, Amazon will issue 1.5 billion in refunds and pay a $1 billion civil penalty without admitting wrongdoing. Some customers will receive automatic refunds, but others will have to file a claim through the settlement website. Eligible customers could receive up to $51 back in Prime membership fees. Notices are being sent by email and mail. Customers will have 180 days to submit a claim once notified.
+==========================================================================================
+08-05-b06  role=authority_report  orient=horizontal
+SETUP: IN JULY 2024, THE CONSUMER PRODUCT SAFETY COMMISSION VOTED UNANIMOUSLY THAT AMAZON IS A DISTRIBUTOR — LEGALLY ON THE HOOK FOR RECALLING DANGEROUS PRODUCTS OTHER PEOPLE SOLD. / MORE THAN 400,000 PRODUCTS WERE COVERED BY THAT ORDER — FAULTY CO DETECTORS, UNSAFE HAIRDRYERS, FLAMMABLE KIDS' SLEEPWEAR. A
+==========================================================================================
+
+--- network | news_web | d=146 | Fox Business
+    Amazon responsible for hazardous 3rd-party products and recall, federal agency says | Fox Business
+    https://www.foxbusiness.com/markets/amazon-responsible-hazardous-third-party-products-recall-federal-agency-says
+    [no caption path - metadata only]
+
+--- network | youtube | d=104 | Today's Trending
+    Amazon Held Accountable for Product Recalls: US Official Statement! | Business Review
+    https://www.youtube.com/watch?v=useOggilE7k
+    source=auto dur=105.24 cues=43
+    TEXT: welcome to Business review your trusted source for comprehensive coverage of today's business updates us Regulators have determined that Amazon must take responsibility for handling recalls of unsafe products sold on its platform and enhance its recall process the US consumer product safety commission cpsc criticized Amazon's current alert system for being insufficient to convince customers to cease using such products and has ordered the company to develop a new response plan we have Anthony reporting on this this ruling follows the cpsc's 2021 lawsuit against Amazon for Distributing over 400,000 hazardous items including defective carbon monoxide detectors Amazon announced its intention to appeal the decision while defending its existing practices in cases of recalls Amazon stated that it removes the products from its site and notifies customers we are disappointed by the cpsc's decision we planed to appeal the decision and look forward to presenting our case in court the company said in a statement Amazon added that it had already stopped selling the unsafe items identified in the
+
+--- network | news_web | d=None | AP News
+    Amazon sues Consumer Product Safety Commission over recall order for hazardous products | AP News
+    https://apnews.com/article/amazon-sues-cpsc-product-recalls-cbc117a5cc2c322bded2b3b93736121e
+    [no caption path - metadata only]
+
+--- network | news_web | d=None | CBS News
+    Amazon is legally responsible for recalling dangerous products sold on its site, agency finds - CBS News
+    https://www.cbsnews.com/news/amazon-responsible-for-400000-product-recalls-cpsc/
+    [no caption path - metadata only]
+
+--- network | news_web | d=None | NBC News
+    Amazon is responsible for dangerous products sold on its site, federal agency rules
+    https://www.nbcnews.com/business/consumer/amazon-responsible-dangerous-products-sold-site-federal-agency-rules-rcna164309
+    [no caption path - metadata only]
+==========================================================================================
+08-05-b07  role=evidence  orient=vertical
+SETUP: ON JULY 22ND, THE C-P-S-C USED ITS EMERGENCY IMMINENT HAZARD AUTHORITY. THE PRODUCT: LAKKZOOM IMMERSION WATER HEATERS — THE METAL RODS YOU DROP IN A BUCKET TO HEAT WATER. ABOUT 98,000 OF THEM. AND THE C-P-S-C KNOWS OF 235 REPORTS OF FIRES. / THEY CAN IGNITE WITHIN MINUTES IF THEY'RE EVEN PARTLY OUT 
+==========================================================================================
+
+--- raw_footage | reddit | d=None | Reddit
+    r/Wellthatsucks on Reddit: Hot water heater caught on fire 🥴
+    https://www.reddit.com/r/Wellthatsucks/comments/yo8v9n/hot_water_heater_caught_on_fire/
+    [no caption path - metadata only]
+==========================================================================================
+08-05-b08  role=evidence  orient=horizontal
+SETUP: THIS MONTH CONAIR RECALLED MORE THAN ONE MILLION CUISINART GRILL BRUSHES. THE WIRE BRISTLES BREAK OFF THE BRUSH… AND END UP IN YOUR FOOD. 54 REPORTS OF BRISTLES DETACHING — INCLUDING THREE PEOPLE WHO SWALLOWED THEM AND NEEDED MEDICAL TREATMENT TO GET METAL OUT OF THEIR DIGESTIVE TRACT. / HERE YOU CA
+==========================================================================================
+
+--- creator_short | youtube | d=45 | WKBN27
+    Guilford Lake woman recovering after swallowing a grill brush bristle
+    https://www.youtube.com/watch?v=j7i0NTk3Qwk
+    source=auto dur=46.489 cues=19
+    TEXT: a Columbia County woman had a summer problem much bigger than ants or flies bothering her grill out Sally Tina Meyer was eating a hamburger when she felt something stabbing her in the throat she believes it's a piece from a wire grill brush which people used to clean their grills it's been almost a month and doctors still can't get that one inch wire out of her body it has a warning on it but okay who pays attention to these stickers on everything nowadays but it should I actually it should be off the market Sally says the pain has gone down but doctors are now worried about infection from the dirty wire she hopes people will learn from her painful experience and look at other ways to clean their grill
+
+--- creator_short | youtube | d=35 | LOCAL 12
+    Grill brush leads to injury
+    https://www.youtube.com/watch?v=CnDNo7XjS3U
+    source=auto dur=36.879 cues=16
+    TEXT: many of you will be grilling out this Father's Day weekend and tonight something to watch out for when it comes to cleaning the grill a Washington state woman wound up in the hospital with a perforated bowel after eating barbecued chicken turns out small wire bristles from a grilled brush the kind we all use had stuck to the grill and made it into the food Centers for Disease Control says this isn't an isolated thing it recommends cleaning grills with a scouring pad a paper towel soaked with hot water or a putty knife I think we all may be changing that soon look at that
+
+--- creator_short | youtube | d=21 | Jacksonville Journal-Courier
+    What happens if you swallow a wire brush bristle
+    https://www.youtube.com/watch?v=_DaZ5z7RM3I
+    source=auto dur=22.699 cues=10
+    TEXT: the bristles themselves can become embedded in your tongue they can be embedded in the back your throat and the esophagus your stomach your small intestines and they can cause perforations because it is like swallowing a small needle and then so there's people every year that have surgeries trying to find these small objects which are very tiny
+
+--- creator_short | youtube | d=71 | CBS New York
+    Wire Grill Brushes Pose Risks In Food
+    https://www.youtube.com/watch?v=yA-vhKCDNFQ
+    source=auto dur=72.26 cues=35
+    TEXT: Thomas Hatcher uses a wire brush to clean this grill but in 2015 he told us how a piece of the brush got stuck in his hamburger and then in his mouth that was about halfway through it I felt something really sharp and intense pain the hot piece of wire lodged into his tongue requiring a trip to the hospital and stitches was just really a pain that I've never felt before Cheryl Harrison was also eating a burger when she swallowed this piece of wire brush the doctors had to remove from her intestines my stomach was bloated extremely tender to the touch research shows about 130 people go to the emergency room every year with these types of injuries there's a piece of wire that you're not gonna be able to digest and that can actually cause an internal burn injury that can actually burn through parts of your stomach or your or your intestines but Mount Sinai dr. Erica Dean says it can easily be avoided it's best just to take a damp cloth wipe off the entire area before you turn the grill on just make sure everything's clean and you're not seeing anything else on there because that's how i
+
+--- creator_short | youtube | d=56 | Papa Joe knows
+    STOP Using Wire Grill Brushes They’re Dangerous
+    https://www.youtube.com/watch?v=2uTyqqUxcM0
+    source=auto dur=54.079 cues=23
+    TEXT: hey everybody just a little PSA it's getting uh to be grilling season again I'm going to be cooking on my grill later on today and I happen to remember if you guys have a wire brush get rid of those things because the bristles can come off and then as you're cooking something like burgers a little wire bristle can get stuck in the burger and the next thing you know you're taking a trip to the hospital with a piece of little piece of wire lodged in your esophagus and you don't you don't want that get one of these because that can't happen you can get these at your local home improvement stores and so on and I'll I'll find a link for an Amazon link for them as well but just wanted you guys to be aware because that's happened to several people if you've got those wire brushes throw them out and get one of these
+==========================================================================================
+08-05-b09  role=evidence  orient=vertical
+SETUP: THE F-T-C IS WARNING ABOUT A TEXT THAT LOOKS LIKE IT CAME STRAIGHT FROM AMAZON. IT SAYS AMAZON RAN A ROUTINE QUALITY INSPECTION ON SOMETHING YOU BOUGHT AND THAT THE ITEM DOESN'T MEET AMAZON'S STANDARDS OR HAS BEEN RECALLED. THEN COMES THE HOOK. A FULL REFUND. AND YOU DON'T EVEN HAVE TO SEND IT BACK.
+==========================================================================================
+
+--- creator_short | youtube | d=60 | Ryan Mack
+    Amazon Refund Text SCAM: Don’t Click That Link! - YouTube
+    https://www.youtube.com/watch?v=LPF9ETVTrSw
+    source=auto dur=52.12 cues=22
+    TEXT: Got a random Amazon refund text like this? Pause. That's a scam. Here's what really happens when you tap that link. It can send you to a fake Amazon page that steals your login, your card information, even your address. And now scammers have the keys to your whole account and your money. In some cases, it can even try to drop malware on your phone. Here's what to do instead. If you get a text like this, don't click anything. Screenshot it, then report it. In the US, you can forward it to the text 7726 that's spam to alert your carrier and send it to Amazon at stopspoofingamazon.com so their security team can investigate. Real refunds only show up when you log in directly to your Amazon account, not through some random shorten link. Stay sharp.
+
+--- creator_short | youtube | d=51 | Iowa's News Now
+    Text scam promises Amazon refund - YouTube
+    https://www.youtube.com/watch?v=w9BWbLBWT3c
+    source=auto dur=51.6 cues=27
+    TEXT: New warnings tonight from the FTC about the latest scam hitting your phones. We're already hearing about it happening here in Eastern Iowa. This one's dressed up as an Amazon alert. It claims that an item you bought on Amazon failed a routine inspection and then it offers you a full refund. No return needed, no questions asked. But you click the link, you can end up exposing your personal information or draining your bank account. Experts say when in doubt, just don't click anything. >> This one is especially lazy because it's easy to spot, but they don't need very many people to fall for it. And unfortunately, the people that might fall for it are the the most vulnerable segments of our population. >> Don't click those links in unexpected texts and don't respond to them. Make sure you check your Amazon account through their website or the app to make sure of everything. You can send those unwanted texts to 7726. That's your spam folder. Or you can use your phone's report junk option.
+
+--- raw_footage | reddit | d=None | Reddit
+    r/Scams on Reddit: New Phishing Text, Amazon Safety Recall
+    https://www.reddit.com/r/Scams/comments/1hbxjdw/new_phishing_text_amazon_safety_recall/
+    [no caption path - metadata only]
+
+--- first_person | facebook | d=None | facebook.com
+    A terrifying new Amazon subscription scam is exploding right now. Hackers are sending fake texts, emails, and phone calls claiming your subscriptions have expired — all designed to steal your money, passwords, and access to your devices. We’re exposing the 3 biggest scams LIVE and showing you exactly what to look for before you get tricked. Plus, the hottest Amazon deals of the week, biggest verified price drops, and exclusive secret promo codes to save even more at checkout. | Jeff Rossen
+    https://www.facebook.com/rossenreports/videos/3-new-amazon-subscription-scams-exposed-live/1321375169961179/
+    [no caption path - metadata only]
+
+--- raw_footage | reddit | d=None | Reddit
+    r/Scams on Reddit: Amazon recall scam via text
+    https://www.reddit.com/r/Scams/comments/1rk4sqg/amazon_recall_scam_via_text/
+    [no caption path - metadata only]
+==========================================================================================
+08-05-b10  role=authority_report  orient=horizontal
+SETUP: THE SAME THING IS HAPPENING WITH THE PRIME SETTLEMENT MONEY. REAL PAYMENTS ARE GOING OUT BY PAYPAL, VENMO AND CHECK BETWEEN NOW AND SEPTEMBER — WHICH MEANS A FAKE PAYPAL EMAIL ABOUT AN F-T-C SETTLEMENT LANDS AT EXACTLY THE RIGHT MOMENT. THE F-T-C IS NOT CONTACTING PEOPLE ABOUT AMAZON REFUNDS. IF SOM
+==========================================================================================
+
+--- affiliate | youtube | d=131 | News 19 WLTX
+    How to spot a class action settlement email scam
+    https://www.youtube.com/watch?v=WZYjk1fX5hs
+    source=auto dur=131.84 cues=56
+    TEXT: [Music] check your inbox you might have an email that says you're owed money from a recent class action settlement or it could be a scam Brandon Lewis from our national verified team shows you how to tell the difference if you are eligible to participate in a class action settlement you'll often get an email explaining how to claim your money usually you'll have to provide some personal information but that's also exactly what scammers wantan you to do making fake settlement emails an easy way to Target people we get many viewers asking us if settlement emails they received are legit so using these sources we're going to show you how to spot a scam email here's an email we got from viewer Tara let's walk you through how we determine that this is a scam so you can do the same the first red flag is the vague details about the case the BBB says real notices contain specifics like the case number Court information and who is eligible to to take part all of that is missing here second check the sender contact information this email was supposedly sent by a James Neilson from notify but if
+
+--- affiliate | youtube | d=117 | FOX59 News
+    Money Matters: Don’t fall for this 'Amazon' refund scam - YouTube
+    https://www.youtube.com/watch?v=7-XVJfqunno
+    [caption NULL - unavailable/disabled]
+
+--- affiliate | youtube | d=151 | FOX23 News Tulsa
+    Video: BBB warns of Amazon refund scam - YouTube
+    https://www.youtube.com/watch?v=muDqIpV6q2k
+    source=auto dur=150.0 cues=72
+    TEXT: You can get just about anything on Amazon these days, from clothing to carpets, groceries, and gifts. Sometimes you might have to return something you've ordered for a refund. Fox 23 evening anchor Shay Razie talked with the BBB about a new Amazon refund scam that's going around. It's this week's scam alert. >> Here's the text. It reads, "Amazon refund notification for your recent purchase. We're sorry to inform you that the seller from your recent order did not meet Amazon's marketplace policies. To ensure your satisfaction, we've automatically enabled your refund eligibility. You're entitled to a full refund without needing to return the item. To request your refund, please follow this link. It's signed to Amazon customer service team. >> Was that one that you got? >> I got it. I got this text message. >> Always love it when the BBB lady, you know, it's target the BBB lady. >> Amy Mitchell is the CEO of the Better Business Bureau of Eastern Oklahoma. And yes, she gets scam messages, too. She says the first sign that this is a scam is that the message supposedly from Amazon was sent
+
+--- network | news_web | d=None | USA Today
+    Amazon refund text scam: FTC issues warning
+    https://www.usatoday.com/story/money/2025/08/06/amazon-refund-text-scam/85539011007/
+    [no caption path - metadata only]
+
+--- affiliate | youtube | d=88 | 12 News
+    Amazon warns about refund scam - YouTube
+    https://www.youtube.com/watch?v=WFb5HG0cMho
+    source=auto dur=89.2 cues=40
+    TEXT: Tonight, we have a new alert on a scam targeting online shoppers ahead of a busy shopping season. FactFinder 12's Annette Lawless shares what what is most concerning so you don't fall for it. Amazon is warning customers about people sending out fake emails or messages saying it's from the popular shopping site. The goal is to take your personal info and access your shopping account. So, how does this all work? The scammer will contact you saying there's an issue with your account or your order and they'll reach out to you in a number of different ways as well. This could be via phone call, text, or email. Now, you may see some common red flags like spelling and grammar errors. They'll have links to websites that are other than Amazon. By the way, never click on those links. Amazon says to always go to your orders, that's what it's called, your orders, on Amazon.com or on its app. The company says it will never request payment or offer refunds for something that you're not expecting. Also, they won't request remote access to your device by installing software. Similar schemes are bein
+==========================================================================================
+08-05-b11  role=explainer_demo/creator_long  orient=horizontal
+SETUP: THIS WEEKEND, A BLOCK OF STATES TURN OFF SALES TAX ENTIRELY. AUGUST 7TH THROUGH THE 9TH. SIX STATES, ZERO SALES TAX. TEXAS. OHIO. MISSOURI. VIRGINIA. SOUTH CAROLINA. OKLAHOMA. / YOU CAN STACK IT. THE STORE'S SALE PRICE COMES OFF FIRST, THEN TAX COMES OFF THAT. / WATCH HIM SHOW YOU HOW MUCH THIS ACTU
+==========================================================================================
+
+--- creator_long | youtube | d=187 | SA Live
+    Tax-free weekend hacks: What you need to know before you go shopping - YouTube
+    https://www.youtube.com/watch?v=rFuCEkqrRZE
+    source=manual dur=185.987 cues=124
+    TEXT: TO BE A FUN FRIDAY ON SA LIVE. >> CELEBRATING 10 YEARS LIVE FROM HISTORIC MARKET SQUARE. >> CELEBRATING 10 YEARS LIVE FROM HISTORIC MARKET SQUARE. THIS IS SA LIVE. FROM HISTORIC MARKET SQUARE. THIS IS SA LIVE. >> TRENDING TODAY, WE’RE ALL THIS IS SA LIVE. >> TRENDING TODAY, WE’RE ALL ABOUT BACK TO SCHOOL, RIGHT? >> TRENDING TODAY, WE’RE ALL ABOUT BACK TO SCHOOL, RIGHT? AND WE’RE GEARING UP FOR THIS ABOUT BACK TO SCHOOL, RIGHT? AND WE’RE GEARING UP FOR THIS TAX FREE WEEKEND. IT’S ACTUALLY AND WE’RE GEARING UP FOR THIS TAX FREE WEEKEND. IT’S ACTUALLY UNDER WAY RIGHT NOW. THERE’S SO TAX FREE WEEKEND. IT’S ACTUALLY UNDER WAY RIGHT NOW. THERE’S SO MANY PLACES TO SHOP SO MANY UNDER WAY RIGHT NOW. THERE’S SO MANY PLACES TO SHOP SO MANY DEALS THAT WE WANT TO GET YOU MANY PLACES TO SHOP SO MANY DEALS THAT WE WANT TO GET YOU SOME HELP NAVIGATING IT ALL. DEALS THAT WE WANT TO GET YOU SOME HELP NAVIGATING IT ALL. I KNOW I GET STRESSED OUT FOR SOME HELP NAVIGATING IT ALL. I KNOW I GET STRESSED OUT FOR THE START OF TAX FREE WEEKEND. I KNOW I GET STRESSED OUT FOR THE START OF TAX FREE WEEKEND. SO J
+
+--- creator_long | youtube | d=105 | NBC DFW
+    Texas tax-free weekend: Surprising items you can buy without sales tax | NBCDFW - YouTube
+    https://www.youtube.com/watch?v=ohSZVPTV0qU
+    [caption NULL - unavailable/disabled]
+
+--- creator_long | youtube | d=86 | CBS Boston
+    Shoppers head to Open Newbury Street in Boston on Tax-Free Weekend - YouTube
+    https://www.youtube.com/watch?v=w5ckaFj-e4k
+    source=auto dur=87.2 cues=45
+    TEXT: Well, my wife went out to buy a replacement for our garage fridge today, taking advantage of tax-free weekend, and she certainly wasn't alone. As WBZ's Logan Hall explains, because folks swarm stores across the state to save 6 and a/4% on those bigger ticket items. It's a consumer's dream come true. Tax-free weekend meets Open Newberry in Boston. It's a lot of fun. Like the whole no cars thing is great, being able to kind of go up and down. We just got out here a little bit ago. It's hot, but sun's out, so we like it. This weekend in Massachusetts, shoppers can take advantage of purchasing without tacking on an extra 6.25% for the state sales tax, and people are pumped about the deal. I could use a brand new TV. >> There you go. All right. Does it incentivize you to purchase something now that you know you don't have to pay pay sales tax on it? >> Definitely incentivizes me. >> But it's not just the shoppers who were excited. Businesses are also enjoying an influx of customers. Rosemary sells jewelry and statues all the way from Zimbabwe and says business is booming. >> Is it good fo
+
+--- creator_long | youtube | d=196 | County Office Law
+    How Does a Tax-Free Weekend Work? - CountyOffice.org - YouTube
+    https://www.youtube.com/watch?v=QTkoOMsHx60
+    [caption NULL - unavailable/disabled]
+
+--- creator_long | youtube | d=109 | County Office Law
+    Does California Have A Tax Free Weekend? - CountyOffice.org - YouTube
+    https://www.youtube.com/watch?v=G9Gcf6eM1S0
+    [caption NULL - unavailable/disabled]
