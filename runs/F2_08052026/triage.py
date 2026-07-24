@@ -48,10 +48,23 @@ def source_type(x):
     if RAW_WORDS.search(title):
         return "raw_footage"
     if dur is not None and dur <= 75:
-        return "creator_short"   # Shorts / vertical
+        return "creator_short"   # short-duration YouTube upload. NOT a vertical
+                                  # signal by itself -- see orientation_of() below.
     return "creator_long"
 
 # --- orientation gate ----------------------------------------------------
+# BUG FOUND 2026-07-24: this used to return "shorts" (treated as vertical/
+# Shorts-exempt) for ANY youtube candidate under 60s, on the theory that
+# short YouTube uploads are Shorts and Shorts are vertical. That's false --
+# plenty of ordinary 16:9 YouTube videos run under 60s (confirmed case:
+# a 52s "Amazon Refund Text SCAM" video that got shortlisted, flagged, and
+# nearly aired against a vertical beat was actually 1920x1080 landscape).
+# candidates.json carries no width/height field, so duration cannot stand in
+# for orientation. A short-duration YouTube candidate is DURATION-UNKNOWN-
+# ORIENTATION, not vertical, until someone runs
+#   yt-dlp --skip-download --print "%(width)sx%(height)s" <url>
+# and confirms width < height. Never present a short YouTube candidate as
+# satisfying a vertical beat's hard filter without doing that check.
 def orientation_of(x):
     plat = x["platform"]
     dur = x["duration"] if isinstance(x["duration"], (int, float)) else None
@@ -60,7 +73,7 @@ def orientation_of(x):
     if plat == "news_web":
         return "horizontal"  # affiliate article/embedded package
     if dur is not None and dur <= 60:
-        return "shorts"       # vertical, Shorts-exempt
+        return "youtube_short_duration_UNVERIFIED"  # NOT necessarily vertical -- verify dimensions before use
     return "horizontal"
 
 # --- beat-specific fit terms --------------------------------------------

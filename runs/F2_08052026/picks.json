@@ -201,24 +201,24 @@
  },
  {
   "beat_id": "08-05-b09",
-  "flagged": "https://www.youtube.com/watch?v=LPF9ETVTrSw",
-  "platform": "youtube",
-  "title": "Amazon Refund Text SCAM: Don't Click That Link!",
-  "uploader": "Ryan Mack",
-  "source_type": "creator_short",
-  "score": 80,
+  "flagged": "https://www.tiktok.com/@lorifullbright/video/7530796393783446798",
+  "platform": "tiktok",
+  "title": "Scammers are pretending to be Amazon again \u2014 fake recall/refund text",
+  "uploader": "Lori Fullbright",
+  "source_type": "first_person",
+  "score": 83,
   "segments": [
    {
     "in": "0:00",
-    "out": "0:52",
-    "outcue": "Stay sharp",
-    "_verified_at": "0:42",
-    "_matched_cue": "Real refunds only show up when you log in directly to your Amazon account, not through some random shorten link. Stay sharp."
+    "out": "0:35",
+    "outcue": "these are criminals",
+    "_verified_at": "0:30",
+    "_matched_cue": "to get your money back. Don't click on that link. This is not Amazon. These are criminals."
    }
   ],
-  "reasoning": "Vertical Short that shows the fake Amazon refund text on screen and walks through what happens when you tap the link. Matches the vertical evidence beat 'HERE YOU CAN SEE ONE OF THESE TEXTS LAND.' Near-whole play, format-native.",
+  "reasoning": "Verified genuinely vertical (1080x1920, confirmed via yt-dlp dimensions) native TikTok post. Lori Fullbright is a real on-air crime/consumer reporter posting a direct, face-to-camera safety-tip video on her personal account \u2014 not a produced screen-record-plus-voiceover explainer. She names the exact scam (fake Amazon quality-inspection/recall text offering a no-return refund) and delivers the core warning plainly in the first 35 seconds. Matches 'HERE YOU CAN SEE ONE OF THESE TEXTS LAND' in tone if not literally (she describes it rather than showing the text on screen), but is the strongest genuine first-person vertical material found.",
   "flags": [
-   "creator explainer over the text, not a pure raw screen-record; strongest available vertical evidence"
+   "describes the scam text rather than screen-recording it landing; found via direct site:tiktok.com Brave web-search query, not the bulk pipeline pass, which returned zero native TikTok candidates for this beat"
   ]
  },
  {

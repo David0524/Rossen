@@ -174,20 +174,20 @@
   "segment_title": "THE FAKE RECALL TEXT THAT DRAINS YOUR BANK ACCOUNT",
   "clip_role": "evidence",
   "orientation": "vertical",
-  "url": "https://www.youtube.com/watch?v=LPF9ETVTrSw",
-  "platform": "youtube",
-  "source_type": "creator_short",
-  "uploader": "Ryan Mack",
-  "title": "Amazon Refund Text SCAM: Don't Click That Link!",
+  "url": "https://www.tiktok.com/@lorifullbright/video/7530796393783446798",
+  "platform": "tiktok",
+  "source_type": "first_person",
+  "uploader": "Lori Fullbright",
+  "title": "Scammers are pretending to be Amazon again \u2014 fake recall/refund text",
   "swapped": false,
   "segments": [
    {
     "in": "0:00",
-    "out": "0:52",
-    "outcue": "Stay sharp"
+    "out": "0:35",
+    "outcue": "these are criminals"
    }
   ],
-  "note": "creator explainer over the text, not a pure raw screen-record; strongest available vertical evidence"
+  "note": "describes the scam text rather than screen-recording it landing; found via direct site:tiktok.com Brave web-search query, not the bulk pipeline pass, which returned zero native TikTok candidates for this beat"
  },
  {
   "beat_id": "08-05-b10",
