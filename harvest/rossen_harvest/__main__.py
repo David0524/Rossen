@@ -27,7 +27,12 @@ from .brave import BraveBackend, from_brave
 from .cache import Cache
 from .candidates import Candidate
 from .dedupe import dedupe_by_beat
-from .youtube import DEFAULT_CONCURRENCY, YouTubeBackend, harvest_beat
+from .youtube import (
+    DEFAULT_CONCURRENCY,
+    ShortsBackend,
+    YouTubeBackend,
+    harvest_beat,
+)
 
 log = logging.getLogger("rossen_harvest")
 
@@ -51,6 +56,13 @@ BRAVE_PLATFORMS = {"news_web", "tiktok", "instagram", "facebook", "x", "reddit"}
 # both a shot at the native social post (web) and at YouTube coverage (video).
 BRAVE_WEB_REGISTERS = {"anchor", "news", "victim", "platform"}
 BRAVE_VIDEO_REGISTERS = {"platform", "shorts", "victim", "confrontation"}
+
+# Registers the Shorts surface runs. `shorts` carries the Shorts dialect
+# (short, hashtag-heavy, emotion-forward); `platform` is included because the
+# one measured recall@30 run found it the workhorse register -- it found every
+# hit that surfaced at all. Deliberately excludes `news`/`anchor`: noun-heavy
+# headline syntax does not reach Shorts titles.
+SHORTS_REGISTERS = {"shorts", "platform"}
 
 
 def _beat_needs_brave(beat: dict) -> bool:
@@ -76,6 +88,7 @@ def cmd_harvest(args) -> int:
 
     cache = Cache(args.db)
     yt = YouTubeBackend(cache=cache, limit=args.limit)
+    shorts = ShortsBackend(cache=cache, limit=args.limit)
 
     # Brave leg: web (network/affiliate sites) and video (social/short-form).
     brave_key = os.environ.get("BRAVE_API_KEY")
@@ -97,12 +110,33 @@ def cmd_harvest(args) -> int:
 
     all_cands: list[Candidate] = []
     for beat in beats:
-        if beat.get("orientation") != "vertical":
+        is_vertical = beat.get("orientation") == "vertical"
+
+        if not is_vertical:
+            # Long-form YouTube: horizontal beats only. Orientation stays a
+            # hard filter here -- a horizontal beat must not be answered with
+            # a portrait clip.
             all_cands.extend(
                 harvest_beat(beat, yt, concurrency=args.concurrency)
             )
-        elif not use_brave:
-            log.info("skipping %s: vertical and no Brave backend", beat["beat_id"])
+
+        # Shorts run on EVERY orientation, which is the query-generator
+        # skill's explicit rule and was previously unimplemented: vertical
+        # beats skipped the YouTube backend wholesale, so their `shorts`
+        # register never ran against YouTube at all and the only vertical
+        # source with a reachable search index went unsearched. Horizontal
+        # beats get Shorts too -- a 45s Short of the victim is often the
+        # moment with nothing on top of it, where the affiliate package
+        # buries it under a reporter standup. Those cross-orientation hits
+        # are tagged `surfaced_for` so the grader rules on framing rather
+        # than the harvester silently overriding the producer.
+        shorts_cands = harvest_beat(
+            beat, shorts, concurrency=args.concurrency,
+            registers=SHORTS_REGISTERS,
+        )
+        for c in shorts_cands:
+            c.surfaced_for = beat.get("orientation")
+        all_cands.extend(shorts_cands)
 
         if use_brave and _beat_needs_brave(beat):
             all_cands.extend(harvest_beat(

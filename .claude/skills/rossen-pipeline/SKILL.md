@@ -25,6 +25,53 @@ echo "${BRAVE_API_KEY:+brave}${SERPER_API_KEY:+serper}" || true
 export PYTHONPATH="$(pwd)/harvest"   # required for `import rossen_harvest` to resolve
 ```
 
+### Then probe the network paths, because the imports above prove nothing
+
+Every check above can pass while the pipeline is functionally dead. `import
+yt_dlp` succeeding says the library is installed; it says nothing about whether
+YouTube will *answer*. These four probes are not optional — run them and read
+the result before Step 1:
+
+```bash
+# 1. SEARCH reachable? (flat-playlist metadata — the Step 3 path)
+yt-dlp --flat-playlist --dump-json "ytsearch1:scam" >/dev/null 2>&1 \
+  && echo "search OK" || echo "SEARCH DEAD"
+
+# 2. CAPTIONS reachable? (per-video page — the Step 5 path, and the one
+#    that verifies every outcue in the run)
+yt-dlp --skip-download --list-subs "https://www.youtube.com/watch?v=aircAruvnKk" 2>&1 \
+  | grep -q "not a bot" && echo "CAPTIONS BOT-WALLED" || echo "captions OK"
+
+# 3. MEDIA bytes reachable? (the Whisper path — audio counts as media)
+yt-dlp -f bestaudio -o /tmp/probe.%\(ext\)s --no-warnings \
+  "https://www.youtube.com/watch?v=aircAruvnKk" >/dev/null 2>&1 \
+  && echo "media OK" || echo "MEDIA BLOCKED"
+
+# 4. BRAVE actually authorizes? (a present key is not a working key)
+curl -s -o /dev/null -w "brave HTTP %{http_code}\n" \
+  -H "X-Subscription-Token: $BRAVE_API_KEY" \
+  "https://api.search.brave.com/res/v1/web/search?q=test&count=1"
+```
+
+**These three YouTube paths fail independently.** Search is a different
+endpoint from the video page, which is different again from media bytes, and
+in a shared-egress environment (a cloud container behind a pooled IP) they
+degrade in that order — search survives longest, media dies first. Observed
+live on 2026-07-24: search fine, captions and media both bot-walled, on an IP
+where a prior run of this same pipeline had pulled 53/59 captions successfully.
+Nothing in the code changed. The IP's reputation did.
+
+**If captions are bot-walled, say so at Checkpoint 1 and stop for a ruling.**
+Do not run search and grade into a dead end: without captions there is no
+transcript, without a transcript no outcue can be verified, and this pipeline's
+central rule is that an unverified outcue never gets written. A full run under
+that condition produces picks whose timecodes are all unverified — which is a
+legitimate deliverable only if the producer has agreed in advance to receive
+one. Alternate `--extractor-args youtube:player_client=...` values are worth
+one attempt (`mweb` dodges the bot-check), but verify it returns real caption
+tracks rather than an empty list — a client that answers with "no automatic
+captions" for a video you know is captioned is degraded, not working.
+
 `harvest/requirements.txt` covers the only two non-stdlib Python deps in
 the package (`yt-dlp`, `faster-whisper`); everything else is stdlib.
 A fresh session/container has neither installed and no cached pip state,
@@ -69,13 +116,33 @@ beats do not get TikTok queries.
 python3 -m rossen_harvest search beats.json --out candidates.json
 ```
 
-Runs two backends and dedupes across both. **YouTube** (yt-dlp) takes
-horizontal beats. **Brave** (needs `BRAVE_API_KEY`) takes the leg YouTube
-cannot reach: off-YouTube network and affiliate video (`news_web`), Reddit,
-and vertical beats — which the YouTube backend skips entirely, so Brave is
-their only coverage. A beat routes to Brave when its `platforms` include
+Runs three surfaces and dedupes across all of them. Caches to `harvest.db`.
+
+**YouTube long-form** (yt-dlp) takes horizontal beats. Orientation stays a
+hard filter here: a horizontal beat is never answered with a portrait clip.
+
+**YouTube Shorts** (`ShortsBackend`) runs on **every** beat, both orientations.
+It is its own search surface, not a byproduct of the long-form query — it
+appends `#shorts` and applies a 60s ceiling, because the suffix alone leaks
+long-form uploads and the ceiling alone leaves you searching all of YouTube.
+It runs the `shorts` and `platform` registers only; `news`/`anchor` are
+noun-heavy headline syntax and do not reach Shorts titles. Shorts surfaced
+against a horizontal beat are tagged `surfaced_for: horizontal` so the grader
+rules on framing rather than the harvester silently overriding the producer's
+orientation call.
+
+**Brave** (needs `BRAVE_API_KEY`) takes the leg YouTube cannot reach:
+off-YouTube network and affiliate video (`news_web`), Reddit, and native
+social posts. A beat routes to Brave when its `platforms` include
 `news_web, tiktok, instagram, facebook, x, reddit`, or when it is vertical.
-Caches to `harvest.db`.
+
+> **Fixed 2026-07-24.** Vertical beats used to skip the YouTube backend
+> wholesale, so their `shorts` register never ran anywhere — even though the
+> query-generator skill states Shorts run on every orientation. That left
+> Shorts, the only vertical surface with a reachable search index, entirely
+> unsearched on exactly the beats that needed it most, while Brave answered
+> those beats with YouTube results through its more YouTube-heavy video
+> endpoint. Vertical beats now reach Shorts directly. See `test_shorts.py`.
 
 Honest coverage boundary, so you read the counts correctly: Brave is strong
 on `news_web` and Reddit, and for a *named person* it finds the press
@@ -134,6 +201,33 @@ No downloads, no Whisper, about a second per clip. 5-10% of clips have
 captions disabled and come back null. Demote those, do not guess at
 their content.
 
+### The transcript ladder — try these in cost order, never skip a rung
+
+Whisper is the expensive rung, not the default one. Work down:
+
+| Rung | Applies to | Cost | Gets you |
+|---|---|---|---|
+| 1. Caption fetch | YouTube long-form **and Shorts** | ~1s/clip, metadata only | Verified outcue |
+| 2. Whisper | TikTok/Reels/X, and captionless Shorts | Real seconds/clip + media bytes | Verified outcue |
+| 3. Flag unverified | Anything rung 1-2 could not reach | Free | An honest gap |
+
+**Rung 1 covers Shorts.** A Short is an ordinary YouTube video with an ordinary
+caption track — same index, same `fetch_many` call, same bare-video-id contract.
+Do not send a Short to Whisper before trying the caption fetch on it; that pays
+seconds and a download for something a metadata call returns for free. This is
+the single most common way to waste time in this step.
+
+**Rung 2 is for surfaces that genuinely ship no captions** — TikTok, Reels,
+native X video — plus the minority of Shorts with captions disabled.
+
+**Rung 3 is a real outcome, not a failure state.** Both rungs above depend on
+network paths that fail independently (see Preflight). When media bytes are
+blocked, Whisper cannot run at all — it needs the audio it is transcribing.
+When the video page is bot-walled, captions die too. In an environment where
+both are blocked, rung 3 is the *only* available rung, and the correct output
+is a pick with an explicitly unverified outcue, flagged as such in the report
+and the Bible doc. Never promote a guess to fill the gap.
+
 **Vertical shortlist entries (TikTok/Reels/X) need a separate pass — they carry no caption track at all, so the step above always returns null for them.** Use `vertical_transcribe.py`:
 
 ```python
@@ -147,6 +241,21 @@ vertical_transcripts = fetch_many_vertical(
 ```
 
 Downloads each clip and transcribes locally with faster-whisper (CPU, no GPU). Not free like the caption fetch — budget real seconds per clip, not a fraction of one — so run it on the shortlist only, never on 30 raw candidates. Returns the same `Transcript` shape as YouTube captions (`source == "whisper"`), so pass two's outcue verification (`.find()`, `.segment()`) works identically. Requires `pip install faster-whisper`; do not add `curl-cffi` speculatively for TikTok — it has caused TLS failures where plain yt-dlp succeeded. If a vertical pick has no Whisper transcript available in your environment, flag its outcue as unverified rather than inventing one — same rule as everything else in this pipeline.
+
+Use `vertical_id(url)` — not `tiktok_id` — for anything cache-key shaped. It
+resolves TikTok, Shorts, Reels, X and Facebook video to a `(platform, id)`
+pair, where `tiktok_id` returns None for everything but TikTok. That matters
+because the id *is* the cache key: an unmatched URL caches on the raw string,
+so one Reel arriving with different tracking params (`?igsh=`, `?utm_source=`)
+caches two or three times and pays for a fresh download and a fresh Whisper
+run on each variant.
+
+**Whisper's reach is exactly as wide as your media access, and no wider.**
+It is not a way around a block — it is a transcription step that consumes
+bytes something else had to fetch. If yt-dlp cannot download the clip,
+Whisper has nothing to transcribe and returns None. So when the preflight
+media probe fails, do not plan around Whisper for *any* platform; it is off
+the table for the whole run, and rung 3 is where those beats land.
 
 ## Step 6 — Grade, pass two
 

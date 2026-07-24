@@ -1,0 +1,199 @@
+[
+  {
+    "beat_id": "b01",
+    "episode": "F2-08-07",
+    "segment_title": "AND SOMETIMES THEY SEND A REAL PERSON TO YOUR FRONT DOOR",
+    "script_text": "-THOSE PHOTOS LED DETECTIVES TO XIN LIU, A 40 YEAR OLD COURIER WORKING UNDER AN ALIAS. / -SHE WAS PRETENDING TO BE AN F-B-I INVESTIGATOR, HITTING SIX FLORIDA LOCATIONS IN ONE WEEK. / -THE MANATEE COUNTY SHERIFF'S OFFICE SAYS THE RING TOOK 3 POINT 5 MILLION FROM OVER 40 VICTIMS. / -HERE'S DETECTIVE GARY CUMMINGS ON HOW THEY OPERATE.",
+    "orientation": "horizontal",
+    "clip_role": "authority_report",
+    "news_anchor": "Manatee County Sheriff Xin Liu FBI impersonation courier $3.5 million 40 victims",
+    "visual_spec": "detective at podium or seated interview, sheriff's office backdrop, lower-third with name and rank",
+    "platforms": ["youtube", "news_web", "shorts"],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "butt_linked_with": "b02",
+    "butt_note": "Script places a BUTT marker between b01 and b02. Per the beat-extractor skill, BUTT means both segments come from the SAME source, stitched. Grader should prefer a single source that carries both the detective explainer and the courier-arrival footage.",
+    "sourcability": "commentary_only",
+    "sourcability_note": "The specific Manatee County / Xin Liu case has NO affiliate or network video on YouTube. Four separate searches returned only 'The Axiom Lens' (740s, 'One Photo Took Down a $3.5 Million Scam Ring') — an AI-narrator repost channel, which the beat-extractor skill explicitly names as not a clean, clearable source. Named-detective search ('Detective Gary Cummings Manatee County scam') returned an unrelated WTHI-TV result. Local affiliate sweep (WWSB/ABC7 Sarasota, WFLA, Tampa Bay 28) surfaced Sarasota-area crime coverage but nothing on this case.",
+    "queries": {
+      "anchor": [
+        "Xin Liu FBI impersonation courier arrest",
+        "Manatee County Sheriff scam ring $3.5 million 40 victims",
+        "Xin Liu 27 months federal prison scam courier",
+        "Manatee County FBI impersonator courier six Florida locations"
+      ],
+      "news": [
+        "detective explains how scam courier ring operates",
+        "sheriff's office warns of fake FBI agents collecting cash at the door",
+        "scam courier arrested after victim photographs her car",
+        "deputies break up federal agent impersonation ring",
+        "detectives describe scammers sending couriers to collect cash"
+      ],
+      "platform": [
+        "fake FBI agent at your door",
+        "scam courier busted",
+        "cash courier scam caught",
+        "fake fed collects cash"
+      ],
+      "shorts": [
+        "#scamalert fake FBI at the door",
+        "she showed up for the cash #shorts",
+        "#scam courier arrested",
+        "one photo took them down #scamalert"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "platform"],
+      "shorts": ["shorts", "platform"],
+      "news_web": ["anchor", "news"]
+    },
+    "shorts_search": {"suffix": "#shorts", "match_filter": "duration < 60", "surfaced_for": "horizontal"}
+  },
+  {
+    "beat_id": "b02",
+    "episode": "F2-08-07",
+    "segment_title": "AND SOMETIMES THEY SEND A REAL PERSON TO YOUR FRONT DOOR (courier arrival)",
+    "script_text": "-DETECTIVES FOUND A 79 YEAR OLD WOMAN ALREADY OUT 200 THOUSAND DOLLARS IN A CRYPTO SCAM. / -AND SHE WAS BEING WORKED AGAIN, RIGHT THEN. / -WHILE DETECTIVES SAT IN HER LIVING ROOM, THE SCAMMERS CALLED FOR ANOTHER 30 THOUSAND IN CASH. / -THEY HAD NO IDEA THE COPS WERE RIGHT THERE. / -WATCH WHAT HAPPENS WHEN THE COURIER SHOWS UP TO COLLECT.",
+    "orientation": "horizontal",
+    "clip_role": "confrontation_bust",
+    "news_anchor": "Manatee County undercover sting courier arrives 79 year old crypto scam victim $30,000",
+    "visual_spec": "bodycam or surveillance of a courier walking up to a suburban front door, deputies moving in to arrest",
+    "platforms": ["youtube", "shorts", "news_web"],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "butt_linked_with": "b01",
+    "sourcability": "commentary_only",
+    "sourcability_note": "Same Manatee County case as b01 — no affiliate video located. HOWEVER, the visual this beat needs (courier arrives to collect, deputies arrest on camera) has strong ANALOGUE coverage from other cases: New York Post 'Undercover Deputy Standing In as Elderly Victim Busts $700K...' (121s), WOOD TV8 'Deputies nab suspect in attempted $700,000 gold coin...' (86s), Pierce County Sheriff's Office 'Fraud Suspect Busted' (105s). Using any of these requires changing the case the script describes — a script-level swap, which is checkpoint-2 territory, not something to do silently.",
+    "queries": {
+      "anchor": [
+        "Manatee County sting courier arrest 79 year old victim",
+        "deputies arrest courier sent to collect $30,000 cash"
+      ],
+      "news": [
+        "deputies arrest scam courier at victim's home",
+        "undercover sting catches scam money courier",
+        "police wait inside home as scammer sends courier",
+        "sheriff sets up sting for gold bar courier"
+      ],
+      "platform": [
+        "scammer courier busted at the door",
+        "cops waiting for the scam courier",
+        "sting operation scam courier caught on camera",
+        "undercover deputy busts scammer"
+      ],
+      "shorts": [
+        "#scamalert cops were already inside",
+        "he had no idea police were there #shorts",
+        "#sting scam courier caught",
+        "watch him realize it's a setup #scam"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "platform"],
+      "shorts": ["shorts", "platform"],
+      "news_web": ["anchor", "news"]
+    },
+    "shorts_search": {"suffix": "#shorts", "match_filter": "duration < 60", "surfaced_for": "horizontal"}
+  },
+  {
+    "beat_id": "b03",
+    "episode": "F2-08-07",
+    "segment_title": "NOW THE NEW TWIST — THE FAKE BADGE AND THE FAKE WEBSITE",
+    "script_text": "-THERE ARE WHOLE FACEBOOK PAGES SET UP AS FAKE I-C-3 RECOVERY SERVICES, WITH FAKE REVIEWS. / -\"HAVE YOU BEEN SCAMMED OR DEFRAUDED? WE'RE HERE TO HELP.\" THAT IS THE PITCH. / -HERE YOU CAN SEE ONE OF THESE FAKE F-B-I RECOVERY PAGES.",
+    "orientation": "vertical",
+    "clip_role": "evidence",
+    "news_anchor": "fake IC3 recovery Facebook page FBI impersonation deepfake",
+    "visual_spec": "phone screen recording scrolling a Facebook page branded as an FBI/IC3 recovery service, fake reviews and 'we can get your money back' posts visible",
+    "platforms": ["tiktok", "shorts", "facebook", "reddit"],
+    "offsite_likely": true,
+    "priority": 2,
+    "expected_segments": 1,
+    "sourcability": "none",
+    "sourcability_note": "This is a screen-recording-of-a-webpage beat, not footage of an event. No third-party clip is likely to exist showing the specific fake page the script describes. Search for 'fake IC3 recovery page Facebook scam FBI deepfake' returned only generic deepfake-warning packages (CNBC, CBS Texas, ABC11) — none showing a fake IC3 page. Strong candidate for SHOW-PRODUCED: the team screen-records a live fake page themselves, which is also the only way to guarantee the page shown matches the script's described tells (every link bounces to home, one-step form). Recommend removing from the clip pipeline and assigning as a production task.",
+    "queries": {
+      "platform": [
+        "fake FBI recovery page",
+        "IC3 scam website fake",
+        "fake fund recovery Facebook",
+        "#scamalert fake FBI page"
+      ],
+      "victim": [
+        "they said they could get my money back",
+        "recovery scam facebook group fake",
+        "fake FBI agent messaged me on facebook"
+      ],
+      "shorts": [
+        "#scamalert fake FBI page",
+        "this website is fake #shorts",
+        "#scam fake recovery service",
+        "spot the fake gov site #scamalert"
+      ],
+      "reddit": [
+        "site:reddit.com fake IC3 recovery scam screenshot",
+        "site:reddit.com recovery scam facebook page fbi",
+        "site:reddit.com fake fbi agent messenger telegram"
+      ]
+    },
+    "platform_map": {
+      "tiktok": ["platform", "victim"],
+      "shorts": ["shorts", "platform"],
+      "facebook": ["platform"],
+      "reddit": ["reddit"]
+    },
+    "shorts_search": {"suffix": "#shorts", "match_filter": "duration < 60", "surfaced_for": "vertical"}
+  },
+  {
+    "beat_id": "b04",
+    "episode": "F2-08-07",
+    "segment_title": "THIS IS WHAT IT DOES TO REAL PEOPLE",
+    "script_text": "-THIS WOMAN ON LONG ISLAND LOST 468 THOUSAND DOLLARS IN A ROMANCE SCAM. / -THEN SHE WENT ONLINE LOOKING FOR HELP GETTING HER MONEY BACK. / -SHE JOINED FACEBOOK ROMANCE SCAM SUPPORT GROUPS… FULL OF PEOPLE PROMISING RECOVERY. / -AND SHE GOT SCAMMED ALL OVER AGAIN BY THE PEOPLE OFFERING TO HELP HER. / -LISTEN TO WHAT HAPPENED TO HER.",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Long Island romance scam victim $468,000 scammed again recovery",
+    "visual_spec": "woman seated at home in interview setup, local news lower-third, reporter off camera",
+    "platforms": ["youtube", "news_web", "shorts"],
+    "offsite_likely": false,
+    "priority": 1,
+    "expected_segments": 1,
+    "script_note": "Script itself carries: [NOTE: BEST LOCATED MATCH IS CBS NEW YORK INVESTIGATES, 2024. CONFIRM OR SWAP FOR A 2026 CASE.]",
+    "sourcability": "high",
+    "sourcability_note": "CONFIRMED. 'CBS New York — L.I. romance scam victim who lost $468,000 says she was sc...' (113s) is an exact case match on the dollar figure, location and the re-victimization angle. This corroborates the script's own note. Open question is vintage, not existence: the script flags it as 2024 and asks whether to confirm or swap for a 2026 case.",
+    "queries": {
+      "anchor": [
+        "Long Island romance scam victim $468,000",
+        "romance scam victim lost 468000 scammed again",
+        "CBS New York romance scam recovery scam Long Island"
+      ],
+      "news": [
+        "romance scam victim scammed a second time by recovery service",
+        "woman loses life savings romance scam then targeted again",
+        "victim of romance scam falls for money recovery scam",
+        "Long Island woman romance scam support group scam"
+      ],
+      "victim": [
+        "I lost everything and then they took more",
+        "they promised to get my money back and stole again",
+        "I joined a support group and got scammed again"
+      ],
+      "platform": [
+        "romance scam victim scammed twice",
+        "catfish victim recovery scam",
+        "romance scam second time"
+      ],
+      "shorts": [
+        "#scamalert she lost it all twice",
+        "scammed again by the people helping her #shorts",
+        "#romancescam she lost 468k",
+        "they took her savings then came back #scam"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "platform", "victim"],
+      "shorts": ["shorts", "platform"],
+      "news_web": ["anchor", "news"]
+    },
+    "shorts_search": {"suffix": "#shorts", "match_filter": "duration < 60", "surfaced_for": "horizontal"}
+  }
+]

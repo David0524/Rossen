@@ -69,12 +69,47 @@ _TIKTOK_URL = re.compile(
     r"tiktok\.com/@[^/]+/video/(\d+)|tiktok\.com/@[^/]+/photo/(\d+)"
 )
 
+# Every vertical surface this pipeline can reach, not just TikTok. Each entry
+# maps a platform tag to the pattern that pulls its stable id out of a URL.
+#
+# Why this matters beyond tidiness: the id is the cache key. A URL that does
+# not match any pattern falls back to caching on the raw URL string, so the
+# same clip arriving with different tracking params (`?igsh=`, `?is_from_webapp`,
+# a share-link suffix) caches two, three, four times and re-downloads and
+# re-transcribes on every variant. Whisper is the expensive step in this
+# pipeline; paying for it repeatedly on one clip is the exact cost the cache
+# exists to prevent.
+_VERTICAL_URL_PATTERNS = (
+    ("tiktok",    _TIKTOK_URL),
+    ("shorts",    re.compile(r"youtube\.com/shorts/([A-Za-z0-9_-]{11})")),
+    ("instagram", re.compile(r"instagram\.com/(?:reel|reels|p|tv)/([A-Za-z0-9_-]+)")),
+    ("x",         re.compile(r"(?:twitter|x)\.com/[^/]+/status/(\d+)")),
+    ("facebook",  re.compile(r"facebook\.com/(?:reel/(\d+)|watch/?\?v=(\d+))")),
+)
+
 
 def tiktok_id(url: str) -> str | None:
+    """TikTok-only id. Kept for the existing callers and tests that name it."""
     m = _TIKTOK_URL.search(url or "")
     if not m:
         return None
     return m.group(1) or m.group(2)
+
+
+def vertical_id(url: str) -> tuple[str, str] | None:
+    """`(platform, id)` for any supported vertical URL, else None.
+
+    Prefer this over `tiktok_id` for anything cache-key shaped -- it covers
+    Shorts, Reels, X and Facebook video as well, which `tiktok_id` silently
+    returns None for.
+    """
+    for platform, pat in _VERTICAL_URL_PATTERNS:
+        m = pat.search(url or "")
+        if m:
+            vid = next((g for g in m.groups() if g), None)
+            if vid:
+                return platform, vid
+    return None
 
 
 def _run(cmd: list[str], timeout: int) -> subprocess.CompletedProcess:
@@ -169,7 +204,8 @@ def fetch_vertical_transcript(
     """Download + transcribe one vertical clip. Cached like any other
     query so re-grading the same shortlist never re-downloads or re-runs
     Whisper. Returns None on any failure -- never raises."""
-    vid = tiktok_id(url) or url
+    ident = vertical_id(url)
+    vid = f"{ident[0]}:{ident[1]}" if ident else url
     cache_key = f"whisper:{model_size}:{vid}"
 
     if cache is not None:

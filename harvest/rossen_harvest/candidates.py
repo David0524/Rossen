@@ -45,6 +45,17 @@ class Candidate:
     duplicate_of: str | None = None      # video_id of the kept record
     also_found_by: list[str] = field(default_factory=list)
 
+    # Orientation provenance. `orientation` is what this candidate actually
+    # is; `surfaced_for` is the orientation of the beat it was harvested
+    # against. When they disagree the producer's orientation call is being
+    # deliberately crossed (a Short surfaced for a horizontal beat), and the
+    # grader rules on framing rather than the harvester silently overriding
+    # it. `duration_known` is False when --flat-playlist returned a null
+    # duration, meaning the Shorts ceiling could not actually be applied.
+    orientation: str | None = None
+    surfaced_for: str | None = None
+    duration_known: bool = True
+
     # ---- derived signals the grader reads -------------------------------
 
     @property
@@ -129,8 +140,14 @@ def from_ytdlp(
         except (TypeError, ValueError):
             views = None
 
+    # ShortsBackend tags its entries; a Short is a distinct surface from
+    # long-form YouTube even though it shares the index and the video id.
+    is_short = entry.get("_orientation") == "vertical"
+
     return Candidate(
-        platform="youtube",
+        platform="shorts" if is_short else "youtube",
+        orientation="vertical" if is_short else "horizontal",
+        duration_known=bool(entry.get("_duration_known", True)),
         url=url,
         video_id=vid,
         title=(entry.get("title") or "").strip(),

@@ -34,6 +34,10 @@ _YDL_OPTS = {
 DEFAULT_LIMIT = 30
 DEFAULT_CONCURRENCY = 5       # higher and YouTube starts throttling
 
+# A Short is <=60s by format definition. Used as a ceiling, not a quality
+# signal -- see the grader's triage rules.
+SHORTS_MAX_DURATION = 60
+
 
 class YouTubeBackend:
     platform = "youtube"
@@ -65,6 +69,55 @@ class YouTubeBackend:
         if self.cache:
             self.cache.put_raw(key, entries)
         return entries
+
+
+class ShortsBackend(YouTubeBackend):
+    """YouTube Shorts as its own search surface.
+
+    Why this exists: Shorts are vertical, and vertical beats used to skip the
+    YouTube backend entirely -- so their `shorts` register never ran anywhere,
+    despite the query-generator skill stating that Shorts run on every
+    orientation. That left the single highest-yield vertical source in the
+    whole pipeline unsearched, and it is the one vertical source whose search
+    metadata stays reachable when TikTok is IP-blocked.
+
+    Two things make Shorts a different surface from long-form YouTube, and
+    both have to be applied together (the query-generator skill spells out
+    why either alone fails):
+
+    - the `#shorts` suffix, because Shorts titles are written in a different
+      register than long-form and a noun-heavy query does not reach them;
+    - a hard duration ceiling, because the `#shorts` token alone leaks
+      long-form uploads that merely mention Shorts in the description.
+
+    Duration filtering happens here in Python rather than through yt-dlp's
+    `--match-filter`, deliberately: `--flat-playlist` frequently returns null
+    durations, and a null silently *passes* a match filter, which is exactly
+    how a "Shorts" run ends up full of long-form. A null duration is treated
+    as unknown and kept, then tagged so the grader can rule on it rather than
+    the harvester silently guessing.
+    """
+
+    platform = "shorts"
+
+    def _search_key(self, query: str) -> str:
+        q = query if "#shorts" in query.lower() else f"{query} #shorts"
+        return f"ytsearch{self.limit}:{q}"
+
+    def search(self, query: str, limit: int | None = None) -> list[dict]:
+        entries = super().search(query, limit)
+        kept = []
+        for e in entries:
+            dur = e.get("duration")
+            if dur is not None and dur > SHORTS_MAX_DURATION:
+                continue
+            e = dict(e)
+            e["_orientation"] = "vertical"
+            e["_duration_known"] = dur is not None
+            kept.append(e)
+        log.debug("shorts %r: %d/%d within %ds ceiling",
+                  query, len(kept), len(entries), SHORTS_MAX_DURATION)
+        return kept
 
 
 def harvest_beat(

@@ -55,7 +55,9 @@ with tempfile.TemporaryDirectory() as td:
     # Prime the cache directly, as fetch_vertical_transcript would after a
     # real transcription, then confirm the cache-hit path returns it
     # without calling download_audio or the model.
-    cache.put_raw("whisper:tiny.en:999", {
+    # Cache keys are platform-namespaced ("tiktok:999", not bare "999") so a
+    # Reel and a TikTok that happen to share a numeric id cannot collide.
+    cache.put_raw("whisper:tiny.en:tiktok:999", {
         "cues": [{"start": 0.0, "end": 2.0, "text": "cached line"}],
     })
     t = fetch_vertical_transcript("https://www.tiktok.com/@x/video/999",
@@ -67,7 +69,7 @@ with tempfile.TemporaryDirectory() as td:
 
     # Negative cache: an empty dict means "checked, nothing found" -- must
     # return None, not an empty-but-truthy Transcript.
-    cache.put_raw("whisper:tiny.en:888", {})
+    cache.put_raw("whisper:tiny.en:tiktok:888", {})
     t = fetch_vertical_transcript("https://www.tiktok.com/@x/video/888",
                                    cache=cache, model_size="tiny.en")
     check("negative cache (empty dict) returns None, not a hollow Transcript",
