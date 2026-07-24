@@ -7,6 +7,8 @@ const fs = require('fs');
 const { Document, Packer, Paragraph, TextRun, ExternalHyperlink } = require('docx');
 const RUN = '/home/user/Rossen/runs/F2_08052026';
 const BLUE = "1155CC", RED = "C0392B";
+const TITLE_SIZE = 46;  // 23pt (docx sizes are half-points)
+const BODY_SIZE = 36;   // 18pt, everything else
 
 const beats = Object.fromEntries(JSON.parse(fs.readFileSync(RUN+'/beats.json')).map(b => [b.beat_id, b]));
 const picks = JSON.parse(fs.readFileSync(RUN+'/picks.json'));
@@ -88,27 +90,27 @@ function clipParas(bid) {
   const headColor = (swap || weak) ? RED : BLUE;
   const head = swap ? "▶ CLIP (CASE-SWAP) — " : weak ? "▶ CLIP (WEAK — RE-CHECK) — " : "▶ CLIP — ";
   P.push(new Paragraph({spacing:{before:120,after:20},
-    children:[new TextRun({text: head + roleLabel(bid), color: headColor, bold:true})]}));
+    children:[new TextRun({text: head + roleLabel(bid), color: headColor, bold:true, size:BODY_SIZE})]}));
   P.push(new Paragraph({spacing:{after:20}, children:[
-    new TextRun({text:`Source: ${p.uploader} (${p.source_type}, ${p.platform})  —  `, color:BLUE}),
-    new ExternalHyperlink({link:p.flagged, children:[new TextRun({text:p.flagged, color:BLUE, underline:{}})]}),
+    new TextRun({text:`Source: ${p.uploader} (${p.source_type}, ${p.platform})  —  `, color:BLUE, size:BODY_SIZE}),
+    new ExternalHyperlink({link:p.flagged, children:[new TextRun({text:p.flagged, color:BLUE, underline:{}, size:BODY_SIZE})]}),
   ]}));
   for (const s of segLine(p)) {
-    P.push(new Paragraph({spacing:{after:20}, children:[new TextRun({text:s, color:BLUE, bold:true})]}));
+    P.push(new Paragraph({spacing:{after:20}, children:[new TextRun({text:s, color:BLUE, bold:true, size:BODY_SIZE})]}));
   }
-  P.push(new Paragraph({spacing:{after:20}, children:[new TextRun({text:`“${p.title}”`, color:BLUE, italics:true})]}));
+  P.push(new Paragraph({spacing:{after:20}, children:[new TextRun({text:`“${p.title}”`, color:BLUE, italics:true, size:BODY_SIZE})]}));
   if (swap) {
     P.push(new Paragraph({spacing:{after:20}, children:[new TextRun({
       text:`⚠ CASE-SWAP: original beat was ${p.swapped_from}. Setup lines above rewritten to match the new clip.`,
-      color:RED, italics:true})]}));
+      color:RED, italics:true, size:BODY_SIZE})]}));
   }
   if (weak) {
     P.push(new Paragraph({spacing:{after:20}, children:[new TextRun({
       text:`⚠ WEAK FIT: ${p.flags.join('; ')}. Producer should confirm or treat as show-produced.`,
-      color:RED, italics:true})]}));
+      color:RED, italics:true, size:BODY_SIZE})]}));
   }
   if (!weak && p.flags && p.flags.length) {
-    P.push(new Paragraph({spacing:{after:140}, children:[new TextRun({text:`note: ${p.flags.join('; ')}`, color:BLUE, italics:true})]}));
+    P.push(new Paragraph({spacing:{after:140}, children:[new TextRun({text:`note: ${p.flags.join('; ')}`, color:BLUE, italics:true, size:BODY_SIZE})]}));
   } else {
     P.push(new Paragraph({spacing:{after:120}, children:[]}));
   }
@@ -116,10 +118,10 @@ function clipParas(bid) {
 }
 
 const paras = [];
-paras.push(new Paragraph({spacing:{after:80}, children:[new TextRun({text:"F2 TOP STORIES — WEDNESDAY, AUGUST 5", bold:true, size:30})]}));
+paras.push(new Paragraph({spacing:{after:80}, children:[new TextRun({text:"F2 TOP STORIES — WEDNESDAY, AUGUST 5", bold:true, size:TITLE_SIZE})]}));
 paras.push(new Paragraph({spacing:{after:200}, children:[new TextRun({
   text:"Bible with clips embedded. Blue = clip to pull (IN/OUT + verbatim outcue). Red = weak fit or case-swap. Clips are located and timecoded for a human to pull and cut — nothing was auto-downloaded.",
-  italics:true, size:18, color:"555555"})]}));
+  italics:true, size:BODY_SIZE, color:"555555"})]}));
 
 let ci = 0;
 for (let i = 0; i < lines.length; i++) {
@@ -137,11 +139,11 @@ for (let i = 0; i < lines.length; i++) {
   if (t.includes("[[SWAP")) {
     const idx = t.indexOf("[[SWAP");
     paras.push(new Paragraph({spacing:{after:40}, children:[
-      new TextRun({text: t.slice(0, idx).trim()+"  ", bold:true}),
-      new TextRun({text: t.slice(idx), color:RED, italics:true, size:16})]}));
+      new TextRun({text: t.slice(0, idx).trim()+"  ", bold:true, size:BODY_SIZE}),
+      new TextRun({text: t.slice(idx), color:RED, italics:true, size:BODY_SIZE})]}));
     continue;
   }
-  paras.push(new Paragraph({spacing:{after:40}, children:[new TextRun({text:t, bold:isHeader})]}));
+  paras.push(new Paragraph({spacing:{after:40}, children:[new TextRun({text:t, bold:isHeader, size:BODY_SIZE})]}));
 }
 
 const doc = new Document({sections:[{properties:{page:{size:{width:12240,height:15840}}}, children:paras}]});
