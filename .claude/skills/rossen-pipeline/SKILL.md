@@ -17,10 +17,20 @@ handles caching, dedupe, concurrency limits and graceful backend failure.
 ## Preflight
 
 ```bash
+pip install -r harvest/requirements.txt   # yt-dlp, faster-whisper — not preinstalled in a fresh session
 python3 -c "import yt_dlp; print('yt-dlp ok')"
-which ffmpeg || echo "MISSING ffmpeg — brew install ffmpeg"
+python3 -c "import faster_whisper; print('faster-whisper ok')"
+which ffmpeg || echo "MISSING ffmpeg — brew install ffmpeg / apt install ffmpeg"
 echo "${BRAVE_API_KEY:+brave}${SERPER_API_KEY:+serper}" || true
+export PYTHONPATH="$(pwd)/harvest"   # required for `import rossen_harvest` to resolve
 ```
+
+`harvest/requirements.txt` covers the only two non-stdlib Python deps in
+the package (`yt-dlp`, `faster-whisper`); everything else is stdlib.
+A fresh session/container has neither installed and no cached pip state,
+so run the install line every time rather than assuming it carries over
+from a prior chat. `ffmpeg` is a system binary, not pip-installable —
+check it separately.
 
 No web search key means **YouTube only**, roughly 70% of normal coverage
 and no TikTok, Instagram, Facebook or native network video. Say so
