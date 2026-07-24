@@ -19,24 +19,24 @@
   {
     "beat_id": "08-05-b03",
     "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=54tfKlslTA4",
-    "title": "Don't get scammed by third-party sellers on Amazon and Walmart",
+    "url": "https://www.youtube.com/watch?v=23OPFKfjQ5I",
+    "title": "They say Amazon shipped fake product and refuses refund until 'correct' item returned",
     "platform": "youtube",
     "source_type": "affiliate",
     "segments": [
-      {"in": "0:30", "out": "1:40", "outcue": "a 30% restocking fee"}
+      {"in": "0:00", "out": "1:06", "outcue": "a little bit of a slap in the face"}
     ],
-    "flags": ["WEAK FIT — Walmart story not Amazon A-to-Z"]
+    "flags": ["script says 'HER' but victim is male — gender mismatch", "CBC Canadian network — clearance check needed"]
   },
   {
     "beat_id": "08-05-b04",
     "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=xY-s26O0hkE",
-    "title": "Amazon Prime FTC Settlement Lawsuit Explained",
+    "url": "https://www.youtube.com/watch?v=ttBoYQjmaVc",
+    "title": "Amazon customers could be getting some money back after 'record-breaking' settlement",
     "platform": "youtube",
-    "source_type": "creator_long",
+    "source_type": "affiliate",
     "segments": [
-      {"in": "0:00", "out": "0:57", "outcue": "changes how Amazon runs its Prime program"}
+      {"in": "0:14", "out": "1:33", "outcue": "a clear and conspicuous button to help people decline or cancel their subscription"}
     ]
   },
   {
@@ -70,31 +70,37 @@
   {
     "beat_id": "08-05-b08",
     "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=iB-V407xMeE",
-    "title": "Is the most popular grill brush dangerous? (What I use instead)",
+    "url": "https://www.youtube.com/watch?v=ytkn-av0Dd8",
+    "title": "Beware of grill brush dangers",
     "platform": "youtube",
-    "source_type": "first_person",
+    "source_type": "affiliate",
     "segments": [
-      {"in": "0:00", "out": "0:48", "outcue": "leave it down in the comments"},
-      {"in": "1:26", "out": "1:54", "outcue": "they're more likely to end up on your grilling surface"}
+      {"in": "1:05", "out": "1:41", "outcue": "after ingesting bristles hidden in food"},
+      {"in": "1:41", "out": "2:10", "outcue": "I saw a metal bristle right on the grate"}
     ]
   },
   {
     "beat_id": "08-05-b09",
-    "status": "empty",
-    "reason": "No vertical video of fake Amazon recall text. Evidence lives on TikTok/Reddit."
+    "status": "download_pending",
+    "url": "https://www.youtube.com/shorts/55hbVRTDICA",
+    "title": "NEW Amazon Scam: Your Product Was Recalled",
+    "platform": "youtube",
+    "source_type": "creator_short",
+    "segments": [
+      {"in": "0:00", "out": "0:38", "outcue": "they go on a shopping spree in your name in real time"}
+    ],
+    "flags": ["from Rossen Reports channel — confirm using own content as source"]
   },
   {
     "beat_id": "08-05-b10",
     "status": "download_pending",
-    "url": "https://www.youtube.com/watch?v=WZYjk1fX5hs",
-    "title": "How to spot a class action settlement email scam",
+    "url": "https://www.youtube.com/watch?v=g6n6rFw1MHk",
+    "title": "Amazon refund emails are real, but beware of scams",
     "platform": "youtube",
     "source_type": "affiliate",
     "segments": [
-      {"in": "0:04", "out": "1:20", "outcue": "anything higher is suspicious"}
-    ],
-    "flags": ["general settlement scam, not Amazon-specific"]
+      {"in": "0:00", "out": "0:43", "outcue": "it is going to be an automatic process"}
+    ]
   },
   {
     "beat_id": "08-05-b11",

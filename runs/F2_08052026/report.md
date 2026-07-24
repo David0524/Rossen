@@ -9,10 +9,10 @@
 ## Source mix, 11 beats
 
 ```
-affiliate 3 · creator_long 2 · creator_short 1 · first_person 1 · empty 3 · weak 1
+affiliate 6 · creator_long 1 · creator_short 2 · empty 2
 ```
 
-3 of 11 beats are empty. 1 is a weak fit. The empties are all vertical evidence/rant beats whose natural content lives on TikTok, not YouTube. One (b07) is too recent for coverage to exist.
+2 of 11 beats are empty. 1 is a weak fit. The empties are vertical evidence beats whose content lives on TikTok or is too recent to exist on video.
 
 ## Search coverage
 
@@ -25,19 +25,19 @@ affiliate 3 · creator_long 2 · creator_short 1 · first_person 1 · empty 3 ·
 
 ## Beat table
 
-| Beat | Role | Or. | Pick | Platform | Source | Dur | Outcue | Status |
-|------|------|-----|------|----------|--------|-----|--------|--------|
-| b01 | explainer_demo/creator_long | H | [DZ06YW82Qh8](https://www.youtube.com/watch?v=DZ06YW82Qh8) | youtube | creator_long | 283s | "my item didn't arrive as promised" | OK (2 segs) |
+| Beat | Role | Or. | Pick | Platform | Source | Score | Outcue | Status |
+|------|------|-----|------|----------|--------|-------|--------|--------|
+| b01 | explainer_demo/creator_long | H | [DZ06YW82Qh8](https://www.youtube.com/watch?v=DZ06YW82Qh8) | youtube | creator_long | 82 | "my item didn't arrive as promised" | OK (2 segs) |
 | b02 | evidence | V | — | — | — | — | — | EMPTY |
-| b03 | victim_interview | H | [54tfKlslTA4](https://www.youtube.com/watch?v=54tfKlslTA4) | youtube | affiliate | 134s | "a 30% restocking fee" | WEAK |
-| b04 | authority_report | H | [xY-s26O0hkE](https://www.youtube.com/watch?v=xY-s26O0hkE) | youtube | creator_long | 204s | "changes how Amazon runs its Prime program" | OK |
-| b05 | first_person_rant | V | [mff8NrTcRw0](https://www.youtube.com/watch?v=mff8NrTcRw0) | youtube | creator_short | 64s | "the checks have to be cashed in within 60 days" | WEAK |
-| b06 | authority_report | H | [ggDHtb-4GWQ](https://www.youtube.com/watch?v=ggDHtb-4GWQ) | youtube | affiliate | 154s | "hold online marketplaces accountable in the future" | OK |
+| b03 | victim_interview | H | [23OPFKfjQ5I](https://www.youtube.com/watch?v=23OPFKfjQ5I) | youtube | affiliate | 84 | "a little bit of a slap in the face" | OK |
+| b04 | authority_report | H | [ttBoYQjmaVc](https://www.youtube.com/watch?v=ttBoYQjmaVc) | youtube | affiliate | 87 | "a clear and conspicuous button..." | OK |
+| b05 | first_person_rant | V | [mff8NrTcRw0](https://www.youtube.com/watch?v=mff8NrTcRw0) | youtube | creator_short | 68 | "the checks have to be cashed in within 60 days" | WEAK |
+| b06 | authority_report | H | [ggDHtb-4GWQ](https://www.youtube.com/watch?v=ggDHtb-4GWQ) | youtube | affiliate | 88 | "hold online marketplaces accountable in the future" | OK |
 | b07 | evidence | V | — | — | — | — | — | EMPTY |
-| b08 | evidence | H | [iB-V407xMeE](https://www.youtube.com/watch?v=iB-V407xMeE) | youtube | first_person | 228s | "they're more likely to end up on your grilling surface" | OK (2 segs) |
-| b09 | evidence | V | — | — | — | — | — | EMPTY |
-| b10 | authority_report | H | [WZYjk1fX5hs](https://www.youtube.com/watch?v=WZYjk1fX5hs) | youtube | affiliate | 132s | "anything higher is suspicious" | OK |
-| b11 | explainer_demo/creator_long | H | [erKRMlCUNkc](https://www.youtube.com/watch?v=erKRMlCUNkc) | youtube | affiliate | 128s | "like i said this is running the whole" | OK |
+| b08 | evidence | H | [ytkn-av0Dd8](https://www.youtube.com/watch?v=ytkn-av0Dd8) | youtube | affiliate | 86 | "after ingesting bristles hidden in food" | OK (2 segs) |
+| b09 | evidence | V | [55hbVRTDICA](https://www.youtube.com/shorts/55hbVRTDICA) | youtube | creator_short | 80 | "they go on a shopping spree in your name in real time" | OK |
+| b10 | authority_report | H | [g6n6rFw1MHk](https://www.youtube.com/watch?v=g6n6rFw1MHk) | youtube | affiliate | 82 | "it is going to be an automatic process" | OK |
+| b11 | explainer_demo/creator_long | H | [erKRMlCUNkc](https://www.youtube.com/watch?v=erKRMlCUNkc) | youtube | affiliate | 90 | "like i said this is running the whole" | OK |
 
 ## Empty beats
 
@@ -45,17 +45,30 @@ affiliate 3 · creator_long 2 · creator_short 1 · first_person 1 · empty 3 ·
 
 **b07 (evidence, V):** Lakkzoom immersion water heater fires. CPSC emergency action was July 22, 2026 — less than 2 weeks ago. No YouTube or social video of the actual fires yet. News_web results were CPSC press releases (text only). This will surface over the next week or two as local affiliates cover it.
 
-**b09 (evidence, V):** Fake Amazon recall phishing text screenshot. r/Scams has multiple text-only posts confirming the scam exists, but no video. The content (phone screen recording of a scam text arriving) lives on TikTok. Fox news_web result may have video but isn't downloadable.
-
 ## Weak picks
-
-**b03:** The Walmart third-party seller story (54tfKlslTA4) is the closest available. Couple orders table+chairs, gets only table, seller demands 30% restocking fee. Affiliate package, sympathetic victims on camera. But it's a Walmart story, not Amazon A-to-Z. The script says "LISTEN TO WHAT HAPPENED TO HER" and the clip has Amanda on camera, so the gender matches. A direct Amazon A-to-Z denial interview did not surface.
 
 **b05:** The 64s settlement explainer (mff8NrTcRw0) covers the checks going out, max $51, PayPal/Venmo/check. But the beat wants someone showing their SMALL payout and reacting ("PEOPLE HAVE BEEN POSTING THEIR PAYOUTS ONLINE / SOME ARE UNDER A DOLLAR / THINK WHAT YOU WOULD DO"). That's TikTok reveal content — first-person reaction, not news explainer.
 
+## Upgraded picks (pass two re-grade)
+
+Five beats received significantly better picks on the second grading pass:
+
+- **b03:** Walmart third-party seller story (54tfKlslTA4, score 72) → CBC Go Public Amazon fake graphics card investigation (23OPFKfjQ5I, score 84). Named victim Matthew Lago, $700 order, Amazon refused refund. Exact A-to-Z scenario.
+- **b04:** Creator explainer (xY-s26O0hkE, score 78) → WHAS11/ABC affiliate package (ttBoYQjmaVc, score 87). Andrea Fujii's report with FTC chair quote, all key settlement facts.
+- **b08:** Generic grill brush demo (iB-V407xMeE, score 85) → WDIV affiliate consumer investigation (ytkn-av0Dd8, score 86). Named victim Linda, bristle in throat required surgery, magnet test demonstration.
+- **b09:** Previously EMPTY → YouTube Short covering exact Amazon recall text scam (55hbVRTDICA, score 80). FTC-flagged phishing setup, vertical orientation matches beat.
+- **b10:** General settlement scam warning (WZYjk1fX5hs, score 75) → WBAY Amazon-specific settlement scam warning (g6n6rFw1MHk, score 82). Wisconsin Consumer Protection official on camera.
+
+## Flags for producer
+
+- **b03:** Script says "LISTEN TO WHAT HAPPENED TO HER" but victim is male (Matthew Lago). Gender mismatch needs script line swap.
+- **b03:** CBC is a Canadian network — may need clearance check.
+- **b09:** Clip is from Rossen Reports' own YouTube channel — confirm using own content as source clip.
+- **b11:** Reporter is female, script says "WATCH HIM" — minor mismatch.
+
 ## What I had to work around
 
-1. **Re-queried 4 beats** (b02, b03, b05, b07) after pass-one triage showed poor candidates. Revised queries focused on doorbell cam evidence, Amazon marketplace buyer complaints, settlement check reaction reveals, and Lakkzoom-specific fire footage. b03 improved slightly; the other three remained empty or weak.
+1. **Re-queried 4 beats** (b02, b03, b05, b07) after pass-one triage showed poor candidates. Revised queries focused on doorbell cam evidence, Amazon marketplace buyer complaints, settlement check reaction reveals, and Lakkzoom-specific fire footage. b03 improved significantly on second pass grading.
 
 2. **YouTube downloads blocked** (HTTP 403) in this cloud environment. Metadata and captions worked but video bytes are blocked by YouTube. All picks are logged with URLs and segment timecodes in `clips/manifest.json` for local download.
 
@@ -65,10 +78,10 @@ affiliate 3 · creator_long 2 · creator_short 1 · first_person 1 · empty 3 ·
 
 ## Monoculture check
 
-No single source type holds 70%+ of the 8 filled picks. affiliate 3, creator_long 2, creator_short 1, first_person 1, plus the 3 empties. Mix is healthy.
+Affiliate holds 6 of 9 filled picks (67%), just under the 70% threshold. Runner-up type is creator_short at 2 picks (b05, b09). The affiliate-heavy mix reflects that the best case-specific, named-victim content for these beats came from local news investigations. The two creator_short picks are both vertical-orientation beats where affiliate packages are uncommon.
 
 ## Degradation
 
 - NOT degraded by missing search key (Brave API available)
-- Degraded by missing TikTok/Instagram/Facebook direct search — 3 of 4 empty/weak beats are vertical content that lives on those platforms
+- Degraded by missing TikTok/Instagram/Facebook direct search — 2 empty beats and 1 weak beat are vertical content that lives on those platforms
 - Degraded by YouTube download block in cloud environment — clips not cut

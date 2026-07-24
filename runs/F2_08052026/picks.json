@@ -22,7 +22,7 @@
         "outcue": "my item didn't arrive as promised"
       }
     ],
-    "reasoning": "Guy showing his Amazon account, walks through exact steps: customer service > contact us > chat > ask for promotional credit. Matches 'WATCH HIM SHOW YOU HOW' setup. Natural tone, screen recording with voiceover. First segment explains the policy, second shows the walkthrough. Two butt-cut segments to skip the generic mid-section.",
+    "reasoning": "Guy showing his Amazon account, walks through exact steps: customer service > contact us > chat > ask for promotional credit. Matches 'WATCH HIM SHOW YOU HOW' setup. Natural tone, screen recording with voiceover. First segment explains the policy, second shows the walkthrough. Two butt-cut segments to skip the generic mid-section. Creator_long is the natural source type for explainer_demo.",
     "flags": ["audio is phone-quality but clear", "mentions $5 credit specifically, script says general credit"]
   },
   {
@@ -37,50 +37,50 @@
     "quality": null,
     "fit": null,
     "segments": [],
-    "reasoning": "No usable clip found. The beat needs doorbell/porch camera footage of an Amazon phantom delivery — package marked delivered, camera shows nothing there. This content lives almost exclusively on TikTok and Reddit as short vertical clips or image posts. YouTube candidates were about buying doorbell cameras, not phantom delivery evidence. Reddit posts are text, not video. Needs TikTok/Instagram direct search to fill.",
+    "reasoning": "No usable clip found. The beat needs doorbell/porch camera footage of an Amazon phantom delivery — package marked delivered, camera shows nothing there. This content lives almost exclusively on TikTok and Reddit as short vertical clips and image posts. YouTube candidates were about buying doorbell cameras or drivers caught stealing (wrong scenario). Needs TikTok/Instagram direct search to fill.",
     "flags": ["EMPTY BEAT — vertical evidence lives on TikTok, not YouTube"]
   },
   {
     "beat_id": "08-05-b03",
-    "url": "https://www.youtube.com/watch?v=54tfKlslTA4",
-    "title": "Don't get scammed by third-party sellers on Amazon and Walmart",
+    "url": "https://www.youtube.com/watch?v=23OPFKfjQ5I",
+    "title": "They say Amazon shipped fake product and refuses refund until 'correct' item returned",
     "platform": "youtube",
     "source_type": "affiliate",
-    "score": 72,
-    "tone": 8,
-    "authenticity": 7,
+    "score": 84,
+    "tone": 9,
+    "authenticity": 9,
     "quality": 8,
-    "fit": 6,
-    "segments": [
-      {
-        "in": "0:30",
-        "out": "1:40",
-        "outcue": "a 30% restocking fee"
-      }
-    ],
-    "reasoning": "Affiliate package from WCPO/9 On Your Side. Amanda and Aaron Shulkers ordered table+chairs from third-party seller, got only table, seller demands restocking fee to return. Sympathetic victims on camera at home. Good tone. WEAK FIT: the story is Walmart marketplace, not Amazon A-to-Z specifically. The script says 'LISTEN TO WHAT HAPPENED TO HER' — the clip has a woman (Amanda) on camera. Closest available but not a direct match to A-to-Z guarantee denial.",
-    "flags": ["WEAK FIT — Walmart story, not Amazon A-to-Z", "human should re-check or source directly"]
-  },
-  {
-    "beat_id": "08-05-b04",
-    "url": "https://www.youtube.com/watch?v=xY-s26O0hkE",
-    "title": "Amazon Prime FTC Settlement Lawsuit Explained – $2.5 Billion Refunds",
-    "platform": "youtube",
-    "source_type": "creator_long",
-    "score": 78,
-    "tone": 7,
-    "authenticity": 7,
-    "quality": 7,
-    "fit": 9,
+    "fit": 8,
     "segments": [
       {
         "in": "0:00",
-        "out": "0:57",
-        "outcue": "changes how Amazon runs its Prime program"
+        "out": "1:06",
+        "outcue": "a little bit of a slap in the face"
       }
     ],
-    "reasoning": "Creator explainer covering the FTC $2.5B settlement. Hits all the key facts: dark patterns, $1B penalty + $1.5B refunds, 35 million affected. Matches the beat's 'HERE'S WHAT WE KNOW RIGHT NOW' setup. Clean audio, clear delivery. Not ideal source type for authority_report (creator not affiliate/network), but content fit is strong and the news_web candidates have no video/captions. First 57 seconds cover the what-happened with no filler.",
-    "flags": ["creator_long not ideal for authority_report role", "news_web candidates may be stronger but lack downloadable video"]
+    "reasoning": "CBC Go Public investigation. Matthew Lago ordered $700 graphics card from Amazon, received putty in a repackaged box. Amazon refused refund — said they threw out the returned fake item and demanded the 'correct' one. Father on camera: 'a little bit of a slap in the face.' After Go Public got involved, Amazon refunded and apologized. Exactly the A-to-Z scenario the beat describes: third-party seller product goes wrong, buyer gets bounced, Amazon won't help. Victim is specific and named, not generic. Affiliate source type. Much stronger case match than prior Walmart pick.",
+    "flags": ["script says 'LISTEN TO WHAT HAPPENED TO HER' but victim is male — gender mismatch", "CBC not US affiliate — Canadian network, may need clearance check"]
+  },
+  {
+    "beat_id": "08-05-b04",
+    "url": "https://www.youtube.com/watch?v=ttBoYQjmaVc",
+    "title": "Amazon customers could be getting some money back after 'record-breaking' settlement",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 87,
+    "tone": 9,
+    "authenticity": 8,
+    "quality": 9,
+    "fit": 9,
+    "segments": [
+      {
+        "in": "0:14",
+        "out": "1:33",
+        "outcue": "a clear and conspicuous button to help people decline or cancel their subscription"
+      }
+    ],
+    "reasoning": "WHAS11 airing Andrea Fujii's ABC News package on the FTC $2.5B settlement. FTC chair quote: 'we have gotten for the American people all of the money that was taken from their pockets.' Covers: $1B civil penalty + $1.5B refunds, 35 million affected, dark pattern enrollment, hard-to-cancel interface, $51 per person, Amazon's statement, required clear cancel button. Perfect fit for 'HERE'S WHAT WE KNOW RIGHT NOW' setup. Clean affiliate audio, professional package. Skip 14s anchor toss.",
+    "flags": []
   },
   {
     "beat_id": "08-05-b05",
@@ -136,70 +136,76 @@
     "quality": null,
     "fit": null,
     "segments": [],
-    "reasoning": "No usable clip found. The beat needs fire footage from Lakkzoom immersion water heaters specifically — a very recent CPSC emergency action (July 22, 2026). YouTube candidates were about different products: Houston commercial water heater explosion, aquarium heater fire, Lasko space heater. None match. News_web results are CPSC press releases (text, not video). Too new for YouTube coverage to have accumulated.",
-    "flags": ["EMPTY BEAT — very recent event, no video coverage yet", "Lakkzoom-specific footage may surface on TikTok or local news in coming days"]
+    "reasoning": "No usable clip found. The beat needs fire footage from Lakkzoom immersion water heaters specifically — a very recent CPSC emergency action (July 22, 2026). YouTube candidates were about different products: commercial water heater explosions, aquarium heater fires, Lasko space heaters. News_web results are CPSC press releases (text, not video). Too new for any video coverage to have accumulated.",
+    "flags": ["EMPTY BEAT — very recent event, no video coverage yet"]
   },
   {
     "beat_id": "08-05-b08",
-    "url": "https://www.youtube.com/watch?v=iB-V407xMeE",
-    "title": "Is the most popular grill brush dangerous? (What I use instead)",
+    "url": "https://www.youtube.com/watch?v=ytkn-av0Dd8",
+    "title": "Beware of grill brush dangers",
     "platform": "youtube",
-    "source_type": "first_person",
-    "score": 85,
-    "tone": 8,
+    "source_type": "affiliate",
+    "score": 86,
+    "tone": 9,
     "authenticity": 9,
-    "quality": 9,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+      {
+        "in": "1:05",
+        "out": "1:41",
+        "outcue": "after ingesting bristles hidden in food"
+      },
+      {
+        "in": "1:41",
+        "out": "2:10",
+        "outcue": "I saw a metal bristle right on the grate"
+      }
+    ],
+    "reasoning": "WDIV Click On Detroit affiliate consumer investigation by Hank Winchester. Victim Linda on camera: 'my throat was so swollen I could hardly swallow or breathe.' Wire bristle stuck in her throat from a hot dog, required surgery. Then the reporter demonstrates the hazard with a magnet test across multiple grills, finding bristles that fell off wire brushes. '1,700 Americans went to the ER between 2002 and 2014.' Two segments: (1) victim story + ER stats, (2) magnet test finding bristle on the grate. Matches 'HERE YOU CAN SEE WHAT HAPPENS WHEN ONE OF THESE THINGS LETS GO.' Affiliate source type, named victim, visual evidence.",
+    "flags": ["not Cuisinart/Conair recall specific — demonstrates the general hazard with a case", "Cuisinart recall coverage exists on news_web (CPSC, Fox Business) but no YouTube video with captions"]
+  },
+  {
+    "beat_id": "08-05-b09",
+    "url": "https://www.youtube.com/shorts/55hbVRTDICA",
+    "title": "NEW Amazon Scam: Your Product Was Recalled",
+    "platform": "youtube",
+    "source_type": "creator_short",
+    "score": 80,
+    "tone": 9,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+      {
+        "in": "0:00",
+        "out": "0:38",
+        "outcue": "they go on a shopping spree in your name in real time"
+      }
+    ],
+    "reasoning": "YouTube Short covering the exact Amazon recall text scam the beat describes. Opens with the scam setup: message from Amazon safety team saying item recalled, click for refund. Explains it's an FTC-flagged phishing scam to steal Amazon login and credit card info. Vertical orientation matches the beat. Content covers exactly what the script says: fake text, recall claim, refund hook, link steals your card. 38s of usable evidence before pivoting to protection tips.",
+    "flags": ["from Rossen Reports channel — producer should confirm using own content as source", "FOX43 (Y9FurvK98Rw, 121s, horizontal) has stronger full investigation if orientation can be crossed"]
+  },
+  {
+    "beat_id": "08-05-b10",
+    "url": "https://www.youtube.com/watch?v=g6n6rFw1MHk",
+    "title": "Amazon refund emails are real, but beware of scams",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 82,
+    "tone": 9,
+    "authenticity": 8,
+    "quality": 8,
     "fit": 8,
     "segments": [
       {
         "in": "0:00",
-        "out": "0:48",
-        "outcue": "leave it down in the comments"
-      },
-      {
-        "in": "1:26",
-        "out": "1:54",
-        "outcue": "they're more likely to end up on your grilling surface"
+        "out": "0:43",
+        "outcue": "it is going to be an automatic process"
       }
     ],
-    "reasoning": "Creator video specifically about grill brush bristle dangers. Opens with '140 Americans go to the hospital every year from ingesting grill brush bristles.' Shows bristle pull test, demonstrates how easily they come out. Matches 'HERE YOU CAN SEE WHAT HAPPENS WHEN ONE OF THESE THINGS LETS GO.' Two segments: intro about the danger, then the bristle-pull demonstration. Manual captions = quality content. Not about the Cuisinart recall specifically, but demonstrates the exact hazard the beat describes.",
-    "flags": ["not Cuisinart recall specific — demonstrates the general hazard"]
-  },
-  {
-    "beat_id": "08-05-b09",
-    "url": null,
-    "title": null,
-    "platform": null,
-    "source_type": null,
-    "score": null,
-    "tone": null,
-    "authenticity": null,
-    "quality": null,
-    "fit": null,
-    "segments": [],
-    "reasoning": "No usable clip found. The beat needs a phone screen recording or screenshot of the fake Amazon recall phishing text landing. This is vertical evidence content that lives on TikTok and Reddit. Reddit posts (r/Scams) describe the exact scam text but are text posts, not video. The Fox news_web result may have video but is not downloadable via yt-dlp. YouTube had generic scam alert clips, none showing this specific Amazon recall text.",
-    "flags": ["EMPTY BEAT — screenshot/screen recording evidence lives on TikTok", "r/Scams posts confirm the scam exists but aren't usable video"]
-  },
-  {
-    "beat_id": "08-05-b10",
-    "url": "https://www.youtube.com/watch?v=WZYjk1fX5hs",
-    "title": "How to spot a class action settlement email scam",
-    "platform": "youtube",
-    "source_type": "affiliate",
-    "score": 75,
-    "tone": 8,
-    "authenticity": 7,
-    "quality": 8,
-    "fit": 7,
-    "segments": [
-      {
-        "in": "0:04",
-        "out": "1:20",
-        "outcue": "anything higher is suspicious"
-      }
-    ],
-    "reasoning": "WLTX affiliate Verified team walks through how to spot fake settlement emails: check case details, sender info, amount, urgency, links. Good fit for the 'HERE'S WHAT WE KNOW RIGHT NOW' setup about settlement scams. Not Amazon-specific — it's about class action settlement scams in general — but the mechanics are identical. Clean, professional, consumer-protective tone. Skip the music intro.",
-    "flags": ["not Amazon-specific — general settlement scam warning", "human may prefer a more Amazon/FTC-specific clip if one surfaces"]
+    "reasoning": "WBAY affiliate consumer first alert. Covers: Amazon Prime refund going out, FTC lawsuit (enrolled without consent, hard to cancel), up to $51. Wisconsin Consumer Protection official on camera warning: 'If someone calls or texts you asking for personal information or money, that is a scam.' Then: 'there is nothing consumers need to do... it is going to be an automatic process.' Directly matches the beat: 'THE F-T-C IS BLUNT ABOUT IT. THE F-T-C IS NOT CONTACTING PEOPLE ABOUT AMAZON REFUNDS.' Amazon-specific, settlement-specific, with authority figure warning about the scam.",
+    "flags": ["51s total — shorter than typical, but the beat setup is long and only needs a moment"]
   },
   {
     "beat_id": "08-05-b11",
