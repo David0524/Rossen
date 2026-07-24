@@ -3,11 +3,11 @@
     "beat_id": "08-05-b01",
     "episode": "08-05",
     "segment_title": "AMAZON GUARANTEED DELIVERY REFUND — HOW TO CLAIM IT",
-    "script_text": "HERE IS THE EXACT PATH AMAZON PUBLISHES… GO TO YOUR ORDERS… SELECT THE LATE ORDER… / CLICK PROBLEM WITH AN ORDER… THEN SHIPPING OR DELIVERY ISSUES… THEN SHIPMENT IS LATE. / AND IF YOU'RE A PRIME MEMBER WHO NEVER PAID A SHIPPING FEE, THERE'S NOTHING TO REFUND… / SO ASK THE AGENT DIRECTLY FOR AN ACCOUNT CREDIT INSTEAD. YOU HAVE TO SAY THE WORDS. / WATCH HIM SHOW YOU HOW.",
+    "script_text": "AMAZON'S OWN GUARANTEED DELIVERY TERMS SAY IF THEY MISS THAT DATE, YOUR SHIPPING FEES MAY BE REFUNDED. / HERE IS THE EXACT PATH AMAZON PUBLISHES… GO TO YOUR ORDERS… SELECT THE LATE ORDER… CLICK PROBLEM WITH AN ORDER… THEN SHIPPING OR DELIVERY ISSUES… THEN SHIPMENT IS LATE. / IF YOU'RE A PRIME MEMBER WHO NEVER PAID A SHIPPING FEE, ASK THE AGENT DIRECTLY FOR AN ACCOUNT CREDIT INSTEAD. / WATCH HIM SHOW YOU HOW.",
     "orientation": "horizontal",
     "clip_role": "explainer_demo/creator_long",
     "news_anchor": "Amazon guaranteed delivery refund late package credit",
-    "visual_spec": "person on camera walking through Amazon account screens, step-by-step tutorial style",
+    "visual_spec": "person on camera walking through Amazon account screens step by step, tutorial framing",
     "platforms": ["youtube"],
     "offsite_likely": false,
     "priority": 2,
@@ -15,171 +15,166 @@
     "queries": {
       "anchor": [
         "Amazon guaranteed delivery refund late package",
-        "Amazon late delivery account credit how to claim"
+        "Amazon late delivery account credit how to"
       ],
       "news": [
-        "Amazon late delivery refund how to get money back",
+        "how to get a refund for a late Amazon package",
         "Amazon guaranteed delivery date missed refund policy",
-        "how to get refund Amazon late package delivery",
-        "Amazon shipping refund policy late orders",
         "Amazon owes you money late delivery credit",
-        "Amazon delivery guarantee refund trick most people miss"
+        "Amazon shipping refund policy late order",
+        "get money back Amazon late delivery"
       ],
       "victim": [],
-      "platform": [],
+      "platform": [
+        "Amazon refund trick late package",
+        "Amazon late delivery money back hack"
+      ],
       "shorts": [
         "Amazon owes you money #shorts",
-        "Amazon late delivery hack #refund",
-        "get your money back Amazon #shorts",
-        "Amazon refund trick nobody knows #money",
-        "#amazontips late delivery credit",
-        "Amazon guaranteed delivery #moneyhack"
+        "Amazon refund trick nobody knows #shorts",
+        "get your money back from Amazon #shorts",
+        "Amazon late package hack #money"
       ]
     },
     "platform_map": {
-      "youtube": ["anchor", "news"],
+      "youtube": ["anchor", "news", "platform"],
       "shorts": ["shorts"]
     }
   },
   {
     "beat_id": "08-05-b02",
     "episode": "08-05",
-    "segment_title": "AMAZON SAYS DELIVERED BUT PACKAGE NEVER ARRIVED",
-    "script_text": "YOUR PHONE BUZZES. DELIVERED. THERE'S EVEN A PHOTO OF YOUR FRONT DOOR. / YOU GO OUTSIDE… AND THERE IS NOTHING THERE. / AND PEOPLE ARE POSTING THE PROOF. DOORBELL CAMERA ROLLING, NO TRUCK, NO DRIVER, NO PACKAGE… / WHILE THE AMAZON APP SAYS IT'S SITTING AT THEIR FRONT DOOR. / HAVE A LOOK.",
+    "segment_title": "\"DELIVERED.\" EXCEPT IT WASN'T — PHANTOM DELIVERY",
+    "script_text": "YOUR PHONE BUZZES. DELIVERED. THERE'S EVEN A PHOTO OF YOUR FRONT DOOR. YOU GO OUTSIDE… AND THERE IS NOTHING THERE. / AND PEOPLE ARE POSTING THE PROOF. DOORBELL CAMERA ROLLING, NO TRUCK, NO DRIVER, NO PACKAGE… WHILE THE AMAZON APP SAYS IT'S SITTING AT THEIR FRONT DOOR. / HAVE A LOOK.",
     "orientation": "vertical",
     "clip_role": "evidence",
-    "news_anchor": "Amazon package says delivered never arrived doorbell camera",
-    "visual_spec": "doorbell or porch camera footage, empty porch, Amazon delivery notification on screen",
-    "platforms": ["tiktok", "shorts", "facebook", "reddit"],
-    "offsite_likely": false,
+    "news_anchor": "Amazon package marked delivered never arrived",
+    "visual_spec": "vertical doorbell/porch cam, empty front step, app screenshot showing 'delivered', daylight",
+    "platforms": ["tiktok", "facebook", "reddit"],
+    "offsite_likely": true,
     "priority": 1,
     "expected_segments": 1,
     "queries": {
       "anchor": [
-        "Amazon package delivered not received doorbell camera"
+        "Amazon package marked delivered never arrived doorbell"
       ],
       "news": [
-        "Amazon package says delivered but never came",
-        "Amazon delivery photo wrong house no package",
-        "Amazon marked delivered package missing"
+        "Amazon says delivered but no package doorbell camera",
+        "Amazon package marked delivered not received"
       ],
       "victim": [
-        "Amazon said my package was delivered and it wasn't",
-        "my Amazon package says delivered but nothing is there",
-        "doorbell camera shows no Amazon delivery",
-        "Amazon took a photo of my door but no package",
-        "Amazon delivery lie caught on camera"
+        "my Amazon package said delivered but nothing was there",
+        "Amazon says delivered I got nothing doorbell"
       ],
       "platform": [
-        "#amazon delivered but no package",
-        "#amazonfail missing delivery",
-        "Amazon phantom delivery doorbell cam",
-        "#amazonscam fake delivery photo"
+        "Amazon delivered no package",
+        "fake delivery doorbell cam",
+        "package never came Amazon",
+        "Amazon porch cam no delivery"
       ],
       "shorts": [
-        "#amazon says delivered nothing there #shorts",
-        "Amazon lied about my delivery #doorbell",
-        "caught Amazon fake delivery #shorts",
-        "#amazonfail no package #ringcamera",
-        "Amazon delivery proof is a lie #shorts"
+        "Amazon said delivered but nothing here #shorts",
+        "doorbell caught no delivery #scam",
+        "Amazon fake delivery caught on camera #shorts"
+      ],
+      "reddit": [
+        "site:reddit.com Amazon marked delivered not received doorbell"
       ]
     },
     "platform_map": {
       "tiktok": ["platform", "victim"],
-      "shorts": ["shorts", "victim"],
+      "shorts": ["shorts"],
       "facebook": ["platform"],
-      "reddit": ["victim"]
+      "reddit": ["reddit"],
+      "news_web": ["anchor", "news"]
     }
   },
   {
     "beat_id": "08-05-b03",
     "episode": "08-05",
-    "segment_title": "AMAZON A-TO-Z GUARANTEE CLAIM DENIED",
-    "script_text": "MOST OF WHAT YOU BUY THERE ISN'T SOLD BY AMAZON — IT'S SOLD BY THIRD-PARTY SELLERS. / SO WHEN IT GOES WRONG, PEOPLE GET BOUNCED BETWEEN AMAZON AND A SELLER WHO WON'T ANSWER. / THAT'S WHAT THE A-TO-Z GUARANTEE IS FOR. / BUT PEOPLE GET DENIED. AND WHEN THEY GET DENIED, THEY GIVE UP. / DON'T GIVE UP. ESCALATE IT. PUT IT IN WRITING. / LISTEN TO WHAT HAPPENED TO HER.",
+    "segment_title": "WHEN AMAZON SAYS NO — THE A-TO-Z GUARANTEE",
+    "script_text": "MOST OF WHAT YOU BUY THERE ISN'T SOLD BY AMAZON — IT'S SOLD BY THIRD-PARTY SELLERS. SO WHEN IT GOES WRONG, PEOPLE GET BOUNCED BETWEEN AMAZON AND A SELLER WHO WON'T ANSWER. / THAT'S WHAT THE A-TO-Z GUARANTEE IS FOR. / BUT PEOPLE GET DENIED. AND WHEN THEY GET DENIED, THEY GIVE UP. DON'T GIVE UP. ESCALATE IT. / LISTEN TO WHAT HAPPENED TO HER.",
     "orientation": "horizontal",
     "clip_role": "victim_interview",
     "news_anchor": "Amazon A-to-Z guarantee claim denied third party seller",
-    "visual_spec": "woman on camera at home or in studio, local news interview setup, describing Amazon dispute",
-    "platforms": ["youtube", "news_web"],
-    "offsite_likely": false,
-    "priority": 1,
-    "expected_segments": 1,
-    "queries": {
-      "anchor": [
-        "Amazon A-to-Z guarantee claim denied",
-        "Amazon third party seller refund denied A-to-Z"
-      ],
-      "news": [
-        "woman denied Amazon refund third party seller",
-        "Amazon A-to-Z guarantee claim rejected escalated",
-        "Amazon refuses refund third party seller scam",
-        "customer fights Amazon over denied A-to-Z claim",
-        "Amazon seller won't refund A-to-Z guarantee",
-        "Amazon buyer denied refund speaks out"
-      ],
-      "victim": [
-        "Amazon denied my refund and the seller disappeared",
-        "I got scammed by an Amazon seller and Amazon won't help",
-        "Amazon A to Z claim denied what do I do",
-        "Amazon third party seller ripped me off no refund",
-        "I fought Amazon for my money back",
-        "Amazon won't give me my money back seller won't respond"
-      ],
-      "platform": [
-        "#amazon A to Z claim denied",
-        "#amazonseller scam no refund"
-      ],
-      "shorts": [
-        "#amazon denied my refund #shorts",
-        "Amazon seller scam A-to-Z rejected #shorts",
-        "she fought Amazon and won #shorts",
-        "#amazonfail seller disappeared #scam"
-      ]
-    },
-    "platform_map": {
-      "youtube": ["anchor", "news", "victim"],
-      "shorts": ["shorts", "victim"],
-      "news_web": ["anchor", "news"]
-    }
-  },
-  {
-    "beat_id": "08-05-b04",
-    "episode": "08-05",
-    "segment_title": "FTC $2.5 BILLION AMAZON PRIME SETTLEMENT",
-    "script_text": "IN SEPTEMBER 2025, AMAZON SETTLED WITH THE FEDERAL TRADE COMMISSION FOR $2.5 BILLION. / THE F-T-C ALLEGED AMAZON ENROLLED TENS OF MILLIONS OF PEOPLE IN PRIME WITHOUT THEIR CONSENT… / AND MADE IT DELIBERATELY HARD TO CANCEL. / $1 BILLION IS A CIVIL PENALTY. $1.5 BILLION GOES BACK TO CUSTOMERS. / THE F-T-C ESTIMATES ABOUT 35 MILLION PEOPLE WERE HARMED. / PAYMENTS ARE DUE OUT BY SEPTEMBER. / HERE'S WHAT WE KNOW RIGHT NOW.",
-    "orientation": "horizontal",
-    "clip_role": "authority_report",
-    "news_anchor": "FTC Amazon Prime $2.5 billion settlement 35 million customers",
-    "visual_spec": "network or affiliate news coverage, anchor desk or reporter standup, FTC settlement graphics",
+    "visual_spec": "woman on camera at home describing denied Amazon claim, local affiliate interview setup, lower-third",
     "platforms": ["youtube", "news_web"],
     "offsite_likely": true,
     "priority": 1,
     "expected_segments": 1,
     "queries": {
       "anchor": [
-        "FTC Amazon Prime $2.5 billion settlement",
-        "Amazon Prime settlement 35 million customers payment",
-        "FTC Amazon consent enrollment settlement 2025",
-        "Amazon $2.5 billion FTC penalty Prime cancellation"
+        "Amazon A-to-Z guarantee claim denied",
+        "Amazon third party seller refund denied"
       ],
       "news": [
-        "Amazon Prime settlement payments going out September",
-        "FTC says Amazon enrolled millions in Prime without consent",
-        "Amazon Prime hard to cancel settlement refund",
-        "Amazon FTC settlement $51 payment check",
-        "Amazon Prime dark patterns FTC enforcement",
-        "Amazon pays $2.5 billion Prime enrollment settlement"
+        "woman denied Amazon refund third party seller gets money back",
+        "Amazon buyer scammed third party seller no refund",
+        "consumer fights Amazon A to Z claim denial",
+        "Amazon customer denied refund damaged item"
       ],
-      "victim": [],
-      "platform": [],
+      "victim": [
+        "Amazon refused to refund me",
+        "Amazon denied my claim seller took my money"
+      ],
+      "platform": [
+        "Amazon refund denied",
+        "Amazon A to Z claim denied"
+      ],
       "shorts": [
-        "Amazon owes you $51 #ftc #shorts",
-        "#amazonprime settlement check coming #shorts",
-        "FTC Amazon Prime settlement #money #shorts"
+        "Amazon wouldn't refund me #shorts",
+        "she fought Amazon and won #shorts",
+        "Amazon denied my refund #scam"
+      ],
+      "news_investigative": [
+        "on your side Amazon refund denied",
+        "investigates Amazon third party seller refund"
       ]
     },
     "platform_map": {
-      "youtube": ["anchor", "news"],
+      "youtube": ["anchor", "news", "platform", "news_investigative"],
+      "shorts": ["shorts"],
+      "news_web": ["anchor", "news", "news_investigative"]
+    }
+  },
+  {
+    "beat_id": "08-05-b04",
+    "episode": "08-05",
+    "segment_title": "AND NOW — THE $2.5 BILLION CHECK (FTC SETTLEMENT)",
+    "script_text": "IN SEPTEMBER 2025, AMAZON SETTLED WITH THE FEDERAL TRADE COMMISSION FOR $2.5 BILLION. THE F-T-C ALLEGED AMAZON ENROLLED TENS OF MILLIONS OF PEOPLE IN PRIME WITHOUT THEIR CONSENT AND MADE IT DELIBERATELY HARD TO CANCEL. / $1.5 BILLION GOES BACK TO CUSTOMERS. ABOUT 35 MILLION PEOPLE WERE HARMED. UP TO $51, BY PAYPAL, VENMO, OR A MAILED CHECK. / HERE'S WHAT WE KNOW RIGHT NOW.",
+    "orientation": "horizontal",
+    "clip_role": "authority_report",
+    "news_anchor": "FTC Amazon $2.5 billion Prime settlement $51 refund 35 million",
+    "visual_spec": "network news anchor over Amazon Prime b-roll and FTC settlement graphics",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "FTC Amazon $2.5 billion settlement",
+        "Amazon Prime settlement $51 refund",
+        "FTC Amazon Prime settlement 35 million people"
+      ],
+      "news": [
+        "Amazon FTC settlement Prime refund how much you get",
+        "Amazon pays customers Prime settlement checks",
+        "FTC Amazon deceptive Prime enrollment settlement",
+        "who qualifies Amazon Prime settlement money"
+      ],
+      "victim": [],
+      "platform": [
+        "Amazon Prime settlement check",
+        "Amazon settlement $51"
+      ],
+      "shorts": [
+        "Amazon owes you $51 #shorts",
+        "Amazon Prime settlement payout #money",
+        "did you get your Amazon check #shorts"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "platform"],
       "shorts": ["shorts"],
       "news_web": ["anchor", "news"]
     }
@@ -187,91 +182,81 @@
   {
     "beat_id": "08-05-b05",
     "episode": "08-05",
-    "segment_title": "PEOPLE POSTING THEIR SMALL AMAZON SETTLEMENT PAYOUTS",
-    "script_text": "$51 IS THE MAXIMUM. IT IS NOT WHAT EVERYBODY GETS. / YOU GET BACK THE PRIME FEES YOU ACTUALLY PAID, MINUS ANY REFUNDS OR CREDITS YOU ALREADY GOT. / SO IF YOU SIGNED UP ON A CHEAP TRIAL, YOUR CHECK COULD BE A COUPLE OF DOLLARS. OR LESS. / PEOPLE HAVE BEEN POSTING THEIR PAYOUTS ONLINE. / SOME ARE UNDER A DOLLAR. / THINK WHAT YOU WOULD DO.",
+    "segment_title": "THE SIZE OF THESE CHECKS — PEOPLE POSTING PAYOUTS",
+    "script_text": "$51 IS THE MAXIMUM. IT IS NOT WHAT EVERYBODY GETS. / PEOPLE HAVE BEEN POSTING THEIR PAYOUTS ONLINE. SOME ARE UNDER A DOLLAR. / THINK WHAT YOU WOULD DO.",
     "orientation": "vertical",
     "clip_role": "first_person_rant",
-    "news_anchor": "Amazon Prime settlement payout under a dollar check",
-    "visual_spec": "person to camera showing their small settlement check or PayPal notification, reacting with disbelief",
-    "platforms": ["tiktok", "shorts", "instagram"],
-    "offsite_likely": false,
-    "priority": 1,
+    "news_anchor": "Amazon Prime settlement payout amount tiny",
+    "visual_spec": "vertical selfie video, person reacting to a tiny Amazon settlement payment on their phone screen",
+    "platforms": ["tiktok", "instagram"],
+    "offsite_likely": true,
+    "priority": 2,
     "expected_segments": 1,
     "queries": {
       "anchor": [
-        "Amazon Prime settlement check under a dollar",
-        "Amazon FTC settlement payout amount"
+        "Amazon Prime settlement payout amount"
       ],
       "news": [
-        "Amazon settlement check tiny payout customers react",
-        "Amazon Prime refund check less than a dollar"
+        "Amazon settlement checks small amounts customers react"
       ],
       "victim": [
-        "my Amazon settlement check was 37 cents",
-        "Amazon Prime refund check is a joke",
-        "I got my Amazon settlement and it's nothing",
-        "Amazon owes me money and they sent pennies",
-        "my Amazon Prime settlement check was under a dollar",
-        "Amazon sent me a check for 12 cents"
+        "I got my Amazon settlement check and it's tiny",
+        "Amazon settlement paid me pennies",
+        "my Amazon Prime refund was under a dollar"
       ],
       "platform": [
-        "#amazonprime settlement check tiny",
-        "#amazon refund check joke",
-        "#amazonsettlement payout",
-        "Amazon Prime check under a dollar"
+        "Amazon settlement check amount",
+        "Amazon paid me 30 cents",
+        "Amazon Prime refund payout"
       ],
       "shorts": [
-        "my Amazon check was cents #shorts",
-        "#amazon settlement check is a joke #shorts",
-        "Amazon owes me this much #shorts #prime",
-        "#amazonsettlement tiny payout reaction #shorts",
-        "they sent me pennies #amazon #shorts"
+        "Amazon paid me one dollar #shorts",
+        "my Amazon settlement check lol #shorts",
+        "Amazon owes me 12 cents #shorts"
       ]
     },
     "platform_map": {
       "tiktok": ["platform", "victim"],
-      "shorts": ["shorts", "victim"],
-      "instagram": ["platform"]
+      "instagram": ["platform"],
+      "shorts": ["shorts"],
+      "news_web": ["anchor", "news"]
     }
   },
   {
     "beat_id": "08-05-b06",
     "episode": "08-05",
-    "segment_title": "CPSC RULES AMAZON IS A DISTRIBUTOR — 400,000 RECALLED PRODUCTS",
-    "script_text": "IN JULY 2024, THE CONSUMER PRODUCT SAFETY COMMISSION VOTED UNANIMOUSLY THAT AMAZON IS A DISTRIBUTOR. / LEGALLY ON THE HOOK FOR RECALLING DANGEROUS PRODUCTS OTHER PEOPLE SOLD. / MORE THAN 400,000 PRODUCTS WERE COVERED BY THAT ORDER — FAULTY CO DETECTORS, UNSAFE HAIRDRYERS, FLAMMABLE KIDS' SLEEPWEAR. / THE COMMISSION SAID AMAZON FAILED TO NOTIFY THE PUBLIC, AND LEFT CUSTOMERS AT SUBSTANTIAL RISK OF INJURY. / AMAZON SUED THE C-P-S-C IN MARCH 2025 IN FEDERAL COURT IN MARYLAND. / HERE'S WHAT WE KNOW RIGHT NOW.",
+    "segment_title": "THE RECALLED PRODUCTS ALREADY IN YOUR HOUSE — CPSC DISTRIBUTOR RULING",
+    "script_text": "IN JULY 2024, THE CONSUMER PRODUCT SAFETY COMMISSION VOTED UNANIMOUSLY THAT AMAZON IS A DISTRIBUTOR — LEGALLY ON THE HOOK FOR RECALLING DANGEROUS PRODUCTS OTHER PEOPLE SOLD. / MORE THAN 400,000 PRODUCTS WERE COVERED BY THAT ORDER — FAULTY CO DETECTORS, UNSAFE HAIRDRYERS, FLAMMABLE KIDS' SLEEPWEAR. AMAZON SUED THE C-P-S-C IN MARCH 2025 IN FEDERAL COURT IN MARYLAND. / HERE'S WHAT WE KNOW RIGHT NOW.",
     "orientation": "horizontal",
     "clip_role": "authority_report",
-    "news_anchor": "CPSC Amazon distributor ruling 400000 recalled products",
-    "visual_spec": "network or affiliate coverage, CPSC hearing footage or Amazon warehouse b-roll, reporter standup",
+    "news_anchor": "CPSC Amazon distributor ruling 400,000 recalled products",
+    "visual_spec": "news anchor over Amazon warehouse b-roll and CPSC recall graphics",
     "platforms": ["youtube", "news_web"],
     "offsite_likely": true,
     "priority": 1,
     "expected_segments": 1,
     "queries": {
       "anchor": [
-        "CPSC Amazon distributor recalled products ruling",
-        "Amazon sued CPSC distributor ruling 400000 products",
-        "Consumer Product Safety Commission Amazon recall failure",
-        "CPSC votes Amazon distributor dangerous products"
+        "CPSC Amazon distributor ruling",
+        "Amazon 400,000 recalled products CPSC",
+        "Amazon sues CPSC distributor ruling"
       ],
       "news": [
-        "Amazon forced to recall 400000 dangerous products CPSC",
-        "Amazon failed to notify customers recalled products CPSC",
-        "Amazon sues CPSC over distributor ruling recalled products",
-        "CPSC says Amazon liable for recalled products on marketplace",
-        "Amazon recall failure flammable sleepwear CO detectors",
-        "Amazon product safety recalled items still for sale"
+        "Amazon responsible for recalls CPSC ruling",
+        "CPSC votes Amazon distributor dangerous products",
+        "Amazon failed to notify customers recalled products"
       ],
       "victim": [],
-      "platform": [],
+      "platform": [
+        "Amazon recall responsibility CPSC"
+      ],
       "shorts": [
-        "Amazon selling recalled products #cpsc #shorts",
-        "#amazon dangerous products still for sale #shorts",
-        "CPSC says Amazon is liable #recall #shorts"
+        "Amazon recalled products you bought #shorts",
+        "Amazon hiding recalls #shorts"
       ]
     },
     "platform_map": {
-      "youtube": ["anchor", "news"],
+      "youtube": ["anchor", "news", "platform"],
       "shorts": ["shorts"],
       "news_web": ["anchor", "news"]
     }
@@ -279,201 +264,180 @@
   {
     "beat_id": "08-05-b07",
     "episode": "08-05",
-    "segment_title": "LAKKZOOM IMMERSION WATER HEATER — 235 FIRES, EMERGENCY RECALL",
-    "script_text": "ON JULY 22ND, THE C-P-S-C DID SOMETHING IT HAS NOT DONE IN NEARLY 40 YEARS. / IT USED ITS EMERGENCY IMMINENT HAZARD AUTHORITY. / THE PRODUCT: LAKKZOOM IMMERSION WATER HEATERS — THE METAL RODS YOU DROP IN A BUCKET TO HEAT WATER. / ABOUT 98,000 OF THEM. AND THE C-P-S-C KNOWS OF 235 REPORTS OF FIRES. / THEY CAN IGNITE WITHIN MINUTES IF THEY'RE EVEN PARTLY OUT OF THE WATER. / THEY WERE SOLD ON AMAZON AND EBAY FROM SEPTEMBER 2022 THROUGH JULY 2026. / HAVE A LOOK.",
+    "segment_title": "235 FIRES — LAKKZOOM IMMERSION WATER HEATERS",
+    "script_text": "ON JULY 22ND, THE C-P-S-C USED ITS EMERGENCY IMMINENT HAZARD AUTHORITY. THE PRODUCT: LAKKZOOM IMMERSION WATER HEATERS — THE METAL RODS YOU DROP IN A BUCKET TO HEAT WATER. ABOUT 98,000 OF THEM. AND THE C-P-S-C KNOWS OF 235 REPORTS OF FIRES. / THEY CAN IGNITE WITHIN MINUTES IF THEY'RE EVEN PARTLY OUT OF THE WATER. / HAVE A LOOK.",
     "orientation": "vertical",
     "clip_role": "evidence",
-    "news_anchor": "Lakkzoom immersion water heater recall 235 fires CPSC emergency",
-    "visual_spec": "fire footage or burn damage from immersion water heater, security cam or phone video of fire starting",
-    "platforms": ["tiktok", "shorts", "facebook", "reddit"],
-    "offsite_likely": false,
-    "priority": 1,
+    "news_anchor": "Lakkzoom immersion water heater recall fire 235 fires",
+    "visual_spec": "vertical clip of immersion heater rod igniting in a bucket or a charred bucket/heater aftermath",
+    "platforms": ["tiktok", "facebook", "reddit"],
+    "offsite_likely": true,
+    "priority": 2,
     "expected_segments": 1,
     "queries": {
       "anchor": [
-        "Lakkzoom immersion water heater recall fire",
-        "CPSC emergency recall immersion water heater 235 fires",
-        "Lakkzoom water heater Amazon recall 98000 units"
+        "Lakkzoom immersion heater recall",
+        "Lakkzoom water heater fire",
+        "immersion water heater recall CPSC fire"
       ],
       "news": [
-        "immersion water heater fire recall Amazon",
-        "Lakkzoom water heater recall 235 fires CPSC",
-        "CPSC emergency authority immersion heater fire hazard",
-        "Amazon immersion water heater fire recall 2026",
-        "bucket water heater fire recall CPSC emergency"
+        "immersion water heater recall fire hazard",
+        "bucket water heater rod fire recall"
       ],
       "victim": [
-        "my immersion water heater caught fire",
-        "water heater rod started a fire in my house",
-        "Amazon water heater almost burned my house down",
-        "immersion heater fire caught on camera"
+        "my immersion heater caught fire",
+        "water heater rod started a fire"
       ],
       "platform": [
-        "#recall water heater fire",
-        "#cpsc immersion heater fire",
-        "#amazonrecall water heater fire hazard",
-        "Lakkzoom heater fire"
+        "immersion heater fire",
+        "bucket water heater caught fire",
+        "immersion rod heater fire"
       ],
       "shorts": [
-        "water heater fire caught on camera #shorts",
-        "#recall immersion heater fire #shorts",
-        "Amazon water heater caught fire #shorts",
-        "this heater starts fires #cpsc #shorts",
-        "#amazonrecall water heater dangerous #shorts"
+        "immersion heater caught fire #shorts",
+        "bucket water heater fire #recall"
+      ],
+      "reddit": [
+        "site:reddit.com immersion water heater fire recall"
       ]
     },
     "platform_map": {
       "tiktok": ["platform", "victim"],
-      "shorts": ["shorts", "victim"],
       "facebook": ["platform"],
-      "reddit": ["victim"]
+      "shorts": ["shorts"],
+      "reddit": ["reddit"],
+      "news_web": ["anchor", "news"]
     }
   },
   {
     "beat_id": "08-05-b08",
     "episode": "08-05",
-    "segment_title": "RECALLED PRODUCT FAILURES — GRILL BRUSH BRISTLES AND MORE",
-    "script_text": "THIS MONTH CONAIR RECALLED MORE THAN ONE MILLION CUISINART GRILL BRUSHES. / THE WIRE BRISTLES BREAK OFF THE BRUSH… AND END UP IN YOUR FOOD. / 54 REPORTS OF BRISTLES DETACHING — INCLUDING THREE PEOPLE WHO SWALLOWED THEM… / AND NEEDED MEDICAL TREATMENT TO GET METAL OUT OF THEIR DIGESTIVE TRACT. / TREATLIFE SMOKE AND CARBON MONOXIDE DETECTORS, SOLD EXCLUSIVELY ON AMAZON, WERE RECALLED… / BECAUSE THEY CAN FAIL TO ALERT YOU TO A FIRE. / HERE YOU CAN SEE WHAT HAPPENS WHEN ONE OF THESE THINGS LETS GO.",
+    "segment_title": "IT IS NOT JUST AMAZON — CUISINART GRILL BRUSH RECALL",
+    "script_text": "THIS MONTH CONAIR RECALLED MORE THAN ONE MILLION CUISINART GRILL BRUSHES. THE WIRE BRISTLES BREAK OFF THE BRUSH… AND END UP IN YOUR FOOD. 54 REPORTS OF BRISTLES DETACHING — INCLUDING THREE PEOPLE WHO SWALLOWED THEM AND NEEDED MEDICAL TREATMENT TO GET METAL OUT OF THEIR DIGESTIVE TRACT. / HERE YOU CAN SEE WHAT HAPPENS WHEN ONE OF THESE THINGS LETS GO.",
     "orientation": "horizontal",
     "clip_role": "evidence",
-    "news_anchor": "Cuisinart grill brush recall bristles swallowed Conair",
-    "visual_spec": "close-up of grill brush bristles detaching, or footage of product failure, news package with recall graphics",
-    "platforms": ["youtube", "news_web"],
-    "offsite_likely": false,
-    "priority": 1,
-    "expected_segments": 1,
-    "queries": {
-      "anchor": [
-        "Cuisinart grill brush recall bristles swallowed",
-        "Conair grill brush recall one million units",
-        "grill brush bristles swallowed medical treatment recall"
-      ],
-      "news": [
-        "grill brush bristles in food recall Cuisinart",
-        "Cuisinart grill brush recall wire bristles detach",
-        "Conair recalls one million Cuisinart grill brushes",
-        "grill brush metal bristles swallowed hospital",
-        "recalled grill brush bristles in meat",
-        "wire grill brush danger bristles break off food"
-      ],
-      "victim": [
-        "I swallowed a wire bristle from my grill brush",
-        "grill brush bristle stuck in my throat",
-        "wire grill brush bristle in our dinner",
-        "found metal bristle in hamburger grill"
-      ],
-      "platform": [
-        "#recall grill brush bristles",
-        "grill brush danger bristles in food",
-        "#cuisinart recall grill brush"
-      ],
-      "shorts": [
-        "grill brush bristle in my food #shorts",
-        "#recall Cuisinart grill brush danger #shorts",
-        "stop using wire grill brushes #shorts",
-        "metal bristle in your burger #grillbrush #shorts"
-      ]
-    },
-    "platform_map": {
-      "youtube": ["anchor", "news", "victim"],
-      "shorts": ["shorts"],
-      "news_web": ["anchor", "news"]
-    }
-  },
-  {
-    "beat_id": "08-05-b09",
-    "episode": "08-05",
-    "segment_title": "FAKE AMAZON RECALL TEXT — PHISHING TRAP",
-    "script_text": "THE F-T-C IS WARNING ABOUT A TEXT THAT LOOKS LIKE IT CAME STRAIGHT FROM AMAZON. / IT SAYS AMAZON RAN A ROUTINE QUALITY INSPECTION ON SOMETHING YOU BOUGHT… / AND THAT THE ITEM DOESN'T MEET AMAZON'S STANDARDS… OR HAS BEEN RECALLED. / THEN COMES THE HOOK. A FULL REFUND. AND YOU DON'T EVEN HAVE TO SEND IT BACK. / THE LINK DOESN'T GO TO AMAZON. IT GOES TO A PAGE BUILT TO STEAL YOUR LOGIN AND YOUR CARD. / HERE YOU CAN SEE ONE OF THESE TEXTS LAND.",
-    "orientation": "vertical",
-    "clip_role": "evidence",
-    "news_anchor": "Amazon fake recall text phishing scam FTC warning",
-    "visual_spec": "phone screen showing scam text message claiming Amazon recall refund, close-up of text",
-    "platforms": ["tiktok", "shorts", "facebook", "reddit"],
-    "offsite_likely": false,
-    "priority": 1,
-    "expected_segments": 1,
-    "queries": {
-      "anchor": [
-        "Amazon fake recall text scam FTC warning",
-        "Amazon phishing text recall refund scam"
-      ],
-      "news": [
-        "Amazon fake recall text message phishing scam",
-        "FTC warns Amazon recall phishing text",
-        "fake Amazon refund text stealing credit cards",
-        "scam text Amazon quality inspection recalled item",
-        "Amazon recall refund text scam warning"
-      ],
-      "victim": [
-        "I got a text saying Amazon recalled something I bought",
-        "Amazon text said my product was recalled refund scam",
-        "scam text Amazon recall refund",
-        "this Amazon recall text is a scam",
-        "fake Amazon text tried to steal my card"
-      ],
-      "platform": [
-        "#scamalert Amazon recall text",
-        "#amazonscam fake recall refund text",
-        "#phishing Amazon recall text message",
-        "fake Amazon text scam"
-      ],
-      "shorts": [
-        "Amazon recall text is a scam #shorts",
-        "#scamalert Amazon fake refund text #shorts",
-        "don't click this Amazon text #shorts",
-        "#amazonscam phishing text recall #shorts",
-        "Amazon scam text caught on camera #shorts"
-      ]
-    },
-    "platform_map": {
-      "tiktok": ["platform", "victim"],
-      "shorts": ["shorts", "victim"],
-      "facebook": ["platform"],
-      "reddit": ["victim"]
-    }
-  },
-  {
-    "beat_id": "08-05-b10",
-    "episode": "08-05",
-    "segment_title": "FAKE FTC SETTLEMENT SCAM CALLS AND EMAILS",
-    "script_text": "THE SAME THING IS HAPPENING WITH THE PRIME SETTLEMENT MONEY. / REAL PAYMENTS ARE GOING OUT BY PAYPAL, VENMO AND CHECK BETWEEN NOW AND SEPTEMBER… / WHICH MEANS A FAKE PAYPAL EMAIL ABOUT AN F-T-C SETTLEMENT LANDS AT EXACTLY THE RIGHT MOMENT. / THE F-T-C IS BLUNT ABOUT IT. THE F-T-C IS NOT CONTACTING PEOPLE ABOUT AMAZON REFUNDS. / IF SOMEONE CALLS SAYING THEY'RE FROM THE F-T-C ABOUT YOUR AMAZON MONEY… IT IS A SCAM. / HERE'S WHAT WE KNOW RIGHT NOW.",
-    "orientation": "horizontal",
-    "clip_role": "authority_report",
-    "news_anchor": "FTC Amazon Prime settlement scam fake PayPal email",
-    "visual_spec": "news coverage of FTC warning, anchor desk with settlement scam graphics, or reporter explaining the scam",
+    "news_anchor": "Conair Cuisinart grill brush recall wire bristles",
+    "visual_spec": "affiliate news package over grill brush b-roll, wire bristle close-up, possibly named victim / x-ray of swallowed bristle",
     "platforms": ["youtube", "news_web"],
     "offsite_likely": true,
     "priority": 1,
     "expected_segments": 1,
     "queries": {
       "anchor": [
-        "FTC Amazon Prime settlement scam warning",
-        "fake FTC Amazon settlement email PayPal scam",
-        "FTC warning Amazon Prime refund scam calls"
+        "Cuisinart grill brush recall",
+        "Conair grill brush wire bristle recall",
+        "grill brush bristle recall one million"
       ],
       "news": [
-        "scammers target Amazon Prime settlement payments FTC",
-        "fake FTC settlement email Amazon Prime scam",
-        "FTC warns about Amazon Prime settlement phishing",
-        "Amazon Prime refund scam fake FTC calls",
-        "scam targeting Amazon settlement payments PayPal",
-        "FTC says they are not contacting people about Amazon refunds"
+        "grill brush wire bristle injury recall warning",
+        "man swallows grill brush bristle hospital",
+        "wire bristle grill brush danger CPSC recall"
       ],
       "victim": [
-        "I got a call about my Amazon settlement money",
-        "fake FTC call about Amazon Prime refund",
-        "scam email PayPal Amazon settlement payment"
+        "I swallowed a grill brush bristle"
       ],
-      "platform": [],
+      "platform": [
+        "grill brush bristle in food",
+        "wire bristle grill danger"
+      ],
       "shorts": [
-        "Amazon settlement scam warning #ftc #shorts",
-        "#scamalert fake Amazon Prime refund #shorts",
-        "FTC warning Amazon settlement scam #shorts"
+        "grill brush bristle in food #shorts",
+        "wire bristle grill danger #recall",
+        "check your grill brush now #shorts"
+      ],
+      "news_investigative": [
+        "on your side grill brush recall",
+        "investigates wire bristle grill brush"
       ]
     },
     "platform_map": {
-      "youtube": ["anchor", "news"],
+      "youtube": ["anchor", "news", "platform", "news_investigative"],
+      "shorts": ["shorts"],
+      "news_web": ["anchor", "news", "news_investigative"]
+    }
+  },
+  {
+    "beat_id": "08-05-b09",
+    "episode": "08-05",
+    "segment_title": "THE FAKE RECALL TEXT THAT DRAINS YOUR BANK ACCOUNT",
+    "script_text": "THE F-T-C IS WARNING ABOUT A TEXT THAT LOOKS LIKE IT CAME STRAIGHT FROM AMAZON. IT SAYS AMAZON RAN A ROUTINE QUALITY INSPECTION ON SOMETHING YOU BOUGHT AND THAT THE ITEM DOESN'T MEET AMAZON'S STANDARDS OR HAS BEEN RECALLED. THEN COMES THE HOOK. A FULL REFUND. AND YOU DON'T EVEN HAVE TO SEND IT BACK. / HERE YOU CAN SEE ONE OF THESE TEXTS LAND.",
+    "orientation": "vertical",
+    "clip_role": "evidence",
+    "news_anchor": "Amazon recall refund text scam FTC phishing",
+    "visual_spec": "vertical phone screen recording of a fake Amazon recall/refund scam text arriving",
+    "platforms": ["tiktok", "reddit"],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "Amazon recall text scam FTC",
+        "fake Amazon refund text scam"
+      ],
+      "news": [
+        "FTC warns Amazon recall text scam",
+        "Amazon quality inspection text scam refund"
+      ],
+      "victim": [
+        "I got a text saying my Amazon item was recalled refund"
+      ],
+      "platform": [
+        "Amazon recall text scam",
+        "fake Amazon refund text",
+        "Amazon scam text message"
+      ],
+      "shorts": [
+        "Amazon recall text scam #shorts",
+        "fake Amazon refund text #scamalert",
+        "don't click this Amazon text #shorts"
+      ],
+      "reddit": [
+        "site:reddit.com Amazon recall refund text scam"
+      ]
+    },
+    "platform_map": {
+      "tiktok": ["platform", "victim"],
+      "shorts": ["shorts"],
+      "reddit": ["reddit"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "08-05-b10",
+    "episode": "08-05",
+    "segment_title": "FAKE SETTLEMENT REFUND SCAM — FTC WARNING",
+    "script_text": "THE SAME THING IS HAPPENING WITH THE PRIME SETTLEMENT MONEY. REAL PAYMENTS ARE GOING OUT BY PAYPAL, VENMO AND CHECK BETWEEN NOW AND SEPTEMBER — WHICH MEANS A FAKE PAYPAL EMAIL ABOUT AN F-T-C SETTLEMENT LANDS AT EXACTLY THE RIGHT MOMENT. THE F-T-C IS NOT CONTACTING PEOPLE ABOUT AMAZON REFUNDS. IF SOMEONE CALLS SAYING THEY'RE FROM THE F-T-C ABOUT YOUR AMAZON MONEY… IT IS A SCAM. / HERE'S WHAT WE KNOW RIGHT NOW.",
+    "orientation": "horizontal",
+    "clip_role": "authority_report",
+    "news_anchor": "FTC Amazon settlement refund scam PayPal warning",
+    "visual_spec": "news anchor over FTC warning graphics and fake PayPal/settlement email screenshots",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": true,
+    "priority": 2,
+    "expected_segments": 1,
+    "queries": {
+      "anchor": [
+        "FTC Amazon settlement refund scam",
+        "Amazon Prime settlement scam warning",
+        "fake FTC Amazon refund PayPal scam"
+      ],
+      "news": [
+        "scammers target Amazon settlement payments warning",
+        "FTC warns Amazon refund settlement scam",
+        "Amazon settlement scam PayPal Venmo fake email"
+      ],
+      "victim": [],
+      "platform": [
+        "Amazon settlement scam",
+        "fake Amazon refund PayPal"
+      ],
+      "shorts": [
+        "Amazon settlement scam #shorts",
+        "fake Amazon refund PayPal #scam"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "platform"],
       "shorts": ["shorts"],
       "news_web": ["anchor", "news"]
     }
@@ -481,46 +445,43 @@
   {
     "beat_id": "08-05-b11",
     "episode": "08-05",
-    "segment_title": "TAX FREE WEEKEND — HOW MUCH YOU ACTUALLY SAVE",
-    "script_text": "HERE'S THE MOVE MOST PEOPLE MISS. / YOU CAN STACK IT. THE STORE'S SALE PRICE COMES OFF FIRST, THEN TAX COMES OFF THAT. / SO A BACKPACK MARKED DOWN FROM $110 TO $95 DROPS UNDER THE LIMIT AND GOES TAX FREE TOO. / AND IN MOST STATES IT COVERS ONLINE ORDERS, AS LONG AS YOU PAY DURING THE WINDOW. / WATCH HIM SHOW YOU HOW MUCH THIS ACTUALLY SAVES ON A REAL SCHOOL LIST.",
+    "segment_title": "TAX FREE WEEKEND — HOW MUCH YOU SAVE",
+    "script_text": "THIS WEEKEND, A BLOCK OF STATES TURN OFF SALES TAX ENTIRELY. AUGUST 7TH THROUGH THE 9TH. SIX STATES, ZERO SALES TAX. TEXAS. OHIO. MISSOURI. VIRGINIA. SOUTH CAROLINA. OKLAHOMA. / YOU CAN STACK IT. THE STORE'S SALE PRICE COMES OFF FIRST, THEN TAX COMES OFF THAT. / WATCH HIM SHOW YOU HOW MUCH THIS ACTUALLY SAVES ON A REAL SCHOOL LIST.",
     "orientation": "horizontal",
     "clip_role": "explainer_demo/creator_long",
-    "news_anchor": "tax free weekend back to school 2026 savings",
-    "visual_spec": "person on camera with school supply list, showing price breakdowns, calculator or receipts visible",
-    "platforms": ["youtube"],
+    "news_anchor": "tax free weekend back to school states sales tax holiday",
+    "visual_spec": "reporter at a store checkout or with a school-supply cart showing the tax-free savings on a receipt",
+    "platforms": ["youtube", "news_web"],
     "offsite_likely": false,
     "priority": 2,
     "expected_segments": 1,
     "queries": {
       "anchor": [
-        "tax free weekend 2026 back to school savings",
-        "sales tax holiday August 2026 school supplies"
+        "tax free weekend states 2025",
+        "tax free weekend back to school 2025",
+        "sales tax holiday August 2025 states"
       ],
       "news": [
-        "tax free weekend how much you save back to school",
-        "sales tax holiday back to school shopping savings",
-        "tax free weekend school supplies how to save the most",
-        "back to school tax free weekend 2026 tips",
-        "tax free weekend savings calculator school list",
-        "sales tax holiday stack coupons and sales"
+        "tax free weekend what qualifies back to school",
+        "sales tax holiday how much you save shopping",
+        "tax free weekend price limits per item rules",
+        "tax free weekend stacking sale coupon savings"
       ],
       "victim": [],
       "platform": [
-        "tax free weekend tips school shopping",
-        "#backtoschool tax free weekend",
-        "#taxfree weekend shopping hack"
+        "tax free weekend haul",
+        "back to school tax free shopping"
       ],
       "shorts": [
-        "tax free weekend hack #shorts #backtoschool",
-        "how much you save tax free weekend #shorts",
-        "#taxfree shopping tips school #shorts",
-        "stack sales with tax free weekend #shorts #money",
-        "back to school savings trick #shorts"
+        "tax free weekend hacks #shorts",
+        "save on back to school #taxfree",
+        "tax free weekend haul #shorts"
       ]
     },
     "platform_map": {
       "youtube": ["anchor", "news", "platform"],
-      "shorts": ["shorts"]
+      "shorts": ["shorts"],
+      "news_web": ["anchor", "news"]
     }
   }
 ]
