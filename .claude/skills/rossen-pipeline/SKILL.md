@@ -1,129 +1,211 @@
 ---
 name: rossen-pipeline
-description: Run the full Rossen Reports clip pipeline on a show script — beat extraction, sourcability scan, query generation, search, grading, and pick output. Use this whenever a script is provided and the user wants the complete pipeline run end to end, or asks for clips to be sourced for a script. Orchestrates the beat-extractor, query-generator, and clip-grader skills in sequence with three user checkpoints and a feedback loop that catches unsourceable beats before wasting search effort.
+description: Run the full Rossen Reports clip pipeline end to end. Use whenever the user hands over a show script and wants clips found, graded, downloaded, and cut, or says anything like "here's the script, find the clips", "run the pipeline", "get me clips for this episode". Orchestrates the beat extractor, query generator, multi-source search, clip grader, and the download-and-cut stage. Also use to resume a partially completed run.
 ---
 
-# Rossen Reports clip pipeline
+# Rossen Reports pipeline
 
-Script in, picks.json out. Three checkpoints where the producer reviews and redirects. A feedback loop between beats and sourcability prevents dead-end work.
+One script in, cut clips plus a manifest and an FCPXML out. Target wall
+clock is under 10 minutes for a 10-12 beat episode.
 
-## Prerequisites
+You do the judgment. The `rossen_harvest` package does the mechanical
+work. Never reimplement a stage in an ad-hoc script; the CLI already
+handles caching, dedupe, concurrency limits and graceful backend failure.
 
-Read these skills before starting. They contain the rules for each phase:
+## Preflight
 
-- `.claude/skills/rossen-beat-extractor/SKILL.md`
-- `.claude/skills/rossen-query-generator/SKILL.md`
-- `.claude/skills/rossen-clip-grader/SKILL.md`
-
-Also read the calibration data:
-
-- `.claude/skills/rossen-beat-extractor/reference/aired_examples.md`
-- `.claude/skills/rossen-query-generator/reference/glossary.md`
-
-## Phases
-
-### Phase 1: Beat extraction
-
-Follow the beat extractor skill. Convert the `.docx` to text, identify `PLAY CLIP` markers, assign roles and visual specs. Watch for the cold-open tease trap and mid-show teases.
-
-### Phase 2: Sourcability scan
-
-Run immediately after extraction, before showing anything to the user. For every beat that names a specific person, do a quick YouTube title search to check whether on-camera footage exists. See the "Sourcability scan" section in the beat extractor skill for the full protocol.
-
-Tag every beat with `sourcability: high | commentary_only | none`. For beats with `none` or `commentary_only`, prepare swap suggestions: two or three alternative victims who cover the same scam type and DO have confirmed affiliate coverage on YouTube.
-
-### Checkpoint 1: Beat table with sourcability
-
-Show the user a table with columns: beat_id, role, orientation, one-line spec, **sourcability**, swap suggestions (if any).
-
-If more than 16 beats: you are extracting teases. Re-read the traps section.
-
-If any beat is `sourcability: none` or `commentary_only`: flag it prominently. The user decides whether to swap, mark as show-produced, or drop. **Do not proceed past this checkpoint with unsourceable beats still in the pipeline.** Either swap them, remove them, or get explicit user approval to proceed knowing they will likely come back empty.
-
-Wait for user approval before continuing.
-
-### Phase 3: Query generation
-
-Follow the query generator skill. Generate four-register queries per beat. Apply per-role weighting and platform syntax differences.
-
-**Shorts queries.** For every beat (not just vertical), generate 2-3 YouTube Shorts queries: short (3-5 words), hashtag-heavy, emotion-forward. YouTube Shorts often contain the raw victim moment that a 4-minute affiliate package buries at 1:30. Add `"shorts"` to the platform map for these queries. Use `--match-filter "duration<60"` when searching with yt-dlp.
-
-### Phase 4: Search
-
-Run queries via `yt-dlp` with `ytsearch30:` for YouTube, web search for news_web. For Shorts, use `ytsearch15:` with duration filter.
-
-Collect metadata: title, channel, upload date, duration, view count, URL.
-
-**Source-type tagging.** Tag every candidate as one of: `affiliate`, `network`, `creator_long`, `creator_short`, `first_person`, `raw_footage`, `shorts`. This tag flows through to grading and into the final picks so the producer can see the source mix.
-
-### Checkpoint 2: Search results
-
-Show per-platform candidate counts and source-type distribution per beat. Flag:
-
-- Any beat with fewer than 10 candidates. Fix queries and re-run that beat alone.
-- Any beat where all candidates are the same source type (e.g., all affiliate). Note it — the grader will enforce a diversity floor but the producer should know.
-- Any beat where Shorts candidates exist but were not searched. Run the Shorts queries.
-
-Wait for user approval before continuing.
-
-### Phase 5: Grading
-
-Follow the clip grader skill. Two passes: metadata triage (30 → 5), then transcript grade (5 → 1 pick with verbatim outcue).
-
-**Diversity floor.** After pass 1, if all 5 survivors are the same source type (typically `affiliate`), replace the weakest survivor with the strongest candidate from a different source type. The goal is not to force non-affiliate picks, but to ensure the producer sees at least one alternative format in the shortlist. Tag the forced-in candidate so the producer knows why it is there.
-
-**Shorts in pass 2.** Shorts candidates that survive pass 1 go through the same transcript grade as any other candidate. Do not penalize them for duration — 30-60 seconds is the format, not a flaw. A 45-second Short of a victim crying in their car can score higher than a 4-minute affiliate package where the victim appears for 12 seconds at 2:30.
-
-### Checkpoint 3: Picks
-
-Show picks.json before downloading anything. Every segment needs:
-
-- A verbatim outcue verified against the transcript
-- Source-type tag
-- Flags for any fit, case-match, or mechanism concerns
-
-Flag anything uncertain rather than picking. An empty beat costs less than a wrong clip discovered in the edit bay.
-
-Wait for user approval before continuing.
-
-### Phase 6: Download and cut
-
-**Self-recorded clips: link the source, don't scrape it.** When the asset is something the subject filmed and posted themselves (a `first_person_rant`, or any beat where the subject recorded their own phone video), the deliverable is a **direct link to the original post on the subject's own social account** — Instagram first, then X/TikTok. Do not download and crop a YouTube repost of it. Find the subject's handle, locate the post, and hand over the permalink (or the profile link plus the post date and a caption fragment if the permalink can't be pinned). The producer clears and pulls the native-vertical original from there. This is faster, higher quality, and sidesteps the clearance problem entirely — a repost's re-encode is never the thing to ship.
-
-The download-and-cut path below is only for the other case: an affiliate/network package or field footage where no clean subject-posted original exists.
-
-Download flagged clips. For each proposed segment, trim to the in/out span and, for vertical beats whose only source is a landscape repost, crop the pillar-boxed vertical back to full-screen 9:16.
-
-Use `cut/crop_vertical.sh`. Always run its `frame` mode first on a landscape source to confirm where the subject sits before trusting the center-crop:
-
-```
-cut/crop_vertical.sh frame -i SRC.mp4 -t 0:30            # eyeball the layout
-cut/crop_vertical.sh cut -i SRC.mp4 -s 0:00 -e 1:11 -o out.mp4 --vertical
+```bash
+python3 -c "import yt_dlp; print('yt-dlp ok')"
+which ffmpeg || echo "MISSING ffmpeg — brew install ffmpeg"
+echo "${BRAVE_API_KEY:+brave}${SERPER_API_KEY:+serper}" || true
 ```
 
-`--native` when the source is already 9:16 (trim only), `--crop W:H:X:Y` or `--x <px>` when the subject is offset. Snap the out point to the verbatim outcue, not the raw seconds — copies are topped and tailed differently.
+No web search key means **YouTube only**, roughly 70% of normal coverage
+and no TikTok, Instagram, Facebook or native network video. Say so
+plainly and ask whether to proceed degraded or stop and set a key. Do not
+quietly run a crippled pipeline.
 
-**Sourcing note.** Aggregator reposts (New York Post, and AI-narrator channels like "Glitz Gazette", "KnowKNEWZ") frequently carry the only findable copy but re-narrate over the audio or are DRM/bot-walled from download. The clean, clearable source is usually the subject's own social (Instagram) or the originating outlet. Flag this for the producer rather than shipping a repost's re-encode.
+## Step 1 — Beats
 
-Deliver the final package: picks.json, cut clips, transcript files.
+Read `.claude/skills/rossen-beat-extractor/SKILL.md` and its
+`reference/aired_examples.md`. Convert the script:
 
-## The feedback loop
+```bash
+pandoc -t plain --wrap=none script.docx -o script.txt
+```
 
-The pipeline is not strictly linear. At any checkpoint, information can flow backward:
+Extract beats. Drop the cold open and every mid-show tease. Expect 10-12
+beats. If you get more than 16, you are extracting teases; re-read the
+traps section.
 
-- **Checkpoint 1 → Phase 1:** Sourcability scan reveals a named victim has no video. Go back to the script and swap.
-- **Checkpoint 2 → Phase 3:** A beat returned too few candidates. Regenerate queries with different register emphasis or broader terms.
-- **Checkpoint 3 → Phase 4:** The best candidate for a beat is a commentary video with no victim on camera. Search again with victim-register queries targeting the specific person.
+## Step 2 — Queries
 
-The cost of a backward step is small (one search or one query regeneration). The cost of pushing forward with a bad beat is a wasted grading pass and a `flagged: null` at the end.
+Read `.claude/skills/rossen-query-generator/SKILL.md` and its
+`reference/glossary.md`. Generate four registers per beat.
 
-## Evaluation
+Merge steps 1 and 2 into one `beats.json`: each object needs `beat_id`,
+`clip_role`, `orientation`, `platforms`, `visual_spec`, `script_text`,
+`offsite_likely`, and a `queries` dict of register to string list.
 
-Track per beat:
+**Orientation is a hard filter, not a hint.** It is producer-authored and
+predicted the platform correctly in 26 of 26 observed cases. Horizontal
+beats do not get TikTok queries.
 
-- Which register's query found the clip that was picked (anchor, news, victim, platform, shorts)
-- Source type of the picked clip
-- Whether the sourcability scan correctly predicted the outcome
-- Whether a diversity-floor candidate was ultimately picked over an affiliate
+## Step 3 — Search
 
-This data tunes the weighting tables in the query generator and grader skills.
+```bash
+python3 -m rossen_harvest search beats.json --out candidates.json
+```
+
+Runs two backends and dedupes across both. **YouTube** (yt-dlp) takes
+horizontal beats. **Brave** (needs `BRAVE_API_KEY`) takes the leg YouTube
+cannot reach: off-YouTube network and affiliate video (`news_web`), Reddit,
+and vertical beats — which the YouTube backend skips entirely, so Brave is
+their only coverage. A beat routes to Brave when its `platforms` include
+`news_web, tiktok, instagram, facebook, x, reddit`, or when it is vertical.
+Caches to `harvest.db`.
+
+Honest coverage boundary, so you read the counts correctly: Brave is strong
+on `news_web` and Reddit, and for a *named person* it finds the press
+coverage that points to their own social post (that is the self-recorded
+workflow — search the name, hand over the native link). It does **not**
+reliably surface a native TikTok/Instagram/X *post* for a generic query;
+its video endpoint is YouTube-heavy. So a vertical beat coming back heavy on
+`youtube` and `news_web` with no native social is the tool working as built,
+not a query failure. Closing that last gap needs an authenticated social
+scraper, which is not wired in.
+
+Report the per-platform counts (the command prints them). A beat returning
+zero candidates is a query problem; revise its queries and re-run that beat
+alone. If the run printed a `DEGRADED` line, `BRAVE_API_KEY` was missing and
+every `news_web`/social/vertical beat got nothing — stop and set the key
+rather than grading a half-empty pool.
+
+## Step 4 — Grade, pass one
+
+Read `.claude/skills/rossen-clip-grader/SKILL.md`. Apply the metadata
+triage to `candidates.json`. Hard filters first, then score, then the
+diversity floor. Narrow each beat to **5**.
+
+Metadata only here. Do not fetch captions for 300 clips.
+
+Tag every shortlisted candidate with a `source_type` and report the mix
+per beat. Where the diversity floor fired, say which candidate it promoted
+and what it displaced.
+
+## Step 5 — Captions
+
+Write the shortlist to `shortlist.json`, then:
+
+```bash
+python3 -m rossen_harvest captions shortlist.json --out transcripts.json
+```
+
+No downloads, no Whisper, about a second per clip. 5-10% of clips have
+captions disabled and come back null. Demote those, do not guess at
+their content.
+
+**Vertical shortlist entries (TikTok/Reels/X) need a separate pass — they carry no caption track at all, so the step above always returns null for them.** Use `vertical_transcribe.py`:
+
+```python
+from rossen_harvest.vertical_transcribe import fetch_many_vertical
+from rossen_harvest.cache import Cache
+
+vertical_transcripts = fetch_many_vertical(
+    [c["url"] for c in shortlist if c["platform"] == "tiktok"],
+    cache=Cache("harvest.db"), model_size="base.en",
+)
+```
+
+Downloads each clip and transcribes locally with faster-whisper (CPU, no GPU). Not free like the caption fetch — budget real seconds per clip, not a fraction of one — so run it on the shortlist only, never on 30 raw candidates. Returns the same `Transcript` shape as YouTube captions (`source == "whisper"`), so pass two's outcue verification (`.find()`, `.segment()`) works identically. Requires `pip install faster-whisper`; do not add `curl-cffi` speculatively for TikTok — it has caused TLS failures where plain yt-dlp succeeded. If a vertical pick has no Whisper transcript available in your environment, flag its outcue as unverified rather than inventing one — same rule as everything else in this pipeline.
+
+## Step 6 — Grade, pass two
+
+Same skill, transcript section. Score tone, authenticity, quality and fit.
+Flag one clip per beat and propose in/out points.
+
+Every proposed segment needs a verbatim `outcue` quote from the
+transcript. Verify it before writing: the phrase must actually appear
+near the proposed out point. If you cannot find it, your timecode is
+wrong. Do not invent the quote.
+
+If nothing is good enough for a beat, say so and flag nothing. A bad pick
+costs more than an honest gap, because it gets discovered in the edit bay.
+
+Write `picks.json`:
+
+```json
+[{"beat_id":"b03","url":"https://...","title":"...","platform":"youtube",
+  "segments":[{"in":"0:33","out":"1:21","outcue":"when I sent the money out"}]}]
+```
+
+Multiple segments per pick are normal. Four of 24 aired beats were
+butt-cuts pulling 2-3 slices from one source.
+
+## Step 7 — Cut
+
+```bash
+python3 -m rossen_harvest clip picks.json --outdir clips
+```
+
+Downloads each pick once at 720p, cuts every segment, writes
+`clips/manifest.json` and `clips/clips.fcpxml`.
+
+Timecodes are padded 1s early and 1.5s late, because caption boundaries
+are 1-3s granular. The editor trims; that is cheaper than discovering a
+clipped first syllable.
+
+## Step 8 — Report + filled Bible doc
+
+**Primary deliverable: an updated Bible `.docx`** with every clip beat filled
+in. At each `PLAY CLIP` marker embed, in **blue text** (`1155CC`), a clickable
+video hyperlink plus the `IN`–`OUT` timecodes and the verbatim outcue. Beats
+with no clip get a red (`C0392B`) "no clip found — <reason>" line. Beats whose
+exact case exists only off captioned YouTube (news_web/affiliate site) get the
+source link in blue marked "MANUAL CLIP — no captions" (no invented timecode).
+When an approved case-swap changes what the script says, rewrite the affected
+setup lines in place so the doc reads as a shootable rundown.
+
+Build it with docx-js (see the `docx` skill); use `ExternalHyperlink` for the
+links and set run `color:"1155CC"` on link + timecode runs. This is the
+standard output format going forward — the producer reads the doc, not a
+terminal table.
+
+Alongside the doc, give a compact table: beat, role, chosen clip, platform,
+source type, duration, outcue. Above it, one line with the episode source mix:
+
+```
+Source mix, 10 beats:  affiliate 8 · first_person 1 · creator_long 1
+```
+
+Then call out, explicitly:
+
+- beats with no usable clip
+- beats where the pick was weak and a human should re-check
+- any source type holding 70% or more of the picks, plus the beats where
+  the runner-up was a different type — those are the cheap swaps if the
+  producer wants variety
+- beats where the diversity floor promoted a candidate that then lost in
+  pass two
+- clips that failed to download
+- whether the run was degraded by a missing search key
+
+## Timing
+
+| Step | Expected |
+|---|---|
+| 1-2 beats and queries | ~1 min |
+| 3 search | ~2 min |
+| 4 triage | ~1 min |
+| 5 captions | ~1 min |
+| 6 grade | ~1.5 min |
+| 7 cut | ~2 min |
+
+Roughly 8-9 minutes. If a stage runs far over, say so rather than waiting
+silently.
+
+## Resuming
+
+Every stage writes a file and `harvest.db` caches searches and captions
+for two weeks. To resume, start at the first stage whose output file is
+missing. Delete `harvest.db` only to force a genuinely cold run.

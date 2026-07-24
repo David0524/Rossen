@@ -7,7 +7,19 @@ no video bytes touched.
 
     pip install yt-dlp
 
-No other dependencies. Stdlib for everything else.
+No other dependencies for the YouTube + Brave harvest and eval. Stdlib for
+everything else.
+
+**For vertical transcription** (TikTok/Reels/X video, which ship no
+captions — see `vertical_transcribe.py`):
+
+    pip install faster-whisper
+
+CPU-only via CTranslate2, no torch, no GPU required. Do **not** install
+`curl-cffi` speculatively — in this environment it made TikTok downloads
+fail (TLS handshake reset) where plain yt-dlp succeeded. Only add it if
+you've confirmed plain requests are actually being blocked in your
+environment; it is not a default-on dependency.
 
 ## Task 1: measure the query generator
 
