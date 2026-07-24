@@ -1,12 +1,14 @@
 ---
 name: rossen-pipeline
-description: Run the full Rossen Reports clip pipeline end to end. Use whenever the user hands over a show script and wants clips found, graded, downloaded, and cut, or says anything like "here's the script, find the clips", "run the pipeline", "get me clips for this episode". Orchestrates the beat extractor, query generator, multi-source search, clip grader, and the download-and-cut stage. Also use to resume a partially completed run.
+description: Run the full Rossen Reports clip pipeline end to end. Use whenever the user hands over a show script and wants clips found, graded, and logged with verified timecodes, or says anything like "here's the script, find the clips", "run the pipeline", "get me clips for this episode". Orchestrates the beat extractor, query generator, multi-source search, and clip grader. There is no automated download-and-cut stage — see Step 7. Also use to resume a partially completed run.
 ---
 
 # Rossen Reports pipeline
 
-One script in, cut clips plus a manifest and an FCPXML out. Target wall
-clock is under 10 minutes for a 10-12 beat episode.
+One script in, a picks manifest plus a filled Bible `.docx` out. Target
+wall clock is under 10 minutes for a 10-12 beat episode. There is no
+automated download-and-cut stage — pulling and trimming video happens
+downstream of this pipeline, by hand. See Step 7.
 
 You do the judgment. The `rossen_harvest` package does the mechanical
 work. Never reimplement a stage in an ad-hoc script; the CLI already
@@ -142,18 +144,28 @@ Write `picks.json`:
 Multiple segments per pick are normal. Four of 24 aired beats were
 butt-cuts pulling 2-3 slices from one source.
 
-## Step 7 — Cut
+## Step 7 — Manifest (no automated cut stage)
 
-```bash
-python3 -m rossen_harvest clip picks.json --outdir clips
-```
+**There is no `clip` subcommand and no download-and-cut code path in
+`rossen_harvest`.** `python3 -m rossen_harvest --help` lists exactly two
+subcommands, `harvest` (alias `search`) and `eval` — nothing that downloads
+video or trims it. The only `yt-dlp`/`ffmpeg` call in the package is inside
+`vertical_transcribe.py`'s `download_audio()`, and that pulls audio only,
+into a scratch `.wav`, solely to feed Whisper — it does not save video or
+take in/out points. There is also no code that writes an FCPXML.
 
-Downloads each pick once at 720p, cuts every segment, writes
-`clips/manifest.json` and `clips/clips.fcpxml`.
+So this step is a handoff, not a render: hand-write `clips/manifest.json`
+from `picks.json` — one entry per beat with its URL, platform, source_type,
+and segments (in/out/outcue). That file plus the Bible `.docx` (Step 8) are
+the deliverable. Pulling the actual video and cutting it happens downstream,
+manually, in whatever tool the edit bay uses — outside this pipeline. Don't
+claim clips were downloaded or cut; say what actually happened, which is
+that picks were located, verified against transcript, and logged with exact
+timecodes for someone else to pull.
 
-Timecodes are padded 1s early and 1.5s late, because caption boundaries
-are 1-3s granular. The editor trims; that is cheaper than discovering a
-clipped first syllable.
+If a real automated cut stage gets built later (yt-dlp video pull + ffmpeg
+trim + FCPXML writer as an actual `clip` subcommand), rewrite this step to
+describe it. Until then this description is accurate, not aspirational.
 
 ## Step 8 — Report + filled Bible doc
 
@@ -199,7 +211,7 @@ Then call out, explicitly:
 | 4 triage | ~1 min |
 | 5 captions | ~1 min |
 | 6 grade | ~1.5 min |
-| 7 cut | ~2 min |
+| 7 manifest | <1 min (hand-write, no download/cut) |
 
 Roughly 8-9 minutes. If a stage runs far over, say so rather than waiting
 silently.
