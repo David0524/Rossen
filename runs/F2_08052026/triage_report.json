@@ -1,0 +1,158 @@
+{
+  "08-05-b01": {
+    "total": 275,
+    "passed_filter": 272,
+    "filtered": {
+      "compilation": 1,
+      "too_short": 2
+    },
+    "source_mix": {
+      "creator_long": 5
+    },
+    "diversity_floor": false,
+    "promoted": null
+  },
+  "08-05-b02": {
+    "total": 164,
+    "passed_filter": 157,
+    "filtered": {
+      "too_long": 7
+    },
+    "source_mix": {
+      "reddit_post": 4,
+      "first_person": 1
+    },
+    "diversity_floor": false,
+    "promoted": null
+  },
+  "08-05-b03": {
+    "total": 552,
+    "passed_filter": 498,
+    "filtered": {
+      "too_long": 44,
+      "too_short": 6,
+      "compilation": 4
+    },
+    "source_mix": {
+      "affiliate": 3,
+      "first_person": 2
+    },
+    "diversity_floor": false,
+    "promoted": null
+  },
+  "08-05-b04": {
+    "total": 317,
+    "passed_filter": 290,
+    "filtered": {
+      "too_short": 5,
+      "too_long": 22
+    },
+    "source_mix": {
+      "news_web": 4,
+      "creator_long": 1
+    },
+    "diversity_floor": true,
+    "promoted": "Amazon Prime FTC Settlement Lawsuit Explained \u2013 $2.5 Billion"
+  },
+  "08-05-b05": {
+    "total": 153,
+    "passed_filter": 145,
+    "filtered": {
+      "too_long": 5,
+      "too_short": 3
+    },
+    "source_mix": {
+      "first_person": 1,
+      "creator_short": 4
+    },
+    "diversity_floor": false,
+    "promoted": null
+  },
+  "08-05-b06": {
+    "total": 239,
+    "passed_filter": 214,
+    "filtered": {
+      "compilation": 3,
+      "too_long": 16,
+      "too_short": 6
+    },
+    "source_mix": {
+      "news_web": 3,
+      "affiliate": 1,
+      "creator_long": 1
+    },
+    "diversity_floor": true,
+    "promoted": "How to Handle CPSC Product Safety Investigation for Non-Resi"
+  },
+  "08-05-b07": {
+    "total": 155,
+    "passed_filter": 144,
+    "filtered": {
+      "too_long": 9,
+      "compilation": 2
+    },
+    "source_mix": {
+      "news_web": 3,
+      "affiliate": 1,
+      "first_person": 1
+    },
+    "diversity_floor": true,
+    "promoted": "My aquarium almost burned my house down... (Don't make this "
+  },
+  "08-05-b08": {
+    "total": 306,
+    "passed_filter": 297,
+    "filtered": {
+      "too_short": 1,
+      "too_long": 6,
+      "compilation": 2
+    },
+    "source_mix": {
+      "first_person": 3,
+      "reddit_post": 2
+    },
+    "diversity_floor": false,
+    "promoted": null
+  },
+  "08-05-b09": {
+    "total": 102,
+    "passed_filter": 101,
+    "filtered": {
+      "too_long": 1
+    },
+    "source_mix": {
+      "reddit_post": 4,
+      "news_web": 1
+    },
+    "diversity_floor": false,
+    "promoted": null
+  },
+  "08-05-b10": {
+    "total": 366,
+    "passed_filter": 329,
+    "filtered": {
+      "too_long": 34,
+      "too_short": 3
+    },
+    "source_mix": {
+      "news_web": 4,
+      "creator_long": 1
+    },
+    "diversity_floor": true,
+    "promoted": "How to spot a class action settlement email scam"
+  },
+  "08-05-b11": {
+    "total": 364,
+    "passed_filter": 353,
+    "filtered": {
+      "compilation": 3,
+      "too_short": 8
+    },
+    "source_mix": {
+      "creator_long": 3,
+      "affiliate": 2
+    },
+    "diversity_floor": false,
+    "promoted": null
+  }
+}

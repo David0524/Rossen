@@ -1,0 +1,225 @@
+[
+  {
+    "beat_id": "08-05-b01",
+    "url": "https://www.youtube.com/watch?v=DZ06YW82Qh8",
+    "title": "Amazon Late Delivery Refund How To Receive",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "score": 82,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+      {
+        "in": "0:00",
+        "out": "0:36",
+        "outcue": "purchase but the catch is the next"
+      },
+      {
+        "in": "0:49",
+        "out": "2:08",
+        "outcue": "my item didn't arrive as promised"
+      }
+    ],
+    "reasoning": "Guy showing his Amazon account, walks through exact steps: customer service > contact us > chat > ask for promotional credit. Matches 'WATCH HIM SHOW YOU HOW' setup. Natural tone, screen recording with voiceover. First segment explains the policy, second shows the walkthrough. Two butt-cut segments to skip the generic mid-section.",
+    "flags": ["audio is phone-quality but clear", "mentions $5 credit specifically, script says general credit"]
+  },
+  {
+    "beat_id": "08-05-b02",
+    "url": null,
+    "title": null,
+    "platform": null,
+    "source_type": null,
+    "score": null,
+    "tone": null,
+    "authenticity": null,
+    "quality": null,
+    "fit": null,
+    "segments": [],
+    "reasoning": "No usable clip found. The beat needs doorbell/porch camera footage of an Amazon phantom delivery — package marked delivered, camera shows nothing there. This content lives almost exclusively on TikTok and Reddit as short vertical clips or image posts. YouTube candidates were about buying doorbell cameras, not phantom delivery evidence. Reddit posts are text, not video. Needs TikTok/Instagram direct search to fill.",
+    "flags": ["EMPTY BEAT — vertical evidence lives on TikTok, not YouTube"]
+  },
+  {
+    "beat_id": "08-05-b03",
+    "url": "https://www.youtube.com/watch?v=54tfKlslTA4",
+    "title": "Don't get scammed by third-party sellers on Amazon and Walmart",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 72,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 6,
+    "segments": [
+      {
+        "in": "0:30",
+        "out": "1:40",
+        "outcue": "a 30% restocking fee"
+      }
+    ],
+    "reasoning": "Affiliate package from WCPO/9 On Your Side. Amanda and Aaron Shulkers ordered table+chairs from third-party seller, got only table, seller demands restocking fee to return. Sympathetic victims on camera at home. Good tone. WEAK FIT: the story is Walmart marketplace, not Amazon A-to-Z specifically. The script says 'LISTEN TO WHAT HAPPENED TO HER' — the clip has a woman (Amanda) on camera. Closest available but not a direct match to A-to-Z guarantee denial.",
+    "flags": ["WEAK FIT — Walmart story, not Amazon A-to-Z", "human should re-check or source directly"]
+  },
+  {
+    "beat_id": "08-05-b04",
+    "url": "https://www.youtube.com/watch?v=xY-s26O0hkE",
+    "title": "Amazon Prime FTC Settlement Lawsuit Explained – $2.5 Billion Refunds",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "score": 78,
+    "tone": 7,
+    "authenticity": 7,
+    "quality": 7,
+    "fit": 9,
+    "segments": [
+      {
+        "in": "0:00",
+        "out": "0:57",
+        "outcue": "changes how Amazon runs its Prime program"
+      }
+    ],
+    "reasoning": "Creator explainer covering the FTC $2.5B settlement. Hits all the key facts: dark patterns, $1B penalty + $1.5B refunds, 35 million affected. Matches the beat's 'HERE'S WHAT WE KNOW RIGHT NOW' setup. Clean audio, clear delivery. Not ideal source type for authority_report (creator not affiliate/network), but content fit is strong and the news_web candidates have no video/captions. First 57 seconds cover the what-happened with no filler.",
+    "flags": ["creator_long not ideal for authority_report role", "news_web candidates may be stronger but lack downloadable video"]
+  },
+  {
+    "beat_id": "08-05-b05",
+    "url": "https://www.youtube.com/watch?v=mff8NrTcRw0",
+    "title": "Refund checks from an Amazon Prime settlement are arriving in mailboxes now",
+    "platform": "youtube",
+    "source_type": "creator_short",
+    "score": 68,
+    "tone": 8,
+    "authenticity": 6,
+    "quality": 8,
+    "fit": 5,
+    "segments": [
+      {
+        "in": "0:00",
+        "out": "0:52",
+        "outcue": "the checks have to be cashed in within 60 days"
+      }
+    ],
+    "reasoning": "Short clip (64s) explaining the settlement checks are real, not a scam. Max $51, by PayPal/Venmo/check. WEAK FIT: the beat wants first_person_rant — someone showing their SMALL payout and reacting with disbelief. This is a news explainer, not a reaction. The 'people posting their payouts online / some are under a dollar / THINK WHAT YOU WOULD DO' setup needs TikTok-style reveal content that isn't on YouTube. Best available but does not match the role.",
+    "flags": ["WEAK FIT — news explainer, not first-person reaction to small amount", "beat wants TikTok reaction content"]
+  },
+  {
+    "beat_id": "08-05-b06",
+    "url": "https://www.youtube.com/watch?v=ggDHtb-4GWQ",
+    "title": "Consumer Reports: Amazon must follow new rules for recalled products",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 88,
+    "tone": 9,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+      {
+        "in": "0:38",
+        "out": "1:50",
+        "outcue": "hold online marketplaces accountable in the future"
+      }
+    ],
+    "reasoning": "Affiliate package covering exactly the CPSC distributor ruling. Mentions 400,000 units, faulty CO detectors, unsafe hairdryers, flammable kids' sleepwear. Consumer Reports quote gives authority. Amazon's rebuttal included. Perfect fit for the 'HERE'S WHAT WE KNOW RIGHT NOW' setup. Clean audio, professional package. Skip the 38s anchor toss at top.",
+    "flags": []
+  },
+  {
+    "beat_id": "08-05-b07",
+    "url": null,
+    "title": null,
+    "platform": null,
+    "source_type": null,
+    "score": null,
+    "tone": null,
+    "authenticity": null,
+    "quality": null,
+    "fit": null,
+    "segments": [],
+    "reasoning": "No usable clip found. The beat needs fire footage from Lakkzoom immersion water heaters specifically — a very recent CPSC emergency action (July 22, 2026). YouTube candidates were about different products: Houston commercial water heater explosion, aquarium heater fire, Lasko space heater. None match. News_web results are CPSC press releases (text, not video). Too new for YouTube coverage to have accumulated.",
+    "flags": ["EMPTY BEAT — very recent event, no video coverage yet", "Lakkzoom-specific footage may surface on TikTok or local news in coming days"]
+  },
+  {
+    "beat_id": "08-05-b08",
+    "url": "https://www.youtube.com/watch?v=iB-V407xMeE",
+    "title": "Is the most popular grill brush dangerous? (What I use instead)",
+    "platform": "youtube",
+    "source_type": "first_person",
+    "score": 85,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 9,
+    "fit": 8,
+    "segments": [
+      {
+        "in": "0:00",
+        "out": "0:48",
+        "outcue": "leave it down in the comments"
+      },
+      {
+        "in": "1:26",
+        "out": "1:54",
+        "outcue": "they're more likely to end up on your grilling surface"
+      }
+    ],
+    "reasoning": "Creator video specifically about grill brush bristle dangers. Opens with '140 Americans go to the hospital every year from ingesting grill brush bristles.' Shows bristle pull test, demonstrates how easily they come out. Matches 'HERE YOU CAN SEE WHAT HAPPENS WHEN ONE OF THESE THINGS LETS GO.' Two segments: intro about the danger, then the bristle-pull demonstration. Manual captions = quality content. Not about the Cuisinart recall specifically, but demonstrates the exact hazard the beat describes.",
+    "flags": ["not Cuisinart recall specific — demonstrates the general hazard"]
+  },
+  {
+    "beat_id": "08-05-b09",
+    "url": null,
+    "title": null,
+    "platform": null,
+    "source_type": null,
+    "score": null,
+    "tone": null,
+    "authenticity": null,
+    "quality": null,
+    "fit": null,
+    "segments": [],
+    "reasoning": "No usable clip found. The beat needs a phone screen recording or screenshot of the fake Amazon recall phishing text landing. This is vertical evidence content that lives on TikTok and Reddit. Reddit posts (r/Scams) describe the exact scam text but are text posts, not video. The Fox news_web result may have video but is not downloadable via yt-dlp. YouTube had generic scam alert clips, none showing this specific Amazon recall text.",
+    "flags": ["EMPTY BEAT — screenshot/screen recording evidence lives on TikTok", "r/Scams posts confirm the scam exists but aren't usable video"]
+  },
+  {
+    "beat_id": "08-05-b10",
+    "url": "https://www.youtube.com/watch?v=WZYjk1fX5hs",
+    "title": "How to spot a class action settlement email scam",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 75,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 7,
+    "segments": [
+      {
+        "in": "0:04",
+        "out": "1:20",
+        "outcue": "anything higher is suspicious"
+      }
+    ],
+    "reasoning": "WLTX affiliate Verified team walks through how to spot fake settlement emails: check case details, sender info, amount, urgency, links. Good fit for the 'HERE'S WHAT WE KNOW RIGHT NOW' setup about settlement scams. Not Amazon-specific — it's about class action settlement scams in general — but the mechanics are identical. Clean, professional, consumer-protective tone. Skip the music intro.",
+    "flags": ["not Amazon-specific — general settlement scam warning", "human may prefer a more Amazon/FTC-specific clip if one surfaces"]
+  },
+  {
+    "beat_id": "08-05-b11",
+    "url": "https://www.youtube.com/watch?v=erKRMlCUNkc",
+    "title": "Back-to-class: how to save money on school supplies during Ohio's tax-free weekend",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 90,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+      {
+        "in": "0:23",
+        "out": "1:40",
+        "outcue": "like i said this is running the whole"
+      }
+    ],
+    "reasoning": "Affiliate reporter Amy Steigerwald at Meijer store during Ohio tax-free weekend. Shows actual checkout: markers, pencils, backpacks, shoes — $38.98, no tax. Store manager confirms 7.75% savings. Perfect match for 'WATCH HIM SHOW YOU HOW MUCH THIS ACTUALLY SAVES ON A REAL SCHOOL LIST.' Skip the anchor toss, start at the reporter's intro inside the store.",
+    "flags": ["reporter is female, script says 'WATCH HIM' — minor mismatch"]
+  }
+]

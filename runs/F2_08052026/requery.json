@@ -1,0 +1,176 @@
+[
+  {
+    "beat_id": "08-05-b02",
+    "episode": "08-05",
+    "segment_title": "AMAZON SAYS DELIVERED BUT PACKAGE NEVER ARRIVED",
+    "orientation": "vertical",
+    "clip_role": "evidence",
+    "platforms": ["tiktok", "shorts", "facebook", "reddit"],
+    "offsite_likely": false,
+    "queries": {
+      "anchor": [],
+      "news": [],
+      "victim": [
+        "Amazon delivery photo but no package porch",
+        "Amazon says delivered nothing on my porch ring camera",
+        "package stolen Amazon delivery photo proof",
+        "Amazon delivery driver didn't deliver ring doorbell",
+        "Amazon marked delivered but I have ring camera proof",
+        "porch pirate caught on ring camera Amazon"
+      ],
+      "platform": [
+        "#amazon delivery lie ring camera",
+        "#amazondelivery fake photo porch empty",
+        "Amazon driver didn't deliver caught on camera",
+        "#ringcamera Amazon no delivery"
+      ],
+      "shorts": [
+        "Amazon delivery proof but nothing there #shorts",
+        "ring camera Amazon lie #shorts",
+        "#amazon phantom delivery caught #shorts",
+        "Amazon said delivered watch my camera #shorts",
+        "caught Amazon lying about delivery #shorts"
+      ]
+    },
+    "platform_map": {
+      "tiktok": ["platform", "victim"],
+      "shorts": ["shorts", "victim"],
+      "facebook": ["platform"],
+      "reddit": ["victim"]
+    }
+  },
+  {
+    "beat_id": "08-05-b03",
+    "episode": "08-05",
+    "segment_title": "AMAZON A-TO-Z GUARANTEE CLAIM DENIED",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": false,
+    "queries": {
+      "anchor": [
+        "Amazon A-to-Z guarantee claim denied customer",
+        "Amazon marketplace buyer scammed third party seller no refund"
+      ],
+      "news": [
+        "Amazon customer denied refund third party seller",
+        "Amazon A to Z claim rejected buyer",
+        "woman loses money Amazon marketplace seller refuses refund",
+        "Amazon third party seller scam buyer left with nothing",
+        "Amazon buyer ripped off marketplace seller won't refund",
+        "Amazon A-to-Z guarantee denied what to do",
+        "Amazon refused to refund customer seller disappeared",
+        "Amazon customer fights for refund third party"
+      ],
+      "victim": [
+        "Amazon won't give me my money back seller scam",
+        "I bought from Amazon third party seller scammed me",
+        "Amazon denied my A-to-Z claim seller never shipped",
+        "third party seller on Amazon took my money no refund",
+        "Amazon marketplace scam seller won't refund",
+        "Amazon refuses to help me with third party seller"
+      ],
+      "platform": [],
+      "shorts": [
+        "Amazon denied my refund #scam #shorts",
+        "Amazon seller scammed me no help #shorts",
+        "#amazon third party seller ripped me off #shorts"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "victim"],
+      "shorts": ["shorts"],
+      "news_web": ["anchor", "news"]
+    }
+  },
+  {
+    "beat_id": "08-05-b05",
+    "episode": "08-05",
+    "segment_title": "PEOPLE POSTING THEIR SMALL AMAZON SETTLEMENT PAYOUTS",
+    "orientation": "vertical",
+    "clip_role": "first_person_rant",
+    "platforms": ["tiktok", "shorts", "instagram"],
+    "offsite_likely": false,
+    "queries": {
+      "anchor": [
+        "Amazon Prime settlement check amount received",
+        "Amazon FTC settlement payout reaction"
+      ],
+      "news": [],
+      "victim": [
+        "my Amazon Prime settlement check amount disappointing",
+        "Amazon settlement check reaction how much I got",
+        "Amazon class action check in the mail how much",
+        "Amazon FTC refund check arrived reaction",
+        "got my Amazon Prime settlement check small amount",
+        "Amazon sent me a check settlement amount reveal"
+      ],
+      "platform": [
+        "#amazonsettlement check amount reaction",
+        "#amazonprime check how much I got",
+        "#amazon settlement check reveal",
+        "Amazon Prime settlement how much"
+      ],
+      "shorts": [
+        "Amazon settlement check reveal #shorts",
+        "how much Amazon sent me #settlement #shorts",
+        "#amazon check reaction #shorts",
+        "Amazon Prime refund check amount #shorts",
+        "my Amazon settlement check #shorts #money"
+      ]
+    },
+    "platform_map": {
+      "tiktok": ["platform", "victim"],
+      "shorts": ["shorts", "victim"],
+      "instagram": ["platform"]
+    }
+  },
+  {
+    "beat_id": "08-05-b07",
+    "episode": "08-05",
+    "segment_title": "LAKKZOOM IMMERSION WATER HEATER — 235 FIRES, EMERGENCY RECALL",
+    "orientation": "vertical",
+    "clip_role": "evidence",
+    "platforms": ["tiktok", "shorts", "facebook", "reddit"],
+    "offsite_likely": false,
+    "queries": {
+      "anchor": [
+        "Lakkzoom immersion water heater fire recall",
+        "immersion water heater fire Amazon recalled CPSC 2026",
+        "portable immersion heater fire hazard recall"
+      ],
+      "news": [
+        "immersion water heater catches fire recall",
+        "Lakkzoom heater fire Amazon recall 2026",
+        "CPSC emergency recall immersion heater fire",
+        "portable water heater rod fire hazard recall",
+        "bucket water heater fire CPSC imminent hazard"
+      ],
+      "victim": [
+        "immersion water heater caught fire in my house",
+        "portable water heater almost burned my house down",
+        "water heater rod fire caught on camera",
+        "immersion heater fire bucket melted",
+        "Amazon water heater started fire"
+      ],
+      "platform": [
+        "#recall immersion heater fire",
+        "#cpsc immersion water heater fire",
+        "immersion heater fire caught on camera",
+        "#amazon recall water heater fire"
+      ],
+      "shorts": [
+        "immersion heater fire #recall #shorts",
+        "water heater rod caught fire #shorts",
+        "#cpsc emergency recall heater fire #shorts",
+        "Amazon water heater fire #recall #shorts"
+      ]
+    },
+    "platform_map": {
+      "tiktok": ["platform", "victim"],
+      "shorts": ["shorts", "victim"],
+      "facebook": ["platform"],
+      "reddit": ["victim"]
+    }
+  }
+]

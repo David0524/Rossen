@@ -1,0 +1,111 @@
+[
+  {
+    "beat_id": "08-05-b01",
+    "status": "download_pending",
+    "url": "https://www.youtube.com/watch?v=DZ06YW82Qh8",
+    "title": "Amazon Late Delivery Refund How To Receive",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "segments": [
+      {"in": "0:00", "out": "0:36", "outcue": "purchase but the catch is the next"},
+      {"in": "0:49", "out": "2:08", "outcue": "my item didn't arrive as promised"}
+    ]
+  },
+  {
+    "beat_id": "08-05-b02",
+    "status": "empty",
+    "reason": "No vertical evidence of Amazon phantom delivery on YouTube. Needs TikTok/Instagram search."
+  },
+  {
+    "beat_id": "08-05-b03",
+    "status": "download_pending",
+    "url": "https://www.youtube.com/watch?v=54tfKlslTA4",
+    "title": "Don't get scammed by third-party sellers on Amazon and Walmart",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "segments": [
+      {"in": "0:30", "out": "1:40", "outcue": "a 30% restocking fee"}
+    ],
+    "flags": ["WEAK FIT — Walmart story not Amazon A-to-Z"]
+  },
+  {
+    "beat_id": "08-05-b04",
+    "status": "download_pending",
+    "url": "https://www.youtube.com/watch?v=xY-s26O0hkE",
+    "title": "Amazon Prime FTC Settlement Lawsuit Explained",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "segments": [
+      {"in": "0:00", "out": "0:57", "outcue": "changes how Amazon runs its Prime program"}
+    ]
+  },
+  {
+    "beat_id": "08-05-b05",
+    "status": "download_pending",
+    "url": "https://www.youtube.com/watch?v=mff8NrTcRw0",
+    "title": "Refund checks from an Amazon Prime settlement are arriving in mailboxes now",
+    "platform": "youtube",
+    "source_type": "creator_short",
+    "segments": [
+      {"in": "0:00", "out": "0:52", "outcue": "the checks have to be cashed in within 60 days"}
+    ],
+    "flags": ["WEAK FIT — news explainer not first-person reaction"]
+  },
+  {
+    "beat_id": "08-05-b06",
+    "status": "download_pending",
+    "url": "https://www.youtube.com/watch?v=ggDHtb-4GWQ",
+    "title": "Consumer Reports: Amazon must follow new rules for recalled products",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "segments": [
+      {"in": "0:38", "out": "1:50", "outcue": "hold online marketplaces accountable in the future"}
+    ]
+  },
+  {
+    "beat_id": "08-05-b07",
+    "status": "empty",
+    "reason": "No Lakkzoom immersion water heater fire footage. Too recent (July 22, 2026)."
+  },
+  {
+    "beat_id": "08-05-b08",
+    "status": "download_pending",
+    "url": "https://www.youtube.com/watch?v=iB-V407xMeE",
+    "title": "Is the most popular grill brush dangerous? (What I use instead)",
+    "platform": "youtube",
+    "source_type": "first_person",
+    "segments": [
+      {"in": "0:00", "out": "0:48", "outcue": "leave it down in the comments"},
+      {"in": "1:26", "out": "1:54", "outcue": "they're more likely to end up on your grilling surface"}
+    ]
+  },
+  {
+    "beat_id": "08-05-b09",
+    "status": "empty",
+    "reason": "No vertical video of fake Amazon recall text. Evidence lives on TikTok/Reddit."
+  },
+  {
+    "beat_id": "08-05-b10",
+    "status": "download_pending",
+    "url": "https://www.youtube.com/watch?v=WZYjk1fX5hs",
+    "title": "How to spot a class action settlement email scam",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "segments": [
+      {"in": "0:04", "out": "1:20", "outcue": "anything higher is suspicious"}
+    ],
+    "flags": ["general settlement scam, not Amazon-specific"]
+  },
+  {
+    "beat_id": "08-05-b11",
+    "status": "download_pending",
+    "url": "https://www.youtube.com/watch?v=erKRMlCUNkc",
+    "title": "Back-to-class: how to save money on school supplies during Ohio's tax-free weekend",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "segments": [
+      {"in": "0:23", "out": "1:40", "outcue": "like i said this is running the whole"}
+    ],
+    "flags": ["reporter is female, script says 'WATCH HIM'"]
+  }
+]
