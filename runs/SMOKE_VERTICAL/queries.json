@@ -1,0 +1,52 @@
+[
+  {
+    "beat_id": "smoke-vertical-b01",
+    "clip_role": "explainer_demo/creator_short",
+    "orientation": "vertical",
+    "platforms": ["shorts", "tiktok", "instagram"],
+    "queries": {
+      "platform": [
+        "gift card scam sticker",
+        "#giftcardscam check before you buy",
+        "peeled pin sticker gift card",
+        "gift card drained #scamalert",
+        "tampered gift card rack",
+        "check gift card before buying"
+      ],
+      "victim": [
+        "I bought a gift card and it was already empty",
+        "my gift card had no money on it",
+        "they drained it before I got home",
+        "the pin sticker was already peeled",
+        "bought a $100 gift card it was zero"
+      ],
+      "news": [
+        "gift card draining scam how to protect yourself",
+        "police warn gift card tampering at stores",
+        "how to spot a tampered gift card",
+        "gift card scam what to look for before you buy"
+      ],
+      "anchor": [
+        "FTC gift card draining warning",
+        "FTC warns gift card scam stores"
+      ],
+      "shorts": [
+        "#scamalert check the gift card",
+        "gift card already empty #shorts",
+        "don't buy this gift card #scam",
+        "#giftcardscam look at the back",
+        "he checked it before buying #scamalert"
+      ]
+    },
+    "platform_map": {
+      "shorts": ["shorts", "platform"],
+      "tiktok": ["platform", "victim"],
+      "instagram": ["platform", "victim"]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "match_filter": "duration < 60",
+      "surfaced_for": "vertical"
+    }
+  }
+]

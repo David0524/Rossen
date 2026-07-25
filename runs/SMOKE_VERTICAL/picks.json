@@ -1,0 +1,76 @@
+{
+  "run_type": "smoke_test",
+  "beat_id": "smoke-vertical-b01",
+  "orientation_required": "vertical",
+  "clip_role": "explainer_demo/creator_short",
+  "platforms_required": ["shorts", "tiktok", "instagram"],
+  "candidates": [
+    {
+      "platform": "shorts",
+      "url": "https://www.youtube.com/shorts/ZVQPxS16At0",
+      "title": "How to spot if a gift card has been tampered with before your purchase",
+      "uploader": "CTV News",
+      "duration_s": 119,
+      "upload_date": "2025-12-12",
+      "views": 6345,
+      "is_short": true,
+      "is_short_evidence": "GET /shorts/ZVQPxS16At0 returns HTTP 200 with no redirect. Control: /shorts/PNjdcz3eG9o and /shorts/_RTe-ddhxoY both 303-redirect to /watch, i.e. not Shorts.",
+      "orientation_verified": "vertical",
+      "orientation_method": "two independent non-duration pixel reads: (a) yt-dlp format table — every video rendition portrait (fmt 137 1080x1920, fmt 248 1080x1920, fmt 136 720x1280); (b) ffprobe on the original-aspect-ratio thumbnail oardefault.jpg = 1080x1920. Decoded-frame ffprobe NOT possible: YouTube media bytes are bot-walled/DRM-blocked in this environment.",
+      "caption_track": "yes — auto-captions present (en-orig, en). No Whisper needed.",
+      "notes": "119s exceeds the legacy 60s Shorts ceiling but sits under YouTube's current 3-minute Shorts limit, and the /shorts/ URL resolves, so it is a genuine Short. The harvest step's --match-filter \"duration < 60\" would have excluded it — see report."
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@cbsmornings/video/7451654556297055518",
+      "title": "Scammers may access gift card numbers and PINs before they're even purchased",
+      "uploader": "cbsmornings",
+      "duration_s": 30.57,
+      "orientation_verified": "vertical",
+      "orientation_method": "STRONGEST AVAILABLE — media downloaded (2.99 MiB) and ffprobe run on the decoded video stream: width=1080 height=1920 duration=30.566667. Actual frame, not metadata.",
+      "caption_track": "NO — yt-dlp returns no subtitle track (subtitles: NONE, automatic_captions: NONE). Whisper required for a verbatim outcue.",
+      "whisper_status": "VERIFIED WORKING in this environment. faster-whisper 1.2.1 installed successfully; transcribed this clip on CPU. Opening cues: [0.00-3.00] 'So look at it, if the protective sticker has been removed,' [3.00-6.08] 'if that barcode has been scratched off really any signs' [6.08-8.52] 'of tampering, go talk to a store manager.'",
+      "notes": "Transcript confirms the clip is literally the beat's defense demo, not just topically adjacent."
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/DSk4bzkklJh/",
+      "title": "Video by huffpost — gift cards bought off the rack are a common tool scammers use to exploit people (HuffPost Life senior reporter Monica Torres explains)",
+      "uploader": "HuffPost",
+      "duration_s": 151.57,
+      "orientation_verified": "vertical",
+      "orientation_method": "media downloaded (11.72 MiB) and ffprobe run on the decoded stream: width=720 height=1280. yt-dlp additionally lists a 1080x1920 rendition. Portrait on both reads.",
+      "caption_track": "NO — subtitles: NONE. Whisper required for a verbatim outcue; confirmed available in this environment.",
+      "notes": "151s is long for creator_short and the presenter is a woman while the script lead-in says 'WATCH HIM'. Flagged for the grader rather than swapped out — this is a fixture smoke test of the vertical path, not an air pick."
+    }
+  ],
+  "orientation_bug_controls": [
+    {
+      "url": "https://www.youtube.com/watch?v=PNjdcz3eG9o",
+      "title": "Scam alert: Why police say you need to check gift cards before you pay for them",
+      "duration_s": 25,
+      "real_dimensions": "1280x720",
+      "verdict": "LANDSCAPE. Sub-75s. This is the exact postmortem failure: duration-only inference asserts vertical and ships a landscape clip against a vertical beat."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=oI05QvICQo8",
+      "duration_s": 21,
+      "real_dimensions": "1280x720",
+      "verdict": "LANDSCAPE at 21 seconds."
+    },
+    {
+      "url": "https://www.instagram.com/reel/DSqkiUoD5eW/",
+      "title": "Video by wthrcom",
+      "duration_s": 58.29,
+      "real_dimensions": "640x360 (ffprobe on decoded stream)",
+      "verdict": "LANDSCAPE on a /reel/ URL at 58s. Defeats BOTH heuristics at once — duration inference AND platform-name inference."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_RTe-ddhxoY",
+      "title": "Gift Card Scam (Nichelle Laus)",
+      "duration_s": 80,
+      "real_dimensions": "540x960",
+      "verdict": "VERTICAL but NOT a Short — /shorts/ 303-redirects to /watch. The inverse error: correct orientation, wrong format bucket."
+    }
+  ]
+}

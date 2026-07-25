@@ -30,3 +30,45 @@ Outcomes: PICK (verified outcue) · LOCATED (case found, no caption-able source)
 victims frequently source only to news_web (no captions) — LOCATED, not PICK.
 `authority_report` on <2-week-old federal alerts (b07) too new for captioned video.
 Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only there.
+
+## Run SMOKE_VERTICAL 2026-07-25 — ⚠️ SMOKE TEST, NOT AN EPISODE
+
+**DO NOT COUNT IN ANY YIELD TALLY.** Single synthetic fixture beat exercising the
+vertical path (gift-card rack scam). No air intent. Excluded from episode stats
+because n=1, hand-probed, and the beat was written to be sourceable.
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| smoke-vertical-b01 | explainer_demo/creator_short | V | PICK ×3 (one per platform, as specified) | shorts: CTV News ZVQPxS16At0 (1080x1920, auto-captions) · tiktok: @cbsmornings 7451654556297055518 (1080x1920 ffprobe on decoded stream, Whisper-verified) · instagram: HuffPost DSk4bzkklJh (720x1280 decoded) |
+
+**Per-platform yield (pipeline harvest leg, `python -m rossen_harvest search`):**
+315 raw → 244 after dedupe. news_web 117 · youtube 107 · reddit 20 ·
+**tiktok 0 · instagram 0**. The documented native-social gap reproduced exactly:
+every tiktok.com URL Brave returned was a `/discover/` browse page, correctly
+demoted to news_web by the `/video/` path detector in `brave.py`. Zero Instagram
+of any kind from the pipeline leg.
+
+Both social picks came from **hand-run targeted Brave probes outside the pipeline**
+(`site:instagram.com/reel …`, `tiktok.com/video …`), not from the harvest command.
+That is the honest read: the pipeline's native-social yield for this beat was 0/244,
+consistent with the 8/7,549 (~0.11%) baseline. Do not read "3 platforms, 3 picks"
+as the pipeline clearing the bar — it did not.
+
+**Orientation bug (vertical postmortem) — reproduced live, four ways:**
+- `PNjdcz3eG9o` 25s but **1280x720 landscape**; `oI05QvICQo8` 21s but **1280x720**.
+  Duration-only inference ships landscape against a vertical beat. Exactly the bug.
+- `DSqkiUoD5eW` **640x360 landscape at 58s on an Instagram /reel/ URL** — defeats
+  duration inference AND platform-name inference simultaneously.
+- `_RTe-ddhxoY` **540x960 vertical but NOT a Short** (/shorts/ 303→/watch).
+  Inverse error: right orientation, wrong format bucket.
+- Every sub-60s YouTube result across 9 Shorts-dialect queries was landscape.
+
+**Method note:** `oardefault.jpg` / `oar2.jpg` (original-aspect-ratio thumbnail,
+ffprobed) is a cheap, reliable vertical discriminator when media bytes are blocked
+— landscape videos have no `oar` variant at all. Cross-validated both directions
+against yt-dlp format tables. Worth folding into the harvest step.
+
+**Environment:** YouTube media bytes unavailable (bot wall + DRM on tv client, no
+JS runtime); metadata still reachable via android_vr client. TikTok and Instagram
+media download fine. faster-whisper 1.2.1 installs and runs on CPU — the TikTok
+no-caption gap is closable here.

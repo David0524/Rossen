@@ -1,0 +1,21 @@
+[
+  {
+    "beat_id": "smoke-vertical-b01",
+    "episode": "SMOKE-TEST",
+    "segment_title": "THE GIFT CARD SCAM HIDING IN PLAIN SIGHT AT THE STORE RACK",
+    "script_text": "CRIMINALS ARE HITTING THE GIFT CARD DISPLAY BEFORE YOU EVER GET THERE. / THEY PEEL BACK THE PIN STICKER ON THE BACK OF THE CARD... / WRITE DOWN THE NUMBER AND THE PIN... / THEN STICK IT BACK DOWN SO IT LOOKS UNTOUCHED. / YOU BUY IT, LOAD IT WITH MONEY AT THE REGISTER... / AND THE SCAMMER IS ALREADY DRAINING IT BEFORE YOU GET HOME. / THE FTC HAS BEEN WARNING ABOUT THIS FOR YEARS AND IT STILL WORKS. / WATCH HIM SHOW YOU HOW TO CHECK A CARD BEFORE YOU BUY IT.",
+    "orientation": "vertical",
+    "clip_role": "explainer_demo/creator_short",
+    "news_anchor": "FTC gift card draining warning",
+    "visual_spec": "handheld vertical, person at a retail gift card rack holding a card to camera, peeling back the PIN sticker to show it has been tampered with",
+    "platforms": ["shorts", "tiktok", "instagram"],
+    "offsite_likely": false,
+    "priority": 1,
+    "expected_segments": 1,
+    "sourcability": "unchecked",
+    "sourcability_note": "Fixture beat, no named subject. Generic demo topic; the sourcability scan's named-person path does not apply.",
+    "source_native": "none",
+    "role_evidence": "Lead-in 'WATCH HIM SHOW YOU HOW TO CHECK A CARD BEFORE YOU BUY IT' is a defense-demonstration tell, not a victim tell — explainer_demo. VERTICAL marker splits it to creator_short.",
+    "notes": "SMOKE TEST FIXTURE. The FTC line carries no dollar figure or case count by design; no figure was invented for the anchor register."
+  }
+]
