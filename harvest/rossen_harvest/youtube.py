@@ -92,12 +92,22 @@ def harvest_beat(
     vertical beat should not reach it. Brave has no such restriction.
     """
     beat_id = beat["beat_id"]
-    jobs: list[tuple[str, str]] = [
-        (register, q)
+    by_register: dict[str, list[str]] = {
+        register: list(queries)
         for register, queries in beat.get("queries", {}).items()
-        if registers is None or register in registers
-        for q in queries
-    ]
+        if (registers is None or register in registers) and queries
+    }
+
+    # Round-robin across registers rather than concatenating them, because
+    # `cap` truncates and a flat concatenation starves whatever sorts last.
+    # That is not hypothetical: when `shorts_web` was added it landed at the
+    # tail and a cap of 8 meant it never ran at all.
+    jobs: list[tuple[str, str]] = []
+    for i in range(max((len(v) for v in by_register.values()), default=0)):
+        for register, queries in by_register.items():
+            if i < len(queries):
+                jobs.append((register, queries[i]))
+
     if cap is not None:
         jobs = jobs[:cap]
     if not jobs:

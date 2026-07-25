@@ -14,6 +14,7 @@ at least one generated query, and which register got it there.
 from __future__ import annotations
 
 import argparse
+import concurrent.futures as cf
 import csv
 import json
 import logging
@@ -27,6 +28,14 @@ from .brave import BraveBackend, from_brave
 from .cache import Cache
 from .candidates import Candidate
 from .dedupe import dedupe_by_beat
+from .shorts import (
+    LANDSCAPE,
+    UNKNOWN,
+    VERTICAL,
+    is_short,
+    shorts_web_queries,
+    verify_orientation,
+)
 from .youtube import DEFAULT_CONCURRENCY, YouTubeBackend, harvest_beat
 
 log = logging.getLogger("rossen_harvest")
@@ -49,13 +58,46 @@ BRAVE_PLATFORMS = {"news_web", "tiktok", "instagram", "facebook", "x", "reddit"}
 #
 # The two overlap on victim/platform on purpose: a vertical beat should get
 # both a shot at the native social post (web) and at YouTube coverage (video).
-BRAVE_WEB_REGISTERS = {"anchor", "news", "victim", "platform"}
+#
+# `shorts_web` is a synthetic register built by `_with_shorts_web` — the
+# `site:youtube.com/shorts` forms of the Shorts strings. It runs on the web
+# endpoint because it constrains on a URL path, which the video endpoint
+# cannot express. See `shorts.shorts_web_queries` for why the `#shorts`
+# suffix alone was not enough.
+BRAVE_WEB_REGISTERS = {"anchor", "news", "victim", "platform", "shorts_web"}
 BRAVE_VIDEO_REGISTERS = {"platform", "shorts", "victim", "confrontation"}
 
 
 def _beat_needs_brave(beat: dict) -> bool:
     plats = set(beat.get("platforms") or [])
     return beat.get("orientation") == "vertical" or bool(plats & BRAVE_PLATFORMS)
+
+
+def _wants_shorts(beat: dict) -> bool:
+    return (
+        "shorts" in (beat.get("platforms") or [])
+        or beat.get("orientation") == "vertical"
+        or bool(beat.get("queries", {}).get("shorts"))
+    )
+
+
+def _with_shorts_web(beat: dict) -> dict:
+    """Add the `site:youtube.com/shorts` register, without mutating the beat.
+
+    Seeded from the `shorts` strings and topped up from `platform`, since
+    the Shorts dialect is deliberately short and a couple of noun-heavier
+    strings widen the path-constrained search cheaply.
+    """
+    if not _wants_shorts(beat):
+        return beat
+    queries = beat.get("queries", {})
+    seed = list(queries.get("shorts") or []) + list(queries.get("platform") or [])[:2]
+    web = shorts_web_queries(seed)
+    if not web:
+        return beat
+    out = dict(beat)
+    out["queries"] = {**queries, "shorts_web": web}
+    return out
 
 _YT_ID = re.compile(
     r"(?:v=|/shorts/|youtu\.be/|/embed/)([A-Za-z0-9_-]{11})"
@@ -106,7 +148,8 @@ def cmd_harvest(args) -> int:
 
         if use_brave and _beat_needs_brave(beat):
             all_cands.extend(harvest_beat(
-                beat, web, normalize=from_brave, registers=BRAVE_WEB_REGISTERS,
+                _with_shorts_web(beat), web, normalize=from_brave,
+                registers=BRAVE_WEB_REGISTERS,
                 cap=args.brave_cap, concurrency=2, jitter=(0, 0),
             ))
             all_cands.extend(harvest_beat(
@@ -115,6 +158,12 @@ def cmd_harvest(args) -> int:
             ))
 
     kept = dedupe_by_beat(all_cands)
+
+    if not args.no_verify_orientation:
+        kept = _gate_orientation(
+            kept, beats, drop=args.drop_landscape, concurrency=args.concurrency
+        )
+
     cache.save_candidates(kept)
 
     print(f"{len(all_cands)} raw -> {len(kept)} after dedupe "
@@ -138,6 +187,73 @@ def cmd_harvest(args) -> int:
         )
         print(f"wrote {args.out}")
     return 0
+
+
+def _gate_orientation(
+    cands: list[Candidate],
+    beats: list[dict],
+    *,
+    drop: bool = False,
+    concurrency: int = DEFAULT_CONCURRENCY,
+) -> list[Candidate]:
+    """Verify orientation from pixels for candidates on vertical beats.
+
+    This is the vertical postmortem fix. Previously a sub-75-second YouTube
+    video could be asserted vertical on duration alone, and a 1920x1080
+    landscape clip shipped against a vertical beat. Nothing here reads
+    duration: orientation comes from `shorts.verify_orientation`, which
+    reads pixels, and format from `shorts.is_short`, which reads whether
+    the `/shorts/` URL resolves.
+
+    Only YouTube candidates are checked. TikTok and Instagram permalinks
+    need their own probe (both platforms serve landscape video into
+    portrait slots — the smoke test found a 640x360 clip on a `/reel/`
+    URL), but that costs a media fetch, so it belongs in the grader's
+    shortlist pass, not here at 244-candidates-per-beat scale.
+
+    "unknown" is never treated as a pass. With `drop`, only candidates
+    positively verified landscape are removed; unverified ones survive
+    flagged, because a network wobble must not silently shrink the funnel.
+    """
+    vertical_beats = {
+        b["beat_id"] for b in beats if b.get("orientation") == VERTICAL
+    }
+    targets = [
+        c for c in cands
+        if c.beat_id in vertical_beats and c.platform == "youtube" and c.video_id
+    ]
+    if not targets:
+        return cands
+
+    def check(c: Candidate) -> None:
+        c.orientation_verified = verify_orientation(c.video_id)
+        c.is_short = is_short(c.video_id)
+
+    with cf.ThreadPoolExecutor(max_workers=concurrency) as pool:
+        list(pool.map(check, targets))
+
+    counts = defaultdict(int)
+    for c in targets:
+        counts[c.orientation_verified or UNKNOWN] += 1
+    n_short = sum(1 for c in targets if c.is_short)
+
+    print(f"  orientation gate: {len(targets)} youtube candidates on vertical beats"
+          f" — verified vertical {counts[VERTICAL]}"
+          f" · landscape {counts[LANDSCAPE]}"
+          f" · unknown {counts[UNKNOWN]} · served as Shorts {n_short}")
+
+    if counts[UNKNOWN]:
+        print(f"  WARNING: {counts[UNKNOWN]} candidates could not be verified. "
+              "Unverified is not vertical — the grader must not treat them as passing.")
+
+    if not drop:
+        return cands
+
+    landscape = {id(c) for c in targets if c.orientation_verified == LANDSCAPE}
+    out = [c for c in cands if id(c) not in landscape]
+    print(f"  dropped {len(cands) - len(out)} verified-landscape candidates "
+          f"from vertical beats")
+    return out
 
 
 # ------------------------------------------------------------------------ eval
@@ -281,6 +397,13 @@ def main(argv=None) -> int:
                    help="results per Brave request (max 20)")
     h.add_argument("--brave-cap", type=int, default=8,
                    help="max queries per beat per Brave endpoint (protects quota)")
+    h.add_argument("--no-verify-orientation", action="store_true",
+                   help="skip the pixel-level orientation gate on vertical beats "
+                        "(the gate is the vertical postmortem fix — only skip it "
+                        "when working offline)")
+    h.add_argument("--drop-landscape", action="store_true",
+                   help="remove candidates verified landscape on a vertical beat, "
+                        "rather than only flagging them. Never drops 'unknown'")
     h.set_defaults(func=cmd_harvest)
 
     e = sub.add_parser("eval", help="Task 1: measure recall@30")

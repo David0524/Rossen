@@ -130,7 +130,9 @@ For beats that reference an event, company, or regulatory action rather than a n
 1. Run `yt-dlp --print id --print title "ytsearch5:COMPANY_OR_EVENT scam"`.
 2. These are almost always sourceable. Flag only if the event is very recent (within the last 2 weeks) and nothing surfaces.
 
-For vertical beats, also check YouTube Shorts: `yt-dlp --print id --print title --match-filter "duration<60" "ytsearch5:TOPIC #shorts"`.
+For vertical beats, also check YouTube Shorts: `yt-dlp --print id --print title --match-filter "duration<180" "ytsearch5:TOPIC #shorts"`. The ceiling is 180 seconds, not 60 — YouTube raised the Shorts limit to three minutes in October 2024, and the old value was silently dropping real Shorts.
+
+Two cautions on the results, both from the 2026-07-25 vertical smoke test. A hit here is **not** evidence the beat has vertical footage: every sub-60s YouTube result across nine Shorts queries on that beat was landscape local news. And the `#shorts` suffix underperforms — pair it with a `site:youtube.com/shorts TOPIC` web search, which constrains on the URL path and so cannot return a non-Short. Confirm orientation from pixels (`rossen_harvest.shorts.verify_orientation`) before recording `sourcability: high` on a vertical beat.
 
 ### Self-recorded beats: check the subject's own social first
 

@@ -72,3 +72,11 @@ against yt-dlp format tables. Worth folding into the harvest step.
 JS runtime); metadata still reachable via android_vr client. TikTok and Instagram
 media download fine. faster-whisper 1.2.1 installs and runs on CPU — the TikTok
 no-caption gap is closable here.
+
+**Patched 2026-07-25 (same session).** Both defects fixed in `shorts.py` +
+harvest wiring. Re-run on the same beat: the orientation gate verified 130
+YouTube candidates and dropped **106 as landscape (82% of the leg)**; the two
+YouTube picks that originally had to be found by hand now surface from the
+pipeline. `site:youtube.com/shorts` out-produced the `#shorts` suffix 18 to 1.
+Native-social yield unchanged at 0 tiktok / 0 instagram — that gap was not what
+was patched. See `runs/SMOKE_VERTICAL/report.md` addendum.

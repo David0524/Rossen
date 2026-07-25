@@ -153,3 +153,73 @@ authenticated scraper or a paid social-search API, exactly as the README states.
 | Instagram metadata + media | OK |
 | `faster-whisper` | **Installs and runs on CPU** — 1.2.1, verified end-to-end on the TikTok pick |
 | `BRAVE_API_KEY` | Present; both web and video endpoints live |
+
+---
+
+# Addendum — both defects patched and re-measured
+
+Patched in `harvest/rossen_harvest/shorts.py` (new), with wiring in
+`__main__.py`, `youtube.py` and `candidates.py`. Skill docs updated.
+
+## What changed
+
+1. **Shorts ceiling 60s → 180s**, and duration demoted to a pre-filter.
+   The authoritative format test is now `is_short()` — whether
+   `GET /shorts/<id>` returns 200 or redirects to `/watch`.
+2. **`site:youtube.com/shorts` added as a second Shorts leg**, run as a
+   synthetic `shorts_web` register on the Brave web endpoint. The `#shorts`
+   suffix leg is kept, not replaced; which one earns its budget is now an
+   eval question.
+3. **Pixel orientation gate** (`verify_orientation`) runs automatically over
+   YouTube candidates on vertical beats. `--drop-landscape` removes the
+   failures; `unknown` is never treated as a pass.
+4. **Bug found in the patch itself and fixed.** `harvest_beat` concatenated
+   registers before truncating to `--brave-cap`, so `shorts_web` landed at
+   the tail and ran zero queries. Job selection is now round-robin across
+   registers, so a cap starves every register evenly instead of starving the
+   last one entirely. Regression test added.
+
+## Re-run, same beat, same queries
+
+```
+before:  315 raw -> 244 deduped   news_web 117 · youtube 107 · reddit 20 · tiktok 0 · instagram 0
+after:   318 raw -> 141 deduped   news_web 108 · youtube  24 · reddit  9
+         orientation gate: 130 youtube candidates on vertical beats —
+           verified vertical 23 · landscape 106 · unknown 1 · served as Shorts 29
+```
+
+**106 of 130 YouTube candidates on this vertical beat were verified landscape
+and dropped — 82% of that leg.** Every one of them would previously have
+reached the grader as a nominally valid candidate for a vertical beat.
+
+## The result that matters
+
+Both YouTube picks in §3 — CTV News `ZVQPxS16At0` and `94SwHPegzDI` — were
+found **by hand, outside the pipeline**, in the original run. After the patch
+they surface **from the pipeline itself**, along with 21 other verified-vertical
+Shorts. The `shorts_web` register contributed 18 candidates; the `#shorts`
+suffix register contributed 1.
+
+That last ratio is the sharpest read on defect 2: on this beat the
+path-constrained web search out-produced the hashtag suffix 18 to 1.
+
+## What did not change
+
+Native-social yield is still **0 TikTok, 0 Instagram** from the pipeline. That
+gap is not what was patched and remains real — generic discovery of native
+TikTok/IG posts still needs an authenticated scraper or a paid social-search
+API. The two social picks in §3 still came from hand-run probes.
+
+Reddit dropped 20 → 9 and news_web 117 → 108 purely from the round-robin cap
+reshuffling which eight queries each Brave endpoint spends its quota on. Not a
+regression, but worth knowing the cap now spreads across five registers
+instead of concentrating in two.
+
+## Tests
+
+`python3 tests/test_shorts.py` — 50 tests, network stubbed, fixtures are the
+real videos from this run. Existing suites unchanged and passing: 33 offline,
+32 Brave, 24 transcripts, 16 vertical-transcribe.
+
+`shorts.py` was also validated against live network on all five smoke-test
+videos, and agrees with the yt-dlp format tables in both directions.

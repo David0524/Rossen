@@ -70,6 +70,44 @@ across both, and writes to `harvest.db`.
   vertical. **Vertical beats are no longer skipped** — Brave is their only
   search coverage.
 
+### Shorts and the orientation gate (`shorts.py`)
+
+Added 2026-07-25 after the vertical smoke test found two defects.
+
+**The Shorts duration ceiling was stale.** The pipeline gated on
+`duration < 60`, YouTube's limit until October 2024; it is now three
+minutes. `SHORTS_MAX_DURATION` is 180. Duration is only a pre-filter — the
+real test is `is_short()`, which checks whether `GET /shorts/<id>` returns
+200 or redirects to `/watch`. Nothing else can tell a 119-second Short from
+a 119-second normal upload.
+
+**The `#shorts` suffix underperformed.** Suffixed `ytsearch` queries matched
+description text rather than format and returned mostly landscape news
+packages. Beats that want Shorts now also run `site:youtube.com/shorts …`
+through the Brave web endpoint as a synthetic `shorts_web` register, which
+constrains on the URL path and cannot return a non-Short. Both legs run;
+which one earns its budget is a question for the eval.
+
+**Orientation is read from pixels, never from duration.** This is the
+vertical postmortem fix. `verify_orientation()` uses yt-dlp's format
+dimensions when available and otherwise the original-aspect-ratio thumbnail
+(`oardefault.jpg` / `oar2.jpg`) — a landscape video has no `oar` variant at
+all, so a 404 is the answer. It works when media bytes are blocked, which
+they were in the smoke-test environment. The harvest step runs the gate
+automatically over YouTube candidates on vertical beats:
+
+    --no-verify-orientation   skip the gate (offline work only)
+    --drop-landscape          remove verified-landscape candidates, not just flag them
+
+`unknown` is never treated as a pass, and `--drop-landscape` only removes
+candidates positively verified landscape — a network wobble must not
+silently shrink the funnel. TikTok and Instagram are not gated here: both
+serve landscape into portrait slots (the smoke test found a 640x360 clip on
+a `/reel/` URL) but probing them costs a media fetch, so it belongs in the
+grader's shortlist pass.
+
+    python3 tests/test_shorts.py    # 44 tests, network stubbed
+
 Brave needs `BRAVE_API_KEY` in the environment. Without it, the run prints
 a `DEGRADED` warning naming every beat that lost coverage and continues
 YouTube-only rather than failing. `--no-brave` forces YouTube-only

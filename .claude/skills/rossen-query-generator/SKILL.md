@@ -56,21 +56,50 @@ Tag Shorts candidates surfaced against a horizontal beat as `orientation: vertic
 
 **YouTube.** Tolerates long natural-language strings. Affiliates title predictably and index well, so news register plus role noun works: `retired police officer scammed PayPal`. This is the single highest-yield platform for the show and should get the most queries.
 
-**YouTube Shorts.** Same index as YouTube, different title conventions and a hard duration ceiling, so it is worth searching as its own platform rather than hoping Shorts fall out of a long-form query. They do not — long-form queries are noun-heavy and Shorts titles are not.
+**YouTube Shorts.** Same index as YouTube, different title conventions, so it is worth searching as its own platform rather than hoping Shorts fall out of a long-form query. They do not — long-form queries are noun-heavy and Shorts titles are not.
 
-Emit Shorts queries as explicit search strings so the harvest step can run them directly:
+**Two strategies run, not one.** The `#shorts` suffix alone is not enough, and on one measured beat it was actively harmful:
 
 ```bash
+# 1. suffixed search — the original strategy, kept
 yt-dlp "ytsearch30:<query> #shorts" \
-  --match-filter "duration < 60" \
-  --flat-playlist --dump-json
+  --match-filter "duration < 180" \
+  --dump-json
+
+# 2. path-constrained web search — added 2026-07-25, usually the better leg
+#    Brave web endpoint. Cannot return a non-Short, because it constrains
+#    on the URL path rather than on a hashtag in the description.
+site:youtube.com/shorts <query>
 ```
 
-Every Shorts query string carries the `#shorts` suffix and every Shorts query runs under `--match-filter "duration < 60"`. Without the filter the `#shorts` token alone leaks long-form uploads that merely mention Shorts in the description; without the suffix the duration filter leaves you searching all of YouTube and discarding 90% of it.
+`rossen_harvest.shorts.shorts_web_queries()` builds strategy 2, and the harvest step runs it automatically as a synthetic `shorts_web` register on the Brave web endpoint. You still emit plain strings under `shorts`; the routing is the harvest step's job.
 
-Two operational notes. `--flat-playlist` sometimes returns null durations, in which case the match filter silently passes everything — drop `--flat-playlist` for Shorts runs if the returned set looks long-form. And a 60-second ceiling is the format definition, not a quality signal; see the grader's triage rules.
+**Why strategy 2 exists.** On the gift-card vertical smoke test the suffixed search returned almost entirely landscape local-news packages plus off-topic craft videos ("how to remove sticker residue"), because `#shorts` matches description text, not format. Every on-topic Short for that beat was found by `site:youtube.com/shorts` instead. Which leg earns its query budget is now a question for the eval; do not assume the suffix does.
 
-Write them into the output as ordinary query strings under a `shorts` register. The suffix and the filter are the harvest step's job to apply, not something to bake into every string by hand.
+**The duration ceiling is 180 seconds, not 60.** YouTube raised the Shorts limit from 60 seconds to three minutes in October 2024. The pipeline gated on `duration < 60` until 2026-07-25 and it was silently dropping real Shorts — the best YouTube candidate for the gift-card beat, CTV News `ZVQPxS16At0`, is genuinely served at `/shorts/` and runs 119 seconds.
+
+**Duration is a pre-filter, never the test.** The authoritative check is whether the `/shorts/` URL resolves: `GET /shorts/<id>` returns 200 for a real Short and 3xx-redirects to `/watch` for an ordinary upload. `rossen_harvest.shorts.is_short()` does this. Duration cannot distinguish a 119-second Short from a 119-second regular upload, and a vertical 540x960 upload is not a Short just because it is portrait (`_RTe-ddhxoY` is exactly that case).
+
+One operational note: `--flat-playlist` frequently returns null durations, which makes the match filter silently pass everything. Treat a null duration as "cannot rule out", never as a drop — that is how real Shorts go missing.
+
+### Never infer orientation from duration
+
+This is the vertical postmortem bug and it is the single most important rule on this page. A sub-75-second YouTube video was once asserted vertical on duration alone and shipped a 1920x1080 landscape clip against a vertical beat.
+
+The smoke test reproduced it four ways in a single afternoon:
+
+| Video | Duration | Real dimensions | What the naive check concludes |
+|---|---|---|---|
+| `PNjdcz3eG9o` | 25s | **1280x720** | "short, so vertical" → ships landscape |
+| `oI05QvICQo8` | 21s | **1280x720** | same failure at 21 seconds |
+| `DSqkiUoD5eW` | 58s | **640x360** | on an Instagram `/reel/` URL — defeats duration **and** platform-name inference at once |
+| `_RTe-ddhxoY` | 80s | 540x960 | vertical, but `/shorts/` redirects — not a Short |
+
+Across nine Shorts-dialect queries, *every* sub-60s YouTube result was landscape. Local-news packages dominate that duration band and are uniformly 16:9, so on this material duration is not a weak orientation proxy — it is anti-correlated.
+
+Read orientation from pixels. `rossen_harvest.shorts.verify_orientation()` does it, and the harvest step runs it automatically over YouTube candidates on vertical beats (disable with `--no-verify-orientation`, drop the failures with `--drop-landscape`). When media bytes are unavailable it reads the original-aspect-ratio thumbnail (`oardefault.jpg` / `oar2.jpg`); a landscape video has no `oar` variant at all, so the 404 is itself the answer. "unknown" is never a pass.
+
+TikTok and Instagram need their own probe — both serve landscape video into portrait slots, as `DSqkiUoD5eW` shows — but that costs a media fetch, so it belongs in the grader's shortlist pass rather than at full harvest scale.
 
 **TikTok.** Short. Three to five words. Hashtags help, full sentences hurt. `#scamalert paypal`, `fake bill marketplace`. Search is caption-driven, so lead with the object and the emotion, not the mechanism. Distinct from the Shorts dialect: TikTok tolerates the mechanism as the object, Shorts wants the person and the feeling.
 
@@ -113,7 +142,10 @@ This role has its own lexicon that shares nothing with the others and it is wort
   },
   "shorts_search": {
     "suffix": "#shorts",
-    "match_filter": "duration < 60",
+    "web_prefix": "site:youtube.com/shorts",
+    "match_filter": "duration < 180",
+    "format_gate": "GET /shorts/<id> must return 200, not a redirect",
+    "orientation_gate": "pixels only — never duration",
     "surfaced_for": "horizontal"
   }
 }

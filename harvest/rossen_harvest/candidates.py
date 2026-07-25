@@ -45,6 +45,12 @@ class Candidate:
     duplicate_of: str | None = None      # video_id of the kept record
     also_found_by: list[str] = field(default_factory=list)
 
+    # Populated by the orientation gate (shorts.py), not by the fetcher.
+    # "vertical" | "landscape" | "unknown" | None (never checked).
+    # Read from pixels only. Nothing here may be inferred from duration.
+    orientation_verified: str | None = None
+    is_short: bool | None = None         # /shorts/ URL resolves; None = unchecked
+
     # ---- derived signals the grader reads -------------------------------
 
     @property
