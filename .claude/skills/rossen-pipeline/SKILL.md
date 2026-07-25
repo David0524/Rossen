@@ -354,6 +354,46 @@ Then call out, explicitly:
 - clips that failed to download
 - whether the run was degraded by a missing search key
 
+## Step 9 — Append to the beat yield log
+
+Every run, every beat — not just the failures. One row per beat, appended to
+**exactly this path**:
+
+```
+.claude/skills/rossen-beat-extractor/reference/beat_yield.md
+```
+
+Write the full path, not a bare `reference/beat_yield.md`. That ambiguity has
+already caused a real failure: a bare relative path resolved to a second file at
+the repo root, and for three runs the pipeline appended there while the copy that
+ships with the skill sat frozen an episode behind. The two then drifted into
+incompatible schemas with zero overlapping episodes before anyone noticed. The
+log lives inside the skill because that is what travels when the skill is
+deployed to an account; a copy at the repo root does not.
+
+Read the schema and outcome vocabulary from the log's own header rather than
+inventing columns — `PICK`, `WEAK`, `MANUAL`, `SWAP`, `SHOW-PRODUCED`, `EMPTY`,
+`CORRECTED`. If you need a new outcome value, add it to that header table in the
+same commit, so the next run inherits it instead of coining a synonym.
+
+Beyond the per-beat rows, log the things that only become visible across runs:
+
+- **Structural dead ends.** Vertical `evidence` has now gone 0-for-4 across two
+  episodes. That is the single most useful thing in this file — it tells the
+  script writer to stop writing beats that cannot be sourced, which is cheaper
+  than sourcing them well.
+- **Process bugs found and what fixed them**, with enough detail that a future
+  run recognizes the same symptom. Two of the three most costly errors in this
+  pipeline's history were diagnosis errors, not search failures: orientation
+  inferred from duration, and rate-limiting read as a hard IP block.
+- **Predictions the sourcability scan got right or wrong**, so its calibration
+  is measurable rather than assumed.
+
+`SHOW-PRODUCED` is not a failure and should never be logged as `EMPTY`. A beat
+correctly identified as un-sourceable *before* search ran is the sourcability
+scan working, and the log should show it that way or the scan will look worse
+than it is.
+
 ## Timing
 
 | Step | Expected |

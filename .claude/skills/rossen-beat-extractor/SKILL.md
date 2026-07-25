@@ -166,3 +166,22 @@ In the F2 pipeline run, three beats (b01, b04, b05) reached Checkpoint 3 as `fla
 When the script already contains aired URLs and timecodes, also emit `aired_url`, `aired_platform`, and a `segments` array of in/out/outcue objects. These rows are the eval set. The outcue phrase is the verification anchor for the timecode extractor: a correct out point is one where the outcue text appears in the Whisper transcript within about a second of the proposed timestamp.
 
 `reference/aired_examples.md` holds 24 worked beats from three episodes. Read it before extracting.
+
+`reference/beat_yield.md` is the other half of the calibration set, and it is the
+one that tells you what *not* to extract. It logs every beat of every past run
+with the outcome — whether a clip was actually found, and if not, why. Read it
+alongside `aired_examples.md`: that file shows you what a good beat looks like,
+this one shows you which shapes of beat have historically come back empty.
+
+The standing finding as of 08-07: **vertical `evidence` beats have yielded
+nothing in 4 of 4 attempts** across two episodes. When you are about to emit a
+vertical `evidence` beat, that is the moment to check whether the footage could
+plausibly exist off a phone somewhere, or whether the beat is really a
+screen-recording the show should produce itself. Flagging it `sourcability: none`
+at extraction costs nothing; discovering it after a full search and grade costs
+the whole downstream run.
+
+Append to that log at the end of every pipeline run — see `rossen-pipeline`
+Step 9 for the schema and the exact path. Do not append to a bare
+`reference/beat_yield.md` from a different working directory; that ambiguity has
+already split this log once.
