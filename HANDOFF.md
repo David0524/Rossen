@@ -1,32 +1,70 @@
 # Rossen Reports clip discovery system — handoff
 
-You are picking up a partially built system. This document is the complete context. Read it fully before doing anything.
+Read this fully before doing anything. It is the complete context for a new
+session.
+
+**Last updated 2026-07-24**, after the F2 08-07 run. If you are reading this and
+the newest directory in `runs/` is later than `F2_08072026`, this document is
+stale — trust the run's `report.md` and
+`.claude/skills/rossen-beat-extractor/reference/beat_yield.md` over anything here.
+
+---
+
+## 0. Start here — the 60-second version
+
+```bash
+# 1. You are probably NOT on the default branch. Check.
+git branch --show-current
+
+# 2. Deps are never preinstalled in a fresh container.
+pip install -r harvest/requirements.txt
+export PYTHONPATH="$(pwd)/harvest"
+
+# 3. pandoc is NOT installed. Use the zipfile fallback in the beat-extractor
+#    skill to convert a .docx. Do not waste a turn discovering this.
+
+# 4. Probe the network paths before trusting them. See §4.
+```
+
+To run the pipeline on a script: read
+`.claude/skills/rossen-pipeline/SKILL.md` and follow it. It is the orchestrator
+and it is current. This document is context; that document is the procedure.
 
 ---
 
 ## 1. What this system does
 
-Jeff Rossen hosts a live consumer-protection show. Every 30 to 40 minute episode contains 10 to 12 beats where Jeff reacts to a clip pulled from YouTube, TikTok, Instagram, Facebook, or Reddit. Clips are usually unpolished: a local news affiliate interviewing a scam victim, someone ranting in their car, doorbell cam footage, a screen recording of a scam text.
+Jeff Rossen hosts a live consumer-protection show. Every 30 to 40 minute episode
+contains beats where Jeff reacts to a clip pulled from YouTube, TikTok,
+Instagram, Facebook, or Reddit. Clips are usually unpolished: a local news
+affiliate interviewing a scam victim, someone ranting in their car, doorbell cam
+footage, a screen recording of a scam text.
 
-Finding those clips was manual. A producer read the script, guessed search terms, searched four platforms, watched candidates, found in and out points, logged sources, and handed the result to edit. Searching and timestamping consumed all the time.
+Finding those clips was manual. A producer read the script, guessed search terms,
+searched four platforms, watched candidates, found in and out points, logged
+sources, and handed the result to edit. Searching and timestamping consumed all
+the time.
 
-**This system automates that.** Script in, flagged clips with in and out points out.
-
-Going forward the show scripts arrive with clip placeholders and no clips. The system fills them. A human reviews, but Claude makes the initial pick.
+**This system automates the finding and the timecoding.** Script in, a picks
+manifest plus a filled Bible `.docx` out. A human reviews; Claude makes the
+initial pick.
 
 ### The core insight the design rests on
 
 The hard part is not video processing. It is vocabulary mismatch.
 
-A script says *romance scam targeting seniors through Facebook Messenger*. The clip that works on air is someone crying in their car saying *my mom sent forty thousand dollars to a guy who said he was deployed overseas*. Those share almost no words. Search the script's language and you get PSAs and explainers. Search the victim's language and you get the clip that airs.
-
-So the system generates queries in the register real people use, not editorial register.
+A script says *romance scam targeting seniors through Facebook Messenger*. The
+clip that works on air is someone crying in their car saying *my mom sent forty
+thousand dollars to a guy who said he was deployed overseas*. Those share almost
+no words. Search the script's language and you get PSAs. Search the victim's
+language and you get the clip that airs.
 
 ### Optimization target
 
-**Recall, not precision, at the harvest stage.** Thirty scannable candidates per beat, not the correct four. Precision is applied later by the grader, which has more information.
-
-No vision model culling of the funnel. No frame-level watching of every candidate. The expensive layer is reserved for the handful of clips that survive triage.
+**Recall, not precision, at harvest.** Thirty scannable candidates per beat, not
+the correct four. Precision comes later from the grader, which has more
+information. The expensive layer (transcripts) is reserved for the handful that
+survive triage.
 
 ---
 
@@ -36,125 +74,138 @@ No vision model culling of the funnel. No frame-level watching of every candidat
 
 | Component | Status |
 |---|---|
-| `rossen-beat-extractor` skill | Built, not yet validated on a live script |
-| `rossen-query-generator` skill | Built, **never measured** — see §6 |
-| `rossen-clip-grader` skill | Built, not yet validated |
-| `parse_beats.py` | Working. Extracts beat/clip pairs from past scripts |
-| `beats.json` | 26 clip rows across 24 beats from 3 episodes. Ground truth |
-| `rossen_eval_worksheet.csv` | Eval scaffold, one column unfilled |
+| `rossen_harvest` search | **Working.** Three surfaces: YouTube long-form, YouTube Shorts, Brave (web + video). Dedupes across all. SQLite cache, 2-week TTL |
+| `transcripts.py` | **Working.** Caption fetch via yt-dlp, no media download. `fetch_many` takes **bare video IDs**, not URLs |
+| `vertical_transcribe.py` | Built, **never successfully run** — needs media bytes, which are blocked here. See §4 |
+| `dedupe.py` | Working. Fuzzy title match within platform, keeps earliest upload |
+| 4 skills in `.claude/skills/` | All exercised across three real runs |
+| `rossen-script-writer` | In repo as of 2026-07-24; previously account-only |
+| Test suite | **128 pass.** Plain scripts, not pytest — run `python3 harvest/tests/<f>.py` |
 
-### Not built
+`python3 -m rossen_harvest --help` lists exactly two subcommands: `harvest`
+(alias `search`) and `eval`. Nothing else exists.
+
+### Not built — do not claim otherwise
 
 | Component | Notes |
 |---|---|
-| YouTube harvest | yt-dlp → SQLite → Airtable. **Build this next** |
-| Airtable push | Schema decided, see §5 |
-| Timecode extraction pipeline | Download, Whisper, PySceneDetect, write back |
-| Web search leg | Needed for `authority_report` beats, see §7 |
-| `clearance-triage` skill | Sorts flagged clips into fair use / needs permission / licensed / hard no |
-| `pull-sheet-writer` skill | Approved set out to edit's document format |
-| `post-mortem-analyzer` skill | Aired episode + candidate pool in, eval set out |
+| **Download-and-cut** | **There is no `clip` subcommand.** No code downloads video or trims it. Step 7 is a hand-written manifest, a handoff to the edit bay. Never say clips were pulled or cut |
+| FCPXML export | No writer exists |
+| Airtable push | Schema decided (§5), never built |
+| PySceneDetect timecode snap | Not built. Timecodes come from caption cue boundaries, padded |
+| Authenticated social scraper | The remaining real gap. Brave cannot reliably surface a native TikTok/IG post for a generic query |
+| `clearance-triage`, `pull-sheet-writer`, `post-mortem-analyzer` skills | Never built |
+
+### Runs completed
+
+`runs/F2_07292026`, `runs/F2_08052026`, `runs/F2_08072026`. Each carries
+`beats.json`, `candidates.json`, `shortlist.json`, `picks.json`,
+`clips/manifest.json`, `report.md`, and a filled Bible `.docx`. Read the newest
+`report.md` for what actually happened most recently.
 
 ---
 
-## 3. Install
+## 3. Branches — read before committing
 
-```bash
-mkdir -p ~/rossen-clips/.claude/skills
-cd ~/rossen-clips
-# copy the three skill folders into .claude/skills/
-# copy parse_beats.py, beats.json, rossen_eval_worksheet.csv into the repo root
-```
+Work has been happening on feature branches, **not** the default branch.
+`claude/rossen-pipeline-script-hcflp6` carried the 08-05 and 08-07 work and is
+currently furthest ahead. `claude/rossen-pipeline-run-id57xe` is kept
+fast-forwarded to match.
 
-Resulting layout:
-
-```
-~/rossen-clips/
-├── .claude/skills/
-│   ├── rossen-beat-extractor/
-│   │   ├── SKILL.md
-│   │   └── reference/aired_examples.md
-│   ├── rossen-query-generator/
-│   │   ├── SKILL.md
-│   │   └── reference/glossary.md
-│   └── rossen-clip-grader/
-│       └── SKILL.md
-├── parse_beats.py
-├── beats.json
-└── rossen_eval_worksheet.csv
-```
-
-Skills are filesystem-based in Claude Code; no upload step. Project skills load from `.claude/skills/` in the starting directory and every parent up to the repo root, so start Claude Code from `~/rossen-clips`.
-
-**Restart Claude Code once after creating a brand-new top-level skills directory** — it needs a restart before it watches the folder. After that, edits to any `SKILL.md` take effect inside a running session.
-
-Verify: `ls .claude/skills/*/SKILL.md` should list three files.
-
-### Dependencies
-
-```bash
-brew install ffmpeg
-python3 -m venv .venv && source .venv/bin/activate
-pip install yt-dlp pyairtable faster-whisper scenedetect pillow anthropic opentimelineio
-```
-
-Playwright and stealth patching are deliberately deferred. Scraped platforms are the most fragile piece and the smallest share of volume.
+Confirm with `git log --oneline -5` and `git branch -r` before assuming. If the
+branch you were assigned has an already-merged PR, start fresh from the default
+branch rather than stacking on merged history.
 
 ---
 
-## 4. The pipeline
+## 4. Environment realities — verify, do not assume
 
-```
-finalized script (.docx, clip placeholders empty)
-  │
-  ├─ 1. BEAT EXTRACTOR (skill)
-  │     → beat records: role, orientation, visual_spec, news_anchor, priority
-  │
-  ├─ 2. QUERY GENERATOR (skill)
-  │     → 4 registers × 6-10 queries, platform-tagged
-  │
-  ├─ 3. HARVEST (code, NOT BUILT)
-  │     yt-dlp --flat-playlist --dump-json "ytsearch30:{query}"
-  │     → metadata + thumbnail only, no video bytes
-  │     → normalize, dedupe, cache to SQLite, push to Airtable
-  │
-  ├─ 4a. CLIP GRADER pass 1 (skill)
-  │     metadata triage, 30 → 5
-  │
-  ├─ 4b. download + Whisper transcribe the 5 (code, NOT BUILT)
-  │
-  ├─ 4c. CLIP GRADER pass 2 (skill)
-  │     tone/authenticity/quality/fit → flag one, propose in/out + outcue
-  │
-  ├─ 5. TIMECODE SNAP (code, NOT BUILT)
-  │     PySceneDetect shot boundaries, snap in/out in CODE not in the model
-  │
-  └─ 6. write back to Airtable → export FCPXML/EDL via opentimelineio
-```
+This is the section that saves the most time, and every item was learned the
+hard way.
 
-**Note the transcription moved.** The original design transcribed only after a human flagged a clip. Because Claude now does the flagging, transcription happens on the top five *before* the flag decision. Consequence: the timecode extractor no longer needs to transcribe, the transcript already exists. Do not build it twice.
+**`pandoc` is not installed.** The beat-extractor skill has a `zipfile` +
+`ElementTree` fallback for `.docx`. Use it directly.
+
+**Deps are not preinstalled and no pip cache carries over.** Run
+`pip install -r harvest/requirements.txt` every fresh session. `ffmpeg` is a
+system binary and *is* present — check separately, it is not pip-installable.
+
+**`export PYTHONPATH="$(pwd)/harvest"`** or `import rossen_harvest` fails.
+
+**Network paths fail independently, and the preflight's import checks prove
+nothing about them.** Measured 2026-07-24:
+
+| Path | State |
+|---|---|
+| YouTube search (`--flat-playlist`) | ✅ works |
+| YouTube captions (per-video page) | ✅ works — but throttles easily, see below |
+| YouTube **media bytes** (incl. `-f bestaudio`) | ❌ blocked |
+| Direct YouTube page fetch (WebFetch) | ❌ bot-walled, redirects to `/sorry` |
+| TikTok | ❌ "Your IP address is blocked" |
+| Brave API | ✅ HTTP 200 — but test the key, presence ≠ authorization |
+
+**The throttle-vs-block trap.** Rate limiting and a real block return the
+*identical* "Sign in to confirm you're not a bot" string. In this run a rapid
+diagnostic burst — a dozen `--list-subs` calls in two minutes, several looping
+over player clients — drove captions to **0 of 6** on IDs a prior run had
+captioned fine. It looked exactly like a hard IP block. Twenty minutes later the
+normal `fetch_many` path returned **11 of 12**. Nothing was fixed; the burst had
+tripped a limiter.
+
+So: probe **once** per path, never in a loop, never iterate
+`player_client` as a first move (that iteration is what trips it). If a probe
+fails, wait several minutes and retry through the real code path before
+concluding anything. Calling a throttle a block costs a whole run — it converts
+every pick to an unverified outcue and pushes the producer toward a degraded
+deliverable they never needed to accept.
+
+**Whisper's reach equals your media access, and no wider.** It transcribes bytes
+something else must fetch. With YouTube media and TikTok both blocked,
+`vertical_transcribe.py` has zero reachable sources and should not be planned
+around. It is correct code that this environment cannot exercise.
 
 ---
 
 ## 5. Decisions already made — do not relitigate
 
-**Script is always upstream and finalized.** Clips never drive the script. Never infer that a clip existed first.
+**Script is always upstream and finalized.** Clips never drive the script. Never
+infer that a clip existed first.
 
-**Orientation is a hard constraint, not a hint.** Scripts mark `(((PLAY CLIP XXX HORIZONTAL)))` or `VERTICAL`. This is producer-authored and predicted the platform correctly in 26 of 26 observed cases. Horizontal resolved to YouTube or a news site every time. Vertical resolved to TikTok or Facebook every time. Horizontal beats never search TikTok.
+**Orientation is a hard constraint, not a hint.** Producer-authored, and
+predicted the platform correctly in 26 of 26 observed cases. Horizontal beats
+never search TikTok. **One deliberate exception:** a YouTube Short surfaced
+against a horizontal beat carries `surfaced_for: horizontal` and is scored, not
+auto-failed — the framing question goes to a human. Shorts run on *both*
+orientations.
 
-**No city in the news register.** Affiliates carry national wire packages, so the affiliate that surfaces is usually nowhere near the event. The first aired clip in the sample is an `everythinglubbock.com` URL about a Southern California couple. Search the story, not the location.
+**No city in the news register.** Affiliates carry national wire packages, so the
+affiliate that surfaces is usually nowhere near the event. Search the story, not
+the location.
 
-**Four registers, not three.** News, victim, platform, plus an **anchor** register added during build: the literal proper nouns from the beat. `Temu $232 million fine`. `Maryland dynamic pricing ban`. Several beats exist only because a dated event happened, and one anchor query almost certainly outperforms any amount of victim-register phrasing on those.
+**Four registers.** news, victim, platform, anchor. Anchor is the literal proper
+nouns and is the highest-hit-rate single query on dated-event beats.
 
-**Seven clip roles, not four.** The original taxonomy was `rant / victim_interview / evidence / explainer_demo`. Tagging the real data added three: `confrontation_bust` (Rossen loves the bust; at least 5 of 26), `authority_report` (network/wire coverage of a development), and `debunk` (viral claim disproven; inverted search). `explainer_demo` also splits into `creator_short` (vertical, 15-60s) and `creator_long` (horizontal, multi-minute) because they share no platform or query syntax.
+**Seven clip roles.** `victim_interview`, `confrontation_bust`, `evidence`,
+`explainer_demo` (splitting `creator_short` / `creator_long`), `authority_report`,
+`debunk`, `first_person_rant`.
 
-**Airtable schema.** Two tables minimum, Beats and Candidates, linked. Thumbnail as an attachment field passed as a URL so Airtable hosts it. Gallery view grouped by beat, sorted by score. Status single select: New / Flagged / Rejected / Approved.
+**A candidate can have many segments.** Four of 24 aired beats were butt-cuts
+pulling 2–3 slices from one source. A `BUTT` marker in the script means the
+segments above and below come from the **same source** — prefer one source cut
+twice over two sources.
 
-**A candidate can have many segments.** Four of 24 aired beats were butt-cuts pulling 2 to 3 slices from one source. The Airtable schema and the FCPXML export both need one-to-many between candidate and timecode. This is normal, not an edge case.
+**The outcue is the verification anchor, and it is never invented.** Every
+proposed segment carries a verbatim transcript quote from the out point, verified
+with `Transcript.find()` — not by eye. If you cannot find the phrase, your
+timecode is wrong. If no transcript is reachable, ship the pick with **no**
+outcue and flag it unverified. An honest gap beats a fabricated quote.
 
-**Timecode arithmetic happens in code, never in the model.** The grader reports transcript timestamps; PySceneDetect snaps them to shot boundaries so clips do not start mid-shot.
+**Timecode arithmetic happens in code, never in the model.** Report the
+timestamps the transcript gives you.
 
-**The outcue is the verification anchor.** Every proposed segment carries a verbatim transcript quote from the out point. A correct out point is one where that phrase appears in the Whisper transcript within about a second of the proposed timestamp. This is the show's own convention — past scripts write `:38-2:01 (THIS IS WHAT THE SCAMMERS DID)` — so there are 24 worked examples to calibrate against.
+**Airtable schema (unbuilt but decided).** Beats and Candidates tables, linked.
+Thumbnail as attachment passed by URL. Gallery grouped by beat, sorted by score.
+Status: New / Flagged / Rejected / Approved.
 
 ---
 
@@ -167,79 +218,143 @@ Be honest about this distinction. It determines what to trust.
 | Finding | Value |
 |---|---|
 | Aired segment length | median 67s, IQR 50–95s, range 10–161s |
-| Total airtime per beat | median 88s, range 26–166s |
-| First in-point, horizontal | median 34s |
-| First in-point, vertical | median 0s |
+| Total airtime per beat | median 88s |
+| First in-point, horizontal | median 34s (anchor toss + standup always cut) |
+| First in-point, vertical | median 0s (hook is front-loaded) |
 | Orientation → platform accuracy | 26 of 26 |
-| Source mix | roughly 70% YouTube/news, 30% social |
 
-The in-point finding is counterintuitive and worth internalizing: news packages open with an anchor toss and reporter standup that gets cut every time, so the usable material starts about half a minute in. A horizontal candidate whose first 30 seconds are generic is a normally structured news package, not a weak clip. Intuition says the opposite.
+The horizontal in-point finding is counterintuitive and worth internalizing: a
+candidate whose first 30 seconds are generic is a normally structured news
+package, not a weak clip.
+
+### Measured from one recall@30 eval (horizontal/YouTube, n=8 testable)
+
+**recall@30 = 0.889.** Median best-rank 1.
+
+| register | found it | found it first | uniquely found it |
+|---|---|---|---|
+| platform | 8 | 2 | **1** |
+| news | 6 | 4 | 0 |
+| anchor | 5 | 2 | 0 |
+| victim | **0** | 0 | 0 |
+
+`platform` is the workhorse even on YouTube. `victim` contributed **nothing** on
+horizontal/YouTube — but it was theorized to matter on vertical, which this eval
+never tested. Treat it as unproven, not disproven.
+
+### Measured across three pipeline runs
+
+**Vertical `evidence` beats have yielded nothing in 4 of 4 attempts.** This is
+the strongest structural finding in the system and it argues for catching those
+beats at extraction rather than after a full search. Neither of the two
+previously-split yield logs showed this alone — it only appeared on merging them.
 
 ### Assumed, never validated
 
-- **Every query in the query generator.** The registers are structurally sound and the vocabulary is drawn from real scripts, but not one query has been run against a live search engine. The build environment had no network access to YouTube.
-- **The per-role register weighting table** in the query generator. Inferred from 26 rows. Most likely thing to be wrong.
-- **The tone section of the clip grader.** Written from reading three scripts. It asserts the show is consumer-protective and sympathetic to the victim, never sneering at the person who got scammed, with a hard rule against scambaiting content that mocks the caller. If Jeff's real register is more aggressive toward scammers, this section produces quietly wrong picks rather than obviously wrong ones. **Ask the user to confirm.**
-- **The glossary.** Starter entries only. It drifts and needs updating from every post-mortem.
+- **The per-role register weighting table.** Inferred from 26 rows. Most likely
+  thing to be wrong.
+- **The tone section of the clip grader.** Written from reading three scripts.
+  Asserts the show is sympathetic to victims and never sneering, with a hard rule
+  against scambaiting that mocks the caller. If Jeff's real register is more
+  aggressive toward scammers, this produces quietly wrong picks rather than
+  obviously wrong ones. **Worth confirming with the user.**
+- **The glossary.** Starter entries. Update it from every post-mortem.
 
 ---
 
-## 7. Known gaps
+## 7. Skills: the repo is the source of truth
 
-**`authority_report` beats will not surface through `ytsearch30:`.** The Temu fine clip in the sample lived on `today.com`. Network news video often sits on the network's own site, not YouTube. These beats need a web search leg alongside the yt-dlp harvest. Architectural decision still open.
+The five Rossen skills exist in **two** places and they drift:
 
-**Vertical platform harvest is unbuilt.** TikTok, Instagram, and Facebook need Playwright with a logged-in persistent context, saved session state, randomized dwell, and possibly a residential proxy. Roughly 30% of volume and 100% of the fragility. Wrap each platform behind a common interface so a broken scraper returns zero results instead of crashing the run. Deliberately last.
+- `.claude/skills/` in this repo — **canonical**. Version history, diffs, commit
+  messages explaining the measurement behind each change.
+- The user's Claude account — a **deployment target**. Skills sync down into a
+  session (account IDs in `~/.claude/skills/manifest.json`). No history, no diff,
+  no way to tell which of two copies is newer.
 
-**Duplicate wire packages within YouTube.** The same affiliate package appears on dozens of Nexstar and Sinclair channels with near-identical titles. This is a *within-platform* collision, so cross-platform fuzzy title matching will not catch it. Dedupe by fuzzy title inside YouTube and keep the earliest upload date, which is usually the originating station and matters for clearance.
+As of 2026-07-24 the account copies had drifted *behind* the repo and carried
+**no `reference/` folders at all** — while three skills instruct the reader to
+read `reference/aired_examples.md` or `reference/glossary.md`. A skill pointing at
+a missing file degrades silently: the model proceeds uncalibrated rather than
+erroring.
 
-**yt-dlp rate limiting.** 30 results × 4 registers × 24 beats is a lot of requests. Cap concurrency around 5 and cache to SQLite keyed on query string — the eval will be re-run many times while tuning and there is no reason to re-hit YouTube for a scored query.
+Edit here, commit, rebuild `dist/skills/*.zip` (script in
+`dist/skills/README.md`), re-upload. **Never edit in the account and expect it to
+come back.**
 
----
+### The yield log has exactly one canonical path
 
-## 8. First tasks, in order
-
-### Task 1 — Measure the query generator
-
-This is the highest-value unblocked work. Nothing downstream should be trusted until it is done.
-
-For each row in `rossen_eval_worksheet.csv`, read `.claude/skills/rossen-query-generator/SKILL.md`, generate queries in all four registers, run each through:
-
-```bash
-yt-dlp --flat-playlist --dump-json "ytsearch30:{query}"
+```
+.claude/skills/rossen-beat-extractor/reference/beat_yield.md
 ```
 
-Check whether the video ID in the `url` column appears in the results. Write back which register hit, at what rank, and on which exact query string. Report hit rate by register and by clip role.
+Append there and nowhere else. A bare `reference/beat_yield.md` used to resolve
+to a second file at the repo root; three runs appended to that one while the copy
+shipping with the skill sat an episode behind, and the two drifted into
+incompatible schemas with zero overlapping episodes. They are now merged, the old
+path holds a pointer stub, and `rossen-pipeline` Step 9 documents the full path.
+Do not restart that split.
 
-About 18 of 26 rows are YouTube and resolvable this way. The 8 vertical rows need manual searching by the user.
+---
 
-**Interpretation:** above 70% hit rate, the query generator is good enough to build the harvest on. Below 50%, fix the glossary first. Whatever the number, the per-register breakdown replaces the assumed weighting table with measured weights.
+## 8. Open items, in rough priority order
 
-### Task 2 — Build the YouTube harvest
+**1. The Shorts fix is unexercised against a live vertical beat.** Vertical beats
+previously never reached the YouTube backend at all, so their `shorts` register
+ran nowhere. Fixed 2026-07-24 with `ShortsBackend`, and it contributed 56
+candidates — but only against *horizontal* beats, because 08-07's single vertical
+beat went show-produced. The next script with a live vertical beat should confirm
+it end to end.
 
-yt-dlp → normalize to a common Candidate shape → dedupe → SQLite cache → Airtable push.
+**2. `victim` register is untested on vertical.** It scored zero on
+horizontal/YouTube. Vertical is where it was theorized to matter. An eval there
+would either justify its query budget or free it up.
 
-Candidate shape: `platform, url, title, thumbnail_url, duration, published, views, uploader, query_that_found_it, register, beat_id`.
+**3. The diversity floor promoted a loser twice in one run** (b01 GeekSpin over
+News4JAX; b04 Duluth PD over NBC10). Per the grader skill, if that repeats across
+episodes the upstream hard filters need a look, not the floor. Watch it.
 
-### Task 3 — Wire the grader
+**4. Native social posts remain unreachable.** Brave finds the press coverage that
+*points at* a named person's own post, which is the self-recorded workflow, but it
+will not reliably surface a native TikTok/IG post for a generic query. Closing
+this needs an authenticated scraper. Deliberately last: ~30% of volume and 100%
+of the fragility.
 
-Pass one on harvested metadata, download and transcribe the top five, pass two, write flag and proposed segments back to Airtable.
-
-### Task 4 — Timecode snap and export
-
-PySceneDetect boundaries, snap in code, export FCPXML or EDL with opentimelineio so the editor imports timecodes instead of retyping them.
-
-### Then
-
-`post-mortem-analyzer` is the highest-leverage remaining skill: it turns each aired episode into eval data that tunes the grader's weights and the query generator's registers. `clearance-triage` may be more urgent depending on how legal review currently works — ask.
+**5. F2 08-07 b04 vintage is unconfirmed.** The CBS clip is an exact case match
+but the script flags it as a 2024 package and the page exposed no publication
+date.
 
 ---
 
 ## 9. Working style
 
-The user is direct and technically capable. Match it.
+**Diagnose before repairing.** Zero candidates for a beat is a query problem, not
+a search problem. Re-query before concluding a case is unsourceable — and when
+you do conclude it, say which queries you ran.
 
-- No sugar coating. Say what is broken.
-- Distinguish measured from assumed, every time. The value of this system is that its parameters came from real data, and that value evaporates the moment inference gets presented as measurement.
-- Do not relitigate §5.
-- When something cannot be validated in the current environment, say so plainly rather than shipping unearned confidence.
-- Avoid the term "cross-functional." Avoid em dashes.
+**Stop at the checkpoints.** After beats and queries, before search. Before any
+repair proposal touches the script. A case swap changes what Jeff says on air;
+that is the producer's call, never a silent fix.
+
+**An honest gap beats a bad pick.** A wrong flagged clip gets discovered in the
+edit bay, which costs more than an empty beat discovered at the contact sheet.
+`SHOW-PRODUCED` is not a failure and must never be logged as `EMPTY` — a beat
+correctly identified as unsourceable *before* search ran is the sourcability scan
+working.
+
+**Say what actually happened.** No clips are downloaded or cut by this pipeline.
+Report per-platform counts as printed. If a stage runs long, say so. If you were
+wrong earlier in the session, correct it plainly and move on — one run here
+misdiagnosed a throttle as a block, and saying so was more useful than defending
+it.
+
+**Run the tests.** 128 pass. They are plain scripts, run individually:
+
+```bash
+for t in harvest/tests/*.py; do python3 "$t"; done
+```
+
+Do **not** reach for pytest. It collects zero tests (there are no `test_`
+functions — each file is a script with a `check()` helper) and dies with
+`caught unexpected SystemExit` on the module-level `sys.exit`. A green pytest run
+here would mean nothing ran.
