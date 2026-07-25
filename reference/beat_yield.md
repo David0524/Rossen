@@ -21,7 +21,7 @@ Both have been merged into the canonical file; nothing was dropped.
 
 The cause was an ambiguous relative path: "append every beat to
 `reference/beat_yield.md`" resolved here or there depending on the working
-directory, and no skill documented which was meant. `rossen-pipeline` Step 8 now
+directory, and no skill documented which was meant. `rossen-pipeline` Step 9 now
 names the full path explicitly. This stub stays so that anyone (or any model)
 reaching for the old path gets redirected instead of silently starting a third
 divergent copy.

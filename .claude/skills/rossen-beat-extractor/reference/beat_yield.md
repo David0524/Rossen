@@ -204,4 +204,4 @@ to be working. The two schemas then drifted independently — this file used
 Fixed by merging both into this file under the unified schema above (nothing
 dropped; `LOCATED` normalized to `MANUAL`, `OK` to `PICK`), leaving a pointer
 stub at the old root path, and documenting the log explicitly in
-`rossen-pipeline` Step 8 with this exact path.
+`rossen-pipeline` Step 9 with this exact path.
