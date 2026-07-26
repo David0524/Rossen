@@ -1,0 +1,44 @@
+[
+  {
+    "beat_id": "ATOZ-b01",
+    "flagged": "https://abc7.com/post/socal-woman-asks-for-help-after-spending-12k-on-tiny-home-that-never-arrived/15409472/",
+    "title": "SoCal woman asks for help after spending $12K on a tiny home that never arrived — 7 On Your Side, Rob McMillan (ABC7 / KABC Los Angeles)",
+    "platform": "news_web",
+    "source_type": "affiliate",
+    "youtube_twin": "https://www.youtube.com/watch?v=IMYRcyELM5s",
+    "youtube_twin_note": "KVUE (TEGNA) carried a 69s cutdown of the same story. The ABC7 original is the full 2:47 package and is the one to use.",
+    "media_source": "https://cmp-abcotv.media.dssott.com/opp/hls/abcotv/shortform/kabc/2024/10/09/100924-kabc-4p-amazon-tiny-homes-vid/playlist.m3u8",
+    "transcript_source": "whisper (faster-whisper base.en) on ABC7's own HLS stream — YouTube is bot-walled in this environment",
+    "duration": 166.7,
+    "subject": "Pam Skinner, Menifee CA",
+    "segments": [
+      {
+        "in": "0:22",
+        "out": "1:55",
+        "outcue": "and I was denied twice",
+        "outcue_verified": true,
+        "outcue_cue_time": "1:49.76",
+        "covers": "the mailbox absurdity cold open, $12,000 out of pocket, the tiny home bought for her 87-year-old mother, the bogus USPS tracking, and the denial"
+      }
+    ],
+    "optional_segments": [
+      {
+        "in": "2:12",
+        "out": "2:23",
+        "outcue": "issue a full refund",
+        "outcue_verified": true,
+        "outcue_cue_time": "2:17.20",
+        "covers": "the payoff — Amazon reverses and issues a full refund once a reporter calls",
+        "why_optional": "Deliberately ends BEFORE 2:26, where Skinner thanks 'especially Channel 7' by name. Airing that credits a competitor on Jeff's show."
+      }
+    ],
+    "scores": {"tone": 9, "authenticity": 9, "quality": 8, "fit": 9, "total": 88},
+    "reasoning": "This is the beat's exact turn, on camera, from the person it happened to. The script says 'BUT PEOPLE GET DENIED. AND WHEN THEY GET DENIED, THEY GIVE UP. ESCALATE IT.' Skinner says 'I appealed twice and I was denied twice' — then escalated and got paid in full. Third-party Amazon purchase, item never arrived, which is precisely what the script says A-to-Z covers. The mailbox detail (a 6,000-pound container home marked delivered into a mailbox) is the kind of concrete absurdity Rossen leads with.",
+    "flags": [
+      "The clip never says the words 'A-to-Z Guarantee' — it says 'appealed' and 'denied'. Local news almost never uses Amazon's brand name for the process. Jeff's setup carries the term; the clip carries the experience. Fit 9 not 10 for that reason.",
+      "Whisper renders 'appealed' as 'peeled' at 1:43 ('I mean, I peeled twice'). Transcription artifact — the audio says appealed. Do not quote the transcript file on air.",
+      "Her resolution came from a TV station calling Amazon, not from the written escalation the script recommends. Adjacent, not identical — worth a beat of thought on the setup line.",
+      "She paid by debit card, which the script does not mention and which weakens dispute rights. Do not let the setup imply credit card."
+    ]
+  }
+]

@@ -133,3 +133,35 @@ LOCATED.
 (all player clients; mweb needs a PO token for subs, tv returns DRM). Brave key
 present. faster-whisper working. Two documented CLI stages (`captions`, `clip`)
 were missing and were built during this run.
+
+## Run AMAZON_ATOZ (single beat, Amazon A-to-Z Guarantee)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| ATOZ-b01 | victim_interview | H* | PICK | ABC7/KABC 7 On Your Side 0:22-1:55 "and I was denied twice" (Pam Skinner, Menifee, $12K tiny home never arrived); transcript via ABC7's own HLS stream + Whisper |
+
+*Orientation assumed, not producer-authored — the excerpt carried no PLAY CLIP marker.
+
+**Pattern — "scam" is a poisoned token on retailer beats.** The first pass on this
+beat returned 732 candidates and almost nothing usable, because "Amazon refund
+scam" is overwhelmingly the phishing-text story, not the denied-claim story.
+Dropping "scam" and leading on the outcome shape (denied → escalated → paid)
+turned it around. Add to the glossary: for retailer dispute beats, search the
+resolution, not the crime.
+
+**Pattern — the investigative-franchise register earned its place again.** A
+dedicated `franchise` register ("7 On Your Side", "Call for Action",
+"Troubleshooters", "2 On Your Side", "Contact 13", "Action 9") is what put the
+pick's neighbourhood in reach. This is the second run where the franchise
+register was decisive; it is currently documented only as a note in the glossary
+and should probably be promoted to a first-class register in the generator.
+
+**Thin beat, honestly.** 953 candidates on the good pass, of which only 11 were
+affiliate and on-topic. The shape the script asks for — a woman, on camera,
+explicitly denied — is rare. Most Amazon-refund video is phishing coverage or
+seller-side tutorials.
+
+**Fit caveat worth remembering:** no local package says the words "A-to-Z
+Guarantee." Consumer desks say "appealed" and "denied." When a beat is built
+around a brand-name process, expect the clip to carry the experience and the
+script to carry the term.

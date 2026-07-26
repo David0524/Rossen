@@ -1,0 +1,18 @@
+{
+  "clips": [
+    {
+      "beat_id": "ATOZ-b01",
+      "segment": 1,
+      "file": "ATOZ-b01_seg1.mp4",
+      "in": "0:21.00",
+      "out": "1:56.50",
+      "in_unpadded": "0:22",
+      "out_unpadded": "1:55",
+      "outcue": "and I was denied twice",
+      "outcue_verified": true,
+      "source": "https://abc7.com/post/socal-woman-asks-for-help-after-spending-12k-on-tiny-home-that-never-arrived/15409472/",
+      "butt_with": null
+    }
+  ],
+  "failed": []
+}

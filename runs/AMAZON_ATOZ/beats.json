@@ -1,0 +1,95 @@
+[
+  {
+    "beat_id": "ATOZ-b01",
+    "episode": "AMAZON-ATOZ",
+    "segment_title": "WHEN AMAZON SAYS NO \u2014 THE A-TO-Z GUARANTEE",
+    "script_text": "MOST OF WHAT YOU BUY THERE ISN'T SOLD BY AMAZON \u2014 IT'S SOLD BY THIRD-PARTY SELLERS. / AMAZON HAS SAID MORE THAN 60% OF SALES IN ITS STORE COME FROM INDEPENDENT SELLERS. / SO WHEN IT GOES WRONG, PEOPLE GET BOUNCED BETWEEN AMAZON AND A SELLER WHO WON'T ANSWER. / THAT'S WHAT THE A-TO-Z GUARANTEE IS FOR. YOU FILE IT THROUGH YOUR ORDERS PAGE. / AND AMAZON DECIDES THE CLAIM \u2014 NOT THE SELLER WHO TOOK YOUR MONEY. / IT COVERS ITEMS THAT NEVER ARRIVED, AND ITEMS THAT ARRIVED DAMAGED OR NOTHING LIKE THE LISTING. / BUT PEOPLE GET DENIED. AND WHEN THEY GET DENIED, THEY GIVE UP. / ESCALATE IT. PUT IT IN WRITING. / LISTEN TO WHAT HAPPENED TO HER.",
+    "orientation": "horizontal",
+    "orientation_note": "ASSUMED, not producer-authored. The excerpt carries no (((PLAY CLIP XXX ...))) marker, so there is no orientation ground truth. victim_interview defaults horizontal (affiliate package). If the marker in the full script says VERTICAL, re-run \u2014 the platform list changes.",
+    "clip_role": "victim_interview",
+    "news_anchor": "Amazon A-to-Z Guarantee claim denied third-party seller refund",
+    "visual_spec": "woman on camera at home showing the item or her Amazon orders page on a phone/laptop, consumer-desk interview setup with lower-third",
+    "platforms": [
+      "youtube",
+      "shorts",
+      "news_web"
+    ],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "sourcability": "unchecked",
+    "sourcability_note": "No named subject in the beat \u2014 the sourcability scan's named-person path does not apply. This is a generic search for any affiliate package featuring a woman denied an A-to-Z claim, which is harder than a name lookup and is the main risk on this beat.",
+    "queries": {
+      "anchor": [
+        "Amazon A-to-Z Guarantee claim denied",
+        "A-to-Z guarantee denied appeal",
+        "Amazon third party seller never shipped refund denied"
+      ],
+      "news": [
+        "woman gets refund after Amazon denied her claim",
+        "Amazon reverses denial customer gets money back",
+        "Amazon order never arrived seller wont respond refund",
+        "customer out hundreds after Amazon denies claim",
+        "Amazon marketplace seller took her money no refund",
+        "she filed an A-to-Z claim and Amazon denied it",
+        "Amazon says package delivered but she never got it refund denied",
+        "woman fights Amazon for refund third party seller"
+      ],
+      "franchise": [
+        "7 On Your Side Amazon refund",
+        "Call for Action Amazon refund",
+        "Troubleshooters Amazon refund",
+        "2 On Your Side Amazon refund",
+        "Contact 13 Amazon refund",
+        "Action 9 Amazon refund",
+        "5 On Your Side Amazon refund",
+        "Help Me Hank Amazon refund",
+        "13 Investigates Amazon refund",
+        "Don't Waste Your Money Amazon A to Z"
+      ],
+      "victim": [
+        "Amazon denied my claim",
+        "Amazon told me to contact the seller",
+        "the seller stopped responding",
+        "they said it was delivered but I never got it",
+        "I was out the money and Amazon said no",
+        "I appealed and they finally paid me"
+      ],
+      "platform": [
+        "amazon a to z denied",
+        "amazon wont refund me",
+        "amazon denied refund third party",
+        "amazon marketplace no refund"
+      ],
+      "shorts": [
+        "#amazon denied her refund",
+        "she never got her order #amazon",
+        "amazon said no then this #shorts",
+        "denied then escalated #amazon"
+      ]
+    },
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news",
+        "franchise",
+        "platform"
+      ],
+      "shorts": [
+        "shorts",
+        "platform"
+      ],
+      "news_web": [
+        "anchor",
+        "news",
+        "franchise"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "horizontal"
+    }
+  }
+]
