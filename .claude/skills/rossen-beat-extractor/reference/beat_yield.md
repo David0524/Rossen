@@ -197,3 +197,40 @@ than logging as a sourcing failure. Re-run when the claims window opens; a
 EMPTY (IC3 alert 5 days old), RETRO-b01 EMPTY (settlement quiet since January).
 Both ends of the recency curve fail — too new for video, and too old for video.
 The airable window for this role looks narrow.**
+
+## Run W_08052026 (Wednesday 08/05, Story 1 hidden cameras, clips 1-6 only)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| W-c01 | evidence | V | EMPTY | Top vertical candidate was an Airbnb HOST defending his own indoor camera — inverted story. Remaining verified-vertical finds all YouTube bot-walled |
+| W-c02 | victim_interview | H | LOCATED | Tegna sentencing package (WTOL/WKYC/10TV/WSYX) confirmed exactly as the pull sheet predicted; TEGNA 403, Nexstar 403, YouTube walled |
+| W-c03 | evidence | V | PICK (butt seg 2) | Hutchins/@malwaretech TikTok 0:32-1:27 "even a hole in the wall" — the pull sheet's own named lead |
+| W-c04 | victim_interview | H | DECISION | CNN July 2024 package reachable and transcribed, but the named subject (Wyzynajtys) is in CNN's WRITTEN investigation, not the video |
+| W-c05 | confrontation_bust | H | LOCATED | Same Tegna package as c02 |
+| W-c06 | explainer_demo | V | PICK (butt seg 1) | Same Hutchins TikTok 0:03-0:32 "see there's a camera there" |
+
+**Yield: 2 PICK / 2 LOCATED / 1 DECISION / 1 EMPTY of 6.**
+
+**Pattern — a producer-supplied lead can be right about the case and wrong about
+the medium.** The pull sheet said the clip-4 subject "lives inside CNN's July 2024
+investigation." He does — in the written investigation. The video package does not
+contain him. Worth checking, whenever a pull sheet points at a named investigation,
+whether the named person is in the *video* or only in the *text*.
+
+**Pattern — the pull sheet's named creator lead served two beats, not one.** The
+Hutchins TikTok was listed only against clip 3, but its first 30 seconds are
+clip 6's flashlight sweep and its back half is clip 3's device list. One source,
+two segments — the same butt structure the sheet already assumed for clips 2 and 5.
+When a sheet names one creator demo, check whether it covers the adjacent demo beat.
+
+**Pattern — inverted-story candidates rank high and must be read, not scored.** The
+top vertical result for clip 1 had every right keyword (hidden camera, Airbnb,
+found) and was an argument FOR host cameras. Keyword scoring cannot catch this;
+only reading the transcript can.
+
+**Content constraint worked as a hard filter.** Both the pull sheet and the script
+carried NO VICTIM IMAGERY / NO RECOVERED FOOTAGE, narrowed to find, reaction,
+courtroom and arrest. Encoding that as a pre-scoring reject (not a penalty) removed
+two candidates cleanly. Recommend this become a standard beat field for any
+sensitive story — it is the same mechanism as the AMAZON_RETROCHARGE disambiguation
+field, and both earned their place on first use.

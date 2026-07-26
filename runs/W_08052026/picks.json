@@ -1,0 +1,73 @@
+[
+  {
+    "beat_id": "W-c03",
+    "clip": "CLIP 3",
+    "flagged": "https://www.tiktok.com/@malwaretech/video/7002804220126661893",
+    "title": "How to find hidden cameras in AirBnBs \u2014 Marcus Hutchins (@malwaretech)",
+    "platform": "tiktok",
+    "source_type": "creator_short",
+    "orientation_verified": "vertical (720x1280, decoded frame)",
+    "media_source": "https://www.tiktok.com/@malwaretech/video/7002804220126661893",
+    "transcript_source": "whisper (faster-whisper base.en) \u2014 TikTok ships no caption track",
+    "duration": 88.0,
+    "butt_with": "W-c06",
+    "segments": [
+      {
+        "in": "0:32",
+        "out": "1:27",
+        "outcue": "even a hole in the wall",
+        "outcue_verified": true,
+        "outcue_cue_time": "1:21.52",
+        "covers": "two-way mirrors, the USB wall charger that is itself a camera, the pinhole with the blue reflection, IR LEDs, and how small the lenses have gotten"
+      }
+    ],
+    "scores": {
+      "tone": 8,
+      "authenticity": 9,
+      "quality": 8,
+      "fit": 9,
+      "total": 86
+    },
+    "reasoning": "This is the pull sheet's own named lead and it delivers c03's list almost line for line. The script says cameras are in phone chargers, clock radios and outlet bricks and that you won't believe how small they've gotten; Hutchins shows the mirrored clock, then the wall charger \u2014 'the wall charger it's plugged into is actually also a camera' \u2014 then says the lenses are small enough to hide in anything, even a hole in the wall.",
+    "flags": [
+      "CONTENT CONSTRAINT OK: planted demo devices in his own room. No victim imagery, no recovered footage.",
+      "2021. The pull sheet already flags it as old but on register. Nothing in it has dated \u2014 the device types match the script's list.",
+      "Creator source, not affiliate. For an evidence beat the grader rates raw_footage/first_person as natural and creator_short as adjacent, so this scores well, but it is a creator clip and should be cleared as such."
+    ]
+  },
+  {
+    "beat_id": "W-c06",
+    "clip": "CLIP 6",
+    "flagged": "https://www.tiktok.com/@malwaretech/video/7002804220126661893",
+    "title": "Same Hutchins TikTok \u2014 the flashlight sweep itself",
+    "platform": "tiktok",
+    "source_type": "creator_short",
+    "orientation_verified": "vertical (720x1280, decoded frame)",
+    "media_source": "https://www.tiktok.com/@malwaretech/video/7002804220126661893",
+    "transcript_source": "whisper (faster-whisper base.en)",
+    "duration": 88.0,
+    "butt_with": "W-c03",
+    "segments": [
+      {
+        "in": "0:03",
+        "out": "0:32",
+        "outcue": "see there's a camera there",
+        "outcue_verified": true,
+        "outcue_cue_time": "0:29.24",
+        "covers": "look where a creeper would look, shine a bright light, the bluish reflection off a lens, test it on your own phone, then the mirrored clock reveal"
+      }
+    ],
+    "scores": {
+      "tone": 8,
+      "authenticity": 9,
+      "quality": 8,
+      "fit": 10,
+      "total": 88
+    },
+    "reasoning": "BUTT with c03 \u2014 one source, two segments, same structure the pull sheet already predicted for clips 2 and 5. This segment is the script's 90-second sweep performed in a real room: the script says a lens throws back a little blue or red glint and that the glint is what you're hunting; Hutchins says shine a bright light and 'if you hit a camera lens, it's gonna give a bluish reflection', then proves it on the clock.",
+    "flags": [
+      "CONTENT CONSTRAINT OK \u2014 demo only.",
+      "Answers the open bible question: there IS a usable real-room sweep, so Jeff does not have to do the flashlight test on set. His call either way."
+    ]
+  }
+]

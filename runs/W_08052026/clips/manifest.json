@@ -1,0 +1,31 @@
+{
+  "clips": [
+    {
+      "beat_id": "W-c03",
+      "segment": 1,
+      "file": "W-c03_seg1.mp4",
+      "in": "0:31.00",
+      "out": "1:28.50",
+      "in_unpadded": "0:32",
+      "out_unpadded": "1:27",
+      "outcue": "even a hole in the wall",
+      "outcue_verified": true,
+      "source": "https://www.tiktok.com/@malwaretech/video/7002804220126661893",
+      "butt_with": "W-c06"
+    },
+    {
+      "beat_id": "W-c06",
+      "segment": 1,
+      "file": "W-c06_seg1.mp4",
+      "in": "0:02.00",
+      "out": "0:33.50",
+      "in_unpadded": "0:03",
+      "out_unpadded": "0:32",
+      "outcue": "see there's a camera there",
+      "outcue_verified": true,
+      "source": "https://www.tiktok.com/@malwaretech/video/7002804220126661893",
+      "butt_with": "W-c03"
+    }
+  ],
+  "failed": []
+}

@@ -1,0 +1,399 @@
+[
+  {
+    "beat_id": "W-c01",
+    "clip": "CLIP 1",
+    "orientation": "vertical",
+    "clip_role": "evidence",
+    "segment_title": "AND PEOPLE ARE FINDING THEM \u2014 ON CAMERA, IN REAL TIME",
+    "script_text": "A GUEST SWEEPING A RENTAL... AND THE SECOND THEY REALIZE WHAT THEY'RE LOOKING AT. / AND WAIT UNTIL YOU SEE WHERE IT WAS HIDDEN.",
+    "news_anchor": "guest finds hidden camera vacation rental reaction",
+    "visual_spec": "handheld vertical, guest sweeping a rental room and the moment of recognition when the lens is found; the device itself in frame, never anything it recorded",
+    "platforms": [
+      "tiktok",
+      "shorts",
+      "instagram"
+    ],
+    "priority": 1,
+    "pull_sheet_note": "NEW BEAT \u2014 not yet harvested. Guest sweeping a rental, the moment of the find.",
+    "queries": {
+      "anchor": [
+        "guest finds hidden camera airbnb",
+        "found hidden camera vacation rental"
+      ],
+      "news": [
+        "guest discovers hidden camera in vacation rental",
+        "renter finds spy camera airbnb reaction"
+      ],
+      "victim": [
+        "we found a camera in our airbnb",
+        "there was a camera pointed at the bed",
+        "look what we just found in this rental",
+        "I can't believe what we found in here"
+      ],
+      "platform": [
+        "#hiddencamera airbnb",
+        "found a camera in our rental",
+        "airbnb hidden camera found",
+        "hidden camera smoke detector airbnb"
+      ],
+      "shorts": [
+        "#airbnb we found a camera",
+        "look what was in the smoke detector #shorts",
+        "check your rental #hiddencamera",
+        "we found this in our airbnb #scamalert"
+      ]
+    },
+    "episode": "08-05",
+    "expected_segments": 1,
+    "offsite_likely": false,
+    "content_constraint": "HARD FILTER, from the pull sheet and the script producer note: NO VICTIM IMAGERY, NO RECOVERED FOOTAGE. Permitted material is FIND, REACTION, COURTROOM and ARREST only. Any candidate that is or contains recovered hidden-camera footage, or identifies/depicts a victim of the recording, is rejected outright regardless of score.",
+    "sourcability": "unchecked",
+    "platform_map": {
+      "tiktok": [
+        "platform",
+        "victim"
+      ],
+      "shorts": [
+        "shorts",
+        "platform"
+      ],
+      "instagram": [
+        "platform",
+        "victim"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "vertical"
+    }
+  },
+  {
+    "beat_id": "W-c02",
+    "clip": "CLIP 2",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "segment_title": "A MOM IN OHIO LOOKED UP AT THE CEILING... AND THE LIGHT WAS STILL ON",
+    "script_text": "ALYSSA BRADDS TOOK HER HUSBAND AND HER YOUNG SON TO A CABIN IN HOCKING HILLS, OHIO. / A CABIN CALLED THE SLY FOX LODGE. / SHE NOTICED SOMETHING IN THE BATHROOM CEILING... A LENS THE SIZE OF A THUMBTACK. / THEN INVESTIGATORS PULLED THE FILES... 49 ADULTS. 13 CHILDREN. / LISTEN TO WHAT SHE TOLD THAT COURTROOM.",
+    "news_anchor": "Alyssa Bradds Hocking Hills Sly Fox Lodge hidden camera victim impact statement sentencing",
+    "visual_spec": "victim reading her impact statement in the courtroom, podium or witness stand, sentencing hearing pool camera",
+    "platforms": [
+      "youtube",
+      "news_web"
+    ],
+    "priority": 1,
+    "butt_with": "W-c05",
+    "pull_sheet_note": "Alyssa Bradds victim statement, Hocking Hills. Leads: WKYC / 10TV / WTOL / WSYX carry the Tegna sentencing package.",
+    "queries": {
+      "anchor": [
+        "Alyssa Bradds Hocking Hills hidden camera",
+        "Sly Fox Lodge hidden camera Hocking Hills",
+        "Hocking Hills cabin hidden camera sentencing"
+      ],
+      "news": [
+        "Hocking Hills cabin owner sentenced hidden cameras victim impact",
+        "victim impact statement hidden camera cabin Ohio sentencing",
+        "Ohio cabin hidden camera case sentencing hearing",
+        "Logan Ohio cabin hidden camera sentencing"
+      ],
+      "franchise": [
+        "WKYC Hocking Hills hidden camera",
+        "10TV Hocking Hills cabin cameras",
+        "WTOL hidden camera cabin sentencing",
+        "WSYX Hocking Hills hidden camera sentencing"
+      ],
+      "victim": [
+        "she read her statement in court hidden camera cabin"
+      ],
+      "platform": [
+        "hocking hills cabin camera sentencing"
+      ]
+    },
+    "episode": "08-05",
+    "expected_segments": 1,
+    "offsite_likely": false,
+    "content_constraint": "HARD FILTER, from the pull sheet and the script producer note: NO VICTIM IMAGERY, NO RECOVERED FOOTAGE. Permitted material is FIND, REACTION, COURTROOM and ARREST only. Any candidate that is or contains recovered hidden-camera footage, or identifies/depicts a victim of the recording, is rejected outright regardless of score.",
+    "sourcability": "unchecked",
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news",
+        "franchise",
+        "platform"
+      ],
+      "news_web": [
+        "anchor",
+        "news",
+        "franchise"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "horizontal"
+    }
+  },
+  {
+    "beat_id": "W-c03",
+    "clip": "CLIP 3",
+    "orientation": "vertical",
+    "clip_role": "evidence",
+    "segment_title": "AND WAIT UNTIL YOU SEE WHAT THEY'RE HIDING THEM IN NOW",
+    "script_text": "CHLOE LEBRUMENT FOUND ONE IN A PHONE CHARGER BY THE BED. A MAINE SUPERHOST USED A CLOCK RADIO. / THEY'RE IN OUTLET BRICKS... AIR FRESHENERS... PICTURE FRAMES... EVEN SHOWER HEADS. / YOU AREN'T GOING TO BELIEVE HOW SMALL THESE THINGS HAVE GOTTEN.",
+    "news_anchor": "hidden cameras disguised phone charger clock radio outlet brick",
+    "visual_spec": "vertical demo holding up disguised devices \u2014 charger brick, clock radio, outlet \u2014 showing the lens; device only, nothing recorded",
+    "platforms": [
+      "tiktok",
+      "shorts",
+      "instagram"
+    ],
+    "priority": 1,
+    "pull_sheet_note": "Cameras in a phone charger, clock radio, outlet brick. Lead: Marcus Hutchins (MalwareTech) TikTok sweep demo, reported 15M+ views, 2021 \u2014 old but on register.",
+    "queries": {
+      "anchor": [
+        "Marcus Hutchins MalwareTech hidden camera airbnb",
+        "MalwareTech hidden camera sweep tiktok"
+      ],
+      "news": [
+        "hidden cameras disguised as everyday objects rental",
+        "what hidden cameras look like chargers clocks"
+      ],
+      "victim": [
+        "it was inside the phone charger",
+        "the clock radio was a camera"
+      ],
+      "platform": [
+        "hidden camera phone charger",
+        "spy camera clock radio",
+        "hidden camera outlet brick",
+        "#hiddencamera charger",
+        "hidden camera disguised objects"
+      ],
+      "shorts": [
+        "hidden camera in a charger #shorts",
+        "this is a camera #hiddencamera",
+        "you'd never know #spycamera",
+        "#hiddencamera check the outlet"
+      ]
+    },
+    "episode": "08-05",
+    "expected_segments": 1,
+    "offsite_likely": false,
+    "content_constraint": "HARD FILTER, from the pull sheet and the script producer note: NO VICTIM IMAGERY, NO RECOVERED FOOTAGE. Permitted material is FIND, REACTION, COURTROOM and ARREST only. Any candidate that is or contains recovered hidden-camera footage, or identifies/depicts a victim of the recording, is rejected outright regardless of score.",
+    "sourcability": "unchecked",
+    "platform_map": {
+      "tiktok": [
+        "platform",
+        "victim"
+      ],
+      "shorts": [
+        "shorts",
+        "platform"
+      ],
+      "instagram": [
+        "platform",
+        "victim"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "vertical"
+    }
+  },
+  {
+    "beat_id": "W-c04",
+    "clip": "CLIP 4",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "segment_title": "BUT WATCH WHAT HAPPENS WHEN YOU CALL THE COMPANY FOR HELP",
+    "script_text": "DAVID WYZYNAJTYS AND HIS GIRLFRIEND BOOKED A COTTAGE IN COMFORT, TEXAS. / THE HOST HAD AIRBNB'S SUPERHOST BADGE. / HE SAW A CAMERA IN THE WALL POINTED AT THEM. THE SCARIEST MOMENT OF HIS LIFE. / THEY ASKED AIRBNB TO CALL THEM. NOBODY CALLED. / INSTEAD AIRBNB ASKED PERMISSION TO GO GET THE HOST'S SIDE OF THE STORY.",
+    "news_anchor": "David Wyzynajtys Comfort Texas Airbnb hidden camera CNN investigation superhost",
+    "visual_spec": "guest on camera recounting finding the wall camera and Airbnb's response, CNN interview setup",
+    "platforms": [
+      "youtube",
+      "news_web"
+    ],
+    "priority": 1,
+    "offsite_likely": true,
+    "pull_sheet_note": "David Wyzynajtys, Comfort TX, superhost. Lives inside CNN's July 2024 investigation.",
+    "queries": {
+      "anchor": [
+        "David Wyzynajtys Airbnb hidden camera",
+        "Wyzynajtys Comfort Texas Airbnb camera",
+        "CNN Airbnb hidden cameras investigation 2024"
+      ],
+      "news": [
+        "CNN investigation Airbnb hidden cameras guests police",
+        "Airbnb did not call police hidden camera guests CNN",
+        "Texas superhost hidden camera cottage guests",
+        "Airbnb hidden camera investigation deposition testimony"
+      ],
+      "victim": [
+        "it was the scariest moment of my life camera",
+        "nobody from airbnb ever called me back"
+      ],
+      "platform": [
+        "airbnb hidden camera cnn",
+        "superhost hidden camera texas"
+      ]
+    },
+    "episode": "08-05",
+    "expected_segments": 1,
+    "content_constraint": "HARD FILTER, from the pull sheet and the script producer note: NO VICTIM IMAGERY, NO RECOVERED FOOTAGE. Permitted material is FIND, REACTION, COURTROOM and ARREST only. Any candidate that is or contains recovered hidden-camera footage, or identifies/depicts a victim of the recording, is rejected outright regardless of score.",
+    "sourcability": "unchecked",
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news",
+        "franchise",
+        "platform"
+      ],
+      "news_web": [
+        "anchor",
+        "news",
+        "franchise"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "horizontal"
+    }
+  },
+  {
+    "beat_id": "W-c05",
+    "clip": "CLIP 5",
+    "orientation": "horizontal",
+    "clip_role": "confrontation_bust",
+    "segment_title": "AND IT GETS CRAZIER \u2014 LOOK AT WHAT THESE GUYS ACTUALLY SERVE",
+    "script_text": "BUT THE JUDGE IN OHIO WENT THE OTHER WAY, AND YOU AREN'T GOING TO BELIEVE THIS VIDEO. / BOTH SIDES ASKED FOR FOUR TO SIX YEARS. THE JUDGE SAID NO \u2014 'A RENTER'S WORST NIGHTMARE.' / SIX TO NINE YEARS. TIER TWO SEX OFFENDER FOR 25 YEARS. WATCH HIM GO OUT IN HANDCUFFS.",
+    "news_anchor": "Jason Yard sentenced Hocking Hills hidden cameras six to nine years handcuffs",
+    "visual_spec": "defendant in the courtroom at sentencing, judge delivering the term, defendant cuffed and led out",
+    "platforms": [
+      "youtube",
+      "news_web"
+    ],
+    "priority": 1,
+    "butt_with": "W-c02",
+    "pull_sheet_note": "Jason Yard sentencing, walked out in handcuffs. Same Tegna package as clip 2.",
+    "queries": {
+      "anchor": [
+        "Jason Yard sentencing Hocking Hills",
+        "Jason Yard hidden cameras cabin sentenced",
+        "Hocking Hills cabin owner sentenced six to nine years"
+      ],
+      "news": [
+        "cabin owner sentenced hidden cameras Ohio handcuffs",
+        "judge sentences cabin owner hidden cameras renters worst nightmare",
+        "Hocking Hills voyeurism sentencing led away in handcuffs",
+        "Ohio man sentenced secretly recording cabin guests"
+      ],
+      "franchise": [
+        "WKYC Jason Yard sentencing",
+        "10TV Jason Yard hidden camera sentencing",
+        "WSYX cabin owner sentenced cameras",
+        "WTOL Hocking Hills sentencing"
+      ],
+      "platform": [
+        "jason yard sentenced",
+        "hocking hills cabin owner sentenced"
+      ]
+    },
+    "episode": "08-05",
+    "expected_segments": 1,
+    "offsite_likely": false,
+    "content_constraint": "HARD FILTER, from the pull sheet and the script producer note: NO VICTIM IMAGERY, NO RECOVERED FOOTAGE. Permitted material is FIND, REACTION, COURTROOM and ARREST only. Any candidate that is or contains recovered hidden-camera footage, or identifies/depicts a victim of the recording, is rejected outright regardless of score.",
+    "sourcability": "unchecked",
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news",
+        "franchise",
+        "platform"
+      ],
+      "news_web": [
+        "anchor",
+        "news",
+        "franchise"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "horizontal"
+    }
+  },
+  {
+    "beat_id": "W-c06",
+    "clip": "CLIP 6",
+    "orientation": "vertical",
+    "clip_role": "explainer_demo/creator_short",
+    "segment_title": "HERE'S THE 90-SECOND SWEEP \u2014 DO THIS THE MINUTE YOU WALK IN",
+    "script_text": "KILL EVERY LIGHT, THEN GO SLOW WITH YOUR PHONE FLASHLIGHT, ABOUT A FOOT OFF EVERY SURFACE. / A LENS THROWS BACK A LITTLE BLUE OR RED GLINT. THAT GLINT IS WHAT YOU'RE HUNTING. / WORK THE SIGHT LINES \u2014 SMOKE DETECTORS, ALARM CLOCKS, CHARGER BRICKS, OUTLETS, PICTURE FRAMES. / PAUSE AND REWIND THIS PART. HERE'S SOMEBODY DOING IT IN A REAL ROOM.",
+    "news_anchor": "how to find hidden cameras phone flashlight sweep rental",
+    "visual_spec": "vertical, lights off, phone flashlight panning a real room, lens glint visible on camera",
+    "platforms": [
+      "tiktok",
+      "shorts",
+      "instagram"
+    ],
+    "priority": 1,
+    "pull_sheet_note": "Flashlight sweep of a real room. Alt: Jeff does it live on set \u2014 see open decision in the bible.",
+    "queries": {
+      "anchor": [
+        "how to find hidden cameras flashlight test",
+        "phone flashlight hidden camera lens glint"
+      ],
+      "news": [
+        "how to check your rental for hidden cameras",
+        "how to find hidden cameras in an airbnb"
+      ],
+      "victim": [
+        "turn the lights off and use your flashlight"
+      ],
+      "platform": [
+        "flashlight test hidden camera",
+        "how to find hidden cameras phone",
+        "#hiddencamera how to check",
+        "hidden camera detection flashlight"
+      ],
+      "shorts": [
+        "check your airbnb like this #shorts",
+        "#hiddencamera flashlight trick",
+        "lights off phone on #travelhack",
+        "do this when you check in #hiddencamera"
+      ]
+    },
+    "episode": "08-05",
+    "expected_segments": 1,
+    "offsite_likely": false,
+    "content_constraint": "HARD FILTER, from the pull sheet and the script producer note: NO VICTIM IMAGERY, NO RECOVERED FOOTAGE. Permitted material is FIND, REACTION, COURTROOM and ARREST only. Any candidate that is or contains recovered hidden-camera footage, or identifies/depicts a victim of the recording, is rejected outright regardless of score.",
+    "sourcability": "unchecked",
+    "platform_map": {
+      "tiktok": [
+        "platform",
+        "victim"
+      ],
+      "shorts": [
+        "shorts",
+        "platform"
+      ],
+      "instagram": [
+        "platform",
+        "victim"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "vertical"
+    }
+  }
+]
