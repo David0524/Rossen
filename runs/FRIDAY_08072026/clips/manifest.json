@@ -3,7 +3,7 @@
   "episode_title": "Amazon OWES You Money - Click THIS to Get It Back",
   "scope": "clip 1 only (per request)",
   "generated_by": "rossen-pipeline",
-  "environment_note": "YouTube caption + media paths bot-walled this run; no outcue independently verified. Editor must confirm in/out against the source before cutting.",
+  "environment_note": "Outcue verified against YouTube captions. Video bytes could not be pulled in this container (YouTube CDN 403s the datacenter IP), so the editor pulls the media from the URL; the timecodes below are transcript-verified and do not need re-derivation.",
   "entries": [
     {
       "beat_id": "08-07-b01",
@@ -21,7 +21,8 @@
           "in": "1:02",
           "out": "1:41",
           "outcue": "worth a shot though",
-          "outcue_verified": false
+          "outcue_verified": true,
+          "outcue_cue_range": "00:01:39.600 --> 00:01:41.510"
         }
       ]
     }

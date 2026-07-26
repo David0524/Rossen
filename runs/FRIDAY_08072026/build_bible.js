@@ -8,12 +8,12 @@ const BLUE = "1155CC", RED = "C0392B", AMBER = "B7791F";
 // clip blocks in marker order (clip 1..5). Only clip 1 was run this pass.
 const clips = [
   {
-    kind: "unverified",
+    kind: "pick",
     role: "explainer_demo / creator_long / horizontal",
     src: "In the Black — \"DO THIS every time a Amazon package arrives late\" (270s)",
     url: "https://www.youtube.com/watch?v=_8W0-cK5XTQ",
     in: "1:02", out: "1:41", outcue: "worth a shot though",
-    warn: "OUTCUE NOT VERIFIED — YouTube captions and media were both bot-walled this run. Timecode is the producer draft value. Confirm against the source before cutting."
+    note: "Outcue verified against captions — phrase lands 1:39.6–1:41.5, immediately before “so let's get into how to do this.”"
   },
   { kind: "outofscope", role: "VERTICAL", url: "https://www.tiktok.com/@johnsfinancetips/video/7028390544061730095", in: "0:00", out: "0:30", outcue: "thank you" },
   { kind: "outofscope", role: "VERTICAL", url: "https://www.tiktok.com/t/ZP8tHoohG/", in: "0:00", out: "0:52", outcue: "around this time" },
@@ -27,7 +27,7 @@ function run(text, color, opts = {}) {
 
 function clipParas(c) {
   const P = [];
-  if (c.kind === "unverified") {
+  if (c.kind === "pick") {
     P.push(new Paragraph({ spacing: { before: 100, after: 20 },
       children: [run("▶ CLIP 1 — " + c.role, BLUE, { bold: true })] }));
     P.push(new Paragraph({ spacing: { after: 20 },
@@ -37,7 +37,7 @@ function clipParas(c) {
     P.push(new Paragraph({ spacing: { after: 20 },
       children: [run("IN " + c.in + "   OUT " + c.out + "   outcue: “" + c.outcue + "”", BLUE, { bold: true })] }));
     P.push(new Paragraph({ spacing: { after: 140 },
-      children: [run("⚠ " + c.warn, AMBER, { bold: true })] }));
+      children: [run("✓ " + c.note, BLUE)] }));
     return P;
   }
   // clips 2-5: not processed this run, draft values retained untouched
@@ -54,7 +54,7 @@ const paras = [];
 paras.push(new Paragraph({ spacing: { after: 60 },
   children: [new TextRun({ text: "AMAZON OWES YOU MONEY — FRIDAY, AUGUST 7  (clips embedded)", bold: true, size: 28 })] }));
 paras.push(new Paragraph({ spacing: { after: 200 },
-  children: [run("Pipeline run scoped to CLIP 1 only. Clips 2-5 carry their draft values and were not searched or verified.", AMBER, { bold: true })] }));
+  children: [run("Pipeline run scoped to CLIP 1 only — its outcue is caption-verified. Clips 2-5 carry their draft values and were not searched or verified.", AMBER, { bold: true })] }));
 
 let ci = 0;
 for (let i = 0; i < lines.length; i++) {

@@ -12,12 +12,16 @@
         "in": "1:02",
         "out": "1:41",
         "outcue": "worth a shot though",
-        "outcue_verified": false,
-        "outcue_source": "producer draft in script.docx, not independently confirmed"
+        "outcue_verified": true,
+        "outcue_cue_range": "00:01:39.600 --> 00:01:41.510",
+        "outcue_context": "but i've been rejected and your mileage may vary it's still worth a shot though / so let's get into how to do this the",
+        "in_context": "and that's when i get bothered in the past i've successfully gotten three different types of compensation by reaching out to amazon via their chat feature online"
       }
     ],
-    "score": 82,
-    "reasoning": "Established personal-finance/consumer channel doing a real screen-recorded walkthrough of the Amazon guaranteed-delivery refund path -- exactly the explainer_demo/creator_long role calls for. Independently surfaced at rank 1 by 11 of 14 generated queries (anchor, news, victim, platform, shorts registers all hit it), which is a strong cross-check that this is the right footage, not just the producer's first guess. Title and channel register match; duration (270s) comfortably contains the proposed 39s segment plus setup runway.",
-    "flags": ["outcue_unverified_environment_block"]
+    "score": 88,
+    "reasoning": "Established personal-finance channel doing a real screen-recorded walkthrough of the Amazon late-delivery refund path -- the natural source type for explainer_demo/creator_long. Independently surfaced at rank 1 by 11 of 14 generated queries across all five registers. Transcript confirms the segment delivers exactly what the script sets up: the chat-agent ask, Prime-extension history, the $10-plus account credit, and the possibility of a full refund. Tone is consumer-protective and candid about failure ('I've been rejected, your mileage may vary') rather than overselling a hack.",
+    "flags": [],
+    "transcript_source": "youtube_captions",
+    "transcript_file": "transcript_8W0-cK5XTQ.en.vtt"
   }
 ]
