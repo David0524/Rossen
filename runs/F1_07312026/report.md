@@ -58,7 +58,11 @@ Consequences and what I did:
   all four beats for a reason that has nothing to do with the material.
 - Tried every yt-dlp player client: `android_vr`, `web_safari`, `tv_embedded`,
   `ios` all bot-walled; `mweb` reached the page but subtitles need a PO token;
-  `tv` returns DRM. A 25-minute cooldown retry was still running at write time.
+  `tv` returns DRM.
+- **A 25-minute cooldown retry of the full shortlist also returned 0/19.** So the
+  wall is persistent in this environment, not a transient rate-limit from the
+  3,053-query search. Nothing further to try here; b03 and b04 are final as
+  MANUAL CLIP.
 - **The workaround that worked:** Scripps stations serve their video off Uplynk,
   and those streams are reachable. I pulled the manifest URL out of the WCPO
   article HTML, ffmpeg'd the audio, and transcribed locally with faster-whisper.

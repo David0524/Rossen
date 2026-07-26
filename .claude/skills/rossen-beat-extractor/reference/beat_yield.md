@@ -93,6 +93,10 @@ was patched. See `runs/SMOKE_VERTICAL/report.md` addendum.
 **Yield:** 2 PICK / 2 LOCATED / 0 EMPTY of 4. Both LOCATED are environment
 artifacts, not sourcing failures — every beat in this episode has a confirmed,
 live source. On a machine with normal YouTube access this is plausibly 4/4.
+Confirmed: a 25-minute-cooldown retry of the full 19-clip shortlist also returned
+0/19 captions, so the wall is persistent here rather than a rate-limit from the
+3,053-query search. Do not read these two LOCATED rows as evidence about the
+material.
 
 **Only 4 beats.** Friday format: one story block plus the DealSeek segment. The
 DOJ block (Goel/Raheja) carries no PLAY CLIP marker and is a Jeff read, correctly
