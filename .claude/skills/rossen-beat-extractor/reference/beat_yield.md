@@ -234,3 +234,19 @@ courtroom and arrest. Encoding that as a pre-scoring reject (not a penalty) remo
 two candidates cleanly. Recommend this become a standard beat field for any
 sensitive story — it is the same mechanism as the AMAZON_RETROCHARGE disambiguation
 field, and both earned their place on first use.
+
+**Follow-up on W_08052026 c02/c05 — the reachable mirror was the wrong asset.**
+A NewsBreak mirror of the WTOL sentencing package sits on an open CloudFront URL
+and downloaded cleanly when every station route 403'd. It is 720x1280 VERTICAL
+with a burned-in WTOL bug and burned-in captions: a social cutdown, not the
+broadcast package, against two HORIZONTAL beats. Confirmed by ffprobe and by a
+contact sheet. Two more things only the frames revealed: the victim statement
+clip 2 needs is not in the cutdown at all, and there is no handcuff walk in it
+despite the script promising one.
+
+Generalisable: **when the only reachable copy of a broadcast package comes from
+an aggregator mirror, assume it is the social cutdown until pixels say otherwise,
+and build a contact sheet before trusting the beat.** Aggregators mirror the
+vertical version because it is the one with an open CDN. This is the vertical
+postmortem bug running in reverse and it would have shipped a competitor-branded
+vertical into a horizontal beat.

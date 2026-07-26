@@ -21,7 +21,7 @@ Orientation gate on the three vertical beats: 364 checked, 284 landscape dropped
 | **2** | H | **MANUAL** | Tegna sentencing package — exactly as the pull sheet predicted | no timecode |
 | **3** | V | **PICK ✅ cut** | Marcus Hutchins / @malwaretech TikTok | 0:32–1:27 |
 | **4** | H | **DECISION** | CNN package reachable, but Wyzynajtys is not in it | — |
-| **5** | H | **MANUAL** | same Tegna package as clip 2 | no timecode |
+| **5** | H | **MANUAL** | same Tegna package — content now transcript-confirmed | no timecode |
 | **6** | V | **PICK ✅ cut** | same Hutchins TikTok — butt with clip 3 | 0:03–0:32 |
 
 Two clips cut. Both verified vertical from the decoded frame (720x1280).
@@ -91,6 +91,27 @@ sentencing. Handed over with **no invented timecode**.
 On your machine these should cut normally. Clip 2 wants Bradds' victim statement,
 clip 5 wants the judge and the handcuffs, and both come out of the one package —
 so treat them as a butt, as the pull sheet already assumed.
+
+**Update — one route did open, and it must not be used.** A NewsBreak mirror of
+the WTOL package is served from an open CloudFront URL and I pulled it. It
+confirms the content by transcript: Yard in court (*"I'm a good person who's made
+a terrible mistake"*), six to nine years, the judge calling it *"perverted"* and
+*"a renter's worst nightmare"*. But the asset itself is **720x1280 vertical** — a
+social cutdown, not the broadcast package — with a **burned-in WTOL 11 bug and
+burned-in captions**. Wrong orientation for a horizontal beat and a competitor
+bug on screen, so it is rejected on both counts.
+
+Two further findings from screening its frames:
+- **Bradds' victim statement is not in it.** The cutdown is 37s of anchor
+  readback plus one Yard soundbite. Confirm the full package actually carries her
+  statement before building clip 2 around it.
+- **No handcuff walk.** Frames sampled across the whole cutdown show Yard seated
+  in orange scrubs and the judge on the bench — no walk-out. Verify that shot
+  exists before the script says "WATCH HIM GO OUT IN HANDCUFFS."
+
+This is the same class of error as the vertical postmortem, inverted: a vertical
+asset about to be dropped into a horizontal beat. The contact sheet caught it;
+metadata alone would not have.
 
 ## Clip 1 — empty, and why
 
