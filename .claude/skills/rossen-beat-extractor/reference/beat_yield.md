@@ -80,3 +80,43 @@ YouTube picks that originally had to be found by hand now surface from the
 pipeline. `site:youtube.com/shorts` out-produced the `#shorts` suffix 18 to 1.
 Native-social yield unchanged at 0 tiktok / 0 instagram — that gap was not what
 was patched. See `runs/SMOKE_VERTICAL/report.md` addendum.
+
+## Run F1_07312026 (Airbnb/VRBO rental scam + DealSeek Friday)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| F1-b01 | victim_interview | H | PICK | Scripps DWYM (Matarese) 0:18-0:55 "straight to voicemail" (Laura Gentry, $950 Zelle); pulled off WCPO's Uplynk stream, Whisper-verified |
+| F1-b02 | authority_report | H | PICK (butt seg 2) | Same Scripps package 0:59-1:19 "not really part of this transaction" (Kevin Brasler, Consumers' Checkbook) |
+| F1-b03 | victim_interview | H | LOCATED | Inside Edition VfwRWgw_M3I (Allie Conti, 8:15) — exact case, alive and public, but YouTube bot-wall blocked captions and media here |
+| F1-b04 | victim_interview | H | LOCATED | CBS LA WMofFj3FJDQ (Jeff Branch, Santa Monica Mountains) — confirmed the right case via KNX's write-up; same bot-wall |
+
+**Yield:** 2 PICK / 2 LOCATED / 0 EMPTY of 4. Both LOCATED are environment
+artifacts, not sourcing failures — every beat in this episode has a confirmed,
+live source. On a machine with normal YouTube access this is plausibly 4/4.
+
+**Only 4 beats.** Friday format: one story block plus the DealSeek segment. The
+DOJ block (Goel/Raheja) carries no PLAY CLIP marker and is a Jeff read, correctly
+excluded. Low beat count is the script, not the extractor.
+
+**Pattern — the sourcability scan paid for itself three times.** It answered all
+three producer questions before any search ran: it confirmed the b01/b02 BUTT by
+finding Gentry and Brasler quoted in one Scripps article, it disproved the
+"we have not confirmed video exists" note on Conti, and it identified the Branch
+package. All four targets then surfaced at rank 1-2 in the real search. Contrast
+F2, where three beats reached Checkpoint 3 empty because no scan ran.
+
+**Pattern — `news_web` is not a dead end when the outlet is Scripps.** F2 logged
+five LOCATED beats as unusable because affiliate sites carry no captions. That is
+only half true: Scripps stations expose an Uplynk HLS manifest in the page HTML,
+which ffmpeg can pull and Whisper can transcribe. That converted what F2 would
+have logged as LOCATED into two real PICKs with verified outcues. Worth trying on
+every future news_web beat before writing it off.
+
+**Pattern — the diversity floor fired on 4 of 4 beats and its promotion lost pass
+two 4 of 4 times.** Same signal the grader skill warns about. Two runs of this
+and the hard filters upstream need a look.
+
+**Environment:** YouTube search fine, individual video pages fully bot-walled
+(all player clients; mweb needs a PO token for subs, tv returns DRM). Brave key
+present. faster-whisper working. Two documented CLI stages (`captions`, `clip`)
+were missing and were built during this run.

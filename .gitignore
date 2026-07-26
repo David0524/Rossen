@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 *.db
 .venv/
+node_modules/
+runs/*/clips/*.mp4
