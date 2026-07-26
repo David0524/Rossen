@@ -1,0 +1,306 @@
+[
+  {
+    "beat_id": "F1-b01",
+    "episode": "07-31",
+    "segment_title": "LAURA GENTRY THOUGHT SHE FOUND THE PERFECT PLACE \u2014 THEN CAME ONE WEIRD REQUEST",
+    "script_text": "LAURA GENTRY WAS HUNTING FOR A FULLY FURNISHED ONE-BEDROOM IN A DECENT AREA. / SHE FOUND IT ON ONE OF THE BIG RENTAL SITES AT A PRICE THAT WORKED. / THE OWNER SEEMED FINE. THE LISTING SEEMED FINE. / THEN HE TOLD HER TO SEND THE DEPOSIT BY ZELLE \u2014 NOT BY CREDIT CARD ON THE RENTAL SITE. / SHE SENT $950. / ZELLE IS BASICALLY HANDING OVER CASH. THERE IS ALMOST NOTHING TO DISPUTE. / SO WHAT DID SHE GET FOR HER $950??? / LISTEN TO WHAT HAPPENED TO HER.",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Laura Gentry rental scam Zelle $950 deposit",
+    "visual_spec": "woman on camera describing a $950 Zelle deposit for a rental that never existed, consumer-desk interview setup with lower-third",
+    "platforms": [
+      "youtube",
+      "shorts",
+      "news_web"
+    ],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "sourcability": "high",
+    "sourcability_note": "SOLVED AT EXTRACTION. Zero YouTube hits by name, but the exact case is a Scripps 'Don't Waste Your Money' package by John Matarese, 'Fake vacation rental listings take your deposit, disappear' (~2026-06-07), syndicated to WCPO/WKBW/NewsChannel5/WTXL/KXXV/Scripps News. Article confirms: 'Laura Gentry learned this the hard way... She paid a $950 deposit via Zelle.' Video player is JS-loaded, not in static HTML, and no YouTube twin surfaced under the package title. Expect news_web / MANUAL CLIP unless Step 3 finds a station YouTube upload.",
+    "butt_with": "F1-b02",
+    "butt_note": "CONFIRMED, not assumed. The producer note at script line 129 hypothesised Gentry and Brasler were one package. The same Scripps article that quotes Gentry also quotes Brasler ('The criminals have figured out ways to circumvent these obstacles...'). One source, two segments, butted \u2014 unless Step 3 turns up two separate packages.",
+    "queries": {
+      "anchor": [
+        "Laura Gentry rental scam Zelle",
+        "Laura Gentry $950 rental deposit"
+      ],
+      "news": [
+        "fake vacation rental listings take your deposit disappear",
+        "don't waste your money fake rental listings Airbnb VRBO",
+        "woman loses rental deposit Zelle scam",
+        "fake rental listing stolen deposit warning",
+        "renter sends deposit by Zelle apartment does not exist",
+        "rental scam warning deposit Zelle credit card"
+      ],
+      "victim": [
+        "I sent the deposit and it was gone",
+        "I paid $950 for an apartment that didn't exist",
+        "he told me to pay with Zelle not the website",
+        "there was no apartment there was no host",
+        "I lost my deposit on a rental"
+      ],
+      "platform": [
+        "zelle rental scam",
+        "rental scam zelle deposit",
+        "fake rental listing scam",
+        "#rentalscam zelle",
+        "apartment deposit scam"
+      ],
+      "shorts": [
+        "#scamalert she sent $950",
+        "rental deposit gone #shorts",
+        "he said pay by zelle #scam",
+        "there was no apartment #scamalert",
+        "she lost her deposit #rentalscam"
+      ]
+    },
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news",
+        "platform"
+      ],
+      "shorts": [
+        "shorts",
+        "platform"
+      ],
+      "news_web": [
+        "anchor",
+        "news"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "horizontal"
+    }
+  },
+  {
+    "beat_id": "F1-b02",
+    "episode": "07-31",
+    "segment_title": "THINK THE WEBSITE HAS YOUR BACK??? WAIT UNTIL YOU HEAR THIS",
+    "script_text": "THE NONPROFIT CONSUMERS' CHECKBOOK INVESTIGATED THE VACATION RENTAL SITES. / THEY FOUND WIDESPREAD FAKE LISTINGS AND STOLEN DEPOSITS. / AND THE PEOPLE THEY TALKED TO SPENT MONTHS CHASING REFUNDS FROM VRBO AND BOOKING.COM. / EVEN AFTER THOSE COMPANIES AGREED THEY'D BEEN SCAMMED AND CANCELED THE RESERVATION. / SO CHECKBOOK'S EDITOR KEVIN BRASLER WENT AND READ THE TERMS AND CONDITIONS. / HERE'S THE LINE HE FOUND BURIED IN THERE.",
+    "orientation": "horizontal",
+    "clip_role": "authority_report",
+    "news_anchor": "Consumers Checkbook Kevin Brasler vacation rental terms and conditions investigation",
+    "visual_spec": "Consumers' Checkbook editor on camera in an interview setup, or screen-graphic of the terms-and-conditions clause pulled up on screen",
+    "platforms": [
+      "youtube",
+      "news_web"
+    ],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "sourcability": "high",
+    "sourcability_note": "Brasler has broad on-camera presence: WGN 'Consumers' Checkbook: Tax tips, how to spot vacation rental scams & more' (MbN5Q9IUN-I, 320s) and KARE 11 'TC Consumer's Checkbook tackles vacation rentals and how to effectively complain' (fXh40USrQbo, 226s) are both on-topic. Also quoted in the same Scripps package as Gentry.",
+    "butt_with": "F1-b01",
+    "butt_note": "See F1-b01. If Step 3 confirms the Scripps package carries both, this is segment 2 of one source. If the pick ends up being a standalone Brasler interview (WGN/KARE), the BUTT is killed and these log as two separate beats \u2014 which is exactly the branch the producer asked to have decided.",
+    "queries": {
+      "anchor": [
+        "Consumers Checkbook Kevin Brasler vacation rental",
+        "Kevin Brasler Consumers Checkbook rental scam",
+        "Consumers Checkbook vacation rental sites investigation"
+      ],
+      "news": [
+        "consumer group investigates vacation rental fake listings",
+        "vacation rental sites terms and conditions not a party to the transaction",
+        "VRBO Booking.com refund months consumers",
+        "nonprofit investigates Airbnb VRBO fake listings stolen deposits",
+        "how to spot vacation rental scams Consumers Checkbook"
+      ],
+      "victim": [
+        "they said it wasn't their problem",
+        "months chasing a refund from VRBO"
+      ],
+      "platform": [
+        "checkbook vacation rental scam",
+        "vrbo won't refund scam",
+        "booking.com refund scam"
+      ],
+      "shorts": [
+        "#scamalert vrbo won't refund",
+        "buried in the terms #shorts",
+        "the site says not our problem #scam"
+      ]
+    },
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news"
+      ],
+      "news_web": [
+        "anchor",
+        "news",
+        "platform"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "horizontal"
+    }
+  },
+  {
+    "beat_id": "F1-b03",
+    "episode": "07-31",
+    "segment_title": "NOW A REPORTER WHO GOT SCAMMED \u2014 AND WENT HUNTING FOR THE GUY WHO DID IT!!",
+    "script_text": "ALLIE CONTI WAS HEADED TO CHICAGO WITH TWO FRIENDS FOR RIOT FEST. / TEN MINUTES BEFORE CHECK-IN, THE HOST CALLED. SOMEBODY FLOODED THE APARTMENT. / BUT NO WORRIES \u2014 HE HAD ANOTHER PLACE. SHE HAD TO DECIDE RIGHT THEN. / SO SHE TOOK IT. AND IT WAS A FLOPHOUSE. / THEN THEY KICKED HER OUT AFTER ONE NIGHT TO PUT SOMEBODY ELSE IN IT. / SHE PAID $1,221. SHE GOT $399 BACK \u2014 AND ONLY AFTER DAYS OF BADGERING AIRBNB CASE MANAGERS. / HERE'S WHERE IT TURNS. CONTI IS A REPORTER, AND SHE STARTED DIGGING. / HER HOST WAS SUPPOSEDLY A COUPLE NAMED \"BECKY AND ANDREW.\" / THE PROFILE PICTURE WAS A STOCK PHOTO OF A SURFER. / AND THE PHONE NUMBER FOR A CHICAGO APARTMENT HAD A LOS ANGELES AREA CODE. / SO SHE KEPT PULLING THE THREAD. / YOU WON'T BELIEVE WHO SHE FOUND AT THE END OF IT!!",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Allie Conti Vice Airbnb scam Chicago Riot Fest Shray Goel",
+    "visual_spec": "reporter on camera recounting her own Airbnb scam and the investigation that followed, studio or remote interview setup",
+    "platforms": [
+      "youtube",
+      "shorts",
+      "news_web"
+    ],
+    "offsite_likely": false,
+    "priority": 1,
+    "expected_segments": 1,
+    "sourcability": "high",
+    "sourcability_note": "PRODUCER CONCERN RESOLVED. Script line 174 says 'WE HAVE NOT CONFIRMED VIDEO EXISTS.' It does: Inside Edition, 'The Genius Way This Reporter Uncovered Airbnb Scammers' (VfwRWgw_M3I, 495s) is an on-camera package built on Conti's reporting. No fallback to a Jeff-read-over-screenshots needed.",
+    "notes": "Conti is both the victim and the investigator. Kept as victim_interview because the airable moment is her recounting what happened to her; the investigative turn is the back half of the same telling.",
+    "queries": {
+      "anchor": [
+        "Allie Conti Airbnb scam Vice",
+        "Allie Conti Airbnb Chicago Riot Fest",
+        "Shray Goel Raheja Airbnb scam",
+        "Vice reporter Airbnb nationwide scam"
+      ],
+      "news": [
+        "reporter uncovers Airbnb scam network",
+        "reporter scammed on Airbnb investigation",
+        "Airbnb scam ring properties across states",
+        "journalist tracked down the Airbnb scammer",
+        "the genius way this reporter uncovered Airbnb scammers"
+      ],
+      "victim": [
+        "I got scammed on Airbnb and I found the guy",
+        "they moved us to a flophouse",
+        "ten minutes before check in the host called",
+        "they kicked us out after one night"
+      ],
+      "platform": [
+        "airbnb scam exposed",
+        "airbnb scammer caught",
+        "reporter airbnb scam"
+      ],
+      "shorts": [
+        "reporter got scammed then hunted him #scamalert",
+        "the profile pic was a stock photo #shorts",
+        "#airbnb she found him",
+        "kicked out after one night #scam"
+      ]
+    },
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news",
+        "platform"
+      ],
+      "shorts": [
+        "shorts",
+        "platform"
+      ],
+      "news_web": [
+        "anchor",
+        "news"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "horizontal"
+    }
+  },
+  {
+    "beat_id": "F1-b04",
+    "episode": "07-31",
+    "segment_title": "AND YOU DON'T HAVE TO BOOK ANYTHING TO GET DRAGGED INTO THIS!!",
+    "script_text": "THE HOUSE IN THAT LISTING IS SOMEBODY'S REAL HOME. / JEFF BRANCH HAD MOVED HIS WIFE AND KIDS INTO A HOUSE IN THE SANTA MONICA MOUNTAINS. / THE FAMILY WENT OUT OF TOWN AND LEFT A PET SITTER AT THE HOUSE. / THEN HE GOT A TEXT FROM HER: \"DID YOU RENT THE HOUSE OUT FOR THE WEEKEND?\" / STRANGERS WERE AT HIS FRONT DOOR WITH SUITCASES. / SOMEBODY HAD PUT HIS HOUSE ON AIRBNB FOR $450 A NIGHT \u2014 CALLED IT A \"MODERN MASTERPIECE.\" / USING PHOTOS FROM WHEN THE HOUSE WAS FOR SALE. / HE CALLED AIRBNB. HE SAYS THEY TOLD HIM IT WAS GOING TO A SPECIAL TEAM. / AND THE LISTING STAYED UP FOR WEEKS. / WATCH WHAT HAPPENED THE NEXT TIME SOMEBODY SHOWED UP.",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Jeff Branch Santa Monica Mountains home listed on Airbnb without permission $450 a night",
+    "visual_spec": "homeowner on camera outside his house describing strangers arriving with suitcases, affiliate package; ideally cutaway of the fraudulent listing",
+    "platforms": [
+      "youtube",
+      "shorts",
+      "news_web"
+    ],
+    "offsite_likely": false,
+    "priority": 2,
+    "expected_segments": 1,
+    "sourcability": "high",
+    "sourcability_note": "CBS LA, 'Exclusive: Family Discovers Home Listed On Airbnb Without Their Permission' (WMofFj3FJDQ, 169s) is almost certainly this case \u2014 Santa Monica Mountains is CBS LA's patch. To be confirmed in Step 3 that the homeowner is Branch.",
+    "option_b": {
+      "description": "Producer note at script line 231 offers Option B: a creator filming strangers at their door on a doorbell cam, which would FLIP THIS BEAT TO VERTICAL.",
+      "status": "not searched as primary \u2014 the marker says HORIZONTAL and orientation is a hard constraint. Option B is held as a fallback and would be a Checkpoint 2 proposal, since flipping orientation changes the beat.",
+      "would_become": {
+        "clip_role": "evidence",
+        "orientation": "vertical",
+        "platforms": [
+          "tiktok",
+          "shorts",
+          "facebook",
+          "reddit"
+        ]
+      }
+    },
+    "notes": "Producer also asks to try matching a CURRENT local version of the same story and swap the name/details in. That is a case swap = Checkpoint 2, not something to do unilaterally.",
+    "queries": {
+      "anchor": [
+        "Jeff Branch Airbnb Santa Monica Mountains",
+        "home listed on Airbnb without permission $450 a night",
+        "family discovers home listed on Airbnb without their permission"
+      ],
+      "news": [
+        "family discovers home listed on Airbnb without permission",
+        "strangers show up at house listed on Airbnb",
+        "homeowner house listed on Airbnb without his knowledge",
+        "house put on Airbnb owner had no idea listing stayed up",
+        "my house was listed on Airbnb by a stranger news"
+      ],
+      "victim": [
+        "strangers were at my front door with suitcases",
+        "somebody put my house on Airbnb",
+        "did you rent the house out for the weekend",
+        "people keep showing up at my house"
+      ],
+      "platform": [
+        "house listed on airbnb without permission",
+        "airbnb fake listing my house",
+        "stranger listed my home airbnb"
+      ],
+      "shorts": [
+        "#airbnb strangers at my door #shorts",
+        "somebody listed my house #scamalert",
+        "they showed up with suitcases #scam"
+      ]
+    },
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news",
+        "platform"
+      ],
+      "shorts": [
+        "shorts",
+        "platform"
+      ],
+      "news_web": [
+        "anchor",
+        "news"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "horizontal"
+    }
+  }
+]
