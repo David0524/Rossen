@@ -1,0 +1,89 @@
+[
+  {
+    "beat_id": "ATOZ-b01-alt",
+    "episode": "AMAZON-ATOZ",
+    "segment_title": "WHEN AMAZON SAYS NO \u2014 THE A-TO-Z GUARANTEE (alternate / backup)",
+    "script_text": "BUT PEOPLE GET DENIED. AND WHEN THEY GET DENIED, THEY GIVE UP. / ESCALATE IT. PUT IT IN WRITING. / LISTEN TO WHAT HAPPENED TO HER.",
+    "orientation": "horizontal",
+    "clip_role": "victim_interview",
+    "news_anchor": "Amazon A-to-Z Guarantee denied refund third-party seller not as described",
+    "visual_spec": "woman on camera with the wrong or damaged item she was shipped, or her Amazon orders page open, consumer-desk interview setup",
+    "platforms": [
+      "youtube",
+      "shorts",
+      "news_web"
+    ],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "alt_of": "ATOZ-b01",
+    "alt_rationale": "The primary pick (ABC7/Skinner) covers 'items that never arrived'. This pass deliberately hunts the OTHER half of the script's coverage line \u2014 'arrived damaged or nothing like the listing' \u2014 plus any package that names the A-to-Z Guarantee on camera, which the primary does not.",
+    "queries": {
+      "anchor": [
+        "Amazon A-to-Z Guarantee denied not as described",
+        "Amazon claim denied item not as described refund",
+        "A-to-Z guarantee appeal denied Amazon"
+      ],
+      "news": [
+        "woman got wrong item from Amazon seller no refund",
+        "Amazon third party seller sent counterfeit refund denied",
+        "she ordered from Amazon and got something else entirely",
+        "Amazon seller shipped empty box refund denied",
+        "customer sent damaged item Amazon wont refund",
+        "Amazon marketplace item nothing like the listing refund"
+      ],
+      "franchise": [
+        "Call 12 for Action Amazon refund",
+        "Contact 13 Amazon refund denied",
+        "2 On Your Side Amazon seller refund",
+        "Help Me Howard Amazon refund",
+        "Troubleshooters Amazon third party seller",
+        "On Your Side Amazon A to Z guarantee",
+        "Call 4 Action Amazon refund",
+        "7 On Your Side Amazon seller wrong item",
+        "consumer reporter got her Amazon money back"
+      ],
+      "victim": [
+        "Amazon denied my A to Z claim",
+        "I got an empty box from Amazon",
+        "they sent me the wrong thing and Amazon said no",
+        "Amazon kept telling me to contact the seller",
+        "I had to fight Amazon to get my money back"
+      ],
+      "platform": [
+        "amazon a to z guarantee denied",
+        "amazon empty box refund",
+        "amazon wrong item no refund",
+        "amazon seller wont refund"
+      ],
+      "shorts": [
+        "#amazon denied her claim",
+        "empty box from amazon #shorts",
+        "she fought amazon and won #scamalert"
+      ]
+    },
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news",
+        "franchise",
+        "platform"
+      ],
+      "shorts": [
+        "shorts",
+        "platform"
+      ],
+      "news_web": [
+        "anchor",
+        "news",
+        "franchise"
+      ]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "web_prefix": "site:youtube.com/shorts",
+      "match_filter": "duration < 180",
+      "surfaced_for": "horizontal"
+    }
+  }
+]

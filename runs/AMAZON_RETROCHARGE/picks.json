@@ -1,0 +1,27 @@
+[
+  {
+    "beat_id": "RETRO-b01",
+    "flagged": null,
+    "reason": "No reachable broadcast video exists about the $309.5M 'no-hassle returns' / retrocharge settlement. Coverage of this specific settlement is almost entirely print (Reuters, The Verge, PCMag, Law360, classaction.org, Yahoo Finance). The single broadcast piece found — PIX11, 'Amazon to pay $309M class action settlement: Are you eligible?', 2026-01-29 — is WAF-blocked (403) from this environment and no Nexstar sibling station carried it. Every reachable 'Amazon settlement' video is the $2.5B Prime/FTC settlement, which is a different story and would be a wrong clip under this narration.",
+    "handover": [
+      {
+        "type": "MANUAL CLIP — broadcast, unreachable here",
+        "url": "https://pix11.com/news/local-news/amazon-to-pay-309m-class-action-settlement-are-you-eligible/",
+        "outlet": "PIX11 New York (Nexstar), 2026-01-29",
+        "note": "The only TV package located on the correct settlement. Returns HTTP 403 to every header set tried here; likely fine from a normal browser. No timecode given — not verified."
+      },
+      {
+        "type": "authoritative print, for Jeff's read",
+        "url": "https://www.reuters.com/legal/government/amazon-pay-309-million-us-shoppers-settlement-over-returns-2026-01-26/",
+        "outlet": "Reuters, 2026-01-26",
+        "note": "Confirms $309 million, U.S. shoppers, settlement over returns."
+      }
+    ],
+    "decoys_rejected": [
+      {"url":"https://abcnews.go.com/GMA/News/video/amazon-settlement-refund-128976132","why":"GMA — $2.5B Prime/FTC settlement, not this one. Stream WAS reachable, which makes it the most dangerous decoy."},
+      {"url":"https://www.nbcphiladelphia.com/news/national-international/amazon-settlement-refund-what-to-know/4328992","why":"NBC Philadelphia — $2.5B Prime/FTC."},
+      {"url":"https://www.wmtw.com/article/amazon-ftc-settlement-explained-automatic-refund-do-i-qualify-prime-benefits/","why":"Hearst group package ('Amazon settlement explained: Do I qualify for a refund?') — FTC/Prime, ran on WMTW/WBAL/WDSU/KCRA/WISN."}
+    ],
+    "what_would_find_something_better": "This beat needs either (a) the PIX11 package pulled from an unblocked network, or (b) a new TV wave, which will come when the claim form goes live — as of the latest coverage it is still 'coming soon' after preliminary approval on ~2026-02-10. A 'you may be owed money' consumer package is very likely then. Re-run the same queries with a freshness filter once claims open."
+  }
+]

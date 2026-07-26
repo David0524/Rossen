@@ -1,0 +1,66 @@
+[
+  {
+    "beat_id": "RETRO-b01",
+    "episode": "AMAZON-RETROCHARGE",
+    "segment_title": "THE REFUND THAT NEVER CAME",
+    "script_text": "YOU RETURN SOMETHING. YOU DROP IT OFF. YOU GET THE SCAN. / AMAZON SAYS REFUND ISSUED... AND THE MONEY NEVER SHOWS UP ON YOUR CARD. / OR WORSE. IT SHOWS UP, AND THEN AMAZON CHARGES YOU AGAIN FOR THE SAME ITEM. / THAT HAS A NAME. IT IS CALLED A RETROCHARGE. / AND IT HAPPENED ENOUGH THAT AMAZON AGREED TO PAY $309.5 MILLION TO SETTLE A CLASS ACTION. / THAT WAS JANUARY, IN A FEDERAL COURT IN SEATTLE. AMAZON DENIES DOING ANYTHING WRONG. / BUT IT HAD ALREADY QUIETLY REFUNDED ABOUT $570 MILLION BEFORE THAT WAS EVEN FILED... / ...WITH ANOTHER $34 MILLION STILL GOING OUT THE DOOR. / AND IT REACHES ALL THE WAY BACK TO SEPTEMBER 2017. / STEVEN POPE, WHO RUNS MY AMAZON GUY, POSTED THAT AMAZON CREDITED HIM $1,798.81 FOR A TELEVISION HE RETURNED IN 2018. / HERE'S THE LATEST ON THAT SETTLEMENT RIGHT NOW.",
+    "orientation": "horizontal",
+    "orientation_note": "ASSUMED \u2014 no (((PLAY CLIP XXX ...))) marker in the excerpt. authority_report defaults horizontal.",
+    "clip_role": "authority_report",
+    "news_anchor": "Amazon $309.5 million no-hassle returns retrocharge class action settlement Seattle January 2026",
+    "visual_spec": "anchor or consumer reporter over Amazon returns b-roll and a settlement graphic; or a package explaining eligibility and the claim window",
+    "platforms": [
+      "youtube",
+      "news_web"
+    ],
+    "offsite_likely": true,
+    "priority": 1,
+    "expected_segments": 1,
+    "recency_critical": true,
+    "disambiguation": "CRITICAL. Two live Amazon settlements are being covered concurrently and they are NOT the same story. This beat is the $309.5M 'no-hassle returns'/retrocharge class action (filed W.D. Wash., Seattle; preliminary approval ~Feb 10 2026). It is NOT the $2.5B Amazon Prime FTC settlement whose claim deadline is July 27 2026 \u2014 that story dominates this week's coverage and any clip about it is a MISS for this beat.",
+    "queries": {
+      "anchor": [
+        "Amazon $309.5 million settlement returns",
+        "Amazon $309 million class action settlement refunds returns",
+        "Amazon no-hassle returns settlement",
+        "Amazon retrocharge settlement",
+        "Amazon returns class action settlement Seattle"
+      ],
+      "news": [
+        "Amazon to pay $309 million shoppers settlement returns",
+        "Amazon settles lawsuit over returned items refunds",
+        "Amazon charged customers again after returns settlement",
+        "are you eligible Amazon returns settlement class action",
+        "Amazon refund never came class action settlement eligibility",
+        "Amazon settlement returned items 2017 eligible"
+      ],
+      "franchise": [
+        "On Your Side Amazon settlement returns",
+        "Don't Waste Your Money Amazon settlement returns",
+        "consumer reporter Amazon $309 million settlement"
+      ],
+      "victim": [
+        "Amazon said refund issued but I never got it",
+        "Amazon charged me again after I returned it",
+        "I returned it and they took the money back"
+      ],
+      "platform": [
+        "amazon returns settlement claim",
+        "amazon retrocharge",
+        "amazon 309 million settlement"
+      ]
+    },
+    "platform_map": {
+      "youtube": [
+        "anchor",
+        "news",
+        "franchise"
+      ],
+      "news_web": [
+        "anchor",
+        "news",
+        "franchise"
+      ]
+    }
+  }
+]

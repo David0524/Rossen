@@ -165,3 +165,35 @@ seller-side tutorials.
 Guarantee." Consumer desks say "appealed" and "denied." When a beat is built
 around a brand-name process, expect the clip to carry the experience and the
 script to carry the term.
+
+## Run AMAZON_RETROCHARGE (single beat, $309.5M returns settlement)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| RETRO-b01 | authority_report | H* | EMPTY | No reachable broadcast video on the $309.5M "no-hassle returns"/retrocharge settlement. Print-only (Reuters, Verge, PCMag, Law360). Sole TV package — PIX11 2026-01-29 — is 403-walled here and no Nexstar sibling carried it |
+
+*Orientation assumed; no PLAY CLIP marker in the excerpt.
+
+**Pattern — concurrent settlements from the same company are a live trap.** Two
+Amazon settlements are running at once: the $309.5M returns/retrocharge case
+(Jan 2026, Seattle) and the $2.5B Prime/FTC case (claims deadline 2026-07-27).
+Every reachable "Amazon settlement" video is the Prime one, and the GMA version
+cut cleanly — right words, wrong settlement. The triage only kept it out because
+the beat carried an explicit `disambiguation` field and the scorer applied a
+negative weight to Prime/FTC/$2.5B tokens. **Recommend adding a `disambiguation`
+field to the beat record whenever a beat names a specific case, amount or docket
+from a company with other live litigation**, and having the grader treat a
+mismatch there as a hard filter rather than a scoring penalty.
+
+**Pattern — authority_report can be EMPTY because the news is old, not because
+the search failed.** This settlement peaked in print in late January and went
+quiet; the claim form is still "coming soon" after preliminary approval. There
+is no fresh video because there is no fresh news. That is worth reporting to the
+producer as a script note ("the latest is that nothing has happened yet") rather
+than logging as a sourcing failure. Re-run when the claims window opens; a
+"you may be owed money" package is near-certain then.
+
+**Running total on `authority_report` for dated federal/legal actions: F2-b07
+EMPTY (IC3 alert 5 days old), RETRO-b01 EMPTY (settlement quiet since January).
+Both ends of the recency curve fail — too new for video, and too old for video.
+The airable window for this role looks narrow.**
