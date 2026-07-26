@@ -1,7 +1,7 @@
 # F1 07/31/2026 — THE AIRBNB & VRBO RENTAL SCAM
 
 **Run:** `runs/F1_07312026` · branch `claude/gift-card-vertical-beat-test-glmu54`
-**Status:** complete through Step 8, holding at Checkpoint 2 for one decision on b04.
+**Status:** complete through Step 8. Checkpoint 2 resolved — no case swap taken.
 **Degraded by a missing search key:** no. `BRAVE_API_KEY` was present; no `DEGRADED` line.
 
 ```
@@ -63,8 +63,7 @@ Consequences and what I did:
   `tv` returns DRM.
 - **A 25-minute cooldown retry of the full shortlist also returned 0/19.** So the
   wall is persistent in this environment, not a transient rate-limit from the
-  3,053-query search. Nothing further to try here; b03 and b04 are final as
-  MANUAL CLIP.
+  3,053-query search. Everything below came from routes that bypass YouTube.
 - **The workaround that worked:** Scripps stations serve their video off Uplynk,
   and those streams are reachable. I pulled the manifest URL out of the WCPO
   article HTML, ffmpeg'd the audio, and transcribed locally with faster-whisper.
@@ -132,9 +131,9 @@ across the next runs rather than acting on from n=1.
 
 ## Beats with no clip
 
-None. All four beats have a confirmed source; two are cut, two are manual.
+None. All four beats have a confirmed source; three are cut (4 segments), one is manual.
 
 ## Clips that failed to download
 
-None of the attempted ones. b03/b04 were never attempted because no reachable
-media route exists here.
+None of the attempted ones. b04 was never attempted — no reachable media route
+exists for it in this environment.
