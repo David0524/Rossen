@@ -1,0 +1,54 @@
+[
+  {
+    "beat_id": "F1-b01",
+    "flagged": "https://www.wcpo.com/money/consumer/dont-waste-your-money/fake-rental-listings-targeting-summer-travelers-on-airbnb-vrbo",
+    "title": "Fake vacation rental listings take your deposit, disappear (Don't Waste Your Money / John Matarese, Scripps)",
+    "platform": "news_web",
+    "source_type": "affiliate",
+    "youtube_twin": "https://www.youtube.com/watch?v=uWnVyoPqOcw",
+    "youtube_twin_title": "Vacation rental scams: Woman loses $950 deposit via Zelle (WCPO 9)",
+    "media_source": "https://content.uplynk.com/b5dff6dc75764f9f950d79d0970a4524.m3u8",
+    "transcript_source": "whisper (faster-whisper base.en) on the Uplynk stream — YouTube captions were unavailable in this environment",
+    "duration": 119.0,
+    "butt_with": "F1-b02",
+    "segments": [
+      {
+        "in": "0:18",
+        "out": "0:55",
+        "outcue": "straight to voicemail",
+        "outcue_verified": true,
+        "outcue_cue_time": "0:54.00"
+      }
+    ],
+    "scores": {"tone": 9, "authenticity": 8, "quality": 8, "fit": 10, "total": 89},
+    "reasoning": "The beat's exact case. Gentry on camera, names the $950 and the Zelle instruction, and the segment ends on her own line rather than the reporter's. Fit is a 10 because the script's setup ('SO WHAT DID SHE GET FOR HER $950??? LISTEN TO WHAT HAPPENED TO HER') is answered literally by this material.",
+    "flags": ["Whisper renders 'Zelle' as 'sale' throughout — a transcription artifact, not an error in the clip. Do not quote the transcript on air; the audio says Zelle."]
+  },
+  {
+    "beat_id": "F1-b02",
+    "flagged": "https://www.wcpo.com/money/consumer/dont-waste-your-money/fake-rental-listings-targeting-summer-travelers-on-airbnb-vrbo",
+    "title": "Same Scripps package — Kevin Brasler / Consumers' Checkbook segment",
+    "platform": "news_web",
+    "source_type": "affiliate",
+    "youtube_twin": "https://www.youtube.com/watch?v=uWnVyoPqOcw",
+    "media_source": "https://content.uplynk.com/b5dff6dc75764f9f950d79d0970a4524.m3u8",
+    "transcript_source": "whisper (faster-whisper base.en) on the Uplynk stream",
+    "duration": 119.0,
+    "butt_with": "F1-b01",
+    "segments": [
+      {
+        "in": "0:59",
+        "out": "1:19",
+        "outcue": "not really part of this transaction",
+        "outcue_verified": true,
+        "outcue_cue_time": "1:15.00"
+      }
+    ],
+    "scores": {"tone": 8, "authenticity": 8, "quality": 8, "fit": 10, "total": 86},
+    "reasoning": "BUTT CONFIRMED — this is segment two of the same package as b01, exactly as the producer note hypothesised. Brasler delivers the buried terms-and-conditions line the script sets up: the transcript reads 'we're not really part of this transaction', and the script's line is 'THEY AREN'T ACTUALLY A PARTY TO YOUR TRANSACTION… THEY'RE JUST A FORUM.' Same claim, same source.",
+    "flags": [
+      "The on-air phrase 'we're just a forum' immediately follows the out point but Whisper truncated it to 'We', so it could NOT be verified and was NOT used as the outcue. If the editor wants the segment to land on 'forum', extend the out by ~1.5s and confirm against the audio by ear.",
+      "20s segment. Short, but within the observed aired range (10s-161s) and it is the specific line Jeff sets up."
+    ]
+  }
+]

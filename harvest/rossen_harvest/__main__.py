@@ -189,6 +189,96 @@ def cmd_harvest(args) -> int:
     return 0
 
 
+VERTICAL_PLATFORMS = {"tiktok", "instagram", "x", "facebook"}
+
+
+def cmd_captions(args) -> int:
+    """Step 5: fetch a transcript for every shortlisted clip.
+
+    YouTube goes through `transcripts.fetch_many` (auto-captions via
+    yt-dlp — metadata only, no media). The vertical platforms ship no
+    caption track at all, so they route to `vertical_transcribe`, which
+    downloads and runs faster-whisper locally. Both return the same
+    `Transcript` shape, so pass two's `.find()` / `.segment()` outcue
+    verification works identically either way.
+
+    A clip whose transcript comes back None is recorded as null rather
+    than dropped — the grader is required to demote it, not guess at
+    what it said.
+    """
+    from .transcripts import fetch_many
+
+    shortlist = json.loads(Path(args.shortlist).read_text())
+    cache = Cache(args.db)
+
+    yt_ids, vertical_urls, meta = [], [], {}
+    for c in shortlist:
+        platform = (c.get("platform") or "").lower()
+        key = c.get("video_id") or c.get("url")
+        meta[key] = c
+        if platform in VERTICAL_PLATFORMS:
+            vertical_urls.append(c["url"])
+        elif c.get("video_id"):
+            yt_ids.append(c["video_id"])
+        else:
+            log.warning("no video_id and not a vertical platform, skipping: %s",
+                        c.get("url"))
+
+    results: dict[str, object] = {}
+
+    if yt_ids:
+        for vid, t in fetch_many(sorted(set(yt_ids)), cache=cache,
+                                 concurrency=args.concurrency).items():
+            results[vid] = t
+
+    if vertical_urls:
+        if args.no_whisper:
+            log.warning("%d vertical clips need Whisper but --no-whisper is set; "
+                        "their outcues cannot be verified", len(vertical_urls))
+            for u in vertical_urls:
+                results[u] = None
+        else:
+            try:
+                from .vertical_transcribe import fetch_many_vertical
+                for url, t in fetch_many_vertical(
+                    sorted(set(vertical_urls)), cache=cache,
+                    model_size=args.whisper_model,
+                ).items():
+                    results[url] = t
+            except ImportError as exc:
+                log.warning("faster-whisper unavailable (%s) — %d vertical clips "
+                            "get no transcript. Flag their outcues unverified "
+                            "rather than inventing one.", exc, len(vertical_urls))
+                for u in vertical_urls:
+                    results[u] = None
+
+    out = {}
+    for key, t in results.items():
+        c = meta.get(key, {})
+        if t is None:
+            out[key] = None
+            continue
+        out[key] = {
+            "video_id": getattr(t, "video_id", key),
+            "url": c.get("url"),
+            "beat_id": c.get("beat_id"),
+            "source": t.source,
+            "duration": t.duration,
+            "cues": [{"start": q.start, "end": q.end, "text": q.text} for q in t.cues],
+            "prompt": t.as_prompt(),
+        }
+
+    got = sum(1 for v in out.values() if v)
+    print(f"captions: {got}/{len(out)} clips have a transcript")
+    missing = [k for k, v in out.items() if not v]
+    if missing:
+        print("  no transcript (demote, do not guess): " + ", ".join(missing))
+
+    Path(args.out).write_text(json.dumps(out, indent=2, default=str))
+    print(f"wrote {args.out}")
+    return 0
+
+
 def _gate_orientation(
     cands: list[Candidate],
     beats: list[dict],
@@ -405,6 +495,22 @@ def main(argv=None) -> int:
                    help="remove candidates verified landscape on a vertical beat, "
                         "rather than only flagging them. Never drops 'unknown'")
     h.set_defaults(func=cmd_harvest)
+
+    cap = sub.add_parser("captions",
+                         help="Step 5: fetch transcripts for a shortlist")
+    cap.add_argument("shortlist")
+    cap.add_argument("--out", default="transcripts.json")
+    cap.add_argument("--no-whisper", action="store_true",
+                     help="skip the Whisper pass on vertical clips; their "
+                          "outcues will be unverifiable")
+    cap.add_argument("--whisper-model", default="base.en")
+    cap.set_defaults(func=cmd_captions)
+
+    cl = sub.add_parser("clip", help="Step 7: download picks and cut segments")
+    cl.add_argument("picks")
+    cl.add_argument("--outdir", default="clips")
+    cl.set_defaults(func=lambda a: __import__(
+        "rossen_harvest.clip", fromlist=["cmd_clip"]).cmd_clip(a))
 
     e = sub.add_parser("eval", help="Task 1: measure recall@30")
     e.add_argument("queries")

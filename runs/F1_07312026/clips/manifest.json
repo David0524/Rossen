@@ -1,0 +1,31 @@
+{
+  "clips": [
+    {
+      "beat_id": "F1-b01",
+      "segment": 1,
+      "file": "F1-b01_seg1.mp4",
+      "in": "0:17.00",
+      "out": "0:56.50",
+      "in_unpadded": "0:18",
+      "out_unpadded": "0:55",
+      "outcue": "straight to voicemail",
+      "outcue_verified": true,
+      "source": "https://www.wcpo.com/money/consumer/dont-waste-your-money/fake-rental-listings-targeting-summer-travelers-on-airbnb-vrbo",
+      "butt_with": "F1-b02"
+    },
+    {
+      "beat_id": "F1-b02",
+      "segment": 1,
+      "file": "F1-b02_seg1.mp4",
+      "in": "0:58.00",
+      "out": "1:20.50",
+      "in_unpadded": "0:59",
+      "out_unpadded": "1:19",
+      "outcue": "not really part of this transaction",
+      "outcue_verified": true,
+      "source": "https://www.wcpo.com/money/consumer/dont-waste-your-money/fake-rental-listings-targeting-summer-travelers-on-airbnb-vrbo",
+      "butt_with": "F1-b01"
+    }
+  ],
+  "failed": []
+}
