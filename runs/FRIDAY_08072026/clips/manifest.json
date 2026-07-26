@@ -1,0 +1,29 @@
+{
+  "episode": "08-07-2026",
+  "episode_title": "Amazon OWES You Money - Click THIS to Get It Back",
+  "scope": "clip 1 only (per request)",
+  "generated_by": "rossen-pipeline",
+  "environment_note": "YouTube caption + media paths bot-walled this run; no outcue independently verified. Editor must confirm in/out against the source before cutting.",
+  "entries": [
+    {
+      "beat_id": "08-07-b01",
+      "clip_number": 1,
+      "orientation": "horizontal",
+      "clip_role": "explainer_demo/creator_long",
+      "url": "https://www.youtube.com/watch?v=_8W0-cK5XTQ",
+      "title": "DO THIS every time a Amazon package arrives late",
+      "uploader": "In the Black",
+      "platform": "youtube",
+      "source_type": "creator_long",
+      "duration": 270,
+      "segments": [
+        {
+          "in": "1:02",
+          "out": "1:41",
+          "outcue": "worth a shot though",
+          "outcue_verified": false
+        }
+      ]
+    }
+  ]
+}

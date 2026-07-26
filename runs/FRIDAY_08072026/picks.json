@@ -1,0 +1,23 @@
+[
+  {
+    "beat_id": "08-07-b01",
+    "url": "https://www.youtube.com/watch?v=_8W0-cK5XTQ",
+    "title": "DO THIS every time a Amazon package arrives late",
+    "uploader": "In the Black",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "duration": 270,
+    "segments": [
+      {
+        "in": "1:02",
+        "out": "1:41",
+        "outcue": "worth a shot though",
+        "outcue_verified": false,
+        "outcue_source": "producer draft in script.docx, not independently confirmed"
+      }
+    ],
+    "score": 82,
+    "reasoning": "Established personal-finance/consumer channel doing a real screen-recorded walkthrough of the Amazon guaranteed-delivery refund path -- exactly the explainer_demo/creator_long role calls for. Independently surfaced at rank 1 by 11 of 14 generated queries (anchor, news, victim, platform, shorts registers all hit it), which is a strong cross-check that this is the right footage, not just the producer's first guess. Title and channel register match; duration (270s) comfortably contains the proposed 39s segment plus setup runway.",
+    "flags": ["outcue_unverified_environment_block"]
+  }
+]
