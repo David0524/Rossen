@@ -1,0 +1,59 @@
+[
+  {
+    "beat_id": "08-07-b01",
+    "episode": "08-07",
+    "segment_title": "YOUR PACKAGE CAME LATE — THAT IS A REFUND YOU NEVER CLAIMED",
+    "script_text": "WHEN YOU CHECK OUT, SOMETIMES AMAZON SHOWS YOU A GUARANTEED DELIVERY DATE. NOT AN ESTIMATE. A GUARANTEE. AND THEY PUT IT IN WRITING IN YOUR CONFIRMATION EMAIL. AMAZON'S OWN TERMS SAY IF THEY MISS THAT DATE, YOUR SHIPPING FEES MAY BE REFUNDED. SO GO FIND THAT EMAIL. THAT EMAIL IS YOUR RECEIPT. HERE'S THE EXACT PATH AMAZON PUBLISHES. GO TO YOUR ORDERS... SELECT THE LATE ORDER... CLICK PROBLEM WITH AN ORDER... THEN SHIPPING OR DELIVERY ISSUES... THEN SHIPMENT IS LATE. NOW IF YOU'RE A PRIME MEMBER WHO NEVER PAID A SHIPPING FEE, THERE'S NOTHING TO REFUND... SO ASK THE AGENT FLAT OUT FOR AN ACCOUNT CREDIT INSTEAD. YOU HAVE TO SAY THE WORDS. WATCH HIM SHOW YOU HOW.",
+    "orientation": "horizontal",
+    "clip_role": "explainer_demo/creator_long",
+    "news_anchor": "Amazon guaranteed delivery date shipping refund policy",
+    "visual_spec": "screen-recorded walkthrough, cursor clicking through Amazon Orders page to a customer-service chat, step-by-step demo",
+    "platforms": ["youtube", "news_web"],
+    "offsite_likely": false,
+    "priority": 1,
+    "expected_segments": 1,
+    "sourcability": "unchecked",
+    "sourcability_note": "",
+    "aired_url": "https://www.youtube.com/watch?v=_8W0-cK5XTQ",
+    "aired_platform": "youtube",
+    "segments": [
+      {"in": "1:02", "out": "1:41", "outcue": "worth a shot though"}
+    ],
+    "queries": {
+      "anchor": [
+        "Amazon guaranteed delivery date refund policy",
+        "Amazon shipping fee refund late delivery"
+      ],
+      "news": [
+        "how to get Amazon refund for late package",
+        "Amazon guaranteed delivery date explained",
+        "Amazon late shipment refund policy tips"
+      ],
+      "victim": [
+        "Amazon package was late so I asked for a refund",
+        "I got Amazon to refund my shipping because it was late"
+      ],
+      "platform": [
+        "Amazon late delivery refund hack",
+        "Amazon guaranteed delivery refund trick",
+        "#AmazonHack late package refund"
+      ],
+      "shorts": [
+        "#AmazonHack Amazon owes you money #shorts",
+        "did you know Amazon refunds late packages #shorts",
+        "Amazon secret refund policy #shorts",
+        "#primehack Amazon late delivery money back"
+      ]
+    },
+    "platform_map": {
+      "youtube": ["anchor", "news", "platform"],
+      "shorts": ["shorts", "platform"],
+      "news_web": ["anchor", "news"]
+    },
+    "shorts_search": {
+      "suffix": "#shorts",
+      "match_filter": "duration < 60",
+      "surfaced_for": "horizontal"
+    }
+  }
+]
