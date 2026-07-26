@@ -87,10 +87,10 @@ was patched. See `runs/SMOKE_VERTICAL/report.md` addendum.
 |---|---|---|---|---|
 | F1-b01 | victim_interview | H | PICK | Scripps DWYM (Matarese) 0:18-0:55 "straight to voicemail" (Laura Gentry, $950 Zelle); pulled off WCPO's Uplynk stream, Whisper-verified |
 | F1-b02 | authority_report | H | PICK (butt seg 2) | Same Scripps package 0:59-1:19 "not really part of this transaction" (Kevin Brasler, Consumers' Checkbook) |
-| F1-b03 | victim_interview | H | LOCATED | Inside Edition VfwRWgw_M3I (Allie Conti, 8:15) — exact case, alive and public, but YouTube bot-wall blocked captions and media here |
+| F1-b03 | victim_interview | H | PICK (2 segs) | Inside Edition VfwRWgw_M3I 0:30-1:38 "up in the scam" + 1:51-2:49 "coming up on surfing websites" (Allie Conti); recovered via the outlet's own Facebook upload after installing deno |
 | F1-b04 | victim_interview | H | LOCATED | CBS LA WMofFj3FJDQ (Jeff Branch, Santa Monica Mountains) — confirmed the right case via KNX's write-up; same bot-wall |
 
-**Yield:** 2 PICK / 2 LOCATED / 0 EMPTY of 4. Both LOCATED are environment
+**Yield:** 3 PICK / 1 LOCATED / 0 EMPTY of 4. Both LOCATED are environment
 artifacts, not sourcing failures — every beat in this episode has a confirmed,
 live source. On a machine with normal YouTube access this is plausibly 4/4.
 Confirmed: a 25-minute-cooldown retry of the full 19-clip shortlist also returned
@@ -119,6 +119,15 @@ every future news_web beat before writing it off.
 **Pattern — the diversity floor fired on 4 of 4 beats and its promotion lost pass
 two 4 of 4 times.** Same signal the grader skill warns about. Two runs of this
 and the hard filters upstream need a look.
+
+**Pattern — when YouTube is walled, try the outlet's own social upload, and
+install deno first.** b03 looked dead: Inside Edition's site 404s and Facebook
+initially reported 0 formats. Installing deno (the JS runtime yt-dlp warns about)
+changed that — the same Facebook URL then exposed a downloadable render, at the
+identical duration as the YouTube cut, so the timecodes transferred straight to
+the YouTube link. Two beats in this run were rescued by going to a non-YouTube
+host: Scripps/Uplynk for b01-b02, Facebook for b03. Try both before logging
+LOCATED.
 
 **Environment:** YouTube search fine, individual video pages fully bot-walled
 (all player clients; mweb needs a PO token for subs, tv returns DRM). Brave key

@@ -8,7 +8,7 @@
     "youtube_twin": "https://www.youtube.com/watch?v=uWnVyoPqOcw",
     "youtube_twin_title": "Vacation rental scams: Woman loses $950 deposit via Zelle (WCPO 9)",
     "media_source": "https://content.uplynk.com/b5dff6dc75764f9f950d79d0970a4524.m3u8",
-    "transcript_source": "whisper (faster-whisper base.en) on the Uplynk stream — YouTube captions were unavailable in this environment",
+    "transcript_source": "whisper (faster-whisper base.en) on the Uplynk stream \u2014 YouTube captions were unavailable in this environment",
     "duration": 119.0,
     "butt_with": "F1-b02",
     "segments": [
@@ -20,14 +20,22 @@
         "outcue_cue_time": "0:54.00"
       }
     ],
-    "scores": {"tone": 9, "authenticity": 8, "quality": 8, "fit": 10, "total": 89},
+    "scores": {
+      "tone": 9,
+      "authenticity": 8,
+      "quality": 8,
+      "fit": 10,
+      "total": 89
+    },
     "reasoning": "The beat's exact case. Gentry on camera, names the $950 and the Zelle instruction, and the segment ends on her own line rather than the reporter's. Fit is a 10 because the script's setup ('SO WHAT DID SHE GET FOR HER $950??? LISTEN TO WHAT HAPPENED TO HER') is answered literally by this material.",
-    "flags": ["Whisper renders 'Zelle' as 'sale' throughout — a transcription artifact, not an error in the clip. Do not quote the transcript on air; the audio says Zelle."]
+    "flags": [
+      "Whisper renders 'Zelle' as 'sale' throughout \u2014 a transcription artifact, not an error in the clip. Do not quote the transcript on air; the audio says Zelle."
+    ]
   },
   {
     "beat_id": "F1-b02",
     "flagged": "https://www.wcpo.com/money/consumer/dont-waste-your-money/fake-rental-listings-targeting-summer-travelers-on-airbnb-vrbo",
-    "title": "Same Scripps package — Kevin Brasler / Consumers' Checkbook segment",
+    "title": "Same Scripps package \u2014 Kevin Brasler / Consumers' Checkbook segment",
     "platform": "news_web",
     "source_type": "affiliate",
     "youtube_twin": "https://www.youtube.com/watch?v=uWnVyoPqOcw",
@@ -44,11 +52,58 @@
         "outcue_cue_time": "1:15.00"
       }
     ],
-    "scores": {"tone": 8, "authenticity": 8, "quality": 8, "fit": 10, "total": 86},
-    "reasoning": "BUTT CONFIRMED — this is segment two of the same package as b01, exactly as the producer note hypothesised. Brasler delivers the buried terms-and-conditions line the script sets up: the transcript reads 'we're not really part of this transaction', and the script's line is 'THEY AREN'T ACTUALLY A PARTY TO YOUR TRANSACTION… THEY'RE JUST A FORUM.' Same claim, same source.",
+    "scores": {
+      "tone": 8,
+      "authenticity": 8,
+      "quality": 8,
+      "fit": 10,
+      "total": 86
+    },
+    "reasoning": "BUTT CONFIRMED \u2014 this is segment two of the same package as b01, exactly as the producer note hypothesised. Brasler delivers the buried terms-and-conditions line the script sets up: the transcript reads 'we're not really part of this transaction', and the script's line is 'THEY AREN'T ACTUALLY A PARTY TO YOUR TRANSACTION\u2026 THEY'RE JUST A FORUM.' Same claim, same source.",
     "flags": [
       "The on-air phrase 'we're just a forum' immediately follows the out point but Whisper truncated it to 'We', so it could NOT be verified and was NOT used as the outcue. If the editor wants the segment to land on 'forum', extend the out by ~1.5s and confirm against the audio by ear.",
       "20s segment. Short, but within the observed aired range (10s-161s) and it is the specific line Jeff sets up."
+    ]
+  },
+  {
+    "beat_id": "F1-b03",
+    "flagged": "https://www.youtube.com/watch?v=VfwRWgw_M3I",
+    "title": "The Genius Way This Reporter Uncovered Airbnb Scammers (Inside Edition)",
+    "platform": "youtube",
+    "source_type": "network",
+    "media_source": "https://www.facebook.com/Inside.Edition/videos/849537436218248/",
+    "transcript_source": "whisper (faster-whisper base.en) on Inside Edition's own Facebook upload \u2014 YouTube is bot-walled in this environment; the Facebook copy is 494.24s against YouTube's 495s, so timecodes transfer",
+    "duration": 494.24,
+    "segments": [
+      {
+        "in": "0:30",
+        "out": "1:38",
+        "outcue": "up in the scam",
+        "outcue_verified": true,
+        "outcue_cue_time": "1:34.92",
+        "covers": "flophouse description, kicked out after two nights, $1,200 paid / $400 refunded"
+      },
+      {
+        "in": "1:51",
+        "out": "2:49",
+        "outcue": "coming up on surfing websites",
+        "outcue_verified": true,
+        "outcue_cue_time": "2:45.72",
+        "covers": "the investigation turn \u2014 LA area code on a Chicago rental, untraceable Google number, 'Becky and Andrew', reverse image search hitting surfing sites"
+      }
+    ],
+    "scores": {
+      "tone": 9,
+      "authenticity": 9,
+      "quality": 7,
+      "fit": 10,
+      "total": 88
+    },
+    "reasoning": "Conti tells it herself, start to finish, and the two segments map onto the script's two halves: the experience, then 'HERE'S WHERE IT TURNS... SHE STARTED DIGGING.' Segment 2 delivers the surfer photo and the Los Angeles area code the script names explicitly.",
+    "flags": [
+      "Quality 7, not higher: the only reachable copy is Facebook's at 640x360, below the 720p floor. Re-pull from the YouTube original for air \u2014 the timecodes carry over.",
+      "Whisper cue boundaries here are fixed ~4s windows, not phrase-aligned, so both outcues sit mid-sentence. They are verbatim and locatable, which is what verification requires, but trim to the sentence end in the edit.",
+      "The transcript has a hallucination loop around 3:05-3:20 ('I was in the back' repeated). Both chosen segments are well clear of it."
     ]
   }
 ]

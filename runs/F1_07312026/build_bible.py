@@ -70,10 +70,12 @@ CLIPS = [
          alt="https://www.youtube.com/watch?v=uWnVyoPqOcw",
          tin="0:59", tout="1:19", outcue="not really part of this transaction",
          note="BUTT segment 2 of 2. Producer question above is ANSWERED: Gentry and Brasler are one package, so this is one source, two segments."),
-    dict(role="victim_interview / horizontal", kind="manual",
+    dict(role="victim_interview / horizontal", kind="pick",
          src="Inside Edition — 'The Genius Way This Reporter Uncovered Airbnb Scammers'",
          url="https://www.youtube.com/watch?v=VfwRWgw_M3I",
-         note="Conti on camera, 8:15. ANSWERS the producer question above: the video DOES exist, so the Jeff-read-over-screenshots fallback is not needed. No timecode — this environment could not reach YouTube captions or media to verify an outcue. Pull IN/OUT on a machine with normal YouTube access."),
+         segments=[("0:30", "1:38", "up in the scam"),
+                   ("1:51", "2:49", "coming up on surfing websites")],
+         note="BUTT — two segments from one source. Seg 1 is the flophouse and the money ($1,200 paid, $400 back). Seg 2 is the investigation turn: LA area code on a Chicago rental, untraceable Google number, 'Becky and Andrew', reverse image search hitting surfing sites. ANSWERS the producer question above — the video exists, no Jeff-read fallback needed."),
     dict(role="victim_interview / horizontal", kind="manual",
          src="CBS Los Angeles — 'Exclusive: Family Discovers Home Listed On Airbnb Without Their Permission'",
          url="https://www.youtube.com/watch?v=WMofFj3FJDQ",
@@ -88,9 +90,12 @@ def build_block(c, rid_url, rid_alt):
     if c.get("alt"):
         out.append(link_para("Also on YouTube: ", c["alt"], rid_alt))
     if c["kind"] == "pick":
-        out.append(para(run(
-            f'IN {c["tin"]}   OUT {c["tout"]}   outcue: "{c["outcue"]}"',
-            BLUE, bold=True)))
+        segs = c.get("segments") or [(c.get("tin"), c.get("tout"), c.get("outcue"))]
+        multi = len(segs) > 1
+        for i, (tin, tout, cue) in enumerate(segs, 1):
+            label = f"SEG {i} — " if multi else ""
+            out.append(para(run(
+                f'{label}IN {tin}   OUT {tout}   outcue: "{cue}"', BLUE, bold=True)))
     if c.get("note"):
         out.append(para(run(c["note"], AMBER if c["kind"] == "manual" else BLUE)))
     return "".join(out)

@@ -66,24 +66,38 @@ def resolve_source(pick: dict, outdir: Path) -> Path | None:
         log.info("%s: source already downloaded (%s)", pick["beat_id"], dest.name)
         return dest
 
+    def via_ffmpeg(target: str) -> bool:
+        for codec in (["-c", "copy", "-bsf:a", "aac_adtstoasc"],
+                      ["-c:v", "libx264", "-preset", "veryfast", "-c:a", "aac"]):
+            cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", target] + codec + [str(dest)]
+            if subprocess.run(cmd).returncode == 0 and dest.exists():
+                return True
+        return False
+
+    def via_ytdlp(target: str) -> bool:
+        cmd = ["yt-dlp", "-f", "bv*[height<=720]+ba/b[height<=720]/b/best",
+               "--merge-output-format", "mp4", "-o", str(dest), target]
+        return subprocess.run(cmd).returncode == 0 and dest.exists()
+
+    # `media_source` is whatever route was proven to work when the transcript
+    # was made. It is a direct stream sometimes (an Uplynk .m3u8 off an
+    # affiliate page) and a normal video page other times (the outlet's own
+    # Facebook upload, when YouTube is walled). Pick the fetcher by shape
+    # rather than assuming: ffmpeg cannot open a Facebook page, and yt-dlp is
+    # pointless overhead on a bare .m3u8.
     media = pick.get("media_source")
     if media:
-        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", media,
-               "-c", "copy", "-bsf:a", "aac_adtstoasc", str(dest)]
-        if subprocess.run(cmd).returncode == 0 and dest.exists():
-            return dest
-        # stream copy can fail on some HLS variants; re-encode as a fallback
-        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", media,
-               "-c:v", "libx264", "-preset", "veryfast", "-c:a", "aac", str(dest)]
-        if subprocess.run(cmd).returncode == 0 and dest.exists():
-            return dest
-        log.warning("%s: ffmpeg could not pull media_source", pick["beat_id"])
+        direct = any(media.split("?")[0].endswith(ext)
+                     for ext in (".m3u8", ".mp4", ".m4a", ".mpd", ".ts"))
+        order = [via_ffmpeg, via_ytdlp] if direct else [via_ytdlp, via_ffmpeg]
+        for fetch in order:
+            if fetch(media):
+                return dest
+        log.warning("%s: could not pull media_source %s", pick["beat_id"], media)
 
     url = pick.get("flagged") or pick.get("url")
-    if url:
-        cmd = ["yt-dlp", "-f", "bv*[height<=720]+ba/b[height<=720]/b",
-               "--merge-output-format", "mp4", "-o", str(dest), url]
-        if subprocess.run(cmd).returncode == 0 and dest.exists():
+    if url and url != media:
+        if via_ytdlp(url):
             return dest
         log.warning("%s: yt-dlp could not download %s", pick["beat_id"], url)
 

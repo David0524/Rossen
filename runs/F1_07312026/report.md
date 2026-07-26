@@ -10,16 +10,18 @@ Source mix, 4 beats:  affiliate 3 · network 1
 
 3 of 4 picks are affiliate (75%). See "cheap swaps" below.
 
+**Yield: 3 PICK / 1 LOCATED / 0 EMPTY.**
+
 ## Beat table
 
 | Beat | Role | Or. | Pick | Platform | Source type | Segment | Outcue |
 |---|---|---|---|---|---|---|---|
 | F1-b01 | victim_interview | H | Scripps DWYM (Matarese) — Gentry | news_web + YT twin | affiliate | 0:18–0:55 (39.5s cut) | "straight to voicemail" ✅ verified |
 | F1-b02 | authority_report | H | **Same package** — Brasler | news_web + YT twin | affiliate | 0:59–1:19 (22.5s cut) | "not really part of this transaction" ✅ verified |
-| F1-b03 | victim_interview | H | Inside Edition — Conti | youtube | network | — MANUAL | not verifiable in this environment |
+| F1-b03 | victim_interview | H | Inside Edition — Conti | youtube | network | 0:30–1:38 + 1:51–2:49 (2 cuts) | "up in the scam" / "coming up on surfing websites" ✅ verified |
 | F1-b04 | victim_interview | H | CBS LA — Branch | youtube | affiliate | — MANUAL | not verifiable in this environment |
 
-Two clips cut and on disk (`clips/`). Two handed over as MANUAL CLIP with a
+Four clips cut and on disk (`clips/`). One handed over as MANUAL CLIP with a
 confirmed-correct source and **no invented timecode**.
 
 ## The three producer questions in the script — all answered
@@ -68,8 +70,16 @@ Consequences and what I did:
   article HTML, ffmpeg'd the audio, and transcribed locally with faster-whisper.
   That produced the verified transcript behind b01 and b02 and the media the
   clips were actually cut from.
-- b03 and b04 have no such route: Inside Edition's page 404s, CBS's 406s,
-  Facebook resolves the Conti video but serves 0 formats (login wall).
+- **b03 was later recovered.** Installing deno (the JS runtime yt-dlp asks for)
+  changed the Facebook extraction: Inside Edition's own Facebook upload of the
+  same package went from 0 formats to a downloadable `sd` render. It is
+  494.24s against YouTube's 495s — the same cut — so the timecodes transfer to
+  the YouTube link. Whispered locally, both outcues verified, both segments cut.
+- **b04 is genuinely unreachable here.** CBS returns 406 to every header set and
+  to yt-dlp's own CBSLocal extractor; there is no Facebook copy, and the Gray
+  station that carried the story ran it as text only. Chromium is installed but
+  cannot traverse the agent proxy (ERR_CONNECTION_RESET on every host,
+  including example.com), so the browser route is closed too.
 
 **Outcue discipline held.** A third candidate outcue for b02 — "we're just a
 forum", which would have been the better on-air landing — was **rejected**
@@ -95,9 +105,11 @@ The pipeline skill documents both; neither existed (the CLI shipped with
 
 ## Beats needing a human
 
-- **b03, b04 — no verified timecode.** Both sources are confirmed correct and
-  alive. On a machine with normal YouTube access, `python3 -m rossen_harvest
-  captions` then `clip` should finish both without changes.
+- **b04 — no verified timecode.** The source is confirmed correct and alive. On a
+  machine with normal YouTube access, `python3 -m rossen_harvest captions` then
+  `clip` should finish it without changes.
+- **b03 quality.** The only reachable copy was Facebook's at 640x360, below the
+  720p floor. Re-pull from the YouTube original for air; the timecodes carry.
 - **b02's 20-second segment** is short. Within the observed aired range
   (10s–161s) and it is the exact line Jeff sets up, but worth a look.
 
