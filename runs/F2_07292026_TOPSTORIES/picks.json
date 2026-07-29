@@ -1,0 +1,1078 @@
+[
+ {
+  "beat_id": "F2t-b01",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=mwHYj6Pn8R8",
+  "platform": "youtube",
+  "title": "Victim says restitution lags after fake utility worker theft",
+  "uploader": "ABC13 Houston",
+  "video_id": "mwHYj6Pn8R8",
+  "clip_role": "victim_interview",
+  "orientation": "horizontal",
+  "priority": 1,
+  "segment_title": "START WITH MARGE - SHE DID EVERYTHING RIGHT AND STILL GOT HIT",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "segments": [
+   {
+    "in": "0:55",
+    "out": "1:47",
+    "outcue": "in jewelry, cash, and family heirlooms",
+    "outcue_verified": true,
+    "outcue_cue_start": "1:41",
+    "transcript_source": "auto"
+   },
+   {
+    "in": "2:03",
+    "out": "2:33",
+    "outcue": "I think they need to pick him up and put him in jail",
+    "outcue_verified": true,
+    "outcue_cue_start": "2:31",
+    "transcript_source": "auto"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=mwHYj6Pn8R8",
+    "source_type": "affiliate",
+    "score": 93,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 10,
+    "segments": [
+     {
+      "in": "0:55",
+      "out": "1:47",
+      "outcue": "in jewelry, cash, and family heirlooms",
+      "outcue_verified": true,
+      "outcue_cue_start": "1:41",
+      "transcript_source": "auto"
+     },
+     {
+      "in": "2:03",
+      "out": "2:33",
+      "outcue": "I think they need to pick him up and put him in jail",
+      "outcue_verified": true,
+      "outcue_cue_start": "2:31",
+      "transcript_source": "auto"
+     }
+    ],
+    "reasoning": "Exact case and the only source that carries both halves the script needs. Marge Vlasak on camera in her own home describing the CenterPoint ruse in her own words, her son on the financial damage, then the restitution turn with Mitchell and Tom named and the $50,000 at $700 a month confirmed. Audio clean, faces on camera, ABC13 lower-third. Butt-cut because the script sets up the two halves separately.",
+    "flags": [],
+    "pass_one_score": 92,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://abc13.com/post/houston-burglary-victim-says-restitution-lags-fake-utility-worker-theft/18238398/",
+    "source_type": "affiliate",
+    "score": 74,
+    "reason": "Same ABC13 package on the station's own site. No caption track, so manual lane only -- kept as the fallback if the YouTube copy is geo/age walled.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=xxwZDNFKdEU",
+    "source_type": "affiliate",
+    "score": 58,
+    "reason": "KHOU, Houston, fake CenterPoint robbery -- but a pregnant woman robbed at gunpoint, not Marge. Same scam, wrong case.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Kjab9BGcTbo",
+    "source_type": "affiliate",
+    "score": 55,
+    "reason": "KPRC 'Robbers pose as CenterPoint employees', 144s. Different victim again.",
+    "transcript": "fetched"
+   }
+  ],
+  "cannot_determine": [
+   "whether the surveillance video inside the package is cleared for re-use, or only ABC13's cut of it"
+  ],
+  "producer_notes": "Transcript corrects the script on one figure: the safe held 'more than $200,000' in jewelry, cash and heirlooms, where the script says HUNDREDS OF THOUSANDS. Defensible but the singular case is $200K+, not plural hundreds.",
+  "shortlist_source_mix": {
+   "affiliate": 4
+  }
+ },
+ {
+  "beat_id": "F2t-b02",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=i8ie5dvEge0",
+  "platform": "youtube",
+  "title": "Pepco impersonation scam costs Prince George's County victim more than $18K",
+  "uploader": "ABC 7 News - WJLA",
+  "video_id": "i8ie5dvEge0",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "priority": 2,
+  "segment_title": "BUT HOW DOES A GUY LIKE THAT GET IN THE DOOR IN THE FIRST PLACE",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": true,
+  "segments": [
+   {
+    "in": "0:37",
+    "out": "1:18",
+    "outcue": "Last year, a victim lost $18,500",
+    "outcue_verified": true,
+    "outcue_cue_start": "1:14",
+    "transcript_source": "auto"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=i8ie5dvEge0",
+    "source_type": "affiliate",
+    "score": 90,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 9,
+    "fit": 10,
+    "segments": [
+     {
+      "in": "0:37",
+      "out": "1:18",
+      "outcue": "Last year, a victim lost $18,500",
+      "outcue_verified": true,
+      "outcue_cue_start": "1:14",
+      "transcript_source": "auto"
+     }
+    ],
+    "reasoning": "Delivers the exact soundbite the script cues. William Ellis of Pepco on camera: 'We would never ask to come into a customer's home at Pepco.' Then Sgt John Quarless (captioned 'Corless') on the urgency tactic, then both dollar figures the script cites -- one victim over $8,000 this year, $18,500 last year. 90s package, no filler.",
+    "flags": [],
+    "pass_one_score": 84,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=9YQDxAMiIgc",
+    "source_type": "affiliate",
+    "score": 82,
+    "reason": "WUSA9, 124s, 'Police warn of Pepco impersonators in Prince George's Co.' Best duration for a minute of usable material.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=BvvhQ8vvdY8",
+    "source_type": "affiliate",
+    "score": 76,
+    "reason": "DC News Now, 123s, same presser, third carrier. Dedupe candidate against the two above.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=FMmCX0m0l0A",
+    "source_type": "creator_long",
+    "score": 68,
+    "reason": "PepcoTV's own 'Beware of Scams' message, 63s. Non-affiliate; likeliest place to get Pepco stating on camera it never asks to come inside.",
+    "transcript": "null - bot-walled, not captions-disabled"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=iUSeivsyilA",
+    "source_type": "creator_long",
+    "score": 50,
+    "reason": "DC Public Service Commission, 482s, 'How Pepco is fighting utility scams'. Institutional and long; the moment would be buried.",
+    "transcript": "fetched"
+   }
+  ],
+  "cannot_determine": [
+   "whether Ellis and Quarless are both on camera or one is a graphic quote"
+  ],
+  "producer_notes": "Auto-caption renders Quarless as 'Corless'; the script spelling is likely right, worth one check.",
+  "shortlist_source_mix": {
+   "affiliate": 3,
+   "creator_long": 2
+  }
+ },
+ {
+  "beat_id": "F2t-b03",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=WxR6-ycJwaQ",
+  "platform": "youtube",
+  "title": "New utility scheme targets Houston-area residents, tries to gain home access",
+  "uploader": "KPRC 2 Click2Houston",
+  "video_id": "WxR6-ycJwaQ",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "priority": 2,
+  "segment_title": "BUT THIS BRAND NEW VERSION IS EVEN HARDER TO SPOT",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "segments": [
+   {
+    "in": "1:20",
+    "out": "1:43",
+    "outcue": "which says it does not and contractors to private homes",
+    "outcue_verified": true,
+    "outcue_cue_start": "1:42",
+    "transcript_source": "manual"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=WxR6-ycJwaQ",
+    "source_type": "affiliate",
+    "score": 88,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "1:20",
+      "out": "1:43",
+      "outcue": "which says it does not and contractors to private homes",
+      "outcue_verified": true,
+      "outcue_cue_start": "1:42",
+      "transcript_source": "manual"
+     }
+    ],
+    "reasoning": "Exact case, and the only candidate that carries both gets. BBB on why this variant is new ('we haven't quite seen that before', most utility imposters stay remote), then the ERCOT line the script calls the one sentence that ends the scam. Manual captions, so timecodes are reliable.",
+    "flags": [
+     "caption garble: the ERCOT line is captioned 'does not and contractors to private homes'; the spoken line is 'does not send contractors to private homes'. Outcue is quoted verbatim from the transcript as the rule requires -- the editor should cut to the audio, not the caption."
+    ],
+    "pass_one_score": 90,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.facebook.com/fox26houston/posts/leah-napoliello-from-the-better-business-bureau-warns-about-new-scams-targeting-/903071255194006/",
+    "source_type": "affiliate",
+    "score": 40,
+    "reason": "FOX26 Houston Facebook post carrying Leah Napoliello of the BBB. Social page, not a video permalink; kept only because she is the named get.",
+    "transcript": "none - not a captioned platform"
+   }
+  ],
+  "cannot_determine": [
+   "whether the BBB speaker is identified on screen as Leah Napoliello"
+  ],
+  "producer_notes": "Transcript says the caller claimed to be 'dynamic Energy', not CenterPoint, and that the woman ALMOST fell for it rather than losing money -- both consistent with the script.",
+  "shortlist_source_mix": {
+   "affiliate": 2
+  }
+ },
+ {
+  "beat_id": "F2t-b04",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=e_Zo3DGvQ04",
+  "platform": "youtube",
+  "title": "Video shows fake DTE workers accused of killing man, hurting wife in Rochester Hills - YouTube",
+  "uploader": "YouTube",
+  "video_id": "e_Zo3DGvQ04",
+  "clip_role": "evidence",
+  "orientation": "vertical",
+  "priority": 1,
+  "segment_title": "NOW IT GETS SO MUCH WORSE THAN MONEY",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "segments": [
+   {
+    "in": "0:23",
+    "out": "0:37",
+    "outcue": "dead and his wife tied up and terrorized",
+    "outcue_verified": true,
+    "outcue_cue_start": "0:32",
+    "transcript_source": "auto"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=e_Zo3DGvQ04",
+    "source_type": "affiliate",
+    "score": 84,
+    "tone": 8,
+    "authenticity": 10,
+    "quality": 7,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:23",
+      "out": "0:37",
+      "outcue": "dead and his wife tied up and terrorized",
+      "outcue_verified": true,
+      "outcue_cue_start": "0:32",
+      "transcript_source": "auto"
+     }
+    ],
+    "reasoning": "Carries the sheriff-released doorbell footage the beat cues, with the raw audio intact -- 'we're checking for gas leaks' over the doorbell view at 0:26 -- then the consequence line. This is the artifact, not a recount of it.",
+    "flags": [
+     "ORIENTATION: producer typed VERTICAL and this is a horizontal affiliate package carrying the vertical doorbell footage. Needs a punch-in or crop ruling (cut/crop_vertical.sh) before it is cut. Not auto-failed, per the crossed-orientation exception."
+    ],
+    "pass_one_score": 78,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.fox2detroit.com/news/video-image-released-fake-dte-workers-who-killed-homeowner-tied-up-wife-rochester-hills",
+    "source_type": "affiliate",
+    "score": 74,
+    "reason": "FOX2 Detroit's 'Video, image released of fake DTE workers' page -- the sheriff's release itself, closest to raw. No captions.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=jz6kLpDXcdA",
+    "source_type": "affiliate",
+    "score": 60,
+    "reason": "FOX2, 216s, victim's family interview after the guilty verdicts. Strong material but it is an interview, not the doorbell evidence this beat cues.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=LWBRZE3x4m8",
+    "source_type": "affiliate",
+    "score": 58,
+    "reason": "Local 4, 142s, bodycam of police arriving. Raw and on-case but the wrong artifact -- the script cues the doorbell, not the bodycam.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=5JtTCgCpFJg",
+    "source_type": "affiliate",
+    "score": 44,
+    "reason": "Local 4, 63s, texts between the suspects shown at trial. Screen-recording evidence, but of texts, not the doorstep.",
+    "transcript": "fetched"
+   }
+  ],
+  "cannot_determine": [
+   "whether the doorbell footage can be isolated cleanly without the anchor voice-over on top of it"
+  ],
+  "producer_notes": "12s segment, at the short end but legitimate for `evidence` (10s floor). Auto-caption renders the doorbell audio as 'BTE we're checking for gas leaks'.",
+  "shortlist_source_mix": {
+   "affiliate": 5
+  }
+ },
+ {
+  "beat_id": "F2t-b05",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=Y-Pvm6nJp3o",
+  "platform": "youtube",
+  "title": "5 arrested in scheme to defraud dozens of seniors across Philly",
+  "uploader": "NBC10 Philadelphia",
+  "video_id": "Y-Pvm6nJp3o",
+  "clip_role": "confrontation_bust",
+  "orientation": "horizontal",
+  "priority": 2,
+  "segment_title": "NOW THE BEST PART - THEY GOT CAUGHT, ALL FIVE OF THEM",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": true,
+  "segments": [
+   {
+    "in": "0:33",
+    "out": "1:41",
+    "outcue": "I am glad you got these people",
+    "outcue_verified": true,
+    "outcue_cue_start": "1:37",
+    "transcript_source": "auto"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=Y-Pvm6nJp3o",
+    "source_type": "affiliate",
+    "score": 89,
+    "tone": 9,
+    "authenticity": 8,
+    "quality": 9,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:33",
+      "out": "1:41",
+      "outcue": "I am glad you got these people",
+      "outcue_verified": true,
+      "outcue_cue_start": "1:37",
+      "transcript_source": "auto"
+     }
+    ],
+    "reasoning": "The DA announcement the script cues, and it falsifies the producer's 'no broadcast video found' note outright. ADA on camera calling it 'a pretty outrageous despicable victimization', the mechanics (posing as utility companies and banks, a problem with a recent payment, collecting the physical debit cards), 'five men have been arrested', then two victim quotes. 64s, dead on the 67s median aired length.",
+    "flags": [],
+    "pass_one_score": 86,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=Pl6dSigywm0",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "6abc, 141s, 'Utility imposter scamming Philadelphia seniors out of tens of thousands'. Second independent carrier.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.nbcphiladelphia.com/investigators/consumer/5-charged-in-outrageous-scheme-to-defraud-at-least-35-seniors-across-philly/4405846/",
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "NBC10's own site version, '5 charged in scheme to defraud dozens of seniors'. No captions; manual fallback.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://www.reddit.com/r/philadelphia/comments/hqe2zt/peco_or_pgw/",
+    "source_type": "first_person",
+    "score": 22,
+    "reason": "Reddit r/philadelphia PECO/PGW thread. Non-affiliate and it cleared the filters, so the diversity floor promotes it, but it is a text thread with no footage -- 58 points below what it displaced.",
+    "transcript": "none - not a captioned platform"
+   }
+  ],
+  "cannot_determine": [
+   "whether mugshots of all five defendants are shown, which the producer asked for"
+  ],
+  "producer_notes": "Transcript puts potential losses at '1.5 million dollars' across up to 150 victims; the script says 'may be over $1 MILLION from as many as 150 SENIORS', which is safe. Script's 'AT LEAST 35 ELDERLY VICTIMS' and 'NEARLY $500,000' both confirmed.",
+  "shortlist_source_mix": {
+   "affiliate": 3,
+   "first_person": 1
+  }
+ },
+ {
+  "beat_id": "F2t-b06",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=WTdnsIZrXMs",
+  "platform": "youtube",
+  "title": "Can you spot a fake utility worker?",
+  "uploader": "Click On Detroit | Local 4 | WDIV",
+  "video_id": "WTdnsIZrXMs",
+  "clip_role": "explainer_demo",
+  "orientation": "horizontal",
+  "priority": 1,
+  "segment_title": "SO WOULD YOU FALL FOR IT - A TV STATION TESTED REAL NEIGHBORS",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "segments": [
+   {
+    "in": "0:45",
+    "out": "1:01",
+    "outcue": "these have a hidden camera",
+    "outcue_verified": true,
+    "outcue_cue_start": "0:56",
+    "transcript_source": "auto"
+   },
+   {
+    "in": "2:13",
+    "out": "2:28",
+    "outcue": "let me inside no questions asked",
+    "outcue_verified": true,
+    "outcue_cue_start": "2:24",
+    "transcript_source": "auto"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=WTdnsIZrXMs",
+    "source_type": "affiliate",
+    "score": 78,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 6,
+    "segments": [
+     {
+      "in": "0:45",
+      "out": "1:01",
+      "outcue": "these have a hidden camera",
+      "outcue_verified": true,
+      "outcue_cue_start": "0:56",
+      "transcript_source": "auto"
+     },
+     {
+      "in": "2:13",
+      "out": "2:28",
+      "outcue": "let me inside no questions asked",
+      "outcue_verified": true,
+      "outcue_cue_start": "2:24",
+      "transcript_source": "auto"
+     }
+    ],
+    "reasoning": "Structurally the exact footage this beat asks for, from the wrong station. Local 4's 'Help Me Hank' goes undercover in a hard hat and coveralls with a hidden camera in the safety goggles, teamed with Ferndale police, approaching real homeowners claiming to represent a utility and asking to get inside. The payoff line is the beat: 'that was the only man who said no, every other guy I approached opened the door, let me inside, no questions asked.' Butt-cut: the disguise reveal, then the result.",
+    "flags": [
+     "SCRIPT SWAP REQUIRED -- see notes. Fit scored 6 only because of the mismatch with the written setup, not because the footage is weak."
+    ],
+    "pass_one_score": 72,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://abc13.com/centerpoint-energy-utility-worker-scam-fake-workers-phony/3505105/",
+    "source_type": "affiliate",
+    "score": 88,
+    "reason": "THE exact case: ABC13's 'WOULD YOU FALL FOR IT? Fake utility workers at your home' -- the producer's 2018 package, finally surfaced via the Brave news_web leg. No caption track, so manual lane.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://wjla.com/features/i-team/70-of-residents-opened-their-homes-to-this-undercover-fake-utility-worker",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "WJLA I-Team, '70% of residents opened their homes to this undercover fake utility worker'. A different station running the same undercover doorstep test, with a quantified result. Strong swap candidate.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=pVHEkHYgfyY",
+    "source_type": "affiliate",
+    "score": 64,
+    "reason": "Local 4 'Help Me Hank: Spotting fake utility workers', 186s. Consumer-desk explainer, captioned.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=peVBXxuvMJk",
+    "source_type": "affiliate",
+    "score": 55,
+    "reason": "KTNV Las Vegas, 109s, 'Beware of fake utility workers'. Generic warning package.",
+    "transcript": "fetched"
+   }
+  ],
+  "cannot_determine": [
+   "whether the Ferndale package names the one homeowner who refused, to replace the script's Tia Alexander"
+  ],
+  "producer_notes": "SWAP, needs your approval: this is Local 4 Detroit + Ferndale police, not ABC13 Houston + CenterPoint. The script's specifics that would all have to change: the CenterPoint partnership, Tia Alexander who asked for ID, homeowners waving him toward the BACKYARD GATE (here they let him inside the house), and 'watch how fast he drives off the second somebody asks' -- which does not happen in this package. The exact ABC13 2018 package DOES exist but only as a caption-less web page (manual lane, scored 88 in pass one).",
+  "shortlist_source_mix": {
+   "affiliate": 5
+  }
+ },
+ {
+  "beat_id": "F2t-b07",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=fGnZjq0Beq4",
+  "platform": "youtube",
+  "title": "How To Install A Portable Bed Rail",
+  "uploader": "Vive Health",
+  "video_id": "fGnZjq0Beq4",
+  "clip_role": "evidence",
+  "orientation": "horizontal",
+  "priority": 2,
+  "segment_title": "THE BED RAIL YOU BOUGHT TO KEEP MOM SAFE (B-ROLL)",
+  "outcue_required": false,
+  "source_mix": {
+   "creator_long": 1
+  },
+  "diversity_floor_applied": true,
+  "segments": [
+   {
+    "in": "3:56",
+    "out": "4:20",
+    "outcue": null,
+    "outcue_verified": null,
+    "note": "picture only, no audio taken"
+   },
+   {
+    "in": "4:42",
+    "out": "5:12",
+    "outcue": null,
+    "outcue_verified": null,
+    "note": "picture only, no audio taken"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=fGnZjq0Beq4",
+    "source_type": "creator_long",
+    "score": 84,
+    "tone": 7,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "3:56",
+      "out": "4:20",
+      "outcue": null,
+      "outcue_verified": null,
+      "note": "picture only, no audio taken"
+     },
+     {
+      "in": "4:42",
+      "out": "5:12",
+      "outcue": null,
+      "outcue_verified": null,
+      "note": "picture only, no audio taken"
+     }
+    ],
+    "reasoning": "Correct brand AND correct model line: this is Vive's own assembly video for the 'compact bed rail', and LVA2009SLV COMPACT BED RAIL is the first model on the script's recall graphic. The two windows are the b-roll the beat asks for -- the base rail and frame strap being fitted underneath the mattress, then the installed rail with the strap running between mattress and box spring, which is exactly where the entrapment gap is.",
+    "flags": [
+     "CLEARANCE/OPTICS: this is the manufacturer's own marketing video for the product being recalled. Free b-roll, but the producer should decide whether airing Vive's promo footage over a story about two deaths in that product is acceptable."
+    ],
+    "pass_one_score": 86,
+    "diversity_floor_promoted": true
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=oJRrtg56X5s",
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "Channel 3000, 39s, 'Vive Health recalls adult portable bed rails'. Correct brand, will carry product stills/b-roll.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=eOSUVo3dhWI",
+    "source_type": "affiliate",
+    "score": 66,
+    "reason": "KOIN, 259s, 'Bed rail dangers: A fight for change'. Investigative piece, likely has demonstrative rail footage.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ZnKkxR5uXi0",
+    "source_type": "creator_long",
+    "score": 62,
+    "reason": "220s hands-on test of adjustable adult bed rails. Shows mounting and the mattress gap; wrong brand.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=UBsKTExKafI",
+    "source_type": "affiliate",
+    "score": 56,
+    "reason": "KSAT, 93s, 'Stop using certain adult bed rails, CPSC warns after three deaths'. THREE deaths, so a different recall action than the script's two.",
+    "transcript": "fetched"
+   }
+  ],
+  "cannot_determine": [
+   "whether the gap between rail and mattress edge is held tight and long enough to cut, which only screening will settle"
+  ],
+  "producer_notes": "PICTURE ONLY, no outcue, per the producer's NO OUTCUE NEEDED marker -- Jeff narrates over it. This is the beat I called sourcability `none` at Checkpoint 1; the full search overturned that.",
+  "shortlist_source_mix": {
+   "affiliate": 3,
+   "creator_long": 2
+  }
+ },
+ {
+  "beat_id": "F2t-b08",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=oJRrtg56X5s",
+  "platform": "youtube",
+  "title": "Vive Health recalls adult portable bed rails",
+  "uploader": "Channel 3000 / News 3 Now",
+  "video_id": "oJRrtg56X5s",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "priority": 2,
+  "segment_title": "AND WAIT - THEY ALREADY RECALLED THESE ONCE",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "segments": [
+   {
+    "in": "0:02",
+    "out": "0:23",
+    "outcue": "the bed rails are attached to the bed",
+    "outcue_verified": true,
+    "outcue_cue_start": "0:19",
+    "transcript_source": "auto"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=oJRrtg56X5s",
+    "source_type": "affiliate",
+    "score": 71,
+    "tone": 7,
+    "authenticity": 6,
+    "quality": 8,
+    "fit": 6,
+    "segments": [
+     {
+      "in": "0:02",
+      "out": "0:23",
+      "outcue": "the bed rails are attached to the bed",
+      "outcue_verified": true,
+      "outcue_cue_start": "0:19",
+      "transcript_source": "auto"
+     }
+    ],
+    "reasoning": "Correct company and a hazard description that matches the script almost word for word -- 'a person can become trapped within the bed rail or between the bed rail and the mattress, even when the bed rails are attached to the bed'. 40s anchor reader, so there is no soundbite; it plays as VO-covered picture.",
+    "flags": [
+     "FIT CAVEAT: this covers the FEBRUARY recall, not the March 122,000-unit one. Tells: 'no injuries have been reported', 'thousands' rather than 122,000, missing hazard warning labels, and sold 'August 2023 through December of last year'. The script's b08 setup is specifically about the February action and its missing labels, so it fits THAT paragraph -- but it cannot carry the two deaths."
+    ],
+    "pass_one_score": 74,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.ktvb.com/article/news/nation-world/recall-vive-health-compact-adult-bed-portable-rail-entrapment-asphyxia-risk/507-a31d26c7-9eca-4d39-9dae-0dd369ecdecc",
+    "source_type": "affiliate",
+    "score": 68,
+    "reason": "KTVB, 26s, 'Recall issued for portable adult bed rails after two deaths' -- the Tegna wire the producer's KING5 link belongs to. Matches the two-deaths detail. No captions.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://www.wsbradio.com/news/local/vive-health-recalls-adult-bed-rails-after-reported-deaths/3PL3M75RSJGSFNT2XUQRXSXZQY/",
+    "source_type": "affiliate",
+    "score": 60,
+    "reason": "95.5 WSB, 'Vive Health recalls adult bed rails after reported deaths'. Radio site; correct brand.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=EJqhYYNDCsw",
+    "source_type": "affiliate",
+    "score": 42,
+    "reason": "WLTX, 39s, but MEDLINE recalling 1.5 million rails -- a different company and a different recall. Kept to show what dominates this query space.",
+    "transcript": "fetched"
+   }
+  ],
+  "cannot_determine": [
+   "whether any station cut of the March 122,000-unit recall exists on a captioned platform at all"
+  ],
+  "producer_notes": "The Tegna wire version the producer wanted (KING5/KTVB, 'two deaths') is in the pool but news_web only, no captions -- manual lane, scored 68 in pass one.",
+  "shortlist_source_mix": {
+   "affiliate": 4
+  }
+ },
+ {
+  "beat_id": "F2t-b09",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=If_wgxWojR0",
+  "platform": "youtube",
+  "title": "Calgary Police charge landlord with voyeurism after finding hidden cameras at rental properties",
+  "uploader": "CityNews",
+  "video_id": "If_wgxWojR0",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "priority": 2,
+  "segment_title": "THIS LANDLORD WAS ARRESTED THREE WEEKS AGO",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": true,
+  "segments": [
+   {
+    "in": "0:08",
+    "out": "0:48",
+    "outcue": "He has a court date set for August 7th",
+    "outcue_verified": true,
+    "outcue_cue_start": "0:43",
+    "transcript_source": "auto"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=If_wgxWojR0",
+    "source_type": "affiliate",
+    "score": 74,
+    "tone": 7,
+    "authenticity": 6,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:08",
+      "out": "0:48",
+      "outcue": "He has a court date set for August 7th",
+      "outcue_verified": true,
+      "outcue_cue_start": "0:43",
+      "transcript_source": "auto"
+     }
+    ],
+    "reasoning": "Exact case and every beat of the script's chain confirmed: surge protector in the bathroom, smoke detector in the bedroom, the tenant telling the other renters who then found cameras in their own bedrooms, the search warrant, the seized storage devices, the second building. 54s and entirely narrated -- there is no soundbite from a tenant or from police.",
+    "flags": [
+     "no on-camera speaker at all; this is a reader, which is acceptable for authority_report but weak"
+    ],
+    "pass_one_score": 74,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=vK5Bk3kpfmE",
+    "source_type": "creator_long",
+    "score": 70,
+    "reason": "Punjabi Link Media, 183s, 'Hidden cameras found in bathrooms and bedrooms of Calgary rental home'. Best duration on the exact case; non-affiliate, so it carries the diversity floor.",
+    "transcript": "null - bot-walled, not captions-disabled"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=67rzrXi4aJw",
+    "source_type": "raw_footage",
+    "score": 66,
+    "reason": "Calgary Police Service's own 'Voyeurism Investigation Update', 995s. Primary source and cleanest clearance, but 16 minutes -- the moment is buried.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.ctvnews.ca/calgary/article/calgary-landlord-charged-with-voyeurism-after-tenant-finds-hidden-cameras-in-bathroom-and-bedroom/",
+    "source_type": "affiliate",
+    "score": 58,
+    "reason": "CTV Calgary, 'Calgary landlord charged with voyeurism after tenant finds hidden cameras'. No captions.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://www.cbc.ca/news/canada/calgary/calgary-police-hidden-cameras-rent-9.7267102",
+    "source_type": "network",
+    "score": 56,
+    "reason": "CBC, 'Landlord charged with voyeurism after hidden cameras found in Calgary rental'. National desk, no captions.",
+    "transcript": "none - not a captioned platform"
+   }
+  ],
+  "cannot_determine": [
+   "whether any Calgary outlet got a tenant on camera -- none surfaced"
+  ],
+  "producer_notes": "Two script corrections from the transcript. (1) CityNews says ONE count of break and enter and voyeurism; the script says FIVE COUNTS OF VOYEURISM AND ONE COUNT OF BREAK AND ENTER. (2) New fact not in the script: police say Park may be a landlord in Vancouver and Toronto as well, targeting Korean women. Both are yours to rule on.",
+  "shortlist_source_mix": {
+   "raw_footage": 1,
+   "network": 1,
+   "affiliate": 2,
+   "creator_long": 1
+  }
+ },
+ {
+  "beat_id": "F2t-b10",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=fNxPpoMBK0M",
+  "platform": "youtube",
+  "title": "Hidden cameras in bathroom outlets of Madison Airbnb rental cause concern for past renters",
+  "uploader": "WMTV | News, Weather & Sports",
+  "video_id": "fNxPpoMBK0M",
+  "clip_role": "victim_interview",
+  "orientation": "horizontal",
+  "priority": 1,
+  "segment_title": "NOW WATCH IT HAPPEN IN A VACATION RENTAL",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": true,
+  "segments": [
+   {
+    "in": "0:47",
+    "out": "1:25",
+    "outcue": "there could have been anything that they got on cameras",
+    "outcue_verified": true,
+    "outcue_cue_start": "1:22",
+    "transcript_source": "auto"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=fNxPpoMBK0M",
+    "source_type": "affiliate",
+    "score": 92,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 9,
+    "fit": 10,
+    "segments": [
+     {
+      "in": "0:47",
+      "out": "1:25",
+      "outcue": "there could have been anything that they got on cameras",
+      "outcue_verified": true,
+      "outcue_cue_start": "1:22",
+      "transcript_source": "auto"
+     }
+    ],
+    "reasoning": "Exact case and the exact person the script cues. Faust on camera saying she immediately recognized the house, that she messaged the bride to confirm, and 'we changed into different outfits and stuff, so I know at some points there could have been anything that they got on cameras.' Preceded by the criminal-complaint detail the script uses -- superglued behind the outlet plate, shooting through a small hole, pointed at the toilet and shower. Clean audio, face on camera, WMTV lower-third.",
+    "flags": [],
+    "pass_one_score": 90,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=7nxENYbK3go",
+    "source_type": "affiliate",
+    "score": 84,
+    "reason": "WKOW, 124s, 'Hidden cameras found in Verona Airbnb; police looking for possible victims'. Exact case, second carrier.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Nky8pA7kl8g",
+    "source_type": "affiliate",
+    "score": 76,
+    "reason": "WKOW, 109s, 'Hidden cameras found in Madison Airbnb bathroom lead to privacy investigation'. Same case, later beat.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.wsaw.com/2025/08/04/guest-allegedly-finds-hidden-cameras-inside-bathroom-outlets-airbnb-police-say/",
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "WSAW, 135s, 'Guest allegedly finds hidden cameras inside bathroom outlets'. Gray-TV sibling of WMTV, no captions.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=wLnE7EDIE_c",
+    "source_type": "network",
+    "score": 40,
+    "reason": "CBC British Columbia, 126s, hidden cameras in a Sunshine Coast Airbnb. Wrong country, wrong case; kept as the non-affiliate the floor could reach and to show the query's near-miss space.",
+    "transcript": "fetched"
+   }
+  ],
+  "cannot_determine": [
+   "whether the bachelorette-trip detail is cleared for use given she is identifiable"
+  ],
+  "producer_notes": "NAME DISCREPANCY, yours to rule on: the auto-caption renders her as 'Janice Faust'; the script says SHANISE FAUST. Auto-captions mangle names routinely, so this is not proof either way -- but it needs one check before air, since the script says the name out loud.",
+  "shortlist_source_mix": {
+   "network": 1,
+   "affiliate": 4
+  }
+ },
+ {
+  "beat_id": "F2t-b11",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/shorts/Lix_CaVtAHo",
+  "platform": "youtube",
+  "title": "Hocking Hills cabin owner from Akron sentenced for placing hidden cameras in bathroom - YouTube",
+  "uploader": "YouTube",
+  "video_id": "Lix_CaVtAHo",
+  "clip_role": "confrontation_bust",
+  "orientation": "horizontal",
+  "priority": 2,
+  "segment_title": "AND ONE OF THESE GUYS FINALLY GOT WHAT HE DESERVED",
+  "outcue_required": true,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "segments": [
+   {
+    "in": "0:20",
+    "out": "0:35",
+    "outcue": "I knew it was wrong, but the novelty quickly wore off",
+    "outcue_verified": true,
+    "outcue_cue_start": "0:32",
+    "transcript_source": "auto"
+   },
+   {
+    "in": "0:54",
+    "out": "1:10",
+    "outcue": "We will never forget what he did to us",
+    "outcue_verified": true,
+    "outcue_cue_start": "1:07",
+    "transcript_source": "auto"
+   }
+  ],
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/shorts/Lix_CaVtAHo",
+    "source_type": "affiliate",
+    "score": 76,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 6,
+    "segments": [
+     {
+      "in": "0:20",
+      "out": "0:35",
+      "outcue": "I knew it was wrong, but the novelty quickly wore off",
+      "outcue_verified": true,
+      "outcue_cue_start": "0:32",
+      "transcript_source": "auto"
+     },
+     {
+      "in": "0:54",
+      "out": "1:10",
+      "outcue": "We will never forget what he did to us",
+      "outcue_verified": true,
+      "outcue_cue_start": "1:07",
+      "transcript_source": "auto"
+     }
+    ],
+    "reasoning": "Exact case, exact sentencing, and far stronger material than its 71s runtime suggests. Segment one is the defendant Jason Yard in his own words: 'what started as security for my rental property turned into unnecessary curiosity... I knew it was wrong, but the novelty quickly wore off.' Segment two is the mother of a three-year-old guest reading her victim-impact statement: 'we will never forget what he did to us.' Butt-cut.",
+    "flags": [
+     "SCRIPT SWAP REQUIRED -- see notes. Fit scored 6 for the mismatch with the cued line, not for the footage."
+    ],
+    "pass_one_score": 76,
+    "diversity_floor_promoted": false
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.10tv.com/article/news/crime/hocking-hills-cabin-owner-sentenced-placing-hidden-cameras-bathroom/530-96500e93-28c9-4e4d-b502-bf467009a4a3",
+    "source_type": "affiliate",
+    "score": 74,
+    "reason": "WBNS 10TV, 158s, \"'A renter's worst nightmare': Hocking Hills cabin owner sentenced\". Best duration on the exact case and almost certainly carries the soundbite -- but news_web, no captions.",
+    "transcript": "none - not a captioned platform"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=6i8NtZ4taZc",
+    "source_type": "affiliate",
+    "score": 66,
+    "reason": "53s, 'Akron man sentenced in Hocking Hills hidden camera case'. Exact case, very short.",
+    "transcript": "fetched"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=h339ZDNobIE",
+    "source_type": "affiliate",
+    "score": 64,
+    "reason": "LOCAL 12, 46s, 'Ohio man sentenced for spying on families, children at his cabin for years'. Exact case, reader length.",
+    "transcript": "null - bot-walled, not captions-disabled"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=K86XQAs4LA0",
+    "source_type": "affiliate",
+    "score": 52,
+    "reason": "WBNS, 152s, but 'Ohio man TO BE sentenced' -- pre-sentencing, so it cannot carry what the sheriff said when the sentence came down.",
+    "transcript": "fetched"
+   }
+  ],
+  "cannot_determine": [
+   "whether the 50-plus guests figure appears in any cut -- this package only describes the one family who found the camera"
+  ],
+  "producer_notes": "SWAP, needs your approval: the script cues 'WATCH WHAT THE SHERIFF'S OFFICE SAID WHEN THE SENTENCE CAME DOWN.' No sheriff or prosecutor speaks in this package. The speakers are the defendant and the victim's mother, and the mother is by far the better moment. The setup line needs rewriting to point at her. Also: the transcript says prosecutors recommended 4-6 years and the judge exceeded it, which supports 'NEARLY A DECADE' but does not state it.",
+  "shortlist_source_mix": {
+   "affiliate": 5
+  }
+ },
+ {
+  "beat_id": "F2t-b12",
+  "pass": 2,
+  "flagged": null,
+  "platform": null,
+  "title": null,
+  "video_id": null,
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "priority": 3,
+  "segment_title": "THE GOVERNMENT IS MAILING OUT CHECKS RIGHT NOW (HOPPER)",
+  "outcue_required": true,
+  "no_pick_reason": "No broadcast video of the Hopper settlement exists on any captioned platform. The YouTube result space for this beat is almost entirely 'how to get a refund from Hopper' affiliate-marketing tutorials plus FTC-robotics-competition noise; the single on-topic upload is a generic keyword channel ('Elite Dev News') that reads as AI slop and fails the hard filters. The only credible sources are text: TechCrunch and the FTC release itself. Nothing cleared 55, so nothing is flagged. The script already carries the right answer as its own stated fallback -- fullscreen the FTC release and let Jeff read it.",
+  "suggested_query": "\"Hopper\" FTC settlement site:youtube.com after:2026-07-01 -- or, more likely to work, search CNBC and Yahoo Finance video desks directly for the 07/02 consumer-settlement hit; a business-desk VO-SOT is the realistic get here, not an affiliate package.",
+  "source_mix": {},
+  "diversity_floor_applied": true,
+  "segments": [],
+  "ranked": [],
+  "rejected": [
+   {
+    "url": "https://techcrunch.com/2026/07/02/travel-app-hopper-to-pay-35m-in-ftc-settlement-over-unfairly-charging-hidden-fees/",
+    "source_type": "network",
+    "score": 56,
+    "reason": "TechCrunch, 'Travel app Hopper to pay $35M in FTC settlement over unfairly charged fees'. Correct case, correct figure. Text/web, no video, no captions."
+   },
+   {
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/travel-app-hopper-pay-35-million-settle-ftc-allegations-it-charged-fees-without-consent-deceived",
+    "source_type": "network",
+    "score": 50,
+    "reason": "The FTC's own press release -- the script's stated fallback (fullscreen, Jeff reads it). Primary source, no video."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=TH7DdaO0VGI",
+    "source_type": "creator_long",
+    "score": 24,
+    "reason": "'No Refund... $1800 loss (Hopper Reviews)', 251s. A consumer complaint about Hopper, not the FTC action. Non-affiliate so the floor can reach it, but it is 32 points below and off-case."
+   }
+  ],
+  "cannot_determine": [
+   "whether a business-desk VO-SOT exists behind a paywalled video CMS"
+  ],
+  "producer_notes": "Script's own fallback (fullscreen the FTC release) is the right call.",
+  "shortlist_source_mix": {
+   "network": 2,
+   "creator_long": 1
+  }
+ }
+]
