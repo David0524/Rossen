@@ -1,0 +1,317 @@
+[
+ {
+  "beat_id": "b01",
+  "label": "named:Marge Vlasak",
+  "query": "Marge Vlasak CenterPoint utility worker Houston",
+  "shorts_only": false,
+  "n": 0,
+  "retried_on_empty": true,
+  "err": "",
+  "results": []
+ },
+ {
+  "beat_id": "b01",
+  "label": "case",
+  "query": "fake utility worker stole jewelry Houston ABC13",
+  "shorts_only": false,
+  "n": 5,
+  "retried_on_empty": false,
+  "err": "",
+  "results": [
+   {
+    "id": "mwHYj6Pn8R8",
+    "title": "Victim says restitution lags after fake utility worker theft",
+    "channel": "ABC13 Houston",
+    "duration": "212"
+   },
+   {
+    "id": "G4jDC9pCdKs",
+    "title": "Suspect wanted for $22K worth of jewelry robberies across Houston",
+    "channel": "ABC13 Houston",
+    "duration": "102"
+   },
+   {
+    "id": "_8bFwVOGNPw",
+    "title": "Fake city workers rob woman after claiming water had coronavirus",
+    "channel": "ABC13 Houston",
+    "duration": "115"
+   },
+   {
+    "id": "4TffwYAnblI",
+    "title": "Suspect killed while trying to rob $40 from food truck, family says",
+    "channel": "ABC13 Houston",
+    "duration": "130"
+   },
+   {
+    "id": "5U3-CU71L2M",
+    "title": "Police officer tracks down stolen wedding rings hours before the ceremony",
+    "channel": "ABC13 Houston",
+    "duration": "147"
+   }
+  ]
+ },
+ {
+  "beat_id": "b02",
+  "label": "named:Quarless/Pepco",
+  "query": "Pepco impersonation Prince George's County police scam",
+  "shorts_only": false,
+  "n": 4,
+  "retried_on_empty": false,
+  "err": "",
+  "results": [
+   {
+    "id": "i8ie5dvEge0",
+    "title": "Pepco impersonation scam costs Prince George's County victim more than $18K",
+    "channel": "ABC 7 News - WJLA",
+    "duration": "90"
+   },
+   {
+    "id": "9YQDxAMiIgc",
+    "title": "Police warn of Pepco impersonators in Prince George's Co.",
+    "channel": "WUSA9",
+    "duration": "124"
+   },
+   {
+    "id": "SCjAKYggUJk",
+    "title": "\ud83d\udd34LIVE | Prince George's County police sound alarm on utility impersonation scam",
+    "channel": "ABC 7 News - WJLA",
+    "duration": "1660"
+   },
+   {
+    "id": "BvvhQ8vvdY8",
+    "title": "Pepco impersonators trying to swindle money from Maryland residents",
+    "channel": "DC News Now",
+    "duration": "123"
+   }
+  ]
+ },
+ {
+  "beat_id": "b03",
+  "label": "case:KPRC call-first",
+  "query": "new utility scheme Houston home access KPRC",
+  "shorts_only": false,
+  "n": 2,
+  "retried_on_empty": false,
+  "err": "",
+  "results": [
+   {
+    "id": "WxR6-ycJwaQ",
+    "title": "New utility scheme targets Houston-area residents, tries to gain home access",
+    "channel": "KPRC 2 Click2Houston",
+    "duration": "139"
+   },
+   {
+    "id": "hYdsitTA4So",
+    "title": "KPRC 2 Investigates: Grocery pickup accounts hacked",
+    "channel": "KPRC 2 Click2Houston",
+    "duration": "219"
+   }
+  ]
+ },
+ {
+  "beat_id": "b04",
+  "label": "case:doorbell DTE",
+  "query": "doorbell video fake DTE workers Rochester Hills",
+  "shorts_only": false,
+  "n": 5,
+  "retried_on_empty": false,
+  "err": "",
+  "results": [
+   {
+    "id": "e_Zo3DGvQ04",
+    "title": "Video shows fake DTE workers accused of killing man, hurting wife in Rochester Hills",
+    "channel": "WXYZ-TV Detroit | Channel 7",
+    "duration": "171"
+   },
+   {
+    "id": "rIgHE0JDw6o",
+    "title": "Wife of fake DTE worker charged in Rochester Hills murder",
+    "channel": "Click On Detroit | Local 4 | WDIV",
+    "duration": "144"
+   },
+   {
+    "id": "5JtTCgCpFJg",
+    "title": "Texts between fake DTE workers, wife shown during murder trial",
+    "channel": "Click On Detroit | Local 4 | WDIV",
+    "duration": "63"
+   },
+   {
+    "id": "suuP_g5cKh4",
+    "title": "Wife of fake DTE worker charged in Rochester Hills murder appears in court",
+    "channel": "Click On Detroit | Local 4 | WDIV",
+    "duration": "1102"
+   },
+   {
+    "id": "n_aU5ULY82w",
+    "title": "Fake DTE workers kill homeowner, tie up his wife in Rochester Hills break-in",
+    "channel": "FOX 2 Detroit",
+    "duration": "155"
+   }
+  ]
+ },
+ {
+  "beat_id": "b04",
+  "label": "shorts",
+  "query": "fake DTE workers doorbell Rochester Hills #shorts",
+  "shorts_only": true,
+  "n": 0,
+  "retried_on_empty": true,
+  "err": "",
+  "results": []
+ },
+ {
+  "beat_id": "b05",
+  "label": "case:Philly DA",
+  "query": "Philadelphia utility worker fraud scheme elderly charged",
+  "shorts_only": false,
+  "n": 3,
+  "retried_on_empty": false,
+  "err": "-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies",
+  "results": [
+   {
+    "id": "Y-Pvm6nJp3o",
+    "title": "5 arrested in scheme to defraud dozens of seniors across Philly",
+    "channel": "NBC10 Philadelphia",
+    "duration": "159"
+   },
+   {
+    "id": "4_79RkL8cDI",
+    "title": "Free solar panels? Don't get fooled",
+    "channel": "KPRC 2 Click2Houston",
+    "duration": "231"
+   },
+   {
+    "id": "QKj0OF3aqkQ",
+    "title": "Trenton New Jersey Dash Cam Compilation - Ep #11",
+    "channel": "Trenton Dash Cam",
+    "duration": "282"
+   }
+  ]
+ },
+ {
+  "beat_id": "b05",
+  "label": "case:PGW PECO arrests",
+  "query": "PGW PECO impersonation arrests Philadelphia DA seniors",
+  "shorts_only": false,
+  "n": 0,
+  "retried_on_empty": true,
+  "err": "ERROR: [youtube] ndDimxQA958: This video is not available",
+  "results": []
+ },
+ {
+  "beat_id": "b06",
+  "label": "case:doorstep test",
+  "query": "CenterPoint fake utility worker experiment hidden camera test",
+  "shorts_only": false,
+  "n": 0,
+  "retried_on_empty": true,
+  "err": "",
+  "results": []
+ },
+ {
+  "beat_id": "b07",
+  "label": "case:bed rail broll",
+  "query": "Vive Health adult portable bed rail entrapment gap",
+  "shorts_only": false,
+  "n": 2,
+  "retried_on_empty": false,
+  "err": "",
+  "results": [
+   {
+    "id": "iRzO19xN3b4",
+    "title": "\u3010\u6700\u65b0\u5408\u96c6\u3011\u4e00\u53e3\u6c14\u770b\u5b8c1-2\u5b63\uff1a\u6267\u638c\u9876\u7ea7\u5927\u5b97\uff0c\u9760\u72ec\u6709\u7684\u878d\u5408\u9020\u5316\u624b\u6bb5\uff0c\u4e0d\u65ad\u50ac\u751f\u5927\u6279\u5f3a\u5927\u5b97\u95e8\u9ad8\u5c42\uff01",
+    "channel": "\u8da3\u8bf4\u6f2b\u4e16\u754c",
+    "duration": "20193"
+   },
+   {
+    "id": "FNJEJZJMovI",
+    "title": "\ud83d\udcaa\u3010FULL\u5b8c\u7d50\u3011EP01-104\u4e00\u53e3\u6c23 S1+S2\u300a\u4e07\u53e4\u6700\u5f3a\u5b97/All Hail The Sect Leader\u300b#\u5c0f\u8bf4\u6539\u7f16 #\u52a8\u6f2b #\u56fd\u6f2b #\u7cfb\u7d71 #\u71b1\u8840 #\u52d5\u614b\u6f2b\u756b #comics #anime",
+    "channel": "\u9605\u6587\u6f2b\u753b",
+    "duration": "31175"
+   }
+  ]
+ },
+ {
+  "beat_id": "b08",
+  "label": "case:bed rail recall",
+  "query": "Vive Health recalls 122,000 bed rails two deaths",
+  "shorts_only": false,
+  "n": 1,
+  "retried_on_empty": false,
+  "err": "",
+  "results": [
+   {
+    "id": "ex3mfS0PEsE",
+    "title": "Vive Health Bed Rail Recall - Deaths Reported",
+    "channel": "Schiffman Firm",
+    "duration": "33"
+   }
+  ]
+ },
+ {
+  "beat_id": "b09",
+  "label": "named:Sooryong Park",
+  "query": "Calgary landlord hidden cameras voyeurism charged",
+  "shorts_only": false,
+  "n": 0,
+  "retried_on_empty": true,
+  "err": "",
+  "results": []
+ },
+ {
+  "beat_id": "b10",
+  "label": "named:Shanise Faust",
+  "query": "hidden cameras Verona Airbnb bathroom outlet Wisconsin",
+  "shorts_only": false,
+  "n": 0,
+  "retried_on_empty": true,
+  "err": "",
+  "results": []
+ },
+ {
+  "beat_id": "b11",
+  "label": "case:Hocking Hills",
+  "query": "Hocking Hills cabin hidden camera sentenced Airbnb host",
+  "shorts_only": false,
+  "n": 3,
+  "retried_on_empty": false,
+  "err": "",
+  "results": [
+   {
+    "id": "vhxhXifHtsE",
+    "title": "Hidden Camera Found in Airbnb Cabin",
+    "channel": "Law&Crime Network",
+    "duration": "2203"
+   },
+   {
+    "id": "DHZIQoiJJRo",
+    "title": "Cops Find Hidden Camera in Airbnb Bathroom",
+    "channel": "Law&Crime BodyCam",
+    "duration": "1132"
+   },
+   {
+    "id": "ME03JLquNcI",
+    "title": "The Nook - Tiny House w/ 2 Lofts & Indoor Swing at 400sqft! | Airbnb Tiny House Tour!",
+    "channel": "Levi Kelly Tours",
+    "duration": "791"
+   }
+  ]
+ },
+ {
+  "beat_id": "b12",
+  "label": "case:Hopper FTC",
+  "query": "Hopper $35 million FTC settlement travel app fees",
+  "shorts_only": false,
+  "n": 1,
+  "retried_on_empty": false,
+  "err": "",
+  "results": [
+   {
+    "id": "rCRv5WJDhY4",
+    "title": "FTC just settled with the 'no hidden fees' app \u2014 for $35M in hidden fees. Full case.",
+    "channel": "Elite Dev News",
+    "duration": "221"
+   }
+  ]
+ }
+]

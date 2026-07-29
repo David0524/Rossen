@@ -1,0 +1,214 @@
+[
+ {
+  "beat_id": "b06",
+  "label": "abc13 2018 franchise",
+  "query": "ABC13 fake utility workers phony CenterPoint Houston 2018",
+  "n": 0,
+  "results": []
+ },
+ {
+  "beat_id": "b06",
+  "label": "station test",
+  "query": "we sent a fake utility worker to your door CenterPoint",
+  "n": 4,
+  "results": [
+   {
+    "id": "yfpAVBmf5ZY",
+    "title": "Police Say Scammers May Pose As Utility Workers",
+    "channel": "WMUR-TV",
+    "duration": "110"
+   },
+   {
+    "id": "Nj0hBlEDRAc",
+    "title": "A David Hammer Investigation: Utility billing scam",
+    "channel": "WWLTV",
+    "duration": "65"
+   },
+   {
+    "id": "WTdnsIZrXMs",
+    "title": "Can you spot a fake utility worker?",
+    "channel": "Click On Detroit | Local 4 | WDIV",
+    "duration": "263"
+   },
+   {
+    "id": "cOhWnEP9n7o",
+    "title": "Criminals Posing as Utility Workers",
+    "channel": "ABC News",
+    "duration": "371"
+   }
+  ]
+ },
+ {
+  "beat_id": "b06",
+  "label": "centerpoint slanina",
+  "query": "John Slanina CenterPoint Energy utility scam",
+  "n": 5,
+  "results": [
+   {
+    "id": "4AT0FsGcjiA",
+    "title": "Neighbors at odds with CenterPoint",
+    "channel": "KPRC 2 Click2Houston",
+    "duration": "152"
+   },
+   {
+    "id": "9kWQCJYjozg",
+    "title": "Misty likes CenterPoint Energy's Power Alert Service",
+    "channel": "CenterPoint Energy",
+    "duration": "29"
+   },
+   {
+    "id": "L_7lfC0yb_s",
+    "title": "Save Energy: Online Home Energy Audit",
+    "channel": "Vectren, A CenterPoint Energy Company",
+    "duration": "30"
+   },
+   {
+    "id": "G6_hz_htNCg",
+    "title": "BBB warns of LG&E scammers",
+    "channel": "WHAS11",
+    "duration": "139"
+   },
+   {
+    "id": "EIOwzNtadSo",
+    "title": "Here's What's Keeping Our Energy Bills So Low",
+    "channel": "WCCO - CBS Minnesota",
+    "duration": "116"
+   }
+  ]
+ },
+ {
+  "beat_id": "b08",
+  "label": "king5 tegna",
+  "query": "recall Vive Health compact adult bed portable rail entrapment",
+  "n": 0,
+  "results": []
+ },
+ {
+  "beat_id": "b08",
+  "label": "cpsc recall news",
+  "query": "bed rail recall 122,000 asphyxiation CPSC deaths",
+  "n": 1,
+  "results": [
+   {
+    "id": "ex3mfS0PEsE",
+    "title": "Vive Health Bed Rail Recall - Deaths Reported",
+    "channel": "Schiffman Firm",
+    "duration": "33"
+   }
+  ]
+ },
+ {
+  "beat_id": "b11",
+  "label": "hocking sentencing",
+  "query": "Hocking County cabin owner sentenced hidden camera guests",
+  "n": 5,
+  "results": [
+   {
+    "id": "xy8KYqf4KoQ",
+    "title": "Hocking Hills cabin owner sentenced for placing hidden cameras in bathroom",
+    "channel": "WBNS 10TV",
+    "duration": "158"
+   },
+   {
+    "id": "ojO9KhRoRLU",
+    "title": "Akron man to be sentenced for hidden camera found in Hocking Hills rental cabin",
+    "channel": "WKYC Channel 3",
+    "duration": "132"
+   },
+   {
+    "id": "0ov_klt1fsQ",
+    "title": "Hocking Hills cabin owner from Akron sentenced for placing hidden cameras in bathroom",
+    "channel": "WKYC Channel 3",
+    "duration": "115"
+   },
+   {
+    "id": "K86XQAs4LA0",
+    "title": "Ohio man to be sentenced for hidden camera found in Hocking Hills rental cabin",
+    "channel": "WBNS 10TV",
+    "duration": "152"
+   },
+   {
+    "id": "h339ZDNobIE",
+    "title": "Ohio man sentenced for spying on families, children at his cabin for years",
+    "channel": "LOCAL 12",
+    "duration": "46"
+   }
+  ]
+ },
+ {
+  "beat_id": "b11",
+  "label": "akron ohio cabin",
+  "query": "Akron man sentenced recorded guests rental cabin camera",
+  "n": 5,
+  "results": [
+   {
+    "id": "ojO9KhRoRLU",
+    "title": "Akron man to be sentenced for hidden camera found in Hocking Hills rental cabin",
+    "channel": "WKYC Channel 3",
+    "duration": "132"
+   },
+   {
+    "id": "h339ZDNobIE",
+    "title": "Ohio man sentenced for spying on families, children at his cabin for years",
+    "channel": "LOCAL 12",
+    "duration": "46"
+   },
+   {
+    "id": "DHZIQoiJJRo",
+    "title": "Cops Find Hidden Camera in Airbnb Bathroom",
+    "channel": "Law&Crime BodyCam",
+    "duration": "1132"
+   },
+   {
+    "id": "Bw-IJxxtCRs",
+    "title": "7 'Dumbest' DUI Excuses Caught on Bodycam",
+    "channel": "Law&Crime Network",
+    "duration": "4428"
+   },
+   {
+    "id": "5qv7qz4SBSU",
+    "title": "Baker County mom accused of child neglect was in Wendy\u2019s taking orders when children were found ...",
+    "channel": "News4JAX The Local Station",
+    "duration": "220"
+   }
+  ]
+ },
+ {
+  "beat_id": "b11",
+  "label": "ohio 50 guests",
+  "query": "Ohio man secretly recorded 50 guests Airbnb sentenced prison",
+  "n": 5,
+  "results": [
+   {
+    "id": "R_QvG7jOoxU",
+    "title": "Man who plotted mass shooting at Ohio University to be sentenced",
+    "channel": "FOX19 NOW | Cincinnati",
+    "duration": "144"
+   },
+   {
+    "id": "_xxpvYNJPrQ",
+    "title": "Sade Robinson and The Secret Beach | Full Episode",
+    "channel": "48 Hours",
+    "duration": "2481"
+   },
+   {
+    "id": "6D-4kMrGgh0",
+    "title": "The Gaslighting of Hannah Pettey | Full Episode",
+    "channel": "48 Hours",
+    "duration": "2502"
+   },
+   {
+    "id": "Vubc4TcGSYE",
+    "title": "One Woman's Airbnb Home Rental Nightmare",
+    "channel": "ABC News",
+    "duration": "119"
+   },
+   {
+    "id": "KqARrnQdcQM",
+    "title": "Woman Who Called Police On Black Girl Selling Water To Go To Disneyland Comes Under Fire | TODAY",
+    "channel": "TODAY",
+    "duration": "198"
+   }
+  ]
+ }
+]

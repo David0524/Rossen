@@ -1,0 +1,963 @@
+[
+ {
+  "beat_id": "F2t-b01",
+  "segment_title": "START WITH MARGE - SHE DID EVERYTHING RIGHT AND STILL GOT HIT",
+  "script_text": "MARGE VLASAK IS AN ELDERLY WOMAN IN WEST HOUSTON. / SHE HAS SECURITY CAMERAS ON HER OWN HOUSE. / A MAN WALKED UP TO HER AND SAID HE WAS FROM CENTERPOINT ENERGY. / BY THE TIME THEY LEFT, POLICE SAY HUNDREDS OF THOUSANDS OF DOLLARS IN CASH AND JEWELRY WERE GONE. / THE WHOLE THING WAS CAUGHT ON HER OWN SURVEILLANCE SYSTEM. / TWO MEN WERE ARRESTED. NICKY MITCHELL AND PAUL TOM. / ONE GOT FIVE YEARS PROBATION. THE OTHER OWES HER $50,000 AT $700 A MONTH. / MARGE SAYS SHE HAS GOTTEN ONE CHECK! / ABC13 SAT DOWN WITH HER AND HER SON. LISTEN TO WHAT SHE WANTS DONE NOW.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "CenterPoint Energy impostor Houston burglary restitution Marge Vlasak",
+  "visual_spec": "elderly woman seated at home beside her adult son, ABC13 lower-third, interview setup",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 2,
+  "segment_note": "BUTT inside this beat: second slice is the restitution turn (Mitchell/Tom, $50k at $700/mo, one check received) from the same package",
+  "outcue_required": true,
+  "sourcability": "high",
+  "sourcability_note": "ABC13 Houston mwHYj6Pn8R8 'Victim says restitution lags after fake utility worker theft' 212s - captioned YouTube twin of the producer's abc13.com article",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "fake utility worker stole jewelry Houston",
+   "CenterPoint impostor burglary victim",
+   "restitution never paid"
+  ],
+  "producer_candidates": [
+   "https://abc13.com/post/houston-burglary-victim-says-restitution-lags-fake-utility-worker-theft/18238398"
+  ],
+  "queries": {
+   "anchor": [
+    "Marge Vlasak CenterPoint",
+    "fake CenterPoint worker Houston restitution",
+    "Nicky Mitchell Paul Tom Houston utility theft"
+   ],
+   "news": [
+    "victim says restitution lags fake utility worker theft",
+    "Houston woman robbed by fake utility workers cash jewelry",
+    "elderly woman jewelry stolen fake utility worker surveillance",
+    "fake CenterPoint worker robs Houston woman arrested",
+    "woman still waiting on restitution utility impostor burglary"
+   ],
+   "victim": [
+    "they took everything I had in that house",
+    "he said he was from the electric company",
+    "I have gotten one check"
+   ],
+   "platform": [
+    "fake utility worker Houston caught on camera",
+    "CenterPoint impostor robbery",
+    "utility scam jewelry stolen"
+   ],
+   "shorts": [
+    "#scamalert fake utility worker at her door",
+    "she lost her jewelry #shorts",
+    "grandma robbed by fake electric company guy #scam",
+    "caught on her own camera #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "victim"
+   ],
+   "shorts": [
+    "shorts",
+    "victim"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b02",
+  "segment_title": "BUT HOW DOES A GUY LIKE THAT GET IN THE DOOR IN THE FIRST PLACE",
+  "script_text": "POLICE IN PRINCE GEORGE'S COUNTY, MARYLAND SAY HE CLAIMED HE WORKED FOR PEPCO. / HE SAID AN ALARM SHOWED A FIRE HAZARD INSIDE THE HOUSE! / THEY LET HIM IN... AND HE WENT STRAIGHT FOR THE BREAKER PANEL. / HE FLIPPED THE MAIN BREAKER. SO NOW THE POWER REALLY IS OUT! / THEN HE SAYS IT'S A SERIOUS ELECTRICAL PROBLEM AND IT HAS TO BE FIXED IMMEDIATELY. / AND HE ASKS TO BE PAID BY CHECK. / HE CASHED THAT CHECK. HE NEVER DID ONE MINUTE OF WORK. THAT RESIDENT LOST $8,300. / POLICE SAY THEY'VE TAKEN THREE REPORTS THIS YEAR... AND LAST YEAR A VICTIM LOST $18,500! / SERGEANT JOHN QUARLESS RUNS THEIR FINANCIAL CRIMES UNIT. / HERE'S WHAT PEPCO ITSELF SAYS ABOUT EVER COMING INSIDE YOUR HOME.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Pepco impersonation Prince George's County police $8,300 $18,500",
+  "visual_spec": "uniformed police sergeant at a podium or on-camera interview, plus Pepco spokesman in a suit, affiliate lower-thirds",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "high",
+  "sourcability_note": "Four affiliate twins on YouTube: WJLA i8ie5dvEge0 (90s, names the $18K), WUSA9 9YQDxAMiIgc (124s), DC News Now BvvhQ8vvdY8 (123s), WJLA presser SCjAKYggUJk (1660s). Producer flagged dedupe across DC market - keep earliest.",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "Pepco impersonation scam Prince George's",
+   "fake Pepco worker breaker panel",
+   "utility impostor Maryland police warn"
+  ],
+  "producer_candidates": [
+   "https://www.nbcwashington.com/news/local/prince-georges-county/scammers-posing-as-pepco-workers-in-prince-georges-county/4085289"
+  ],
+  "queries": {
+   "anchor": [
+    "Pepco impersonation Prince George's County",
+    "Sgt John Quarless financial crimes Pepco",
+    "William Ellis Pepco external affairs scam",
+    "Pepco impersonator $18,500 Maryland"
+   ],
+   "news": [
+    "police warn of Pepco impersonators Prince George's County",
+    "scammers posing as Pepco workers Maryland",
+    "fake utility worker flipped breaker panel paid by check",
+    "Pepco impersonation scam costs county victim thousands"
+   ],
+   "victim": [
+    "he flipped my breaker and said the power was out",
+    "I wrote him a check and he never came back"
+   ],
+   "platform": [
+    "fake Pepco worker",
+    "Pepco impostor scam Maryland",
+    "utility impersonation breaker panel"
+   ],
+   "shorts": [
+    "#scamalert fake Pepco at the door",
+    "he flipped the breaker #shorts",
+    "never let him near your breaker box #scam",
+    "$8,300 gone in one visit #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news"
+   ],
+   "shorts": [
+    "shorts"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b03",
+  "segment_title": "BUT THIS BRAND NEW VERSION IS EVEN HARDER TO SPOT",
+  "script_text": "IN HOUSTON, THEY DON'T JUST SHOW UP ANYMORE. THEY CALL YOU FIRST! / THEY SAY SOMEBODY NEEDS TO COME OUT... AND THEY ASK *YOU* TO SCHEDULE A TIME. / SO WHEN HE KNOCKS, YOU ARE EXPECTING HIM. YOU BOOKED IT YOURSELF! / EVERY WARNING YOU'VE HEARD IS ABOUT THE GUY WHO SHOWS UP UNANNOUNCED. / KPRC 2 TOOK THIS TO THE BETTER BUSINESS BUREAU IN MAY. / THE B-B-B SAYS MOST UTILITY IMPOSTER SCAMS STAY ON THE PHONE. / THEY HAD NEVER SEEN A CALL *PLUS* AN APPOINTMENT BEFORE. / AND THEY SAY IT POINTS TO A LOCAL SCAMMER WORKING YOUR NEIGHBORHOOD. / KPRC ALSO WENT STRAIGHT TO ERCOT, WHICH RUNS THE TEXAS POWER GRID. / AND WHAT ERCOT TOLD THEM ENDS THIS SCAM IN ONE SENTENCE.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "KPRC Houston new utility scheme home access BBB ERCOT contractors",
+  "visual_spec": "BBB spokeswoman on camera in an office, KPRC 2 lower-third, cutaways of a doorstep",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "high",
+  "sourcability_note": "KPRC 2 WxR6-ycJwaQ 'New utility scheme targets Houston-area residents, tries to gain home access' 139s - exact YouTube twin of the producer's click2houston article",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "new utility scheme Houston home access",
+   "BBB utility impostor appointment",
+   "ERCOT does not send contractors"
+  ],
+  "producer_candidates": [
+   "https://www.click2houston.com/news/local/2026/05/12/new-utility-scheme-targets-houston-area-residents-tries-to-gain-home-access",
+   "https://www.youtube.com/watch?v=vxXPO2upNMw"
+  ],
+  "queries": {
+   "anchor": [
+    "new utility scheme Houston home access KPRC",
+    "Leah Napoliello BBB Houston utility scam",
+    "ERCOT does not send contractors to homes",
+    "BBB Houston utility imposter appointment"
+   ],
+   "news": [
+    "new utility scam calls first then books appointment",
+    "utility imposter scheme tries to gain home access Houston",
+    "scammers call ahead then knock utility scam warning",
+    "Better Business Bureau warns new utility worker scam"
+   ],
+   "victim": [
+    "they called me first so I thought it was real",
+    "I booked the appointment myself"
+   ],
+   "platform": [
+    "utility scam calls you first",
+    "fake utility appointment scam",
+    "ERCOT contractor scam"
+   ],
+   "shorts": [
+    "#scamalert they call you first now",
+    "you booked it yourself #shorts",
+    "new utility scam is worse #scam",
+    "ERCOT never sends anyone #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news"
+   ],
+   "shorts": [
+    "shorts"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b04",
+  "segment_title": "NOW IT GETS SO MUCH WORSE THAN MONEY",
+  "script_text": "IN ROCHESTER HILLS, MICHIGAN, TWO MEN CAME UP TO A FRONT DOOR. / YELLOW SAFETY VESTS, A CLIPBOARD, AND FAKE I-D BADGES. / ON THE DOORBELL CAMERA YOU HEAR ONE SAY THEY'RE FROM D-T-E, CHECKING FOR A GAS LEAK. / IT IS THE SAME KNOCK AS THE MARYLAND CASE. THE VEST. THE URGENT PROBLEM INSIDE. / THEY CAME BY THE NIGHT BEFORE AND WERE NOT LET IN. THE NEXT DAY THEY WERE! / HUSSEIN MURRAY WAS 72 YEARS OLD. / PROSECUTORS SAY HE SIGNED THEIR PHONY WORK ORDER. / THEN HE WALKED THEM DOWN INTO HIS OWN BASEMENT. HE NEVER CAME BACK UP. / THE OAKLAND COUNTY SHERIFF'S OFFICE PUT OUT THIS DOORBELL VIDEO TO FIND THEM. / HERE YOU CAN SEE EXACTLY WHAT THAT FAMILY SAW ON THEIR CAMERA.",
+  "orientation": "vertical",
+  "clip_role": "evidence",
+  "news_anchor": "Oakland County sheriff doorbell video fake DTE workers Rochester Hills Hussein Murray",
+  "visual_spec": "handheld-height doorbell camera view, two men in yellow fluorescent vests and masks at a front door, daylight, clipboard visible",
+  "platforms": [
+   "shorts",
+   "news_web",
+   "facebook",
+   "reddit"
+  ],
+  "routing_lane": "brave (vertical - YouTube backend skips vertical beats)",
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "high",
+  "sourcability_note": "Footage exists and is police-released, but every located copy is embedded inside a HORIZONTAL affiliate package: WXYZ e_Zo3DGvQ04 171s, FOX2 n_aU5ULY82w 155s, Local 4 rIgHE0JDw6o 144s. No native vertical/Shorts copy of this case surfaced (Shorts probe returned only an unrelated WMECo clip).",
+  "orientation_conflict": "Producer typed VERTICAL; only horizontal affiliate carriers found. Needs a framing ruling (punch-in/crop vs pillarbox) - repo has cut/crop_vertical.sh. Flagged for the grader's cannot_determine, not auto-failed.",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "doorbell video fake DTE workers Rochester Hills",
+   "we're DTE checking for gas leaks",
+   "Oakland County sheriff utility worker homicide"
+  ],
+  "producer_candidates": [
+   "https://www.nbcnews.com/news/us-news/man-posed-utility-worker-charged-murder-home-invasion-police-hunt-seco-rcna175239",
+   "https://www.fox2detroit.com/news/video-image-released-fake-dte-workers-who-killed-homeowner-tied-up-wife-rochester-hills",
+   "https://www.youtube.com/watch?v=DpvrWkEAWoM"
+  ],
+  "queries": {
+   "anchor": [
+    "Oakland County sheriff doorbell video fake DTE workers",
+    "Hussein Murray Rochester Hills fake DTE",
+    "fake DTE workers Rochester Hills homicide video released"
+   ],
+   "news": [
+    "video shows fake DTE workers accused of killing homeowner",
+    "doorbell video released fake utility workers Rochester Hills",
+    "sheriff releases doorbell footage fake DTE workers"
+   ],
+   "victim": [
+    "we're DTE we're checking for gas leaks",
+    "they came back the next day and we let them in"
+   ],
+   "platform": [
+    "fake DTE workers doorbell",
+    "doorbell cam fake utility worker",
+    "ring camera fake gas company",
+    "site:reddit.com fake DTE workers doorbell"
+   ],
+   "shorts": [
+    "#doorbell fake DTE at the door",
+    "we're checking for gas leaks #shorts",
+    "#scamalert two men in vests knocked",
+    "ring cam caught them #shorts"
+   ]
+  },
+  "platform_map": {
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ],
+   "facebook": [
+    "platform"
+   ],
+   "reddit": [
+    "platform"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "vertical"
+  }
+ },
+ {
+  "beat_id": "F2t-b05",
+  "segment_title": "NOW THE BEST PART - THEY GOT CAUGHT, ALL FIVE OF THEM",
+  "script_text": "THIS ONE IS OUT OF PHILADELPHIA, AND IT IS HUGE. / FIVE MEN WERE CHARGED IN MAY WITH RUNNING THIS SCAM AS A BUSINESS. / THEY IMPERSONATED PHILADELPHIA GAS WORKS... PECO... AND THE CITY WATER DEPARTMENT. / THEY CALLED SENIORS AND SAID A RECENT PAYMENT DIDN'T GO THROUGH! / THEN THEY TOOK THE BANKING INFORMATION AND DRAINED THE ACCOUNTS. / AT LEAST 35 ELDERLY VICTIMS... AND NEARLY $500,000 GONE. / AND PROSECUTORS SAY THE REAL NUMBER MAY BE OVER $1 MILLION FROM AS MANY AS 150 SENIORS! / THE ELDER JUSTICE HOTLINE IN PHILADELPHIA IS 215-686-5710. / WATCH WHAT HAPPENED WHEN THE D-A ANNOUNCED THE ARRESTS.",
+  "orientation": "horizontal",
+  "clip_role": "confrontation_bust",
+  "news_anchor": "Philadelphia DA five charged utility impersonation PGW PECO seniors $500,000",
+  "visual_spec": "prosecutor at a podium with seals behind, mugshot grid of five defendants, affiliate lower-third",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "high",
+  "sourcability_note": "CORRECTS the producer's 'NO BROADCAST VIDEO FOUND YET - PRINT SOURCE ONLY': NBC10 Y-Pvm6nJp3o '5 arrested in scheme to defraud dozens of seniors across Philly' 159s and 6abc Pl6dSigywm0 140s both exist on YouTube.",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "Philadelphia utility worker fraud scheme elderly charged",
+   "PGW Peco impersonation arrests",
+   "DA elder justice utility scam"
+  ],
+  "producer_candidates": [
+   "https://www.inquirer.com/crime/utility-worker-fraud-scheme-targeted-elderly-20260521.html"
+  ],
+  "queries": {
+   "anchor": [
+    "Philadelphia utility worker fraud scheme elderly charged",
+    "Winston Haynes Michael Turner Anthony Ringgold utility fraud",
+    "PGW PECO city water impersonation arrests Philadelphia",
+    "Philadelphia DA elder justice utility scam charges"
+   ],
+   "news": [
+    "5 arrested in scheme to defraud seniors across Philadelphia",
+    "utility imposter scamming Philadelphia seniors out of thousands",
+    "five charged utility impersonation elderly victims Philadelphia",
+    "DA announces arrests utility worker scam seniors"
+   ],
+   "victim": [
+    "they told me my payment didn't go through",
+    "they cleaned out my whole account"
+   ],
+   "platform": [
+    "Philadelphia utility scam arrests",
+    "PGW impostor scam busted",
+    "utility scammers caught Philadelphia"
+   ],
+   "shorts": [
+    "#scamalert all five got caught",
+    "they scammed 150 seniors #shorts",
+    "DA announces the arrests #scam",
+    "$500,000 from seniors #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b06",
+  "segment_title": "SO WOULD YOU FALL FOR IT - A TV STATION TESTED REAL NEIGHBORS",
+  "script_text": "THEY DRESSED A STAFFER IN A SAFETY VEST AND A HARD HAT. / THEY TEAMED UP WITH CENTERPOINT AND LAW ENFORCEMENT AND WENT DOOR TO DOOR. / NO FAKE BADGE. NO SCRIPT. JUST THE VEST AND THE HAT. / HOMEOWNERS WAVED HIM TOWARD THE GATE INTO THEIR OWN BACKYARDS. / ONE OF THEM SAID THE JACKET AND THE HARD HAT FOOLED HIM. / ANOTHER SAID HE SOUNDED LIKE A SEASONED PRO! / THEY ALSO FOUND A HOMEOWNER, TIA ALEXANDER, WHO DID IT RIGHT - SHE ASKED FOR I-D. / WATCH HOW FAST HE DRIVES OFF THE SECOND SOMEBODY ASKS!",
+  "orientation": "horizontal",
+  "clip_role": "explainer_demo",
+  "role_note": "affiliate-produced staged doorstep test, not a creator demo - neither creator_short nor creator_long fits; producer typed EXPLAINER DEMO and that is honored",
+  "news_anchor": "ABC13 KTRK CenterPoint fake utility worker experiment Tia Alexander John Slanina 2018",
+  "visual_spec": "hidden-camera wide of a man in a safety vest and hard hat at a suburban front door, homeowner gesturing toward a side gate",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "commentary_only",
+  "sourcability_note": "Exact 2018 ABC13 package did not surface on YouTube across four query shapes. Only generic same-topic explainers from other stations (Local 4 Detroit WTdnsIZrXMs 'Can you spot a fake utility worker?' 263s, WMUR yfpAVBmf5ZY, ABC News cOhWnEP9n7o). Producer's abc13.com/3505105 is an 8-year-old web article - likely web-video only, no captions. Brave news_web leg is this beat's real chance.",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "would you fall for it fake utility workers",
+   "hidden camera test utility worker vest hard hat",
+   "CenterPoint fake worker experiment"
+  ],
+  "producer_candidates": [
+   "https://abc13.com/centerpoint-energy-utility-worker-scam-fake-workers-phony/3505105"
+  ],
+  "queries": {
+   "anchor": [
+    "ABC13 CenterPoint utility worker scam fake workers phony",
+    "Tia Alexander CenterPoint asked for ID",
+    "John Slanina CenterPoint Energy fake worker test"
+   ],
+   "news": [
+    "we sent a fake utility worker to real doors experiment",
+    "hidden camera test fake utility worker safety vest hard hat",
+    "would you let a fake utility worker in your backyard",
+    "station tests homeowners fake utility worker CenterPoint",
+    "can you spot a fake utility worker"
+   ],
+   "victim": [
+    "the jacket and the hard hat fooled me",
+    "he sounded like a seasoned pro"
+   ],
+   "platform": [
+    "fake utility worker social experiment",
+    "safety vest experiment doorstep",
+    "utility worker test homeowners"
+   ],
+   "shorts": [
+    "#socialexperiment vest and hard hat at your door",
+    "the hard hat fooled him #shorts",
+    "she asked for ID and he left #scam",
+    "watch how fast he drives off #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b07",
+  "segment_title": "THE BED RAIL YOU BOUGHT TO KEEP MOM SAFE (B-ROLL)",
+  "script_text": "HERE'S THE HAZARD... IT IS NOT THAT THE RAIL BREAKS. / IT'S THAT A PERSON CAN GET TRAPPED INSIDE THE RAIL... OR IN THE GAP BETWEEN THE RAIL AND THE MATTRESS. / AND THEN THEY CAN'T BREATHE. THAT IS WHAT ASPHYXIATION MEANS! / VIVE HEALTH OF NAPLES, FLORIDA IS RECALLING 122,000 OF THEM. / HERE YOU CAN SEE THE RAIL AND THE GAP THAT KILLED THOSE TWO MEN.",
+  "orientation": "horizontal",
+  "clip_role": "evidence",
+  "role_note": "B-ROLL, PICTURE ONLY - Jeff talks over it. Producer marked NO OUTCUE NEEDED.",
+  "news_anchor": "Vive Health adult portable bed rail entrapment gap CPSC recall",
+  "visual_spec": "tight product shots of a metal bed rail bolted to a mattress, especially the gap between rail and mattress edge",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 1,
+  "outcue_required": false,
+  "outcue_exemption_reason": "Producer marked this beat PICTURE ONLY / NO OUTCUE NEEDED - Jeff narrates over it, so no audio is taken from the source and there is no out-point phrase to verify.",
+  "sourcability": "none",
+  "sourcability_note": "Two query shapes returned zero on-topic results (index returned unrelated long-form). CPSC recall page carries product stills only, no video. Strong SHOW-PRODUCED candidate: shoot the rail-and-gap in house, or pull a retailer/caregiver assembly demo.",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "adult portable bed rail entrapment gap",
+   "bed rail mattress gap demonstration",
+   "Vive Health bed rail"
+  ],
+  "producer_candidates": [
+   "https://www.cpsc.gov/Recalls/2026/Vive-Health-Recalls-Adult-Portable-Bed-Rails-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-and-Asphyxiation-Two-Deaths-Reported"
+  ],
+  "queries": {
+   "anchor": [
+    "Vive Health adult portable bed rail",
+    "Vive Health bed rail LVA2009SLV",
+    "adult portable bed rail entrapment CPSC"
+   ],
+   "news": [
+    "bed rail entrapment gap between rail and mattress",
+    "adult bed rail asphyxiation hazard demonstration",
+    "how bed rail entrapment happens"
+   ],
+   "victim": [
+    "my mother got trapped in the bed rail"
+   ],
+   "platform": [
+    "bed rail assembly mattress",
+    "adult bed rail review install",
+    "bed rail gap hazard"
+   ],
+   "shorts": [
+    "#recall check the rail on that bed",
+    "bed rail gap #shorts",
+    "#caregiver bed rail danger",
+    "this rail killed two men #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b08",
+  "segment_title": "AND WAIT - THEY ALREADY RECALLED THESE ONCE",
+  "script_text": "BACK IN FEBRUARY THEY PULLED 12,355 BED RAILS FOR THE SAME HAZARD. / THOSE ONES DIDN'T EVEN HAVE THE REQUIRED WARNING LABELS ON THEM! / THEN IN MARCH THEY HAD TO COME BACK AND DO IT AGAIN... TEN TIMES BIGGER. / THESE SOLD ON AMAZON AND AT MEDICAL SUPPLY STORES FROM SEPTEMBER 2019 THROUGH DECEMBER 2025. / THAT IS SIX YEARS OF SALES SITTING IN BEDROOMS AND NURSING HOMES TONIGHT! / AND VIVE HEALTH IS NOT THE ONLY BRAND. THE C-P-S-C PULLED MNIENT ADULT BED RAILS THIS MONTH TOO. / SO GO LOOK AT THE RAIL ON THAT BED. RIGHT NOW. THE NUMBERS ARE COMING UP! / HERE'S WHAT THE RECALL LOOKS LIKE WHERE IT'S BEING REPORTED.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Vive Health recalls 122,000 adult portable bed rails two deaths March 2026",
+  "visual_spec": "news anchor read over product stills of the recalled rail, CPSC recall graphic, station lower-third",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "commentary_only",
+  "sourcability_note": "Only YouTube hit across three query shapes is Schiffman Firm ex3mfS0PEsE 33s - a plaintiff law-firm marketing clip (clearance and optics problem, and under the authority_report duration expectation). Producer's KING5 candidate is a Tegna wire script; Tegna web video may not be on YouTube. Brave news_web leg is the real path.",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "bed rail recall two deaths entrapment",
+   "Vive Health recalls 122,000 bed rails",
+   "adult portable bed rail asphyxiation CPSC"
+  ],
+  "producer_candidates": [
+   "https://www.king5.com/article/news/nation-world/recall-vive-health-compact-adult-bed-portable-rail-entrapment-asphyxia-risk/507-a31d26c7-9eca-4d39-9dae-0dd369ecdecc"
+  ],
+  "queries": {
+   "anchor": [
+    "Vive Health recalls 122,000 bed rails",
+    "Vive Health compact adult bed portable rail recall entrapment asphyxia",
+    "CPSC bed rail recall two deaths March 2026",
+    "Mnient adult bed rail recall"
+   ],
+   "news": [
+    "bed rail recall after two men died entrapment",
+    "122,000 adult bed rails recalled asphyxiation risk",
+    "recall alert adult portable bed rails deaths reported",
+    "bed rails sold on Amazon recalled entrapment hazard"
+   ],
+   "victim": [
+    "he got trapped in the rail and couldn't breathe"
+   ],
+   "platform": [
+    "bed rail recall",
+    "Vive Health recall",
+    "adult bed rail recall Amazon"
+   ],
+   "shorts": [
+    "#recall bed rails pulled after two deaths",
+    "check your mom's bed rail #shorts",
+    "122,000 recalled #recall",
+    "two men died in these #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news"
+   ],
+   "shorts": [
+    "shorts"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b09",
+  "segment_title": "THIS LANDLORD WAS ARRESTED THREE WEEKS AGO",
+  "script_text": "IN JUNE, A TENANT IN CALGARY NOTICED SOMETHING ON THE SURGE PROTECTOR IN THE BATHROOM. / IT WAS A CAMERA. THEN THEY FOUND ANOTHER ONE IN THE BEDROOM SMOKE DETECTOR. / SO THEY WENT AND TOLD THE OTHER TENANTS IN THE BUILDING. / EVERY ONE OF THEM FOUND A CAMERA IN THEIR BEDROOM TOO! / POLICE SEIZED STORAGE DEVICES AND SAY HE DID IT AT A SECOND BUILDING TOO. / THE LANDLORD, SOORYONG PARK, 41, WAS ARRESTED ON JULY 10TH. / FIVE COUNTS OF VOYEURISM AND ONE COUNT OF BREAK AND ENTER. / AND HE HAD A KEY TO EVERY ONE OF THOSE APARTMENTS!",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Calgary landlord Sooryong Park voyeurism hidden cameras charged July 2026",
+  "visual_spec": "police spokesperson on camera or exterior of a Calgary apartment building, Canadian news lower-third",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "high",
+  "sourcability_note": "CityNews If_wgxWojR0 'Calgary Police charge landlord with voyeurism after finding hidden cameras' 53s. Only 53s, so it is likely a headline read with no tenant soundbite - flagged for pass two. Story is 19 days old; more carriers may exist via Brave (CTV Calgary, Global News).",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "Calgary landlord hidden cameras voyeurism charged",
+   "hidden camera surge protector bathroom tenant",
+   "landlord filmed tenants bedrooms arrested"
+  ],
+  "producer_candidates": [
+   "https://www.cp24.com/news/canada/2026/07/11/calgary-landlord-charged-with-voyeurism-after-tenant-finds-hidden-cameras-in-bathroom-and-bedroom"
+  ],
+  "queries": {
+   "anchor": [
+    "Calgary landlord charged voyeurism hidden cameras",
+    "Sooryong Park Calgary landlord voyeurism",
+    "Calgary police landlord hidden cameras break and enter"
+   ],
+   "news": [
+    "Calgary police charge landlord with voyeurism hidden cameras",
+    "landlord charged after tenant finds hidden cameras bathroom bedroom",
+    "tenants find hidden cameras Calgary apartment building landlord arrested"
+   ],
+   "victim": [
+    "I found a camera in the smoke detector",
+    "he had a key to my apartment"
+   ],
+   "platform": [
+    "Calgary landlord hidden camera",
+    "hidden camera surge protector",
+    "landlord voyeurism cameras tenants"
+   ],
+   "shorts": [
+    "#hiddencamera landlord had a key",
+    "camera in the smoke detector #shorts",
+    "check the surge protector #scamalert",
+    "every tenant found one #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news"
+   ],
+   "shorts": [
+    "shorts"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b10",
+  "segment_title": "NOW WATCH IT HAPPEN IN A VACATION RENTAL",
+  "script_text": "A GUEST IN VERONA, WISCONSIN SPOTTED SOMETHING IN AN ELECTRICAL OUTLET. / THERE WERE TWO CAMERAS. ONE IN EACH BATHROOM. / POLICE SAY THEY WERE POINTED AT THE TOILET AND THE SHOWER! / THEY WERE SUPERGLUED BEHIND THE OUTLET PLATE, SHOOTING THROUGH A PINHOLE IN THE PLASTIC. / THE OWNER, PATRICK SIAS, WAS CHARGED WITH INVASION OF PRIVACY. / MADISON POLICE PUT IT WITH THEIR SENSITIVE CRIMES UNIT BECAUSE OF WHO HAD BEEN STAYING THERE. / AND THEN A WOMAN NAMED SHANISE FAUST SAW THE NEWS AND RECOGNIZED THE HOUSE. / SHE'D BEEN THERE FOR A BACHELORETTE WEEKEND. LISTEN TO WHAT SHE REALIZED.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Verona Wisconsin Airbnb hidden cameras outlet Patrick Sias Shanise Faust",
+  "visual_spec": "young woman on camera indoors recounting a stay, WMTV lower-third, cutaways of a bathroom outlet plate",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "high",
+  "sourcability_note": "WMTV fNxPpoMBK0M 'Hidden cameras in bathroom outlets of Madison Airbnb rental cause concern for past renters' 136s - the producer's WMTV candidate, on YouTube with a caption track. Note: the name-specific query returned zero; the case-shaped query found it.",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "hidden cameras Verona Airbnb outlet",
+   "guest found camera bathroom outlet Wisconsin",
+   "Airbnb hidden camera bachelorette"
+  ],
+  "producer_candidates": [
+   "https://www.wkow.com/news/crime/hidden-cameras-found-in-verona-airbnb-police-looking-for-possible-victims/article_61560905-cf44-4fc2-9aed-983880fa1047.html"
+  ],
+  "queries": {
+   "anchor": [
+    "hidden cameras Verona Airbnb outlet",
+    "Patrick Sias Verona invasion of privacy cameras",
+    "Madison police sensitive crimes Airbnb hidden cameras"
+   ],
+   "news": [
+    "hidden cameras in bathroom outlets of Madison Airbnb rental",
+    "guest finds hidden camera bathroom outlet Wisconsin rental",
+    "cameras found in Verona Airbnb police looking for victims",
+    "past renters concerned hidden cameras Airbnb Madison"
+   ],
+   "victim": [
+    "I stayed there for a bachelorette weekend",
+    "I saw the news and recognized the house",
+    "I was in that bathroom"
+   ],
+   "platform": [
+    "Airbnb hidden camera outlet",
+    "hidden camera bathroom outlet Airbnb",
+    "Verona Airbnb cameras"
+   ],
+   "shorts": [
+    "#airbnb camera in the outlet",
+    "she recognized the house #shorts",
+    "#hiddencamera bachelorette weekend",
+    "check the outlet before you unpack #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "victim"
+   ],
+   "shorts": [
+    "shorts",
+    "victim"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b11",
+  "segment_title": "AND ONE OF THESE GUYS FINALLY GOT WHAT HE DESERVED",
+  "script_text": "A MAN FROM AKRON, OHIO RENTED OUT A CABIN IN HOCKING HILLS. / HE PUT A CAMERA IN THE BATHROOM. / THE HOCKING COUNTY SHERIFF'S OFFICE SAYS HE SECRETLY RECORDED MORE THAN 50 GUESTS. / INCLUDING CHILDREN. / HE WAS SENTENCED TO NEARLY A DECADE IN PRISON. / THAT IS WHAT IT TOOK. FIFTY-PLUS FAMILIES AND ONE GUEST WHO LOOKED UP! / WATCH WHAT THE SHERIFF'S OFFICE SAID WHEN THE SENTENCE CAME DOWN.",
+  "orientation": "horizontal",
+  "clip_role": "confrontation_bust",
+  "news_anchor": "Hocking Hills cabin owner sentenced hidden cameras 50 guests Akron Ohio",
+  "visual_spec": "sheriff's deputy or prosecutor on camera, exterior of a wooded rental cabin, station lower-third",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "high",
+  "sourcability_note": "WBNS 10TV xy8KYqf4KoQ 'Hocking Hills cabin owner sentenced for placing hidden cameras in bathroom' 158s - exact. Also WKYC 0ov_klt1fsQ 115s and LOCAL 12 h339ZDNobIE 46s. Producer only had a truncated spectrumnews1 URL; YouTube coverage is better than the hint suggested.",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "Hocking Hills cabin hidden camera sentenced",
+   "Airbnb host recorded 50 guests prison",
+   "Ohio rental cabin bathroom camera voyeurism"
+  ],
+  "producer_candidates": [
+   "https://spectrumnews1.com/oh/columbus/news/2025/12/21/hidden-cameras-airbnb-"
+  ],
+  "queries": {
+   "anchor": [
+    "Hocking Hills cabin owner sentenced hidden cameras bathroom",
+    "Akron man sentenced Hocking Hills rental cabin camera",
+    "Hocking County sheriff hidden camera cabin 50 guests"
+   ],
+   "news": [
+    "Hocking Hills cabin owner sentenced for placing hidden cameras",
+    "Ohio man sentenced for spying on families children at his cabin",
+    "cabin owner recorded more than 50 guests sentenced prison",
+    "Akron man to be sentenced hidden camera Hocking Hills rental"
+   ],
+   "victim": [
+    "we stayed in that cabin with our kids",
+    "I found the camera in the bathroom"
+   ],
+   "platform": [
+    "Hocking Hills hidden camera sentenced",
+    "Airbnb host caught hidden camera prison",
+    "cabin owner voyeurism sentenced"
+   ],
+   "shorts": [
+    "#airbnb he recorded 50 guests",
+    "nearly a decade in prison #shorts",
+    "#hiddencamera cabin bathroom",
+    "one guest looked up #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ },
+ {
+  "beat_id": "F2t-b12",
+  "segment_title": "THE GOVERNMENT IS MAILING OUT CHECKS RIGHT NOW (HOPPER)",
+  "script_text": "AND THE BIGGEST ONE IS A TRAVEL APP A LOT OF YOU HAVE ON YOUR PHONE. / HOPPER AGREED TO PAY $35 MILLION ON JULY 2ND. / THE F-T-C SAYS THEY CHARGED FEES PEOPLE NEVER AGREED TO. / IF YOU BOOKED A FLIGHT OR A HOTEL ON THAT APP, PAY ATTENTION HERE. / HERE'S WHAT WE KNOW RIGHT NOW.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Hopper $35 million FTC settlement travel app fees without consent July 2026",
+  "visual_spec": "news read over the Hopper app interface and a booking screen, or a business-desk reporter on camera",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "routing_lane": "youtube+brave",
+  "offsite_likely": true,
+  "priority": 3,
+  "expected_segments": 1,
+  "outcue_required": true,
+  "sourcability": "commentary_only",
+  "sourcability_note": "Only YouTube hit is 'Elite Dev News' rCRv5WJDhY4 221s - generic keyword channel name on a consumer-finance topic, reads as AI slop and is a likely hard-filter fail. Story is 27 days old. Script already carries its own fallback (fullscreen of the FTC release, Jeff reads it), so an empty here is survivable.",
+  "source_native": "none",
+  "hint_source": "inline_clip_context",
+  "hint_queries": [
+   "Hopper $35 million FTC settlement fees",
+   "travel app charged fees without consent",
+   "FTC Hopper refund"
+  ],
+  "producer_candidates": [
+   "https://www.ftc.gov/news-events/news/press-releases/2026/07/travel-app-hopper-pay-35-million-settle-ftc-allegations-it-charged-fees-without-consent-deceived"
+  ],
+  "queries": {
+   "anchor": [
+    "Hopper $35 million FTC settlement",
+    "FTC Hopper travel app fees without consent",
+    "Hopper settlement July 2026 FTC",
+    "FTC travel app hidden fees settlement"
+   ],
+   "news": [
+    "travel app Hopper to pay $35 million to settle FTC allegations",
+    "FTC says travel app charged fees consumers never agreed to",
+    "Hopper refunds FTC settlement what to know",
+    "travel booking app settles hidden fee charges"
+   ],
+   "victim": [
+    "they charged me fees I never agreed to",
+    "I booked a flight and got charged twice"
+   ],
+   "platform": [
+    "Hopper app fees FTC",
+    "Hopper refund",
+    "travel app hidden fees settlement"
+   ],
+   "shorts": [
+    "#FTC Hopper owes you money",
+    "$35 million settlement #shorts",
+    "check if you're owed a refund #scamalert",
+    "hidden fees on that travel app #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news"
+   ],
+   "shorts": [
+    "shorts"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "episode": "F2-07292026-TS",
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  }
+ }
+]
