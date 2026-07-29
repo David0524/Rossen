@@ -60,6 +60,30 @@ def _sort_key(c: Candidate):
     )
 
 
+# Platforms that carry a fetchable caption or subtitle track. An outcue has to
+# be quoted verbatim from a transcript, so a copy we can transcribe is worth
+# strictly more than one we cannot, all else equal.
+CAPTIONABLE_PLATFORMS = {"youtube"}
+
+
+def _beats_incumbent(cand: Candidate, incumbent: Candidate) -> bool:
+    """Should `cand` displace `incumbent` as the survivor of a title collision?
+
+    The earliest-upload rule exists to keep the ORIGINATING station when a wire
+    package is re-hosted across a dozen affiliates -- that is a within-YouTube
+    clearance question. It is the wrong rule across platforms: an outlet's own
+    website embed and its own YouTube upload of the same package are the same
+    outlet, so clearance is a wash, but only the YouTube copy has captions.
+    Preferring the website copy silently costs the beat its verifiable outcue
+    and degrades it to a manual-lane LOCATED for no editorial gain.
+    """
+    cand_cap = cand.platform in CAPTIONABLE_PLATFORMS
+    inc_cap = incumbent.platform in CAPTIONABLE_PLATFORMS
+    if cand_cap != inc_cap:
+        return cand_cap
+    return _sort_key(cand) < _sort_key(incumbent)
+
+
 def dedupe(candidates: list[Candidate]) -> list[Candidate]:
     """Collapse duplicates within one beat. Returns survivors only.
 
@@ -87,17 +111,28 @@ def dedupe(candidates: list[Candidate]) -> list[Candidate]:
     # --- pass 2: fuzzy title, within and across platforms -------------
     kept: list[Candidate] = []
     for cand in survivors:
-        match = next(
-            (k for k in kept if title_similarity(k.title, cand.title) >= TITLE_THRESHOLD),
+        idx = next(
+            (i for i, k in enumerate(kept)
+             if title_similarity(k.title, cand.title) >= TITLE_THRESHOLD),
             None,
         )
-        if match is None:
+        if idx is None:
             kept.append(cand)
             continue
-        cand.duplicate_of = match.video_id
-        for tag in cand.also_found_by:
-            if tag not in match.also_found_by:
-                match.also_found_by.append(tag)
+
+        incumbent = kept[idx]
+        winner, loser = (
+            (cand, incumbent) if _beats_incumbent(cand, incumbent)
+            else (incumbent, cand)
+        )
+        loser.duplicate_of = winner.video_id
+        winner.duplicate_of = None
+        for tag in loser.also_found_by:
+            if tag not in winner.also_found_by:
+                winner.also_found_by.append(tag)
+        if loser.rank is not None and (winner.rank is None or loser.rank < winner.rank):
+            winner.rank = loser.rank
+        kept[idx] = winner
 
     return kept
 
