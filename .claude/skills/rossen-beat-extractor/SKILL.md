@@ -43,6 +43,12 @@ This loses pandoc's paragraph-style hints (bold, headers) but preserves every li
 
 The orientation marker is producer-authored ground truth. **Treat it as a hard constraint on the platform list, not a hint.** Horizontal beats never search TikTok. Vertical beats never search YouTube long-form.
 
+## The 10–12 band is per show, not per story
+
+A Wednesday carries 10–12 clip beats across the whole document. **That total divides unevenly and the shape of the show decides how.** A Wednesday is A+B by default (one long A story, one shorter B story), sometimes a 3–5 story rundown, sometimes a single-topic umbrella show. The A story takes about half the beats in every shape; each story after it carries fewer than the one before.
+
+So do not expect an even split, and do not check your extraction against a per-story quota. **A trailing story with zero clip beats is a correct extraction, not a miss** — some segments are graphics-and-Jeff by design. Extract what the script marks. Never infer a beat the script does not mark in order to balance a story, and never carry a beat forward with invented context to fill a gap. If the total comes in under 10, say so and name which stories are thin; that is a producer finding, not something to paper over.
+
 ## Two structural traps
 
 **The cold open.** Every script opens with a rundown block that restates each segment in tease language. It contains no `PLAY CLIP` markers but reads like beat text. Everything before the first `HIT LIKE AND SUBSCRIBE` or `JOIN THE CHAT` line is tease. Drop it. If you extract beats from it you will roughly double the beat count with unresolvable duplicates.

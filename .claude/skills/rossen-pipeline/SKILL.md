@@ -38,6 +38,13 @@ Extract beats. Drop the cold open and every mid-show tease. Expect 10-12
 beats. If you get more than 16, you are extracting teases; re-read the
 traps section.
 
+The 10-12 is a **whole-show** figure and it divides unevenly. A Wednesday
+is A+B by default, sometimes a 3-5 story rundown, sometimes a
+single-topic umbrella show; the A story takes about half the beats in
+every shape and each story after it carries fewer. A trailing story with
+zero beats is a correct extraction. Never invent a beat to even out a
+story.
+
 ## Step 2 — Queries
 
 Read `.claude/skills/rossen-query-generator/SKILL.md` and its
