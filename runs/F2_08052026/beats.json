@@ -1,0 +1,753 @@
+[
+ {
+  "beat_id": "F2c-b01",
+  "segment_title": "A MISSOURI MOM PICKED UP AND HEARD HER COLLEGE DAUGHTER SOBBING",
+  "clip_role": "victim_interview",
+  "orientation": "horizontal",
+  "script_text": "HER NAME IS RACHEL, AND SHE ASKED US NOT TO USE HER LAST NAME. / SHE IS A MOM IN MISSOURI. HER DAUGHTER IS COLLEGE AGED. / THE CALLER I-D SHOWED HER DAUGHTER'S NAME, HER NUMBER AND HER PICTURE. / AND THE VOICE ON THE LINE SAID SHE HAD REAR-ENDED SOMEBODY AND THEY WERE TAKING HER. / SHE COULD HEAR HER DAUGHTER CRYING UNDERNEATH THE WHOLE CONVERSATION. / RACHEL STAYED ON THAT PHONE FOR TWO HOURS. / A MAN WALKED HER FROM A WALMART TO A WALGREENS, WIRING MONEY TO MEXICO. / HE ACTED LIKE HE COULD SEE HER THE WHOLE TIME!! / SHE HIT RECORD... SO WE HAVE THE ACTUAL CALL. / LISTEN TO WHAT HAPPENED TO HER.",
+  "news_anchor": "InvestigateTV AI voice clone kidnapping scam Missouri mom recorded call",
+  "visual_spec": "mom on camera at home, investigative package interview setup, recorded phone audio played under",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 3,
+  "sourcability": "commentary_only",
+  "sourcability_note": "Zero YouTube results for the named case across 4 query variants (retried, search confirmed live). Script cites InvestigateTV+ 01-23-26 (Gray Television national unit) which publishes to investigatetv.com and Gray affiliate sites, not a captioned YouTube channel. Brave news_web is the only lane that reaches it. First name only ('Rachel', last name withheld) removes the highest-recall anchor string.",
+  "queries": {
+   "anchor": [
+    "InvestigateTV AI voice cloning scam Rachel Missouri",
+    "InvestigateTV+ voice clone kidnapping mom wired Mexico",
+    "Missouri mom AI voice scam two hours Walmart Walgreens wire"
+   ],
+   "news": [
+    "Missouri mom AI voice clone scam daughter kidnapped",
+    "mom wires money to Mexico after AI voice scam",
+    "AI voice cloning scam mother recorded the call",
+    "mother scammed cloned daughter voice car crash claim",
+    "parents targeted AI voice kidnapping scam recorded phone call"
+   ],
+   "victim": [
+    "I could hear my daughter crying on the phone",
+    "they said they had my daughter and I stayed on the line",
+    "I wired the money because it was her voice",
+    "he walked me from Walmart to Walgreens"
+   ],
+   "platform": [
+    "AI voice clone kidnapping scam mom",
+    "fake kidnapping voice clone recorded call",
+    "cloned daughter voice scam",
+    "virtual kidnapping AI voice"
+   ],
+   "shorts": [
+    "#scamalert it was my daughter's voice",
+    "mom stayed on the phone two hours #shorts",
+    "she recorded the scam call #scam",
+    "#scamalert they cloned her daughter"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-05",
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b02",
+  "segment_title": "A STRANGER CAN CLONE YOUR CHILD'S VOICE IN UNDER TEN SECONDS",
+  "clip_role": "explainer_demo",
+  "orientation": "horizontal",
+  "script_text": "ANN DICKHERBER IS A CYBERSECURITY EXPERT IN WENTZVILLE, MISSOURI. / A REPORTER ASKED HER TO PROVE HOW FAST A VOICE CAN BE STOLEN. / SO SHE TOOK A FEW SECONDS OF THAT REPORTER'S OWN VOICE. / THEN SHE MADE HIS VOICE SAY WHATEVER SHE WANTED IT TO SAY. / SHE SAYS WE ARE ALL VERY FREE WITH OUR VOICES ONLINE! / WATCH HER SHOW YOU HOW FAST IT HAPPENS... AND WATCH HIS FACE.",
+  "news_anchor": "Ann Dickherber Wentzville Missouri cybersecurity voice cloning demo",
+  "visual_spec": "expert at laptop cloning a reporter's voice on camera, reporter's reaction in two-shot, news package",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "sourcability": "none",
+  "sourcability_note": "Zero results for 'Ann Dickherber' on YouTube across 2 variants. KNOWN DEAD END: run F2_07292026 already hit this \u2014 beat F2b-b02 was rewritten off Dickherber onto Greg Bull / FOX4 Dallas to get a captioned demo. Script marks this BUTT FROM B01 (same InvestigateTV+ package), so it inherits b01's news_web-only lane. Recommend the same substitution: an on-camera voice-clone demo from a captioned affiliate.",
+  "queries": {
+   "anchor": [
+    "Ann Dickherber voice cloning demo",
+    "Ann Dickherber Wentzville cybersecurity",
+    "InvestigateTV voice cloning expert demo reporter"
+   ],
+   "news": [
+    "cybersecurity expert clones reporter voice on camera",
+    "expert shows how fast AI can clone your voice",
+    "reporter hears his own cloned voice demonstration",
+    "how many seconds of audio to clone a voice news demo",
+    "AI voice cloning demonstration local news expert"
+   ],
+   "victim": [
+    "that is my voice and I never said that",
+    "I could not tell it was not me"
+   ],
+   "platform": [
+    "voice cloning demo",
+    "AI clone my voice in seconds",
+    "clone a voice 3 seconds demo"
+   ],
+   "shorts": [
+    "#scamalert they cloned his voice in seconds",
+    "watch her steal his voice #shorts",
+    "that's not really him talking #ai",
+    "#voicecloning it took 10 seconds"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-05",
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b03",
+  "segment_title": "SO RACHEL CALLED THE POLICE. GUESS WHAT THEY DID???",
+  "clip_role": "victim_interview",
+  "orientation": "horizontal",
+  "script_text": "SHE REPORTED IT TO SEVERAL LAW ENFORCEMENT AGENCIES. / SHE WAS TOLD IT COUNTS AS AN OVERSEAS CYBERCRIME... SO PROSECUTING IT IS ALMOST IMPOSSIBLE. / AND THESE PEOPLE DID NOT STOP WHEN THE MONEY LANDED!! / THEY KNOW WHERE SHE LIVES. THEY THREATENED TO KILL HER ENTIRE FAMILY. / SHE IS STILL LIVING WITH THAT... AND NOBODY IS COMING. / HEAR WHAT SHE SAYS WHEN SHE IS ASKED WHAT ANYBODY ACTUALLY DID ABOUT IT.",
+  "news_anchor": "AI voice scam overseas cybercrime no prosecution death threats victim",
+  "visual_spec": "same mom on camera, later in the package, describing threats; investigative interview setup",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "sourcability": "commentary_only",
+  "sourcability_note": "Same InvestigateTV+ package as b01 (BUTT FROM B01). No standalone YouTube surface for the named case; generic virtual-kidnapping packages surface instead. news_web lane.",
+  "queries": {
+   "anchor": [
+    "InvestigateTV AI voice scam law enforcement cannot prosecute",
+    "AI voice scam overseas cybercrime prosecution impossible"
+   ],
+   "news": [
+    "scam victim says police could do nothing",
+    "AI scam victim threatened after wiring money",
+    "voice cloning scam victim receives death threats",
+    "scam victims told crime is overseas nothing can be done",
+    "family threatened by phone scammers after paying"
+   ],
+   "victim": [
+    "they threatened to kill my whole family",
+    "nobody is going to help me",
+    "they know where I live",
+    "I reported it and nothing happened"
+   ],
+   "platform": [
+    "scam victim police did nothing",
+    "scammers threatened my family",
+    "overseas scam no prosecution"
+   ],
+   "shorts": [
+    "#scamalert nobody helped her",
+    "they threatened her family #scam",
+    "police did nothing #scamalert",
+    "she is still scared #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-05",
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b04",
+  "segment_title": "THINK THAT IS BAD? THIS MOM WAS ON THE PHONE FOR FIVE HOURS!!",
+  "clip_role": "victim_interview",
+  "orientation": "horizontal",
+  "script_text": "DEBORAH DEL MASTRO LIVES IN MARTINEZ, CALIFORNIA, OUTSIDE SAN FRANCISCO. / A MAN CALLED FROM AN UNKNOWN NUMBER ONE MORNING IN MAY AND ASKED, WHO IS THIS. / THEN HE TOLD HER A MEXICAN DRUG CARTEL HAD TAKEN HER 37 YEAR OLD DAUGHTER, SARAH. / AND HE PLAYED HER PROOF... HER DAUGHTER'S VOICE IN A FULL PANIC ATTACK. / SAYING I LOVE YOU MOM, I AM SO SORRY, I AM SO SCARED. / HE DEMANDED 20,000 DOLLARS. SHE FOLLOWED ORDERS FOR FIVE HOURS AND LOST OVER 5,000. / SARAH WAS AT WORK THE ENTIRE TIME. COMPLETELY FINE!! / THINK ABOUT WHAT YOU WOULD DO IF YOU HEARD THAT.",
+  "news_anchor": "Deborah Del Mastro Martinez California cartel kidnapping AI voice scam $20,000",
+  "visual_spec": "older woman on camera at home, Bay Area affiliate interview setup, lower-third",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "Named case confirmed. Run F2_07292026 located it on abc7news.com (KGO) as news_web with no captioned YouTube twin. YouTube surface today is a GMA repost on an unrelated drum channel (qkFC6xgBQCI) \u2014 aggregator, fails the repost/clearance filter. Expect news_web to carry the pick again; ABC News Nightline PG2-6NOIaIY is a captioned national alternative worth grading.",
+  "queries": {
+   "anchor": [
+    "Deborah Del Mastro AI voice scam",
+    "Deborah Del Mastro Martinez cartel kidnapping scam",
+    "Martinez California mom AI voice kidnapping scam $20,000"
+   ],
+   "news": [
+    "Bay Area mom scammed AI cloned daughter voice cartel",
+    "mom loses thousands fake cartel kidnapping call",
+    "California woman five hours on phone with fake kidnappers",
+    "AI voice scam daughter was at work the whole time",
+    "cartel kidnapping scam mother wired money California"
+   ],
+   "victim": [
+    "they played my daughter's voice screaming",
+    "he said the cartel had my daughter",
+    "I was on the phone for five hours",
+    "she was at work the entire time"
+   ],
+   "platform": [
+    "fake cartel kidnapping scam",
+    "AI kidnapping scam mom",
+    "cloned voice ransom call"
+   ],
+   "shorts": [
+    "#scamalert fake cartel kidnapping",
+    "she heard her daughter screaming #shorts",
+    "five hours on the phone #scam",
+    "#scamalert her daughter was fine"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-05",
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b05",
+  "segment_title": "THE WOMAN CHASING THESE GUYS CALLS THIS A SCAMDEMIC",
+  "clip_role": "explainer_demo",
+  "orientation": "horizontal",
+  "script_text": "ERIN WEST RUNS AN ORGANIZATION CALLED OPERATION SHAMROCK THAT FIGHTS THIS INDUSTRY. / SHE SAYS A FEW SECONDS OF YOUR VOICE PRODUCES SOMETHING THAT SOUNDS EXACTLY LIKE YOU. / AND SHE GIVES YOU THE CLEANEST TEST OUT THERE FOR ANY SCAM CALL. / ANXIETY... PLUS IMMEDIATE ACTION... PLUS MOVING MONEY. / YOU GET ALL THREE AT ONCE, IT IS A SCAM. EVERY TIME!! / LET HER EXPLAIN WHY SHE THINKS THIS ONLY GETS WORSE FROM HERE.",
+  "news_anchor": "Erin West Operation Shamrock scamdemic anxiety action money test",
+  "visual_spec": "Erin West on camera, interview or testimony framing, named lower-third",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "priority": 2,
+  "sourcability": "high",
+  "sourcability_note": "Strong captioned YouTube presence: Operation Shamrock's own channel, House Select Committee on China testimony (4vLlIbdwNhY), AARP Maine, Asset Reality podcast. Script marks BUTT FROM B04 (same ABC7 package), but ABC7 has no captions and West has captioned standalone sources \u2014 grade both lanes.",
+  "queries": {
+   "anchor": [
+    "Erin West Operation Shamrock scamdemic",
+    "Erin West Operation Shamrock AI voice",
+    "Operation Shamrock scamdemic interview",
+    "Erin West prosecutor pig butchering scamdemic"
+   ],
+   "news": [
+    "former prosecutor warns AI voice scams getting worse",
+    "expert says a few seconds of your voice is enough",
+    "how to tell if a call is a scam anxiety urgency money",
+    "scam expert explains the three warning signs of a scam call"
+   ],
+   "victim": [
+    "I thought it was really him on the phone",
+    "they had me moving money within minutes"
+   ],
+   "platform": [
+    "scamdemic Erin West",
+    "Operation Shamrock scam",
+    "anxiety urgency money scam test"
+   ],
+   "shorts": [
+    "#scamalert three signs it's a scam",
+    "the scamdemic is here #shorts",
+    "#scamalert anxiety action money",
+    "she prosecuted these guys #scam"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-05",
+  "offsite_likely": false,
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b06",
+  "segment_title": "NOW POLICE IN KANSAS ARE WARNING WHOLE NEIGHBORHOODS ABOUT THIS!",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "script_text": "THE OLATHE, KANSAS POLICE DEPARTMENT SAYS IT HAS TAKEN MULTIPLE REPORTS OF THIS EXACT CALL. / THE SCRIPT IS ALWAYS THE SAME... YOUR CHILD WAS IN A CRASH, AND NOW WE HAVE THEM. / THEY DEMAND MONEY IMMEDIATELY AND THEY MAKE VIOLENT THREATS!! / AND THEY PLAY SOMETHING THAT SOUNDS LIKE THE CHILD'S VOICE. / HERE IS WHAT POLICE WANT EVERY PARENT AND GRANDPARENT TO KNOW.",
+  "news_anchor": "Olathe Kansas Police Department AI voice kidnapping scam warning multiple reports",
+  "visual_spec": "police spokesperson on camera or press briefing, department seal, affiliate news package",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "sourcability": "commentary_only",
+  "sourcability_note": "The AI-voice Olathe case returns zero on YouTube (2 variants, retried). Olathe PD does have captioned affiliate coverage of OTHER scams (KSHB BpFMz_qE-Eo utility/dept impersonation, KMBC PIjb21ahu4w) \u2014 wrong case, would fail the fit gate. Run F2_07292026 located the Olathe kids-voice case on KMBC/KCTV news_web with no captioned YouTube twin; same expectation here. Kansas City metro affiliates are the target.",
+  "queries": {
+   "anchor": [
+    "Olathe Kansas police AI voice cloning scam warning",
+    "Olathe police department kidnapping scam child voice",
+    "KCTV Olathe police AI voice scam",
+    "Johnson County Kansas AI voice scam police warning"
+   ],
+   "news": [
+    "police warn parents about AI voice kidnapping calls",
+    "police department takes multiple reports of AI voice scam",
+    "your child was in a crash scam police warning",
+    "police warn grandparents about cloned voice calls",
+    "department warns of scam calls using child's voice"
+   ],
+   "victim": [
+    "they told me my son was in a crash",
+    "it sounded exactly like my kid"
+   ],
+   "platform": [
+    "police warn AI voice scam",
+    "crash then kidnap scam call",
+    "child voice scam police"
+   ],
+   "shorts": [
+    "#scamalert police warn parents",
+    "they use your kid's voice #shorts",
+    "#scamalert your child was in a crash",
+    "cops warning every parent #scam"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-05",
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b07",
+  "segment_title": "ONE GUY ON TIKTOK SET OFF A NATIONWIDE STAMPEDE FOR THIS MONEY",
+  "clip_role": "explainer_demo/creator_short",
+  "orientation": "vertical",
+  "script_text": "A CREATOR NAMED ALEX PEARLMAN POSTED ABOUT THIS AND IT WENT ABSOLUTELY NUCLEAR!! / BILLIONS IN UNCLAIMED FUNDS IN EVERY STATE... GO GET YOUR MONEY. / MILLIONS OF VIEWS. THOUSANDS OF PEOPLE IN THE COMMENTS. / PEOPLE WERE POSTING SCREENSHOTS OF WHAT THEY FOUND UNDER THEIR OWN NAMES. / AND STATE TREASURERS HAD NO IDEA IT WAS COMING. / HAVE A LOOK AT THE ONE THAT SET IT ALL OFF.",
+  "news_anchor": "Alex Pearlman TikTok unclaimed money every state viral Pearlmania500",
+  "visual_spec": "vertical, creator talking straight to camera, TikTok UI, high comment count",
+  "platforms": [
+   "tiktok",
+   "shorts",
+   "instagram",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "source_native": "tiktok",
+  "sourcability": "high",
+  "sourcability_note": "MANUAL LANE. Named creator, self-posted vertical \u2014 the script explicitly says 'have a look at the one that set it all off', so the pick is Pearlman's own TikTok, not a repost. Alex Pearlman = @pearlmania500. YouTube search returns his podcast/other content only (no unclaimed-money video), which is correct: the artifact lives natively on TikTok. Brave web leg should surface press coverage naming the post; hand the producer the permalink rather than grading a repost.",
+  "queries": {
+   "anchor": [
+    "Alex Pearlman unclaimed money TikTok",
+    "pearlmania500 unclaimed money",
+    "Alex Pearlman TikTok state treasury unclaimed funds viral"
+   ],
+   "news": [
+    "TikTok video sets off unclaimed money search surge",
+    "viral TikTok unclaimed property state treasurers",
+    "creator tells followers to check unclaimed money"
+   ],
+   "victim": [
+    "I found money under my name",
+    "I checked and there was money waiting for me"
+   ],
+   "platform": [
+    "#unclaimedmoney go get your money",
+    "unclaimed money every state tiktok",
+    "billions unclaimed funds tiktok",
+    "#unclaimedproperty check your name"
+   ],
+   "shorts": [
+    "#unclaimedmoney go check your name",
+    "free money the state owes you #shorts",
+    "#unclaimedmoney I found hundreds",
+    "every state has your money #shorts"
+   ]
+  },
+  "platform_map": {
+   "tiktok": [
+    "platform",
+    "anchor",
+    "victim"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "instagram": [
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "vertical"
+  },
+  "episode": "08-05",
+  "expected_segments": 1
+ },
+ {
+  "beat_id": "F2c-b08",
+  "segment_title": "AND THEN A WHOLE STATE TREASURY GOT BURIED IN PHONE CALLS!!",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "script_text": "VIRGINIA'S TREASURY SAID THE FLOOD OF CLAIMS WAS DIRECTLY BECAUSE OF TIKTOK. / BRADLEY EARL RUNS THEIR UNCLAIMED PROPERTY DIVISION AND WATCHED IT HAPPEN. / THEIR FAST TRACK NUMBERS JUMPED INTO THE TRIPLE DIGITS IN A SINGLE WEEK. / VIRGINIA SAYS AN APPROVED CLAIM CAN PAY OUT IN ABOUT TEN DAYS. / THEIR SEARCH SITE IS VAMONEYSEARCH.GOV IF YOU EVER LIVED THERE. / HERE YOU CAN SEE WHAT HAPPENS WHEN A WHOLE STATE FINDS OUT AT ONCE.",
+  "news_anchor": "Virginia treasury unclaimed property flooded TikTok Bradley Earl FOX 5 DC",
+  "visual_spec": "treasury official on camera in office, b-roll of claims processing, affiliate news package",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "priority": 2,
+  "sourcability": "high",
+  "sourcability_note": "Exact named source found on YouTube in the scan: FOX 5 Washington DC C2J_wnqMlIo, \"Virginia's treasury flooded with unclaimed money requests, thanks to TikTok\", 144s. Captioned affiliate, matches the script's cited outlet. Strongest-sourced beat in the episode.",
+  "queries": {
+   "anchor": [
+    "Virginia treasury unclaimed money TikTok FOX 5 DC",
+    "Bradley Earl Virginia unclaimed property",
+    "vamoneysearch.gov unclaimed property TikTok surge",
+    "Virginia unclaimed property division flooded claims"
+   ],
+   "news": [
+    "state treasury flooded with unclaimed money claims after TikTok",
+    "unclaimed property claims surge social media",
+    "treasurer says TikTok caused spike in unclaimed money searches",
+    "state says claims jumped after viral video"
+   ],
+   "victim": [
+    "I found money the state was holding for me",
+    "I filed a claim and got a check"
+   ],
+   "platform": [
+    "unclaimed money virginia tiktok",
+    "state treasury tiktok surge",
+    "unclaimed property flood"
+   ],
+   "shorts": [
+    "#unclaimedmoney the state got flooded",
+    "virginia owes you money #shorts",
+    "#unclaimedmoney claims went crazy",
+    "one tiktok did this #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-05",
+  "offsite_likely": false,
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b09",
+  "segment_title": "BUT THERE IS A CATCH AND I WILL NOT PRETEND THERE ISN'T",
+  "clip_role": "victim_interview",
+  "orientation": "vertical",
+  "script_text": "SOMETIMES THE STATE AGREES THE MONEY IS YOURS AND STILL WILL NOT RELEASE IT!! / SUSAN UDVANCE HAD 19,379 DOLLARS WAITING AT THE ILLINOIS TREASURER'S OFFICE. / IT WAS ESCROW SHE LEFT BEHIND ON A CANCELED WEST LOOP REAL ESTATE DEAL. / SHE SENT IN HER TAXES, HER SOCIAL SECURITY CARD, HER MARRIAGE CERTIFICATE. / BUT THE STATE WANTS SIGNATURES FROM THE OTHER TWO COMPANIES IN THAT DEAL. / AND BOTH OF THOSE COMPANIES ARE NOW DEFUNCT. / THE TREASURER'S OFFICE ADMITTED THE MONEY IS HERS AND STILL WOULD NOT HAND IT OVER!! / HEAR WHAT SHE WAS TOLD SHE HAS TO DO TO GET IT.",
+  "news_anchor": "Susan Udvance Illinois treasurer I-CASH $19,379 unclaimed escrow ABC7 Chicago I-Team",
+  "visual_spec": "woman on camera with paperwork, I-Team interview setup; vertical social cut of the same package",
+  "platforms": [
+   "tiktok",
+   "shorts",
+   "news_web",
+   "youtube"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "orientation_decision_pending": true,
+  "orientation_note": "Script carries an explicit producer DECIDE: the ABC7 Chicago TikTok cut is vertical, the original I-Team package is horizontal. Orientation typed VERTICAL, so vertical is the routing default, but both lanes are harvested because the producer left the call open. This is the one beat where the orientation hard filter is deliberately relaxed, on the script's own instruction.",
+  "sourcability": "commentary_only",
+  "sourcability_note": "Zero YouTube results for 'Susan Udvance' (2 variants, retried). ABC7 Chicago I-Team publishes investigative packages to abc7chicago.com and a vertical cut to social; neither is a captioned YouTube upload. Brave news_web + TikTok legs are the coverage here. Expect LOCATED, not PICK.",
+  "queries": {
+   "anchor": [
+    "Susan Udvance Illinois unclaimed property",
+    "Illinois treasurer I-CASH $19,379 escrow claim denied",
+    "ABC7 Chicago I-Team unclaimed property defunct companies",
+    "Illinois I-CASH claim blocked defunct company"
+   ],
+   "news": [
+    "woman cannot claim her own unclaimed money from the state",
+    "state admits money is hers but will not release it",
+    "unclaimed property claim denied signatures defunct company",
+    "Illinois treasurer unclaimed money red tape investigation"
+   ],
+   "victim": [
+    "they told me the money is mine and I still can't get it",
+    "I sent them everything and they still said no",
+    "the companies don't even exist anymore"
+   ],
+   "platform": [
+    "#unclaimedmoney claim denied",
+    "state won't give me my money",
+    "i-cash illinois claim problem"
+   ],
+   "shorts": [
+    "#unclaimedmoney they won't release it",
+    "the state admits it's her money #shorts",
+    "#unclaimedmoney 19 thousand stuck",
+    "she can't get her own money #scam"
+   ]
+  },
+  "platform_map": {
+   "tiktok": [
+    "platform",
+    "victim",
+    "anchor"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ],
+   "youtube": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "vertical"
+  },
+  "episode": "08-05",
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b10",
+  "segment_title": "AND GRANDPARENTS ARE THE NUMBER ONE TARGET IN THIS COUNTRY",
+  "clip_role": "confrontation_bust",
+  "orientation": "horizontal",
+  "script_text": "(((DECIDE - DO WE ADD A BUST BEAT HERE? THERE IS NO CONFIRMED A-I VOICE CLONING PROSECUTION ON VIDEO. CLOSEST IS A SEPT 2025 DOJ GRANDPARENT-SCAM INDICTMENT, 13 CHARGED, 5 MILLION, FIVE STATES - NOT THE A-I ANGLE. PRODUCER TO CONFIRM OR WE DROP IT.))) / Preceding block: THE F-B-I SAYS AMERICANS OVER 60 REPORTED ROUGHLY 7.7 BILLION DOLLARS IN LOSSES LAST YEAR. THAT IS UP 59 PERCENT IN A SINGLE YEAR!!",
+  "news_anchor": "DOJ grandparent scam indictment 13 charged $5 million five states September 2025",
+  "visual_spec": "DOJ or US Attorney press conference podium, or perp-walk / arrest b-roll, news package",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "priority": 3,
+  "status": "producer_gated",
+  "status_note": "No PLAY CLIP marker \u2014 this is the script's own DECIDE block. Harvested so the producer has candidates in hand when they rule, but it does not enter the show until approved. If dropped, the beat is DROPPED, not EMPTY.",
+  "sourcability": "high",
+  "sourcability_note": "The DOJ grandparent-scam indictment is well covered and captioned: CBS Boston OxRedGsy-Ug '13 charged with scamming hundreds of grandparents | Full news conference' (1074s) matches the script's note exactly. Caveat the script already states: it is the grandparent-scam angle, not the AI-voice angle, so the fit gate is the real risk, not sourcability.",
+  "queries": {
+   "anchor": [
+    "13 charged grandparent scam indictment DOJ",
+    "grandparent scam indictment $5 million five states",
+    "Justice Department grandparent scam charges press conference"
+   ],
+   "news": [
+    "federal grand jury indicts grandparent scam ring",
+    "arrests in nationwide grandparent scam targeting seniors",
+    "prosecutors charge group in elderly phone scam",
+    "AI voice cloning scam arrest prosecution"
+   ],
+   "victim": [
+    "they said my grandson was in jail",
+    "I handed cash to a stranger at my door"
+   ],
+   "platform": [
+    "grandparent scam bust",
+    "grandparent scam arrested",
+    "scammers caught grandparent scam"
+   ],
+   "shorts": [
+    "#scamalert they finally got caught",
+    "13 arrested grandparent scam #shorts",
+    "#scamalert feds bust scam ring",
+    "busted grandparent scam #scam"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-05",
+  "offsite_likely": false,
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b11",
+  "segment_title": "SO LET'S GO FIND YOURS \u2014 DO THIS WITH ME RIGHT NOW!!",
+  "clip_role": "other",
+  "role_note": "Live screen share, not a clip roll. Jeff walks missingmoney.com on camera in the studio.",
+  "orientation": "horizontal",
+  "script_text": "(((JEFF SCREEN SHARE))) / START AT MISSINGMONEY.COM. THAT IS THE FREE SEARCH NAUPA RUNS. / TYPE IN YOUR LAST NAME AND YOUR STATE. THAT IS IT. NO ACCOUNT NEEDED. / IT CHECKS ALMOST EVERY STATE AT ONCE... HAWAII RUNS ITS OWN SYSTEM. / NOW SEARCH YOUR OWN STATE'S SITE TOO... GO TO UNCLAIMED.ORG FOR THE OFFICIAL LINK TO ANY STATE. / (((END SCREENSHARE))) / (((JEFF - DO YOU WANT TO SEARCH A VIEWER NAME OUT OF THE CHAT LIVE HERE?)))",
+  "news_anchor": "missingmoney.com NAUPA free unclaimed property search",
+  "visual_spec": "Jeff at the desk, browser full-screen on missingmoney.com, live typing",
+  "platforms": [],
+  "priority": 3,
+  "status": "show_produced",
+  "status_note": "SHOW-PRODUCED. No search lane, no clip to source \u2014 production task, not a pipeline task. Logged so the yield record is complete. Outcome is SHOW-PRODUCED, never EMPTY.",
+  "sourcability": "n/a",
+  "sourcability_note": "Show produces this live. Nothing to harvest.",
+  "queries": {
+   "anchor": [],
+   "news": [],
+   "victim": [],
+   "platform": [],
+   "shorts": []
+  },
+  "platform_map": {},
+  "episode": "08-05",
+  "offsite_likely": false,
+  "expected_segments": 1,
+  "source_native": "none"
+ }
+]
