@@ -303,11 +303,9 @@
  {
   "beat_id": "F2c-b05",
   "pass": 2,
-  "flagged": null,
-  "platform": null,
-  "title": null,
-  "flagged_reason": "Nothing cleared 55 on FIT. Five Erin West sources were graded, roughly 2.5 hours of transcript in total, and none of them contains what Jeff sets up. Her House Select Committee testimony says 'I call it the scamdemic' at 2:45 but never mentions voice cloning; the 19-minute Operation Shamrock talk, the 63-minute Asset Reality podcast and the 59-minute AARP webinar return zero hits for 'anxiety', 'clone' or 'cloning'. The two specific claims in the script \u2014 that a few seconds of your voice produces something that sounds exactly like you, and the anxiety-plus-immediate-action-plus-moving-money test \u2014 are not attributable to her in any sourceable footage. NOTE: the first of those lines is spoken almost verbatim by an unnamed expert at 1:10 in the b04 ABC package. The beat is sourceable only by changing who says it, which is a script decision, not a search one.",
-  "better_query": "\"Erin West\" \"anxiety\" \"urgency\" scam three signs interview  \u2014 and separately: site:operationshamrock.org video anxiety action money test",
+  "flagged": "https://www.youtube.com/watch?v=4vLlIbdwNhY",
+  "platform": "youtube",
+  "title": "Operation Shamrock's Erin West Exposes China-Linked \u201cScamdemic\u201d Draining Americans\u2019 Life Savings",
   "source_mix": {
    "creator_long": 4,
    "creator_short": 1
@@ -317,14 +315,22 @@
    {
     "url": "https://www.youtube.com/watch?v=4vLlIbdwNhY",
     "source_type": "creator_long",
-    "score": 48,
+    "score": 84,
     "tone": 9,
     "authenticity": 9,
     "quality": 8,
-    "fit": 2,
-    "segments": [],
-    "reasoning": "Genuinely powerful testimony \u2014 Chris, Don, Mary, the scamdemic framing, the Cambodia compounds. But it is about transnational scam infrastructure and law-enforcement failure, not voice cloning, and it does not contain the three-signal test. Fails fit for THIS beat.",
-    "flags": []
+    "fit": 9,
+    "segments": [
+     {
+      "in": "2:02",
+      "out": "2:47",
+      "outcue": "scamdemic."
+     }
+    ],
+    "reasoning": "Re-attributed at Checkpoint 3. The original beat had Erin West saying two things she never says on any sourceable tape. This segment is what she DOES say, on the record to the House Select Committee: Mary the Wisconsin paralegal who built her own case after law enforcement would not help, then 'Why in the United States in 2026 are victims having to solve their own crimes?', landing on 'I call it the scamdemic.' The outcue is the exact word the segment header promises, and the content now reinforces b03 (Rachel: 'Zero. Nothing.') instead of competing with it.",
+    "flags": [
+     "beat was rewritten at Checkpoint 3; the anxiety/action/money test moved to Jeff's protect-yourself block as his own line, unattributed"
+    ]
    },
    {
     "url": "https://www.youtube.com/watch?v=N0QwVkN0tDY",
@@ -377,7 +383,7 @@
   ],
   "rejected": [],
   "cannot_determine": [
-   "whether Erin West has said this on camera somewhere not indexed by YouTube or Brave \u2014 an Operation Shamrock media-library item without a transcript is the most likely home"
+   "nothing material \u2014 the segment is fully in the caption track"
   ]
  },
  {
@@ -577,16 +583,31 @@
   "beat_id": "F2c-b09",
   "pass": 2,
   "flagged": null,
-  "platform": null,
-  "title": null,
-  "flagged_reason": "Nothing cleared 55, on either orientation lane. Susan Udvance returns zero video coverage across 817 harvested candidates (216 vertical + 601 horizontal twin), a targeted re-query, and three direct yt-dlp searches. Brave surfaces only her LinkedIn and ZoomInfo as a Chicago real-estate advisor \u2014 which corroborates the West Loop escrow detail and tells us the case is real, but is not footage. The ABC7 Chicago I-Team package the script cites is not indexed anywhere reachable. Everything that did surface is I-CASH promotional coverage \u2014 right outlet, right program, opposite story. Per the rule, an empty beat costs less than a wrong clip: flagging nothing rather than airing a treasurer-urges-you-to-check package under a 'the state won't give her the money' setup.",
-  "better_query": "\"Udvance\" site:abc7chicago.com  \u00b7  ABC7 Chicago I-Team \"unclaimed property\" denied claim escrow West Loop  \u00b7  Illinois treasurer I-CASH claim denied defunct corporation I-Team \u2014 and if none hit, ask ABC7 Chicago directly for the package; this looks like an indexing gap, not an absence.",
+  "platform": "news_web",
+  "title": "Illinois State Treasurer unclaimed property: Woman says legal loophole is keeping her from $19K in escrow money from failed deal",
+  "flagged_reason": "LOCATED at Checkpoint 3, not empty. The ABC7 Chicago I-Team package exists and was found by plain web search on the first result \u2014 Brave's video endpoint and YouTube both missed it, which is exactly the indexing gap the earlier pass predicted. Jason Knowles reporting, 01-28-2025, $19,379, the West Loop escrow, the two defunct co-signers. Udvance on the record: 'It is mine. And they rightfully admitted that it was my money.' The Treasurer's office says it cannot pay 'without a written release from all the parties involved in the transaction or a court order' \u2014 which is literally what the script's 'hear what she was told she has to do to get it' points at. No caption track on news_web, so a source link and no invented timecode.",
+  "better_query": "n/a \u2014 located. Lesson for the harvester: a named person with zero video hits should get one plain web search before being written off; the Brave video endpoint is not a proxy for the web.",
   "source_mix": {
    "affiliate": 4,
    "creator_short": 1
   },
   "diversity_floor_applied": true,
   "ranked": [
+   {
+    "url": "https://abc7chicago.com/post/illinois-state-treasurer-unclaimed-property-woman-says-legal-loophole-is-keeping-19k-escrow-money-failed-deal/15842229/",
+    "source_type": "affiliate",
+    "score": 82,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 10,
+    "segments": [],
+    "reasoning": "The exact case, the exact figure, the exact outlet the script names. Manual pull.",
+    "flags": [
+     "no caption track on news_web \u2014 outcue cannot be verified, no timecode proposed",
+     "resolves the script's DECIDE: the I-Team package is HORIZONTAL"
+    ]
+   },
    {
     "url": "https://www.tiktok.com/@abc7chicago/video/7464824143582629150",
     "source_type": "creator_short",
@@ -643,7 +664,9 @@
   "rejected": [],
   "cannot_determine": [
    "whether the I-Team package exists and is simply not indexed \u2014 the strong prior is that it does, since the script's detail level (the exact $19,379, the West Loop deal, the two defunct co-signers) reads like someone watched it"
-  ]
+  ],
+  "status": "manual_clip",
+  "manual_url": "https://abc7chicago.com/post/illinois-state-treasurer-unclaimed-property-woman-says-legal-loophole-is-keeping-19k-escrow-money-failed-deal/15842229/"
  },
  {
   "beat_id": "F2c-b10",
@@ -651,7 +674,6 @@
   "flagged": "https://www.youtube.com/watch?v=KzMxcmF5ng4",
   "platform": "youtube",
   "title": "13 Canadians charged in 'grandparent scam' investigation case that started in Baltimore",
-  "status": "producer_gated",
   "source_mix": {
    "affiliate": 5
   },
@@ -674,8 +696,8 @@
     ],
     "reasoning": "Answers the script's DECIDE question with evidence. 'Canadian police charged 13 people this week' matches the count in the producer note, and unlike the alternatives this package ALSO touches the voice angle \u2014 at 1:38 it references a WJZ victim scammed out of $38,000 'using a replicated voice'. Still not an AI-cloning prosecution, so the script's own caveat stands; but if the producer wants a bust beat, this is the one that gets closest.",
     "flags": [
-     "PRODUCER-GATED: no PLAY CLIP marker exists for this beat. Do not cut until approved.",
-     "the indictment is a grandparent-scam ring, not an AI-voice prosecution \u2014 the script's stated doubt is correct"
+     "setup rewritten at Checkpoint 3 to match what this tape actually says (13 charged, 85 victims, $2.5M, Baltimore origin) rather than the unverified DOJ figures in the producer note",
+     "no AI-cloning prosecution exists; the script now says so out loud instead of implying one"
     ]
    },
    {

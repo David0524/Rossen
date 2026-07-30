@@ -78,7 +78,7 @@
   "segment_title": "A STRANGER CAN CLONE YOUR CHILD'S VOICE IN UNDER TEN SECONDS",
   "clip_role": "explainer_demo",
   "orientation": "horizontal",
-  "script_text": "ANN DICKHERBER IS A CYBERSECURITY EXPERT IN WENTZVILLE, MISSOURI. / A REPORTER ASKED HER TO PROVE HOW FAST A VOICE CAN BE STOLEN. / SO SHE TOOK A FEW SECONDS OF THAT REPORTER'S OWN VOICE. / THEN SHE MADE HIS VOICE SAY WHATEVER SHE WANTED IT TO SAY. / SHE SAYS WE ARE ALL VERY FREE WITH OUR VOICES ONLINE! / WATCH HER SHOW YOU HOW FAST IT HAPPENS... AND WATCH HIS FACE.",
+  "script_text": "FIRST ALERT 4'S LAUREN TRAGER ASKED HER TO PROVE HOW FAST A VOICE CAN BE STOLEN. / SO SHE TOOK A FEW SECONDS OF LAUREN'S OWN VOICE. / THEN SHE MADE LAUREN'S VOICE SAY WHATEVER SHE WANTED IT TO SAY. / SHE SAYS WE ARE ALL VERY FREE WITH OUR VOICES ONLINE! / WATCH HER SHOW YOU HOW FAST IT HAPPENS... AND WATCH LAUREN'S FACE.",
   "news_anchor": "Ann Dickherber Wentzville Missouri cybersecurity voice cloning demo",
   "visual_spec": "expert at laptop cloning a reporter's voice on camera, reporter's reaction in two-shot, news package",
   "platforms": [
@@ -88,8 +88,8 @@
   ],
   "offsite_likely": true,
   "priority": 2,
-  "sourcability": "none",
-  "sourcability_note": "Zero results for 'Ann Dickherber' on YouTube across 2 variants. KNOWN DEAD END: run F2_07292026 already hit this \u2014 beat F2b-b02 was rewritten off Dickherber onto Greg Bull / FOX4 Dallas to get a captioned demo. Script marks this BUTT FROM B01 (same InvestigateTV+ package), so it inherits b01's news_web-only lane. Recommend the same substitution: an on-camera voice-clone demo from a captioned affiliate.",
+  "sourcability": "high",
+  "sourcability_note": "RESOLVED at Checkpoint 3. Dickherber still returns nothing by name on YouTube, but she is inside the InvestigateTV package the script already cites, cloning reporter Lauren Trager's voice on camera at 4:28. The swap the previous run had to make is not needed. Script pronouns corrected \u2014 the cloned reporter is a woman.",
   "queries": {
    "anchor": [
     "Ann Dickherber voice cloning demo",
@@ -220,7 +220,7 @@
   "segment_title": "THINK THAT IS BAD? THIS MOM WAS ON THE PHONE FOR FIVE HOURS!!",
   "clip_role": "victim_interview",
   "orientation": "horizontal",
-  "script_text": "DEBORAH DEL MASTRO LIVES IN MARTINEZ, CALIFORNIA, OUTSIDE SAN FRANCISCO. / A MAN CALLED FROM AN UNKNOWN NUMBER ONE MORNING IN MAY AND ASKED, WHO IS THIS. / THEN HE TOLD HER A MEXICAN DRUG CARTEL HAD TAKEN HER 37 YEAR OLD DAUGHTER, SARAH. / AND HE PLAYED HER PROOF... HER DAUGHTER'S VOICE IN A FULL PANIC ATTACK. / SAYING I LOVE YOU MOM, I AM SO SORRY, I AM SO SCARED. / HE DEMANDED 20,000 DOLLARS. SHE FOLLOWED ORDERS FOR FIVE HOURS AND LOST OVER 5,000. / SARAH WAS AT WORK THE ENTIRE TIME. COMPLETELY FINE!! / THINK ABOUT WHAT YOU WOULD DO IF YOU HEARD THAT.",
+  "script_text": "DEBORAH DEL MASTRO LIVES IN MARTINEZ, CALIFORNIA, OUTSIDE SAN FRANCISCO. / A MAN CALLED FROM AN UNKNOWN NUMBER ONE MORNING IN MAY AND ASKED, WHO IS THIS. / THEN HE TOLD HER A MEXICAN DRUG CARTEL HAD TAKEN HER 37 YEAR OLD DAUGHTER, SARAH. / AND HE PLAYED HER PROOF... HER DAUGHTER'S VOICE IN A FULL PANIC ATTACK. / SAYING I LOVE YOU MOM, I AM SO SORRY, I AM SO SCARED. / HE GAVE HER ORDERS AND SHE FOLLOWED THEM FOR FIVE HOURS... WIRING 5,400 DOLLARS TO MEXICO. / SARAH WAS AT WORK THE ENTIRE TIME. COMPLETELY FINE!! / THINK ABOUT WHAT YOU WOULD DO IF YOU HEARD THAT.",
   "news_anchor": "Deborah Del Mastro Martinez California cartel kidnapping AI voice scam $20,000",
   "visual_spec": "older woman on camera at home, Bay Area affiliate interview setup, lower-third",
   "platforms": [
@@ -293,8 +293,8 @@
   "segment_title": "THE WOMAN CHASING THESE GUYS CALLS THIS A SCAMDEMIC",
   "clip_role": "explainer_demo",
   "orientation": "horizontal",
-  "script_text": "ERIN WEST RUNS AN ORGANIZATION CALLED OPERATION SHAMROCK THAT FIGHTS THIS INDUSTRY. / SHE SAYS A FEW SECONDS OF YOUR VOICE PRODUCES SOMETHING THAT SOUNDS EXACTLY LIKE YOU. / AND SHE GIVES YOU THE CLEANEST TEST OUT THERE FOR ANY SCAM CALL. / ANXIETY... PLUS IMMEDIATE ACTION... PLUS MOVING MONEY. / YOU GET ALL THREE AT ONCE, IT IS A SCAM. EVERY TIME!! / LET HER EXPLAIN WHY SHE THINKS THIS ONLY GETS WORSE FROM HERE.",
-  "news_anchor": "Erin West Operation Shamrock scamdemic anxiety action money test",
+  "script_text": "ERIN WEST IS A FORMER PROSECUTOR WHO RUNS OPERATION SHAMROCK AND FIGHTS THIS INDUSTRY FULL TIME. / SHE JUST TESTIFIED ABOUT ALL OF THIS IN FRONT OF CONGRESS. / SHE SAYS THESE ARE NOT A PILE OF SEPARATE SCAMS. IT IS ONE GLOBAL CRIMINAL ECONOMY. / AND SHE TOLD CONGRESS ABOUT VICTIMS WHO HAD TO BUILD THEIR OWN CASES, BECAUSE NOBODY ELSE WOULD. / A PARALEGAL IN WISCONSIN TRACKED DOWN FOUR SUSPECTS HERSELF!! / LISTEN TO THE QUESTION SHE SAYS THIS COUNTRY HAS TO ANSWER.",
+  "news_anchor": "Erin West Operation Shamrock House Select Committee testimony scamdemic victims solve their own crimes",
   "visual_spec": "Erin West on camera, interview or testimony framing, named lower-third",
   "platforms": [
    "youtube",
@@ -303,7 +303,7 @@
   ],
   "priority": 2,
   "sourcability": "high",
-  "sourcability_note": "Strong captioned YouTube presence: Operation Shamrock's own channel, House Select Committee on China testimony (4vLlIbdwNhY), AARP Maine, Asset Reality podcast. Script marks BUTT FROM B04 (same ABC7 package), but ABC7 has no captions and West has captioned standalone sources \u2014 grade both lanes.",
+  "sourcability_note": "REWRITTEN at Checkpoint 3. The original beat attributed two claims to Erin West that appear in none of five graded sources (~2.5h of transcript, zero hits for anxiety/clone/cloning). Rewritten onto her sworn House Select Committee testimony, which is captioned and lands on 'I call it the scamdemic' \u2014 the word the segment header promises. The three-signal test moved to Jeff's protect-yourself block as his own line rather than a quote.",
   "queries": {
    "anchor": [
     "Erin West Operation Shamrock scamdemic",
@@ -507,7 +507,7 @@
   "segment_title": "AND THEN A WHOLE STATE TREASURY GOT BURIED IN PHONE CALLS!!",
   "clip_role": "authority_report",
   "orientation": "horizontal",
-  "script_text": "VIRGINIA'S TREASURY SAID THE FLOOD OF CLAIMS WAS DIRECTLY BECAUSE OF TIKTOK. / BRADLEY EARL RUNS THEIR UNCLAIMED PROPERTY DIVISION AND WATCHED IT HAPPEN. / THEIR FAST TRACK NUMBERS JUMPED INTO THE TRIPLE DIGITS IN A SINGLE WEEK. / VIRGINIA SAYS AN APPROVED CLAIM CAN PAY OUT IN ABOUT TEN DAYS. / THEIR SEARCH SITE IS VAMONEYSEARCH.GOV IF YOU EVER LIVED THERE. / HERE YOU CAN SEE WHAT HAPPENS WHEN A WHOLE STATE FINDS OUT AT ONCE.",
+  "script_text": "WHEN THIS FIRST BLEW UP, VIRGINIA'S TREASURY SAID THE FLOOD OF CLAIMS CAME STRAIGHT FROM TIKTOK. / BRADLEY EARL RUNS THEIR UNCLAIMED PROPERTY DIVISION AND WATCHED IT HAPPEN. / THEIR FAST TRACK NUMBERS JUMPED INTO THE TRIPLE DIGITS IN A SINGLE WEEK. / THAT YEAR THEY PAID OUT A RECORD 46 MILLION DOLLARS ON 50,000 CLAIMS... DOUBLE THE YEAR BEFORE. / AND VIRGINIA SAYS AN APPROVED CLAIM CAN PAY OUT IN ABOUT TEN DAYS. / THEIR SEARCH SITE IS VAMONEYSEARCH.GOV IF YOU EVER LIVED THERE. / HERE YOU CAN SEE WHAT HAPPENS WHEN A WHOLE STATE FINDS OUT AT ONCE.",
   "news_anchor": "Virginia treasury unclaimed property flooded TikTok Bradley Earl FOX 5 DC",
   "visual_spec": "treasury official on camera in office, b-roll of claims processing, affiliate news package",
   "platforms": [
@@ -576,22 +576,20 @@
   "beat_id": "F2c-b09",
   "segment_title": "BUT THERE IS A CATCH AND I WILL NOT PRETEND THERE ISN'T",
   "clip_role": "victim_interview",
-  "orientation": "vertical",
+  "orientation": "horizontal",
   "script_text": "SOMETIMES THE STATE AGREES THE MONEY IS YOURS AND STILL WILL NOT RELEASE IT!! / SUSAN UDVANCE HAD 19,379 DOLLARS WAITING AT THE ILLINOIS TREASURER'S OFFICE. / IT WAS ESCROW SHE LEFT BEHIND ON A CANCELED WEST LOOP REAL ESTATE DEAL. / SHE SENT IN HER TAXES, HER SOCIAL SECURITY CARD, HER MARRIAGE CERTIFICATE. / BUT THE STATE WANTS SIGNATURES FROM THE OTHER TWO COMPANIES IN THAT DEAL. / AND BOTH OF THOSE COMPANIES ARE NOW DEFUNCT. / THE TREASURER'S OFFICE ADMITTED THE MONEY IS HERS AND STILL WOULD NOT HAND IT OVER!! / HEAR WHAT SHE WAS TOLD SHE HAS TO DO TO GET IT.",
   "news_anchor": "Susan Udvance Illinois treasurer I-CASH $19,379 unclaimed escrow ABC7 Chicago I-Team",
   "visual_spec": "woman on camera with paperwork, I-Team interview setup; vertical social cut of the same package",
   "platforms": [
-   "tiktok",
-   "shorts",
    "news_web",
-   "youtube"
+   "youtube",
+   "shorts"
   ],
   "offsite_likely": true,
   "priority": 1,
-  "orientation_decision_pending": true,
-  "orientation_note": "Script carries an explicit producer DECIDE: the ABC7 Chicago TikTok cut is vertical, the original I-Team package is horizontal. Orientation typed VERTICAL, so vertical is the routing default, but both lanes are harvested because the producer left the call open. This is the one beat where the orientation hard filter is deliberately relaxed, on the script's own instruction.",
-  "sourcability": "commentary_only",
-  "sourcability_note": "Zero YouTube results for 'Susan Udvance' (2 variants, retried). ABC7 Chicago I-Team publishes investigative packages to abc7chicago.com and a vertical cut to social; neither is a captioned YouTube upload. Brave news_web + TikTok legs are the coverage here. Expect LOCATED, not PICK.",
+  "orientation_note": "RESOLVED at Checkpoint 3 to HORIZONTAL. The script's DECIDE marker left the call open between the ABC7 Chicago vertical social cut and the original I-Team package; the I-Team package is the one that actually carries the story, and it is horizontal.",
+  "sourcability": "high",
+  "sourcability_note": "LOCATED at Checkpoint 3. Found by plain web search on the first result after both the Brave video endpoint and YouTube returned nothing across 817 candidates: ABC7 Chicago I-Team, Jason Knowles, 01-28-2025, $19,379, West Loop escrow, two defunct co-signers. news_web only, no caption track \u2014 manual pull.",
   "queries": {
    "anchor": [
     "Susan Udvance Illinois unclaimed property",
@@ -623,15 +621,6 @@
    ]
   },
   "platform_map": {
-   "tiktok": [
-    "platform",
-    "victim",
-    "anchor"
-   ],
-   "shorts": [
-    "shorts",
-    "platform"
-   ],
    "news_web": [
     "anchor",
     "news",
@@ -640,12 +629,16 @@
    "youtube": [
     "anchor",
     "news"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
    ]
   },
   "shorts_search": {
    "suffix": "#shorts",
    "match_filter": "duration < 60",
-   "surfaced_for": "vertical"
+   "surfaced_for": "horizontal"
   },
   "episode": "08-12",
   "expected_segments": 1,
@@ -653,22 +646,20 @@
  },
  {
   "beat_id": "F2c-b10",
-  "segment_title": "AND GRANDPARENTS ARE THE NUMBER ONE TARGET IN THIS COUNTRY",
+  "segment_title": "SO DOES ANYBODY EVER GET CAUGHT? SOMETIMES, YES!!",
   "clip_role": "confrontation_bust",
   "orientation": "horizontal",
-  "script_text": "(((DECIDE - DO WE ADD A BUST BEAT HERE? THERE IS NO CONFIRMED A-I VOICE CLONING PROSECUTION ON VIDEO. CLOSEST IS A SEPT 2025 DOJ GRANDPARENT-SCAM INDICTMENT, 13 CHARGED, 5 MILLION, FIVE STATES - NOT THE A-I ANGLE. PRODUCER TO CONFIRM OR WE DROP IT.))) / Preceding block: THE F-B-I SAYS AMERICANS OVER 60 REPORTED ROUGHLY 7.7 BILLION DOLLARS IN LOSSES LAST YEAR. THAT IS UP 59 PERCENT IN A SINGLE YEAR!!",
-  "news_anchor": "DOJ grandparent scam indictment 13 charged $5 million five states September 2025",
+  "script_text": "NOBODY HAS BEEN PROSECUTED YET FOR CLONING A CHILD'S VOICE. NOT ONE CASE ANYWHERE. / BUT THE RINGS THAT MOVE THE MONEY? THOSE DO GET BUSTED. / THE F-B-I SPENT FIVE YEARS ON ONE OF THEM. / IT STARTED WITH PACKAGES GOING TO EMPTY HOUSES IN BALTIMORE. / THIRTEEN PEOPLE CHARGED. EIGHTY-FIVE VICTIMS. TWO AND A HALF MILLION DOLLARS. / AND ONE OF THOSE VICTIMS WAS HIT WITH A REPLICATED VOICE. / HERE IS WHAT THE AGENTS SAID WHEN THEY FINALLY CONNECTED IT ALL.",
+  "news_anchor": "FBI Baltimore grandparent scam 13 charged 85 victims $2.5 million replicated voice",
   "visual_spec": "DOJ or US Attorney press conference podium, or perp-walk / arrest b-roll, news package",
   "platforms": [
    "youtube",
    "news_web",
    "shorts"
   ],
-  "priority": 3,
-  "status": "producer_gated",
-  "status_note": "No PLAY CLIP marker \u2014 this is the script's own DECIDE block. Harvested so the producer has candidates in hand when they rule, but it does not enter the show until approved. If dropped, the beat is DROPPED, not EMPTY.",
+  "priority": 2,
   "sourcability": "high",
-  "sourcability_note": "The DOJ grandparent-scam indictment is well covered and captioned: CBS Boston OxRedGsy-Ug '13 charged with scamming hundreds of grandparents | Full news conference' (1074s) matches the script's note exactly. Caveat the script already states: it is the grandparent-scam angle, not the AI-voice angle, so the fit gate is the real risk, not sourcability.",
+  "sourcability_note": "APPROVED at Checkpoint 3 and given a real PLAY CLIP marker. The producer note asked whether to add a bust beat given no AI-cloning prosecution exists. It does not exist \u2014 CBS Boston has an official saying so outright at 10:02 \u2014 so the setup now says that out loud and runs the money-ring bust instead. Figures rewritten off the WJZ tape (13 charged, 85 victims, $2.5M, Baltimore origin) rather than the unverified DOJ numbers in the note.",
   "queries": {
    "anchor": [
     "13 charged grandparent scam indictment DOJ",
