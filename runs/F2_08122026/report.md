@@ -3,6 +3,13 @@
 Script in: `F2_TOP_STORIES_07_30__AIRDATE_08_05_1.docx` (filename airdate stale; producer confirmed 08/12).
 Deliverable: `F2_TOP_STORIES_08122026_BIBLE_updated.docx`.
 
+The bible is the **original `.docx` edited in place**, not a regenerated document. All 431 source
+paragraphs are preserved byte-identical and in order; 37 paragraphs were inserted, every one built
+from the source's own paragraph and run properties (Arial, `w:sz 36`, `line=276 before=0 after=0`).
+Font, size and spacing are unchanged. The only added properties are `w:color` — blue `1155CC` for a
+located clip, red `C0392B` for a gap, amber `B7791F` for a caveat — and `w:u` on the eight
+hyperlinks, all of which resolve to external relationships.
+
 **Show day inferred as Wednesday, then confirmed by the producer.** Band 10–12, met.
 
 ```
