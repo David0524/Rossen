@@ -1,0 +1,32 @@
+  ok auto   LZoQ5aiVibA   218 cues     443s  InvestigateTV
+  ok manual ruNDY0OBpg4   351 cues     538s  CNN
+  ok auto   84gYLF2r2lo    87 cues     207s  KSDK News
+  ok auto   y2vwV1XhLN8    71 cues     143s  KSDK News
+  ok auto   yxFMjTaiLOY    88 cues     191s  Good Morning America
+  ok auto   U7pT99zQAhc   112 cues     244s  ABC7 News Bay Area
+  ok auto   Jes1WTv1ke0    85 cues     159s  WPXI-TV Pittsburgh
+  ok auto   qn9N9KQHY1s    54 cues     120s  ABC7
+  ok auto   xh_5ryQODZc    47 cues     106s  ABC 7 Chicago
+  ok auto   FWrt7EMH8KI   112 cues     255s  Arizona's Family (3TV/CBS5)
+  ok auto   qkFC6xgBQCI    55 cues     120s  DanRH Drum Channel
+  ok auto   4vLlIbdwNhY   135 cues     317s  The Select Committee on China
+  ok auto   N0QwVkN0tDY   430 cues    1129s  Operation Shamrock
+  ok auto   ngvdrDuaNRs    29 cues      75s  Chainalysis
+  ok auto   kh4ucNfKr9c  1815 cues    3774s  Asset Reality
+  ok auto   Na9EvGe7hg8  1394 cues    3487s  AARPMaine
+  ok auto   BpFMz_qE-Eo    68 cues     136s  KSHB 41
+  NULL     PIjb21ahu4w  KMBC 9
+  ok auto   C2J_wnqMlIo    59 cues     146s  FOX 5 Washington DC
+  ok auto   xk1bXTXbsbg    91 cues     232s  ABC 7 News - WJLA
+  ok auto   -9usnea9ToE   219 cues     487s  WTKR News 3
+  ok auto   WyPHkNcAYWM   287 cues     611s  FOX 32 Chicago
+  ok auto   zjX1K7Cv64M   135 cues     249s  Local 4 News WHBF
+  ok auto   OxRedGsy-Ug   450 cues    1075s  CBS Boston
+  ok auto   KzMxcmF5ng4    65 cues     143s  WJZ
+  NULL     oF0Z-W4CUpI  KFOR Oklahoma's News 4
+  ok auto   msFwnkXF-T0    75 cues     169s  WCAX-TV
+ERROR: [youtube] 7uB0tMldnlo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+caption lookup failed for 7uB0tMldnlo: ERROR: [youtube] 7uB0tMldnlo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+  NULL     7uB0tMldnlo  WFMY News 2
+
+25 ok / 3 null / 14 non-youtube

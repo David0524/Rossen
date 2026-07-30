@@ -1,0 +1,136 @@
+[
+ {
+  "beat_id": "F2c-b08",
+  "segment_title": "AND THEN A WHOLE STATE TREASURY GOT BURIED IN PHONE CALLS!!",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "script_text": "VIRGINIA'S TREASURY SAID THE FLOOD OF CLAIMS WAS DIRECTLY BECAUSE OF TIKTOK. / BRADLEY EARL RUNS THEIR UNCLAIMED PROPERTY DIVISION AND WATCHED IT HAPPEN. / THEIR FAST TRACK NUMBERS JUMPED INTO THE TRIPLE DIGITS IN A SINGLE WEEK. / VIRGINIA SAYS AN APPROVED CLAIM CAN PAY OUT IN ABOUT TEN DAYS. / THEIR SEARCH SITE IS VAMONEYSEARCH.GOV IF YOU EVER LIVED THERE. / HERE YOU CAN SEE WHAT HAPPENS WHEN A WHOLE STATE FINDS OUT AT ONCE.",
+  "news_anchor": "Virginia treasury unclaimed property flooded TikTok Bradley Earl FOX 5 DC",
+  "visual_spec": "treasury official on camera in office, b-roll of claims processing, affiliate news package",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "priority": 2,
+  "sourcability": "high",
+  "sourcability_note": "Exact named source found on YouTube in the scan: FOX 5 Washington DC C2J_wnqMlIo, \"Virginia's treasury flooded with unclaimed money requests, thanks to TikTok\", 144s. Captioned affiliate, matches the script's cited outlet. Strongest-sourced beat in the episode.",
+  "queries": {
+   "anchor": [
+    "Virginia's treasury flooded with unclaimed money requests thanks to TikTok",
+    "FOX 5 DC Virginia treasury unclaimed money TikTok",
+    "Bradley Earl unclaimed property Virginia interview"
+   ],
+   "news": [
+    "Virginia treasury unclaimed money requests TikTok fox 5",
+    "Virginia unclaimed property fast track claims surge"
+   ],
+   "victim": [
+    "I found money on the Virginia treasury site"
+   ],
+   "platform": [
+    "virginia unclaimed money tiktok"
+   ],
+   "shorts": [
+    "#unclaimedmoney virginia treasury #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-12",
+  "offsite_likely": false,
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "F2c-b09",
+  "segment_title": "BUT THERE IS A CATCH AND I WILL NOT PRETEND THERE ISN'T",
+  "clip_role": "victim_interview",
+  "orientation": "vertical",
+  "script_text": "SOMETIMES THE STATE AGREES THE MONEY IS YOURS AND STILL WILL NOT RELEASE IT!! / SUSAN UDVANCE HAD 19,379 DOLLARS WAITING AT THE ILLINOIS TREASURER'S OFFICE. / IT WAS ESCROW SHE LEFT BEHIND ON A CANCELED WEST LOOP REAL ESTATE DEAL. / SHE SENT IN HER TAXES, HER SOCIAL SECURITY CARD, HER MARRIAGE CERTIFICATE. / BUT THE STATE WANTS SIGNATURES FROM THE OTHER TWO COMPANIES IN THAT DEAL. / AND BOTH OF THOSE COMPANIES ARE NOW DEFUNCT. / THE TREASURER'S OFFICE ADMITTED THE MONEY IS HERS AND STILL WOULD NOT HAND IT OVER!! / HEAR WHAT SHE WAS TOLD SHE HAS TO DO TO GET IT.",
+  "news_anchor": "Susan Udvance Illinois treasurer I-CASH $19,379 unclaimed escrow ABC7 Chicago I-Team",
+  "visual_spec": "woman on camera with paperwork, I-Team interview setup; vertical social cut of the same package",
+  "platforms": [
+   "tiktok",
+   "shorts",
+   "news_web",
+   "youtube"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "orientation_decision_pending": true,
+  "orientation_note": "Script carries an explicit producer DECIDE: the ABC7 Chicago TikTok cut is vertical, the original I-Team package is horizontal. Orientation typed VERTICAL, so vertical is the routing default, but both lanes are harvested because the producer left the call open. This is the one beat where the orientation hard filter is deliberately relaxed, on the script's own instruction.",
+  "sourcability": "commentary_only",
+  "sourcability_note": "Zero YouTube results for 'Susan Udvance' (2 variants, retried). ABC7 Chicago I-Team publishes investigative packages to abc7chicago.com and a vertical cut to social; neither is a captioned YouTube upload. Brave news_web + TikTok legs are the coverage here. Expect LOCATED, not PICK.",
+  "queries": {
+   "anchor": [
+    "Susan Udvance",
+    "Susan Udvance Illinois",
+    "Udvance unclaimed property Illinois treasurer",
+    "Illinois treasurer $19,379 unclaimed escrow West Loop"
+   ],
+   "news": [
+    "woman denied her own unclaimed money Illinois treasurer defunct companies",
+    "ABC7 Chicago I-Team unclaimed property claim denied escrow",
+    "Illinois I-Cash claim blocked signatures companies out of business"
+   ],
+   "victim": [
+    "the state says the money is mine but won't release it",
+    "both companies are out of business and they still want signatures"
+   ],
+   "platform": [
+    "illinois unclaimed money claim denied",
+    "i-cash claim problem"
+   ],
+   "shorts": [
+    "#unclaimedmoney illinois won't pay her #shorts"
+   ]
+  },
+  "platform_map": {
+   "tiktok": [
+    "platform",
+    "victim",
+    "anchor"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ],
+   "youtube": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "vertical"
+  },
+  "episode": "08-12",
+  "expected_segments": 1,
+  "source_native": "none"
+ }
+]

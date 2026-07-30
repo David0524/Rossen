@@ -70,7 +70,7 @@
    "match_filter": "duration < 60",
    "surfaced_for": "horizontal"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "source_native": "none"
  },
  {
@@ -139,7 +139,7 @@
    "match_filter": "duration < 60",
    "surfaced_for": "horizontal"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "expected_segments": 1,
   "source_native": "none"
  },
@@ -211,7 +211,7 @@
    "match_filter": "duration < 60",
    "surfaced_for": "horizontal"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "expected_segments": 1,
   "source_native": "none"
  },
@@ -285,7 +285,7 @@
    "match_filter": "duration < 60",
    "surfaced_for": "horizontal"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "source_native": "none"
  },
  {
@@ -353,7 +353,7 @@
    "match_filter": "duration < 60",
    "surfaced_for": "horizontal"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "offsite_likely": false,
   "expected_segments": 1,
   "source_native": "none"
@@ -425,7 +425,7 @@
    "match_filter": "duration < 60",
    "surfaced_for": "horizontal"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "expected_segments": 1,
   "source_native": "none"
  },
@@ -499,7 +499,7 @@
    "match_filter": "duration < 60",
    "surfaced_for": "vertical"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "expected_segments": 1
  },
  {
@@ -567,7 +567,7 @@
    "match_filter": "duration < 60",
    "surfaced_for": "horizontal"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "offsite_likely": false,
   "expected_segments": 1,
   "source_native": "none"
@@ -647,7 +647,7 @@
    "match_filter": "duration < 60",
    "surfaced_for": "vertical"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "expected_segments": 1,
   "source_native": "none"
  },
@@ -717,36 +717,82 @@
    "match_filter": "duration < 60",
    "surfaced_for": "horizontal"
   },
-  "episode": "08-05",
+  "episode": "08-12",
   "offsite_likely": false,
   "expected_segments": 1,
   "source_native": "none"
  },
  {
-  "beat_id": "F2c-b11",
-  "segment_title": "SO LET'S GO FIND YOURS \u2014 DO THIS WITH ME RIGHT NOW!!",
-  "clip_role": "other",
-  "role_note": "Live screen share, not a clip roll. Jeff walks missingmoney.com on camera in the studio.",
+  "beat_id": "F2c-b09H",
+  "segment_title": "BUT THERE IS A CATCH AND I WILL NOT PRETEND THERE ISN'T",
+  "clip_role": "victim_interview",
   "orientation": "horizontal",
-  "script_text": "(((JEFF SCREEN SHARE))) / START AT MISSINGMONEY.COM. THAT IS THE FREE SEARCH NAUPA RUNS. / TYPE IN YOUR LAST NAME AND YOUR STATE. THAT IS IT. NO ACCOUNT NEEDED. / IT CHECKS ALMOST EVERY STATE AT ONCE... HAWAII RUNS ITS OWN SYSTEM. / NOW SEARCH YOUR OWN STATE'S SITE TOO... GO TO UNCLAIMED.ORG FOR THE OFFICIAL LINK TO ANY STATE. / (((END SCREENSHARE))) / (((JEFF - DO YOU WANT TO SEARCH A VIEWER NAME OUT OF THE CHAT LIVE HERE?)))",
-  "news_anchor": "missingmoney.com NAUPA free unclaimed property search",
-  "visual_spec": "Jeff at the desk, browser full-screen on missingmoney.com, live typing",
-  "platforms": [],
-  "priority": 3,
-  "status": "show_produced",
-  "status_note": "SHOW-PRODUCED. No search lane, no clip to source \u2014 production task, not a pipeline task. Logged so the yield record is complete. Outcome is SHOW-PRODUCED, never EMPTY.",
-  "sourcability": "n/a",
-  "sourcability_note": "Show produces this live. Nothing to harvest.",
+  "script_text": "SOMETIMES THE STATE AGREES THE MONEY IS YOURS AND STILL WILL NOT RELEASE IT!! / SUSAN UDVANCE HAD 19,379 DOLLARS WAITING AT THE ILLINOIS TREASURER'S OFFICE. / IT WAS ESCROW SHE LEFT BEHIND ON A CANCELED WEST LOOP REAL ESTATE DEAL. / SHE SENT IN HER TAXES, HER SOCIAL SECURITY CARD, HER MARRIAGE CERTIFICATE. / BUT THE STATE WANTS SIGNATURES FROM THE OTHER TWO COMPANIES IN THAT DEAL. / AND BOTH OF THOSE COMPANIES ARE NOW DEFUNCT. / THE TREASURER'S OFFICE ADMITTED THE MONEY IS HERS AND STILL WOULD NOT HAND IT OVER!! / HEAR WHAT SHE WAS TOLD SHE HAS TO DO TO GET IT.",
+  "news_anchor": "Susan Udvance Illinois treasurer I-CASH $19,379 unclaimed escrow ABC7 Chicago I-Team",
+  "visual_spec": "woman on camera with paperwork, I-Team interview setup; vertical social cut of the same package",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "orientation_decision_pending": true,
+  "orientation_note": "Script carries an explicit producer DECIDE: the ABC7 Chicago TikTok cut is vertical, the original I-Team package is horizontal. Orientation typed VERTICAL, so vertical is the routing default, but both lanes are harvested because the producer left the call open. This is the one beat where the orientation hard filter is deliberately relaxed, on the script's own instruction.",
+  "sourcability": "commentary_only",
+  "sourcability_note": "Zero YouTube results for 'Susan Udvance' (2 variants, retried). ABC7 Chicago I-Team publishes investigative packages to abc7chicago.com and a vertical cut to social; neither is a captioned YouTube upload. Brave news_web + TikTok legs are the coverage here. Expect LOCATED, not PICK.",
   "queries": {
-   "anchor": [],
-   "news": [],
-   "victim": [],
-   "platform": [],
-   "shorts": []
+   "anchor": [
+    "Susan Udvance Illinois unclaimed property",
+    "Illinois treasurer I-CASH $19,379 escrow claim denied",
+    "ABC7 Chicago I-Team unclaimed property defunct companies",
+    "Illinois I-CASH claim blocked defunct company"
+   ],
+   "news": [
+    "woman cannot claim her own unclaimed money from the state",
+    "state admits money is hers but will not release it",
+    "unclaimed property claim denied signatures defunct company",
+    "Illinois treasurer unclaimed money red tape investigation"
+   ],
+   "victim": [
+    "they told me the money is mine and I still can't get it",
+    "I sent them everything and they still said no",
+    "the companies don't even exist anymore"
+   ],
+   "platform": [
+    "#unclaimedmoney claim denied",
+    "state won't give me my money",
+    "i-cash illinois claim problem"
+   ],
+   "shorts": [
+    "#unclaimedmoney they won't release it",
+    "the state admits it's her money #shorts",
+    "#unclaimedmoney 19 thousand stuck",
+    "she can't get her own money #scam"
+   ]
   },
-  "platform_map": {},
-  "episode": "08-05",
-  "offsite_likely": false,
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-12",
   "expected_segments": 1,
   "source_native": "none"
  }

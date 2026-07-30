@@ -1,0 +1,72 @@
+[
+ {
+  "beat_id": "F2c-b04",
+  "segment_title": "THINK THAT IS BAD? THIS MOM WAS ON THE PHONE FOR FIVE HOURS!!",
+  "clip_role": "victim_interview",
+  "orientation": "horizontal",
+  "script_text": "DEBORAH DEL MASTRO LIVES IN MARTINEZ, CALIFORNIA, OUTSIDE SAN FRANCISCO. / A MAN CALLED FROM AN UNKNOWN NUMBER ONE MORNING IN MAY AND ASKED, WHO IS THIS. / THEN HE TOLD HER A MEXICAN DRUG CARTEL HAD TAKEN HER 37 YEAR OLD DAUGHTER, SARAH. / AND HE PLAYED HER PROOF... HER DAUGHTER'S VOICE IN A FULL PANIC ATTACK. / SAYING I LOVE YOU MOM, I AM SO SORRY, I AM SO SCARED. / HE DEMANDED 20,000 DOLLARS. SHE FOLLOWED ORDERS FOR FIVE HOURS AND LOST OVER 5,000. / SARAH WAS AT WORK THE ENTIRE TIME. COMPLETELY FINE!! / THINK ABOUT WHAT YOU WOULD DO IF YOU HEARD THAT.",
+  "news_anchor": "Deborah Del Mastro Martinez California cartel kidnapping AI voice scam $20,000",
+  "visual_spec": "older woman on camera at home, Bay Area affiliate interview setup, lower-third",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "Named case confirmed. Run F2_07292026 located it on abc7news.com (KGO) as news_web with no captioned YouTube twin. YouTube surface today is a GMA repost on an unrelated drum channel (qkFC6xgBQCI) \u2014 aggregator, fails the repost/clearance filter. Expect news_web to carry the pick again; ABC News Nightline PG2-6NOIaIY is a captioned national alternative worth grading.",
+  "queries": {
+   "anchor": [
+    "Deborah Del Mastro",
+    "Deborah Del Mastro scam",
+    "Deborah Del Mastro AI voice",
+    "Del Mastro Martinez California AI kidnapping scam",
+    "Martinez California mom AI voice kidnapping scam"
+   ],
+   "news": [
+    "Bay Area mom AI voice fake kidnapping cartel daughter",
+    "East Bay woman scammed AI cloned daughter voice",
+    "mom loses thousands kidnap scammers AI mimic daughter voice",
+    "Navy veteran mom AI kidnapping scam California"
+   ],
+   "victim": [
+    "they played my daughter's voice screaming",
+    "he said the cartel had my daughter",
+    "I was on the phone for five hours"
+   ],
+   "platform": [
+    "fake cartel kidnapping scam mom",
+    "AI kidnapping scam bay area"
+   ],
+   "shorts": [
+    "#scamalert fake cartel kidnapping",
+    "she heard her daughter screaming #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "08-12",
+  "source_native": "none"
+ }
+]
