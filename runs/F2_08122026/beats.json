@@ -290,12 +290,12 @@
  },
  {
   "beat_id": "F2c-b05",
-  "segment_title": "THE WOMAN CHASING THESE GUYS CALLS THIS A SCAMDEMIC",
+  "segment_title": "SO WHY DIDN'T THEY JUST HANG UP? HERE IS THE REAL ANSWER",
   "clip_role": "explainer_demo",
   "orientation": "horizontal",
-  "script_text": "ERIN WEST IS A FORMER PROSECUTOR WHO RUNS OPERATION SHAMROCK AND FIGHTS THIS INDUSTRY FULL TIME. / SHE JUST TESTIFIED ABOUT ALL OF THIS IN FRONT OF CONGRESS. / SHE SAYS THESE ARE NOT A PILE OF SEPARATE SCAMS. IT IS ONE GLOBAL CRIMINAL ECONOMY. / AND SHE TOLD CONGRESS ABOUT VICTIMS WHO HAD TO BUILD THEIR OWN CASES, BECAUSE NOBODY ELSE WOULD. / A PARALEGAL IN WISCONSIN TRACKED DOWN FOUR SUSPECTS HERSELF!! / LISTEN TO THE QUESTION SHE SAYS THIS COUNTRY HAS TO ANSWER.",
-  "news_anchor": "Erin West Operation Shamrock House Select Committee testimony scamdemic victims solve their own crimes",
-  "visual_spec": "Erin West on camera, interview or testimony framing, named lower-third",
+  "script_text": "YOU ARE SITTING THERE RIGHT NOW THINKING YOU WOULD NEVER FALL FOR THIS. / CHRIS VOSS WAS THE F-B-I'S LEAD INTERNATIONAL KIDNAPPING NEGOTIATOR. / HE SAYS THESE GUYS KNOW IN THE FIRST TEN SECONDS WHETHER THEY HAVE GOT YOU. / AND ONCE THEY DO, SOMETHING PHYSICALLY CHANGES IN YOUR BRAIN. / YOU STOP BEING ABLE TO THINK STRAIGHT. THAT IS NOT STUPIDITY, THAT IS CHEMISTRY!! / HE SAYS THEY CAN ONLY HOLD YOU IN THAT STATE ABOUT AN HOUR AND A HALF. / RACHEL WAS ON FOR TWO HOURS. DEBORAH WAS ON FOR FIVE!! / LISTEN TO HIM EXPLAIN WHAT IS ACTUALLY HAPPENING TO YOU ON THAT CALL.",
+  "news_anchor": "Chris Voss FBI lead kidnapping negotiator virtual kidnapping how it works",
+  "visual_spec": "former FBI negotiator in interview setup intercut with victim recounting the call, news-magazine package",
   "platforms": [
    "youtube",
    "news_web",
@@ -303,7 +303,7 @@
   ],
   "priority": 2,
   "sourcability": "high",
-  "sourcability_note": "REWRITTEN at Checkpoint 3. The original beat attributed two claims to Erin West that appear in none of five graded sources (~2.5h of transcript, zero hits for anxiety/clone/cloning). Rewritten onto her sworn House Select Committee testimony, which is captioned and lands on 'I call it the scamdemic' \u2014 the word the segment header promises. The three-signal test moved to Jeff's protect-yourself block as his own line rather than a quote.",
+  "sourcability_note": "REPLACED on producer note that Erin West plays boring. Diagnosis was topical, not delivery: Operation Shamrock works Southeast Asian pig-butchering compounds while this segment's two victims both wired to Mexico, so once her unsourceable voice-clone quotes were removed the beat had no reason to exist. Swapped to Chris Voss, former FBI lead international kidnapping negotiator, on virtual kidnapping specifically \u2014 the actual crime in this segment.",
   "queries": {
    "anchor": [
     "Erin West Operation Shamrock scamdemic",

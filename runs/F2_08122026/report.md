@@ -10,9 +10,9 @@ see "Checkpoint 3 resolutions" below. Two beats moved as a result: b05 EMPTY→P
 The run ends with **no empty beats.**
 
 ```
-Source mix, 10 located beats:  affiliate 7 · network 1 · creator_long 1 · creator_short 1
+Source mix, 10 located beats:  affiliate 7 · network 2 · creator_short 1
 Outcomes, 11 beats:  7 PICK · 3 LOCATED · 1 SHOW-PRODUCED · 0 EMPTY
-9 segments, every outcue verified verbatim against the caption track
+10 segments, every outcue verified verbatim against the caption track
 ```
 
 ## Beat table
@@ -23,7 +23,7 @@ Outcomes, 11 beats:  7 PICK · 3 LOCATED · 1 SHOW-PRODUCED · 0 EMPTY
 | b02 | explainer_demo | H | 2 | **PICK** | InvestigateTV (YT) | 4:01–4:50 | "frightening how quick that happened." |
 | b03 | victim_interview | H | 2 | **PICK** | InvestigateTV (YT) | 5:11–5:41 | "to be punished for what they did." |
 | b04 | victim_interview | H | 1 | **PICK** | ABC7 / ABC News (YT) | 0:10–1:03 · 1:19–1:48 | "was a scam. The money was gone. With AI," · "scam your money." |
-| b05 | explainer_demo | H | 2 | **PICK** | House Select Cmte (YT) | 2:02–2:47 | "scamdemic." |
+| b05 | explainer_demo | H | 2 | **PICK** | Crime Watch Daily (YT) | 2:48–3:21 · 3:53–4:15 | "hour, hour and a half. And it wasn't" · "pretty good money. Yep. Easy money." |
 | b06 | authority_report | H | 2 | **LOCATED** | KMBC 9 (news_web) | manual | no captions |
 | b07 | explainer_demo/short | V | 1 | **LOCATED** | @pearlmania500 (TikTok) | manual | UNVERIFIED |
 | b08 | authority_report | H | 2 | **PICK** | FOX 5 DC (YT) | 1:03–1:59 | "time through that fast track program" |
@@ -44,14 +44,38 @@ The other two numbers *did* check out — ABC7: *"Del Mastro followed the caller
 **five hours**"*, and Sarah's age of 37 — so the five-hour hook stands. Line now reads "HE GAVE HER
 ORDERS AND SHE FOLLOWED THEM FOR FIVE HOURS... WIRING 5,400 DOLLARS TO MEXICO."
 
-**3. b05 — rewritten, and it is now a PICK.** Erin West says neither thing the script had her saying.
-Rather than cut the beat, I moved it onto what she actually said under oath to the House Select
-Committee: Mary, the Wisconsin paralegal who built her own case after law enforcement would not help,
-then *"Why in the United States in 2026 are victims having to solve their own crimes?"*, landing on
-*"I call it the scamdemic"* — the exact word the segment header promises. This is a better beat than
-the original: it reinforces b03 (Rachel asked what authorities did: *"Zero. Nothing."*) instead of
-sitting beside it. The anxiety/action/money test was genuinely useful, so it moved into Jeff's
-protect-yourself block as his own line rather than a quote nobody said.
+**3. b05 — rewritten twice, and the second pass is the real fix.** Erin West says neither thing the
+script had her saying. The first rewrite moved her onto her House Select Committee testimony, which was
+accurate and sourced and — as the producer put it — boring. That note was right, and the diagnosis was
+not her delivery. **It was topical.** Operation Shamrock works Southeast Asian pig-butchering compounds;
+Rachel and Del Mastro both wired to **Mexico**. Once the unsourceable voice-clone quotes came out, there
+was no reason for her to be in this show at all, and a witness reading a prepared statement is what an
+off-topic beat looks like on camera.
+
+Replaced with **Chris Voss, the FBI's former lead international kidnapping negotiator**, on virtual
+kidnapping specifically — the actual crime in this segment. He answers the question two victim stories
+in a row leave hanging, which is the question the audience is already asking: *why didn't they just hang
+up?* His answer protects the victims from the audience's judgment, which is core Rossen tone:
+
+> "If you have an extreme enough negative emotion... there's chemical changes in your brain that
+> actually make it physically more difficult for you to think. If they convince you with their voice
+> that you are the key to their longevity, then you simply take orders."
+
+Then the detail that ties the whole segment together — they can only hold you about **an hour and a
+half**. Rachel was on for two hours. Deborah was on for five. That is now a Jeff line in the setup.
+Second segment is the economics: four or five virtual kidnappings a day, fifty to sixty thousand
+dollars for a day's work.
+
+Header changed from "THE WOMAN CHASING THESE GUYS CALLS THIS A SCAMDEMIC" to "SO WHY DIDN'T THEY JUST
+HANG UP? HERE IS THE REAL ANSWER". The anxiety/action/money test stays in Jeff's protect-yourself block
+as his own line. Two caveats carried into the doc: the package is Crime Watch Daily archive, roughly
+2017, so it predates AI voice cloning and the setup claims nothing otherwise; and it **opens graphic**
+at 0:35 — both pulls sit well clear, but do not extend the in-point without a warning.
+
+Runners-up held in reserve, both real options: KPRC 2's John Shuddell case (rejected on structure, not
+quality — a third victim story where the segment needs explanation) and KTAL's Katie Watson, who did not
+fall for it and whose piece traces the calls to Mexican prisons. If you want the segment to end on
+someone beating the scam rather than on the economics, Katie is the swap.
 
 **4. b08 recency — reframed; the ten-day claim survived.** The FOX 5 DC package is dated 2023-04-25,
 so "when this first blew up" replaces the present-tense framing. Checked the article: *"approved claims
@@ -97,11 +121,11 @@ returns nothing *by name* — but she is inside this package, cloning Trager's v
 ## Source concentration and the cheap swaps
 
 **Affiliate holds 7 of 10 located beats (70%) — right at the threshold.** The Checkpoint 3 work pulled
-the mix off a monoculture on its own: b05 came in as `creator_long` and b09 as a fourth type. Beats
+the mix off a monoculture on its own: b05 came in as `network` and b07 as `creator_short`. Beats
 where the runner-up is a different source type:
 
 - **b04** — the pick is already the non-affiliate (ABC News field package); runner-up is affiliate.
-- **b05** — pick is `creator_long`; nothing affiliate exists on this subject at all.
+- **b05** — pick is `network`; the two affiliate runners-up (KPRC, KTAL) are both live options.
 - **b01** — runner-up is CNN (`ruNDY0OBpg4`, network) but it is a *different victim*, so that is a
   script change, not a free swap.
 - **b08** — the diversity-floor promotion `@deesale00` (creator_short) was the only non-affiliate and

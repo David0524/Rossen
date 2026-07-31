@@ -42,7 +42,7 @@ b05 EMPTY->PICK (re-attributed), b09 EMPTY->LOCATED (found by plain web search).
 | F2c-b02 | explainer_demo | H | PICK | InvestigateTV LZoQ5aiVibA 4:01-4:50 "frightening how quick that happened." (Dickherber clones reporter Lauren Trager on camera — SAME package as b01, so the swap the previous run needed was NOT needed here) |
 | F2c-b03 | victim_interview | H | PICK | InvestigateTV LZoQ5aiVibA 5:11-5:41 "to be punished for what they did." (Rachel on law enforcement: "Zero. Nothing.") |
 | F2c-b04 | victim_interview | H | PICK | ABC7/ABC News qn9N9KQHY1s 0:10-1:03 + 1:19-1:48 "scam your money." (Del Mastro — LOCATED last run, upgraded to PICK by re-querying the exact name) |
-| F2c-b05 | explainer_demo | H | PICK (swap) | House Select Cmte 4vLlIbdwNhY 2:02-2:47 "scamdemic." — original attribution was unsourceable (Erin West says neither scripted line in ~2.5h of transcript); rewritten onto her sworn testimony |
+| F2c-b05 | explainer_demo | H | PICK (swap) | Crime Watch Daily w_SAFu2mfBQ 2:48-3:21 + 3:53-4:15 "pretty good money. Yep. Easy money." (Chris Voss, ex-FBI lead kidnapping negotiator). Two rewrites: Erin West's scripted lines were unsourceable, and her replacement testimony played inert because she was OFF-TOPIC (SE Asia pig butchering vs a Mexico virtual-kidnapping story) |
 | F2c-b06 | authority_report | H | LOCATED | Olathe PD child-abduction scam on KMBC/FOX4KC (news_web) 02-03-26; ZERO YouTube candidates mention Olathe at all — same verdict as F2b-b04 |
 | F2c-b07 | explainer_demo/creator_short | V | LOCATED | @pearlmania500/video/7220912200855178538 native TikTok, caption is the script's line verbatim; manual lane, outcue UNVERIFIED (no caption track, no faster-whisper) |
 | F2c-b08 | authority_report | H | PICK | FOX 5 DC C2J_wnqMlIo 1:03-1:59 "time through that fast track program" (Bradley Earl on tape; package is 2023 — script reframed to past tense) |
@@ -63,7 +63,13 @@ b05 EMPTY->PICK (re-attributed), b09 EMPTY->LOCATED (found by plain web search).
    the captioned twin existed and the first query pass just missed it.
 3. **Check attribution before writing an expert into a bible.** b05's original beat put two quotes in
    Erin West's mouth that appear in none of her footage. `explainer_demo` split entirely on this axis:
-   b02 PICK (expert already inside a cited package), b05 only salvageable by rewriting.
+   b02 PICK (expert already inside a cited package), b05 needed two rewrites.
+3b. **"The expert is boring" is usually a fit problem, not a delivery problem.** b05's first rewrite was
+   accurate, sourced and lifeless. The cause was that Erin West works Southeast Asian pig-butchering
+   compounds while both victims in the segment wired to Mexico — an adjacent expert reads as flat no
+   matter how good the tape. Swapping to an expert on the *specific* crime (ex-FBI kidnapping negotiator
+   on virtual kidnapping) fixed the energy without touching the delivery criterion. When a producer says
+   an expert is boring, re-check topical fit before hunting for livelier footage of the same person.
 4. **Vertical is still 0-for-3 on captioned picks across two runs** — b07 LOCATED (native, manual by
    rule) and b09 resolved to horizontal. The vertical lane produces links, not timecodes. Write toward
    that.

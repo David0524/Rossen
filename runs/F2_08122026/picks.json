@@ -303,87 +303,101 @@
  {
   "beat_id": "F2c-b05",
   "pass": 2,
-  "flagged": "https://www.youtube.com/watch?v=4vLlIbdwNhY",
+  "flagged": "https://www.youtube.com/watch?v=w_SAFu2mfBQ",
   "platform": "youtube",
-  "title": "Operation Shamrock's Erin West Exposes China-Linked \u201cScamdemic\u201d Draining Americans\u2019 Life Savings",
+  "title": "Crime Watch Daily: 'Virtual Kidnapping' \u2014 FBI Expert Tells How to Fight Back, Pt. 2",
   "source_mix": {
-   "creator_long": 4,
-   "creator_short": 1
+   "network": 1,
+   "creator_long": 4
   },
   "diversity_floor_applied": false,
   "ranked": [
    {
-    "url": "https://www.youtube.com/watch?v=4vLlIbdwNhY",
-    "source_type": "creator_long",
-    "score": 84,
+    "url": "https://www.youtube.com/watch?v=w_SAFu2mfBQ",
+    "source_type": "network",
+    "score": 89,
     "tone": 9,
     "authenticity": 9,
     "quality": 8,
-    "fit": 9,
+    "fit": 10,
     "segments": [
      {
-      "in": "2:02",
-      "out": "2:47",
-      "outcue": "scamdemic."
+      "in": "2:48",
+      "out": "3:21",
+      "outcue": "hour, hour and a half. And it wasn't"
+     },
+     {
+      "in": "3:53",
+      "out": "4:15",
+      "outcue": "pretty good money. Yep. Easy money."
      }
     ],
-    "reasoning": "Re-attributed at Checkpoint 3. The original beat had Erin West saying two things she never says on any sourceable tape. This segment is what she DOES say, on the record to the House Select Committee: Mary the Wisconsin paralegal who built her own case after law enforcement would not help, then 'Why in the United States in 2026 are victims having to solve their own crimes?', landing on 'I call it the scamdemic.' The outcue is the exact word the segment header promises, and the content now reinforces b03 (Rachel: 'Zero. Nothing.') instead of competing with it.",
+    "reasoning": "Chris Voss, the FBI's former lead international kidnapping negotiator, on exactly the crime this segment is about \u2014 virtual kidnapping, the scam Rachel and Del Mastro both actually hit. He answers the question the audience is asking after two victims in a row: why didn't they just hang up. 'If you have an extreme enough negative emotion... there's chemical changes in your brain that actually make it physically more difficult for you to think... then you simply take orders.' Then the detail that ties both prior beats together \u2014 they can only hold you about an hour and a half, and Rachel was on two, Deborah five. Second segment is the economics: four or five a day, fifty to sixty thousand for a day's work. Delivery is a working negotiator telling war stories, not a witness reading a statement.",
     "flags": [
-     "beat was rewritten at Checkpoint 3; the anxiety/action/money test moved to Jeff's protect-yourself block as his own line, unattributed"
+     "Crime Watch Daily archive, roughly 2017 \u2014 predates AI voice cloning, and Voss does not mention it. The mechanics he describes are unchanged; the setup is written so nothing claims otherwise.",
+     "the package OPENS graphic at 0:35 ('I have your daughter's finger... the rest of her in a body bag'). Both proposed pulls sit well clear of it, but do not extend the in-point earlier without an on-air warning.",
+     "optional third pull at 4:16-4:36 \u2014 Voss on hanging up \u2014 if the producer wants him reinforcing the protect-yourself block instead of Jeff reading it alone"
     ]
    },
    {
-    "url": "https://www.youtube.com/watch?v=N0QwVkN0tDY",
+    "url": "https://www.youtube.com/watch?v=4vLlIbdwNhY",
     "source_type": "creator_long",
-    "score": 34,
-    "tone": 8,
-    "authenticity": 8,
-    "quality": 7,
-    "fit": 1,
-    "segments": [],
-    "reasoning": "19-minute Blueprint talk. Zero hits for anxiety or cloning.",
-    "flags": []
-   },
-   {
-    "url": "https://www.youtube.com/watch?v=ngvdrDuaNRs",
-    "source_type": "creator_short",
-    "score": 30,
-    "tone": 8,
-    "authenticity": 7,
+    "score": 48,
+    "tone": 9,
+    "authenticity": 9,
     "quality": 8,
-    "fit": 1,
+    "fit": 4,
     "segments": [],
-    "reasoning": "75s Chainalysis cut on pig butchering. No voice-clone content at all.",
+    "reasoning": "Previous pick, dropped. Sourced and accurate, but she is reading a prepared statement at a witness table \u2014 no field, no story, no energy. The deeper problem is topical: Operation Shamrock works Southeast Asian pig-butchering compounds, while Rachel and Del Mastro both wired to Mexico. Once the unsourceable voice-clone quotes came out there was no reason for her to be in this show.",
     "flags": []
    },
    {
-    "url": "https://www.youtube.com/watch?v=kh4ucNfKr9c",
-    "source_type": "creator_long",
-    "score": 22,
-    "tone": 8,
+    "url": "https://www.youtube.com/watch?v=QsM2h2OfNbI",
+    "source_type": "affiliate",
+    "score": 62,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 5,
+    "segments": [],
+    "reasoning": "KPRC 2 Investigates \u2014 John Shuddell, 25, caller ID showed his mom, $900 by Venmo, she was asleep at home. Excellent tape and it flips the usual grandparent framing. Rejected on structure, not quality: this slot already follows two victim stories and a third would be repetition where the segment needs explanation.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=MDLEZKHZ9pA",
+    "source_type": "affiliate",
+    "score": 58,
+    "tone": 9,
     "authenticity": 8,
-    "quality": 6,
-    "fit": 1,
+    "quality": 8,
+    "fit": 6,
     "segments": [],
-    "reasoning": "63-minute podcast, over the ceiling, and zero keyword hits across 1,815 cues.",
-    "flags": []
-   },
-   {
-    "url": "https://www.youtube.com/watch?v=Na9EvGe7hg8",
-    "source_type": "creator_long",
-    "score": 20,
-    "tone": 8,
-    "authenticity": 7,
-    "quality": 6,
-    "fit": 1,
-    "segments": [],
-    "reasoning": "59-minute webinar, same result across 1,394 cues.",
+    "reasoning": "KTAL \u2014 Katie Watson, who did NOT fall for it, and the piece traces the calls to Mexican prisons. Strong runner-up and the only candidate carrying the who-is-behind-it answer. Held in reserve: if the producer wants the segment to end on someone beating the scam rather than on the economics, this is the swap.",
     "flags": []
    }
   ],
-  "rejected": [],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=4vLlIbdwNhY",
+    "source_type": "creator_long",
+    "score": 48,
+    "reason": "Dropped for being inert on camera and topically adjacent \u2014 see ranked entry."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=LvAzmu4OUEA",
+    "source_type": "network",
+    "score": 84,
+    "reason": "Part 1 of the same Crime Watch Daily piece, 299s. Same material but Pt. 2 is the fuller cut and carries the aftermath; keeping one copy."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=AfqPnuVGgUE",
+    "source_type": "affiliate",
+    "score": 0,
+    "reason": "Captions unavailable \u2014 bot-check throttle, then genuinely null on retry. Not graded."
+   }
+  ],
   "cannot_determine": [
-   "nothing material \u2014 the segment is fully in the caption track"
+   "whether True Crime News can clear the Crime Watch Daily archive for rebroadcast \u2014 it is the successor brand and rights-holder channel, not an aggregator, but clearance should be confirmed"
   ]
  },
  {
