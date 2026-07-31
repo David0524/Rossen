@@ -403,75 +403,113 @@
  {
   "beat_id": "F2c-b06",
   "pass": 2,
-  "flagged": null,
-  "platform": "news_web",
-  "title": "Olathe police warn of scam claiming child abduction, demanding money",
-  "status": "manual_clip",
-  "manual_url": "https://www.kmbc.com/article/olathe-police-warn-scam-child-abduction-money/70238283",
-  "flagged_reason": "LOCATED, not empty. The exact case exists and is dated 02-03-26, matching the script's cited date \u2014 KMBC 9 carries it, FOX4KC carries it independently. Neither is on captioned YouTube, and a targeted search returned ZERO YouTube candidates mentioning Olathe at all across 619 harvested candidates. No caption track means no verifiable outcue, so per the hard rule this gets a source link and no invented timecode. The prior run reached the same verdict on the same department.",
-  "better_query": "There is no better query \u2014 this is a coverage boundary, not a query miss. The Kansas City affiliates publish this story to their own sites only. Pull it by hand from KMBC or FOX4KC.",
+  "flagged": "https://www.youtube.com/watch?v=539-qM7kNFE",
+  "platform": "youtube",
+  "title": "Kidnapping scam targeting local parents of students using artificial intelligence technology",
   "source_mix": {
    "affiliate": 5
   },
   "diversity_floor_applied": true,
   "ranked": [
    {
-    "url": "https://www.kmbc.com/article/olathe-police-warn-scam-child-abduction-money/70238283",
+    "url": "https://www.youtube.com/watch?v=539-qM7kNFE",
     "source_type": "affiliate",
-    "score": 78,
-    "tone": 8,
-    "authenticity": 8,
-    "quality": 7,
-    "fit": 10,
-    "segments": [],
-    "reasoning": "Exact case, exact date. Manual pull \u2014 no captions on news_web.",
+    "score": 85,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:21",
+      "out": "1:06",
+      "outcue": "Centennial Park Rose and Gresham Barlow"
+     },
+     {
+      "in": "1:52",
+      "out": "2:29",
+      "outcue": "players sadly one family made a payment"
+     }
+    ],
+    "reasoning": "Replaces the police-podium PSA. This is the same warning delivered as scope instead of advice: four Portland-area districts \u2014 Reynolds, Centennial, Parkrose, Gresham-Barlow \u2014 putting out the same alert, scammers calling Spanish-speaking families in Spanish, and an AI child's voice under the call. Then it escalates into something no other beat in the show has: they worked a college football roster. Five Oregon State families called, one paid, and Gary Overman's son Jake was home on break the whole time. 'Sadly one family made a payment' is the out \u2014 a fact, not a PSA sign-off.",
     "flags": [
-     "no caption track; outcue cannot be verified"
+     "KGW upload 2023-05-09 \u2014 setup is written as an ongoing pattern and claims no recency",
+     "auto-captions garble two phrases mid-package ('Imam', 'Pam', 'DSs'); neither falls inside a proposed pull"
     ]
    },
    {
-    "url": "https://fox4kc.com/news/olathe-families-receive-kidnapping-ransom-call-police-warn-of-new-phone-scam/",
+    "url": "https://www.youtube.com/watch?v=g5bEng9hONw",
     "source_type": "affiliate",
-    "score": 72,
+    "score": 74,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 5,
+    "segments": [],
+    "reasoning": "News10NBC \u2014 New York State Police on couriers now collecting cash AT THE DOOR: park down the street, face covering, ring the bell, take the envelope, leave. ~30 cases across Syracuse/Rochester/Buffalo, and Mickey Coolane, targeted three times in six months, who asked a scammer why he doesn't get a real job \u2014 'he said to me I need money that's why I do it.' Genuinely the best single moment I found. Rejected here on fit: it is the gift-card grandparent scam with no AI voice element, so it would repeat the off-topic mistake that made the previous b05 fall flat. Strong candidate for the grandparents block instead \u2014 see the report.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=MDLEZKHZ9pA",
+    "source_type": "affiliate",
+    "score": 66,
+    "tone": 9,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 7,
+    "segments": [],
+    "reasoning": "KTAL \u2014 Katie Watson gets 'I have your daughter, she's in the back of my van', recognises it, hangs up, checks her daughter's GPS at the middle school. Also traces the numbers to Mexican prisons. The only save in the whole candidate pool. Held in reserve: it belongs next to the protect-yourself block, not here where the beat's job is scope.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=SwuGO-yYLnU",
+    "source_type": "affiliate",
+    "score": 52,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 5,
+    "segments": [],
+    "reasoning": "KHOU on the return of the kidnapping phone scam. Competent, generic, no new information.",
+    "flags": []
+   },
+   {
+    "url": "https://www.kmbc.com/article/olathe-police-warn-scam-child-abduction-money/70238283",
+    "source_type": "affiliate",
+    "score": 48,
     "tone": 8,
     "authenticity": 8,
     "quality": 7,
-    "fit": 10,
+    "fit": 6,
     "segments": [],
-    "reasoning": "Independent second copy of the same 02-03-26 case. Backup manual pull.",
+    "reasoning": "Previous pick, dropped. The Olathe case is real and correctly dated, but it is a police warning with no captions, no victim and no new fact \u2014 a podium and a URL. It was also the show's fifth consecutive talking head.",
     "flags": [
      "no caption track"
     ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.2news.com/news/local/police-warn-of-kidnapping-for-ransom-scam/video_be0ea878-6721-5bb0-a1ce-da9789b0556f.html",
+    "source_type": "affiliate",
+    "score": 30,
+    "reason": "Producer-supplied clip, dropped. Ends on 'complaint center.' \u2014 a PSA sign-off, which is the beat's whole problem rather than an accident of where the out landed."
    },
    {
     "url": "https://www.youtube.com/watch?v=BpFMz_qE-Eo",
     "source_type": "affiliate",
     "score": 38,
-    "tone": 8,
-    "authenticity": 7,
-    "quality": 8,
-    "fit": 2,
-    "segments": [],
-    "reasoning": "Olathe PD, but the department-impersonation scam. Wrong case.",
-    "flags": []
-   }
-  ],
-  "rejected": [
+    "reason": "Olathe PD but the department-impersonation scam. Wrong case."
+   },
    {
     "url": "https://www.youtube.com/watch?v=PIjb21ahu4w",
     "source_type": "affiliate",
     "score": 30,
-    "reason": "Utility phone scam, wrong case, and captions genuinely unavailable after a retry."
-   },
-   {
-    "url": "https://www.kctv5.com/2025/03/26/olathe-police-release-additional-information-suspicious-man-after-incident-arrest/",
-    "source_type": "affiliate",
-    "score": 26,
-    "reason": "Unrelated 2025 incident."
+    "reason": "Utility phone scam; captions genuinely unavailable after retry."
    }
   ],
   "cannot_determine": [
-   "whether KCTV \u2014 the outlet the script actually names \u2014 has an unindexed 02-03-26 package; only KMBC and FOX4KC surfaced"
+   "whether KGW has refreshed this story since 2023 \u2014 the districts and the OSU detail are what make it work, and a newer local version would be a straight upgrade"
   ]
  },
  {

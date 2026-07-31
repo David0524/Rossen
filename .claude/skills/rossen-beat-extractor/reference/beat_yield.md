@@ -43,14 +43,14 @@ b05 EMPTY->PICK (re-attributed), b09 EMPTY->LOCATED (found by plain web search).
 | F2c-b03 | victim_interview | H | PICK | InvestigateTV LZoQ5aiVibA 5:11-5:41 "to be punished for what they did." (Rachel on law enforcement: "Zero. Nothing.") |
 | F2c-b04 | victim_interview | H | PICK | ABC7/ABC News qn9N9KQHY1s 0:10-1:03 + 1:19-1:48 "scam your money." (Del Mastro — LOCATED last run, upgraded to PICK by re-querying the exact name) |
 | F2c-b05 | explainer_demo | H | PICK (swap) | Crime Watch Daily w_SAFu2mfBQ 2:48-3:21 + 3:53-4:15 "pretty good money. Yep. Easy money." (Chris Voss, ex-FBI lead kidnapping negotiator). Two rewrites: Erin West's scripted lines were unsourceable, and her replacement testimony played inert because she was OFF-TOPIC (SE Asia pig butchering vs a Mexico virtual-kidnapping story) |
-| F2c-b06 | authority_report | H | LOCATED | Olathe PD child-abduction scam on KMBC/FOX4KC (news_web) 02-03-26; ZERO YouTube candidates mention Olathe at all — same verdict as F2b-b04 |
+| F2c-b06 | authority_report | H | PICK (swap) | KGW 539-qM7kNFE 0:21-1:06 + 1:52-2:29 "players sadly one family made a payment" (four Portland districts + five Oregon State football families). Olathe PD version rejected by producer as a PSA; swap moved the beat LOCATED->PICK |
 | F2c-b07 | explainer_demo/creator_short | V | LOCATED | @pearlmania500/video/7220912200855178538 native TikTok, caption is the script's line verbatim; manual lane, outcue UNVERIFIED (no caption track, no faster-whisper) |
 | F2c-b08 | authority_report | H | PICK | FOX 5 DC C2J_wnqMlIo 1:03-1:59 "time through that fast track program" (Bradley Earl on tape; package is 2023 — script reframed to past tense) |
 | F2c-b09 | victim_interview | H | LOCATED | ABC7 Chicago I-Team (news_web) Jason Knowles 01-28-25, $19,379 Udvance/West Loop escrow. Invisible to Brave video + YouTube across 817 candidates; PLAIN WEB SEARCH returned it as result #1 |
 | F2c-b10 | confrontation_bust | H | PICK | WJZ KzMxcmF5ng4 1:00-1:39 "said it doesn't make sense in retrospect" (13 charged, 85 victims, $2.5M, Baltimore FBI). DECIDE resolved: no AI prosecution exists, setup now says so and runs the money-ring bust |
 | F2c-b11 | other (screen share) | H | SHOW-PRODUCED | Jeff walks missingmoney.com live; no search lane, never EMPTY |
 
-**Yield:** 7 PICK (1 approved swap) / 3 LOCATED / 0 EMPTY / 1 SHOW-PRODUCED of 11.
+**Yield:** 8 PICK (2 approved swaps) / 2 LOCATED / 0 EMPTY / 1 SHOW-PRODUCED of 11.
 **Patterns worth carrying forward:**
 
 1. **A named person with zero video hits deserves one plain web search before being written off.**
@@ -70,6 +70,11 @@ b05 EMPTY->PICK (re-attributed), b09 EMPTY->LOCATED (found by plain web search).
    matter how good the tape. Swapping to an expert on the *specific* crime (ex-FBI kidnapping negotiator
    on virtual kidnapping) fixed the energy without touching the delivery criterion. When a producer says
    an expert is boring, re-check topical fit before hunting for livelier footage of the same person.
+3c. **`authority_report` beats built on "police warn" are structurally boring.** b06 was rejected by the
+   producer with an outcue of "complaint center." — a PSA sign-off. The fix was not a better police
+   clip; it was changing what the beat reports. Scope (four districts at once, a football roster) has
+   stakes; advice does not. Two of this run's three producer rejections were beats that were accurate
+   and inert, and in both cases the repair was re-aiming the beat, not re-searching it.
 4. **Vertical is still 0-for-3 on captioned picks across two runs** — b07 LOCATED (native, manual by
    rule) and b09 resolved to horizontal. The vertical lane produces links, not timecodes. Write toward
    that.

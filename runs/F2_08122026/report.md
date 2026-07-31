@@ -11,8 +11,8 @@ The run ends with **no empty beats.**
 
 ```
 Source mix, 10 located beats:  affiliate 7 · network 2 · creator_short 1
-Outcomes, 11 beats:  7 PICK · 3 LOCATED · 1 SHOW-PRODUCED · 0 EMPTY
-10 segments, every outcue verified verbatim against the caption track
+Outcomes now:  8 PICK · 2 LOCATED · 1 SHOW-PRODUCED · 0 EMPTY
+12 segments, every outcue verified verbatim against the caption track
 ```
 
 ## Beat table
@@ -24,7 +24,7 @@ Outcomes, 11 beats:  7 PICK · 3 LOCATED · 1 SHOW-PRODUCED · 0 EMPTY
 | b03 | victim_interview | H | 2 | **PICK** | InvestigateTV (YT) | 5:11–5:41 | "to be punished for what they did." |
 | b04 | victim_interview | H | 1 | **PICK** | ABC7 / ABC News (YT) | 0:10–1:03 · 1:19–1:48 | "was a scam. The money was gone. With AI," · "scam your money." |
 | b05 | explainer_demo | H | 2 | **PICK** | Crime Watch Daily (YT) | 2:48–3:21 · 3:53–4:15 | "hour, hour and a half. And it wasn't" · "pretty good money. Yep. Easy money." |
-| b06 | authority_report | H | 2 | **LOCATED** | KMBC 9 (news_web) | manual | no captions |
+| b06 | authority_report | H | 2 | **PICK** | KGW Portland (YT) | 0:21–1:06 · 1:52–2:29 | "Centennial Park Rose and Gresham Barlow" · "players sadly one family made a payment" |
 | b07 | explainer_demo/short | V | 1 | **LOCATED** | @pearlmania500 (TikTok) | manual | UNVERIFIED |
 | b08 | authority_report | H | 2 | **PICK** | FOX 5 DC (YT) | 1:03–1:59 | "time through that fast track program" |
 | b09 | victim_interview | H | 1 | **LOCATED** | ABC7 Chicago I-Team | manual | no captions |
@@ -102,6 +102,42 @@ unverified DOJ numbers in the note. Placed after the grandparents block it gives
 resolution it otherwise lacked, without contradicting b03: overseas cases go unprosecuted, domestic
 money-mule rings get charged.
 
+## b06 rebuilt — second producer rejection, same root cause
+
+Flagged as "boring leadup, bad clip, nothing interesting." The supplied clip ended on **"complaint
+center."** — and that is the diagnosis, not an accident of where the out landed. *Police warn* is a PSA
+by construction: a podium, an advisory, a URL. It was also the fifth consecutive talking head in the
+segment, and the only one with nothing at stake.
+
+Rebuilt as **scope instead of advice**: KGW Portland, `539-qM7kNFE`. Four districts — Reynolds,
+Centennial, Parkrose, Gresham-Barlow — putting out the same warning at the same time, scammers calling
+Spanish-speaking families in Spanish, an AI child's voice under the call. Then it goes somewhere no
+other beat in the show goes: they worked a **college football roster**. Five Oregon State families
+called, one paid, and Gary Overman's son Jake was home on break the whole time. The out is
+*"sadly one family made a payment"* — a fact, not a sign-off.
+
+Side effect worth noting: this beat moves from **LOCATED to PICK**. The Olathe case had no caption track
+and needed a manual pull; KGW is captioned, so b06 now ships with verified timecodes and the run drops
+to two manual beats.
+
+**The best single moment I found is deliberately not in the show.** News10NBC, `g5bEng9hONw`: New York
+State Police on couriers now collecting cash *at the door* — park down the street, face covering, ring
+the bell, take the envelope, leave. Around 30 cases across Syracuse, Rochester and Buffalo. And Mickey
+Coolane, targeted three times in six months, who asked one of them why he doesn't get a real job:
+*"he said to me I need money that's why I do it."* I left it out because it is the gift-card grandparent
+scam with **no AI voice element** — putting it here would repeat exactly the off-topic mistake that made
+the old b05 fall flat. But it would be excellent against the grandparents block that follows b06, which
+currently has no clip at all. Say the word and it is a ten-minute add.
+
+Also held in reserve: KTAL's Katie Watson (`MDLEZKHZ9pA`), the only *save* in the whole candidate pool —
+she gets "I have your daughter, she's in the back of my van", recognises it, hangs up, checks her
+daughter's GPS at the middle school. That belongs next to the protect-yourself block, not here.
+
+**One pattern across the run:** b05 is 2017 archive, b06 and b08 are 2023. The fresh material is the
+victim tape — b01 is January 2026, b04 is May 2026. The context and scope pieces are all older, because
+coverage of this scam peaked in 2023. Nothing in the rewritten script claims otherwise, but if the show
+wants a "this is happening right now" spine, the victim beats have to carry it.
+
 ## One package carries three beats
 
 b01, b02 and b03 all resolve to a single source — InvestigateTV's 01-23-26 package,
@@ -112,8 +148,6 @@ returns nothing *by name* — but she is inside this package, cloning Trager's v
 
 ## Manual lane
 
-- **b06** `https://www.kmbc.com/article/olathe-police-warn-scam-child-abduction-money/70238283`
-  Exact case, 02-03-26. Zero YouTube candidates mention Olathe at all across 619 harvested.
 - **b07** `https://www.tiktok.com/@pearlmania500/video/7220912200855178538`
   Native post, caption is the script's line verbatim. No repost graded, outcue marked UNVERIFIED.
 - **b09** `https://abc7chicago.com/post/illinois-state-treasurer-unclaimed-property-woman-says-legal-loophole-is-keeping-19k-escrow-money-failed-deal/15842229/`

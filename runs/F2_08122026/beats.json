@@ -360,21 +360,21 @@
  },
  {
   "beat_id": "F2c-b06",
-  "segment_title": "NOW POLICE IN KANSAS ARE WARNING WHOLE NEIGHBORHOODS ABOUT THIS!",
+  "segment_title": "THEY ARE WORKING THROUGH WHOLE SCHOOL DISTRICTS NOW",
   "clip_role": "authority_report",
   "orientation": "horizontal",
-  "script_text": "THE OLATHE, KANSAS POLICE DEPARTMENT SAYS IT HAS TAKEN MULTIPLE REPORTS OF THIS EXACT CALL. / THE SCRIPT IS ALWAYS THE SAME... YOUR CHILD WAS IN A CRASH, AND NOW WE HAVE THEM. / THEY DEMAND MONEY IMMEDIATELY AND THEY MAKE VIOLENT THREATS!! / AND THEY PLAY SOMETHING THAT SOUNDS LIKE THE CHILD'S VOICE. / HERE IS WHAT POLICE WANT EVERY PARENT AND GRANDPARENT TO KNOW.",
-  "news_anchor": "Olathe Kansas Police Department AI voice kidnapping scam warning multiple reports",
-  "visual_spec": "police spokesperson on camera or press briefing, department seal, affiliate news package",
+  "script_text": "THIS IS NOT RANDOM ANYMORE. THEY ARE GOING SCHOOL BY SCHOOL. / OUTSIDE PORTLAND, FOUR DISTRICTS PUT OUT THE SAME WARNING AT THE SAME TIME. / THEY CALLED PARENTS OF GRADE SCHOOLERS AND SPOKE THEIR OWN LANGUAGE BACK TO THEM. / AND THEY PLAYED A CHILD'S VOICE UNDERNEATH IT. THAT PART IS THE A-I. / THEN THEY WENT STRAIGHT AT A COLLEGE FOOTBALL ROSTER. / FIVE OREGON STATE FAMILIES GOT THE CALL. ONE OF THEM PAID!! / GARY OVERMAN'S SON JAKE WAS HOME ON BREAK THE WHOLE TIME. / WATCH HOW ORGANIZED THIS IS.",
+  "news_anchor": "KGW Portland school districts AI kidnapping scam Oregon State football families Gary Overman",
+  "visual_spec": "school district spokesman and a father on camera, affiliate package, district names on screen",
   "platforms": [
    "youtube",
    "news_web",
    "shorts"
   ],
-  "offsite_likely": true,
+  "offsite_likely": false,
   "priority": 2,
-  "sourcability": "commentary_only",
-  "sourcability_note": "The AI-voice Olathe case returns zero on YouTube (2 variants, retried). Olathe PD does have captioned affiliate coverage of OTHER scams (KSHB BpFMz_qE-Eo utility/dept impersonation, KMBC PIjb21ahu4w) \u2014 wrong case, would fail the fit gate. Run F2_07292026 located the Olathe kids-voice case on KMBC/KCTV news_web with no captioned YouTube twin; same expectation here. Kansas City metro affiliates are the target.",
+  "sourcability": "high",
+  "sourcability_note": "REPLACED on producer note \u2014 bad clip, boring lead-up. Diagnosis: 'police warn' is a PSA by construction, and the supplied clip ended on 'complaint center.' It was also the fifth consecutive talking head. Rebuilt as scope rather than advice: KGW Portland, four districts warning at once plus five Oregon State football families called and one paying. Captioned affiliate on YouTube, so this beat moves from LOCATED (manual, no captions) to a PICK with verified outcues.",
   "queries": {
    "anchor": [
     "Olathe Kansas police AI voice cloning scam warning",
@@ -426,7 +426,7 @@
    "surfaced_for": "horizontal"
   },
   "episode": "08-12",
-  "expected_segments": 1,
+  "expected_segments": 2,
   "source_native": "none"
  },
  {
