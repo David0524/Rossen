@@ -23,9 +23,26 @@ body { margin: 0; background: #111; } canvas { display: block; max-width: 100vw;
 */
 setFormat({ ar: '16:9', width: 1920 });
 const FPS = 24, DUR = 18.0, NFR = Math.round(FPS * DUR);
-const BLUE = '#5f86bd', MRED = '#cf5a48', YEL = '#efd488', SAGE = '#b9c7a3', PINK = '#e8c1b3', PENCIL = '#8b877d';
+// one palette: cream paper, the logo's yellow and blue, the stamp red (plus ink and pencil grey)
+const BLUE = '#5f86bd', MRED = '#cf5a48', YEL = '#efd488', PALEBLUE = '#c9d7e8', PINK = '#ecc6b8', CREAM = '#efe5cc', PENCIL = '#8b877d';
 const L1 = layer(), L2 = layer();
-let PAPER_TEX = null;
+let PAPER_TEX = null, CLIPPINGS = null;
+// newspaper clippings pinned around the edges (the phone covers the middle): generic headlines, squiggle copy, redaction bars
+function buildClippings() {
+  const o = document.createElement('canvas'); o.width = W + 80; o.height = H + 40; const g = o.getContext('2d'); g.drawImage(PAPER_TEX, 0, 0, o.width, o.height);
+  const heads = ['SCAM ALERT', 'FRAUD', 'WARNING', 'RIP-OFF', 'BEWARE', 'RECALL', 'CAUGHT', 'EXPOSED'];
+  const spots = [[210, 190, -.08], [230, 560, .06], [260, 900, -.05], [620, 120, .05], [560, 880, .07], [1370, 150, -.06], [1720, 330, .07], [1420, 880, -.07], [1760, 760, .04]];
+  spots.forEach(([x, y, rot], k) => { const r = rng(300 + k), w = 300 + r() * 80, h = 210 + r() * 70;
+    g.save(); g.translate(x, y); g.rotate(rot);
+    g.globalAlpha = .18; g.fillStyle = INK; g.fillRect(-w / 2 + 10, -h / 2 + 12, w, h); g.globalAlpha = 1;
+    shape(g, [[-w / 2, -h / 2], [w / 2, -h / 2], [w / 2, h / 2], [-w / 2, h / 2]], '#f6f0e1', 310 + k, { lw: 3, hc: '#ddd4c0', ha: .35 });
+    fitText(g, heads[k % heads.length], 0, -h / 2 + 40, 44, 'Stamp', INK, w - 40);
+    squiggleText(g, -w / 2 + 22, -h / 2 + 88, w - 44, Math.floor((h - 110) / 20), { seed: 320 + k, lineH: 20, color: '#6b645a' });
+    g.fillStyle = '#26211d'; for (let q = 0; q < 2; q++) { const ry = -h / 2 + 92 + Math.floor(r() * ((h - 130) / 20)) * 20; g.fillRect(-w / 2 + 22 + r() * 60, ry - 12, 80 + r() * 90, 14); }   // redactions
+    g.globalAlpha = .55; g.fillStyle = YEL; g.fillRect(-36, -h / 2 - 12, 72, 24); g.globalAlpha = 1;   // tape
+    g.restore(); });
+  return o;
+}
 const paperBg = c => { c.save(); resetT(c); c.drawImage(PAPER_TEX, 0, 0, W, H); c.restore(); };
 const pulseAt = (t, times, k = 9) => { let v = 0; for (const b of times) if (t >= b) v = Math.max(v, Math.exp(-(t - b) * k)); return v; };
 function shakeAt(t, hits) { let x = 0, y = 0; for (const [ti, a] of hits) if (t >= ti && t < ti + .14) { const r = rng(Math.round(t * 997)); const d = 1 - (t - ti) / .14; x += (r() - .5) * a * 2 * d; y += (r() - .5) * a * 2 * d; } return [x, y]; }
@@ -37,7 +54,7 @@ function bracketFrame(c, t, o = {}) {   // viewfinder corners + REC
   text(c, 'REC', ins + 100, ins + 64, '52px Stamp', INK, 'left');
   // battery
   const bx = W - ins - 190, by = ins + 40; crayon(c, rrPts(bx, by, 110, 50, 8, 3), INK, 5, 950, true); c.fillStyle = INK; c.fillRect(bx + 112, by + 16, 10, 18);
-  for (let k = 0; k < 3; k++) { c.fillStyle = k < 2 ? SAGE : '#d9d2c3'; c.fillRect(bx + 10 + k * 33, by + 9, 26, 32); }
+  for (let k = 0; k < 3; k++) { c.fillStyle = k < 2 ? BLUE : '#d9d2c3'; c.fillRect(bx + 10 + k * 33, by + 9, 26, 32); }
   if (o.tc !== undefined) { const s = o.tc, f = Math.floor((s % 1) * 24), p2 = v => String(v).padStart(2, '0'); text(c, `${p2(Math.floor(s / 3600))}:${p2(Math.floor(s / 60) % 60)}:${p2(Math.floor(s) % 60)}:${p2(f)}`, W - ins - 20, H - ins - 60, '42px Stamp', INK, 'right'); }
 }
 function crosshair(c, x, y, R) { c.save(); c.strokeStyle = INK; c.globalAlpha = .55; c.lineWidth = 3; c.beginPath(); c.moveTo(x - R, y); c.lineTo(x - R * .35, y); c.moveTo(x + R * .35, y); c.lineTo(x + R, y); c.moveTo(x, y - R); c.lineTo(x, y - R * .35); c.moveTo(x, y + R * .35); c.lineTo(x, y + R); c.stroke(); c.restore(); }
@@ -80,17 +97,17 @@ function sceneCountdown(c, t) {
 
 // ================= 2. STREET RUN =================
 const BLD = [], FAR = [];
-{ const r = rng(77); let x = -400; for (let i = 0; i < 60; i++) { const w = 250 + r() * 150; BLD.push({ x, w, h: 360 + r() * 220, col: [PINK, '#bcd0e6', YEL, SAGE, '#dccfbf'][i % 5], win: 2 + Math.floor(r() * 2), awn: r() < .55, seed: 100 + i }); x += w + 18 + r() * 30; }
+{ const r = rng(77); let x = -400; for (let i = 0; i < 60; i++) { const w = 250 + r() * 150; BLD.push({ x, w, h: 360 + r() * 220, col: [PINK, '#bcd0e6', YEL, PALEBLUE, CREAM][i % 5], win: 2 + Math.floor(r() * 2), awn: r() < .55, seed: 100 + i }); x += w + 18 + r() * 30; }
   x = -300; for (let i = 0; i < 80; i++) { const w = 90 + r() * 150; FAR.push({ x, w, h: 160 + r() * 300, spire: r() < .18, seed: 300 + i }); x += w + r() * 20; } }
 function streetScroll(t) { const v = 1000; if (t < 3.75) return v * (t - 2.5); const u = Math.min(t - 3.75, .3); return v * 1.25 + v * (u - u * u / .6); }
 function building(c, b, x, base) {
   const top = base - b.h;
-  shape(c, [[x, base], [x + b.w, base], [x + b.w, top], [x, top]], b.col, b.seed, { lw: 4.5, ink: '#4a453e', ha: .35, gap: 4 });
-  shape(c, [[x - 8, top], [x + b.w + 8, top], [x + b.w + 8, top + 16], [x - 8, top + 16]], shade(b.col, .12), b.seed + 1, { lw: 3.5, ink: '#4a453e' });
+  shape(c, [[x, base], [x + b.w, base], [x + b.w, top], [x, top]], b.col, b.seed, { lw: 4.5, ha: .4 });
+  shape(c, [[x - 8, top], [x + b.w + 8, top], [x + b.w + 8, top + 16], [x - 8, top + 16]], shade(b.col, .12), b.seed + 1, { lw: 3.5 });
   const cols = b.win + 1, ww = (b.w - 40) / cols - 18, rows = Math.floor((b.h - 190) / 95);
   for (let rr = 0; rr < rows; rr++) for (let k = 0; k < cols; k++) {
     const wx = x + 29 + k * (ww + 18), wy = top + 40 + rr * 95;
-    c.fillStyle = '#f4efe2'; c.fillRect(wx, wy, ww, 62); c.strokeStyle = '#4a453e'; c.lineWidth = 2.5; c.strokeRect(wx, wy, ww, 62);
+    c.fillStyle = '#f4efe2'; c.fillRect(wx, wy, ww, 62); c.strokeStyle = '#3a352f'; c.lineWidth = 3.6; c.strokeRect(wx, wy, ww, 62);
     c.beginPath(); c.moveTo(wx + ww / 2, wy); c.lineTo(wx + ww / 2, wy + 62); c.moveTo(wx, wy + 31); c.lineTo(wx + ww, wy + 31); c.stroke();
   }
   // shopfront
@@ -161,10 +178,8 @@ const PH = { cx: 960, cy: 560, w: 470, h: 860, sx: -208, sy: -350, sw: 416, sh: 
 function scenePhone(c, t) {
   paperBg(c);
   const [shx, shy] = shakeAt(t, [[6.25, 14]]);
-  // rotating rays
-  c.save(); c.translate(960, 540); c.rotate(t * .25);
-  for (let k = 0; k < 18; k++) { if (k % 2) continue; const a0 = k / 18 * TAU, a1 = (k + 1) / 18 * TAU, w = new Path2D(); w.moveTo(0, 0); w.arc(0, 0, 1400, a0, a1); w.closePath(); c.fillStyle = alpha(BLUE, .16); c.fill(w); hatch(c, w, [-1400, -1400, 2800, 2800], { gap: 9, len: 24, color: BLUE, alpha: .18, seed: 40 + k }); }
-  c.restore();
+  // a wall of pinned clippings, drifting slowly
+  c.save(); resetT(c); c.drawImage(CLIPPINGS, -40 - (t - 5) * 14, -20, W + 80, H + 40); c.restore();
   const zoom = easeIn(seg(t, 7.1875, 7.5)), turn = easeIO(seg(t, 6.875, 7.1875));
   const beat = pulseAt(t, [5, 5.625, 6.25, 6.875], 10);
   const rot = lerp(-.06, -Math.PI / 2, turn), s0 = 1 + .025 * beat;   // tip the phone to landscape, then push in
@@ -218,14 +233,14 @@ function sceneHidden(c, t) {
   const [shx, shy] = shakeAt(t, [[8.75, 14]]);
   c.save(); c.translate(jit[0] + shx, jit[1] + shy); c.translate(960, 540); c.scale(1.03, 1.03); c.translate(-960, -540);
   // wall + floor
-  shape(c, [[-40, -40], [W + 40, -40], [W + 40, 820], [-40, 820]], '#cdd6c0', 401, { outline: false, ha: .3, angle: 1.57, gap: 6, len: 60 });
-  c.save(); c.strokeStyle = alpha('#9aa88a', .5); c.lineWidth = 10; for (let x = 40; x < W; x += 90) { c.beginPath(); c.moveTo(x, -40); c.lineTo(x, 820); c.stroke(); } c.restore();
+  shape(c, [[-40, -40], [W + 40, -40], [W + 40, 820], [-40, 820]], '#cfd9e6', 401, { outline: false, ha: .3, angle: 1.57, gap: 6, len: 60 });
+  c.save(); c.strokeStyle = alpha('#9fb3cc', .5); c.lineWidth = 10; for (let x = 40; x < W; x += 90) { c.beginPath(); c.moveTo(x, -40); c.lineTo(x, 820); c.stroke(); } c.restore();
   shape(c, [[-40, 820], [W + 40, 820], [W + 40, 1120], [-40, 1120]], '#d8c9ae', 402, { ha: .35, angle: .08, len: 60, lw: 5 });
   // window with blinds, framed picture, clock
   shape(c, rrPts(1440, 150, 330, 360, 8, 2), '#e9eef2', 403, { lw: 5 });
   c.strokeStyle = '#8b877d'; c.lineWidth = 4; for (let y = 180; y < 500; y += 26) { c.beginPath(); c.moveTo(1450, y); c.lineTo(1760, y); c.stroke(); }
   shape(c, rrPts(380, 200, 260, 190, 6, 2), '#b98a5a', 404, { lw: 5 }); shape(c, rrPts(400, 220, 220, 150, 4, 2), '#e8d6a8', 405, { lw: 3 });
-  crayon(c, [[410, 350], [470, 280], [520, 330], [560, 290], [610, 350]], '#7d8f6a', 4, 406, false);
+  crayon(c, [[410, 350], [470, 280], [520, 330], [560, 290], [610, 350]], BLUE, 4, 406, false);
   // scammer behind the desk, counting cash
   const bolt = seg(t, 9.0625, 9.4), jump = t >= 8.8 ? Math.sin(seg(t, 8.8, 9.05) * Math.PI) * 120 : 0;
   const sx = lerp(1230, 2400, easeIn(bolt)), sy = 780 - jump - Math.sin(bolt * Math.PI) * 160;
@@ -249,7 +264,7 @@ function sceneHidden(c, t) {
     });
   }
   // hidden-camera treatment: tint, scanlines, hatched vignette, viewfinder
-  c.save(); c.fillStyle = 'rgba(70,90,70,.10)'; c.fillRect(0, 0, W, H); c.fillStyle = 'rgba(30,30,30,.06)'; for (let y = 0; y < H; y += 6) c.fillRect(0, y, W, 2); c.restore();
+  c.save(); c.fillStyle = 'rgba(60,80,110,.08)'; c.fillRect(0, 0, W, H); c.fillStyle = 'rgba(30,30,30,.06)'; for (let y = 0; y < H; y += 6) c.fillRect(0, y, W, 2); c.restore();
   const vig = new Path2D(); vig.rect(0, 0, W, H); vig.ellipse(960, 540, 1080, 660, 0, 0, TAU);
   c.save(); c.clip(vig, 'evenodd'); hatch(c, vig, [0, 0, W, H], { gap: 5, len: 22, color: INK, alpha: .22, seed: 440, angle: .8 }); c.restore();
   bracketFrame(c, t, { tc: 6 * 60 + t, solid: false });
@@ -305,10 +320,10 @@ function sceneDeals(c, t) {
 
 // ================= 6. MONTAGE CARDS =================
 const CARDS = [
-  { x: 520, y: 330, rot: -.09, word: 'SCAMS EXPOSED', col: '#e8c1b3', t0: 12.5 },
-  { x: 1400, y: 320, rot: .07, word: 'HIDDEN CAMERA', col: '#c3d3e6', t0: 13.125 },
+  { x: 520, y: 330, rot: -.09, word: 'SCAMS EXPOSED', col: PINK, t0: 12.5 },
+  { x: 1400, y: 320, rot: .07, word: 'HIDDEN CAMERA', col: PALEBLUE, t0: 13.125 },
   { x: 560, y: 770, rot: .06, word: 'WARNINGS', col: '#efdca0', t0: 13.75 },
-  { x: 1370, y: 760, rot: -.07, word: 'REAL DEALS', col: '#c9d6b6', t0: 14.375 },
+  { x: 1370, y: 760, rot: -.07, word: 'REAL DEALS', col: CREAM, t0: 14.375 },
 ];
 function cardIcon(c, k, t) {
   if (k === 0) { scammer(c, 0, 70, 1.35, { t, look: Math.sin(t * 5), noSack: true }); glassRing(c, [18, -40], 70, 820); line(c, [[70, 15], [130, 80]], 16, 821, '#8a5a3c'); }
@@ -326,22 +341,49 @@ function card(c, k, x, y, rot, s, t) {
   shape(c, rrPts(-w / 2, -h / 2, w, h, 14, 3), '#faf6ec', 860 + k, { lw: 5, hc: '#e7e0d0', ha: .3 });
   shape(c, rrPts(-w / 2 + 22, -h / 2 + 22, w - 44, h - 120, 8, 2), C.col, 870 + k, { lw: 3.5 });
   c.save(); c.beginPath(); c.rect(-w / 2 + 22, -h / 2 + 22, w - 44, h - 120); c.clip(); c.translate(0, -40); cardIcon(c, k, t); c.restore();
+  photoCorners(c, -w / 2 + 22, -h / 2 + 22, w - 44, h - 120);
   fitText(c, C.word, 0, h / 2 - 50, 54, 'Marker', INK, w - 70);
+  pushpin(c, 0, -h / 2 + 4);
   c.restore();
 }
+function photoCorners(c, x, y, w, h) {   // evidence-photo mounts
+  c.save(); c.fillStyle = '#2c2825';
+  for (const [px, py, sx, sy] of [[x, y, 1, 1], [x + w, y, -1, 1], [x, y + h, 1, -1], [x + w, y + h, -1, -1]]) { c.beginPath(); c.moveTo(px - sx * 4, py - sy * 4); c.lineTo(px + sx * 40, py - sy * 4); c.lineTo(px - sx * 4, py + sy * 40); c.closePath(); c.fill(); }
+  c.restore();
+}
+function pushpin(c, x, y) { shape(c, ellPts(x, y, 17, 17, 0, 20), MRED, 880, { lw: 3, hc: shade(MRED, .3) }); c.save(); c.fillStyle = 'rgba(255,255,255,.75)'; c.beginPath(); c.arc(x - 5, y - 6, 5, 0, TAU); c.fill(); c.restore(); }
+function pinWorld(C, s = .95) { const py = (-200 + 4) * s; return [C.x - py * Math.sin(C.rot), C.y + py * Math.cos(C.rot)]; }   // card-local (0, py) after the card's rotation
 function burst(c, cx, cy, ang, cols, n = 20, al = .5) {
   for (let k = 0; k < n; k++) { const a0 = ang + k / n * TAU, a1 = ang + (k + 1) / n * TAU, w = new Path2D(); w.moveTo(cx, cy); w.arc(cx, cy, 1500, a0, a1); w.closePath();
     c.save(); c.globalAlpha = al; c.fillStyle = cols[k % cols.length]; c.fill(w); c.restore(); if (k % 2 === 0) hatch(c, w, [cx - 1500, cy - 1500, 3000, 3000], { gap: 8, len: 22, color: shade(cols[k % cols.length], .2), alpha: .22, seed: 60 + k }); }
+}
+// case file: ledger paper with a red margin, like a reporter's notebook
+function caseFile(c) {
+  c.save(); c.strokeStyle = alpha(BLUE, .28); c.lineWidth = 2.5; for (let y = 90; y < H; y += 58) { c.beginPath(); c.moveTo(0, y); c.lineTo(W, y); c.stroke(); }
+  c.strokeStyle = alpha(MRED, .45); c.lineWidth = 3; c.beginPath(); c.moveTo(150, 0); c.lineTo(150, H); c.stroke(); c.restore();
+}
+// red string from pin to pin, drawn in as each card lands (sags a little, like real string)
+const STRINGS = [[0, 1], [2, 3]];   // top pair and bottom pair, so the string never crosses a card face
+function redString(c, t) {
+  for (let k = 0; k < STRINGS.length; k++) {
+    const a = CARDS[STRINGS[k][0]], b = CARDS[STRINGS[k][1]], t0 = Math.max(a.t0, b.t0), u = easeOut(seg(t, t0, t0 + .25));
+    if (u <= 0) continue;
+    const pa = pinWorld(a), pb = pinWorld(b), mid = [(pa[0] + pb[0]) / 2, (pa[1] + pb[1]) / 2 + 40];
+    const pts = []; for (let i = 0; i <= 24 * u; i++) { const q = i / 24; pts.push([(1 - q) * (1 - q) * pa[0] + 2 * (1 - q) * q * mid[0] + q * q * pb[0], (1 - q) * (1 - q) * pa[1] + 2 * (1 - q) * q * mid[1] + q * q * pb[1]]); }
+    if (pts.length > 1) crayon(c, pts, '#c23b2f', 4, 890 + k, false);
+  }
+  for (const C of CARDS) if (t >= C.t0) { const p = pinWorld(C); pushpin(c, p[0], p[1]); }
 }
 // cards land ON their beat (the slam animation finishes at t0, exactly when the sound plays)
 const SLAM = .14;
 function sceneMontage(c, t) {
   paperBg(c);
   const [shx, shy] = shakeAt(t, CARDS.map(C => [C.t0, 9]));
-  burst(c, 960, 540, t * .35, [alpha(MRED, .35), 'rgba(0,0,0,0)', alpha(BLUE, .35), 'rgba(0,0,0,0)'], 20, 1);
+  caseFile(c);
   const z = (1 + .05 * pulseAt(t, CARDS.map(C => C.t0), 7)) * (1 + .04 * easeIO(seg(t, 12.5, 15.0)));
   c.save(); c.translate(shx, shy); c.translate(960, 540); c.scale(z, z); c.translate(-960, -540);
   CARDS.forEach((C, k) => { if (t < C.t0 - SLAM) return; const u = seg(t, C.t0 - SLAM, C.t0); card(c, k, C.x, C.y, C.rot + (1 - u) * .3, lerp(1.7, 1, easeIn(u)) * .95, t); });
+  redString(c, t);
   c.restore();
   if (t >= LOGO_FALL) drawLogo(c, t);   // the logo is already falling on the "and" of beat 4
 }
@@ -349,7 +391,7 @@ function sceneMontage(c, t) {
 // ================= 7. LOGO =================
 const LOGO_C = [1110, 470], LOGO_W = 900;
 const LOGO_FALL = 14.6875, LOGO_LAND = 15.0, JEFF_POP = 15.625, LIVE_LAND = 16.25, STILL = 16.6;
-const CONF = Array.from({ length: 80 }, (_, k) => { const r = rng(1000 + k), a = r() * TAU, ex = Math.cos(a), ey = Math.sin(a), v = 900 + r() * 900, sp = [Math.sign(ex) * (.6 + r() * .4), ey - .6 - r() * .5]; const n = Math.hypot(...sp); return { ex: Math.max(-1, Math.min(1, ex * 1.4)), ey: Math.max(-1, Math.min(1, ey * 1.4)), vx: sp[0] / n * v, vy: sp[1] / n * v, col: [MRED, BLUE, YEL, SAGE, PINK][k % 5], w: 16 + r() * 18, h: 10 + r() * 12, spin: (r() - .5) * 20, seed: k }; });
+const CONF = Array.from({ length: 80 }, (_, k) => { const r = rng(1000 + k), a = r() * TAU, ex = Math.cos(a), ey = Math.sin(a), v = 900 + r() * 900, sp = [Math.sign(ex) * (.6 + r() * .4), ey - .6 - r() * .5]; const n = Math.hypot(...sp); return { ex: Math.max(-1, Math.min(1, ex * 1.4)), ey: Math.max(-1, Math.min(1, ey * 1.4)), vx: sp[0] / n * v, vy: sp[1] / n * v, col: [MRED, BLUE, YEL, PALEBLUE, PINK][k % 5], w: 16 + r() * 18, h: 10 + r() * 12, spin: (r() - .5) * 20, seed: k }; });
 function logoDims() { const [bx, by, bw, bh] = IMG.logoBox, sc = LOGO_W / bw; return { bx, by, bw, bh, w: bw * sc, h: bh * sc }; }
 function drawLogo(c, t) {   // falls from LOGO_FALL, lands on the LOGO_LAND downbeat, one small bounce, settled by 15.5
   const { bx, by, bw, bh, w, h } = logoDims();
@@ -357,7 +399,7 @@ function drawLogo(c, t) {   // falls from LOGO_FALL, lands on the LOGO_LAND down
   if (t < LOGO_LAND) { const u = seg(t, LOGO_FALL, LOGO_LAND); y = lerp(-h * .8, LOGO_C[1], easeIn(u)); rot = .06 * (1 - u); }
   else if (t < 15.5) { const u = t - LOGO_LAND; y = LOGO_C[1] - Math.sin(seg(t, LOGO_LAND, 15.25) * Math.PI) * 26; const sq = Math.exp(-u * 12) * Math.cos(u * 30) * .06; sx = 1 + sq; sy = 1 - sq; }
   const lift = clamp((LOGO_C[1] - y) / 500, 0, 1);
-  c.save(); c.globalAlpha = .2 * (1 - lift); c.translate(LOGO_C[0] + 14 + 30 * lift, LOGO_C[1] + 22 + 40 * lift); c.drawImage(IMG.logoShadow, bx, by, bw, bh, -w / 2, -h / 2, w, h); c.restore();
+  c.save(); c.globalAlpha = .75 * (1 - lift); c.translate(LOGO_C[0] + 16 + 30 * lift, LOGO_C[1] + 24 + 40 * lift); c.drawImage(IMG.logoHatch, bx, by, bw, bh, -w / 2, -h / 2, w, h); c.restore();
   c.save(); c.translate(LOGO_C[0], y + h / 2); c.rotate(rot); c.scale(sx, sy); c.translate(0, -h / 2); c.drawImage(IMG.logo, bx, by, bw, bh, -w / 2, -h / 2, w, h); c.restore();
 }
 function sceneLogo(c, t) {
@@ -440,9 +482,15 @@ window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return
 (async () => {
   await Promise.all([loadImg('body', 'assets/jeff_body.png'), loadImg('legL', 'assets/jeff_legL.png'), loadImg('legR', 'assets/jeff_legR.png'), loadImg('logo', 'assets/official_logo.png')]);
   IMG.logoBox = alphaBox(IMG.logo);
+  { // the logo's shadow, drawn in pencil: diagonal hatching masked by the logo's silhouette
+    const o = document.createElement('canvas'); o.width = IMG.logo.width; o.height = IMG.logo.height; const g = o.getContext('2d'), r = rng(77);
+    g.strokeStyle = '#3a342d'; g.lineCap = 'round';
+    for (let k = -o.height; k < o.width; k += 5) { g.globalAlpha = .35 + r() * .35; g.lineWidth = 1.4 + r() * 1.2; g.beginPath(); g.moveTo(k + r() * 3, o.height); g.lineTo(k + o.height * .7 + r() * 3, 0); g.stroke(); }
+    g.globalAlpha = 1; g.globalCompositeOperation = 'destination-in'; g.drawImage(IMG.logo, 0, 0); IMG.logoHatch = o; }
   { const o = document.createElement('canvas'); o.width = IMG.logo.width; o.height = IMG.logo.height; const g = o.getContext('2d'); g.drawImage(IMG.logo, 0, 0); g.globalCompositeOperation = 'source-in'; g.fillStyle = INK; g.fillRect(0, 0, o.width, o.height); IMG.logoShadow = o; }
   await document.fonts.load('40px Stamp'); await document.fonts.load('40px Marker');
   PAPER_TEX = paperTexture(W, H);
+  CLIPPINGS = buildClippings();
   const q = new URLSearchParams(location.search); frame(+(q.get('frame') || 0));
   window.__ready = true;
 })().catch(e => { console.error(e); window.__error = String(e); });

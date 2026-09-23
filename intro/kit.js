@@ -27,15 +27,20 @@ function densify(pts, step = 14, close = true) {
 }
 function bbox(pts) { let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9; for (const [x, y] of pts) { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); } return [x0 - 4, y0 - 4, x1 - x0 + 8, y1 - y0 + 8]; }
 // crayon-filled shape in the reference's coloured-pencil manner: flat fill, dense same-hue strokes, paper flecks, dark wobbly outline
+// Matches the reference drawing's hand: waxy colored-pencil fill (two stroke layers + paper flecks) and a heavy, wobbly
+// dark outline (about 1.5x the old weight), so drawn props sit next to the Jeff illustration without looking pasted in.
+const OUTLINE_K = 1.5;
 function shape(c, pts, fill, seed, o = {}) {
   const P = polyPath(pts), box = bbox(pts);
   c.fillStyle = fill; c.fill(P);
-  hatch(c, P, box, { angle: o.angle ?? 1.05, gap: o.gap ?? 3.4, len: o.len ?? 13, jitter: 4, color: o.hc || shade(fill, .22), alpha: o.ha ?? .45, width: 1.3, seed });
-  grain(c, P, box, Math.min(900, box[2] * box[3] / (o.fleck ?? 55)), '#fbf7ee', o.fa ?? .45, seed + 3, 1.6);
-  if (o.outline !== false) crayon(c, densify(pts, 12, o.open ? false : true), o.ink || INK, o.lw ?? 5, seed + 9, !o.open);
+  hatch(c, P, box, { angle: o.angle ?? 1.05, gap: o.gap ?? 2.8, len: o.len ?? 17, jitter: 5, color: o.hc || shade(fill, .24), alpha: o.ha ?? .5, width: 1.4, seed });
+  hatch(c, P, box, { angle: (o.angle ?? 1.05) - .45, gap: 5.5, len: 11, jitter: 5, color: tint(fill, .35), alpha: .28, width: 1.2, seed: seed + 5 });
+  grain(c, P, box, Math.min(1600, box[2] * box[3] / (o.fleck ?? 26)), '#fbf7ee', o.fa ?? .5, seed + 3, 1.7);
+  if (o.outline !== false) { const pp = densify(pts, 11, o.open ? false : true), lw = (o.lw ?? 5) * OUTLINE_K;
+    crayon(c, pp, o.ink || '#26211d', lw, seed + 9, !o.open); crayon(c, pp, o.ink || '#26211d', lw * .45, seed + 19, !o.open); }
   return P;
 }
-function line(c, pts, w, seed, col = INK) { crayon(c, densify(pts, 10, false), col, w, seed, false); }
+function line(c, pts, w, seed, col = INK) { crayon(c, densify(pts, 10, false), col, w * 1.25, seed, false); }
 function capsulePts(a, b, r, n = 10) {  // stadium around segment a-b
   const ang = Math.atan2(b[1] - a[1], b[0] - a[0]), p = [];
   for (let k = 0; k <= n; k++) { const t = ang - Math.PI / 2 + k / n * Math.PI; p.push([b[0] + Math.cos(t) * r, b[1] + Math.sin(t) * r]); }
@@ -114,44 +119,51 @@ function bill() {
 }
 
 // ---------------- props ----------------
+// The villain: a little con man. Fedora with a red band, popped collar on a slate-blue trench coat, red scarf,
+// curly mustache, bandit mask. ~125 px tall at s = 1, origin between the feet.
+const COAT = '#56647b', COAT_D = '#3c4758', HAT = '#2f3440', SKIN2 = '#efc3a0';
 function scammer(c, x, y, s, o = {}) {
-  const { mood = 0, run = null, peek = 0, look = 0, t = 0, flip = 1 } = o;
+  const { mood = 0, run = null, look = 0, t = 0, flip = 1 } = o;
   c.save(); c.translate(x, y); c.scale(s * flip, s);
-  const shake = mood > .5 ? Math.sin(t * 90) * 2.2 : 0; c.translate(shake, 0);
+  if (mood > .5) c.translate(Math.sin(t * 90) * 2.2, 0);
   const lp = run == null ? 0 : run;
-  // legs
   const leg = (dx, ph) => { const lift = run == null ? 0 : Math.max(0, Math.sin(ph)) * 10, fw = run == null ? 0 : Math.cos(ph) * 9;
-    shape(c, capsulePts([dx, -26], [dx + fw, -6 - lift], 7, 6), '#3b3446', 100 + dx, { lw: 3.5 });
-    shape(c, ellPts(dx + fw + 5, -5 - lift, 12, 7, 0, 16), '#26222c', 102 + dx, { lw: 3.5 }); };
-  leg(-14, lp); leg(14, lp + Math.PI);
-  // loot sack over the shoulder (behind body)
+    shape(c, capsulePts([dx, -24], [dx + fw, -6 - lift], 7, 6), '#343a47', 100 + dx, { lw: 3 });
+    shape(c, ellPts(dx + fw + 6, -5 - lift, 13, 7, 0, 16), '#23262e', 102 + dx, { lw: 3 }); };
+  leg(-13, lp); leg(13, lp + Math.PI);
   if (!o.noSack) {
-    shape(c, ellPts(-40, -64, 26, 30, -.3, 26), '#b58656', 110, { hc: '#8d6337', lw: 4 });
-    line(c, [[-50, -92], [-40, -88], [-30, -94]], 3.5, 111);
-    text(c, '$', -41, -60, '30px Marker', '#5b3a1e');
+    shape(c, ellPts(-42, -58, 25, 29, -.3, 26), '#c9a063', 110, { hc: '#9a7440', lw: 3.2 });
+    line(c, [[-52, -85], [-42, -81], [-32, -87]], 3, 111); text(c, '$', -43, -54, '28px Marker', '#6b4a22');
   }
-  // body
-  shape(c, ellPts(0, -54, 38, 44, 0, 40), '#6f5f8f', 112, { hc: '#554672' });
-  // striped jumper band
-  c.save(); c.clip(ellPath(0, -54, 38, 44)); c.fillStyle = 'rgba(40,34,48,.55)'; for (let k = 0; k < 3; k++) c.fillRect(-40, -46 + k * 14, 80, 6); c.restore();
-  // beanie
-  shape(c, [[-30, -86], [-24, -104], [0, -112], [24, -104], [30, -86]], '#2e2a33', 113, { hc: '#1c1a20', lw: 4 });
-  shape(c, rrPts(-33, -90, 66, 10, 4, 2), '#46404f', 114, { lw: 3 });
-  // bandit mask
-  shape(c, rrPts(-34, -80, 68, 18, 8, 3), '#1f1c22', 115, { hc: '#111', lw: 3 });
-  const ew = mood > .5 ? 9 : 7.5, eh = mood > .5 ? 9 : 5.5;
-  for (const ex of [-13, 13]) { c.fillStyle = '#fbf7ee'; c.beginPath(); c.ellipse(ex, -71, ew, eh, 0, 0, TAU); c.fill();
-    c.fillStyle = '#111'; c.beginPath(); c.arc(ex + look * 3.5, -71 + (mood > .5 ? 0 : 1), mood > .5 ? 2.6 : 3, 0, TAU); c.fill(); }
-  // eyebrows / mouth
-  if (mood > .5) {
-    line(c, [[-22, -88], [-6, -84]], 3, 116); line(c, [[22, -88], [6, -84]], 3, 117);
-    c.fillStyle = '#2a1f2a'; c.beginPath(); c.ellipse(0, -48, 9, 11, 0, 0, TAU); c.fill();
-    c.fillStyle = '#9bd0f0'; for (const [dx, dy] of [[34, -92], [-38, -88]]) { c.beginPath(); c.moveTo(dx, dy - 10); c.quadraticCurveTo(dx + 6, dy, dx, dy + 4); c.quadraticCurveTo(dx - 6, dy, dx, dy - 10); c.fill(); }
-  } else {
-    line(c, [[-12, -50], [-2, -46], [12, -52]], 3, 118);   // sly smirk
-  }
-  // arms
-  if (mood > .5) { line(c, [[-34, -60], [-50, -86]], 6, 119, '#554672'); line(c, [[34, -60], [52, -88]], 6, 120, '#554672'); }
+  // trench coat (egg), belt, lapels, buttons
+  shape(c, ellPts(0, -50, 38, 38, 0, 40), COAT, 112, { hc: COAT_D, lw: 3.4 });
+  c.save(); c.clip(ellPath(0, -50, 38, 38)); c.fillStyle = COAT_D; c.fillRect(-40, -46, 80, 8); c.restore();
+  line(c, [[-4, -80], [-12, -50], [-2, -22]], 2.4, 121, '#26211d'); c.fillStyle = '#26211d'; for (const yy of [-58, -34]) { c.beginPath(); c.arc(6, yy, 2.6, 0, TAU); c.fill(); }
+  // head
+  shape(c, ellPts(0, -96, 25, 24, 0, 30), SKIN2, 113, { hc: '#d9a07a', lw: 3.2 });
+  // popped collar + red scarf
+  shape(c, [[-30, -86], [-10, -78], [-24, -60]], COAT, 114, { hc: COAT_D, lw: 3 });
+  shape(c, [[30, -86], [10, -78], [24, -60]], COAT, 115, { hc: COAT_D, lw: 3 });
+  shape(c, rrPts(-20, -80, 40, 10, 5, 2), '#c8503f', 116, { lw: 2.6 });
+  shape(c, [[8, -72], [18, -72], [16, -52], [8, -54]], '#c8503f', 117, { lw: 2.4 });
+  // bandit mask + eyes
+  shape(c, rrPts(-26, -108, 52, 15, 7, 3), '#1f1c22', 118, { hc: '#111', lw: 2.4 });
+  const ew = mood > .5 ? 7.5 : 6.2, eh = mood > .5 ? 7.5 : 4.6;
+  for (const ex of [-11, 11]) { c.fillStyle = '#fbf7ee'; c.beginPath(); c.ellipse(ex, -100.5, ew, eh, 0, 0, TAU); c.fill();
+    c.fillStyle = '#111'; c.beginPath(); c.arc(ex + look * 3, -100 + (mood > .5 ? 0 : .8), mood > .5 ? 2.3 : 2.6, 0, TAU); c.fill(); }
+  // curly mustache
+  c.save(); c.strokeStyle = '#2b2320'; c.lineWidth = 4; c.lineCap = 'round';
+  c.beginPath(); c.moveTo(0, -87); c.quadraticCurveTo(-8, -91, -15, -86); c.quadraticCurveTo(-19, -82, -15, -80); c.stroke();
+  c.beginPath(); c.moveTo(0, -87); c.quadraticCurveTo(8, -91, 15, -86); c.quadraticCurveTo(19, -82, 15, -80); c.stroke(); c.restore();
+  if (mood > .5) { c.fillStyle = '#3a2226'; c.beginPath(); c.ellipse(0, -79, 5.5, 6.5, 0, 0, TAU); c.fill();
+    c.fillStyle = '#9bd0f0'; for (const [dx, dy] of [[32, -104], [-34, -100]]) { c.beginPath(); c.moveTo(dx, dy - 10); c.quadraticCurveTo(dx + 6, dy, dx, dy + 4); c.quadraticCurveTo(dx - 6, dy, dx, dy - 10); c.fill(); } }
+  else line(c, [[-5, -80], [2, -78], [8, -81]], 2.2, 122);
+  // fedora with a red band
+  shape(c, ellPts(0, -114, 36, 7, 0, 24), HAT, 123, { hc: '#1d2028', lw: 3 });
+  shape(c, [[-20, -114], [-17, -134], [-4, -130], [0, -136], [4, -130], [17, -134], [20, -114]], HAT, 124, { hc: '#1d2028', lw: 3 });
+  shape(c, rrPts(-20, -122, 40, 7, 2, 2), '#c8503f', 125, { lw: 2 });
+  if (mood > .5) { line(c, [[-34, -58], [-50, -84]], 7, 126, COAT); line(c, [[34, -58], [52, -86]], 7, 127, COAT);
+    shape(c, ellPts(-51, -88, 7, 7, 0, 12), SKIN2, 128, { lw: 2.4 }); shape(c, ellPts(53, -90, 7, 7, 0, 12), SKIN2, 129, { lw: 2.4 }); }
   c.restore();
 }
 // where the scammer is at time t (world, feet), and what he's doing

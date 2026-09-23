@@ -43,6 +43,13 @@ ffmpeg -y -i out/video.mp4 -i out/score_norm.wav -c:v copy -c:a aac -b:a 256k -s
 
 The score (`score_title.py`) is arranged as one piece. After the countdown, a single groove and bass line run unbroken to the logo, with the chords moving bar by bar (Dm–Bb–C | Dm–Eb | D–Bb–Eb | D–A | D–F–G–A | D). Big orchestral hits are saved for the five story beats: LIVE, SCAM!, CAUGHT!, DEAL! and the logo. Scene changes get only a light cymbal.
 
+**Style rules for the title sequence** (so later edits stay consistent):
+- **One hand.** Every drawn prop goes through `shape()` in `kit.js`: waxy two-layer pencil fill, paper flecks, and a heavy wobbly outline at `OUTLINE_K` = 1.5×. That's what lets the props sit next to the Jeff illustration.
+- **One palette.** Cream paper, the logo's yellow and blue, and the stamp red, plus ink and pencil grey (`BLUE`, `YEL`, `MRED`, `PALEBLUE`, `PINK`, `CREAM`). Money stays green.
+- **One sunburst.** Only for the logo payoff. The phone sits on a wall of pinned clippings with redaction bars. The cards sit on a case-file page with photo corners, pushpins and red string.
+- **The villain** is a small con man: fedora with a red band, popped collar on a slate-blue coat, red scarf, curly mustache and a bandit mask.
+- **The official logo is never altered.** Its shadow is pencil hatching masked by the logo's silhouette.
+
 All on-screen text is fitted to its box (`fitText` in `kit.js`), so nothing runs past a card, bubble or label.
 
 Jeff: `kit.js` gives him shoes (the reference drawing stops at the trouser hems). Whenever a raised arm is drawn, it also switches to a copy of the body with the side-hanging arm cut away, so he never has two arms on one side. Stamps are solid, so nothing behind them shows through the lettering.
