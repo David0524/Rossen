@@ -25,6 +25,7 @@ kenney/interface/pluck_002.ogg
 kenney/interface/scratch_001.ogg
 kenney/rpg/bookFlip2.ogg
 kenney/rpg/bookPlace1.ogg
+kenney/rpg/cloth1.ogg
 kenney/rpg/cloth2.ogg
 kenney/rpg/cloth3.ogg
 kenney/rpg/cloth4.ogg
@@ -91,7 +92,7 @@ vsco/Strings/Violin Section/Spic/VlnEns_Spic_B4_v2_rr1.wav
 vsco/Strings/Violin Section/Spic/VlnEns_Spic_C4_v2_rr1.wav
 vsco/Strings/Violin Section/Spic/VlnEns_Spic_D5_v2_rr1.wav
 vsco/Strings/Violin Section/Spic/VlnEns_Spic_E4_v2_rr1.wav
-vsco/Strings/Violin Section/Spic/VlnEns_Spic_G4_v2_rr1.wav
+vsco/VSCO 1 Percussion/drums/bass/bdrum_f_1.wav
 vsco/VSCO 1 Percussion/drums/bass/bdrum_ff_1.wav
 vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_f_1.wav
 vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_mf_1.wav
@@ -99,5 +100,4 @@ vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_rimshot_f_1.wav
 vsco/VSCO 1 Percussion/drums/tenor/tenor_higher/tenorH_ff_1.wav
 vsco/VSCO 1 Percussion/drums/tenor/tenor_lower/tenor_ff_1.wav
 vsco/Woodwinds/Clarinet/stac/DCClar_stac_A#3_v3_rr1_sum.wav
-vsco/Woodwinds/Clarinet/stac/DCClar_stac_D4_v3_rr1_sum.wav
 vsco/Woodwinds/Clarinet/stac/DCClar_stac_F3_v3_rr1_sum.wav

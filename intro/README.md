@@ -2,7 +2,7 @@
 
 There are two films:
 - `out/rossen-live-intro.mp4`: the story-style opener (table, scammer, deals).
-- `out/rossen-title-sequence/rossen-title-sequence.mp4`: the title sequence, cut to a 120 BPM cue (see below).
+- `out/rossen-title-sequence/rossen-title-sequence.mp4`: the title sequence, cut to a 144 BPM cue (see below).
 
 ## Opener 1: story
 
@@ -29,17 +29,17 @@ ffmpeg -y -i out/video.mp4 -i out/score_norm.wav -c:v copy -c:a aac -b:a 256k -s
 - Fonts: Bowlby One SC and Patrick Hand (OFL), and Permanent Marker (Apache 2.0), from google/fonts. The licences are in `assets/fonts/`.
 
 ## Opener 2: title sequence (20 s)
-`rossen-title-sequence.html` (drawing kit in `kit.js`) is one continuous piece at 120 BPM. One beat is 0.5 s, or 12 frames, so every cut and stamp lands on the music. Each scene after the countdown gets 3 s.
+`rossen-title-sequence.html` (drawing kit in `kit.js`) is one continuous piece at 144 BPM. One beat is 10 frames and one bar is 40 frames. The countdown and the run are one bar each, and every other scene is two bars, so every cut lands on a downbeat. The scenes are authored on their own clock; `SCENE_CLOCK` maps film time onto it bar by bar.
 
-| time | scene | transition out |
-|---|---|---|
-| 0–2 | pencil viewfinder, film-leader countdown 3-2-1, LIVE stamp at 1.5 | zoom into the LIVE dot, which opens as an iris |
-| 2–5 | parallax street, Jeff running, skid at 3.8, magnifier shoved at the camera | zoom through the lens |
-| 5–8 | giant phone "YOU WON $1,000!", scammer phishing for CLAIM NOW, SCAM! at 6.5 | phone tips to landscape, glitches to a feed, push into the screen |
-| 8–10.5 | hidden-camera feed; Jeff barges in at 8.75, CAUGHT! at 9.5, scammer bolts | whip pan (10.5–11) |
-| 11–13.65 | price tags drop on the eighths and get re-priced live, Jeff thumbs up, DEAL! at 12.5 | page turn |
-| 14–17 | four cards on the beats (SCAMS EXPOSED / HIDDEN CAMERA / WARNINGS / REAL DEALS), then a hold to read them | cards blast outward |
-| 17–20 | Jeff pops in, official logo paper-drops at 18.0 with confetti from behind it, LIVE stamp at 18.5, still from 19.0 | none |
+| film time | bars | scene | transition out |
+|---|---|---|---|
+| 0–1.67 | 1 | pencil viewfinder, 3-2-1 on beats 1-3, LIVE on beat 4 | zoom into the LIVE dot, which opens as an iris |
+| 1.67–3.33 | 1 | parallax street, Jeff running, skid, magnifier shoved at the camera | zoom through the lens |
+| 3.33–6.67 | 2 | phone "YOU WON $1,000!", scammer phishing for CLAIM NOW, SCAM! on the bar-3 downbeat (5.0) | phone tips, glitches to a feed, push into the screen |
+| 6.67–10.0 | 2 | hidden-camera feed; Jeff barges in, CAUGHT! at 8.33, scammer bolts | whip pan |
+| 10.0–13.33 | 2 | a price tag on every beat, re-priced live; Jeff thumbs up; DEAL! at 11.67 | page turn |
+| 13.33–16.67 | 2 | four cards, one per beat, then a bar's hold to read them | cards blast outward |
+| 16.67–20.0 | 2 | Jeff pops in; official logo floats down and lands on the last downbeat (18.33) with the final chord; LIVE stamp at 18.75; still from 19.0 | none |
 
 Jeff: `kit.js` gives him shoes (the reference drawing stops at the trouser hems). Whenever a raised arm is drawn, it also switches to a copy of the body with the side-hanging arm cut away, so he never has two arms on one side. Stamps are solid, so nothing behind them shows through the lettering.
 
