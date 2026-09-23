@@ -80,3 +80,14 @@ The score is a VSCO 2 CE orchestra (strings, brass fanfare and stabs, timpani, g
 - **Jeff** is a jointed paper-cutout puppet cut from the reference art (`tools/cut_casefile_jeff.py`: head, torso, two arms, two legs, with pivots in `assets/casefile/jeff_parts.json`). Yellow split pins show at the shoulder joint. The pointing finger and thumb are printed like his reference hands.
 - **Logos:** the screen-print logo appears as a sticker on the folder cover; the official logo is the final frame, drawn from the file with no texture or print finish over it.
 - **Score:** `python3 score_casefile.py`, then the same loudnorm and mux steps as opener 2 (in `out/rossen-casefile/`).
+
+### Vertical (9:16) version
+
+`rossen-casefile-vertical.html` renders the same film at 1080x1920 for TikTok, Reels and Shorts. Both pages load one script, `casefile.js`; the vertical page sets `window.CASEFILE_VERTICAL = true` and each scene switches to a portrait layout (a tall folder with L-I / V-E, the board panning down instead of across, the SCAM and CAUGHT Polaroids side by side above the fine print, tags in a 2x2 grid). Timing is identical, so it uses the same score:
+
+```
+node render.mjs --html rossen-casefile-vertical.html --all
+ffmpeg -y -i out/rossen-casefile-vertical/video.mp4 -i out/rossen-casefile/score_norm.wav -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart out/rossen-casefile-vertical/rossen-casefile-vertical.mp4
+```
+
+Stamps and text stay out of the platform UI zones (the top bar, and the bottom caption area below about y 1560).
