@@ -1,13 +1,15 @@
 """Soundtrack for the Rossen Reports title sequence (rossen-title-sequence.html), built only from recorded samples.
 
-Music: an original 19.5 s cue sequenced from VSCO 2 Community Edition orchestral samples plus the VSCO 1 drum kit (CC0):
+Music: an original 18 s cue sequenced from VSCO 2 Community Edition orchestral samples plus the VSCO 1 drum kit (CC0):
 drum groove (kick, snare, tenor toms, tambourine), driving spiccato strings, pizzicato bass, a brass news-theme fanfare,
 timpani, cymbal swells, xylophone and glockenspiel. Foley: Kenney CC0 packs.
-96 BPM: one beat = 0.625 s = 15 frames, one bar = 2.5 s. Eight bars, one per scene, every scene at the same pace:
-countdown | run | phone | hidden cam | deals | cards | logo arrives | logo lands (17.5 s) and rings out.
+96 BPM: one beat = 0.625 s = 15 frames, one bar = 2.5 s, one bar per scene.
+Arranged as ONE piece: after the countdown a single groove and bass line run unbroken to the logo, the chords move
+bar by bar, and big orchestral hits are saved for the five story beats (LIVE, SCAM!, CAUGHT!, DEAL!, the logo).
+Every sound effect sits on the grid (beats, eighths, or sixteenths for footsteps) exactly where its picture lands.
 """
 import numpy as np, subprocess, wave, sys, os, re, glob, math
-SR = 48000; DUR = 19.5
+SR = 48000; DUR = 18.0
 ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio')
 out = np.zeros((int(SR * DUR), 2), np.float32)
 _cache = {}
@@ -78,7 +80,10 @@ def timp(t, g=1.0, dur=None):
 BD, CRASH, CRASH_MF, SWELL = P + 'BDrumNewhit_v6_rr1_Sum.wav', P + 'cymbal-crash1_ff_rr1.wav', P + 'cymbal-crash1_mf_rr1.wav', P + 'susCymb1-cresc-Short_v1.wav'
 SN_ROLL, SN, TRI, CLAVE, TAMB = P + 'Snare2-rollNS_v5_rr1_Sum.wav', P + 'Snare2-HitNS_v3_rr1_Sum.wav', P + 'Triangle3-Hit_v2_rr1_Sum.wav', P + 'Claves1_Hit_v2_rr1_Sum.wav', P + 'Tamb1-Hit_v1_rr1_Sum.wav'
 K = 'kenney/'
-def fx(name, t, g=1.0, pan=0.0, dur=None): one(K + name, t, g, pan, dur)
+def fx(name, t, g=1.0, pan=0.0, dur=None):   # foley is placed so its ATTACK (first reach of half its peak) lands on t
+    if os.environ.get('PITCHED_ONLY'): return
+    x = load(K + name); env = np.abs(x).max(1); att = int(np.argmax(env >= .5 * env.max()))
+    USED.add(K + name); put(x, t - att / SR, g, pan, dur)
 
 BEAT = 0.625; E8, S16 = BEAT / 2, BEAT / 4
 B = lambda b: b * BEAT   # beat -> seconds (beat 0 = first frame = first downbeat)
@@ -127,104 +132,86 @@ def ostinato(t0, t1, notes, inst, g=.5, step=E8, dur=.16):
     k = 0; t = t0
     while t < t1 - 1e-6: inst(notes[k % len(notes)], t, g, dur=dur); t += step; k += 1
 
-def groove(b0, b1, g=.8, tamb_g=.16):   # kick on 1, the "and" of 2 and 3; snare on 2 and 4; tambourine eighths
+def groove(b0, b1, g=.75, tamb_g=.15):   # kick on 1, the "and" of 2 and 3; snare on 2 and 4; tambourine eighths
     for bb in range(int(b0), int(b1)):
         pos = bb % 4
         if pos in (0, 2): kick(B(bb), g)
-        if pos == 1: kick(B(bb + .5), g * .75)
-        if pos in (1, 3): snare(B(bb), .5)
+        if pos == 1: kick(B(bb + .5), g * .7)
+        if pos in (1, 3): snare(B(bb), .45)
     tamb(B(b0), B(b1), tamb_g)
-def pulse_bass(b0, b1, notes, inst=cpz, g=.75):   # eighth-note bass, one note per beat
-    for bb in range(int(b0), int(b1)):
-        n = notes[(bb - int(b0)) % len(notes)]; inst(n, B(bb), g, dur=.25); inst(n, B(bb + .5), g * .85, dur=.25)
+def bass(beats):   # eighth-note bass, one root per beat: {beat: note}
+    for bb, n in beats.items(): cpz(n, B(bb), .7, dur=.28); cpz(n, B(bb + .5), .6, dur=.28); cbp(n.replace('2', '1').replace('A1', 'A0').replace('B1', 'B0'), B(bb), .35, dur=.3)
+def strings(beats):   # viola eighths on chord tones: {beat: (lo, hi)}
+    for bb, (lo, hi) in beats.items(): vla(lo, B(bb), .38, dur=.2); vla(hi, B(bb + .5), .34, dur=.2)
+def downbeat(bb, g=.22): one(CRASH_MF, B(bb), g)   # scene changes: a light cymbal, no brass
 
-# ================= bar 1: countdown, 3-2-1-LIVE on the beats =================
+# ================= bar 1 (0-2.5): countdown =================
 for bb in (0, 1, 2):
-    tt = B(bb); timp(tt, .8); tuned(TOMH, tt, .45, -.32); snare(tt, .3); fx('interface/click_002.ogg', tt, .35); cbp('D1', tt, .6)
-roll_to(B(2), B(3), .45)
-for k, n in enumerate(['A3', 'C4', 'D4', 'E4']): vsp(n, B(2) + k * S16, .4 + .08 * k, dur=.13)
-hit(B(3), 'Dm', 1.0, .55); fx('impact/impactPunch_heavy_000.ogg', B(3), .6); fx('impact/impactWood_heavy_000.ogg', B(3), .4)   # LIVE
-for k, n in enumerate(['D4', 'F4', 'A4', 'D5']): vsp(n, B(3.5) + k * S16 / 2, .5 + .06 * k, dur=.08)
-swell_to(BAR(1), .35)
+    tt = B(bb); timp(tt, .75); tuned(TOMH, tt, .4, -.32); fx('interface/click_002.ogg', tt, .35); cbp('D1', tt, .55, dur=.4)
+roll_to(B(2), B(3), .4)
+hit(B(3), 'Dm', 1.0, .5); fx('impact/impactPunch_heavy_000.ogg', B(3), .55); fx('impact/impactWood_heavy_000.ogg', B(3), .35)   # LIVE
+for k, n in enumerate(['D4', 'F4', 'A4', 'D5']): vsp(n, B(3.5) + k * S16 / 2, .45 + .06 * k, dur=.08)   # rise into the dot
+swell_to(B(4), .3)
 
-# ================= bar 2: the run =================
-hit(BAR(1), 'Dm', .95, .5)
-groove(4, 8)
-pulse_bass(4, 6, ['D2']); pulse_bass(6, 7, ['Bb1']); pulse_bass(7, 8, ['C2'])
-ostinato(BAR(1), BAR(2), ['D3', 'A3', 'F3', 'A3'], vla, .45, E8, .2)
-for bb, n, d in [(4, 'D4', .26), (4.5, 'D4', .14), (5, 'F4', .26), (5.5, 'D4', .14), (6, 'A4', .5)]: tps(n, B(bb), .85, dur=d)
-stab(B(6), 'Bb', .55, bass=False); stab(B(7), 'C', .55, bass=False)
-for k in range(9): fx(f'impact/footstep_concrete_00{k % 5}.ogg', 2.56 + k * .17, .18, -.2)
-fx('impact/footstep_concrete_003.ogg', 4.05, .4); fx('rpg/cloth3.ogg', 4.05, .35); one(CRASH_MF, 4.05, .25)   # skid
-fx('rpg/metalClick.ogg', 4.35, .3, .2)
-roll_to(B(7), BAR(2), .35, TIMP_ROLL); swell_to(BAR(2), .3)
+# ================= the groove runs unbroken from bar 2 to the logo =================
+groove(4, 24)
+bass({4: 'D2', 5: 'D2', 6: 'Bb1', 7: 'C2',  8: 'D2', 9: 'D2', 10: 'D2', 11: 'Eb2',  12: 'D2', 13: 'Bb1', 14: 'Eb2', 15: 'Eb2',
+      16: 'D2', 17: 'D2', 18: 'D2', 19: 'A1',  20: 'D2', 21: 'F2', 22: 'G2', 23: 'A1'})
+strings({4: ('D3', 'A3'), 5: ('F3', 'A3'), 6: ('D3', 'F3'), 7: ('E3', 'G3'),  8: ('D3', 'A3'), 9: ('D3', 'A3'), 10: ('F3', 'A3'), 11: ('Eb3', 'G3'),
+         12: ('D3', 'A3'), 13: ('D3', 'F3'), 14: ('Eb3', 'G3'), 15: ('Eb3', 'Bb3'),  16: ('D3', 'A3'), 17: ('F#3', 'A3'), 18: ('F#3', 'A3'), 19: ('E3', 'A3'),
+         20: ('D3', 'F#3'), 21: ('F3', 'A3'), 22: ('G3', 'B3'), 23: ('A3', 'C#4')})
 
-# ================= bar 3: phone =================
-hit(BAR(2), 'Dm', .9, .45)
-fx('interface/pluck_001.ogg', 5.1, .35); fx('interface/pluck_002.ogg', 5.28, .35)               # bubble + button pop in
-for bb in range(8, 10): kick(B(bb), .7); one(RIM, B(bb + .5), .25, .1)
-ostinato(BAR(2), B(10), ['D4', 'D4', 'Eb4', 'D4'], vpz, .55, E8)
-pulse_bass(8, 10, ['D2'], cbp, .45)
-for k, n in enumerate(('A3', 'G#3', 'G3', 'F3')): cla(n, B(9) + k * S16, .5, dur=.14)           # scammer rises with the rod
-fx('rpg/creak1.ogg', 5.9, .2, .3)
-hit(B(10), 'Dm', 1.0, .6); fx('impact/impactPunch_heavy_001.ogg', B(10), .6)                    # SCAM! (beat 3)
-for k in range(6): vsp('D4' if k % 2 == 0 else 'Eb4', B(10) + .06 + k * S16 / 2, .5, dur=.07)
-stab(B(10.5), 'Dm', .55); stab(B(11), 'Eb', .75); kick(B(11), .6)                              # the phone tips
-fx('interface/glitch_002.ogg', 7.0, .4); fx('interface/glitch_003.ogg', 7.1, .3)
-roll_to(B(11), BAR(3), .45); swell_to(BAR(3), .3)
-for k, n in enumerate(['D4', 'F4', 'A4', 'D5']): vsp(n, B(11.5) + k * S16 / 2, .5, dur=.08)
+# ================= bar 2 (2.5-5): the run =================
+downbeat(4)
+for bb, n, d in [(4, 'D4', .28), (4.5, 'D4', .15), (5, 'F4', .28), (5.5, 'D4', .15), (6, 'A4', .55)]: tps(n, B(bb), .8, dur=d)   # the theme
+for k in range(8): fx(f'impact/footstep_concrete_00{k % 5}.ogg', B(4) + k * S16, .16, -.2)               # a footfall every 16th
+fx('impact/footstep_concrete_003.ogg', B(6), .4); fx('rpg/cloth3.ogg', B(6), .3); stab(B(6), 'Bb', .5, bass=False)   # skid on beat 3
+fx('rpg/metalClick.ogg', B(6.5), .3, .2)                                                                 # magnifier up
+roll_to(B(7), B(8), .32, TIMP_ROLL)                                                                      # through the lens
 
-# ================= bar 4: hidden camera =================
-kick(BAR(3), .9); stab(BAR(3), 'Dm', .7); one(CRASH_MF, BAR(3), .3)
-for bb in range(12, 14): kick(B(bb), .7); one(CLAVE, B(bb + .5), .25, .2)
-pulse_bass(12, 14, ['D2', 'D2'])
-fx('interface/confirmation_002.ogg', BAR(3) + .05, .15, .3)                                    # REC blip
-stab(B(13), 'Bb', .7); tuned(TOMH, B(13), .5, -.32); fx('impact/footstep_wood_001.ogg', 7.95, .35, -.4)   # Jeff barges in (beat 2)
-hit(B(14), 'Eb', 1.0, .6); fx('impact/impactPunch_heavy_002.ogg', B(14), .6)                   # CAUGHT! (beat 3)
-for k in range(4): fx(f'casino/card-slide-{k + 1}.ogg', 8.8 + k * .06, .2, .3)                 # cash flies
-for k, n in enumerate(['D5', 'C5', 'A4', 'G4', 'F4', 'E4', 'D4', 'C#4']): vpz(n, 9.05 + k * .045, .75)   # he bolts
-fx('rpg/cloth4.ogg', 9.5, .45); tomfill(9.5, BAR(4), .5, S16); swell_to(BAR(4), .3)           # whip pan
+# ================= bar 3 (5-7.5): phone =================
+downbeat(8, .18)
+fx('interface/pluck_001.ogg', B(8), .35); fx('interface/pluck_002.ogg', B(8.5), .35)                    # bubble, button
+for k, n in enumerate(('A3', 'G#3', 'G3', 'F3')): cla(n, B(9) + k * S16, .5, dur=.14)                   # scammer rises (beat 2)
+hit(B(10), 'Dm', 1.0, .55); fx('impact/impactPunch_heavy_001.ogg', B(10), .55)                          # SCAM! (beat 3)
+stab(B(11), 'Eb', .6)                                                                                   # phone tips (beat 4)
+fx('interface/glitch_002.ogg', B(11.5), .35)                                                            # screen becomes the feed
+roll_to(B(11.5), B(12), .35)
 
-# ================= bar 5: deals, D major =================
-hit(BAR(4), 'D', .95, .55)
-groove(16, 20)
-pulse_bass(16, 19, ['D2']); pulse_bass(19, 20, ['A1'])
-for k, n in enumerate(('D5', 'F#5', 'A5', 'D6')):                                               # a tag lands on each eighth
-    tl = BAR(4) + k * E8 + .16; xyl(n, tl, .9); fx('casino/card-place-2.ogg', tl, .2, .4); fx('interface/scratch_001.ogg', tl + .06, .12, .3)
-fx('interface/pluck_001.ogg', 10.45, .3)                                                         # Jeff pops up
-hit(B(18), 'D', 1.0, .5); fx('impact/impactPunch_heavy_000.ogg', B(18), .55)                   # DEAL! (beat 3)
-glk('D6', B(18), .6); glk('F#6', B(18.5), .5); glk('A6', B(19), .5)
-fx('rpg/bookFlip2.ogg', 12.1, .6); snare(12.1, .3)                                               # page turn
+# ================= bar 4 (7.5-10): hidden camera =================
+downbeat(12, .18); fx('interface/confirmation_002.ogg', B(12), .14, .3)                                 # REC
+stab(B(13), 'Bb', .6); fx('impact/footstep_wood_001.ogg', B(13), .35, -.4)                             # Jeff lands (beat 2)
+hit(B(14), 'Eb', 1.0, .55); fx('impact/impactPunch_heavy_002.ogg', B(14), .55)                          # CAUGHT! (beat 3)
+for k in range(3): fx(f'casino/card-slide-{k + 1}.ogg', B(14) + .05 + k * .07, .18, .3)                 # cash flies
+for k, n in enumerate(['D5', 'C5', 'A4', 'G4']): vpz(n, B(14.5) + k * S16, .7)                          # he bolts (beat 3.5)
+fx('rpg/cloth4.ogg', B(15), .4); tomfill(B(15), B(16), .45, S16)                                        # whip pan (beat 4)
 
-# ================= bar 6: four cards =================
+# ================= bar 5 (10-12.5): deals, D major =================
+downbeat(16)
+for k, n in enumerate(('D5', 'F#5', 'A5', 'D6')): tl = B(16 + k * .5); xyl(n, tl, .85); fx('casino/card-place-2.ogg', tl, .16, .4)   # tags land on eighths
+hit(B(18), 'D', 1.0, .5); fx('impact/impactPunch_heavy_000.ogg', B(18), .5)                             # DEAL! (beat 3)
+for k, n in enumerate(('D6', 'F#6', 'A6')): glk(n, B(18.5 + k * .5), .45)
+fx('rpg/bookFlip2.ogg', B(19.5), .55)                                                                   # page turn (beat 4.5)
+
+# ================= bar 6 (12.5-15): one card per beat, inside the groove =================
 for k, ch in enumerate(('D', 'F', 'G', 'A')):
-    tt = BAR(5) + k * E8; stab(tt, ch, .8); kick(tt, .7 if k == 0 else .45); fx('rpg/bookPlace1.ogg', tt, .45)
-    if k == 0: timp(tt, .8); one(CRASH_MF, tt, .35)
-groove(22, 24, .7); pulse_bass(22, 24, ['A1'])
-ostinato(B(22), BAR(6), ['A3', 'C#4', 'E4', 'C#4'], vla, .4, S16, .12)
-roll_to(B(23), BAR(6), .4)
+    tt = B(20 + k); stab(tt, ch, .6, bass=False); fx('rpg/bookPlace1.ogg', tt, .4)                      # each card: a paper slap + a chord, on the beat
+fx('rpg/cloth1.ogg', B(23.5), .3); roll_to(B(23), B(24), .35, TIMP_ROLL); swell_to(B(24), .35)          # the logo falls (beat 4.5)
 
-# ================= bar 7: the logo arrives =================
-hit(BAR(6), 'D', .85, .4); fx('rpg/cloth2.ogg', BAR(6), .4)                                     # cards drift away
-fx('interface/pluck_001.ogg', 15.25, .3)                                                         # Jeff pops in
-groove(24, 27, .65, .12); pulse_bass(24, 27, ['D2'], cpz, .6)
-for bb, n in ((25, 'D4'), (25.5, 'F#4'), (26, 'A4')): tps(n, B(bb), .75, dur=.24)
-fx('rpg/cloth1.ogg', 15.9, .3)                                                                   # the logo starts to fall
-tomfill(B(27), BAR(7), .5, S16); roll_to(B(26), BAR(7), .35, TIMP_ROLL); swell_to(BAR(7), .4)
-
-# ================= bar 8: the payoff (17.5 s) =================
-t = BAR(7)
-for n in ('D4', 'F#4', 'A4'): tpl(n, t, .95, dur=1.3, rel=.6)
-for n in ('D2', 'F#2', 'A2'): hnl(n, t, .9, dur=1.3, rel=.6)
-for n in ('D2', 'A1'): tbl(n, t, .85, dur=1.3, rel=.6)
-cbp('D1', t, 1.0); cpz('D2', t, .9); timp(t, 1.0); kick(t, 1.0); one(CRASH, t, .65); glk('D6', t, .6)
+# ================= bar 7 (15-18): the logo lands =================
+t = B(24)
+for n in ('D4', 'F#4', 'A4'): tpl(n, t, .95, dur=1.6, rel=.8)
+for n in ('D2', 'F#2', 'A2'): hnl(n, t, .9, dur=1.6, rel=.8)
+for n in ('D2', 'A1'): tbl(n, t, .85, dur=1.6, rel=.8)
+cbp('D1', t, 1.0); cpz('D2', t, .9); timp(t, 1.0); kick(t, 1.0); one(CRASH, t, .6); glk('D6', t, .55)
 fx('impact/impactSoft_heavy_000.ogg', t, .45)
-for k in range(2): fx(f'casino/card-fan-{k + 1}.ogg', t + .02 + k * .1, .25, (-.3, .3)[k])        # confetti
-snare(B(29), .6); one(TRI, B(29), .35); tps('D4', B(29), .7, dur=.3); hns('D2', B(29), .6, dur=.3)
-fx('impact/impactPunch_heavy_001.ogg', B(29), .5)                                               # LIVE stamp (beat 2)
+for k in range(2): fx(f'casino/card-fan-{k + 1}.ogg', t + k * .1, .22, (-.3, .3)[k])                   # cards blown away + confetti
+fx('interface/pluck_001.ogg', B(25), .28)                                                               # Jeff pops up (beat 2)
+snare(B(26), .55); one(TRI, B(26), .3); tps('D4', B(26), .65, dur=.35); hns('D2', B(26), .55, dur=.35)
+fx('impact/impactPunch_heavy_001.ogg', B(26), .45)                                                      # LIVE (beat 3)
 
 # ---------------- master ----------------
-fade = int(.8 * SR); out[-fade:] *= np.linspace(1, 0, fade)[:, None] ** 2
+fade = int(1.0 * SR); out[-fade:] *= np.linspace(1, 0, fade)[:, None] ** 2
 out = np.tanh(out * 1.1) / 1.1
 out *= (10 ** (-1 / 20)) / max(1e-6, np.abs(out).max())
 od = 'out/rossen-title-sequence'; os.makedirs(od, exist_ok=True)

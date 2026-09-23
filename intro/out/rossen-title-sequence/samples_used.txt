@@ -4,7 +4,6 @@ kenney/casino/card-place-2.ogg
 kenney/casino/card-slide-1.ogg
 kenney/casino/card-slide-2.ogg
 kenney/casino/card-slide-3.ogg
-kenney/casino/card-slide-4.ogg
 kenney/impact/footstep_concrete_000.ogg
 kenney/impact/footstep_concrete_001.ogg
 kenney/impact/footstep_concrete_002.ogg
@@ -19,17 +18,13 @@ kenney/impact/impactWood_heavy_000.ogg
 kenney/interface/click_002.ogg
 kenney/interface/confirmation_002.ogg
 kenney/interface/glitch_002.ogg
-kenney/interface/glitch_003.ogg
 kenney/interface/pluck_001.ogg
 kenney/interface/pluck_002.ogg
-kenney/interface/scratch_001.ogg
 kenney/rpg/bookFlip2.ogg
 kenney/rpg/bookPlace1.ogg
 kenney/rpg/cloth1.ogg
-kenney/rpg/cloth2.ogg
 kenney/rpg/cloth3.ogg
 kenney/rpg/cloth4.ogg
-kenney/rpg/creak1.ogg
 kenney/rpg/metalClick.ogg
 vsco/Brass/F Horn/stac/MOHorn_stac_A#1_v2_rr1.wav
 vsco/Brass/F Horn/stac/MOHorn_stac_A2_v2_rr1.wav
@@ -52,7 +47,6 @@ vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_G3_v3_rr1.wav
 vsco/Brass/Trumpet/susvib/Sum_SHTrumpet_susvib_A4_v2_rr1.wav
 vsco/Brass/Trumpet/susvib/Sum_SHTrumpet_susvib_D4_v2_rr1.wav
 vsco/Brass/Trumpet/susvib/Sum_SHTrumpet_susvib_F4_v2_rr1.wav
-vsco/Percussion/Claves1_Hit_v2_rr1_Sum.wav
 vsco/Percussion/Glock/glock_medium_C6.wav
 vsco/Percussion/Glock/glock_medium_G6.wav
 vsco/Percussion/Snare2-rollNS_v5_rr1_Sum.wav
@@ -70,7 +64,6 @@ vsco/Percussion/susCymb1-cresc-Short_v1.wav
 vsco/Strings/Cello Section/pizzT/pizzT_B1_v2_RR1.wav
 vsco/Strings/Cello Section/pizzT/pizzT_D2_v2_RR1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_A#0_v1_rr1.wav
-vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_C#2_v1_rr1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_D1_v1_rr1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_E1_v1_rr1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_F#1_v1_rr1.wav
@@ -78,23 +71,16 @@ vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_G#1_v1_rr1.wav
 vsco/Strings/Viola Section/spic/Violas_spic_A3_v2_rr1.wav
 vsco/Strings/Viola Section/spic/Violas_spic_C4_v2_rr1.wav
 vsco/Strings/Viola Section/spic/Violas_spic_D3_v2_rr1.wav
-vsco/Strings/Viola Section/spic/Violas_spic_E4_v2_rr1.wav
 vsco/Strings/Viola Section/spic/Violas_spic_F3_v2_rr1.wav
 vsco/Strings/Violin Section/Pizz/VlnEns_Pizz_B4_v2_rr1.wav
-vsco/Strings/Violin Section/Pizz/VlnEns_Pizz_C4_v2_rr1.wav
 vsco/Strings/Violin Section/Pizz/VlnEns_Pizz_D5_v2_rr1.wav
-vsco/Strings/Violin Section/Pizz/VlnEns_Pizz_E4_v2_rr1.wav
 vsco/Strings/Violin Section/Pizz/VlnEns_Pizz_G4_v2_rr1.wav
-vsco/Strings/Violin Section/Spic/VlnEns_Spic_A3_v2_rr1.wav
 vsco/Strings/Violin Section/Spic/VlnEns_Spic_B4_v2_rr1.wav
-vsco/Strings/Violin Section/Spic/VlnEns_Spic_C4_v2_rr1.wav
 vsco/Strings/Violin Section/Spic/VlnEns_Spic_D5_v2_rr1.wav
 vsco/Strings/Violin Section/Spic/VlnEns_Spic_E4_v2_rr1.wav
 vsco/VSCO 1 Percussion/drums/bass/bdrum_f_1.wav
 vsco/VSCO 1 Percussion/drums/bass/bdrum_ff_1.wav
 vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_f_1.wav
-vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_mf_1.wav
-vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_rimshot_f_1.wav
 vsco/VSCO 1 Percussion/drums/tenor/tenor_higher/tenorH_ff_1.wav
 vsco/VSCO 1 Percussion/drums/tenor/tenor_lower/tenor_ff_1.wav
 vsco/Woodwinds/Clarinet/stac/DCClar_stac_A#3_v3_rr1_sum.wav

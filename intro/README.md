@@ -28,19 +28,20 @@ ffmpeg -y -i out/video.mp4 -i out/score_norm.wav -c:v copy -c:a aac -b:a 256k -s
   - Only the samples used are bundled under `audio/`, with their licences. Both sources are public domain, so no credit line is required.
 - Fonts: Bowlby One SC and Patrick Hand (OFL), and Permanent Marker (Apache 2.0), from google/fonts. The licences are in `assets/fonts/`.
 
-## Opener 2: title sequence (19.5 s)
-`rossen-title-sequence.html` (drawing kit in `kit.js`) is one continuous piece at 96 BPM. One beat is 0.625 s, or 15 frames, and one bar is 2.5 s. **Every scene is exactly one bar and plays at natural speed**, so picture and music share one steady pulse, with no speed-ups, slow-downs or held frames. Each scene puts its key hit on a beat.
+## Opener 2: title sequence (18 s)
+`rossen-title-sequence.html` (drawing kit in `kit.js`) is one continuous piece at 96 BPM. One beat is 0.625 s, or 15 frames, and one bar is 2.5 s. Every scene is one bar and plays at natural speed. Every landing (numbers, stamps, tags, cards, logo) finishes on its beat or eighth, at the same moment as its sound.
 
-| bar | film time | scene | on the beats |
+| bar | film time | scene | on the grid |
 |---|---|---|---|
-| 1 | 0–2.5 | countdown | 3 / 2 / 1 / LIVE on beats 1–4; zoom into the LIVE dot |
-| 2 | 2.5–5.0 | the run | running, skid, magnifier at the lens, zoom through |
-| 3 | 5.0–7.5 | phone | scammer rises on beat 2, SCAM! on beat 3, phone tips on beat 4 |
-| 4 | 7.5–10.0 | hidden camera | Jeff barges in on beat 2, CAUGHT! on beat 3, whip pan |
-| 5 | 10.0–12.5 | deals | tags on eighths, DEAL! on beat 3, page turn |
-| 6 | 12.5–15.0 | cards | four cards on eighths, then read them |
-| 7 | 15.0–17.5 | logo arrives | cards drift away (0.7 s), Jeff pops in, logo floats down |
-| 8 | 17.5–19.5 | logo | lands on the downbeat with the final chord, LIVE on beat 2, still from 18.4 |
+| 1 | 0–2.5 | countdown | 3 / 2 / 1 / LIVE on beats 1–4, zoom into the LIVE dot |
+| 2 | 2.5–5.0 | the run | sprint on beats 1–2 (a footfall every 16th), skid on 3, magnifier on 3½, lens on 4 |
+| 3 | 5.0–7.5 | phone | bubble on 1, button on 1½, scammer on 2, SCAM! on 3, phone tips on 4 |
+| 4 | 7.5–10.0 | hidden camera | Jeff lands on 2, CAUGHT! on 3, scammer bolts on 3½, whip pan from 4 |
+| 5 | 10.0–12.5 | deals | tags land on eighths 1–2½, Jeff up on 2, DEAL! on 3, page turn on 4½ |
+| 6 | 12.5–15.0 | cards | one card per beat (mirrors the countdown); the logo starts falling on 4½ |
+| 7 | 15.0–18.0 | logo | lands on the downbeat and blows the cards away, Jeff up on 2, LIVE on 3, still from 16.6, chord rings out |
+
+The score (`score_title.py`) is arranged as one piece. After the countdown, a single groove and bass line run unbroken to the logo, with the chords moving bar by bar (Dm–Bb–C | Dm–Eb | D–Bb–Eb | D–A | D–F–G–A | D). Big orchestral hits are saved for the five story beats: LIVE, SCAM!, CAUGHT!, DEAL! and the logo. Scene changes get only a light cymbal.
 
 All on-screen text is fitted to its box (`fitText` in `kit.js`), so nothing runs past a card, bubble or label.
 
