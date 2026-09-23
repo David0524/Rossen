@@ -124,3 +124,17 @@ Stamps and text stay out of the platform UI zones (the top bar, and the bottom c
 | 6 | 12.5–15 | held; the rubber stamp lands on 2.5 and lifts off the official logo, still for the last 1.3 s |
 
 "Zelle" appears only as plain system-font text in the account's payment line. Score: `python3 score_live.py`, then loudnorm (I -16, TP -2) and `alimiter=limit=0.7` (the AAC encode overshoots a little), then mux. Multi-transient foley (coins, card fans) is aligned by its first audible transient (`fx_first`), not its loudest.
+
+## Quiz: "SCAM OR LEGIT?" (9:16, 42.5 s)
+
+`rossen-scam-or-legit.html` (script `quiz.js`) is a three-round play-along quiz for TikTok, Reels and Shorts in the approved case-file palette, built on `printkit.js` and `vertkit.js`. 96 BPM; every round is 5 bars: SHOW (1) · PAUSE with an 8-beat countdown (2) · REVEAL, where the SCAM/LEGIT stamp lands on beat 1 and a flag is highlighted and labelled on each following beat (1) · TAKEAWAY (1). The phone never moves while there is something to read; it slides to the next round on the last beat.
+
+| bars | round | answer | marked | takeaway |
+|---|---|---|---|---|
+| 1–5 | unpaid toll text | SCAM | PAY TODAY · SMALL FEE · LINK | DON'T CLICK. CHECK YOUR TOLL ACCOUNT YOURSELF. |
+| 6–10 | verification code | LEGIT | YOU ASKED FOR IT · NO LINK · NO REQUEST | NEVER READ A CODE TO ANYONE WHO CALLS. |
+| 11–15 | fraud alert, reply Y/N | SCAM | URGENT · REPLY YES OR NO | DON'T REPLY. CALL THE NUMBER ON YOUR CARD. |
+| 16–17 | HOW MANY DID YOU GET RIGHT? COMMENT YOUR SCORE. (a full bar), then the official logo, still for the last 1.1 s | | | |
+
+- Flags are marked with a highlighter swiped *under* the words (yellow for scam flags, a pale tint of the logo blue for safe reasons), so no mark ever crosses a letter; each labelled chip pops on the same beat as its highlight. The Scammer appears only in scam reveals: caught in a spotlight beside the phone, then yanked off by a vaudeville hook.
+- Score: `python3 score_quiz.py`, then loudnorm (I -15.4, TP -2), `alimiter=limit=0.7`, mux. Two answer stings come from Kenney's Digital Audio pack (CC0, licence in `audio/kenney/digital/`). `HITS_ONLY=1 python3 score_quiz.py` writes `score_hits.wav` with the groove, rolls, fills and clock muted, for checking each hit's onset against its picture beat without neighbouring sounds.

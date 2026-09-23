@@ -17,3 +17,4 @@ out/*/*.jpg
 out/*/score_music.wav
 out/*/score_sfx.wav
 out/*_check/
+out/*/score_hits.wav
