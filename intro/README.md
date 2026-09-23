@@ -28,18 +28,20 @@ ffmpeg -y -i out/video.mp4 -i out/score_norm.wav -c:v copy -c:a aac -b:a 256k -s
   - Only the samples used are bundled under `audio/`, with their licences. Both sources are public domain, so no credit line is required.
 - Fonts: Bowlby One SC and Patrick Hand (OFL), and Permanent Marker (Apache 2.0), from google/fonts. The licences are in `assets/fonts/`.
 
-## Opener 2: title sequence
-`rossen-title-sequence.html` (drawing kit in `kit.js`) is one continuous piece at 120 BPM. One beat is 0.5 s, or 12 frames, so every cut and stamp lands on the music:
+## Opener 2: title sequence (20 s)
+`rossen-title-sequence.html` (drawing kit in `kit.js`) is one continuous piece at 120 BPM. One beat is 0.5 s, or 12 frames, so every cut and stamp lands on the music. Each scene after the countdown gets 3 s.
 
 | time | scene | transition out |
 |---|---|---|
-| 0–1.75 | pencil viewfinder, film-leader countdown 3-2-1, LIVE stamp at 1.5 | zoom into the LIVE dot, which opens as an iris |
-| 2–4 | parallax street, Jeff running, skid, magnifier shoved at the camera | zoom through the lens |
-| 4–6 | giant phone "YOU WON $1,000!", scammer phishing for CLAIM NOW, SCAM! at 5.0 | phone tips to landscape, glitches to a feed, push into the screen |
-| 6–7.5 | hidden-camera feed; Jeff barges in, CAUGHT! at 7.0, scammer bolts | whip pan |
-| 8–9.75 | price tags drop on the eighths and get re-priced live, Jeff thumbs up, DEAL! at 9.0 | page turn |
-| 10–12 | four cards on the beats: SCAMS EXPOSED / HIDDEN CAMERA / WARNINGS / REAL DEALS | cards blast outward |
-| 12–15 | Jeff pops in, official logo paper-drops at 13.0 with confetti, LIVE stamp at 13.5, still from 14.0 | none |
+| 0–2 | pencil viewfinder, film-leader countdown 3-2-1, LIVE stamp at 1.5 | zoom into the LIVE dot, which opens as an iris |
+| 2–5 | parallax street, Jeff running, skid at 3.8, magnifier shoved at the camera | zoom through the lens |
+| 5–8 | giant phone "YOU WON $1,000!", scammer phishing for CLAIM NOW, SCAM! at 6.5 | phone tips to landscape, glitches to a feed, push into the screen |
+| 8–10.5 | hidden-camera feed; Jeff barges in at 8.75, CAUGHT! at 9.5, scammer bolts | whip pan (10.5–11) |
+| 11–13.65 | price tags drop on the eighths and get re-priced live, Jeff thumbs up, DEAL! at 12.5 | page turn |
+| 14–17 | four cards on the beats (SCAMS EXPOSED / HIDDEN CAMERA / WARNINGS / REAL DEALS), then a hold to read them | cards blast outward |
+| 17–20 | Jeff pops in, official logo paper-drops at 18.0 with confetti from behind it, LIVE stamp at 18.5, still from 19.0 | none |
+
+Jeff: `kit.js` gives him shoes (the reference drawing stops at the trouser hems). Whenever a raised arm is drawn, it also switches to a copy of the body with the side-hanging arm cut away, so he never has two arms on one side. Stamps are solid, so nothing behind them shows through the lettering.
 
 ```bash
 node render.mjs --html rossen-title-sequence.html --all      # -> out/rossen-title-sequence/video.mp4

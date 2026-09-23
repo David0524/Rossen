@@ -57,14 +57,12 @@ function liveBadge(w, h, dotOn = true) {
   const pad = 20, o = document.createElement('canvas'); o.width = w + pad * 2; o.height = h + pad * 2; const g = o.getContext('2d'); g.translate(pad, pad);
   const r = rng(w), pts = rrPts(0, 0, w, h, h * .22, 8).map(([x, y]) => [x + (r() - .5) * 2.4, y + (r() - .5) * 2.4]);
   g.fillStyle = RED; g.fill(polyPath(pts));
-  g.globalCompositeOperation = 'destination-out';
   const fs = h * .66; g.font = `${fs}px Stamp`; g.textAlign = 'left'; g.textBaseline = 'middle';
   const tw = g.measureText('LIVE').width, dotR = h * .15, gap = h * .2, total = dotR * 2 + gap + tw, x0 = (w - total) / 2;
-  g.fillText('LIVE', x0 + dotR * 2 + gap, h * .56);
-  g.globalCompositeOperation = 'source-over';
+  g.fillStyle = PAPER; g.fillText('LIVE', x0 + dotR * 2 + gap, h * .56);
   if (dotOn) { g.fillStyle = PAPER; g.beginPath(); g.arc(x0 + dotR, h * .5, dotR, 0, TAU); g.fill(); }
   else { g.globalCompositeOperation = 'destination-out'; g.lineWidth = Math.max(2, h * .035); g.beginPath(); g.arc(x0 + dotR, h * .5, dotR * .8, 0, TAU); g.stroke(); g.globalCompositeOperation = 'source-over'; }
-  g.setTransform(1, 0, 0, 1, 0, 0); inkTexture(g, o.width, o.height, w + 7, w * h / 55);
+  g.setTransform(1, 0, 0, 1, 0, 0); inkTexture(g, o.width, o.height, w + 7, w * h / 160);
   o.dot = [pad + x0 + dotR, pad + h * .5, dotR];
   return CACHE[key] = o;
 }
@@ -207,9 +205,10 @@ function wordStamp(word, o = {}) {
   const g = cv.getContext('2d'); g.translate(pad, pad); const r = rng(seed);
   const rough = (ins, rr) => rrPts(ins, ins, w - ins * 2, h - ins * 2, rr, 5).map(([x, y]) => [x + (r() - .5) * 2.4, y + (r() - .5) * 2.4]);
   g.font = `${size}px Stamp`; g.textAlign = 'center'; g.textBaseline = 'middle';
-  if (style === 'fill') { g.fillStyle = color; g.fill(polyPath(rough(0, h * .2))); g.globalCompositeOperation = 'destination-out'; g.fillText(word, w / 2, h * .54); g.globalCompositeOperation = 'source-over'; }
-  else { g.strokeStyle = color; g.lineJoin = 'round'; g.lineWidth = size * .075; g.stroke(polyPath(rough(size * .04, 16))); g.lineWidth = size * .03; g.stroke(polyPath(rough(size * .15, 10))); g.fillStyle = color; g.fillText(word, w / 2, h * .54); }
-  g.setTransform(1, 0, 0, 1, 0, 0); inkTexture(g, cv.width, cv.height, seed + 5, cv.width * cv.height / 45);
+  // solid, like a sticker slapped on: nothing underneath shows through the word
+  if (style === 'fill') { g.fillStyle = color; g.fill(polyPath(rough(0, h * .2))); g.fillStyle = '#fbf8f0'; g.fillText(word, w / 2, h * .54); }
+  else { g.fillStyle = '#fbf8f0'; g.fill(polyPath(rough(0, 18))); g.strokeStyle = color; g.lineJoin = 'round'; g.lineWidth = size * .075; g.stroke(polyPath(rough(size * .04, 16))); g.lineWidth = size * .03; g.stroke(polyPath(rough(size * .15, 10))); g.fillStyle = color; g.fillText(word, w / 2, h * .54); }
+  g.setTransform(1, 0, 0, 1, 0, 0); inkTexture(g, cv.width, cv.height, seed + 5, cv.width * cv.height / 400);
   return CACHE[key] = cv;
 }
 // paper: warm stock with fibres and flecks, drawn once
@@ -237,17 +236,40 @@ function drawHand(c, hc, mode, dir, k, seed = 520) {
   if (mode === 'point') { const b0 = [hc[0] + dir[0] * 10 * f, hc[1] + dir[1] * 10 * f], tip = [hc[0] + dir[0] * 64 * f, hc[1] + dir[1] * 64 * f]; shape(c, capsulePts(b0, tip, 10.5 * f, 8), SKIN, seed + 1, { lw: 4, hc: '#c98457' }); }
   else { c.strokeStyle = INK; c.lineWidth = 2.5; c.lineCap = 'round'; for (let q = 0; q < 2; q++) { c.beginPath(); c.moveTo(hc[0] + 6 * f, hc[1] - 8 * f + q * 12 * f); c.lineTo(hc[0] + 18 * f, hc[1] - 8 * f + q * 12 * f); c.stroke(); } }
 }
-// p: {bob, tilt, sx, sy, lift:[l, r], hop}; armFn(Sw, rest) -> null | {mode, hand, dir}
+// Shoes: the reference drawing stops at the trouser hems, so each leg gets a shoe (sprite px).
+const FOOT = 24;   // shoe sole sits this far below the hem
+const SHOES = [{ x0: 118, x1: 238, toe: -1, seed: 540 }, { x0: 276, x1: 384, toe: 1, seed: 545 }];
+function shoe(c, S, lift) {
+  const y0 = AY - 16 - lift, y1 = AY + FOOT - lift, m = (S.x0 + S.x1) / 2, w = S.x1 - S.x0, tx = S.toe * 14;
+  const pts = [[S.x0 + 6 + (S.toe < 0 ? tx : 0), y1], [S.x1 - 6 + (S.toe > 0 ? tx : 0), y1], [S.x1 + (S.toe > 0 ? tx : 0), y1 - 14], [S.x1 - 6, y0 + 4], [S.x0 + 6, y0 + 4], [S.x0 + (S.toe < 0 ? tx : 0), y1 - 14]];
+  shape(c, pts, '#4a3326', S.seed, { lw: 6, hc: '#2e1f17', ha: .5, fleck: 90, fa: .25 });
+  c.save(); c.strokeStyle = 'rgba(255,240,220,.55)'; c.lineWidth = 5; c.lineCap = 'round'; c.beginPath(); c.moveTo(m + S.toe * w * .18 - 16, y0 + 12); c.lineTo(m + S.toe * w * .18 + 10, y0 + 10); c.stroke(); c.restore();
+  crayon(c, [[S.x0 + 4 + (S.toe < 0 ? tx : 0), y1 - 5], [S.x1 - 4 + (S.toe > 0 ? tx : 0), y1 - 5]], '#1e1712', 3, S.seed + 4, false);
+}
+// body copy without the arm that hangs at his side (right of the jacket's inner crayon line), for poses with a raised arm
+function bodyNoArm() {
+  if (IMG.bodyNoArm) return IMG.bodyNoArm;
+  const o = document.createElement('canvas'); o.width = IMG.body.width; o.height = IMG.body.height; const g = o.getContext('2d'); g.drawImage(IMG.body, 0, 0);
+  g.globalCompositeOperation = 'destination-out'; g.beginPath(); g.moveTo(392, 470);
+  for (let y = 470; y <= 622; y += 4) g.lineTo(388 + (y - 487) * 7 / 118 + 5, y);
+  g.lineTo(470, 622); g.lineTo(470, 470); g.closePath(); g.fill();
+  g.globalCompositeOperation = 'source-over';
+  crayon(g, Array.from({ length: 40 }, (_, k) => { const y = 480 + k * 3.6; return [388 + (y - 487) * 7 / 118 + 3, y]; }), '#26211d', 7, 560, false);
+  return IMG.bodyNoArm = o;
+}
+// p: {bob, tilt, sx, sy, lift:[l, r], hop}; armFn(Sw, rest) -> null | {mode, hand, dir}. (x, gy) = between the soles.
 function drawJeff(c, x, gy, k, p = {}, armFn = null) {
   const { bob = 0, tilt = 0, sx = 1, sy = 1, lift = [0, 0], hop = 0 } = p;
   const base = c.getTransform();
-  c.save(); c.translate(x, gy - hop); c.rotate(tilt); c.scale(k * sx, k * sy);
+  c.save(); c.translate(x, gy - hop); c.rotate(tilt); c.scale(k * sx, k * sy); c.translate(0, -FOOT);
   const M = base.inverse().multiply(c.getTransform());
-  c.drawImage(IMG.legL, -AX, -AY - lift[0]); c.drawImage(IMG.legR, -AX, -AY - lift[1]); c.drawImage(IMG.body, -AX, -AY - bob);
-  c.restore();
-  if (!armFn) return null;
   const Mb = M.translate(-AX, -AY - bob), sp = Mb.transformPoint(new DOMPoint(...SHOULDER)), rp = Mb.transformPoint(new DOMPoint(430, 640));
-  const Sw = [sp.x, sp.y], A = armFn(Sw, [rp.x, rp.y]); if (!A) return { Sw };
+  const Sw = [sp.x, sp.y], A = armFn ? armFn(Sw, [rp.x, rp.y]) : null;
+  c.drawImage(IMG.legL, -AX, -AY - lift[0]); c.drawImage(IMG.legR, -AX, -AY - lift[1]);
+  c.save(); c.translate(-AX, -AY); shoe(c, SHOES[0], lift[0]); shoe(c, SHOES[1], lift[1]); c.restore();
+  c.drawImage(A ? bodyNoArm() : IMG.body, -AX, -AY - bob);
+  c.restore();
+  if (!A) return armFn ? { Sw } : null;
   const arm = drawArm(c, Sw, A.hand, k);
   if (A.mode !== 'glass') drawHand(c, arm.hc, A.mode, A.dir, k);
   return { ...arm, mode: A.mode, Sw };
