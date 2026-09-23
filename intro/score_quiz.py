@@ -187,7 +187,9 @@ for ri, (b, scam, n) in enumerate(ROUNDS):
     for k in range(8 if not HO else 0):
         tt = AT(b + 1) + k * BEAT; fx('interface/tick_002.ogg', tt, .5); one(CLAVE, tt, .22); fx('interface/tick_001.ogg', tt + E8, .28)
         if k >= 5: xyl(('A5', 'B5', 'C#6')[k - 5], tt, .55); glk(('A5', 'B5', 'C#6')[k - 5], tt, .3)
-    roll_to(AT(b + 2, 3), AT(b + 3), .4)
+    roll_to(AT(b + 2, 3), AT(b + 2, 4), .4)
+    tl = AT(b + 2, 4); fx('rpg/metalLatch.ogg', tl, .55); stab(tl, 'A', .75); timp(tl, .6); roll_to(tl + .05, AT(b + 3), .3)   # LOCK IT IN!
+    fx('casino/card-place-1.ogg', AT(b + 3) + .1, .3); glk('A6', AT(b + 3) + .1, .3)                                  # the scorecard flips
     # REVEAL: stamp + answer sting, then one marker swipe per flag
     t0 = AT(b + 3)
     if scam: hit(t0, 'Dm', 1.0, .3); fx('impact/impactPunch_heavy_001.ogg', t0, .55); fx('interface/error_004.ogg', t0, .35); fx('digital/lowThreeTone.ogg', t0, .22)
@@ -203,6 +205,7 @@ for ri, (b, scam, n) in enumerate(ROUNDS):
 hit(AT(15), 'D', 1.0, .6); fx('impact/impactPunch_heavy_000.ogg', AT(15), .5)
 hit(AT(15, 1.5), 'D', .8, .3); fx('impact/impactPunch_heavy_001.ogg', AT(15, 1.5), .4)
 hit(AT(15, 2), 'G', .9, .4); fx('impact/impactPunch_heavy_002.ogg', AT(15, 2), .45)
+for i, nt in enumerate(('D5', 'A5', 'D6')): fx('casino/card-place-2.ogg', AT(15, 2) + i * S16, .3); xyl(nt, AT(15, 2) + i * S16, .45)   # the answers recap
 hit(AT(15, 2.5), 'A', .9, .4); fx('impact/impactPunch_heavy_000.ogg', AT(15, 2.5), .45)
 for bb, nt, d in [(3, 'D4', .15), (3.5, 'D4', .28), (4, 'F#4', .28)]: tps(nt, AT(15, bb), .8, dur=d)
 for bb, nt, d in [(1, 'A4', .5), (1.5, 'D5', .3)]: tps(nt, AT(16, bb), .8, dur=d)

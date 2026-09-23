@@ -86,19 +86,50 @@ function chip(c, s, x, y, size, bg, fg, t, t0, rot = 0) {
   c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-w / 2 + 8, -h / 2 + 10, w, h); c.restore();
   ink(c, rect(-w / 2, -h / 2, w, h), bg, 6100 + s.length, { amp: 3 }); inkText(c, s, 0, size * .06, size, 'Stamp', fg, 780); c.restore();
 }
+// the scorecard: one card per round. Future rounds show their number, the current round is highlighted, and an answered
+// round flips to its answer on the reveal, so the viewer can keep score as they play
+function scorecard(c, t, cur, y = 350, big = 1.22, t0 = -1) {
+  const W0 = [170 * big, 240 * big], gap = 18 * big, ws = ROUNDS.map((_, i) => i === cur ? W0[1] : W0[0]), tot = ws.reduce((a, v) => a + v, 0) + gap * 2;
+  let x = SCX - tot / 2;
+  ROUNDS.forEach((R, i) => { const w = ws[i], h = 66 * big, tr = at(R.b + R_REVEAL), done = t >= tr - .02, cx = x + w / 2; x += w + gap;
+    const tl = t0 >= 0 ? t0 + i * S16 : -1; if (tl >= 0 && t < tl - SLAM) return;
+    const flip = done && t < tr + .2 ? Math.abs(Math.cos(seg(t, tr, tr + .2) * Math.PI)) : 1, k = tl >= 0 ? pop(t, tl) : 1;
+    c.save(); c.translate(cx, y); c.scale(flip * k, k);
+    const bg = done ? (R.scam ? BLK : BLUE) : i === cur ? YEL : CHIP, fg = done ? CHIP : BLK;
+    c.save(); c.globalAlpha = .28; c.fillStyle = BLK; c.fillRect(-w / 2 + 7, -h / 2 + 8, w, h); c.restore();
+    block(c, rect(-w / 2, -h / 2, w, h), bg, 6500 + i, { kw: 4 });
+    inkText(c, done && !(t < tr + .1) ? (R.scam ? 'SCAM' : 'LEGIT') : i === cur ? `ROUND ${i + 1}` : String(i + 1), 0, 4 * big, 38 * big, 'Stamp', fg, w - 24 * big);
+    c.restore(); });
+}
+// the answer pads: [SCAM] OR [LEGIT?]. They take turns pulsing through the countdown, lock on its last beat, and on the
+// reveal the right one lights up and takes the stamp while the wrong one dims under an X
+const PAD = { y: 482, w: 330, h: 124, x: [SCX - 225, SCX + 225] };
+function pads(c, t, R, rn) {
+  const b = R.b, tp = at(b + R_PAUSE), tl = at(b + R_PAUSE + 1, 4), tr = at(b + R_REVEAL), shown = rn === 0 ? -1 : at(b) + E8;
+  if (t < shown - SLAM) return;
+  ['SCAM', 'LEGIT?'].forEach((lab, i) => {
+    const right = (i === 0) === R.scam, beat = Math.floor((t - tp) / BEAT), pulse = t >= tp && t < tl && beat % 2 === i ? 1 + .07 * Math.exp(-((t - tp) % BEAT) * 6) : 1;
+    let bg = i === 0 ? BLK : BLUE, fg = CHIP, k = pop(t, shown + i * S16) * pulse, dy = 0, lock = t >= tl - .02 && t < tr;
+    if (t >= tr - .02) { if (right) { bg = YEL; fg = BLK; k *= 1.1 + .1 * Math.exp(-(t - tr) * 8); } else { bg = '#cfc8b8'; fg = '#8a8478'; dy = 10 * easeOut(seg(t, tr, tr + .2)); } }
+    c.save(); c.translate(PAD.x[i], PAD.y + dy); c.scale(k, k); c.rotate(i ? .02 : -.02);
+    c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-PAD.w / 2 + 9, -PAD.h / 2 + 11, PAD.w, PAD.h); c.restore();
+    block(c, rrPts(-PAD.w / 2, -PAD.h / 2, PAD.w, PAD.h, 26, 5), bg, 6600 + i, { kw: lock ? 12 : 6 });
+    if (lock) key(c, rrPts(-PAD.w / 2 - 8, -PAD.h / 2 - 8, PAD.w + 16, PAD.h + 16, 30, 5), 6, 6610 + i, true, YEL);
+    inkText(c, lab, 0, 8, 88, 'Stamp', fg, PAD.w - 40); c.restore();
+    if (t >= tr - SLAM && !right) xMark(c, PAD.x[i], PAD.y + dy, .62, t, tr);
+  });
+  if (t < tr) chip(c, 'OR', SCX, PAD.y, 44, CHIP, BLK, t, shown, 0);
+  if (t >= tr - SLAM) { const i = R.scam ? 0 : 1; stampFit(c, R.scam ? 'SCAM!' : 'LEGIT!', R.scam ? BLK : BLUE, 200, PAD.x[i], PAD.y, R.scam ? -.05 : .04, 1, t, tr, 318, 1.3); }   // inside the lit pad, its yellow edge showing
+}
 function topBand(c, t, R, rn) {
-  const b = R.b, beatPulse = 1 + .03 * Math.max(0, Math.cos((t - at(b)) * TAU / BEAT));
-  if (t < at(b + R_REVEAL) - SLAM) {
-    chip(c, `ROUND ${rn + 1} OF 3`, SCX, 350, 56, BLUE, CHIP, t, rn === 0 ? -1 : at(b), -.02);
-    c.save(); c.translate(SCX, 478); const pz = t > at(b + R_PAUSE) ? beatPulse : 1; c.scale(pz, pz); c.translate(-SCX, -478);
-    chip(c, 'SCAM OR LEGIT?', SCX, 478, 96, BLK, CHIP, t, rn === 0 ? -1 : at(b) + E8, .015); c.restore();
-  } else if (t < at(b + R_TAKE) - SLAM) {
-    stampFit(c, R.scam ? 'SCAM!' : 'LEGIT!', R.scam ? BLK : BLUE, 230, SCX, 460, R.scam ? -.07 : .05, 1, t, at(b + R_REVEAL), 840);
-  } else R.take.forEach((s, i) => chip(c, s, SCX, 356 + i * 104, 70, R.scam ? BLK : BLUE, CHIP, t, at(b + R_TAKE) + i * E8, i % 2 ? .012 : -.012));
+  const b = R.b;
+  if (t < at(b + R_TAKE) - SLAM) { scorecard(c, t, rn); pads(c, t, R, rn); }
+  else R.take.forEach((s, i) => chip(c, s, SCX, 356 + i * 104, 70, R.scam ? BLK : BLUE, CHIP, t, at(b + R_TAKE) + i * E8, i % 2 ? .012 : -.012));
 }
 // ================= the bottom band: countdown, then the labelled flags =================
 function countdown(c, t, R) {
-  const t0 = at(R.b + R_PAUSE), t1 = at(R.b + R_REVEAL); if (t < t0 - SLAM || t >= t1) return;
+  const t0 = at(R.b + R_PAUSE), t1 = at(R.b + R_REVEAL), tl = at(R.b + R_PAUSE + 1, 4); if (t < t0 - SLAM || t >= t1) return;
+  if (t >= tl - SLAM) { stampFit(c, 'LOCK IT IN!', BLK, 130, SCX, 1335, -.04, .9, t, tl, 760, 1.3); return; }   // the last beat
   const u = clamp01((t - t0) / (t1 - t0)), n = Math.max(1, 8 - Math.floor((t - t0) / BEAT)), last = n <= 3;
   const x = 790, y = 1330, r = 88, k = pop(t, t0) * (last ? 1 + .08 * Math.max(0, Math.cos((t - t0) * TAU / BEAT)) : 1);
   c.save(); c.translate(x, y); c.scale(k, k);
@@ -155,7 +186,7 @@ function stage(c, t, rn, X) {   // one round's phone, marks and villain, offset 
   const R = ROUNDS[rn];
   c.save(); c.translate(X, 0); phone(c, R, t); flags(c, t, R); c.restore();
   // the villain pops up in front of the phone's top-right corner, clipped to the header so he never covers the message
-  c.save(); c.beginPath(); c.rect(X + 640, 470, 300, PH.y + 162 - 470); c.clip(); const v = villain(c, t, R, X); c.restore();
+  c.save(); c.beginPath(); c.rect(X + 640, 560, 300, PH.y + 162 - 560); c.clip(); const v = villain(c, t, R, X); c.restore();
   crook(c, t, R, v);
 }
 function roundAt(t) { for (let i = ROUNDS.length - 1; i >= 0; i--) if (t >= at(ROUNDS[i].b) - .01) return i; return 0; }
@@ -174,10 +205,11 @@ function sceneEnd(c, t) {   // bars 15-16
   const th = easeOutBack(seg(t, at(15, 2.5), at(15, 3)));
   jeffUp(c, t, at(15, 1.5), SCX, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: t > at(16) ? .05 * Math.sin((t - at(16)) * TAU / (2 * BEAT)) : 0 }, .7);
   c.save(); c.translate(sx, sy);
-  stampFit(c, 'HOW MANY DID', BLK, 150, SCX, 420, -.04, .95 * beatPulse, t, at(15), 840, 1.25);
-  stampFit(c, 'YOU GET RIGHT?', BLK, 150, SCX, 600, .03, .95 * beatPulse, t, at(15, 1.5), 840, 1.25);
-  stampFit(c, 'COMMENT', BLUE, 170, SCX, 820, -.03, 1 * beatPulse, t, at(15, 2), 840, 1.25);
-  stampFit(c, 'YOUR SCORE.', BLUE, 170, SCX, 1010, .03, 1 * beatPulse, t, at(15, 2.5), 840, 1.25);
+  stampFit(c, 'HOW MANY DID', BLK, 140, SCX, 400, -.04, .95 * beatPulse, t, at(15), 840, 1.25);
+  stampFit(c, 'YOU GET RIGHT?', BLK, 140, SCX, 560, .03, .95 * beatPulse, t, at(15, 1.5), 840, 1.25);
+  scorecard(c, t, -1, 722, 1.55, at(15, 2));   // the answers: SCAM, LEGIT, SCAM
+  stampFit(c, 'COMMENT YOUR SCORE:', BLUE, 120, SCX, 885, -.03, 1 * beatPulse, t, at(15, 2.5), 840, 1.25);
+  chip(c, '0, 1, 2 OR 3?', SCX, 1040, 92, BLK, CHIP, t, at(15, 2.5) + .01, .02);
   c.restore();
   const d = seg(t, at(16, 2.5), STAMP_T); if (d > 0) screenSpace(c, () => rubberStamp(c, easeIn(d)));   // a full bar of END text first
 }

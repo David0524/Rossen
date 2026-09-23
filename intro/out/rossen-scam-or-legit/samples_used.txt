@@ -19,6 +19,7 @@ kenney/interface/tick_001.ogg
 kenney/interface/tick_002.ogg
 kenney/rpg/bookPlace1.ogg
 kenney/rpg/cloth3.ogg
+kenney/rpg/metalLatch.ogg
 vsco/Brass/F Horn/stac/MOHorn_stac_A#1_v2_rr1.wav
 vsco/Brass/F Horn/stac/MOHorn_stac_A2_v2_rr1.wav
 vsco/Brass/F Horn/stac/MOHorn_stac_D2_v2_rr1.wav
