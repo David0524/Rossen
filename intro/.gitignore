@@ -14,3 +14,6 @@ out/*/score.wav
 out/*/score_norm.wav
 out/*/*.jpg
 !out/*/contact.jpg
+out/*/score_music.wav
+out/*/score_sfx.wav
+out/*_check/

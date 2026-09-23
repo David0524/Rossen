@@ -1,0 +1,17 @@
+ROSSEN REPORTS - FAKE MYCHART EMAIL SCAM - suggested voiceover for Jeff (44.5 s, 9:16)
+About 100 words at a relaxed pace. Each line fits its window; the on-screen captions say the same thing, so the video
+still works with the sound off. Leave the last 2 s (the logo) clear.
+
+0:00 - 0:05   Got an email that looks like it's from MyChart? New test results... a free Medicare health kit?
+0:05 - 0:10   And a countdown telling you to hurry? Careful. It's bait.
+0:10 - 0:15   Click that link, and you land on a fake website. It looks real. It's not.
+0:15 - 0:17   And it asks for everything.
+0:17 - 0:25   Your login. Your Medicare number. Your name and address. Your card. All reeled in by scammers.
+0:25 - 0:30   So here's how to stay safe. Don't click the link.
+0:30 - 0:35   Open the MyChart app yourself, or type in your provider's website.
+0:35 - 0:37   Then check if the message is really there.
+0:37 - 0:42   Don't click. Go to the app yourself.
+
+Mix note: the bed (bed_mix.wav) sits at -23 LUFS; record the voice at about -16 LUFS and it rides on top with no
+ducking needed. Stems are included (bed_music.wav, bed_sfx.wav) if you want to pull the music down further under
+specific lines.

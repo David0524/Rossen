@@ -27,7 +27,12 @@ setFormat({ ar: '9:16', width: 1080 });
 const FPS = 24, BEAT = .625, BAR = 2.5, E8 = BEAT / 2, S16 = BEAT / 4;
 const at = (bar, beat = 1) => bar * BAR + (beat - 1) * BEAT;   // bar 0-based, beat 1-based
 const DUR = at(17) + 2, NFR = Math.round(FPS * DUR);
-const SAFE = { x0: 60, x1: 900, y0: 300, y1: 1430 }, SCX = 480, SCY = 865;   // centre of the safe zone
+const SAFE = { x0: 60, x1: 900, y0: 300, y1: 1430 }, SCX = 480, SCY = 865;   // the layout is drawn around this centre...
+// ...then shown centred on the frame: content is scaled by K about the frame's centre line, so x 60-900 lands on 180-900
+// (symmetric about x 540 and still clear of the right 15%) and y 300-1430 on 381-1349. Backgrounds stay full-frame.
+const K = 720 / 840;
+function contentT(g) { resetT(g); g.translate(CX - SCX * K, SCY - SCY * K); g.scale(K, K); }
+function screenSpace(c, fn) { c.save(); resetT(c); fn(); c.restore(); }
 const L1 = layer(), L2 = layer();
 let SP = null, FILM_T = 0;
 const Q = new URLSearchParams(location.search), SHOW_SAFE = Q.has('safe');
@@ -36,7 +41,7 @@ const Q = new URLSearchParams(location.search), SHOW_SAFE = Q.has('safe');
 const clamp01 = v => Math.max(0, Math.min(1, v));
 const pop = (t, t0) => t < t0 ? lerp(1.3, 1, easeIn(land(t, t0))) : 1 + .06 * Math.exp(-(t - t0) * 12) * Math.cos((t - t0) * 30);   // lands on t0, wobbles
 function bgDots(c, col = BLUE, lo = .1, hi = .5, cell = 20) {
-  paperBg(c); dotScreen(c, polyPath(rect(0, 0, W, H)), [0, 0, W, H], { cell, color: col, density: (x, y) => lo + (hi - lo) * Math.min(1, Math.hypot(x - SCX, y - SCY) / 1100), angle: ANG[col] ?? .3, seed: 3001 });
+  paperBg(c); c.save(); resetT(c); dotScreen(c, polyPath(rect(0, 0, W, H)), [0, 0, W, H], { cell, color: col, density: (x, y) => lo + (hi - lo) * Math.min(1, Math.hypot(x - SCX, y - SCY) / 1100), angle: ANG[col] ?? .3, seed: 3001 }); c.restore();
 }
 function shadowRect(c, x, y, w, h, a = .28) { c.save(); c.globalAlpha = a; c.fillStyle = BLK; c.fillRect(x + 14, y + 18, w, h); c.restore(); }
 function pill(c, cx, cy, w, h, col, label, size, tcol = BLK, seed = 2101) { block(c, rrPts(cx - w / 2, cy - h / 2, w, h, h / 2, 5), col, seed, { kw: 6 }); inkText(c, label, cx, cy + 4, size, 'Stamp', tcol, w - 60); }
@@ -153,7 +158,7 @@ function sceneBait(c, t) {
   bgDots(c, BLUE, .08, .42);
   const { cy, z } = baitCam(t), up = easeIO(seg(t, at(3), at(3, 2))), dv = easeIn(seg(t, at(3, 4), at(4)));
   // the email scrolls inside a window that ends at the safe line; the window opens out to the full frame for the reveal
-  const VP = [lerp(80, -20, up), lerp(560, -20, up), lerp(800, W + 40, up), lerp(870, H + 40, up)];
+  const VP = [lerp(80, -400, up), lerp(560, -400, up), lerp(800, W + 800, up), lerp(870, H + 800, up)];
   c.save(); c.beginPath(); c.rect(...VP); c.clip();
   c.save(); c.translate(SCX, SCY); c.scale(z, z); c.translate(-SCX, -cy);
   water(c, -600, 3000, 3601, -2400, 3400);
@@ -169,8 +174,8 @@ function sceneBait(c, t) {
   c.restore();
   // deep water: below the safe line the hanging email sinks out of sight
   const deep = up * (1 - dv);
-  if (deep > 0) { dotScreen(c, polyPath(rect(0, 1290, W, 160)), [0, 1290, W, 160], { cell: 16, color: BLUE, density: (x, y) => deep * clamp01((y - 1290) / 150), angle: ANG[BLUE], seed: 3620 });
-    c.save(); c.globalAlpha = deep; ink(c, rect(-20, 1440, W + 40, H - 1400), BLUE, 3621, { amp: 5 }); c.restore(); }
+  if (deep > 0) { dotScreen(c, polyPath(rect(-400, 1290, W + 800, 160)), [-400, 1290, W + 800, 160], { cell: 16, color: BLUE, density: (x, y) => deep * clamp01((y - 1290) / 150), angle: ANG[BLUE], seed: 3620 });
+    c.save(); c.globalAlpha = deep; ink(c, rect(-400, 1440, W + 800, 1000), BLUE, 3621, { amp: 5 }); c.restore(); }
   c.restore();
   if (up < 1) { c.save(); c.globalAlpha = 1 - up; key(c, rrPts(...VP, 26, 4), 10, 3630); c.restore(); }
   // the pointer arrives on beat 4 and clicks on the downbeat of bar 4
@@ -240,7 +245,7 @@ function sceneSite(c, t) {
   const jin = easeOutBack(land(t, at(5))) * (1 - easeIn(seg(t, at(6), at(6) + .3)));
   if (jin > 0) {
     const raise = easeOut(seg(t, at(5, 2) - SLAM, at(5, 2)));
-    const J = jeff(c, 230, lerp(2500, 1840, jin), .7, { armR: lerp(0, -2.2, raise), head: -.06 * raise });
+    const J = jeff(c, 230, lerp(3000, 1840, jin), .7, { armR: lerp(0, -2.2, raise), head: -.06 * raise });
     if (raise > 0) { const target = [BR.x + 470, BR.y + 50 + dr], R = lerp(40, 120, raise), cx = lerp(J.hand[0] + 120, target[0], raise), cy = lerp(J.hand[1] - 160, target[1], raise);
       magnifier(c, cx, cy, R, J.hand, raise > .6 ? () => { c.translate(cx, cy); c.scale(1.9, 1.9); c.translate(-cx, -cy + dr); urlBar(c); } : null); }
   }
@@ -249,9 +254,9 @@ function sceneSite(c, t) {
 
 // ================= the loot, reeled in on the pier =================
 function scenePier(c, t, o = {}) {
-  if (o.fixBg) fixBg(c); else { bgDots(c, BLUE, .12, .45); water(c, 1300, 700, 3701); }
+  if (o.fixBg) fixBg(c); else { bgDots(c, BLUE, .12, .45); water(c, 1300, 1000, 3701, -400, W + 400); }
   const knock = o.knock ?? 0;   // bar 10: the logo slams and knocks him off
-  if (!o.noPier) pier(c, -60, 470, 1250);
+  if (!o.noPier) pier(c, -400, 470, 1250);
   const crank = t > at(9, 2.5) ? Math.sin((t - at(9, 2.5)) * TAU / E8) * .12 * Math.exp(-(t - at(9, 2.5)) * 1.5) : 0;
   const reel = -.1 - .22 * easeOut(seg(t, at(9, 2.5) - SLAM, at(9, 2.5))) + crank;
   const fx = 310 - knock * 800, fy = 1250 - knock * 600 + knock * knock * 300;
@@ -268,19 +273,19 @@ function scenePier(c, t, o = {}) {
 }
 function sceneRise(c, t) {   // bar 9: the camera rises from the empty fake site to the pier (each drawn whole, then slid)
   const off = easeIO(seg(t, at(9), at(9, 2))) * H, g1 = L1.getContext('2d'), g2 = L2.getContext('2d');
-  resetT(g1); sceneSite(g1, t); resetT(g2); scenePier(g2, t);
+  contentT(g1); sceneSite(g1, t); contentT(g2); scenePier(g2, t);
   c.save(); resetT(c); c.drawImage(L1, 0, off, W, H); c.drawImage(L2, 0, off - H, W, H); c.restore();
 }
 
 // ================= the fix =================
 function fixBg(c) { bgDots(c, BLUE, .06, .3); }
 function stickerLogo(c, x, y, lw, rot, s) { const im = IMG.sp, [bx, by, bw, bh] = IMG.spBox, lh = bh * lw / bw; c.save(); c.translate(x, y); c.rotate(rot); c.scale(s, s); c.drawImage(im, bx, by, bw, bh, -lw / 2, -lh / 2, lw, lh); c.restore(); }
-function jeffUp(c, t, t0, x, p = {}, s = .72) { const a = easeOutBack(land(t, t0)); if (t < t0 - SLAM) return null; return jeff(c, x, lerp(2600, 1830, a), s, p); }
+function jeffUp(c, t, t0, x, p = {}, s = .72) { const a = easeOutBack(land(t, t0)); if (t < t0 - SLAM) return null; return jeff(c, x, lerp(3000, 1830, a), s, p); }
 function scene10(c, t) {   // HERE'S HOW TO STAY SAFE
   const k = easeIn(seg(t, at(10), at(10) + .55)), fall = easeIn(seg(t, at(10), at(10) + .9));
   scenePier(c, t, { knock: k, fall, fixBg: t >= at(10), noPier: t >= at(10) });
   const [sx, sy] = shake(t, [[at(10), 18]]);
-  if (t >= at(10) && t < at(10) + .3) { c.save(); c.globalAlpha = 1 - seg(t, at(10), at(10) + .3); c.fillStyle = CHIP; c.fillRect(0, 0, W, H); c.restore(); }
+  if (t >= at(10) && t < at(10) + .3) { c.save(); c.globalAlpha = 1 - seg(t, at(10), at(10) + .3); resetT(c); c.fillStyle = CHIP; c.fillRect(0, 0, W, H); c.restore(); }
   stickerLogo(c, SCX + sx, 800 + sy, 720, -.03, lerp(1.9, 1, easeIn(land(t, at(10)))));
   const th = easeOutBack(seg(t, at(10, 2.5), at(10, 3)));
   jeffUp(c, t, at(10, 2), SCX, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null });
@@ -376,7 +381,7 @@ function sceneLine(c, t) {   // bars 15-16: the protection line
   c.restore();
   const th = easeOutBack(seg(t, at(15, 2), at(15, 2.4))), nod = t > at(16) ? .05 * Math.sin((t - at(16)) * TAU / (2 * BEAT)) : 0;
   jeffUp(c, t, at(15, 2), SCX, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: nod }, .74);
-  const d = seg(t, at(16, 4), at(17)); if (d > 0) rubberStamp(c, easeIn(d));
+  const d = seg(t, at(16, 4), at(17)); if (d > 0) screenSpace(c, () => rubberStamp(c, easeIn(d)));
 }
 const STAMP_FACE = [480, 830];
 function rubberStamp(c, u) {
@@ -390,24 +395,24 @@ function rubberStamp(c, u) {
 function rubberStampFlat(c) { const [hw, hh] = STAMP_FACE; c.save(); c.translate(CX, CY); c.scale(1.25, 1.25); block(c, rect(-hw, -hh, 2 * hw, 2 * hh), BLUE, 1801, { kw: 10 }); c.restore(); }
 function sceneSignoff(c, t) {
   paperBg(c);
-  // the official logo: exact file, no texture, no recolour, no distortion; centred in the safe zone; held still
-  const im = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 780, lh = bh * lw / bw;
-  c.drawImage(im, bx, by, bw, bh, SCX - lw / 2, SCY - lh / 2, lw, lh);
+  // the official logo: exact file, no texture, no recolour, no distortion; centred on the frame, inside the safe zone; held still
+  const im = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 720, lh = bh * lw / bw;
+  c.drawImage(im, bx, by, bw, bh, CX - lw / 2, SCY - lh / 2, lw, lh);
   const lift = seg(t, at(17), at(17) + .3);
   if (lift < 1) { c.save(); c.translate(0, -(H + 320) * easeIn(lift)); rubberStampFlat(c); c.restore(); }
 }
 
 // ================= assembly =================
 function zoomThrough(c, t, t0, t1, rect0, under, inner) {   // a window grows from rect0 to the full frame; inner scene drawn through it
-  const u = easeIO(seg(t, t0, t1)), [x0, y0, w0, h0] = rect0;
+  under(c);   // in content coordinates; the window itself grows in screen space to the full frame
+  const u = easeIO(seg(t, t0, t1)), x0 = CX + (rect0[0] - SCX) * K, y0 = SCY + (rect0[1] - SCY) * K, w0 = rect0[2] * K, h0 = rect0[3] * K;
   const x = lerp(x0, 0, u), y = lerp(y0, 0, u), w = lerp(w0, W, u), h = lerp(h0, H, u), k = lerp(w0 / W, 1, u);
-  under(c);
-  const g = L1.getContext('2d'); resetT(g); g.globalAlpha = 1; inner(g);
-  c.save(); c.beginPath(); c.rect(x, y, w, h); c.clip(); c.translate(x + w / 2, y + h / 2); c.scale(Math.max(k, w / W, h / H), Math.max(k, w / W, h / H)); c.drawImage(L1, -W / 2, -H / 2, W, H); c.restore();
-  if (u < 1) key(c, rect(x, y, w, h), 8, 4001);
+  const g = L1.getContext('2d'); contentT(g); g.globalAlpha = 1; inner(g);
+  c.save(); resetT(c); c.beginPath(); c.rect(x, y, w, h); c.clip(); c.translate(x + w / 2, y + h / 2); c.scale(Math.max(k, w / W, h / H), Math.max(k, w / W, h / H)); c.drawImage(L1, -W / 2, -H / 2, W, H); c.restore();
+  if (u < 1) screenSpace(c, () => key(c, rect(x, y, w, h), 8, 4001));
 }
 function drawScene(c, t) {
-  resetT(c);
+  contentT(c);
   if (t < at(4)) sceneBait(c, t);
   else if (t < at(4) + .45) zoomThrough(c, t, at(4), at(4) + .45, buttonRect(), g => sceneBait(g, at(4) - 1e-3), g => sceneSite(g, t));
   else if (t < at(9)) sceneSite(c, t);
@@ -417,10 +422,10 @@ function drawScene(c, t) {
   else if (t < at(14) + .45) zoomThrough(c, t, at(14), at(14) + .45, [PB.x, PB.y + 130, PB.w, PB.h - 130], g => sceneFix(g, at(14) - 1e-3), g => sceneInbox(g, t));
   else if (t < at(15)) sceneInbox(c, t);
   else if (t < at(17)) sceneLine(c, t);
-  else { sceneSignoff(c, t); return; }   // no print finish over the official logo
+  else { resetT(c); sceneSignoff(c, t); return; }   // screen space; no print finish over the official logo
   captions(c, t);
   printFinish(c);
-  if (SHOW_SAFE) { c.save(); c.strokeStyle = '#ff00ff'; c.lineWidth = 4; c.strokeRect(SAFE.x0, SAFE.y0, SAFE.x1 - SAFE.x0, SAFE.y1 - SAFE.y0); c.globalAlpha = .15; c.fillStyle = '#ff00ff'; c.fillRect(0, 0, W, 288); c.fillRect(0, 1440, W, 480); c.fillRect(918, 0, 162, H); c.restore(); }
+  if (SHOW_SAFE) { c.save(); resetT(c); c.strokeStyle = '#ff00ff'; c.lineWidth = 4; c.strokeRect(CX - 360, 381, 720, 968); c.globalAlpha = .15; c.fillStyle = '#ff00ff'; c.fillRect(0, 0, W, 288); c.fillRect(0, 1440, W, 480); c.fillRect(918, 0, 162, H); c.restore(); }
 }
 
 // ================= runtime =================
