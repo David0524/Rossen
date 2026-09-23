@@ -1,0 +1,10 @@
+node_modules/
+out/frames/
+out/*.png
+out/*.jpg
+!out/contact.jpg
+out/video.mp4
+out/score.wav
+out/score_norm.wav
+tools/*.npy
+tools/*.png
