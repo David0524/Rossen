@@ -1,5 +1,5 @@
 // Render rossen-live-intro.html to PNG frames + mp4 (video only). Serves the folder over http so canvas stays untainted.
-// usage: node render.mjs [--html film.html] [--only 0,72,180] [--grid 24] [--all]
+// usage: node render.mjs [--html film.html] [--only 0,72,180] [--grid 24] [--all] [--query safe=1]
 import puppeteer from 'puppeteer-core';
 import http from 'node:http';
 import {readFileSync, existsSync, mkdirSync, writeFileSync} from 'node:fs';
@@ -10,14 +10,14 @@ const argv = process.argv.slice(2), flag = n => { const k = argv.indexOf(n); ret
 const types = {'.html': 'text/html', '.js': 'text/javascript', '.png': 'image/png', '.ttf': 'font/ttf'};
 const srv = http.createServer((q, s) => { const p = path.join(root, decodeURIComponent(q.url.split('?')[0])); if (!existsSync(p)) { s.writeHead(404); return s.end(); } s.writeHead(200, {'content-type': types[path.extname(p)] || 'application/octet-stream'}); s.end(readFileSync(p)); }).listen(0);
 const port = srv.address().port;
-const html = flag('--html') || 'rossen-live-intro.html', sub = html === 'rossen-live-intro.html' ? '' : path.basename(html, '.html');
+const html = flag('--html') || 'rossen-live-intro.html', query = flag('--query'), sub = (html === 'rossen-live-intro.html' ? '' : path.basename(html, '.html')) + (query ? '_check' : '');   // --query renders to a separate folder
 const out = path.join(root, 'out', sub), frames = path.join(out, 'frames'); mkdirSync(frames, {recursive: true});
 const browser = await puppeteer.launch({executablePath: process.env.CHROME || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', headless: true, args: ['--no-sandbox']});
 const errors = [];
 try {
   const page = await browser.newPage();
   page.on('pageerror', e => errors.push(String(e))); page.on('console', m => { if (m.type() === 'error' && !/404/.test(m.text())) errors.push(m.text()); });
-  await page.goto(`http://127.0.0.1:${port}/${html}?bare=1`);
+  await page.goto(`http://127.0.0.1:${port}/${html}?bare=1${query ? '&' + query : ''}`);
   await page.waitForFunction('window.__ready === true || window.__error', {timeout: 60000}).catch(()=>{}); const perr = await page.evaluate(() => window.__error); if (perr || errors.length) { console.error('load error', perr, errors); process.exit(1); }
   const N = await page.evaluate(() => window.__NFR);
   const save = (f, d) => writeFileSync(f, Buffer.from(d.split(',')[1], 'base64'));

@@ -91,3 +91,20 @@ ffmpeg -y -i out/rossen-casefile-vertical/video.mp4 -i out/rossen-casefile/score
 ```
 
 Stamps and text stay out of the platform UI zones (the top bar, and the bottom caption area below about y 1560).
+
+## Explainer: the fake MyChart email scam (9:16)
+
+`rossen-mychart-scam.html` (script `mychart.js`) is a 44.5 s vertical explainer at 1080x1920 for TikTok and Reels, in the same case-file screen-print look. The shared kit (inks, halftones, stamps, the Jeff puppet) now lives in `printkit.js`, loaded by both the intro and the explainer. One idea per 2.5 s bar at 96 BPM, a caption on each downbeat:
+
+| bars | time | story | on screen |
+|---|---|---|---|
+| 1–4 | 0–10 | **bait**: the email is on screen from frame 1 and scrolls through NEW TEST RESULTS, FREE MEDICARE HEALTH KIT, a ticking countdown; the camera rises to show it hanging on the scammer's hook | GOT THIS EMAIL? · A FREE KIT? NEW RESULTS? · HURRY! ACT NOW! · IT'S BAIT! |
+| 5–7 | 10–17.5 | **trap**: a click zooms through the button into a fake site with a garbled address; Jeff's magnifier; the form asks for everything | THE LINK OPENS A FAKE SITE · IT LOOKS REAL. IT'S NOT. · IT ASKS FOR YOUR INFO |
+| 8–10 | 17.5–25 | **theft**: the hook yanks LOGIN & PASSWORD, MEDICARE NUMBER, NAME & ADDRESS, CARD NUMBER; the camera rises to the pier | THEN THEY REEL IT ALL IN · STOLEN! |
+| 11–17 | 25–42.5 | **fix**: the logo sticker knocks him off; a big X on the link; the MyChart app tile; typing the provider's site yourself; the real inbox | HERE'S HOW TO STAY SAFE · DON'T CLICK THE LINK · OPEN THE MYCHART APP YOURSELF · OR TYPE IN YOUR PROVIDER'S WEBSITE · CHECK IF THE MESSAGE IS REAL · DON'T CLICK. GO TO THE APP YOURSELF. |
+| 18 | 42.5–44.5 | official logo, untouched, centred in the safe zone; still for the last 1.7 s | |
+
+- **Safe zone:** captions, stamps and props stay inside x 60–900, y 300–1430 (clear of the top 15%, bottom 25% and right 15%). The long email scrolls inside a window that ends at the safe line and sinks into deep water in the reveal. `node render.mjs --html rossen-mychart-scam.html --query safe=1 --only 0,200` renders frames with the zones overlaid (to `out/rossen-mychart-scam_check/`).
+- **Brands:** "MyChart" and "Medicare" appear as plain text only; no logos are drawn or imitated. The fake address (`htp://myc-hart.l0gin-kit.zz/?!`) is garbled and not a real domain; the real-site step shows "YOUR PROVIDER'S SITE", not an address.
+- **The scammer** is a jointed puppet cut from the supplied art by `tools/cut_scammer.py` (head, coat, rod with both hands pivoting at the reel, two boots). The coat under the hands is filled with its own texture so the rod can swing; the fishing line and hook are drawn by the film so it can cast, snag and reel.
+- **Score:** `python3 score_mychart.py`, then the same loudnorm and mux steps (in `out/rossen-mychart-scam/`). D minor while the scam plays out, D major once Jeff shows the fix; all samples CC0 (VSCO 2 CE, VSCO 1 drums, Kenney).
