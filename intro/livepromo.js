@@ -13,6 +13,7 @@
    bar 5  12.5  held; the rubber stamp lands on 2.5 and lifts off the official logo, still from 13.69
 */
 const DUR = at(6), NFR = Math.round(FPS * DUR);
+const SHOW = Object.assign({ time: '5PM ET', day: 'WEDNESDAY' }, window.SHOW || {});   // a wrapper page can set another airtime
 const CAPS = [
   [at(0), 'GOT THIS TEXT?'], [at(1), null], [at(2), 'THIS TEXT CAN', 'EMPTY YOUR ACCOUNT'], [at(3), 'WHAT HAPPENS', 'IF YOU REPLY?'], [at(4), null],
 ];
@@ -160,10 +161,10 @@ function sceneLive(c, t) {   // bars 4-5
   jeffUp(c, t, at(4, 2), SCX, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: t > at(5) ? .05 * Math.sin((t - at(5)) * TAU / (2 * BEAT)) : 0 }, .72);
   c.save(); c.translate(sx, sy);
   stampFit(c, 'LIVE TODAY', BLK, 150, SCX, 790, -.04, .9 * beatPulse, t, at(4), 800, 1.25);
-  stampFit(c, '5PM ET', BLUE, 170, SCX, 1012, .03, .95 * beatPulse, t, at(4, 1.5), 800, 1.18);
+  stampFit(c, SHOW.time, BLUE, 170, SCX, 1012, .03, .95 * beatPulse, t, at(4, 1.5), 800, 1.18);
   if (t >= at(4, 2) - SLAM) { const k = pop(t, at(4, 2)); c.save(); c.translate(SCX, 1172); c.scale(k, k); c.rotate(-.015);
-    c.font = '58px Stamp'; const w = c.measureText('WEDNESDAY').width + 60;
-    c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-w / 2 + 8, -44, w, 92); c.restore(); ink(c, rect(-w / 2, -48, w, 92), BLK, 5601, { amp: 3 }); inkText(c, 'WEDNESDAY', 0, 4, 58, 'Stamp', CHIP, 600); c.restore(); }
+    c.font = '58px Stamp'; const w = c.measureText(SHOW.day).width + 60;
+    c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-w / 2 + 8, -44, w, 92); c.restore(); ink(c, rect(-w / 2, -48, w, 92), BLK, 5601, { amp: 3 }); inkText(c, SHOW.day, 0, 4, 58, 'Stamp', CHIP, 600); c.restore(); }
   c.restore();
   const d = seg(t, at(5, 1.5), STAMP_T); if (d > 0) screenSpace(c, () => rubberStamp(c, easeIn(d)));
 }
