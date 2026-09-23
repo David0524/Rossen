@@ -50,8 +50,10 @@ function stampAt(c, img, x, y, rot, s, t, tl, spat = .4) { drawStamp(c, img, x, 
 
 // ================= 1. VIEWFINDER COUNTDOWN =================
 const LIVE_S = 1.9;   // big LIVE badge scale in the countdown
-function liveDotWorld() { const b = liveBadge(300, 122, true), [dx, dy] = b.dot, rot = -.05;
-  const lx = (dx - b.width / 2) * LIVE_S, ly = (dy - b.height / 2) * LIVE_S; return [960 + lx * Math.cos(rot) - ly * Math.sin(rot), 560 + lx * Math.sin(rot) + ly * Math.cos(rot), b.dot[2] * LIVE_S]; }
+let FILM_T = 0;   // film clock, for things that keep moving while a scene's own clock holds
+const liveScale = () => LIVE_S * (1 + .035 * pulseAt(FILM_T, [2.0, 2.5, 3.0], 9));
+function liveDotWorld() { const b = liveBadge(300, 122, true), [dx, dy] = b.dot, rot = -.05, S_ = liveScale();
+  const lx = (dx - b.width / 2) * S_, ly = (dy - b.height / 2) * S_; return [960 + lx * Math.cos(rot) - ly * Math.sin(rot), 560 + lx * Math.sin(rot) + ly * Math.cos(rot), b.dot[2] * S_]; }
 function sceneCountdown(c, t) {
   paperBg(c);
   const [shx, shy] = shakeAt(t, [[0, 6], [.5, 6], [1.0, 6], [1.5, 14]]);
@@ -76,9 +78,9 @@ function sceneCountdown(c, t) {
     c.fillStyle = alpha(MRED, .85); c.fillText(String(n), 10, 8); c.fillStyle = INK; c.fillText(String(n), 0, 0); c.restore();
   }
   // LIVE stamp at 1.5
-  drawStamp(c, liveBadge(300, 122, true), 960, 560, -.05, LIVE_S, t, 1.5, .35);
+  drawStamp(c, liveBadge(300, 122, true), 960, 560, -.05, liveScale(), t, 1.5, .15);
   c.restore();
-  if (dz < .3) bracketFrame(c, t);
+  if (dz < .3) bracketFrame(c, FILM_T);
 }
 
 // ================= 2. STREET RUN =================
@@ -191,9 +193,9 @@ function scenePhone(c, t) {
     shape(c, SC, '#c9dcef', 202, { hc: '#a7c3e2', outline: false, ha: .35 });
     c.fillStyle = '#23253a'; c.beginPath(); c.roundRect(-40, PH.sy + 10, 80, 18, 9); c.fill();
     const b1 = easeOutBack(seg(t, 5.1, 5.3)), b2 = easeOutBack(seg(t, 5.3, 5.5));
-    if (b1 > 0) { c.save(); c.translate(0, -180); c.scale(b1, b1); shape(c, rrPts(-180, -130, 360, 260, 30, 5), '#fbf8f0', 203, { lw: 4.5, hc: '#e4dfd2', ha: .3 });
-      text(c, 'YOU WON', 0, -62, '64px Stamp', INK); text(c, '$1,000!', 0, 38, '92px Stamp', MRED); c.restore(); }
-    if (b2 > 0) { const pul = 1 + .05 * Math.sin(t * 14); c.save(); c.translate(0, 135); c.scale(b2 * pul, b2 * pul); shape(c, rrPts(-165, -58, 330, 116, 40, 5), MRED, 204, { lw: 5 }); text(c, 'CLAIM NOW', 0, 4, '50px Stamp', '#fbf8f0'); c.restore(); }
+    if (b1 > 0) { c.save(); c.translate(0, -180); c.scale(b1, b1); shape(c, rrPts(-188, -130, 376, 260, 30, 5), '#fbf8f0', 203, { lw: 4.5, hc: '#e4dfd2', ha: .3 });
+      fitText(c, 'YOU WON', 0, -62, 64, 'Stamp', INK, 316); fitText(c, '$1,000!', 0, 38, 92, 'Stamp', MRED, 316); c.restore(); }
+    if (b2 > 0) { const pul = 1 + .05 * Math.sin(t * 14); c.save(); c.translate(0, 135); c.scale(b2 * pul, b2 * pul); shape(c, rrPts(-165, -58, 330, 116, 40, 5), MRED, 204, { lw: 5 }); fitText(c, 'CLAIM NOW', 0, 4, 50, 'Stamp', '#fbf8f0', 280); c.restore(); }
   } else {
     // hidden-camera feed takes over the screen
     const g = L1.getContext('2d'); resetT(g); sceneHidden(g, t);
@@ -256,7 +258,7 @@ function sceneHidden(c, t) {
   const vig = new Path2D(); vig.rect(0, 0, W, H); vig.ellipse(960, 540, 1080, 660, 0, 0, TAU);
   c.save(); c.clip(vig, 'evenodd'); hatch(c, vig, [0, 0, W, H], { gap: 5, len: 22, color: INK, alpha: .22, seed: 440, angle: .8 }); c.restore();
   bracketFrame(c, t, { tc: 6 * 60 + t, solid: false });
-  shape(c, rrPts(760, 64, 400, 86, 20, 4), INK, 450, { outline: false, ha: .2 }); text(c, 'HIDDEN CAMERA', 960, 110, '46px Stamp', '#fbf8f0');
+  shape(c, rrPts(710, 64, 500, 86, 20, 4), INK, 450, { outline: false, ha: .2 }); fitText(c, 'HIDDEN CAMERA', 960, 110, 46, 'Stamp', '#fbf8f0', 440);
   stampAt(c, wordStamp('CAUGHT!', { color: RED, style: 'fill', size: 150 }), 1160, 300, -.08, 1, t, 9.5);
 }
 
@@ -280,9 +282,9 @@ function hangingTag(c, g, t, k) {
   const img = tagBase(700 + k);
   c.save(); c.translate(g.x, y); c.rotate(sw); c.drawImage(img, -img.width / 2 + 10, -img.height / 2);
   const strike = seg(t, g.t0 + .2, g.t0 + .3), write = easeOutBack(seg(t, g.t0 + .3, g.t0 + .42));
-  text(c, g.old, 30, -42, '50px Marker', '#4a3f38');
-  if (strike > 0) { c.save(); c.font = '50px Marker'; const tw = c.measureText(g.old).width; c.strokeStyle = RED; c.lineWidth = 7; c.lineCap = 'round'; c.beginPath(); c.moveTo(30 - tw / 2 - 10, -34); c.lineTo(30 - tw / 2 - 10 + (tw + 20) * strike, -48); c.stroke(); c.restore(); }
-  if (write > 0) { c.save(); c.translate(32, 34); c.scale(write, write); text(c, g.neu, 0, 0, '84px Marker', RED); c.restore(); }
+  fitText(c, g.old, 30, -42, 50, 'Marker', '#4a3f38', 190);
+  if (strike > 0) { c.save(); { c.font = '50px Marker'; const w0 = c.measureText(g.old).width; c.font = `${w0 > 190 ? Math.floor(50 * 190 / w0) : 50}px Marker`; } const tw = c.measureText(g.old).width; c.strokeStyle = RED; c.lineWidth = 7; c.lineCap = 'round'; c.beginPath(); c.moveTo(30 - tw / 2 - 10, -34); c.lineTo(30 - tw / 2 - 10 + (tw + 20) * strike, -48); c.stroke(); c.restore(); }
+  if (write > 0) { c.save(); c.translate(32, 34); c.scale(write, write); fitText(c, g.neu, 0, 0, 84, 'Marker', RED, 210); c.restore(); }
   c.restore();
 }
 function sceneDeals(c, t) {
@@ -319,7 +321,7 @@ function cardIcon(c, k, t) {
     shape(c, ellPts(0, -10, 50, 50, 0, 30), '#26252c', 832, { lw: 5 }); shape(c, ellPts(0, -10, 30, 30, 0, 24), '#5d76a8', 833, { lw: 3 }); c.fillStyle = 'rgba(255,255,255,.85)'; c.beginPath(); c.arc(-10, -22, 8, 0, TAU); c.fill();
     if (Math.floor(t * 4) % 2 === 0) { c.fillStyle = '#e8352b'; c.beginPath(); c.arc(80, -55, 11, 0, TAU); c.fill(); } }
   if (k === 2) { shape(c, [[0, -115], [120, 80], [-120, 80]], '#f2c85a', 840, { lw: 6 }); text(c, '!', 0, 10, '120px Stamp', INK); }
-  if (k === 3) { c.save(); c.rotate(-.12); const img = tagBase(850); c.drawImage(img, -img.width * .38, -img.height * .38 - 20, img.width * .76, img.height * .76); text(c, '$19', 22, -12, '66px Marker', RED); c.restore();
+  if (k === 3) { c.save(); c.rotate(-.12); const img = tagBase(850); c.drawImage(img, -img.width * .38, -img.height * .38 - 20, img.width * .76, img.height * .76); fitText(c, '$19', 22, -12, 66, 'Marker', RED, 150); c.restore();
     shape(c, [[110, -40], [140, -40], [140, 30], [170, 30], [125, 90], [80, 30], [110, 30]], MRED, 851, { lw: 4 }); }
 }
 function card(c, k, x, y, rot, s, t) {
@@ -329,7 +331,7 @@ function card(c, k, x, y, rot, s, t) {
   shape(c, rrPts(-w / 2, -h / 2, w, h, 14, 3), '#faf6ec', 860 + k, { lw: 5, hc: '#e7e0d0', ha: .3 });
   shape(c, rrPts(-w / 2 + 22, -h / 2 + 22, w - 44, h - 120, 8, 2), C.col, 870 + k, { lw: 3.5 });
   c.save(); c.beginPath(); c.rect(-w / 2 + 22, -h / 2 + 22, w - 44, h - 120); c.clip(); c.translate(0, -40); cardIcon(c, k, t); c.restore();
-  text(c, C.word, 0, h / 2 - 50, '54px Marker', INK);
+  fitText(c, C.word, 0, h / 2 - 50, 54, 'Marker', INK, w - 70);
   c.restore();
 }
 function burst(c, cx, cy, ang, cols, n = 20, al = .5) {
@@ -351,15 +353,15 @@ const LOGO_C = [1110, 470], LOGO_W = 900;
 const CONF = Array.from({ length: 80 }, (_, k) => { const r = rng(1000 + k), a = r() * TAU, ex = Math.cos(a), ey = Math.sin(a), v = 900 + r() * 900, sp = [Math.sign(ex) * (.6 + r() * .4), ey - .6 - r() * .5]; const n = Math.hypot(...sp); return { ex: Math.max(-1, Math.min(1, ex * 1.4)), ey: Math.max(-1, Math.min(1, ey * 1.4)), vx: sp[0] / n * v, vy: sp[1] / n * v, col: [MRED, BLUE, YEL, SAGE, PINK][k % 5], w: 16 + r() * 18, h: 10 + r() * 12, spin: (r() - .5) * 20, seed: k }; });
 function sceneLogo(c, t) {
   paperBg(c);
-  const T = Math.min(t, 19.1);   // everything freezes at scene-time 19.1 (film 19.0 s)
-  const [shx, shy] = t < 19.1 ? shakeAt(t, [[18.5, 12], [18.875, 6]]) : [0, 0];
+  const T = Math.min(t, 19.0);   // everything freezes at scene-time 19.0 (film 19.0 s)
+  const [shx, shy] = t < 19.0 ? shakeAt(t, [[18.5, 12], [18.75, 6]]) : [0, 0];
   burst(c, LOGO_C[0], LOGO_C[1], T * .2, [alpha(YEL, .6), 'rgba(0,0,0,0)'], 22, 1);
   c.save(); c.translate(shx, shy);
   // montage cards blast outward
   if (t < 17.4) CARDS.forEach((C, k) => { const u = easeIn(seg(t, 17.0, 17.35)), dx = C.x - 960, dy = C.y - 540; card(c, k, C.x + dx * u * 3, C.y + dy * u * 3, C.rot + u * (k % 2 ? 1.5 : -1.5), .95 * (1 + u * .6), t); });
   // Jeff pops in from below, then thumbs up
   const a = easeOutBack(seg(t, 17.05, 17.35)), gy = lerp(1750, 1045, a);
-  const hop = T < 19.1 ? pulseAt(T, [17.375, 17.75, 18.5], 9) * 16 : 0;
+  const hop = T < 19.0 ? pulseAt(T, [17.375, 17.75, 18.5], 9) * 16 : 0;
   c.save(); c.globalAlpha = .16 * clamp(a, 0, 1); c.fillStyle = INK; c.beginPath(); c.ellipse(330, 1047, 180, 20, 0, 0, TAU); c.fill(); c.restore();
   drawJeff(c, 330, gy, .92, { hop }, (Sw, rest) => {
     if (t < 17.45) return null; const up = [Sw[0] + 80, Sw[1] - 118], e = easeOutBack(seg(t, 17.45, 17.65)); return { mode: 'thumb', hand: [lerp(rest[0], up[0], e), lerp(rest[1], up[1], e)] };
@@ -367,19 +369,19 @@ function sceneLogo(c, t) {
   // official logo: paper drop, soft bounce, still from 13.6
   const im = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, sc = LOGO_W / bw, w = bw * sc, h = bh * sc;
   // confetti: fired from behind the logo's edges outward, so it never crosses the lettering; gone by 19.0
-  if (t >= 18.5 && t < 19.1) { const u = t - 18.5;
-    for (const f of CONF) { const x = LOGO_C[0] + f.ex * (w / 2) + f.vx * u, y = LOGO_C[1] + f.ey * (h / 2) + f.vy * u + 6000 * u * u; if (y > H + 50 || x < -60 || x > W + 60) continue;
+  if (t >= 18.5 && t < 19.0) { const u = t - 18.5;
+    for (const f of CONF) { const x = LOGO_C[0] + f.ex * (w / 2) + f.vx * u, y = LOGO_C[1] + f.ey * (h / 2) + f.vy * u + 7000 * u * u; if (y > H + 50 || x < -60 || x > W + 60) continue;
       c.save(); c.translate(x, y); c.rotate(f.spin * u); c.scale(1, Math.cos(u * 14 + f.seed)); c.fillStyle = f.col; c.fillRect(-f.w / 2, -f.h / 2, f.w, f.h); c.strokeStyle = INK; c.lineWidth = 2; c.strokeRect(-f.w / 2, -f.h / 2, f.w, f.h); c.restore(); } }
   if (t >= 17.6) {
     let y = LOGO_C[1], rot = 0, sx = 1, sy = 1;
     if (t < 18.5) { const u = seg(t, 17.6, 18.5); y = lerp(-h, LOGO_C[1], u * u * (1.6 - .6 * u)); rot = .12 * Math.sin(u * 9) * (1 - u); }
-    else if (t < 19.1) { const u = t - 18.5; y = LOGO_C[1] - Math.abs(Math.sin(seg(t, 18.5, 18.75) * Math.PI)) * 34 * (t < 18.75 ? 1 : 0); const sq = Math.exp(-u * 12) * Math.cos(u * 34) * .06; sx = 1 + sq; sy = 1 - sq; }
+    else if (t < 19.0) { const u = t - 18.5; y = LOGO_C[1] - Math.abs(Math.sin(seg(t, 18.5, 18.75) * Math.PI)) * 34 * (t < 18.75 ? 1 : 0); const sq = Math.exp(-u * 12) * Math.cos(u * 34) * .06; sx = 1 + sq; sy = 1 - sq; }
     const lift = clamp((LOGO_C[1] - y) / 500, 0, 1);
     c.save(); c.globalAlpha = .2 * (1 - lift) * (t < 18.5 ? easeIn(seg(t, 17.6, 18.5)) : 1); c.translate(LOGO_C[0] + 14 + 30 * lift, LOGO_C[1] + 22 + 40 * lift); c.drawImage(IMG.logoShadow, bx, by, bw, bh, -w / 2, -h / 2, w, h); c.restore();
     c.save(); c.translate(LOGO_C[0], y + h / 2); c.rotate(rot); c.scale(sx, sy); c.translate(0, -h / 2); c.drawImage(im, bx, by, bw, bh, -w / 2, -h / 2, w, h); c.restore();
   }
   c.restore();
-  if (t >= 18.76) drawStamp(c, liveBadge(300, 122, true), LOGO_C[0] + w / 2 - 20, LOGO_C[1] - h / 2 - 10, -.1, .78, t, 18.875, .2);
+  if (t >= 18.63) drawStamp(c, liveBadge(300, 122, true), LOGO_C[0] + w / 2 - 20, LOGO_C[1] - h / 2 - 10, -.1, .78, t, 18.75, .2);
 }
 
 // ================= transitions + assembly =================
@@ -429,20 +431,22 @@ function drawScene(c, t) {
 
 // ---------------- runtime ----------------
 const CV = document.getElementById('c'); CV.width = OUT_W; CV.height = OUT_H; const CTX = CV.getContext('2d');
-// 144 BPM: one beat = 10 frames = 5/12 s, one bar = 40 frames. Countdown and run get one bar each, every other scene two.
-// The scenes were authored on their own clock ("scene time"); this maps film time onto it, bar by bar.
-const BAR = 5 / 3;
+// 120 BPM: one beat = 12 frames = 0.5 s, one bar = 2 s. The countdown is a 3-beat pickup; LIVE lands on the first downbeat (1.5 s).
+// The scenes were authored on their own clock ("scene time"); this maps film time onto it, piece by piece.
 const SCENE_CLOCK = [   // [film start, scene-time start, scene-time per film second]
-  [0, 0, 1.2],              // countdown: 3-2-1 and LIVE on beats 0-3
-  [BAR, 2, 1.2],            // street run (original choreography)
-  [2 * BAR, 5, .9],         // phone
-  [4 * BAR, 8, .9],         // hidden camera + whip pan
-  [6 * BAR, 11, .9],        // deals + page turn
-  [8 * BAR, 14, .9],        // montage
-  [10 * BAR, 17, .9],       // logo
+  [0, 0, 1],                // pickup: 3-2-1 on beats, LIVE stamp at 1.5
+  [1.65, 1.65, .0625],      // LIVE holds (the badge pulses on the beats in film time)
+  [3.25, 1.75, 1],          // zoom into the LIVE dot on the bar's last beat
+  [3.5, 2, 1],              // bar 2: the run, original 2 s choreography
+  [5.5, 5, .75],            // bars 3-4: phone, SCAM! on the bar-4 downbeat (7.5)
+  [9.5, 8, .75],            // bars 5-6: hidden camera, CAUGHT! on the bar-6 downbeat (11.5), whip pan
+  [13.5, 11, 1.5],          // bar 7: deals, a tag on each eighth, DEAL! on beat 3 (14.5)
+  [15.5, 14, 1.5],          // bar 8: four cards on eighths, then read them
+  [17.5, 17, 1.5],          // 2-beat fill: cards blast, Jeff pops in, logo floats down
+  [18.5, 18.5, 1],          // the logo lands with the final chord (18.5), LIVE at 18.75, still from 19.0
 ];
 function sceneTime(t) { let r = SCENE_CLOCK[0]; for (const c of SCENE_CLOCK) if (t >= c[0] - 1e-9) r = c; return r[1] + (t - r[0]) * r[2]; }
-function frame(i) { const t = Math.min(i / FPS, DUR - 1e-6); resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, sceneTime(t)); resetT(CTX); }
+function frame(i) { const t = Math.min(i / FPS, DUR - 1e-6); FILM_T = t; resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, sceneTime(t)); resetT(CTX); }
 window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
 (async () => {
   await Promise.all([loadImg('body', 'assets/jeff_body.png'), loadImg('legL', 'assets/jeff_legL.png'), loadImg('legR', 'assets/jeff_legR.png'), loadImg('logo', 'assets/official_logo.png')]);

@@ -281,3 +281,8 @@ function clipHalf(poly, q, n) {
     if (sa >= 0) out.push(a); if ((sa >= 0) !== (sb >= 0)) { const u = sa / (sa - sb); out.push([a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u]); } }
   return out;
 }
+// text that never runs past its box: shrinks the font until the measured width fits maxW
+function fitText(c, s, x, y, size, family, col, maxW, align = 'center') {
+  c.font = `${size}px ${family}`; const w = c.measureText(s).width; const sz = w > maxW ? Math.floor(size * maxW / w) : size;
+  text(c, s, x, y, `${sz}px ${family}`, col, align); return sz;
+}

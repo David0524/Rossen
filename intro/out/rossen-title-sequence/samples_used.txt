@@ -70,7 +70,6 @@ vsco/Percussion/cymbal-crash1_mf_rr1.wav
 vsco/Percussion/susCymb1-cresc-Short_v1.wav
 vsco/Strings/Cello Section/pizzT/pizzT_B1_v2_RR1.wav
 vsco/Strings/Cello Section/pizzT/pizzT_D2_v2_RR1.wav
-vsco/Strings/Cello Section/pizzT/pizzT_G1_v2_RR1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_A#0_v1_rr1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_C#2_v1_rr1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_D1_v1_rr1.wav
