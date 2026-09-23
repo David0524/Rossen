@@ -9,7 +9,7 @@ const at = (bar, beat = 1) => bar * BAR + (beat - 1) * BEAT;   // bar 0-based, b
 const SAFE = { x0: 60, x1: 900, y0: 300, y1: 1430 }, SCX = 480, SCY = 865;   // the layout is drawn around this centre...
 // ...then shown centred on the frame: content is scaled by K about the frame's centre line, so x 60-900 lands on 180-900
 // (symmetric about x 540 and still clear of the right 15%) and y 300-1430 on 381-1349. Backgrounds stay full-frame.
-const K = 720 / 840;
+const K = window.VERT_K || 720 / 840;   // a film may use more of the safe width (the quiz sets 0.895: x 164-916)
 function contentT(g) { resetT(g); g.translate(CX - SCX * K, SCY - SCY * K); g.scale(K, K); }
 function screenSpace(c, fn) { c.save(); resetT(c); fn(); c.restore(); }
 const L1 = layer(), L2 = layer();
@@ -108,7 +108,7 @@ function zoomThrough(c, t, t0, t1, rect0, under, inner) {   // a window grows fr
 }
 
 // safe-zone overlay for ?safe=1 check renders (screen space)
-function safeOverlay(c) { c.save(); resetT(c); c.strokeStyle = '#ff00ff'; c.lineWidth = 4; c.strokeRect(CX - 360, 381, 720, 968); c.globalAlpha = .15; c.fillStyle = '#ff00ff'; c.fillRect(0, 0, W, 288); c.fillRect(0, 1440, W, 480); c.fillRect(918, 0, 162, H); c.restore(); }
+function safeOverlay(c) { c.save(); resetT(c); c.strokeStyle = '#ff00ff'; c.lineWidth = 4; c.strokeRect(CX - 420 * K, SCY - 565 * K, 840 * K, 1130 * K); c.globalAlpha = .15; c.fillStyle = '#ff00ff'; c.fillRect(0, 0, W, 288); c.fillRect(0, 1440, W, 480); c.fillRect(918, 0, 162, H); c.restore(); }
 // the scammer's parts and both logos
 async function loadVertKit() {
   SP = await (await fetch('assets/explainer/scammer_parts.json')).json();

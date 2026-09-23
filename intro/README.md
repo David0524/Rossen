@@ -136,5 +136,6 @@ Stamps and text stay out of the platform UI zones (the top bar, and the bottom c
 | 11–15 | fraud alert, reply Y/N | SCAM | URGENT · REPLY YES OR NO | DON'T REPLY. CALL THE NUMBER ON YOUR CARD. |
 | 16–17 | HOW MANY DID YOU GET RIGHT? COMMENT YOUR SCORE. (a full bar), then the official logo, still for the last 1.1 s | | | |
 
+- Everything is sized up for phones: the quiz page sets `window.VERT_K = 0.895`, so content fills the safe width (x 164–916, still centred and clear of the right 15%), with message text at 48 px on screen. The other vertical films keep 0.857.
 - Flags are marked with a highlighter swiped *under* the words (yellow for scam flags, a pale tint of the logo blue for safe reasons), so no mark ever crosses a letter; each labelled chip pops on the same beat as its highlight. The Scammer appears only in scam reveals: caught in a spotlight beside the phone, then yanked off by a vaudeville hook.
 - Score: `python3 score_quiz.py`, then loudnorm (I -15.4, TP -2), `alimiter=limit=0.7`, mux. Two answer stings come from Kenney's Digital Audio pack (CC0, licence in `audio/kenney/digital/`). `HITS_ONLY=1 python3 score_quiz.py` writes `score_hits.wav` with the groove, rolls, fills and clock muted, for checking each hit's onset against its picture beat without neighbouring sounds.
