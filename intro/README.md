@@ -2,7 +2,7 @@
 
 There are two films:
 - `out/rossen-live-intro.mp4`: the story-style opener (table, scammer, deals).
-- `out/rossen-title-sequence/rossen-title-sequence.mp4`: the title sequence, cut to a 120 BPM cue (see below).
+- `out/rossen-title-sequence/rossen-title-sequence.mp4`: the title sequence, cut to a 96 BPM cue (see below).
 
 ## Opener 1: story
 
@@ -28,20 +28,19 @@ ffmpeg -y -i out/video.mp4 -i out/score_norm.wav -c:v copy -c:a aac -b:a 256k -s
   - Only the samples used are bundled under `audio/`, with their licences. Both sources are public domain, so no credit line is required.
 - Fonts: Bowlby One SC and Patrick Hand (OFL), and Permanent Marker (Apache 2.0), from google/fonts. The licences are in `assets/fonts/`.
 
-## Opener 2: title sequence (20 s)
-`rossen-title-sequence.html` (drawing kit in `kit.js`) is one continuous piece at 120 BPM. One beat is 0.5 s, or 12 frames, and one bar is 2 s. The 3-2-1 is a three-beat pickup, so LIVE lands on the first downbeat. After that every scene is whole bars, with one two-beat drum fill into the final chord. The scenes are authored on their own clock; `SCENE_CLOCK` maps film time onto it piece by piece, and `score_title.py` mirrors that map so every sound lands on its picture event.
+## Opener 2: title sequence (19.5 s)
+`rossen-title-sequence.html` (drawing kit in `kit.js`) is one continuous piece at 96 BPM. One beat is 0.625 s, or 15 frames, and one bar is 2.5 s. **Every scene is exactly one bar and plays at natural speed**, so picture and music share one steady pulse, with no speed-ups, slow-downs or held frames. Each scene puts its key hit on a beat.
 
-| film time | music | scene |
-|---|---|---|
-| 0–1.5 | 3-beat pickup | viewfinder countdown, 3-2-1 on the beats |
-| 1.5–3.5 | bar 1 | LIVE stamp on the downbeat, holds and pulses, zoom into its dot on the last beat |
-| 3.5–5.5 | bar 2 | the run (original 2 s choreography), magnifier at the lens |
-| 5.5–9.5 | bars 3–4 | phone "YOU WON $1,000!", scammer phishing, SCAM! on the bar-4 downbeat (7.5) |
-| 9.5–13.5 | bars 5–6 | hidden camera, Jeff barges in (10.5), CAUGHT! on the bar-6 downbeat (11.5), whip pan |
-| 13.5–15.5 | bar 7 | a price tag on each eighth, re-priced live, DEAL! on beat 3 (14.5), page turn |
-| 15.5–17.5 | bar 8 | four cards on eighths, then about 1¼ s to read them |
-| 17.5–18.5 | 2-beat fill | cards blast, Jeff pops in, logo floats down |
-| 18.5–20 | final chord | logo lands (18.5), LIVE stamp (18.75), still from 19.0 |
+| bar | film time | scene | on the beats |
+|---|---|---|---|
+| 1 | 0–2.5 | countdown | 3 / 2 / 1 / LIVE on beats 1–4; zoom into the LIVE dot |
+| 2 | 2.5–5.0 | the run | running, skid, magnifier at the lens, zoom through |
+| 3 | 5.0–7.5 | phone | scammer rises on beat 2, SCAM! on beat 3, phone tips on beat 4 |
+| 4 | 7.5–10.0 | hidden camera | Jeff barges in on beat 2, CAUGHT! on beat 3, whip pan |
+| 5 | 10.0–12.5 | deals | tags on eighths, DEAL! on beat 3, page turn |
+| 6 | 12.5–15.0 | cards | four cards on eighths, then read them |
+| 7 | 15.0–17.5 | logo arrives | cards drift away (0.7 s), Jeff pops in, logo floats down |
+| 8 | 17.5–19.5 | logo | lands on the downbeat with the final chord, LIVE on beat 2, still from 18.4 |
 
 All on-screen text is fitted to its box (`fitText` in `kit.js`), so nothing runs past a card, bubble or label.
 

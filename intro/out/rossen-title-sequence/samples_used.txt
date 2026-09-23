@@ -30,7 +30,6 @@ kenney/rpg/cloth2.ogg
 kenney/rpg/cloth3.ogg
 kenney/rpg/cloth4.ogg
 kenney/rpg/creak1.ogg
-kenney/rpg/creak2.ogg
 kenney/rpg/metalClick.ogg
 vsco/Brass/F Horn/stac/MOHorn_stac_A#1_v2_rr1.wav
 vsco/Brass/F Horn/stac/MOHorn_stac_A2_v2_rr1.wav
