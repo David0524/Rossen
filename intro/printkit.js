@@ -32,9 +32,9 @@ function inkText(c, s, x, y, size, family, col, maxW, align = 'center', rot = 0)
 function paperBg(c) { c.save(); resetT(c); c.drawImage(PAPER_TEX, 0, 0, W, H); c.restore(); }
 function printFinish(c) { c.save(); resetT(c); c.drawImage(SPECK, 0, 0, W, H); c.restore(); }   // ink never covers fully: paper specks through every solid
 function stampImg(word, col = BLUE, size = 150) { return wordStamp(word, { color: col, style: 'fill', size, seed: word.length * 7 }); }
-function stampLand(c, img, x, y, rot, sc, t, tl) {   // solid ink: nothing underneath shows through
+function stampLand(c, img, x, y, rot, sc, t, tl, from = 1.55) {   // solid ink: nothing underneath shows through; lands from `from` x size
   if (t < tl - .12) return;
-  const a = seg(t, tl - .12, tl), s = t < tl ? lerp(1.55, 1, easeIn(a)) : t < tl + .12 ? 1 + .04 * Math.exp(-(t - tl) * 30) * Math.cos((t - tl) * 60) : 1;
+  const a = seg(t, tl - .12, tl), s = t < tl ? lerp(from, 1, easeIn(a)) : t < tl + .12 ? 1 + .04 * Math.exp(-(t - tl) * 30) * Math.cos((t - tl) * 60) : 1;
   c.save(); c.translate(x, y); c.rotate(rot); c.scale(sc * s, sc * s);
   c.save(); c.filter = 'brightness(0)'; c.globalAlpha = .55; c.drawImage(img, -img.width / 2 + 12, -img.height / 2 + 14); c.restore();
   c.drawImage(img, -img.width / 2, -img.height / 2); c.restore();

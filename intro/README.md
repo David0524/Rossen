@@ -109,3 +109,18 @@ Stamps and text stay out of the platform UI zones (the top bar, and the bottom c
 - **The scammer** is a jointed puppet cut from the supplied art by `tools/cut_scammer.py` (head, coat, rod with both hands pivoting at the reel, two boots). The coat under the hands is filled with its own texture so the rod can swing; the fishing line and hook are drawn by the film so it can cast, snag and reel.
 - **Score (a voiceover bed):** `python3 score_mychart.py && sh tools/vo_bed.sh`, then mux `bed_mix.wav`. Built for Jeff to narrate over: no melodic lines in the voice range (no trumpet, clarinet or viola parts, and the hits are kick, timpani and bass rather than brass), a softer backbeat, a dip around 2 kHz on the music, and the mix at -23 LUFS so a voice at about -16 LUFS sits on top without ducking. The stems `bed_music.wav` and `bed_sfx.wav` add up to the mix. D minor while the scam plays out, D major once Jeff shows the fix; all samples CC0 (VSCO 2 CE, VSCO 1 drums, Kenney).
 - **Voiceover script:** `out/rossen-mychart-scam/vo_script.txt`, about 100 words timed to the bars, matching the captions.
+
+## Promo: LIVE TODAY, "The DEVASTATING New Zelle Scam" (9:16, 15 s)
+
+`rossen-live-today.html` (script `livepromo.js`) is a 15 s vertical promo for TikTok, Reels and Shorts, in the approved case-file palette (logo blue, black, cream, yellow accent). The vertical helpers the explainer used (safe-zone content transform, captions, fitted stamps, the scammer puppet, line and hook, zoom-through, rubber stamp) now live in `vertkit.js`, shared by the explainer and the promo; the explainer renders unchanged. 96 BPM, six bars:
+
+| bar | time | on screen |
+|---|---|---|
+| 1 | 0–2.5 | the fake fraud-alert text on a phone from frame 0 (no bank name) · GOT THIS TEXT? |
+| 2 | 2.5–5 | a thumb creeps to send YES, a hook dangles over the send button · DON'T REPLY! on 3, zoom through the screen on 4 |
+| 3 | 5–7.5 | the balance drains on eighths while the scammer fishes cash out of a wallet, $0.00 on 3 · THIS TEXT CAN EMPTY YOUR ACCOUNT |
+| 4 | 7.5–10 | the phone drops back; Jeff's magnifier over YES shows the hook on 3 · WHAT HAPPENS IF YOU REPLY?; zoom through the lens |
+| 5 | 10–12.5 | the screen-print logo, LIVE TODAY (1), 5PM ET (1.5), WEDNESDAY (2), Jeff thumbs up, the Rossen trumpet theme |
+| 6 | 12.5–15 | held; the rubber stamp lands on 2.5 and lifts off the official logo, still for the last 1.3 s |
+
+"Zelle" appears only as plain system-font text in the account's payment line. Score: `python3 score_live.py`, then loudnorm (I -16, TP -2) and `alimiter=limit=0.7` (the AAC encode overshoots a little), then mux. Multi-transient foley (coins, card fans) is aligned by its first audible transient (`fx_first`), not its loudest.
