@@ -1,0 +1,439 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Rossen Case File</title>
+<style>
+@font-face { font-family: Stamp; src: url(assets/fonts/BowlbyOneSC-Regular.ttf); }
+@font-face { font-family: Marker; src: url(assets/fonts/PermanentMarker-Regular.ttf); }
+body { margin: 0; background: #111; } canvas { display: block; max-width: 100vw; }
+</style>
+<script src="core.js"></script><script src="kit.js"></script>
+</head><body><canvas id="c"></canvas>
+<script>
+'use strict';
+/* Rossen Reports: "case file" title sequence. 19.5 s, 1920x1080, 24 fps, one continuous piece.
+   Screen-print look: flat bold inks (logo blue, black, one yellow accent) on warm cream stock, halftone dot tints,
+   misregistered colour layers, paper grain. 96 BPM: one beat = 0.625 s = 15 frames, one bar = 2.5 s, one scene per bar,
+   a stamp on beat 3 of every scene. Every landing finishes ON its beat (things start falling SLAM seconds early).
+
+   bar 1  0.0-2.5    CASE FILE   folder thwacks down on beat 2, ransom letters L-I-V-E on 2.5/3/3.5/4, cover flips open on 4.5
+   bar 2  2.5-5.0    BOARD       camera pans the evidence board, Jeff pops up on 2, raises the magnifier on 3, lens on 4
+   bar 3  5.0-7.5    PHISHING    "account locked" phone, con man dangles a hook on 2, SCAM! on 3, redaction marker on 4
+   bar 4  7.5-10.0   HIDDEN CAM  lens iris opens on 1, Jeff barges in on 2, flash + CAUGHT! on 3, frame becomes a Polaroid on 4
+   bar 5  10.0-12.5  WARNING     fine print; redaction bars peel back on 2, WARNING! on 3, page turn on 4.5
+   bar 6  12.5-15.0  DEALS       tags land on eighths, Jeff thumbs up, DEAL! on 3, folder swings shut on 4
+   bar 7  15.0-17.5  CASE CLOSED folder cover, screen-print logo slaps on 1, Jeff on 2, LIVE NOW on 3, rubber stamp on 4
+   bar 8  17.5-19.5  SIGN-OFF    the official logo, untouched, revealed as the stamp lifts; still from 17.8
+*/
+setFormat({ ar: '16:9', width: 1920 });
+const FPS = 24, DUR = 19.5, NFR = Math.round(FPS * DUR);
+const BEAT = .625, BAR = 2.5, SLAM = .14;
+const at = (bar, beat = 1) => bar * BAR + (beat - 1) * BEAT;   // bar 0-based, beat 1-based
+// ---- inks (blue and yellow sampled from the official logo)
+const BLUE = '#0858C0', BLK = '#1d1b1f', YEL = '#F8D000', CREAM = '#efe6d2', CHIP = '#f8f2e4';
+const REG = { [BLUE]: [4, -3], [YEL]: [-4, 3], [BLK]: [0, 0], [CHIP]: [0, 0], [CREAM]: [0, 0] };   // misregistration per ink
+const ANG = { [BLUE]: .26, [YEL]: 0, [BLK]: .78 };
+const L1 = layer(), L2 = layer();
+let PAPER_TEX = null, SPECK = null, FILM_T = 0;
+
+// ================= screen-print kit =================
+function rough(pts, seed, amp = 2.2, step = 16, close = true) { const r = rng(seed); return densify(pts, step, close).map(([x, y]) => [x + (r() - .5) * amp, y + (r() - .5) * amp]); }
+// flat ink: solid, or a halftone tint (density 0..1). Colour inks print a few px off register.
+function ink(c, pts, col, seed, o = {}) {
+  const P = polyPath(rough(pts, seed, o.amp ?? 2.2)), [dx, dy] = o.reg === false ? [0, 0] : (REG[col] || [0, 0]);
+  c.save(); c.translate(dx, dy);
+  if (o.tint == null || o.tint >= 1) { c.fillStyle = col; c.fill(P); }
+  else dotScreen(c, P, bbox(pts), { cell: o.cell ?? 10, color: col, density: o.tint, angle: ANG[col] ?? .4, jitter: .04, seed });
+  c.restore(); return P;
+}
+function key(c, pts, w, seed, close = true, col = BLK) {   // black keyline, solid with a rough edge
+  const q = rough(pts, seed, 2.4, 12, close); c.save(); c.strokeStyle = col; c.lineWidth = w; c.lineJoin = 'round'; c.lineCap = 'round';
+  c.beginPath(); q.forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); if (close) c.closePath(); c.stroke(); c.restore();
+}
+function block(c, pts, col, seed, o = {}) { ink(c, pts, col, seed, o); if (o.key !== false) key(c, pts, o.kw ?? 6, seed + 7, true); }
+function dotsIn(c, pts, col, density, seed, cell = 10) { ink(c, pts, col, seed, { tint: density, cell }); }
+const rect = (x, y, w, h) => [[x, y], [x + w, y], [x + w, y + h], [x, y + h]];
+function inkText(c, s, x, y, size, family, col, maxW, align = 'center', rot = 0) {   // text printed in one ink, off register like the rest
+  const [dx, dy] = REG[col] || [0, 0]; c.save(); c.translate(x + dx, y + dy); c.rotate(rot); fitText(c, s, 0, 0, size, family, col, maxW, align); c.restore();
+}
+function paperBg(c) { c.save(); resetT(c); c.drawImage(PAPER_TEX, 0, 0, W, H); c.restore(); }
+function printFinish(c) { c.save(); resetT(c); c.drawImage(SPECK, 0, 0, W, H); c.restore(); }   // ink never covers fully: paper specks through every solid
+function stampImg(word, col = BLUE, size = 150) { return wordStamp(word, { color: col, style: 'fill', size, seed: word.length * 7 }); }
+function stampLand(c, img, x, y, rot, s, t, tl) { drawStamp(c, img, x, y, rot, s, t, tl, .3); }
+function shake(t, hits) { let x = 0, y = 0; for (const [ti, a] of hits) if (t >= ti && t < ti + .14) { const r = rng(Math.round(t * 991)), d = 1 - (t - ti) / .14; x += (r() - .5) * a * 2 * d; y += (r() - .5) * a * 2 * d; } return [x, y]; }
+const land = (t, t0) => seg(t, t0 - SLAM, t0);   // 0..1, reaching 1 exactly on t0
+
+// ransom-note letters: each on its own cut paper chip, mixed fonts and inks
+const RANSOM_STYLES = [
+  { bg: BLK, fg: CHIP, font: 'Stamp' }, { bg: YEL, fg: BLK, font: '"DejaVu Serif"' }, { bg: CHIP, fg: BLUE, font: 'Stamp' },
+  { bg: BLUE, fg: CHIP, font: '"Liberation Sans"' }, { bg: CHIP, fg: BLK, font: '"DejaVu Serif"' }, { bg: YEL, fg: BLUE, font: 'Marker' },
+];
+function ransomLetter(c, ch, x, y, size, k, rot) {
+  const S = RANSOM_STYLES[k % RANSOM_STYLES.length], w = size * .92, h = size * 1.12, r = rng(40 + k);
+  const pts = [[-w / 2 + r() * 8, -h / 2 + r() * 6], [w / 2 - r() * 6, -h / 2 + r() * 8], [w / 2 - r() * 8, h / 2 - r() * 6], [-w / 2 + r() * 6, h / 2 - r() * 8]];
+  c.save(); c.translate(x, y); c.rotate(rot);
+  c.save(); c.globalAlpha = .25; c.translate(8, 10); c.fillStyle = BLK; c.fill(polyPath(pts)); c.restore();
+  ink(c, pts, S.bg, 60 + k, { amp: 1.4 }); c.font = `bold ${size * .82}px ${S.font}`;
+  const [dx, dy] = REG[S.fg] || [0, 0]; c.fillStyle = S.fg; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(ch, dx, dy + size * .04);
+  c.restore();
+}
+
+// ================= Jeff: jointed paper-cutout puppet cut from the reference =================
+let JP = null;   // parts meta
+const FEET = [850, 895];   // reference point between his shoes
+// pose: { head, armL, armR, legL, legR (radians), bob, tilt, prop: 'glass'|'thumb'|'point' }
+function jeff(c, x, y, s, p = {}) {
+  const base = c.getTransform();
+  c.save(); c.translate(x, y); c.rotate(p.tilt || 0); c.scale(s * (p.sx || 1), s * (p.sy || 1)); c.translate(-FEET[0], -FEET[1] - (p.bob || 0));
+  const part = (k, a = 0) => { const m = JP.parts[k], [px, py] = m.pivot; c.save(); c.translate(px, py); c.rotate(a); c.translate(-px, -py); c.drawImage(IMG['j_' + k], m.x, m.y); c.restore(); };
+  // paper split-pin at a joint
+  const pin = (k) => { const [px, py] = JP.parts[k].pivot; c.fillStyle = YEL; c.beginPath(); c.arc(px, py, 9, 0, TAU); c.fill(); c.strokeStyle = BLK; c.lineWidth = 3; c.stroke(); };
+  part('legL', p.legL || 0); part('legR', p.legR || 0);
+  part('torso'); part('armR', p.armR || 0); pin('armR');
+  part('armL', p.armL || 0);
+  part('head', p.head || 0);
+  // hand position (free arm) for props: fist centre in the reference is ~(1045, 738)
+  const M = base.inverse().multiply(c.getTransform()), [px, py] = JP.parts.armR.pivot, a = p.armR || 0;
+  const hx = px + Math.cos(a) * (1045 - px) - Math.sin(a) * (738 - py), hy = py + Math.sin(a) * (1045 - px) + Math.cos(a) * (738 - py);
+  const handW = M.transformPoint(new DOMPoint(hx, hy)), shW = M.transformPoint(new DOMPoint(px, py));
+  c.restore();
+  const hand = [handW.x, handW.y], d0 = [hand[0] - shW.x, hand[1] - shW.y], dl = Math.hypot(...d0), u = [d0[0] / dl, d0[1] / dl], fr = 36 * s;
+  if (p.prop === 'thumb') { const tn = Math.hypot(u[0] * .35, 1), td = [u[0] * .35 / tn, -1 / tn]; const b0 = [hand[0] + td[0] * fr * .45, hand[1] + td[1] * fr * .45]; skinCapsule(c, b0, [b0[0] + td[0] * fr * 1.05, b0[1] + td[1] * fr * 1.05], fr * .38, 71); }
+  if (p.prop === 'point') { const b0 = [hand[0] + u[0] * fr * .55, hand[1] + u[1] * fr * .55]; skinCapsule(c, b0, [b0[0] + u[0] * fr * 1.35, b0[1] + u[1] * fr * 1.35], fr * .32, 72); }
+  return { hand, u };
+}
+// a finger or thumb printed like the reference's hands: orange stock, red halftone, red off-register shadow, no keyline
+function skinCapsule(c, a, b, r, seed) {
+  const pts = capsulePts(a, b, r, 8), P = polyPath(pts);
+  c.save(); c.translate(r * .28, r * .22); c.globalAlpha = .75; c.fillStyle = '#e2553b'; c.fill(P); c.restore();
+  c.fillStyle = '#f4a46d'; c.fill(P);
+  dotScreen(c, P, bbox(pts), { cell: Math.max(4, r * .42), color: '#dc4f37', density: .42, angle: .78, seed });
+}
+
+// ================= props =================
+function magnifier(c, cx, cy, R, fromHand, inner) {   // ring (black), handle (yellow), optional contents
+  if (fromHand) { const a = Math.atan2(cy - fromHand[1], cx - fromHand[0]), e = [cx - Math.cos(a) * R, cy - Math.sin(a) * R];
+    c.save(); c.strokeStyle = BLK; c.lineCap = 'round'; c.lineWidth = 34; c.beginPath(); c.moveTo(fromHand[0], fromHand[1]); c.lineTo(e[0], e[1]); c.stroke();
+    c.strokeStyle = YEL; c.lineWidth = 22; c.beginPath(); c.moveTo(fromHand[0], fromHand[1]); c.lineTo(e[0] + Math.cos(a) * -10, e[1] + Math.sin(a) * -10); c.stroke(); c.restore(); }
+  if (inner) { c.save(); c.beginPath(); c.arc(cx, cy, R, 0, TAU); c.clip(); inner(); c.restore(); }
+  else { c.save(); c.fillStyle = alpha(CHIP, .25); c.beginPath(); c.arc(cx, cy, R, 0, TAU); c.fill(); c.restore(); }
+  c.save(); c.strokeStyle = BLK; c.lineWidth = Math.max(14, R * .12); c.beginPath(); c.arc(cx, cy, R, 0, TAU); c.stroke();
+  c.strokeStyle = CHIP; c.lineWidth = Math.max(5, R * .04); c.lineCap = 'round'; c.beginPath(); c.arc(cx, cy, R * .78, Math.PI * 1.1, Math.PI * 1.4); c.stroke(); c.restore();
+}
+function polaroid(c, x, y, w, h, rot, seed, drawPic) {
+  c.save(); c.translate(x, y); c.rotate(rot);
+  c.save(); c.globalAlpha = .28; c.fillStyle = BLK; c.fillRect(-w / 2 + 10, -h / 2 + 12, w, h); c.restore();
+  block(c, rect(-w / 2, -h / 2, w, h), CHIP, seed, { kw: 5 });
+  const pw = w - 36, ph = h - 90; c.save(); c.beginPath(); c.rect(-pw / 2, -h / 2 + 18, pw, ph); c.clip(); c.translate(0, -h / 2 + 18 + ph / 2); drawPic(pw, ph); c.restore();
+  key(c, rect(-pw / 2, -h / 2 + 18, pw, ph), 4, seed + 3);
+  c.restore();
+}
+function pushpin(c, x, y) { c.save(); c.fillStyle = BLUE; c.beginPath(); c.arc(x, y, 15, 0, TAU); c.fill(); c.strokeStyle = BLK; c.lineWidth = 4; c.stroke(); c.fillStyle = alpha(CHIP, .8); c.beginPath(); c.arc(x - 5, y - 5, 4.5, 0, TAU); c.fill(); c.restore(); }
+function string(c, a, b, sag = 40, u = 1) {
+  const m = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2 + sag], pts = [];
+  for (let i = 0; i <= 30 * u; i++) { const q = i / 30; pts.push([(1 - q) ** 2 * a[0] + 2 * (1 - q) * q * m[0] + q * q * b[0], (1 - q) ** 2 * a[1] + 2 * (1 - q) * q * m[1] + q * q * b[1]]); }
+  if (pts.length < 2) return; c.save(); c.lineCap = 'round'; c.strokeStyle = BLK; c.lineWidth = 8; c.beginPath(); pts.forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); c.stroke();
+  c.strokeStyle = YEL; c.lineWidth = 4.5; c.stroke(); c.restore();
+}
+function phoneIcon(c, s) { block(c, rect(-40 * s, -70 * s, 80 * s, 140 * s), BLK, 81, { kw: 4 }); ink(c, rect(-32 * s, -56 * s, 64 * s, 104 * s), CHIP, 82, { reg: false }); ink(c, rect(-32 * s, -56 * s, 64 * s, 22 * s), BLUE, 83); }
+function lensIcon(c, s) { block(c, ellPts(0, 0, 62 * s, 62 * s, 0, 30), BLK, 84, { kw: 4 }); ink(c, ellPts(0, 0, 40 * s, 40 * s, 0, 26), BLUE, 85); ink(c, ellPts(-12 * s, -12 * s, 10 * s, 10 * s, 0, 14), CHIP, 86, { reg: false }); }
+function tagIcon(c, s) { block(c, [[-70 * s, -30 * s], [40 * s, -30 * s], [70 * s, 0], [40 * s, 30 * s], [-70 * s, 30 * s]], YEL, 87, { kw: 4 }); inkText(c, '$9', -10 * s, 2 * s, 44 * s, 'Stamp', BLK, 90 * s); }
+function docIcon(c, s) { block(c, rect(-48 * s, -64 * s, 96 * s, 128 * s), CHIP, 88, { kw: 4 }); for (let k = 0; k < 5; k++) ink(c, rect(-34 * s, (-44 + k * 20) * s, (k % 2 ? 50 : 68) * s, 9 * s), BLK, 89 + k, { reg: false }); }
+
+// the con man, screen-printed: fedora, bandit mask, curly mustache, blue coat, yellow scarf
+function conman(c, x, y, s, o = {}) {
+  const { mood = 0, look = 0, t = 0 } = o;
+  c.save(); c.translate(x, y); c.scale(s, s); if (mood) c.translate(Math.sin(t * 80) * 2.5, 0);
+  block(c, ellPts(0, -52, 40, 40, 0, 36), BLUE, 901, { kw: 4 });
+  block(c, [[-30, -86], [-8, -76], [-22, -58]], BLUE, 902, { kw: 3 }); block(c, [[30, -86], [8, -76], [22, -58]], BLUE, 903, { kw: 3 });
+  block(c, ellPts(0, -100, 26, 25, 0, 30), CHIP, 904, { kw: 4 }); dotsIn(c, ellPts(0, -100, 26, 25, 0, 30), YEL, .35, 905, 7);
+  block(c, rect(-22, -84, 44, 10), YEL, 906, { kw: 3 });
+  block(c, rect(-28, -112, 56, 16), BLK, 907, { kw: 2 });
+  for (const ex of [-11, 11]) { ink(c, ellPts(ex, -104, mood ? 7.5 : 6.5, mood ? 7.5 : 4.8, 0, 16), CHIP, 908 + ex, { reg: false }); c.fillStyle = BLK; c.beginPath(); c.arc(ex + look * 3, -104, mood ? 2.4 : 2.8, 0, TAU); c.fill(); }
+  c.save(); c.strokeStyle = BLK; c.lineWidth = 4.5; c.lineCap = 'round'; c.beginPath(); c.moveTo(0, -90); c.quadraticCurveTo(-9, -95, -16, -89); c.quadraticCurveTo(-20, -84, -15, -82); c.moveTo(0, -90); c.quadraticCurveTo(9, -95, 16, -89); c.quadraticCurveTo(20, -84, 15, -82); c.stroke();
+  if (mood) { c.fillStyle = BLK; c.beginPath(); c.ellipse(0, -80, 5, 6, 0, 0, TAU); c.fill(); } c.restore();
+  block(c, ellPts(0, -120, 40, 8, 0, 24), BLK, 910, { kw: 2 }); block(c, [[-22, -120], [-19, -142], [-4, -138], [0, -144], [4, -138], [19, -142], [22, -120]], BLK, 911, { kw: 2 });
+  ink(c, rect(-22, -128, 44, 7), YEL, 912);
+  if (mood) { key(c, [[-34, -58], [-52, -90]], 9, 913, false, BLUE); key(c, [[34, -58], [54, -92]], 9, 914, false, BLUE); }
+  c.restore();
+}
+
+// ================= bar 1: the case file =================
+const FOLDER = { x: 320, y: 180, w: 1280, h: 720 };
+function folderShape(x, y, w, h) { return [[x, y + 40], [x + 40, y], [x + 320, y], [x + 350, y + 40], [x + w, y + 40], [x + w, y + h], [x, y + h]]; }
+function deskBg(c, t) { paperBg(c); dotsIn(c, rect(-50, -50, W + 100, H + 100), BLUE, .22, 1001, 14);
+  for (let k = 0; k < 7; k++) { const r = rng(1010 + k); ink(c, rect(r() * W, r() * H, 180 + r() * 200, 8), BLK, 1011 + k, { reg: false }); } }
+function sceneFile(c, t, coverFlip = 0) {
+  deskBg(c, t);
+  const [sx, sy] = shake(t, [[at(0, 2), 12], [at(0, 2.5), 5], [at(0, 3), 5], [at(0, 3.5), 5], [at(0, 4), 7]]);
+  const drift = 1 + .03 * seg(t, 0, 2.2);
+  c.save(); c.translate(sx, sy); c.translate(960, 540); c.scale(drift, drift); c.rotate(-.015 * seg(t, 0, 2.2)); c.translate(-960, -540);
+  // the folder slides in and thwacks down on beat 2
+  const u = easeOut(land(t, at(0, 2)) ** .8), fx = lerp(1500, 0, u), fr = lerp(.35, 0, u);
+  c.save(); c.translate(960 + fx, 540); c.rotate(fr); c.translate(-960, -540);
+  const F = FOLDER;
+  c.save(); c.globalAlpha = .3; c.translate(14, 18); c.fillStyle = BLK; c.fill(polyPath(folderShape(F.x, F.y, F.w, F.h))); c.restore();
+  // inside pages (under the cover)
+  block(c, folderShape(F.x, F.y, F.w, F.h), CHIP, 1020, { kw: 7 }); dotsIn(c, folderShape(F.x, F.y, F.w, F.h), YEL, .22, 1021, 11);
+  if (coverFlip > 0) { const g = L2.getContext('2d'); resetT(g); sceneBoard(g, at(1)); c.save(); c.beginPath(); c.rect(F.x + 20, F.y + 60, F.w - 40, F.h - 80); c.clip(); c.drawImage(L2, F.x + 20, F.y + 60, F.w - 40, F.h - 80); c.restore(); }
+  // the cover, flipping on its left spine
+  const cos = Math.cos(coverFlip * Math.PI);
+  c.save(); c.translate(F.x, 0); c.scale(cos, 1); c.translate(-F.x, 0);
+  if (cos > 0 || coverFlip === 0) {
+    block(c, folderShape(F.x, F.y + 6, F.w, F.h - 6), CHIP, 1022, { kw: 7 }); dotsIn(c, folderShape(F.x, F.y + 6, F.w, F.h - 6), YEL, .3, 1023, 11);
+    block(c, rect(F.x + 60, F.y + 8, 250, 28), CHIP, 1024, { kw: 3 }); inkText(c, 'CASE FILE', F.x + 185, F.y + 23, 26, '"Liberation Mono"', BLK, 230);
+    inkText(c, 'EVIDENCE  ·  DO NOT BEND', F.x + F.w - 60, F.y + F.h - 50, 30, '"Liberation Mono"', BLK, 600, 'right');
+    // L-I-V-E in ransom letters, one per eighth from beat 2.5
+    'LIVE'.split('').forEach((ch, k) => { const t0 = at(0, 2.5 + k * .5); if (t < t0 - SLAM) return; const q = land(t, t0), s = lerp(2.2, 1, easeIn(q));
+      c.save(); c.translate(F.x + 300 + k * 230, F.y + 380); c.scale(s, s); ransomLetter(c, ch, 0, 0, 250, k * 2 + 1, [-.12, .08, -.05, .1][k]); c.restore(); });
+  } else { block(c, folderShape(F.x, F.y + 6, F.w, F.h - 6), CHIP, 1025, { kw: 7 }); dotsIn(c, folderShape(F.x, F.y + 6, F.w, F.h - 6), YEL, .2, 1026, 11); }
+  c.restore();
+  c.restore(); c.restore();
+}
+// ================= bar 2: the evidence board =================
+const BOARD_W = 2700;
+const PINS = [
+  { x: 420, y: 330, rot: -.07, icon: phoneIcon, cap: 'THE TEXT' }, { x: 1180, y: 380, rot: .05, icon: phoneIcon, cap: 'THE SCAM' },
+  { x: 1860, y: 300, rot: -.04, icon: lensIcon, cap: 'HIDDEN CAM' }, { x: 2380, y: 420, rot: .06, icon: tagIcon, cap: 'THE DEAL' }, { x: 820, y: 760, rot: .04, icon: docIcon, cap: 'FINE PRINT' },
+];
+function boardPan(t) { return lerp(0, 760, easeIO(seg(t, at(1), at(1, 3)))); }   // pan lands on the SCAM photo on beat 3
+function sceneBoard(c, t) {
+  paperBg(c);
+  const pan = boardPan(t);
+  c.save(); c.translate(-pan, 0);
+  // the board: blue tone, ledger lines, a headline strip
+  dotsIn(c, rect(-60, -60, BOARD_W + 200, H + 120), BLUE, .34, 1101, 12);
+  inkText(c, 'WHO IS RIPPING YOU OFF?', 1180, 110, 88, 'Stamp', BLK, 1400);
+  PINS.forEach((P, k) => polaroid(c, P.x, P.y, 330, 380, P.rot, 1110 + k, (pw, ph) => { ink(c, rect(-pw / 2, -ph / 2, pw, ph), CHIP, 1120 + k, { reg: false }); P.icon(c, 1.3); }));
+  PINS.forEach((P, k) => inkText(c, P.cap, P.x, P.y + 150, 40, 'Marker', BLK, 280, 'center', P.rot));
+  for (const [a, b] of [[0, 1], [1, 2], [2, 3], [1, 4]]) string(c, [PINS[a].x, PINS[a].y - 175], [PINS[b].x, PINS[b].y - 175], 60);
+  PINS.forEach(P => pushpin(c, P.x, P.y - 175));
+  c.restore();
+  // Jeff pops up from the bottom on beat 2, raises the magnifier on beat 3
+  const pu = easeOutBack(land(t, at(1, 2)) ** .9), jy = lerp(1500, 1085, pu);
+  const raise = easeOut(seg(t, at(1, 3) - SLAM, at(1, 3)));
+  const J = jeff(c, 420, jy, .72, { armR: lerp(0, -2.15, raise), head: .06 * raise, bob: Math.sin(t * 9) * 4 * (1 - raise) });
+  return { J, raise };
+}
+function boardWithLens(c, t) {
+  const { J, raise } = sceneBoard(c, t);
+  if (raise <= 0) return;
+  const target = [PINS[1].x - boardPan(t), PINS[1].y - 20];
+  const zoom = easeIn(seg(t, at(1, 4), at(2)));   // beat 4: through the lens
+  const R = lerp(lerp(60, 170, raise), 1300, zoom * zoom), cx = lerp(J.hand[0] + 200, target[0], raise), cy = lerp(J.hand[1] - 200, target[1], raise);
+  magnifier(c, lerp(cx, 960, zoom), lerp(cy, 540, zoom), R, zoom < .5 ? J.hand : null, raise > .6 ? () => {
+    const g = L1.getContext('2d'); resetT(g); scenePhone(g, at(2)); const k = lerp(.35, 1, zoom); c.translate(lerp(cx, 960, zoom), lerp(cy, 540, zoom)); c.scale(k, k); c.drawImage(L1, -W / 2, -H / 2, W, H); } : null);
+}
+// ================= bar 3: phishing =================
+const PHN = { x: 960, y: 560, w: 560, h: 940 };
+function scenePhone(c, t) {
+  paperBg(c);
+  // a halftone ramp of blue dots, bigger toward the edges
+  dotScreen(c, polyPath(rect(0, 0, W, H)), [0, 0, W, H], { cell: 22, color: BLUE, density: (x, y) => .12 + .55 * Math.min(1, Math.hypot(x - 960, y - 540) / 1000), angle: .26, seed: 1201 });
+  const [sx, sy] = shake(t, [[at(2, 3), 16]]);
+  const breathe = 1 + .02 * Math.sin((t - at(2)) * Math.PI / BEAT);
+  c.save(); c.translate(sx, sy); c.translate(PHN.x, PHN.y); c.scale(breathe, breathe); c.rotate(-.04);
+  // con man sneaks up behind, dangles a hook on beat 2
+  const up = easeOutBack(land(t, at(2, 2))) * (1 - easeIn(seg(t, at(2, 3.5) - .1, at(2, 3.5) + .1)));
+  const panic = t >= at(2, 3);
+  if (up > 0) conman(c, 300 - (1 - up) * 160, 40, 2.3, { mood: panic ? 1 : 0, look: Math.sin(t * 7) > 0 ? -1 : 1, t });
+  const { w, h } = PHN;
+  c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fill(polyPath(rrPts(-w / 2 + 16, -h / 2 + 22, w, h, 60, 6))); c.restore();
+  block(c, rrPts(-w / 2, -h / 2, w, h, 60, 6), BLK, 1210, { kw: 6 });
+  const sw = w - 52, sh = h - 150; block(c, rrPts(-sw / 2, -sh / 2, sw, sh, 20, 4), CHIP, 1211, { kw: 4 });
+  ink(c, rect(-sw / 2, -sh / 2, sw, 90), BLUE, 1212); inkText(c, 'URGENT', 0, -sh / 2 + 47, 50, 'Stamp', CHIP, sw - 60);
+  inkText(c, 'YOUR ACCOUNT', 0, -150, 58, 'Stamp', BLK, sw - 60); inkText(c, 'IS LOCKED', 0, -85, 58, 'Stamp', BLK, sw - 60);
+  const pulse = 1 + .05 * Math.max(0, Math.sin((t - at(2)) * Math.PI * 2 / BEAT));
+  c.save(); c.translate(0, 120); c.scale(pulse, pulse); block(c, rrPts(-190, -58, 380, 116, 40, 5), YEL, 1213, { kw: 5 }); inkText(c, 'VERIFY NOW', 0, 4, 54, 'Stamp', BLK, 330); c.restore();
+  if (up > .3 && !panic) {   // the hook
+    const hk = [-20, 60 + Math.sin(t * 9) * 12]; c.save(); c.strokeStyle = BLK; c.lineWidth = 3.5; c.beginPath(); c.moveTo(60, -320); c.lineTo(hk[0], hk[1] - 34); c.stroke();
+    c.lineWidth = 8; c.lineCap = 'round'; c.beginPath(); c.moveTo(hk[0], hk[1] - 34); c.lineTo(hk[0], hk[1]); c.quadraticCurveTo(hk[0], hk[1] + 26, hk[0] - 22, hk[1] + 18); c.stroke(); c.restore();
+    key(c, [[330, -170], [60, -320]], 12, 1214, false);
+  }
+  c.restore();
+  if (t >= at(2, 3) - SLAM) stampLand(c, stampImg('SCAM!', BLUE, 200), 960 + sx, 690 + sy, -.12, 1, t, at(2, 3));
+  // beat 4: a redaction marker blacks the frame out, three strokes
+  for (let k = 0; k < 3; k++) { const a = seg(t, at(2, 4) + k * .2, at(2, 4) + k * .2 + .2); if (a <= 0) continue;
+    const y0 = k * 360 - 20, pts = [[-40, y0], [-40 + (W + 80) * a, y0 + 10], [-40 + (W + 80) * a, y0 + 400], [-40, y0 + 390]]; ink(c, pts, BLK, 1220 + k, { amp: 8 }); }
+}
+// ================= bar 4: hidden camera =================
+function iris(c, open) {   // camera-lens aperture blades opening from the centre
+  if (open >= 1) return; const n = 7, R = 1300, r = lerp(0, 1150, easeOut(open));
+  c.save(); c.fillStyle = BLK;
+  for (let k = 0; k < n; k++) { const a = k / n * TAU + open * .9; c.beginPath(); c.moveTo(960 + Math.cos(a) * r, 540 + Math.sin(a) * r); c.lineTo(960 + Math.cos(a + 1.3) * R, 540 + Math.sin(a + 1.3) * R); c.lineTo(960 + Math.cos(a + 2.4) * R, 540 + Math.sin(a + 2.4) * R); c.lineTo(960 + Math.cos(a + TAU / n) * r, 540 + Math.sin(a + TAU / n) * r); c.closePath(); c.fill();
+    c.strokeStyle = alpha(CHIP, .35); c.lineWidth = 3; c.stroke(); }
+  c.restore();
+}
+const CAUGHT_T = 7.5 + 1.25;   // bar 4 beat 3
+function sceneHidden(c, t) {
+  const tf = Math.min(t, CAUGHT_T);   // the flash freezes the action
+  paperBg(c);
+  dotsIn(c, rect(-40, -40, W + 80, 800), BLUE, .42, 1301, 12);
+  for (let x = 60; x < W; x += 120) ink(c, rect(x, -40, 26, 840), BLUE, 1302 + x, { tint: .75, cell: 8 });
+  block(c, rect(-40, 780, W + 80, 340), CHIP, 1303, { kw: 6 }); dotsIn(c, rect(-40, 780, W + 80, 340), BLK, .12, 1304, 12);
+  // the con man at his desk, counting cash
+  const mood = tf >= at(3, 2) ? 1 : 0;
+  conman(c, 1260, 700, 2.4, { mood, look: mood ? -1 : Math.sin(tf * 4), t: tf });
+  for (let k = 0; k < 4; k++) { const ph = (tf * 1.6 + k * .25) % 1; c.save(); c.translate(1150 + k * 40, 600 - ph * 90); c.rotate(-.5 + ph); c.globalAlpha = 1 - ph; block(c, rect(-50, -24, 100, 48), YEL, 1310 + k, { kw: 3 }); inkText(c, '$', 0, 2, 34, 'Stamp', BLK, 60); c.restore(); }
+  block(c, rect(880, 650, 700, 60), BLK, 1320, { kw: 4 }); block(c, rect(910, 710, 640, 250), BLK, 1321, { kw: 4 }); dotsIn(c, rect(930, 730, 600, 210), BLUE, .3, 1322, 10);
+  for (let k = 0; k < 6; k++) block(c, rect(1400 + (k % 2) * 8, 630 - k * 12, 130, 22), YEL, 1330 + k, { kw: 3 });
+  // Jeff barges in on beat 2 and points
+  const a = easeOutBack(land(tf, at(3, 2))), jx = lerp(-400, 470, a), pointA = easeOut(seg(tf, at(3, 2), at(3, 2.5)));
+  if (tf > at(3, 2) - SLAM) jeff(c, jx, 1080, .78, { armR: lerp(0, -1.75, pointA), prop: pointA > .5 ? 'point' : null, tilt: .04 * (1 - a) });
+  // viewfinder
+  for (const [x, y, sx2, sy2] of [[70, 70, 1, 1], [W - 70, 70, -1, 1], [70, H - 70, 1, -1], [W - 70, H - 70, -1, -1]]) key(c, [[x, y + sy2 * 110], [x, y], [x + sx2 * 110, y]], 12, 1340 + x + y, false);
+  if (Math.floor(tf * 3.2) % 2 === 0) { c.fillStyle = BLUE; c.beginPath(); c.arc(140, 132, 18, 0, TAU); c.fill(); }
+  inkText(c, 'REC', 175, 134, 52, 'Stamp', BLK, 200, 'left');
+  block(c, rect(690, 70, 540, 90), BLK, 1350, { kw: 2 }); inkText(c, 'HIDDEN CAMERA', 960, 116, 50, 'Stamp', CHIP, 500);
+  iris(c, seg(t, at(3), at(3, 1.5)));
+  // beat 3: flash + CAUGHT!
+  if (t >= CAUGHT_T - SLAM) stampLand(c, stampImg('CAUGHT!', BLUE, 170), 1100, 330, -.08, 1, t, CAUGHT_T);
+  if (t >= CAUGHT_T && t < CAUGHT_T + .3) { c.save(); c.globalAlpha = 1 - seg(t, CAUGHT_T, CAUGHT_T + .3); c.fillStyle = CHIP; c.fillRect(0, 0, W, H); c.restore(); }
+}
+// ================= bar 5: the warning (fine print) =================
+function sceneWarning(c, t) {
+  paperBg(c); dotsIn(c, rect(-40, -40, W + 80, H + 80), BLUE, .2, 1401, 14);
+  const [sx, sy] = shake(t, [[at(4, 3), 12]]);
+  const push = 1 + .04 * seg(t, at(4), at(5));
+  c.save(); c.translate(sx, sy); c.translate(1050, 560); c.scale(push, push); c.rotate(.03); c.translate(-1050, -560);
+  const D = { x: 700, y: 110, w: 760, h: 900 };
+  c.save(); c.globalAlpha = .28; c.fillStyle = BLK; c.fillRect(D.x + 14, D.y + 18, D.w, D.h); c.restore();
+  block(c, rect(D.x, D.y, D.w, D.h), CHIP, 1402, { kw: 6 });
+  inkText(c, 'TERMS OF SERVICE', D.x + D.w / 2, D.y + 70, 56, 'Stamp', BLK, D.w - 80);
+  squiggleText(c, D.x + 60, D.y + 150, D.w - 120, 5, { seed: 1410, lineH: 30, color: BLK, width: 2.2 });
+  // the hidden lines: redaction bars that peel back on beat 2
+  const peel = easeOut(seg(t, at(4, 2) - SLAM, at(4, 2) + .1));
+  [['WE SELL YOUR DATA', 360], ['HIDDEN FEE $19.99/MO', 520]].forEach(([s, y], k) => {
+    block(c, rect(D.x + 50, D.y + y - 42, D.w - 100, 84), YEL, 1420 + k, { kw: 0, key: false });
+    inkText(c, s, D.x + D.w / 2, D.y + y + 3, 60, 'Stamp', BLK, D.w - 140);
+    const bw = (D.w - 90) * (1 - peel); if (bw > 2) ink(c, rect(D.x + 45 + (D.w - 90) - bw, D.y + y - 48, bw, 96), BLK, 1430 + k, { amp: 5 }); });
+  squiggleText(c, D.x + 60, D.y + 640, D.w - 120, 7, { seed: 1411, lineH: 30, color: BLK, width: 2.2 });
+  c.restore();
+  // the caught Polaroid, pinned at top-left (it arrived from the hidden camera)
+  caughtPolaroid(c, 330, 300, 1, -.08);
+  pushpin(c, 330, 300 - 190);
+  // Jeff points at the fine print from the bottom right
+  const a = easeOutBack(land(t, at(4, 1.5))), jy = lerp(1500, 1085, a), pt = easeOut(seg(t, at(4, 1.5), at(4, 2)));
+  jeff(c, 1640, jy, .7, { armR: lerp(0, -2.6, pt), head: -.08, prop: pt > .5 ? 'point' : null });
+  if (t >= at(4, 3) - SLAM) stampLand(c, stampImg('WARNING!', BLUE, 150), 1120 + sx, 880 + sy, .07, 1, t, at(4, 3));
+}
+function caughtPolaroid(c, x, y, s, rot) {
+  const g = L2.getContext('2d'); resetT(g); sceneHidden(g, CAUGHT_T + .31); drawPrint(g);
+  polaroid(c, x, y, 380 * s, 380 * s, rot, 1500, (pw, ph) => { c.drawImage(L2, -pw / 2, -ph / 2, pw, ph); });
+  inkText(c, 'CAUGHT', x - Math.sin(rot) * 0, y + 150 * s, 44 * s, 'Marker', BLK, 300 * s, 'center', rot);
+}
+// ================= bar 6: deals =================
+const TAGS = [
+  { x: 280, y: 560, old: '$129', neu: '$59', t0: at(5, 1), rot: -.1 }, { x: 600, y: 330, old: '$80', neu: '$29', t0: at(5, 1.5), rot: .07 },
+  { x: 1360, y: 340, old: '$250', neu: '$99', t0: at(5, 2), rot: -.06 }, { x: 1680, y: 590, old: '$45', neu: '$15', t0: at(5, 2.5), rot: .09 },
+];
+function sceneDeals(c, t) {
+  paperBg(c); dotsIn(c, rect(-40, 560, W + 80, 600), BLUE, .3, 1601, 13);
+  const [sx, sy] = shake(t, [[at(5, 3), 12]]);
+  c.save(); c.translate(sx, sy);
+  TAGS.forEach((g, k) => { if (t < g.t0 - SLAM) return; const q = land(t, g.t0), sp = t > g.t0 ? Math.exp(-(t - g.t0) * 6) * Math.sin((t - g.t0) * 20) : 0;
+    const y = lerp(-300, g.y, easeIn(q)) + sp * 24, rot = g.rot + sp * .12;
+    c.save(); c.strokeStyle = BLK; c.lineWidth = 4; c.beginPath(); c.moveTo(g.x - 80, -20); c.lineTo(g.x - 150, y - 10); c.stroke(); c.restore();
+    c.save(); c.translate(g.x, y); c.rotate(rot);
+    block(c, [[-180, -90], [150, -90], [150, 90], [-180, 90], [-230, 0]], YEL, 1610 + k, { kw: 6 }); c.fillStyle = CHIP; c.beginPath(); c.arc(-185, 0, 14, 0, TAU); c.fill(); c.strokeStyle = BLK; c.lineWidth = 4; c.stroke();
+    inkText(c, g.old, -10, -45, 56, '"DejaVu Serif"', BLK, 220);
+    const st = seg(t, g.t0 + .05, g.t0 + .2); if (st > 0) { c.save(); c.strokeStyle = BLUE; c.lineWidth = 10; c.lineCap = 'round'; c.beginPath(); c.moveTo(-110, -38); c.lineTo(-110 + 200 * st, -54); c.stroke(); c.restore(); }
+    const wr = easeOutBack(seg(t, g.t0 + .15, g.t0 + .3)); if (wr > 0) { c.save(); c.translate(-10, 38); c.scale(wr, wr); inkText(c, g.neu, 0, 0, 92, 'Stamp', BLUE, 240); c.restore(); }
+    c.restore(); });
+  const a = easeOutBack(land(t, at(5, 2))), jy = lerp(1600, 1085, a), th = easeOutBack(seg(t, at(5, 2), at(5, 2.4)));
+  if (t > at(5, 2) - SLAM) jeff(c, 960, jy, .74, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, bob: -Math.abs(Math.sin((t - at(5)) * Math.PI / BEAT)) * 6 });
+  c.restore();
+  if (t >= at(5, 3) - SLAM) stampLand(c, stampImg('DEAL!', BLUE, 170), 960 + sx, 150 + sy, -.06, 1, t, at(5, 3));
+}
+// ================= bar 7: case closed =================
+function sceneClosed(c, t) {
+  deskBg(c, t);
+  const [sx, sy] = shake(t, [[at(6), 10], [at(6, 3), 12]]);
+  const back = 1.08 - .08 * easeOut(seg(t, at(6), at(7)));
+  c.save(); c.translate(sx, sy); c.translate(960, 540); c.scale(back, back); c.rotate(.012); c.translate(-960, -540);
+  const F = FOLDER;
+  c.save(); c.globalAlpha = .3; c.translate(14, 18); c.fillStyle = BLK; c.fill(polyPath(folderShape(F.x, F.y, F.w, F.h))); c.restore();
+  block(c, folderShape(F.x, F.y, F.w, F.h), CHIP, 1701, { kw: 7 }); dotsIn(c, folderShape(F.x, F.y, F.w, F.h), YEL, .3, 1702, 11);
+  block(c, rect(F.x + 60, F.y + 8, 250, 28), CHIP, 1703, { kw: 3 }); inkText(c, 'CASE FILE', F.x + 185, F.y + 23, 26, '"Liberation Mono"', BLK, 230);
+  // the screen-print logo, slapped on like a sticker (used exactly as supplied)
+  const im = IMG.sp, [bx, by, bw, bh] = IMG.spBox, lw = 820, lh = bh * lw / bw, q = land(t, at(6)), s = lerp(1.6, 1, easeIn(q));
+  c.save(); c.translate(900, 560); c.scale(s, s); c.rotate(-.03); c.drawImage(im, bx, by, bw, bh, -lw / 2, -lh / 2, lw, lh); c.restore();
+  c.restore();
+  const a = easeOutBack(land(t, at(6, 2))), jy = lerp(1600, 1085, a), th = easeOutBack(seg(t, at(6, 2), at(6, 2.4)));
+  if (t > at(6, 2) - SLAM) jeff(c, 1640, jy, .66, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: -.05 });
+  if (t >= at(6, 3) - SLAM) stampLand(c, stampImg('LIVE NOW', BLUE, 140), 1390 + sx, 250 + sy, .1, 1, t, at(6, 3));
+  // beat 4: a giant rubber stamp comes down, fills the frame on the downbeat of bar 8
+  const d = seg(t, at(6, 4), at(7));
+  if (d > 0) rubberStamp(c, easeIn(d));
+}
+function rubberStamp(c, u) {   // u: 0 = high above, 1 = pressed flat (covers the frame)
+  const s = lerp(.35, 1.25, u), y = lerp(-500, 540, u);
+  c.save(); c.translate(960, y); c.scale(s, s);
+  c.save(); c.globalAlpha = .35 * u; c.fillStyle = BLK; c.fillRect(-900, -520, 1800, 1040); c.restore();
+  block(c, rect(-820, -470, 1640, 940), BLUE, 1801, { kw: 10 });
+  block(c, rect(-300, -620, 600, 160), BLK, 1802, { kw: 6 }); block(c, rect(-120, -900, 240, 300), YEL, 1803, { kw: 6 });
+  c.restore();
+}
+// ================= bar 8: sign-off =================
+function sceneSignoff(c, t) {
+  paperBg(c);
+  // the official logo: exact file, no texture, no recolour, no distortion; held still
+  const im = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 1000, lh = bh * lw / bw;
+  c.drawImage(im, bx, by, bw, bh, 960 - lw / 2, 540 - lh / 2, lw, lh);
+  const lift = seg(t, at(7), at(7) + .3);   // the stamp lifts away, revealing it
+  if (lift < 1) { c.save(); c.globalAlpha = 1; const u = easeIn(lift); c.translate(0, -1400 * u); rubberStampFlat(c); c.restore(); }
+}
+function rubberStampFlat(c) { c.save(); c.translate(960, 540); c.scale(1.25, 1.25); block(c, rect(-820, -470, 1640, 940), BLUE, 1801, { kw: 10 }); c.restore(); }
+
+// ================= assembly =================
+function drawPrint(c) { printFinish(c); }
+function drawAt(g, fn, t) { resetT(g); g.globalAlpha = 1; fn(g, t); }
+function drawScene(c, t) {
+  resetT(c);
+  if (t < at(0, 4.5)) { sceneFile(c, t); return drawPrint(c); }
+  if (t < at(1)) { const u = easeIO(seg(t, at(0, 4.5), at(1))), F = FOLDER;   // cover flips open while the camera dives into the page
+    const k = lerp(1, W / (F.w - 40), u), ox = F.x + 20 + (F.w - 40) / 2, oy = F.y + 60 + (F.h - 80) / 2;
+    c.save(); c.translate(960, 540); c.scale(k, k); c.translate(-lerp(960, ox, u), -lerp(540, oy, u)); sceneFile(c, t, Math.min(1, u * 1.6)); c.restore(); return drawPrint(c); }
+  if (t < at(2)) { boardWithLens(c, t); return drawPrint(c); }
+  if (t < at(3)) { scenePhone(c, t); return drawPrint(c); }
+  if (t < at(3, 4)) { sceneHidden(c, t); return drawPrint(c); }
+  if (t < at(4)) {   // the frozen frame becomes a Polaroid and flies to the corner of the next page
+    const u = easeIO(seg(t, at(3, 4), at(4)));
+    sceneWarningBg(c, t);
+    const x = lerp(960, 330, u), y = lerp(540, 300, u), s = lerp(2.6, 1, u), rot = lerp(0, -.08, u) + Math.sin(u * Math.PI) * .25;
+    caughtPolaroid(c, x, y, s, rot); return drawPrint(c);
+  }
+  if (t < at(4, 4.5)) { sceneWarning(c, t); return drawPrint(c); }
+  if (t < at(5)) { drawAt(L1.getContext('2d'), sceneWarning, t); drawAt(L2.getContext('2d'), sceneDeals, t); pageTurn(c, L1, L2, easeIn(seg(t, at(4, 4.5), at(5) - .01))); return drawPrint(c); }
+  if (t < at(5, 4)) { sceneDeals(c, t); return drawPrint(c); }
+  if (t < at(6)) { const u = easeIn(seg(t, at(5, 4), at(6)));   // the folder cover swings shut over the deals
+    sceneDeals(c, t); c.save(); c.translate(0, 0); c.scale(u, 1); block(c, rect(0, -20, W + 40, H + 40), CHIP, 1901, { kw: 10 }); dotsIn(c, rect(0, -20, W + 40, H + 40), YEL, .3, 1902, 11); c.restore(); return drawPrint(c); }
+  if (t < at(7)) { sceneClosed(c, t); return drawPrint(c); }
+  return sceneSignoff(c, t);   // no print finish over the official logo
+}
+function sceneWarningBg(c, t) { paperBg(c); dotsIn(c, rect(-40, -40, W + 80, H + 80), BLUE, .2, 1401, 14); }
+function pageTurn(c, front, back, p) {
+  const d = [-.78, -.62], n0 = Math.hypot(...d); d[0] /= n0; d[1] /= n0;
+  const s = p * 2500, q = [W + d[0] * s, H + d[1] * s], frame = [[0, 0], [W, 0], [W, H], [0, H]], n = [-d[0], -d[1]];
+  blit(c, back);
+  const keep = clipHalf(frame, q, [-n[0], -n[1]]); if (keep.length > 2) { c.save(); c.clip(polyPath(keep)); blit(c, front); c.restore(); }
+  const lifted = clipHalf(frame, q, n);
+  if (lifted.length > 2) { const refl = lifted.map(([x, y]) => { const v = (x - q[0]) * n[0] + (y - q[1]) * n[1]; return [x - 2 * v * n[0], y - 2 * v * n[1]]; });
+    const flap = clipHalf(refl, q, [-n[0], -n[1]]); if (flap.length > 2) { c.save(); c.globalAlpha = .25; c.fillStyle = BLK; c.fill(polyPath(flap.map(([x, y]) => [x + 18, y + 22]))); c.restore(); block(c, flap, CHIP, 1950, { kw: 6 }); dotsIn(c, flap, BLUE, .15, 1951, 12); } }
+}
+
+// ================= runtime =================
+const CV = document.getElementById('c'); CV.width = OUT_W; CV.height = OUT_H; const CTX = CV.getContext('2d');
+function frame(i) { const t = Math.min(i / FPS, DUR - 1e-6); FILM_T = t; resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, t); resetT(CTX); }
+window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
+(async () => {
+  JP = await (await fetch('assets/casefile/jeff_parts.json')).json();
+  await Promise.all([...Object.keys(JP.parts).map(k => loadImg('j_' + k, `assets/casefile/jeff_${k}.png`)), loadImg('logo', 'assets/official_logo.png'), loadImg('sp', 'assets/casefile/logo_screenprint.webp')]);
+  IMG.logoBox = alphaBox(IMG.logo); IMG.spBox = alphaBox(IMG.sp);
+  await document.fonts.load('40px Stamp'); await document.fonts.load('40px Marker');
+  PAPER_TEX = paperTexture(W, H, CREAM, 11);
+  { const o = document.createElement('canvas'); o.width = W; o.height = H; const g = o.getContext('2d'), r = rng(12);   // paper specks through the ink
+    for (let i = 0; i < 26000; i++) { g.globalAlpha = .15 + r() * .35; g.fillStyle = r() < .8 ? CHIP : '#d9ceb5'; const s = .8 + r() * 2.2; g.fillRect(r() * W, r() * H, s, s * (.6 + r() * .8)); }
+    SPECK = o; }
+  const q = new URLSearchParams(location.search); frame(+(q.get('frame') || 0));
+  window.__ready = true;
+})().catch(e => { console.error(e); window.__error = String(e); });
+</script></body></html>

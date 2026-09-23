@@ -62,3 +62,21 @@ ffmpeg -y -i $O/score.wav -af "loudnorm=I=-16:TP=-2:LRA=11,aresample=48000,alimi
 ffmpeg -y -i $O/video.mp4 -i $O/score_norm.wav -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart $O/rossen-title-sequence.mp4
 ```
 The score is a VSCO 2 CE orchestra (strings, brass fanfare and stabs, timpani, glock, xylophone) over the VSCO 1 drum kit, with the kick and toms retuned into the key, plus Kenney foley. `PITCHED_ONLY=1 python3 score_title.py` renders the pitched parts alone, for a tuning check.
+
+## Opener 3: case file (19.5 s, screen print)
+`rossen-casefile.html`: a "case file" title sequence in a screen-print look. It uses flat inks in the logo's blue (#0858C0), black and the logo's yellow (#F8D000) as the one accent, on warm cream stock, with halftone tints, misregistered colour layers and paper specks. 96 BPM: one bar (2.5 s) per scene, and a stamp on beat 3 of every scene.
+
+| bar | time | scene | transition out |
+|---|---|---|---|
+| 1 | 0–2.5 | manila folder thwacks down (beat 2), ransom letters L-I-V-E on eighths | folder cover flips open |
+| 2 | 2.5–5 | camera pans the evidence board, puppet Jeff pops up and raises the magnifier | zoom through the lens |
+| 3 | 5–7.5 | "YOUR ACCOUNT IS LOCKED" phone, con man dangles a hook, SCAM! | redaction marker blacks out the screen |
+| 4 | 7.5–10 | lens iris opens on the hidden camera, Jeff barges in, flash + CAUGHT! | the frozen frame becomes a Polaroid |
+| 5 | 10–12.5 | terms of service: redaction bars peel back ("WE SELL YOUR DATA", "HIDDEN FEE"), WARNING! | page turn |
+| 6 | 12.5–15 | price tags on eighths, Jeff thumbs up, DEAL! | folder swings shut |
+| 7 | 15–17.5 | folder cover with the screen-print logo, LIVE NOW | giant rubber stamp |
+| 8 | 17.5–19.5 | official logo, untouched, revealed as the stamp lifts; still for the last 1.7 s | none |
+
+- **Jeff** is a jointed paper-cutout puppet cut from the reference art (`tools/cut_casefile_jeff.py`: head, torso, two arms, two legs, with pivots in `assets/casefile/jeff_parts.json`). Yellow split pins show at the shoulder joint. The pointing finger and thumb are printed like his reference hands.
+- **Logos:** the screen-print logo appears as a sticker on the folder cover; the official logo is the final frame, drawn from the file with no texture or print finish over it.
+- **Score:** `python3 score_casefile.py`, then the same loudnorm and mux steps as opener 2 (in `out/rossen-casefile/`).
