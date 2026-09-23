@@ -152,6 +152,17 @@ function lensZoom(c, t) {   // bar 3 beat 4: through the lens into the LIVE TODA
 }
 
 // ================= LIVE TODAY 5PM ET =================
+// the airtime card is always the size of the approved 5PM ET card: same height and scale; a longer time gets a smaller
+// font inside the same card, never a smaller or larger card
+let TIME_K = 1;
+function timeCard() {
+  const ref = stampImg('5PM ET', BLUE, 170), rot = .03;
+  TIME_K = Math.min(.95, 800 / (ref.width * Math.cos(rot) + ref.height * Math.sin(rot)));
+  if (SHOW.time === '5PM ET') return ref;
+  const H0 = 170 * 1.12 + 26 * 2, W0 = ref.width - 52, m = document.createElement('canvas').getContext('2d'); m.font = '170px Stamp';
+  const tw = m.measureText(SHOW.time).width, maxTw = W0 - 2 * 34, size = tw > maxTw ? Math.floor(170 * maxTw / tw) : 170, tw2 = tw * size / 170;
+  return wordStamp(SHOW.time, { color: BLUE, style: 'fill', size, padX: (W0 - tw2) / 2, padY: (H0 - size * 1.12) / 2, seed: SHOW.time.length * 7 });
+}
 function sceneLive(c, t) {   // bars 4-5
   bgDots(c, BLUE, .12, .55);
   const [sx, sy] = shake(t, [[at(4), 16], [at(4, 1.5), 10]]);
@@ -161,7 +172,7 @@ function sceneLive(c, t) {   // bars 4-5
   jeffUp(c, t, at(4, 2), SCX, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: t > at(5) ? .05 * Math.sin((t - at(5)) * TAU / (2 * BEAT)) : 0 }, .72);
   c.save(); c.translate(sx, sy);
   stampFit(c, 'LIVE TODAY', BLK, 150, SCX, 790, -.04, .9 * beatPulse, t, at(4), 800, 1.25);
-  stampFit(c, SHOW.time, BLUE, 170, SCX, 1012, .03, .95 * beatPulse, t, at(4, 1.5), 800, 1.18);
+  stampLand(c, timeCard(), SCX, 1012, .03, TIME_K * beatPulse, t, at(4, 1.5), 1.18);
   if (t >= at(4, 2) - SLAM) { const k = pop(t, at(4, 2)); c.save(); c.translate(SCX, 1172); c.scale(k, k); c.rotate(-.015);
     c.font = '58px Stamp'; const w = c.measureText(SHOW.day).width + 60;
     c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-w / 2 + 8, -44, w, 92); c.restore(); ink(c, rect(-w / 2, -48, w, 92), BLK, 5601, { amp: 3 }); inkText(c, SHOW.day, 0, 4, 58, 'Stamp', CHIP, 600); c.restore(); }
