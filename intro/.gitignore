@@ -8,3 +8,9 @@ out/score.wav
 out/score_norm.wav
 tools/*.npy
 tools/*.png
+out/*/frames/
+out/*/video.mp4
+out/*/score.wav
+out/*/score_norm.wav
+out/*/*.jpg
+!out/*/contact.jpg
