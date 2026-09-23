@@ -57,7 +57,16 @@ function inkText(c, s, x, y, size, family, col, maxW, align = 'center', rot = 0)
 function paperBg(c) { c.save(); resetT(c); c.drawImage(PAPER_TEX, 0, 0, W, H); c.restore(); }
 function printFinish(c) { c.save(); resetT(c); c.drawImage(SPECK, 0, 0, W, H); c.restore(); }   // ink never covers fully: paper specks through every solid
 function stampImg(word, col = BLUE, size = 150) { return wordStamp(word, { color: col, style: 'fill', size, seed: word.length * 7 }); }
-function stampLand(c, img, x, y, rot, s, t, tl) { drawStamp(c, img, x, y, rot, s, t, tl, .3); }
+function stampLand(c, img, x, y, rot, sc, t, tl) {   // solid ink: nothing underneath shows through
+  if (t < tl - .12) return;
+  const a = seg(t, tl - .12, tl), s = t < tl ? lerp(1.55, 1, easeIn(a)) : t < tl + .12 ? 1 + .04 * Math.exp(-(t - tl) * 30) * Math.cos((t - tl) * 60) : 1;
+  c.save(); c.translate(x, y); c.rotate(rot); c.scale(sc * s, sc * s);
+  c.save(); c.filter = 'brightness(0)'; c.globalAlpha = .55; c.drawImage(img, -img.width / 2 + 12, -img.height / 2 + 14); c.restore();
+  c.drawImage(img, -img.width / 2, -img.height / 2); c.restore();
+  if (t >= tl && t < tl + .3) { const r = rng(Math.round(x + y)); c.save(); c.fillStyle = BLUE; c.globalAlpha = .8 * (1 - seg(t, tl + .15, tl + .3));
+    for (let k = 0; k < 11; k++) { const ang = r() * TAU, d = (img.width * sc * .5) * (.75 + r() * .45), s2 = 2 + r() * 5; c.beginPath(); c.arc(x + Math.cos(ang) * d, y + Math.sin(ang) * d * .45, s2, 0, TAU); c.fill(); }
+    c.restore(); }
+}
 function shake(t, hits) { let x = 0, y = 0; for (const [ti, a] of hits) if (t >= ti && t < ti + .14) { const r = rng(Math.round(t * 991)), d = 1 - (t - ti) / .14; x += (r() - .5) * a * 2 * d; y += (r() - .5) * a * 2 * d; } return [x, y]; }
 const land = (t, t0) => seg(t, t0 - SLAM, t0);   // 0..1, reaching 1 exactly on t0
 
@@ -208,7 +217,7 @@ function sceneBoard(c, t) {
   PINS.forEach(P => pushpin(c, P.x, P.y - 175));
   c.restore();
   // Jeff pops up from the bottom on beat 2, raises the magnifier on beat 3
-  const pu = easeOutBack(land(t, at(1, 2)) ** .9), jy = lerp(1500, 1085, pu);
+  const pu = easeOutBack(land(t, at(1, 2)) ** .9), jy = lerp(2300, 1085, pu);
   const raise = easeOut(seg(t, at(1, 3) - SLAM, at(1, 3)));
   const J = jeff(c, 420, jy, .72, { armR: lerp(0, -2.15, raise), head: .06 * raise, bob: Math.sin(t * 9) * 4 * (1 - raise) });
   return { J, raise };
@@ -308,12 +317,23 @@ function sceneWarning(c, t) {
   squiggleText(c, D.x + 60, D.y + 640, D.w - 120, 7, { seed: 1411, lineH: 30, color: BLK, width: 2.2 });
   c.restore();
   // the caught Polaroid, pinned at top-left (it arrived from the hidden camera)
-  caughtPolaroid(c, 330, 300, 1, -.08);
-  pushpin(c, 330, 300 - 190);
+  pinnedEvidence(c, t, 1);
   // Jeff points at the fine print from the bottom right
   const a = easeOutBack(land(t, at(4, 1.5))), jy = lerp(1500, 1085, a), pt = easeOut(seg(t, at(4, 1.5), at(4, 2)));
   jeff(c, 1640, jy, .7, { armR: lerp(0, -2.6, pt), head: -.08, prop: pt > .5 ? 'point' : null });
   if (t >= at(4, 3) - SLAM) stampLand(c, stampImg('WARNING!', BLUE, 150), 1120 + sx, 880 + sy, .07, 1, t, at(4, 3));
+}
+const SCAM_P = [330, 290, .06], CAUGHT_P = [350, 770, -.08];   // the evidence wall beside the fine print
+function pinnedEvidence(c, t, caught) {
+  if (caught) string(c, [SCAM_P[0] + 60, SCAM_P[1] + 120], [CAUGHT_P[0], CAUGHT_P[1] - 190], 30);   // yarn runs behind the photos
+  scamPolaroid(c, ...SCAM_P);
+  if (caught) caughtPolaroid(c, CAUGHT_P[0], CAUGHT_P[1], 1, CAUGHT_P[2]);
+  pushpin(c, SCAM_P[0], SCAM_P[1] - 190); if (caught) pushpin(c, CAUGHT_P[0], CAUGHT_P[1] - 190);
+}
+function scamPolaroid(c, x, y, rot) {   // the phone frame, SCAM! stamped, before the redaction marker
+  if (!IMG.scamSnap) { const o = document.createElement('canvas'); o.width = W; o.height = H; const g = o.getContext('2d'); scenePhone(g, at(2, 3) + .35); drawPrint(g); IMG.scamSnap = o; }
+  polaroid(c, x, y, 380, 380, rot, 1490, (pw, ph) => { const cw = 960; c.drawImage(IMG.scamSnap, 480, 150, cw, cw * ph / pw, -pw / 2, -ph / 2, pw, ph); });
+  inkText(c, 'SCAM', x, y + 150, 44, 'Marker', BLK, 300, 'center', rot);
 }
 function caughtPolaroid(c, x, y, s, rot) {
   const g = L2.getContext('2d'); resetT(g); sceneHidden(g, CAUGHT_T + .31); drawPrint(g);
@@ -397,8 +417,8 @@ function drawScene(c, t) {
   if (t < at(3, 4)) { sceneHidden(c, t); return drawPrint(c); }
   if (t < at(4)) {   // the frozen frame becomes a Polaroid and flies to the corner of the next page
     const u = easeIO(seg(t, at(3, 4), at(4)));
-    sceneWarningBg(c, t);
-    const x = lerp(960, 330, u), y = lerp(540, 300, u), s = lerp(2.6, 1, u), rot = lerp(0, -.08, u) + Math.sin(u * Math.PI) * .25;
+    sceneWarningBg(c, t); pinnedEvidence(c, t, 0);
+    const x = lerp(960, CAUGHT_P[0], u), y = lerp(540, CAUGHT_P[1], u), s = lerp(2.6, 1, u), rot = lerp(0, CAUGHT_P[2], u) + Math.sin(u * Math.PI) * .25;
     caughtPolaroid(c, x, y, s, rot); return drawPrint(c);
   }
   if (t < at(4, 4.5)) { sceneWarning(c, t); return drawPrint(c); }
