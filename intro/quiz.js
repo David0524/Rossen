@@ -1,18 +1,19 @@
 'use strict';
-/* Rossen Reports: "SCAM OR LEGIT?" quiz. 42.5 s, 1080x1920 (9:16), 24 fps, one shot. Case-file screen-print look
+/* Rossen Reports: "SCAM OR LEGIT?" quiz. 58.75 s, 1080x1920 (9:16), 24 fps, one shot. Case-file screen-print look
    (printkit.js, the approved blue/black/cream/yellow inks) with the vertical kit (vertkit.js). 96 BPM, one idea per bar.
-   Each round is 5 bars: SHOW (1), PAUSE with a countdown (2), REVEAL: stamp + flags (1), TAKEAWAY (1).
+   Each round is 7 bars: SHOW (1; the phone slides in on beat 1), PAUSE with a countdown (2), REVEAL: the verdict on
+   beat 1 and a flag every two beats (2), TAKEAWAY (2).
 
-   bars 0-4    round 1  SCAM   unpaid toll text        flags PAY TODAY, SMALL FEE, LINK
-   bars 5-9    round 2  LEGIT  verification code       reasons YOU ASKED FOR IT, NO LINK, NO REQUEST
-   bars 10-14  round 3  SCAM   fraud alert, reply Y/N  flags URGENT, REPLY YES OR NO
-   bar 15-16   HOW MANY DID YOU GET RIGHT? COMMENT YOUR SCORE.; the rubber stamp lands on bar 16 beat 3
-   the official logo, untouched, still from 41.40 to 42.5
-   The phone never moves while there is something to read; it slides between rounds on the last beat of each round.
+   bars 0-6    round 1  SCAM   unpaid toll text        flags PAY TODAY, SMALL FEE, LINK
+   bars 7-13   round 2  LEGIT  verification code       reasons YOU ASKED FOR IT, NO LINK, NO REQUEST
+   bars 14-20  round 3  SCAM   fraud alert, reply Y/N  flags URGENT, REPLY YES OR NO
+   bars 21-22  the last phone slides out; HOW MANY DID YOU GET RIGHT?, the answers, COMMENT YOUR SCORE: 0, 1, 2 OR 3?
+   bar 23      the rubber stamp lands on beat 1; the official logo, untouched, still from 57.65 to 58.75
+   The phone never moves while there is something to read.
 */
-const DUR = at(17), NFR = Math.round(FPS * DUR);
+const DUR = at(23, 3), NFR = Math.round(FPS * DUR);
 const CAPS = [];   // this film draws its own top band
-const STAMP_T = at(16, 3);
+const END_B = 21, STAMP_T = at(23);
 
 // ================= the rounds =================
 const LINK = 'htp://tol1-pay.zz/b1ll?7x';   // obviously garbled, not a real address
@@ -21,16 +22,16 @@ const ROUNDS = [
     lines: ['Your vehicle has an', 'unpaid toll balance of', '$6.99. Pay today to', 'avoid late fees:', LINK],
     marks: [{ l: 2, s: 'Pay today', tag: 'PAY TODAY' }, { l: 2, s: '$6.99', tag: 'SMALL FEE' }, { l: 4, s: LINK, tag: 'LINK' }],
     take: ["DON'T CLICK.", 'CHECK YOUR TOLL', 'ACCOUNT YOURSELF.'] },
-  { b: 5, scam: false, from: 'Text Message',
+  { b: 7, scam: false, from: 'Text Message',
     lines: ['Your verification code', "is 482913. Don't share", 'this code with anyone.', ''],
     marks: [{ l: 1, s: '482913', tag: 'YOU ASKED FOR IT' }, { l: 3, s: null, tag: 'NO LINK' }, { l: 2, s: 'this code with anyone.', tag: 'NO REQUEST' }],
     take: ['NEVER READ A CODE', 'TO ANYONE WHO CALLS.'] },
-  { b: 10, scam: true, from: 'Account Alert',
+  { b: 14, scam: true, from: 'Account Alert',
     lines: ['FRAUD ALERT: $750', 'payment attempt.', 'Was this you?', 'Reply YES or NO.'],
     marks: [{ l: 0, s: 'FRAUD ALERT:', tag: 'URGENT' }, { l: 3, s: 'Reply YES or NO.', tag: 'REPLY YES OR NO' }],
     take: ["DON'T REPLY.", 'CALL THE NUMBER', 'ON YOUR CARD.'] },
 ];
-const R_SHOW = 0, R_PAUSE = 1, R_REVEAL = 3, R_TAKE = 4;   // bar offsets inside a round
+const R_SHOW = 0, R_PAUSE = 1, R_REVEAL = 3, R_TAKE = 5;   // bar offsets inside a round
 
 // ================= the phone =================
 const PH = { x: 100, y: 640, w: 760, h: 600 };
@@ -60,7 +61,7 @@ function markBox(c, R, m) {
   const sz = lineFit(c, s); c.font = `${sz}px ${FONT}`; const i = s.indexOf(m.s), x0 = c.measureText(s.slice(0, i)).width, x1 = x0 + c.measureText(m.s).width;
   return { x: BUB.x + BUB.pad + (x0 + x1) / 2, y, w: x1 - x0, h: sz };
 }
-function markT(R, i) { return at(R.b + R_REVEAL) + (i + 1) * BEAT; }
+function markT(R, i) { return at(R.b + R_REVEAL) + (i + 1) * 2 * BEAT; }   // beat 3, then beats 1 and 3 of the next bar
 function highlights(c, R, t) {   // a marker swiped left to right behind each flagged phrase, on its beat
   R.marks.forEach((m, i) => { if (!m.s) return; const u = easeOut(seg(t, markT(R, i) - SLAM, markT(R, i) + .12)); if (u <= 0) return;
     const b = markBox(c, R, m), x0 = b.x - b.w / 2 - 10, w = (b.w + 20) * u, y0 = b.y - b.h * .62, h = b.h * 1.2;
@@ -105,7 +106,7 @@ function scorecard(c, t, cur, y = 350, big = 1.22, t0 = -1) {
 // reveal the right one lights up and takes the stamp while the wrong one dims under an X
 const PAD = { y: 482, w: 330, h: 124, x: [SCX - 225, SCX + 225] };
 function pads(c, t, R, rn) {
-  const b = R.b, tp = at(b + R_PAUSE), tl = at(b + R_PAUSE + 1, 4), tr = at(b + R_REVEAL), shown = rn === 0 ? -1 : at(b) + E8;
+  const b = R.b, tp = at(b + R_PAUSE), tl = at(b + R_PAUSE + 1, 4), tr = at(b + R_REVEAL), shown = rn === 0 ? -1 : at(b, 2);   // after the slide
   if (t < shown - SLAM) return;
   ['SCAM', 'LEGIT?'].forEach((lab, i) => {
     const right = (i === 0) === R.scam, beat = Math.floor((t - tp) / BEAT), pulse = t >= tp && t < tl && beat % 2 === i ? 1 + .07 * Math.exp(-((t - tp) % BEAT) * 6) : 1;
@@ -124,7 +125,7 @@ function pads(c, t, R, rn) {
 function topBand(c, t, R, rn) {
   const b = R.b;
   if (t < at(b + R_TAKE) - SLAM) { scorecard(c, t, rn); pads(c, t, R, rn); }
-  else R.take.forEach((s, i) => chip(c, s, SCX, 356 + i * 104, 70, R.scam ? BLK : BLUE, CHIP, t, at(b + R_TAKE) + i * E8, i % 2 ? .012 : -.012));
+  else R.take.forEach((s, i) => chip(c, s, SCX, 356 + i * 104 + (t > at(b + R_TAKE, 2) ? 3 * Math.sin((t - at(b + R_TAKE)) * TAU / (2 * BEAT) + i) : 0), 70, R.scam ? BLK : BLUE, CHIP, t, at(b + R_TAKE) + i * E8, i % 2 ? .012 : -.012));
 }
 // ================= the bottom band: countdown, then the labelled flags =================
 function countdown(c, t, R) {
@@ -194,24 +195,27 @@ function sceneRounds(c, t) {
   bgDots(c, BLUE, .08, .45);
   const rn = roundAt(t), R = ROUNDS[rn];
   // the slide to the next round: the last beat of the takeaway bar
-  const sw = at(R.b + R_TAKE, 4), u = easeIO(seg(t, sw, sw + BEAT)), next = rn + 1 < ROUNDS.length;
   host(c, t, rn);   // behind the labels, so he never covers a tag
-  if (t < sw) { stage(c, t, rn, 0); topBand(c, t, R, rn); countdown(c, t, R); }
-  else { stage(c, t, rn, -1250 * u); if (next) stage(c, at(ROUNDS[rn + 1].b), rn + 1, 1250 * (1 - u)); }
+  if (rn > 0 && t < at(R.b, 2)) {   // beat 1 of a new round: the last phone slides out as the new one slides in
+    const u = easeIO(seg(t, at(R.b), at(R.b, 2)));
+    stage(c, t, rn - 1, -1250 * u); stage(c, t, rn, 1250 * (1 - u)); scorecard(c, t, rn);
+  } else { stage(c, t, rn, 0); topBand(c, t, R, rn); countdown(c, t, R); }
 }
-function sceneEnd(c, t) {   // bars 15-16
+function sceneEnd(c, t) {   // bars 21-22
   bgDots(c, BLUE, .12, .55);
-  const [sx, sy] = shake(t, [[at(15), 14], [at(15, 2), 12]]), beatPulse = t > at(16) ? 1 + .025 * Math.max(0, Math.cos((t - at(16)) * TAU / BEAT)) : 1;
-  const th = easeOutBack(seg(t, at(15, 2.5), at(15, 3)));
-  jeffUp(c, t, at(15, 1.5), SCX, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: t > at(16) ? .05 * Math.sin((t - at(16)) * TAU / (2 * BEAT)) : 0 }, .7);
+  const E = END_B, [sx, sy] = shake(t, [[at(E, 2), 14], [at(E, 3), 12]]), beatPulse = t > at(E + 1) ? 1 + .025 * Math.max(0, Math.cos((t - at(E + 1)) * TAU / BEAT)) : 1;
+  if (t < at(E, 2)) { const u = easeIO(seg(t, at(E), at(E, 2)));   // round 3 slides out, the host with it
+    c.save(); c.translate(-1250 * u, 0); host(c, t, ROUNDS.length - 1); c.restore(); stage(c, t, ROUNDS.length - 1, -1250 * u); }
+  const th = easeOutBack(seg(t, at(E, 3), at(E, 3.5)));
+  jeffUp(c, t, at(E, 2.5), SCX, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: t > at(E + 1) ? .05 * Math.sin((t - at(E + 1)) * TAU / (2 * BEAT)) : 0 }, .7);
   c.save(); c.translate(sx, sy);
-  stampFit(c, 'HOW MANY DID', BLK, 140, SCX, 400, -.04, .95 * beatPulse, t, at(15), 840, 1.25);
-  stampFit(c, 'YOU GET RIGHT?', BLK, 140, SCX, 560, .03, .95 * beatPulse, t, at(15, 1.5), 840, 1.25);
-  scorecard(c, t, -1, 722, 1.55, at(15, 2));   // the answers: SCAM, LEGIT, SCAM
-  stampFit(c, 'COMMENT YOUR SCORE:', BLUE, 120, SCX, 885, -.03, 1 * beatPulse, t, at(15, 2.5), 840, 1.25);
-  chip(c, '0, 1, 2 OR 3?', SCX, 1040, 92, BLK, CHIP, t, at(15, 2.5) + .01, .02);
+  stampFit(c, 'HOW MANY DID', BLK, 140, SCX, 400, -.04, .95 * beatPulse, t, at(E, 2), 840, 1.25);
+  stampFit(c, 'YOU GET RIGHT?', BLK, 140, SCX, 560, .03, .95 * beatPulse, t, at(E, 2.5), 840, 1.25);
+  scorecard(c, t, -1, 722, 1.55, at(E, 3));   // the answers: SCAM, LEGIT, SCAM
+  stampFit(c, 'COMMENT YOUR SCORE:', BLUE, 120, SCX, 885, -.03, 1 * beatPulse, t, at(E, 3.5), 840, 1.25);
+  chip(c, '0, 1, 2 OR 3?', SCX, 1040, 92, BLK, CHIP, t, at(E, 3.5) + .01, .02);
   c.restore();
-  const d = seg(t, at(16, 2.5), STAMP_T); if (d > 0) screenSpace(c, () => rubberStamp(c, easeIn(d)));   // a full bar of END text first
+  const d = seg(t, at(E + 1, 3.5), STAMP_T); if (d > 0) screenSpace(c, () => rubberStamp(c, easeIn(d)));   // over a bar of END text first
 }
 function sceneSignoff(c, t) {
   paperBg(c);
@@ -223,7 +227,7 @@ function sceneSignoff(c, t) {
 }
 function drawScene(c, t) {
   contentT(c);
-  if (t < at(15)) sceneRounds(c, t);   // the last phone slides out on the final beat of round 3
+  if (t < at(END_B)) sceneRounds(c, t);
   else if (t < STAMP_T) sceneEnd(c, t);
   else { resetT(c); sceneSignoff(c, t); return; }   // screen space; no print finish over the official logo
   printFinish(c);

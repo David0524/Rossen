@@ -42,6 +42,7 @@ head = poly([(535, 195), (1020, 195), (1020, 420), (975, 440), (968, 545), (600,
 legL = poly([(600, 792), (800, 792), (800, 860), (600, 860)]) & body & ~rod
 legR = poly([(800, 792), (1000, 792), (1000, 860), (800, 860)]) & body & ~rod
 torso = (body | hole) & ~head & ~legL & ~legR & ~(rod & ~coat)
+torso |= head & (np.arange(H)[:, None] >= 470)   # a hidden copy of the chin under the head, so a head tilt never opens a slit
 masks = {'legL': legL, 'legR': legR, 'torso': torso, 'rod': rod, 'head': head}
 PIV = {'head': (790, 545), 'rod': (905, 662), 'legL': (700, 792), 'legR': (900, 792), 'torso': (800, 835)}
 meta = {'ref': [W, H], 'feet': [800, 835], 'tip': [1232, 230], 'parts': {}}

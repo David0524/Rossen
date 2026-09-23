@@ -1,6 +1,6 @@
 """Soundtrack for the Rossen Reports "SCAM OR LEGIT?" quiz (rossen-scam-or-legit.html). Recorded samples only, no synthesis.
 
-Music: an original 42.5 s cue sequenced from VSCO 2 Community Edition / VSCO 1 orchestral and drum samples (CC0), on the
+Music: an original 58.75 s cue sequenced from VSCO 2 Community Edition / VSCO 1 orchestral and drum samples (CC0), on the
 same 96 BPM grid and instruments as the case-file videos. Foley: Kenney CC0 packs (Interface, Impact, RPG, Casino, and
 two stings from Digital Audio for the right/wrong answer), placed by attack on the frame where its picture lands.
 Each round: a fanfare on SHOW, a ticking clock under the 2-bar countdown, a buzzer or a chime on the reveal, one
@@ -9,7 +9,7 @@ marker swipe per flag, then the takeaway.
 usage: python3 score_quiz.py [samples_dir]  ->  out/rossen-scam-or-legit/score.wav
 """
 import numpy as np, subprocess, wave, sys, os, re, glob, math
-SR = 48000; DUR = 42.5
+SR = 48000; DUR = 58.75
 ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio')
 out = np.zeros((int(SR * DUR), 2), np.float32)
 _cache = {}
@@ -159,15 +159,17 @@ CH['Gm'] = (['D4', 'G4', 'Bb3'], ['G1', 'D2'], ['G2', 'Bb2'], 'G1')
 CROOT = {'Dm': 'D2', 'D': 'D2', 'Bb': 'Bb1', 'Gm': 'G2', 'G': 'G2', 'A': 'A1', 'Bm': 'B1', 'Em': 'E2'}
 VOX = {'Dm': ('D3', 'F3', 'A3'), 'D': ('D3', 'F#3', 'A3'), 'Bb': ('D3', 'F3', 'Bb3'), 'Gm': ('D3', 'G3', 'Bb3'), 'G': ('D3', 'G3', 'B3'),
        'A': ('C#3', 'E3', 'A3'), 'Bm': ('D3', 'F#3', 'B3'), 'Em': ('E3', 'G3', 'B3')}
-ROUNDS = [(0, True, 3), (5, False, 3), (10, True, 2)]    # first bar, scam?, number of flags
-END = AT(16, 3)                                          # the rubber stamp lands; the official logo is under it
+ROUNDS = [(0, True, 3), (7, False, 3), (14, True, 2)]    # first bar, scam?, number of flags; 7 bars a round
+END_B = 21; END = AT(23)                                 # the end card, and the rubber stamp landing on the official logo
 chords = {}
 for b, scam, n in ROUNDS:
     chords[b] = 'D D G A'; chords[b + 1] = 'Bm Bm G G'; chords[b + 2] = 'Em Em A A'
-    chords[b + 3] = 'Dm Dm Bb A' if scam else 'D D G D'; chords[b + 4] = 'G G A A'
-chords[15] = 'D D G A'; chords[16] = 'D D'
-for bar in range(17 if not HO else 0):
-    groove(BB(bar), BB(bar + 1) if bar < 16 else BB(16, 3), .7 if bar not in (1, 2, 6, 7, 11, 12) else .5, .12)
+    chords[b + 3] = 'Dm Dm Bb A' if scam else 'D D G D'; chords[b + 4] = 'Bb Bb A A' if scam else 'G G A A'
+    chords[b + 5] = 'G G A A'; chords[b + 6] = 'Bm Bm A A'
+chords[END_B] = 'D D G A'; chords[END_B + 1] = 'D D A A'
+QUIET = {b + k for b, _, _ in ROUNDS for k in (1, 2)}   # the groove steps back while the viewer thinks
+for bar in range(END_B + 2 if not HO else 0):
+    groove(BB(bar), BB(bar + 1), .5 if bar in QUIET else .7, .12)
 for bar, row in (chords.items() if not HO else []):
     for k, ch in enumerate(row.split()):
         bb = BB(bar, k + 1)
@@ -178,42 +180,46 @@ for bar, row in (chords.items() if not HO else []):
 def capsnd(t, notes=('D5', 'A5')): xyl(notes[0], t, .45); fx('casino/card-place-1.ogg', t, .15); xyl(notes[1], t + E8, .4); fx('casino/card-place-2.ogg', t + E8, .13)
 
 for ri, (b, scam, n) in enumerate(ROUNDS):
-    # SHOW: the round fanfare (the message lands; round 1 is already there on frame 1)
+    # SHOW: round 1 is already on screen on frame 1; later rounds slide in over beat 1 and land on beat 2
     if ri == 0: hit(0.0, 'D', .9, .45); fx('interface/glass_001.ogg', 0.0, .5)
-    else: fx('casino/card-slide-3.ogg', AT(b) - .3, .35); hit(AT(b), 'D', .85, .4); fx('rpg/bookPlace1.ogg', AT(b), .35); capsnd(AT(b))
-    for bb, nt, d in [(1.5, 'D4', .15), (2, 'F#4', .15), (2.5, 'A4', .15), (3, 'D5', .4)]: tps(nt, AT(b, bb), .75, dur=d)
+    else: fx('casino/card-slide-3.ogg', AT(b) + .05, .35); hit(AT(b, 2), 'D', .85, .4); fx('rpg/bookPlace1.ogg', AT(b, 2), .35); capsnd(AT(b, 2))
+    for bb, nt, d in [(2.5, 'D4', .15), (3, 'F#4', .15), (3.5, 'A4', .15), (4, 'D5', .4)]: tps(nt, AT(b, bb), .75, dur=d)
     if ri == 0: fx('interface/pluck_001.ogg', AT(0, 2), .3)                                           # Jeff pops up
-    # PAUSE: two bars of clock, the last three beats climb
+    # PAUSE: two bars of clock, the last three beats climb, LOCK IT IN! on the last
     for k in range(8 if not HO else 0):
         tt = AT(b + 1) + k * BEAT; fx('interface/tick_002.ogg', tt, .5); one(CLAVE, tt, .22); fx('interface/tick_001.ogg', tt + E8, .28)
-        if k >= 5: xyl(('A5', 'B5', 'C#6')[k - 5], tt, .55); glk(('A5', 'B5', 'C#6')[k - 5], tt, .3)
+        if 5 <= k < 7: xyl(('A5', 'B5')[k - 5], tt, .55); glk(('A5', 'B5')[k - 5], tt, .3)
     roll_to(AT(b + 2, 3), AT(b + 2, 4), .4)
     tl = AT(b + 2, 4); fx('rpg/metalLatch.ogg', tl, .55); stab(tl, 'A', .75); timp(tl, .6); roll_to(tl + .05, AT(b + 3), .3)   # LOCK IT IN!
     fx('casino/card-place-1.ogg', AT(b + 3) + .1, .3); glk('A6', AT(b + 3) + .1, .3)                                  # the scorecard flips
-    # REVEAL: stamp + answer sting, then one marker swipe per flag
+    # REVEAL: the verdict on beat 1, then one highlighter swipe every two beats
     t0 = AT(b + 3)
     if scam: hit(t0, 'Dm', 1.0, .3); fx('impact/impactPunch_heavy_001.ogg', t0, .55); fx('interface/error_004.ogg', t0, .35); fx('digital/lowThreeTone.ogg', t0, .22)
     else: hit(t0, 'D', 1.0, .3); fx('interface/confirmation_002.ogg', t0, .45); fx('digital/threeTone1.ogg', t0, .22); [glk(nt, t0 + k * S16, .45) for k, nt in enumerate(('D6', 'F#6', 'A6'))]
     if scam: fx('interface/switch_007.ogg', t0, .35); [cla(nt, t0 + .05 + k * S16 / 2, .45, dur=.08) for k, nt in enumerate(('A4', 'Bb4', 'A4', 'Bb4'))]   # caught in the spotlight
     for i in range(n):
-        tt = AT(b + 3, 2 + i); fx('interface/scratch_004.ogg', tt, .4, (-.2, .2)[i % 2]); fx('casino/card-place-2.ogg', tt, .25); kick(tt, .75); one(RIM, tt, .5, .1);   # each flag lands hard xyl(('F5', 'A5', 'D6')[i] if scam else ('F#5', 'A5', 'D6')[i], tt, .5)
-    # TAKEAWAY: the lines land; in scam rounds the vaudeville hook yanks him off
-    t1 = AT(b + 4); stab(t1, 'G', .7); capsnd(t1, ('D5', 'G5')); kick(t1, .8); fx('impact/impactSoft_medium_000.ogg', t1, .4)   # every takeaway lands the same way
+        tt = t0 + (i + 1) * 2 * BEAT   # the same beats as markT() in quiz.js
+        fx('interface/scratch_004.ogg', tt, .4, (-.2, .2)[i % 2]); fx('casino/card-place-2.ogg', tt, .25); kick(tt, .75); one(RIM, tt, .5, .1)   # each flag lands hard
+        xyl(('F5', 'A5', 'D6')[i] if scam else ('F#5', 'A5', 'D6')[i], tt, .5)
+    # TAKEAWAY (2 bars): the lines land; in scam rounds the vaudeville hook yanks him off
+    t1 = AT(b + 5); stab(t1, 'G', .7); capsnd(t1, ('D5', 'G5')); kick(t1, .8); fx('impact/impactSoft_medium_000.ogg', t1, .4)   # every takeaway lands the same way
     if scam: fx('rpg/cloth3.ogg', t1 - .1, .4); [cla(nt, t1 + .05 + k * S16 / 2, .5, dur=.1) for k, nt in enumerate(('D5', 'A4', 'F4', 'D4'))]
-    fx('casino/card-slide-3.ogg', AT(b + 4, 4), .35); swell_to(AT(b + 5), .3)                         # the slide to the next round
-# END: HOW MANY DID YOU GET RIGHT? COMMENT YOUR SCORE.
-hit(AT(15), 'D', 1.0, .6); fx('impact/impactPunch_heavy_000.ogg', AT(15), .5)
-hit(AT(15, 1.5), 'D', .8, .3); fx('impact/impactPunch_heavy_001.ogg', AT(15, 1.5), .4)
-hit(AT(15, 2), 'G', .9, .4); fx('impact/impactPunch_heavy_002.ogg', AT(15, 2), .45)
-for i, nt in enumerate(('D5', 'A5', 'D6')): fx('casino/card-place-2.ogg', AT(15, 2) + i * S16, .3); xyl(nt, AT(15, 2) + i * S16, .45)   # the answers recap
-hit(AT(15, 2.5), 'A', .9, .4); fx('impact/impactPunch_heavy_000.ogg', AT(15, 2.5), .45)
-for bb, nt, d in [(3, 'D4', .15), (3.5, 'D4', .28), (4, 'F#4', .28)]: tps(nt, AT(15, bb), .8, dur=d)
-for bb, nt, d in [(1, 'A4', .5), (1.5, 'D5', .3)]: tps(nt, AT(16, bb), .8, dur=d)
-roll_to(AT(16, 2), END, .45, TIMP_ROLL); tomfill(AT(16, 2.5), END, .45, S16)
+    for bb, nt, d in [(1, 'A4', .28), (1.5, 'F#4', .15), (2, 'G4', .28), (3, 'A4', .55)]: tps(nt, AT(b + 6, bb), .6, dur=d)   # the second takeaway bar breathes
+    swell_to(AT(b + 7), .3)                                                                           # into the next round
+# END: the last phone slides out on beat 1, then HOW MANY DID YOU GET RIGHT? ... 0, 1, 2 OR 3?
+E = END_B
+fx('casino/card-slide-3.ogg', AT(E) + .05, .35)
+hit(AT(E, 2), 'D', 1.0, .6); fx('impact/impactPunch_heavy_000.ogg', AT(E, 2), .5)
+hit(AT(E, 2.5), 'D', .8, .3); fx('impact/impactPunch_heavy_001.ogg', AT(E, 2.5), .4)
+hit(AT(E, 3), 'G', .9, .4); fx('impact/impactPunch_heavy_002.ogg', AT(E, 3), .45)
+for i, nt in enumerate(('D5', 'A5', 'D6')): fx('casino/card-place-2.ogg', AT(E, 3) + i * S16, .3); xyl(nt, AT(E, 3) + i * S16, .45)   # the answers recap
+hit(AT(E, 3.5), 'A', .9, .4); fx('impact/impactPunch_heavy_000.ogg', AT(E, 3.5), .45)
+for bb, nt, d in [(1, 'D4', .15), (1.5, 'D4', .28), (2, 'F#4', .28), (3, 'A4', .5), (3.5, 'D5', .3)]: tps(nt, AT(E + 1, bb), .8, dur=d)
+roll_to(AT(E + 1, 3), END, .45, TIMP_ROLL); tomfill(AT(E + 1, 3.5), END, .45, S16)                   # the rubber stamp comes down
 t = END
-for nt in ('D4', 'F#4', 'A4'): tpl(nt, t, .95, dur=1.0, rel=.2)
-for nt in ('D2', 'F#2', 'A2'): hnl(nt, t, .9, dur=1.0, rel=.2)
-for nt in ('D2', 'A1'): tbl(nt, t, .85, dur=1.0, rel=.2)
+for nt in ('D4', 'F#4', 'A4'): tpl(nt, t, .95, dur=1.2, rel=.3)
+for nt in ('D2', 'F#2', 'A2'): hnl(nt, t, .9, dur=1.2, rel=.3)
+for nt in ('D2', 'A1'): tbl(nt, t, .85, dur=1.2, rel=.3)
 cbp('D1', t, 1.0); cpz('D2', t, .9); timp(t, 1.0); kick(t, 1.0); one(CRASH, t, .6); glk('D6', t, .55)
 fx('impact/impactPlank_medium_000.ogg', t, .55); fx('impact/impactSoft_heavy_000.ogg', t, .4)
 

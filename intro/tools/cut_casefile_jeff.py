@@ -34,6 +34,10 @@ masks = {k: poly_mask(v) & jeff for k, v in P.items()}
 used = np.zeros_like(jeff)
 for k in ('head', 'armL', 'armR', 'legL', 'legR'): masks[k] &= ~used; used |= masks[k]
 masks['torso'] = jeff & ~used
+# a hidden copy of the chin and jaw on the torso, under the head: at rest the head covers it exactly; when the head
+# tilts it fills the slit that would otherwise open along the cut and let the background show through
+yy = np.arange(H)[:, None] + np.zeros((1, W), int)
+masks['torso'] |= masks['head'] & (yy >= 380)   # the jaw and chin only, below the cheeks
 PIV = {'head': (842, 468), 'armL': (706, 520), 'armR': (1012, 512), 'legL': (752, 752), 'legR': (948, 752), 'torso': (850, 745)}
 meta = {'ref': [W, H], 'parts': {}}
 for k, m in masks.items():
