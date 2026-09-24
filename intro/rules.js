@@ -35,11 +35,11 @@ function buildTimeline(tpl, ep) {
 const segAt = t => { for (let i = TL.length - 1; i >= 0; i--) if (t >= TL[i].t0 - PUSH / 2) return i; return 0; };
 
 // ================= shared pieces =================
-function chip(c, s, x, y, size, bg, fg, t, t0, rot = 0) {
-  if (t < t0 - SLAM) return; c.font = `${size}px Stamp`; const w = Math.min(c.measureText(s).width, 780) + 60, h = size * 1.3, k = pop(t, t0);
+function chip(c, s, x, y, size, bg, fg, t, t0, rot = 0, maxW = 780) {
+  if (t < t0 - SLAM) return; c.font = `${size}px Stamp`; const w = Math.min(c.measureText(s).width, maxW) + 60, h = size * 1.3, k = pop(t, t0);
   c.save(); c.translate(x, y); c.rotate(rot); c.scale(k, k);
   c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-w / 2 + 8, -h / 2 + 10, w, h); c.restore();
-  ink(c, rect(-w / 2, -h / 2, w, h), bg, 7100 + s.length, { amp: 3 }); inkText(c, s, 0, size * .06, size, 'Stamp', fg, 780); c.restore();
+  ink(c, rect(-w / 2, -h / 2, w, h), bg, 7100 + s.length, { amp: 3 }); inkText(c, s, 0, size * .06, size, 'Stamp', fg, maxW); c.restore();
 }
 const CAP_Y = [378, 488];
 function sceneCaptions(c, t, S) {   // the current caption of a scene: from its beat until the next caption
@@ -93,7 +93,7 @@ function partRecap(c, t, S) {   // RECAP (2 bars): the rule again, then the line
   indexCard(c, 530, 1240, EP.num, 7220);   // tab top at 472, clear of the REMEMBER: chip (bottom 426)
   stampFit(c, EP.rule[0], BLK, 140, SCX, 670, -.04, .95, t, S.at(1), 680, 1.25);
   stampFit(c, EP.rule[1], BLUE, 140, SCX, 850, .03, .95, t, S.at(1, 1.5), 680, 1.25);
-  EP.recap.forEach((s, i) => chip(c, s, SCX, 1030 + i * 110, 70, i ? BLUE : BLK, CHIP, t, S.at(2) + i * E8, i ? .015 : -.015));
+  EP.recap.forEach((s, i) => chip(c, s, SCX, 1030 + i * 110, 70, i ? BLUE : BLK, CHIP, t, S.at(2) + i * E8, i ? .015 : -.015, 640));   // never wider than the card
   chip(c, 'REMEMBER:', SCX, 380, 70, BLK, CHIP, t, S.at(1), -.015);
   const th = easeOutBack(seg(t, S.at(1, 2), S.at(1, 2.4)));
   jeffUp(c, t, S.at(1, 1.5), 140, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: .05 * Math.sin((t - S.t0) * TAU / (2 * BEAT)) }, .56);

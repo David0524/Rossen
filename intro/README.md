@@ -160,3 +160,14 @@ Timeline: TITLE · scenes before the rule · RULE · scenes after · RECAP · EN
 Episode 1, `rossen-rules-ep01.html`, "HANG UP. CALL BACK.", 16 bars = 40 s: title (bars 1–2) · the phone rings, "YOUR BANK", the Scammer on the line, URGENT (3–4) · rule (5–6) · caller ID can be faked, he swaps the name tags (7–8) · hang up, flip your card, call the number on the back, now you know who you're talking to (9–12) · recap: IT'S NOT RUDE. IT'S THE RULE. (13–14) · FOLLOW FOR RULE #2, then the logo, still for the last 1.7 s (15–16). No bank or company names; every number is 1-800-XXX-XXXX style.
 
 Score: `python3 score_rules.py rules/ep01`, then loudnorm (I -16, TP -2), `alimiter=limit=0.7`, mux. The arrangement is voiceover-ready: pizzicato bass, low horns and drums, with no melodic lines in the voice range. `HITS_ONLY=1` writes a hits-only stem for sync checks. Dummy data for a template check is in `rules/demo02.json` (render with `--query ep=rules/demo02`).
+
+Episode 2, `rossen-rules-ep02.html`, "GIFT CARDS ARE FOR GIFTS.", 16 bars = 40 s. It's built from the same template with only new data (`rules/ep02.json`) and scenes (`rules/ep02.js`):
+- title (bars 1–2)
+- three disguises, one bar each, swapped in a puff on beat 1: a government agent (YOU OWE BACK TAXES!), tech support (YOUR COMPUTER IS INFECTED!) and a "grandson" (I'M IN TROUBLE! I NEED HELP!). Each one makes the same demand on beat 3, GO BUY GIFT CARDS. READ ME THE NUMBERS., with the same low-trombone sting (3–5)
+- rule (6–7)
+- a gift card is like cash (FAST · HARD TO TRACE · NO TAKE-BACKS), then the PIN is read and the balance hits $0.00 (8–9)
+- hang up · already paid: call the card company, RIGHT AWAY! · report it at FTC.GOV (10–12)
+- recap: NO REAL BILL IS PAID IN GIFT CARDS. (13–14)
+- FOLLOW FOR RULE #3 and the logo (15–16)
+
+The phone, ringing and lurking-Scammer helpers now live in `rules/props.js`, shared by all episodes. Episode 1 renders pixel-identically, and its score is byte-identical after the cue library grew.

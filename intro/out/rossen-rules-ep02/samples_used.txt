@@ -1,0 +1,49 @@
+kenney/casino/card-fan-1.ogg
+kenney/casino/card-place-1.ogg
+kenney/casino/card-place-2.ogg
+kenney/casino/card-slide-3.ogg
+kenney/impact/impactPlank_medium_000.ogg
+kenney/impact/impactPunch_heavy_000.ogg
+kenney/impact/impactPunch_heavy_001.ogg
+kenney/impact/impactSoft_heavy_000.ogg
+kenney/impact/impactSoft_medium_000.ogg
+kenney/impact/impactWood_heavy_000.ogg
+kenney/interface/click_001.ogg
+kenney/interface/click_003.ogg
+kenney/interface/close_001.ogg
+kenney/interface/confirmation_001.ogg
+kenney/interface/error_004.ogg
+kenney/interface/pluck_001.ogg
+kenney/interface/pluck_002.ogg
+kenney/interface/scratch_004.ogg
+kenney/interface/tick_002.ogg
+kenney/rpg/bookPlace1.ogg
+kenney/rpg/cloth3.ogg
+kenney/rpg/handleCoins.ogg
+vsco/Brass/F Horn/sus/MOHorn_sus_A2_v1_1.wav
+vsco/Brass/F Horn/sus/MOHorn_sus_D2_v1_1.wav
+vsco/Brass/F Horn/sus/MOHorn_sus_F2_v1_1.wav
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_D3_v3_rr1.wav
+vsco/Brass/Tenor Trombone/sus/tenortbn_sus_A#1_v2_1.wav
+vsco/Brass/Tenor Trombone/sus/tenortbn_sus_D2_v2_1.wav
+vsco/Percussion/Glock/glock_medium_C6.wav
+vsco/Percussion/Glock/glock_medium_G6.wav
+vsco/Percussion/Tamb1-Hit_v1_rr1_Sum.wav
+vsco/Percussion/Tamb1-Hit_v2_rr1_Sum.wav
+vsco/Percussion/Timpani/Rolls/Timpani4_Roll_v5_rr1_Sum.wav
+vsco/Percussion/Timpani/Timpani4_Hit_v4_rr1_Sum.wav
+vsco/Percussion/Xylo/Xylo_Medium_C6_ff_01_far.wav
+vsco/Percussion/cymbal-crash1_ff_rr1.wav
+vsco/Strings/Cello Section/pizzT/pizzT_A2_v2_RR1.wav
+vsco/Strings/Cello Section/pizzT/pizzT_B1_v2_RR1.wav
+vsco/Strings/Cello Section/pizzT/pizzT_D2_v2_RR1.wav
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_A#0_v1_rr1.wav
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_C1_v1_rr1.wav
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_D1_v1_rr1.wav
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_G#1_v1_rr1.wav
+vsco/VSCO 1 Percussion/drums/bass/bdrum_f_1.wav
+vsco/VSCO 1 Percussion/drums/bass/bdrum_ff_1.wav
+vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_f_1.wav
+vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_rimshot_f_1.wav
+vsco/VSCO 1 Percussion/drums/tenor/tenor_higher/tenorH_ff_1.wav
+vsco/VSCO 1 Percussion/drums/tenor/tenor_lower/tenor_ff_1.wav

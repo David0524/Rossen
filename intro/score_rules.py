@@ -223,6 +223,9 @@ fx('impact/impactPlank_medium_000.ogg', STAMP, .55); fx('impact/impactSoft_heavy
 def ring(t):
     for j in range(8): glk(('D6', 'F#6')[j % 2], t + j * .05, .32)
     fx('interface/tick_002.ogg', t, .3)
+def fxa(name, t, g=1.0, pan=0.0):
+    x = load(K + name); e = np.convolve(np.abs(x).max(1), np.ones(96) / 96, 'same'); att = int(np.argmax(e >= .15 * e.max()))
+    USED.add(K + name); put(x, t - att / SR, g, pan)
 CUES = {
     'ring': ring,
     'pickup': lambda t: (fx('interface/click_001.ogg', t, .6), kick(t, .5)),
@@ -237,6 +240,16 @@ CUES = {
     'call': lambda t: (fx('interface/click_001.ogg', t, .6), kick(t, .6), fx('interface/tick_002.ogg', t + E8, .35), fx('interface/tick_002.ogg', t + 2 * E8, .35)),
     'connect': lambda t: (stamp_hit(t, .8, 'G'), fx('interface/confirmation_002.ogg', t, .45)),
     'check': lambda t: (fx('interface/confirmation_001.ogg', t, .4), kick(t, .7), [glk(n, t + k * S16, .4) for k, n in enumerate(('D6', 'F#6', 'A6'))]),
+    # episode 2 (fxa: samples that swell in are aligned by their first audible attack, not their half-peak point)
+    'poof': lambda t: (fx('rpg/cloth3.ogg', t - .08, .45), fx('impact/impactSoft_medium_000.ogg', t, .45), kick(t, .6), glk('A6', t, .3)),   # a costume change
+    'demand': lambda t: (stamp_hit(t, .9, 'A'), fx('interface/error_004.ogg', t, .25),                                         # the same demand, every time:
+                         [tbs(n, t + E8 + k * E8, .5, dur=.2) for k, n in enumerate(('D3', 'C#3', 'C3'))]),                     # a low trombone "wah-wah-wah"
+    'label': lambda t: (fx('casino/card-place-1.ogg', t, .3), kick(t, .6), one(RIM, t, .4, .1)),
+    'digits': lambda t: (fx('interface/tick_002.ogg', t, .45), fxa('casino/card-place-2.ogg', t, .2), kick(t, .8), one(RIM, t, .45, .1)),
+    'vanish': lambda t: (stamp_hit(t, 1.0, 'Bb'), fx('rpg/handleCoins.ogg', t + .02, .4), fx('casino/card-fan-1.ogg', t + .05, .35)),
+    'highlight': lambda t: (fxa('interface/scratch_004.ogg', t, .4), kick(t, .55)),
+    'rightaway': lambda t: (stamp_hit(t, 1.0, 'A'), fx('impact/impactPunch_heavy_001.ogg', t, .4)),
+    'type': lambda t: [fx('interface/click_003.ogg', t + j * BEAT / 8, .32, (-.15, .15)[j % 2]) for j in range(len(EP.get('typeText', '')))],
 }
 for sc in EP['scenes']:
     s = SEG[sc['id']]; push(s['b0'] * 2.5)
