@@ -204,7 +204,7 @@ Puppets: `tools/cut_officer.py` cuts the officer Scammer (head, separate cap, se
 - the coat under the badge
 - a head dome under the cap
 
-The phone and warrant scenes sit on a static scrapbook page: torn ruled and grid paper scraps held down with masking tape.
+The phone and warrant close-ups sit on a textured cream stock (paper, soft mottling, faint fibres, no dots); every other scene uses the approved blue dotted background.
 
 Every name and number is an obvious placeholder: JOHN DOE, 123 ANY STREET, BADGE #000-00, CASE NO. 00-0000 and 1-555-XXX-XXXX. There are no real courts, counties, agencies, officers, badges or seals. The only real address is ReportFraud.ftc.gov.
 

@@ -105,35 +105,22 @@ function ringWaves(c, x, y, t, t0s) { for (const t0 of t0s) { const u = seg(t, t
 function card(c, R, bg = CHIP, seed = 9001) { const { x, y, w, h } = R; shadowRect(c, x, y, w, h); block(c, rrPts(x, y, w, h, 28, 6), BLK, seed, { kw: 6 }); block(c, rrPts(x + 14, y + 14, w - 28, h - 28, 18, 4), bg, seed + 1, { kw: 3 }); }
 const lerpR = (a, b, u) => ({ x: lerp(a.x, b.x, u), y: lerp(a.y, b.y, u), w: lerp(a.w, b.w, u), h: lerp(a.h, b.h, u) });
 function sceneBg(c, col = BLUE, lo = .07, hi = .38) { bgDots(c, col, lo, hi); }
-// the scrapbook page behind the phone and the warrant: torn paper scraps (ruled, grid, plain) held down with masking
-// tape. Static, drawn once at load in screen space.
-let SCRAP = null;
-function makeScrapbook() {
+// the close-ups (the text, the warrant) sit on textured cream stock: the paper, soft mottling and faint fibres, no dots.
+// Static, made once at load in screen space.
+let CREAM_TEX = null;
+function makeCream() {
   const o = document.createElement('canvas'); o.width = OUT_W; o.height = OUT_H; const g = o.getContext('2d'); g.setTransform(OUT_W / W, 0, 0, OUT_H / H, 0, 0);
-  g.drawImage(PAPER_TEX, 0, 0, W, H);
-  const scrap = (x, y, w, h, rot, col, seed, lines) => {
-    g.save(); g.translate(x + w / 2, y + h / 2); g.rotate(rot); const pts = rough(rect(-w / 2, -h / 2, w, h), seed, 16, 22), P = polyPath(pts);
-    g.save(); g.translate(9, 12); g.globalAlpha = .14; g.fillStyle = BLK; g.fill(P); g.restore();
-    g.fillStyle = col; g.fill(P);
-    if (lines) { g.save(); g.clip(P); g.strokeStyle = BLUE; g.lineWidth = lines === 'grid' ? 2 : 3; g.globalAlpha = lines === 'grid' ? .16 : .26;
-      const step = lines === 'grid' ? 38 : 50; g.beginPath();
-      for (let yy = -h / 2 + 70; yy < h / 2; yy += step) { g.moveTo(-w / 2, yy); g.lineTo(w / 2, yy); }
-      if (lines === 'grid') for (let xx = -w / 2 + 20; xx < w / 2; xx += step) { g.moveTo(xx, -h / 2); g.lineTo(xx, h / 2); }
-      else { g.moveTo(-w / 2 + 90, -h / 2); g.lineTo(-w / 2 + 90, h / 2); }
-      g.stroke(); g.restore(); }
-    g.restore();
-  };
-  const tape = (x, y, w, rot, seed) => { g.save(); g.translate(x, y); g.rotate(rot); const P = polyPath(rough(rect(-w / 2, -24, w, 48), seed, 6, 10));
-    g.globalAlpha = .72; g.fillStyle = YEL; g.fill(P); g.restore(); };
-  scrap(-70, 150, 700, 760, -.06, CHIP, 9701, 'ruled');
-  scrap(690, 480, 460, 520, .11, CREAM, 9702, null);
-  scrap(470, 1130, 680, 860, .05, CHIP, 9703, 'grid');
-  scrap(-90, 1260, 520, 560, -.09, CREAM, 9704, 'ruled');
-  tape(560, 190, 190, .5, 9711); tape(40, 870, 170, -.4, 9712); tape(1010, 520, 160, -.25, 9713);
-  tape(560, 1170, 200, -.45, 9714); tape(990, 1960, 200, .4, 9715); tape(300, 1290, 170, .3, 9716);
-  SCRAP = o;
+  g.fillStyle = CREAM; g.fillRect(0, 0, W, H); const r = rng(9801);   // the palette cream
+  for (let i = 0; i < 60000; i++) { g.fillStyle = r() < .55 ? 'rgba(170,150,110,0.10)' : 'rgba(255,253,245,0.35)'; const z = .8 + r() * 1.6; g.fillRect(r() * W, r() * H, z, z); }   // fine grain
+  for (let i = 0; i < 70; i++) { const x = r() * W, y = r() * H, rad = 120 + r() * 320, gr = g.createRadialGradient(x, y, 0, x, y, rad);   // mottling
+    const dark = r() < .35, rgb = dark ? '190,170,125' : '255,252,240'; gr.addColorStop(0, `rgba(${rgb},${dark ? .05 : .16})`); gr.addColorStop(1, `rgba(${rgb},0)`); g.fillStyle = gr; g.fillRect(x - rad, y - rad, 2 * rad, 2 * rad); }   // each blotch fades to its own colour: a fade to transparent black turns grey
+  g.lineCap = 'round';
+  for (let i = 0; i < 900; i++) { const x = r() * W, y = r() * H, a = r() * TAU, l = 6 + r() * 26, bend = (r() - .5) * 10;   // paper fibres
+    g.strokeStyle = r() < .6 ? 'rgba(150,125,85,0.14)' : 'rgba(255,255,250,0.45)'; g.lineWidth = .8 + r() * .9;
+    g.beginPath(); g.moveTo(x, y); g.quadraticCurveTo(x + Math.cos(a) * l / 2 - Math.sin(a) * bend, y + Math.sin(a) * l / 2 + Math.cos(a) * bend, x + Math.cos(a) * l, y + Math.sin(a) * l); g.stroke(); }
+  CREAM_TEX = o;
 }
-function scrapBg(c) { c.save(); resetT(c); c.drawImage(SCRAP, 0, 0, W, H); c.restore(); }
+function creamBg(c) { c.save(); resetT(c); c.drawImage(CREAM_TEX, 0, 0, W, H); c.restore(); }
 function handset(c, x, y, s, col = BLK) {   // a phone-handset glyph
   c.save(); c.translate(x, y); c.scale(s, s); c.rotate(-.6);
   block(c, [[-60, -26], [-30, -26], [-24, -8], [24, -8], [30, -26], [60, -26], [64, 6], [40, 22], [28, 8], [-28, 8], [-40, 22], [-64, 6]], col, 9901, { kw: 0, key: false }); c.restore();
@@ -221,7 +208,7 @@ function swapSticker(c, t) {   // the fake label pops out of the Scammer's phone
 const PH = { x: 230, y: 596, w: 500, h: 830 }, BUBBLE = { x: 262, y: 780, w: 436, h: 300 };
 const TAP = [BUBBLE.x + BUBBLE.w / 2 + 146, BUBBLE.y + BUBBLE.h - 22];   // the pill's right end: the pointer never covers its label
 function textPhone(c, t) {   // bar 5: a text arrives
-  scrapBg(c);
+  creamBg(c);
   const buzz = [at(5, 2), at(5, 3)]; let sx = 0; for (const b of buzz) if (t >= b && t < b + .2) sx += Math.sin((t - b) * 110) * 7 * (1 - (t - b) / .2);
   c.save(); c.translate(sx, 0);
   shadowRect(c, PH.x, PH.y, PH.w, PH.h); block(c, rrPts(PH.x, PH.y, PH.w, PH.h, 56, 6), BLK, 9101, { kw: 6 });
@@ -241,7 +228,7 @@ function textPhone(c, t) {   // bar 5: a text arrives
 const DOC = { x: 90, y: 590, w: 780, h: 830 };
 const FINE = ['PURSUANT TO SUBSECTION 00(Z) OF THE WHEREAS', 'ACT, THE PARTY HEREINAFTER SHALL REMIT', 'FORTHWITH OR BE DEEMED IN CONTEMPT OF THE', 'HEREUNTO AFOREMENTIONED NOTWITHSTANDING,', 'ET CETERA, ET CETERA, AND SO ON AND SO ON.'];
 function warrant(c, t) {   // bar 6: the fake warrant
-  scrapBg(c);
+  creamBg(c);
   const { x, y, w, h } = DOC;
   shadowRect(c, x, y, w, h); block(c, rect(x, y, w, h), CHIP, 9201, { kw: 6 });
   ink(c, rect(x, y, w, 120), BLK, 9202); inkText(c, 'WARRANT FOR ARREST', x + w / 2, y + 64, 58, 'Stamp', CHIP, w - 60);
@@ -446,7 +433,7 @@ window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return
     g.drawImage(im, 0, 0); g.globalCompositeOperation = 'source-in'; g.fillStyle = CHIP; g.fillRect(0, 0, o.width, o.height);
     g.globalCompositeOperation = 'source-atop'; g.fillStyle = YEL; g.globalAlpha = .9; g.save(); g.translate(o.width / 2, o.height / 2); g.rotate(-.5); g.fillRect(-o.width, -9, o.width * 2, 18); g.restore();
     IMG.officer_badge_back = o; }
-  makeScrapbook();
+  makeCream();
   frame(+(Q.get('frame') || 0));
   window.__ready = true;
 })().catch(e => { console.error(e); window.__error = String(e); });

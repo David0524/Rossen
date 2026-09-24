@@ -182,4 +182,5 @@ Most of these came from a bug, a failed render, or a correction from the client.
 - A slam-in logo must clear the captions at its largest landing scale, not just at rest (720 x 502 at y 880, landing from 1.15x).
 - At 24 fps an eighth-note hit falls between two frames (7.5 frames), about 21 ms from either. Put synced hits on beats (15 frames), and check with `tools/sync_check.py`, which also reports the mp4's container offset.
 - Puppet pieces that come off (a cap, a badge) need hidden fills under them, not only under joints: here a head dome tiled from the costume's own black, and the coat copied from just below the badge.
-- Dense black-on-cream dot backgrounds read as hypnotic. Use a static scrapbook page (torn ruled and grid scraps, masking tape) for close-ups.
+- The client found the black-on-cream dot background hypnotic and didn't like the scrapbook page either. Close-ups need a different background from the blue dots: a textured cream stock (paper, soft mottling, faint fibres, no dots) was the brief.
+- Canvas radial gradients blend unpremultiplied: fading `rgba(255,252,240,.16)` to `rgba(0,0,0,0)` leaves grey halos. Fade to the same colour at alpha 0.
