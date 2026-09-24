@@ -1,0 +1,8 @@
+{
+  "_doc": "WHAT WOULD YOU DO? series template. Fixed bar counts for the recurring parts, read by wwyd.js (picture) and score_wwyd.py (sound). 96 BPM, 2.5 s per bar. Order: title, setup scenes, freeze, pause, one reveal per option, takeaway, end.",
+  "bpm": 96,
+  "bars": { "title": 2, "freeze": 1, "pause": 2, "reveal": 2, "takeaway": 2, "end": 2 },
+  "options": 3,
+  "verdicts": ["WRONG", "CLOSE", "RIGHT"],
+  "maxSceneBars": 4
+}

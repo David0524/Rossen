@@ -171,3 +171,17 @@ Episode 2, `rossen-rules-ep02.html`, "GIFT CARDS ARE FOR GIFTS.", 16 bars = 40 s
 - FOLLOW FOR RULE #3 and the logo (15–16)
 
 The phone, ringing and lurking-Scammer helpers now live in `rules/props.js`, shared by all episodes. Episode 1 renders pixel-identically, and its score is byte-identical after the cue library grew.
+
+## Series: WHAT WOULD YOU DO? (9:16)
+
+A play-along scam game. `wwyd.js` holds the recurring parts and each episode is data plus drawings:
+
+- `wwyd/template.json`: the fixed bar counts (title 2, freeze 1, pause 2, each reveal 2, takeaway 2, end 2), 3 options in the order WRONG · CLOSE · RIGHT, and scenes of 1–4 bars. It's read by both `wwyd.js` and `score_wwyd.py`, and `buildTimeline()` refuses data that breaks it.
+- `wwyd/epNN.json`: the cast, the setup scenes (captions and chords), the options (key, lines, verdict, reveal captions), takeaway, bonus tip and sound cues.
+- `wwyd/epNN.js`: `SCENES.tease` (the title card's picture), one function per setup scene, and `SCENES.reveal_A/B/C`.
+
+Timeline: TITLE · setup · FREEZE (the last setup frame freezes on the downbeat under a record scratch, then shrinks into a Polaroid while the options land on beats 2, 3, 4) · PAUSE (the options hold still under COMMENT A, B, OR C and an 8-beat countdown) · REVEAL ×3 (the answer card, its verdict stamp and sting on the downbeat, what happens next, and Jeff walking through it) · TAKEAWAY + BONUS TIP · END + logo.
+
+Episode 1, `rossen-wwyd-ep01.html`, the grandparent scam, 18 bars = 45 s. The characters are new jointed puppets cut from the supplied art by `tools/cut_wwyd.py` (head, torso, phone arm, legs), with hidden chin and elbow underlays so tilts never show through.
+
+Score: `python3 score_wwyd.py wwyd/ep01`, then loudnorm (I -16, TP -2), `alimiter=limit=0.7`, mux. It writes `samples_used.txt` and `audio_sources.txt` (every recorded file with its source URL and licence, plus what is composed).
