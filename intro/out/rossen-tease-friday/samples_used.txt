@@ -8,16 +8,17 @@ kenney/casino/card-slide-4.ogg
 kenney/casino/card-slide-5.ogg
 kenney/casino/cards-pack-open-1.ogg
 kenney/impact/impactMetal_light_001.ogg
-kenney/impact/impactMetal_light_002.ogg
 kenney/impact/impactPunch_heavy_000.ogg
 kenney/impact/impactSoft_heavy_000.ogg
-kenney/impact/impactSoft_medium_000.ogg
 kenney/impact/impactWood_heavy_000.ogg
 kenney/interface/click_002.ogg
 kenney/interface/click_003.ogg
 kenney/interface/confirmation_001.ogg
+kenney/interface/confirmation_002.ogg
+kenney/interface/pluck_001.ogg
 kenney/interface/pluck_002.ogg
 kenney/interface/scratch_004.ogg
+kenney/interface/switch_007.ogg
 kenney/interface/tick_002.ogg
 kenney/rpg/bookFlip2.ogg
 kenney/rpg/bookPlace1.ogg
@@ -54,7 +55,6 @@ vsco/Strings/Cello Section/pizzT/pizzT_D2_v2_RR1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_A#0_v1_rr1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_C1_v1_rr1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_D1_v1_rr1.wav
-vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_F#1_v1_rr1.wav
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_G#1_v1_rr1.wav
 vsco/Strings/Violin Section/Spic/VlnEns_Spic_B4_v2_rr1.wav
 vsco/Strings/Violin Section/Spic/VlnEns_Spic_D5_v2_rr1.wav
@@ -64,4 +64,3 @@ vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_f_1.wav
 vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_mf_1.wav
 vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_rimshot_f_1.wav
 vsco/Woodwinds/Clarinet/stac/DCClar_stac_A#3_v3_rr1_sum.wav
-vsco/Woodwinds/Clarinet/stac/DCClar_stac_F3_v3_rr1_sum.wav

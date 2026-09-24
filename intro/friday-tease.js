@@ -1,6 +1,6 @@
 'use strict';
 /* Friday live-show tease: 25 s (10 bars at 96 BPM, D minor into D major), 1080x1920 (9:16), 24 fps, one continuous film,
-   then the approved 5 s LIVE TODAY loop (rossen-loop-friday, 10 AM ET) is appended untouched. Case-file screen-print
+   then the approved 5 s LIVE TODAY loop (rossen-loop-friday, 10 AM ET) is appended untouched and plays twice (35 s total). Case-file screen-print
    look (printkit.js), the approved palette, the vertical safe-zone content transform (VERT_K 0.895, like the loop).
    Tease the scams, don't explain them. Captions: one short ALL-CAPS card per bar, on screen for the whole bar.
 
@@ -11,10 +11,11 @@
                            number out of it like a thread
               bar 4  10.0  the camera follows the thread right to a vault; it turns the lock; the door opens on 3 "YOUR NUMBER... / OPENS YOUR BANK"
               bar 5  12.5  cash streams out on eighths; the calendar tears DAY 1, DAY 4, WEEK 2, WEEK 3           "FOR DAYS. / EVEN WEEKS."
-   THE FIX    bar 6  15.0  dive into the vault: a laptop typing; Jeff pops up with the magnifier on 2              "AN ETHICAL HACKER / SHOWS HOW"
-              bar 7  17.5  the phone drops back in; the hook comes for it on 2; a padlock slams on 3, the hook     "AND HOW TO / OUTSMART THEM"
-                           bounces off on 4
-   DEALS      bar 8  20.0  price tags swing in on 1, 2, 3, 4: 40% OFF, PROMO CODE, AMAZON DEALS, YOUR REQUESTS   "PLUS: HOT DEALS / SECRET PROMO CODES"
+   THE FIX    bar 6  15.0  dive into the vault: a laptop typing; Jeff's magnifier on 2; a padlock slams on 3, a   "AN ETHICAL HACKER / HOW TO STOP IT"
+                           check on 4
+   DEALS      bar 7  17.5  price tags swing in on 1, 2, 3; YOUR REQUESTS on 4                                    "PLUS: HOT DEALS / SECRET PROMO CODES"
+   LIVE       bar 8  20.0  a plain video player with Jeff live inside; LIVE on 2; the ROSSEN REPORTS CHANNEL row   "LIVE ON YOUTUBE / ROSSEN REPORTS"
+                           on 3; SEE YOU AT 10! on 4
    HANDOFF    bar 9  22.5  the camera drops onto the loop's own page; its pieces land on the beats in their exact
                            places (logo on 1, LIVE TODAY on 2, 10 AM ET + FRIDAY on 3, Jeff on 4), and from 24.5 s
                            it is the loop's own frames, so the cut at 25.0 s is the loop's seamless wrap.
@@ -27,7 +28,7 @@ const PUSH = .3;
 const CAPS = [
   [at(0), 'OPENING A', 'NEW PHONE?'], [at(1), 'MINUTES LATER...', 'IT RINGS.'], [at(2), 'WITHIN THE HOUR,', "IT'S GONE."],
   [at(3), 'PORT HACKING'], [at(4), 'YOUR NUMBER...', 'OPENS YOUR BANK'], [at(5), 'FOR DAYS.', 'EVEN WEEKS.'],
-  [at(6), 'AN ETHICAL HACKER', 'SHOWS HOW'], [at(7), 'AND HOW TO', 'OUTSMART THEM'], [at(8), 'PLUS: HOT DEALS', 'SECRET PROMO CODES'], [at(9), null],
+  [at(6), 'AN ETHICAL HACKER', 'HOW TO STOP IT'], [at(7), 'PLUS: HOT DEALS', 'SECRET PROMO CODES'], [at(8), 'LIVE ON YOUTUBE', 'ROSSEN REPORTS'], [at(9), null],
 ];
 function chip(c, s, x, y, size, bg, fg, t, t0, rot = 0, maxW = 700, from = 1.1, font = 'Stamp') {
   if (t < t0 - SLAM) return; c.font = `${size}px ${font}`; const w = Math.min(c.measureText(s).width, maxW) + 60, h = size * 1.3, k = t < t0 ? lerp(from, 1, easeIn(land(t, t0))) : pop(t, t0);
@@ -203,41 +204,57 @@ function vaultRect() { const x = VAULT_AT[0] - PAN; return [x - 270, VAULT_AT[1]
 
 // THE FIX (bars 6-7): a laptop, Jeff and the magnifier; then the phone gets its padlock
 const LAP = [480, 820];
-function sceneFix(c, t) {
+function sceneFix(c, t) {   // bar 6: the laptop typing; Jeff's magnifier on 2; a padlock slams onto it on 3; a check on 4
   bgDots(c, BLUE, .06, .3);
-  const b7 = t >= at(7) - .3, slide = easeIO(seg(t, at(7) - .3, at(7) + .1));
-  // bar 6: the laptop
-  if (slide < 1) { c.save(); c.translate(-900 * slide, 0); laptop(c, LAP[0], LAP[1], t, at(6)); c.restore(); }
-  const jin = easeOutBack(land(t, at(6, 2)));
-  if (t < at(7)) {
-    if (t >= at(6, 2) - SLAM) { const raise = easeOut(seg(t, at(6, 2), at(6, 2) + .35));
-      const J = jeff(c, 176, lerp(3000, 1830, jin), .66, { armR: lerp(0, -2.2, raise), head: -.05 + .03 * Math.sin(t * 2) });
-      if (raise > 0) { const cxm = lerp(J.hand[0] + 80, LAP[0] + 90 - 900 * slide, raise), cym = lerp(J.hand[1] - 120, LAP[1] - 40, raise) + 8 * Math.sin(t * 3);
-        magnifier(c, cxm, cym, lerp(40, 120, raise), J.hand, raise > .6 ? () => { c.translate(cxm, cym); c.scale(1.8, 1.8); c.translate(-cxm, -cym); c.save(); c.translate(-900 * slide, 0); laptop(c, LAP[0], LAP[1], t, at(6)); c.restore(); } : null); } }
-    return;
+  const [sx, sy] = shake(t, [[at(6, 3), 14]]);
+  c.save(); c.translate(sx, sy); laptop(c, LAP[0], LAP[1], t, at(6)); c.restore();
+  const jin = easeOutBack(land(t, at(6, 2))), raise = easeOut(seg(t, at(6, 2), at(6, 2) + .35)), lower = easeIn(seg(t, at(6, 3) - SLAM, at(6, 3))), up = raise * (1 - lower);
+  const th = easeOutBack(seg(t, at(6, 3), at(6, 3) + .35));
+  if (t >= at(6, 2) - SLAM) {
+    const J = jeff(c, 176, lerp(3000, 1830, jin), .66, { armR: lerp(lerp(0, -2.2, up), -2.5, th), prop: th > .6 ? 'thumb' : null, head: -.05 + .03 * Math.sin(t * 2) });
+    if (up > 0) { const cxm = lerp(J.hand[0] + 80, LAP[0] + 90, up), cym = lerp(J.hand[1] - 120, LAP[1] - 40, up) + 8 * Math.sin(t * 3);
+      magnifier(c, cxm, cym, lerp(40, 120, up), J.hand, up > .6 ? () => { c.translate(cxm, cym); c.scale(1.8, 1.8); c.translate(-cxm, -cym); laptop(c, LAP[0], LAP[1], t, at(6)); } : null); }
   }
-  // bar 7: the phone drops back in; the hook comes down on 2; a padlock slams on 3; the hook bounces off on 4
-  const drop = easeIn(land(t, at(7))), py = lerp(-400, 860, drop);
-  let [sx, sy] = shake(t, [[at(7, 3), 14]]);
-  phone(c, 560 + sx, py + sy, .95, -.04, cc => { block(cc, [[0, -80], [80, -50], [70, 40], [0, 100], [-70, 40], [-80, -50]], BLUE, 7040, { kw: 5 }); check(cc, 0, 5, .45, t, at(7, 3)); });
-  if (t >= at(7, 3) - SLAM) { const k = t < at(7, 3) ? lerp(1.4, 1, easeIn(land(t, at(7, 3)))) : pop(t, at(7, 3)); padlock(c, 560 + sx, 1130 + sy, k); }
-  const hk = at(7, 2), dn = easeOut(seg(t, hk - .45, hk)), bounce = easeOut(seg(t, at(7, 4) - .05, at(7, 4) + .4));
-  const hy = lerp(-200, 560, dn) - 900 * bounce + (t > at(7, 3) && t < at(7, 4) ? 14 * Math.sin((t - at(7, 3)) * 40) : 0);
-  if (t >= hk - .45) { fishLine(c, [640, -300], [560, hy], 0); hook(c, 560, hy, 1.3); }
-  const th = easeOutBack(seg(t, at(7, 3), at(7, 3) + .35));
-  jeff(c, 176, 1830, .66, { armR: lerp(-.3, -2.5, th), prop: th > .6 ? 'thumb' : null, head: .05 });
+  if (t >= at(6, 3) - SLAM) { const k = t < at(6, 3) ? lerp(1.4, 1, easeIn(land(t, at(6, 3)))) : pop(t, at(6, 3)); padlock(c, LAP[0] + sx, LAP[1] + 40 + sy, 1.1 * k); }
+  check(c, 720, 690, .7, t, at(6, 4));
 }
 
-// DEALS (bar 8): brighter; tags swing in on each beat
+// DEALS (bar 7): brighter; tags swing in on each beat
 const TAGS = [['40% OFF', 265, 720, YEL, BLK, 320], ['PROMO\nCODE', 690, 700, BLUE, CHIP, 300], ['AMAZON\nDEALS', 262, 1000, CHIP, BLK, 300]], TAG_S = 1.2;   // AMAZON as plain text only
 function sceneDeals(c, t) {
   bgDots(c, YEL, .14, .5);
-  TAGS.forEach(([s, x, y, col, fg, w], k) => { const t0 = at(8, 1 + k); if (t < t0 - .35) return;
-    const dropIn = easeOutBack(seg(t, t0 - .35, t0)), swing = t > t0 ? .14 * Math.exp(-(t - t0) * 2.2) * Math.sin((t - t0) * 9) : 0;
-    c.save(); c.translate(x, lerp(y - 900, y, dropIn)); c.scale(TAG_S, TAG_S); priceTag(c, 0, 0, swing + (k % 2 ? .05 : -.05), s, col, fg, w); c.restore(); });
-  if (t >= at(8, 4) - SLAM) { const k = pop(t, at(8, 4)); c.save(); c.translate(690, 1010); c.scale(k * TAG_S, k * TAG_S); chatBubble(c, 0, 0, .04, 'YOUR REQUESTS'); c.restore(); }   // x 486-894: clear of the tags and the safe edge
-  const th = easeOutBack(seg(t, at(8, 1.5), at(8, 2)));
+  TAGS.forEach(([s, x, y, col, fg, w], k) => { const t0 = at(7, 1 + k); 
+    if (t < t0 - SLAM) return; const kp = t < t0 ? lerp(.6, 1, easeOut(land(t, t0))) : pop(t, t0), swing = t > t0 ? .14 * Math.exp(-(t - t0) * 2.2) * Math.sin((t - t0) * 9) : 0;   // each tag pops in place: nothing travels past the captions
+    c.save(); c.translate(x, y); c.scale(TAG_S * kp, TAG_S * kp); priceTag(c, 0, 0, swing + (k % 2 ? .05 : -.05), s, col, fg, w); c.restore(); });
+  if (t >= at(7, 4) - SLAM) { const k = pop(t, at(7, 4)); c.save(); c.translate(690, 1010); c.scale(k * TAG_S, k * TAG_S); chatBubble(c, 0, 0, .04, 'YOUR REQUESTS'); c.restore(); }   // x 486-894: clear of the tags and the safe edge
+  const th = easeOutBack(seg(t, at(7, 1.5), at(7, 2)));
   jeff(c, SCX, 1830, .7, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: .05 * Math.sin(t * 5), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 6 });
+}
+
+// LIVE ON YOUTUBE (bar 8): a plain video player (no platform logo) with Jeff live inside; LIVE on 2; the channel row on 3;
+// a chat bubble on 4. "YouTube" appears only as plain text in the caption.
+const PL = { x: 110, y: 600, w: 740, h: 416 };
+const popUp = (t, t0) => t < t0 ? lerp(.8, 1, easeOut(land(t, t0))) : pop(t, t0);   // grows into place: never wider than its resting size (+6%)
+function sceneLive(c, t) {
+  bgDots(c, BLUE, .08, .4);
+  const { x, y, w, h } = PL;
+  shadowRect(c, x, y, w, h); block(c, rect(x, y, w, h), BLK, 7901, { kw: 6 });
+  c.save(); c.beginPath(); c.rect(x + 14, y + 14, w - 28, h - 28); c.clip();
+  ink(c, rect(x, y, w, h), CREAM, 7902, { reg: false }); dotsIn(c, rect(x, y, w, h), YEL, .35, 7903, 14);
+  jeff(c, x + w / 2, y + h + 150, .42, { armR: -2.35 + .22 * Math.sin(t * TAU / BEAT), head: .05 * Math.sin(t * 3), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 5 });
+  c.restore();
+  // the progress bar: at the live edge
+  ink(c, rect(x + 30, y + h - 36, w - 60, 10), CHIP, 7904, { reg: false }); ink(c, rect(x + 30, y + h - 36, w - 60, 10), YEL, 7905, { reg: false });
+  if (t >= at(8, 2) - SLAM) { const k = popUp(t, at(8, 2)); c.save(); c.translate(x + 110, y + 62); c.scale(k, k);
+    block(c, rrPts(-80, -30, 160, 60, 12, 4), BLK, 7906, { kw: 3 }); block(c, ellPts(-46, 0, 12, 12, 0, 14), YEL, 7907, { kw: 0, key: false });
+    inkText(c, 'LIVE', 16, 3, 38, 'Stamp', YEL, 90); c.restore(); }
+  if (t >= at(8, 3) - SLAM) { const k = popUp(t, at(8, 3)); c.save(); c.translate(SCX, 1120); c.scale(k, k);
+    c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-370 + 10, -60 + 12, 740, 120); c.restore();
+    block(c, rect(-370, -60, 740, 120), CHIP, 7908, { kw: 5 });
+    stickerLogo(c, -285, 0, 130, -.04, 1);
+    inkText(c, 'ROSSEN REPORTS', -200, -14, 50, 'Stamp', BLK, 540, 'left'); inkText(c, 'CHANNEL  ·  10 AM ET', -200, 36, 34, SANS, BLUE, 540, 'left');
+    c.restore(); }
+  if (t >= at(8, 4) - SLAM) { const k = popUp(t, at(8, 4)); c.save(); c.translate(SCX + 60, 1300); c.scale(k * 1.1, k * 1.1); chatBubble(c, 0, 0, -.03, 'SEE YOU AT 10!'); c.restore(); }
 }
 
 // HANDOFF (bar 9): the loop's own page. Its background is the loop's (same code, same seed); its pieces are cut from the
@@ -274,10 +291,12 @@ function drawScene(c, t) {
   else if (t < at(6)) { scenePort(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
   else if (t < at(6) + .45) { zoomThrough(c, t, at(6), at(6) + .45, vaultRect(), g => scenePort(g, at(6) - 1e-3), g => { sceneFix(g, t); contentT(g); captionsTop(g, Math.max(t, at(6) - SLAM)); });
     contentT(c); printFinish(c); }   // dive into the vault
-  else if (t < at(8) - PUSH / 2) { sceneFix(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
-  else if (t < at(8) + PUSH / 2) pushScenes(c, t, at(8), sceneFix, sceneDeals);
-  else if (t < at(9) - PUSH / 2) { sceneDeals(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
-  else if (t < at(9) + PUSH / 2) pushScenes(c, t, at(9), sceneDeals, sceneHandoff);
+  else if (t < at(7) - PUSH / 2) { sceneFix(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
+  else if (t < at(7) + PUSH / 2) pushScenes(c, t, at(7), sceneFix, sceneDeals);
+  else if (t < at(8) - PUSH / 2) { sceneDeals(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
+  else if (t < at(8) + PUSH / 2) pushScenes(c, t, at(8), sceneDeals, sceneLive);
+  else if (t < at(9) - PUSH / 2) { sceneLive(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
+  else if (t < at(9) + PUSH / 2) pushScenes(c, t, at(9), sceneLive, sceneHandoff);
   else sceneHandoff(c, t);
   if (SHOW_SAFE) safeOverlay(c);
 }

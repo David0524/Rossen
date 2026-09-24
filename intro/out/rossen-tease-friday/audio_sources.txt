@@ -1,4 +1,4 @@
-Rossen Reports Friday live tease (25 s) + LIVE TODAY loop (5 s). Every recorded audio file in the mix, with its source and license.
+Rossen Reports Friday live tease (25 s) + the LIVE TODAY loop played twice (10 s). Every recorded audio file in the mix, with its source and license.
 All are CC0 1.0 (public domain dedication, commercial use allowed, no attribution required). None come from a music library that registers with Content ID.
 
 kenney/casino/card-fan-1.ogg
@@ -41,19 +41,11 @@ kenney/impact/impactMetal_light_001.ogg
     used in: tease
     source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
     license: CC0 1.0
-kenney/impact/impactMetal_light_002.ogg
-    used in: tease
-    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
-    license: CC0 1.0
 kenney/impact/impactPunch_heavy_000.ogg
     used in: tease
     source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
     license: CC0 1.0
 kenney/impact/impactSoft_heavy_000.ogg
-    used in: tease
-    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
-    license: CC0 1.0
-kenney/impact/impactSoft_medium_000.ogg
     used in: tease
     source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
     license: CC0 1.0
@@ -73,11 +65,23 @@ kenney/interface/confirmation_001.ogg
     used in: tease
     source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
     license: CC0 1.0
+kenney/interface/confirmation_002.ogg
+    used in: tease
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/pluck_001.ogg
+    used in: tease
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
 kenney/interface/pluck_002.ogg
     used in: tease
     source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
     license: CC0 1.0
 kenney/interface/scratch_004.ogg
+    used in: tease
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/switch_007.ogg
     used in: tease
     source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
     license: CC0 1.0
@@ -249,10 +253,6 @@ vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_D1_v1_rr1.wav
     used in: tease + loop cue
     source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
     license: CC0 1.0
-vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_F#1_v1_rr1.wav
-    used in: tease
-    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
-    license: CC0 1.0
 vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_G#1_v1_rr1.wav
     used in: tease + loop cue
     source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
@@ -289,9 +289,5 @@ vsco/Woodwinds/Clarinet/stac/DCClar_stac_A#3_v3_rr1_sum.wav
     used in: tease
     source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
     license: CC0 1.0
-vsco/Woodwinds/Clarinet/stac/DCClar_stac_F3_v3_rr1_sum.wav
-    used in: tease
-    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
-    license: CC0 1.0
 
-Composed (not recorded files): the whole score. Bars 0-7 are written note by note in score_tease.py on the 96 BPM grid in D (the loop's tempo and key) and played by the VSCO recordings above: the ticking rim pulse and low brass of the new-phone scene, the glockenspiel phone rise and ring trills, the spiccato build, the Scammer's clarinet, the trombone yank, the xylophone run on the padlock bounce. Bars 8-9 and the appended loop are the LIVE TODAY loop cue, also composed in code (score_loop.py). No synthesized tones are used anywhere; every sound effect is a recorded Kenney file.
+Composed (not recorded files): the whole score. Bars 0-7 are written note by note in score_tease.py on the 96 BPM grid in D (the loop's tempo and key) and played by the VSCO recordings above: the ticking rim pulse and low brass of the new-phone scene, the glockenspiel phone rise and ring trills, the spiccato build, the Scammer's clarinet, the trombone yank, the xylophone bounce of the deals. Bars 8-9 and the appended loop are the LIVE TODAY loop cue, also composed in code (score_loop.py). No synthesized tones are used anywhere; every sound effect is a recorded Kenney file.

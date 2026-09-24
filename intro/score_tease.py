@@ -6,7 +6,7 @@ the loop ends on and whose tails ring into its first samples, and the cut at 25.
 Mood: tense D minor through the scams (low strings, pizzicato, a ticking pulse, low brass), building layer by layer
 through port hacking, lifting toward major when Jeff and the hacker come in, then the loop's bright D major on the deals.
 
-usage: python3 score_tease.py            ->  out/rossen-tease-friday/tease_audio.wav (25 s), full_audio.wav (30 s), hits.json,
+usage: python3 score_tease.py            ->  out/rossen-tease-friday/tease_audio.wav (25 s), full_audio.wav (35 s: tease + the loop twice), hits.json,
                                             samples_used.txt, audio_sources.txt
        HITS_ONLY=1 python3 score_tease.py ->  score_hits.wav (the synced hits alone)
 """
@@ -167,7 +167,7 @@ def H(t, what): HITS.append((round(t, 4), what))
 END = AT(10); LOOP_IN = AT(8)   # the loop's cue takes over at bar 8
 
 # ---------------- bars 0-7, composed ----------------
-ROWS = {0: 'Dm Dm Bb A', 1: 'Dm Dm Bb A', 2: 'Gm Gm A A', 3: 'Dm Dm Bb C', 4: 'Bb Bb C A', 5: 'Dm Bb C A', 6: 'Bb Bb F F', 7: 'G G A A'}
+ROWS = {0: 'Dm Dm Bb A', 1: 'Dm Dm Bb A', 2: 'Gm Gm A A', 3: 'Dm Dm Bb C', 4: 'Bb Bb C A', 5: 'Dm Bb C A', 6: 'G G A A', 7: 'D D G A'}   # the fix lifts toward major; the deals are bright D major
 if not HO:
     for bar, row in ROWS.items():
         for k, ch in enumerate(row.split()):
@@ -175,16 +175,18 @@ if not HO:
             cbp(lo, B(bb), .42, dur=.3); cpz(r, B(bb), .6, dur=.28)
             if bar >= 3: cpz(r, B(bb + .5), .5, dur=.28)                                    # the bass doubles up for port hacking
             n = 2 if bar < 3 else 4                                                      # spiccato violins: eighths, then sixteenths
-            for j in range(n): vsp(TONES[ch][j % (2 if bar < 5 else 3)], B(bb + j / n), .24 + .02 * min(bar, 5), dur=.1)
+            if bar < 7:
+              for j in range(n): vsp(TONES[ch][j % (2 if bar < 5 else 3)], B(bb + j / n), .24 + .02 * min(bar, 5), dur=.1)
             if k % 2 == 0: [ (hnl if bar < 6 else tpl)(nn, B(bb), .2 if bar < 6 else .13, dur=BEAT * 2 - .08, rel=.25) for nn in PAD[ch] ]
+            if bar == 7: xyl(TONES[ch][k % 3], B(bb), .3, dur=.15); xyl(TONES[ch][(k + 1) % 3], B(bb + .5), .26, dur=.15)   # the deals bounce
         timp(AT(bar), .45 + .04 * bar)
         if bar < 3:   # the tick of the clock: rim on every beat, snare on 2 and 4
             for q in range(4): one(RIM, AT(bar, q + 1), .16, .1)
             snare(AT(bar, 2), .28); snare(AT(bar, 4), .28); kick(AT(bar), .5); kick(AT(bar, 3), .4)
         else:
-            groove(BB(bar), BB(bar + 1), .5 + .03 * (bar - 3), .05 + .015 * (bar - 3))
+            groove(BB(bar), BB(bar + 1), .5 + .03 * (bar - 3), .05 + .015 * (bar - 3) + (.05 if bar == 7 else 0))
     roll_to(AT(2, 3), AT(3), .3); swell_to(AT(6), .35)
-    roll_to(AT(7, 3), LOOP_IN, .32)                                                      # into the deals
+    roll_to(AT(7, 3), LOOP_IN, .28)                                                      # into the LIVE bar
 
 # ---------------- sounds on the picture's beats ----------------
 def capsnd(t): xyl('D6', t, .24); fx('casino/card-place-1.ogg', t, .13)
@@ -220,18 +222,24 @@ fx('rpg/metalLatch.ogg', AT(4, 3), .6); fx('rpg/creak1.ogg', AT(4, 3) + .05, .4)
 fx('rpg/handleCoins.ogg', AT(5), .45); kick(AT(5), .7); H(AT(5), 'cash')
 for k in range(1, 8): fx(('casino/card-fan-1.ogg', 'casino/card-fan-2.ogg')[k % 2], AT(5) + k * E8, .16)
 for b in (2, 3, 4): fx('rpg/bookFlip2.ogg', AT(5, b), .4); one(RIM, AT(5, b), .3, .1); H(AT(5, b), 'page')
-# THE FIX: dive into the vault; typing; Jeff; the phone comes back; the hook; the padlock; the bounce
+# THE FIX: dive into the vault; typing; Jeff; the padlock slams; the check
 fx('casino/card-slide-5.ogg', AT(6) - .15, .18); kick(AT(6), .95); one(CRASH_MF, AT(6), .25); H(AT(6), 'dive')
-for k in range(1, 8): fx(('interface/click_002.ogg', 'interface/click_003.ogg')[k % 2], AT(6) + k * E8, .18)
+for k in range(1, 5): fx(('interface/click_002.ogg', 'interface/click_003.ogg')[k % 2], AT(6) + k * E8, .18)
 fx('interface/pluck_002.ogg', AT(6, 2), .35); kick(AT(6, 2), .55); H(AT(6, 2), 'jeff')
-fx('impact/impactSoft_medium_000.ogg', AT(7), .5); kick(AT(7), .7); H(AT(7), 'phone back')
-fx('impact/impactMetal_light_002.ogg', AT(7, 2), .45); for_ = [cla(n, AT(7, 2) + k * S16, .4, dur=.12) for k, n in enumerate(('A3', 'G#3', 'G3'))]
-fx('rpg/metalClick.ogg', AT(7, 3), .6); stamp_hit(AT(7, 3), 1.0, 'G'); one(CRASH_MF, AT(7, 3), .3)
-fx('impact/impactMetal_light_001.ogg', AT(7, 4), .5); kick(AT(7, 4), .5); H(AT(7, 4), 'bounce')
-for k, n in enumerate(('A4', 'C#5', 'E5', 'A5')): xyl(n, AT(7, 4) + k * S16, .4, dur=.12)
-# DEALS and the HANDOFF (the loop's cue carries the music): tags on every beat of bar 8, the loop's pieces on the beats of bar 9
+fx('rpg/metalClick.ogg', AT(6, 3), .6); stamp_hit(AT(6, 3), 1.0, 'A'); one(CRASH_MF, AT(6, 3), .3)
+fx('interface/confirmation_002.ogg', AT(6, 4), .4); kick(AT(6, 4), .6); one(RIM, AT(6, 4), .35, .1); H(AT(6, 4), 'check')
+for k, n in enumerate(('A5', 'C#6', 'E6')): glk(n, AT(6, 4) + k * S16, .32)
+# DEALS: a tag on 1, 2, 3; the chat bubble on 4
+push(AT(7))
+for b in range(1, 5): t = AT(7, b); fx('casino/card-place-2.ogg', t, .32); glk(('D6', 'F#6', 'A6', 'D7')[b - 1], t, .24); kick(t, .5); H(t, 'tag')
+# LIVE ON YOUTUBE (the loop's cue carries the music from here): LIVE on 2, the channel row on 3, the chat bubble on 4
 FOLEY_END = END - .02
-for b in range(1, 5): t = AT(8, b); fx('casino/card-place-2.ogg', t, .3); glk(('D6', 'F#6', 'A6', 'D7')[b - 1], t, .22); H(t, 'tag')
+push(AT(8))
+fx('interface/switch_007.ogg', AT(8, 2), .35); H(AT(8, 2), 'live')
+fx('rpg/bookPlace1.ogg', AT(8, 3), .3); H(AT(8, 3), 'channel')
+fx('casino/card-place-1.ogg', AT(8, 4), .3); fx('interface/pluck_001.ogg', AT(8, 4), .25); H(AT(8, 4), 'chat')
+# HANDOFF: the loop's pieces on the beats of bar 9
+push(AT(9))
 for b in (1, 2, 3, 4): t = AT(9, b); fx('rpg/bookPlace1.ogg', t, .3 if b < 4 else .22); H(t, 'piece')
 
 # ---------------- mix: composed bars + the loop's cue ----------------
@@ -263,7 +271,7 @@ def write(p, x):
 if HO: write(od + '/score_hits.wav', comp / max(1e-6, np.abs(comp).max()) * .9)
 else:
     write(od + '/tease_audio.wav', comp)
-    write(od + '/full_audio.wav', np.concatenate([comp, LOOP]))   # the loop's audio, sample for sample, after the tease
+    write(od + '/full_audio.wav', np.concatenate([comp, LOOP, LOOP]))   # the loop's audio, sample for sample, twice: its end wraps into its start
 json.dump(sorted(set(HITS)), open(od + '/hits.json', 'w'))
 if not HO:
     with open(od + '/samples_used.txt', 'w') as f: f.write('\n'.join(sorted(USED)) + '\n')
@@ -271,7 +279,7 @@ if not HO:
             'casino': 'https://kenney.nl/assets/casino-audio', 'digital': 'https://kenney.nl/assets/digital-audio'}
     loop_used = [l.strip() for l in open('out/rossen-loop/samples_used.txt') if l.strip()]
     with open(od + '/audio_sources.txt', 'w') as f:
-        f.write('Rossen Reports Friday live tease (25 s) + LIVE TODAY loop (5 s). Every recorded audio file in the mix, with its source and license.\n')
+        f.write('Rossen Reports Friday live tease (25 s) + the LIVE TODAY loop played twice (10 s). Every recorded audio file in the mix, with its source and license.\n')
         f.write('All are CC0 1.0 (public domain dedication, commercial use allowed, no attribution required). None come from a music library that registers with Content ID.\n\n')
         for u in sorted(USED | set(loop_used)):
             if u.startswith('kenney/'): src = PACK[u.split('/')[1]] + '  (Kenney, kenney.nl)'
@@ -280,7 +288,6 @@ if not HO:
             f.write(f'{u}\n    used in: {who}\n    source: {src}\n    license: CC0 1.0\n')
         f.write('\nComposed (not recorded files): the whole score. Bars 0-7 are written note by note in score_tease.py on the 96 BPM grid in D '
                 '(the loop\'s tempo and key) and played by the VSCO recordings above: the ticking rim pulse and low brass of the new-phone scene, '
-                'the glockenspiel phone rise and ring trills, the spiccato build, the Scammer\'s clarinet, the trombone yank, the xylophone run on the '
-                'padlock bounce. Bars 8-9 and the appended loop are the LIVE TODAY loop cue, also composed in code (score_loop.py). '
+                'the glockenspiel phone rise and ring trills, the spiccato build, the Scammer\'s clarinet, the trombone yank, the xylophone bounce of the deals. Bars 8-9 and the appended loop are the LIVE TODAY loop cue, also composed in code (score_loop.py). '
                 'No synthesized tones are used anywhere; every sound effect is a recorded Kenney file.\n')
 print(od, len(set(HITS)), 'hits,', len(USED), 'samples')
