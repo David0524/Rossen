@@ -182,5 +182,12 @@ Most of these came from a bug, a failed render, or a correction from the client.
 - A slam-in logo must clear the captions at its largest landing scale, not just at rest (720 x 502 at y 880, landing from 1.15x).
 - At 24 fps an eighth-note hit falls between two frames (7.5 frames), about 21 ms from either. Put synced hits on beats (15 frames), and check with `tools/sync_check.py`, which also reports the mp4's container offset.
 - Puppet pieces that come off (a cap, a badge) need hidden fills under them, not only under joints: here a head dome tiled from the costume's own black, and the coat copied from just below the badge.
-- The client found the black-on-cream dot background hypnotic and didn't like the scrapbook page either. Close-ups need a different background from the blue dots: a textured cream stock (paper, soft mottling, faint fibres, no dots) was the brief.
+- **Approved background for close-ups: textured cream** (`creamBg` / `makeCream` in `officer.js`). Use it behind phones, documents and any card-heavy close-up; the blue dotted background stays for character scenes. The recipe:
+  - flat palette cream `#efe6d2`
+  - about 60k fine grain specks
+  - about 900 faint paper fibres
+  - soft light mottling, where each blotch fades to its own colour at alpha 0
+  - no dots, no vignette, nothing moving
+
+  Rejected: black-on-cream dots (hypnotic), a scrapbook page with torn scraps and tape, and the plain `PAPER_TEX` stock (reads grey and cloudy, about 25 levels darker than cream).
 - Canvas radial gradients blend unpremultiplied: fading `rgba(255,252,240,.16)` to `rgba(0,0,0,0)` leaves grey halos. Fade to the same colour at alpha 0.
