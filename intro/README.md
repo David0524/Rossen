@@ -185,3 +185,13 @@ Timeline: TITLE · setup · FREEZE (the last setup frame freezes on the downbeat
 Episode 1, `rossen-wwyd-ep01.html`, the grandparent scam, 18 bars = 45 s. The characters are new jointed puppets cut from the supplied art by `tools/cut_wwyd.py` (head, torso, phone arm, legs), with hidden chin and elbow underlays so tilts never show through.
 
 Score: `python3 score_wwyd.py wwyd/ep01`, then loudnorm (I -16, TP -2), `alimiter=limit=0.7`, mux. It writes `samples_used.txt` and `audio_sources.txt` (every recorded file with its source URL and licence, plus what is composed).
+
+## LIVE TODAY loops (9:16, 5 s)
+
+`rossen-loop-wednesday.html` and `rossen-loop-friday.html` (script `liveloop.js`) turn the LIVE TODAY card into seamless 5 s loops (2 bars at 96 BPM) for Reels and Stories. The card is scaled up to the full safe width, and every motion is periodic in the loop length:
+- LIVE TODAY and the time card pulse on beats 1 and 3, and the day chip on 2 and 4
+- a yellow signal ring once a bar
+- Jeff waves on every beat
+- the logo sticker rocks once per loop
+
+A page sets `window.SHOW = { time, day }`, and the time card always keeps the approved 5PM card's size. Audio: `python3 score_loop.py` renders three cycles and keeps the middle one, so every tail wraps into the start. It's gained to -16 LUFS and muxed.

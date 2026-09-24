@@ -1,0 +1,26 @@
+kenney/casino/card-place-2.ogg
+vsco/Brass/F Horn/stac/MOHorn_stac_A2_v2_rr1.wav
+vsco/Brass/F Horn/stac/MOHorn_stac_D2_v2_rr1.wav
+vsco/Brass/F Horn/stac/MOHorn_stac_G1_v2_rr1.wav
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_A#2_v3_rr1.wav
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_D3_v3_rr1.wav
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_F2_v3_rr1.wav
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_A#3_v3_rr1.wav
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_A4_v3_rr1.wav
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_D4_v3_rr1.wav
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_F4_v3_rr1.wav
+vsco/Percussion/Glock/glock_medium_C6.wav
+vsco/Percussion/Glock/glock_medium_G6.wav
+vsco/Percussion/Tamb1-Hit_v1_rr1_Sum.wav
+vsco/Percussion/Tamb1-Hit_v2_rr1_Sum.wav
+vsco/Percussion/Xylo/Xylo_Medium_C6_ff_01_far.wav
+vsco/Percussion/Xylo/Xylo_Medium_G5_ff_01_far.wav
+vsco/Strings/Cello Section/pizzT/pizzT_A2_v2_RR1.wav
+vsco/Strings/Cello Section/pizzT/pizzT_B1_v2_RR1.wav
+vsco/Strings/Cello Section/pizzT/pizzT_D2_v2_RR1.wav
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_A#0_v1_rr1.wav
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_D1_v1_rr1.wav
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_G#1_v1_rr1.wav
+vsco/VSCO 1 Percussion/drums/bass/bdrum_f_1.wav
+vsco/VSCO 1 Percussion/drums/bass/bdrum_ff_1.wav
+vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_f_1.wav
