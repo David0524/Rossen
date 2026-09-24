@@ -18,3 +18,8 @@ out/*/score_music.wav
 out/*/score_sfx.wav
 out/*_check/
 out/*/score_hits.wav
+out/*/full_audio.wav
+out/*/tease_audio.wav
+out/*/loop_v.mp4
+out/*/video_full.mp4
+out/*/concat.txt
