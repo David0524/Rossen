@@ -1,0 +1,44 @@
+{
+ "pieces": [
+  {
+   "name": "logo",
+   "file": "loop_mask_logo.png",
+   "centre": [
+    545.1310363223666,
+    506.5
+   ]
+  },
+  {
+   "name": "live",
+   "file": "loop_mask_live.png",
+   "centre": [
+    545.8407978949388,
+    792.5
+   ]
+  },
+  {
+   "name": "card",
+   "file": "loop_mask_card.png",
+   "centre": [
+    544.864747687206,
+    994.5
+   ]
+  },
+  {
+   "name": "day",
+   "file": "loop_mask_day.png",
+   "centre": [
+    560.783236196568,
+    1156.5
+   ]
+  },
+  {
+   "name": "jeff",
+   "file": "loop_mask_jeff.png",
+   "centre": [
+    541.082319704936,
+    1531.5
+   ]
+  }
+ ]
+}

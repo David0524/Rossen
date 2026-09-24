@@ -214,6 +214,22 @@ Score and checks:
 2. Run loudnorm (I -16, TP -2), then `alimiter=limit=0.7`, then mux.
 3. For sync, run `HITS_ONLY=1 python3 score_officer.py`, then `python3 tools/sync_check.py out/rossen-officer-scam/score_hits.wav out/rossen-officer-scam/hits.json`. Every synced hit sits on a whole frame.
 
+## Friday live tease + LIVE TODAY loop (9:16, 30 s)
+
+`rossen-tease-friday.html` and `friday-tease.js` make a 25 s one-shot tease: 10 bars at 96 BPM in D, the loop's own tempo and key. The approved 5 s Friday loop (`out/rossen-loop-friday/rossen-loop-friday.mp4`, 10 AM ET) is then appended untouched, joined by stream copy so its packets are never re-encoded.
+
+The film's beats:
+
+- **New phone (bars 0–2):** on textured cream, a box slams down in frame 0 and a phone rises out. It activates, rings as CARRIER SUPPORT, and is hooked and yanked away.
+- **Port hacking (bars 3–5):** the camera follows it up to the Scammer, who pulls the phone number out like a thread. The thread leads to a vault that opens, cash streams out, and a calendar tears DAY 1 through WEEK 3.
+- **The fix (bars 6–7):** a dive into the vault finds a laptop and Jeff with the magnifier. A padlock slams onto the phone and the hook bounces off.
+- **Deals (bar 8):** price tags swing in, plus YOUR REQUESTS.
+- **Handoff (bar 9):** the camera drops onto the loop's own page. Its pieces pop in on the beats, cut from the loop's own frames with `assets/tease/loop_mask_*.png` (made by `tools/make_tease_masks.py`). The last tease frame is loop frame 119, so the cut into the loop is the loop's own seamless wrap.
+
+Audio: `score_tease.py` composes bars 0–7. Bars 8–9 play the loop's own cue, so the handoff is sample-exact. Build everything with `tools/build_tease.sh`.
+
+The textured-cream background (`makeCream` / `creamBg`) now lives in `vertkit.js`.
+
 ## LIVE TODAY loops (9:16, 5 s)
 
 `rossen-loop-wednesday.html` and `rossen-loop-friday.html` (script `liveloop.js`) turn the LIVE TODAY card into seamless 5 s loops (2 bars at 96 BPM) for Reels and Stories. The card is scaled up to the full safe width, and every motion is periodic in the loop length:

@@ -191,3 +191,8 @@ Most of these came from a bug, a failed render, or a correction from the client.
 
   Rejected: black-on-cream dots (hypnotic), a scrapbook page with torn scraps and tape, and the plain `PAPER_TEX` stock (reads grey and cloudy, about 25 levels darker than cream).
 - Canvas radial gradients blend unpremultiplied: fading `rgba(255,252,240,.16)` to `rgba(0,0,0,0)` leaves grey halos. Fade to the same colour at alpha 0.
+
+## Appending an approved clip untouched
+- Render the new part with the clip's own x264 settings, then join with the concat demuxer and `-c copy`. Verify with `framemd5`: the clip's decoded frames must match the original bit for bit.
+- To hand off seamlessly into a loop, end the new part on the loop's own last frames and last bar of audio. The cut then becomes the loop's own wrap.
+- AAC overshoots transients by about 1.5 dB, so put a soft ceiling around -4 dBFS on composed material before muxing.

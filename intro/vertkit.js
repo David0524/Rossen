@@ -107,6 +107,23 @@ function zoomThrough(c, t, t0, t1, rect0, under, inner) {   // a window grows fr
   if (u < 1) screenSpace(c, () => key(c, rect(x, y, w, h), 8, 4001));
 }
 
+// the approved close-up background (phones, documents, card-heavy scenes): textured cream stock. The palette cream,
+// fine grain, faint paper fibres and soft light mottling; no dots, nothing moves. Call makeCream() once after loadPrintKit().
+let CREAM_TEX = null;
+function makeCream() {
+  const o = document.createElement('canvas'); o.width = OUT_W; o.height = OUT_H; const g = o.getContext('2d'); g.setTransform(OUT_W / W, 0, 0, OUT_H / H, 0, 0);
+  g.fillStyle = CREAM; g.fillRect(0, 0, W, H); const r = rng(9801);   // the palette cream
+  for (let i = 0; i < 60000; i++) { g.fillStyle = r() < .55 ? 'rgba(170,150,110,0.10)' : 'rgba(255,253,245,0.35)'; const z = .8 + r() * 1.6; g.fillRect(r() * W, r() * H, z, z); }   // fine grain
+  for (let i = 0; i < 70; i++) { const x = r() * W, y = r() * H, rad = 120 + r() * 320, gr = g.createRadialGradient(x, y, 0, x, y, rad);   // mottling
+    const dark = r() < .35, rgb = dark ? '190,170,125' : '255,252,240'; gr.addColorStop(0, `rgba(${rgb},${dark ? .05 : .16})`); gr.addColorStop(1, `rgba(${rgb},0)`); g.fillStyle = gr; g.fillRect(x - rad, y - rad, 2 * rad, 2 * rad); }   // each blotch fades to its own colour: a fade to transparent black turns grey
+  g.lineCap = 'round';
+  for (let i = 0; i < 900; i++) { const x = r() * W, y = r() * H, a = r() * TAU, l = 6 + r() * 26, bend = (r() - .5) * 10;   // paper fibres
+    g.strokeStyle = r() < .6 ? 'rgba(150,125,85,0.14)' : 'rgba(255,255,250,0.45)'; g.lineWidth = .8 + r() * .9;
+    g.beginPath(); g.moveTo(x, y); g.quadraticCurveTo(x + Math.cos(a) * l / 2 - Math.sin(a) * bend, y + Math.sin(a) * l / 2 + Math.cos(a) * bend, x + Math.cos(a) * l, y + Math.sin(a) * l); g.stroke(); }
+  CREAM_TEX = o;
+}
+function creamBg(c) { c.save(); resetT(c); c.drawImage(CREAM_TEX, 0, 0, W, H); c.restore(); }
+
 // safe-zone overlay for ?safe=1 check renders (screen space)
 function safeOverlay(c) { c.save(); resetT(c); c.strokeStyle = '#ff00ff'; c.lineWidth = 4; c.strokeRect(CX - 420 * K, SCY - 565 * K, 840 * K, 1130 * K); c.globalAlpha = .15; c.fillStyle = '#ff00ff'; c.fillRect(0, 0, W, 288); c.fillRect(0, 1440, W, 480); c.fillRect(918, 0, 162, H); c.restore(); }
 // the scammer's parts and both logos

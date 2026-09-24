@@ -105,22 +105,6 @@ function ringWaves(c, x, y, t, t0s) { for (const t0 of t0s) { const u = seg(t, t
 function card(c, R, bg = CHIP, seed = 9001) { const { x, y, w, h } = R; shadowRect(c, x, y, w, h); block(c, rrPts(x, y, w, h, 28, 6), BLK, seed, { kw: 6 }); block(c, rrPts(x + 14, y + 14, w - 28, h - 28, 18, 4), bg, seed + 1, { kw: 3 }); }
 const lerpR = (a, b, u) => ({ x: lerp(a.x, b.x, u), y: lerp(a.y, b.y, u), w: lerp(a.w, b.w, u), h: lerp(a.h, b.h, u) });
 function sceneBg(c, col = BLUE, lo = .07, hi = .38) { bgDots(c, col, lo, hi); }
-// the close-ups (the text, the warrant) sit on textured cream stock: the paper, soft mottling and faint fibres, no dots.
-// Static, made once at load in screen space.
-let CREAM_TEX = null;
-function makeCream() {
-  const o = document.createElement('canvas'); o.width = OUT_W; o.height = OUT_H; const g = o.getContext('2d'); g.setTransform(OUT_W / W, 0, 0, OUT_H / H, 0, 0);
-  g.fillStyle = CREAM; g.fillRect(0, 0, W, H); const r = rng(9801);   // the palette cream
-  for (let i = 0; i < 60000; i++) { g.fillStyle = r() < .55 ? 'rgba(170,150,110,0.10)' : 'rgba(255,253,245,0.35)'; const z = .8 + r() * 1.6; g.fillRect(r() * W, r() * H, z, z); }   // fine grain
-  for (let i = 0; i < 70; i++) { const x = r() * W, y = r() * H, rad = 120 + r() * 320, gr = g.createRadialGradient(x, y, 0, x, y, rad);   // mottling
-    const dark = r() < .35, rgb = dark ? '190,170,125' : '255,252,240'; gr.addColorStop(0, `rgba(${rgb},${dark ? .05 : .16})`); gr.addColorStop(1, `rgba(${rgb},0)`); g.fillStyle = gr; g.fillRect(x - rad, y - rad, 2 * rad, 2 * rad); }   // each blotch fades to its own colour: a fade to transparent black turns grey
-  g.lineCap = 'round';
-  for (let i = 0; i < 900; i++) { const x = r() * W, y = r() * H, a = r() * TAU, l = 6 + r() * 26, bend = (r() - .5) * 10;   // paper fibres
-    g.strokeStyle = r() < .6 ? 'rgba(150,125,85,0.14)' : 'rgba(255,255,250,0.45)'; g.lineWidth = .8 + r() * .9;
-    g.beginPath(); g.moveTo(x, y); g.quadraticCurveTo(x + Math.cos(a) * l / 2 - Math.sin(a) * bend, y + Math.sin(a) * l / 2 + Math.cos(a) * bend, x + Math.cos(a) * l, y + Math.sin(a) * l); g.stroke(); }
-  CREAM_TEX = o;
-}
-function creamBg(c) { c.save(); resetT(c); c.drawImage(CREAM_TEX, 0, 0, W, H); c.restore(); }
 function handset(c, x, y, s, col = BLK) {   // a phone-handset glyph
   c.save(); c.translate(x, y); c.scale(s, s); c.rotate(-.6);
   block(c, [[-60, -26], [-30, -26], [-24, -8], [24, -8], [30, -26], [60, -26], [64, 6], [40, 22], [28, 8], [-28, 8], [-40, 22], [-64, 6]], col, 9901, { kw: 0, key: false }); c.restore();
@@ -433,7 +417,7 @@ window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return
     g.drawImage(im, 0, 0); g.globalCompositeOperation = 'source-in'; g.fillStyle = CHIP; g.fillRect(0, 0, o.width, o.height);
     g.globalCompositeOperation = 'source-atop'; g.fillStyle = YEL; g.globalAlpha = .9; g.save(); g.translate(o.width / 2, o.height / 2); g.rotate(-.5); g.fillRect(-o.width, -9, o.width * 2, 18); g.restore();
     IMG.officer_badge_back = o; }
-  makeCream();
+  makeCream();   // vertkit.js
   frame(+(Q.get('frame') || 0));
   window.__ready = true;
 })().catch(e => { console.error(e); window.__error = String(e); });

@@ -1,0 +1,297 @@
+Rossen Reports Friday live tease (25 s) + LIVE TODAY loop (5 s). Every recorded audio file in the mix, with its source and license.
+All are CC0 1.0 (public domain dedication, commercial use allowed, no attribution required). None come from a music library that registers with Content ID.
+
+kenney/casino/card-fan-1.ogg
+    used in: tease
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-fan-2.ogg
+    used in: tease
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-place-1.ogg
+    used in: tease
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-place-2.ogg
+    used in: tease + loop cue
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-slide-2.ogg
+    used in: tease
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-slide-3.ogg
+    used in: tease
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-slide-4.ogg
+    used in: tease
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-slide-5.ogg
+    used in: tease
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/cards-pack-open-1.ogg
+    used in: tease
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactMetal_light_001.ogg
+    used in: tease
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactMetal_light_002.ogg
+    used in: tease
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactPunch_heavy_000.ogg
+    used in: tease
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactSoft_heavy_000.ogg
+    used in: tease
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactSoft_medium_000.ogg
+    used in: tease
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactWood_heavy_000.ogg
+    used in: tease
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/click_002.ogg
+    used in: tease
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/click_003.ogg
+    used in: tease
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/confirmation_001.ogg
+    used in: tease
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/pluck_002.ogg
+    used in: tease
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/scratch_004.ogg
+    used in: tease
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/tick_002.ogg
+    used in: tease
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/bookFlip2.ogg
+    used in: tease
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/bookPlace1.ogg
+    used in: tease
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/cloth3.ogg
+    used in: tease
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/creak1.ogg
+    used in: tease
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/handleCoins.ogg
+    used in: tease
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/metalClick.ogg
+    used in: tease
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/metalLatch.ogg
+    used in: tease
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+vsco/Brass/F Horn/stac/MOHorn_stac_A2_v2_rr1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/stac/MOHorn_stac_D2_v2_rr1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/stac/MOHorn_stac_G1_v2_rr1.wav
+    used in: loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/sus/MOHorn_sus_A2_v1_1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/sus/MOHorn_sus_D2_v1_1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/sus/MOHorn_sus_F2_v1_1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_A#2_v3_rr1.wav
+    used in: loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_D3_v3_rr1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_F2_v3_rr1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_A#3_v3_rr1.wav
+    used in: loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_A4_v3_rr1.wav
+    used in: loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_D4_v3_rr1.wav
+    used in: loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_F4_v3_rr1.wav
+    used in: loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/susvib/Sum_SHTrumpet_susvib_D4_v2_rr1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Glock/glock_medium_C5.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Glock/glock_medium_C6.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Glock/glock_medium_G5.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Glock/glock_medium_G6.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Snare2-rollNS_v5_rr1_Sum.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Tamb1-Hit_v1_rr1_Sum.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Tamb1-Hit_v2_rr1_Sum.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Timpani/Timpani4_Hit_v4_rr1_Sum.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Xylo/Xylo_Medium_C5_ff_01_far.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Xylo/Xylo_Medium_C6_ff_01_far.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Xylo/Xylo_Medium_G5_ff_01_far.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/cymbal-crash1_ff_rr1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/cymbal-crash1_mf_rr1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/susCymb1-cresc-Short_v1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Cello Section/pizzT/pizzT_A2_v2_RR1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Cello Section/pizzT/pizzT_B1_v2_RR1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Cello Section/pizzT/pizzT_D2_v2_RR1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_A#0_v1_rr1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_C1_v1_rr1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_D1_v1_rr1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_F#1_v1_rr1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_G#1_v1_rr1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Violin Section/Spic/VlnEns_Spic_B4_v2_rr1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Violin Section/Spic/VlnEns_Spic_D5_v2_rr1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/bass/bdrum_f_1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/bass/bdrum_ff_1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_f_1.wav
+    used in: tease + loop cue
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_mf_1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_rimshot_f_1.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/Woodwinds/Clarinet/stac/DCClar_stac_A#3_v3_rr1_sum.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Woodwinds/Clarinet/stac/DCClar_stac_F3_v3_rr1_sum.wav
+    used in: tease
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+
+Composed (not recorded files): the whole score. Bars 0-7 are written note by note in score_tease.py on the 96 BPM grid in D (the loop's tempo and key) and played by the VSCO recordings above: the ticking rim pulse and low brass of the new-phone scene, the glockenspiel phone rise and ring trills, the spiccato build, the Scammer's clarinet, the trombone yank, the xylophone run on the padlock bounce. Bars 8-9 and the appended loop are the LIVE TODAY loop cue, also composed in code (score_loop.py). No synthesized tones are used anywhere; every sound effect is a recorded Kenney file.
