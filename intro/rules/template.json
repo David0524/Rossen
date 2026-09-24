@@ -1,0 +1,7 @@
+{
+  "_doc": "JEFF'S RULES series template. Fixed bar counts for the recurring parts; read by rules.js (picture) and score_rules.py (sound), so both always agree. 96 BPM, 2.5 s per bar.",
+  "bpm": 96,
+  "bars": { "title": 2, "rule": 2, "recap": 2, "end": 2 },
+  "ruleLines": 2,
+  "maxSceneBars": 4
+}

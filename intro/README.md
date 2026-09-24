@@ -145,3 +145,18 @@ Stamps and text stay out of the platform UI zones (the top bar, and the bottom c
 ### Puppet neck fix
 
 Both cutters (`tools/cut_casefile_jeff.py`, `tools/cut_scammer.py`) add a hidden copy of the chin and jaw to the torso part, under the head. At rest the head covers it; when the head tilts it fills the slit that used to open along the cut and let the background show through. Measured at the largest tilt the films use: Jeff about 1,100 see-through pixels before, 0 after; the Scammer about 1,700 before, 0 after. Every film was re-rendered.
+
+## Series: JEFF'S RULES (9:16)
+
+A template for one-rule episodes. `rules.js` holds the recurring parts, and each episode is data plus its own middle scenes:
+
+- `rules/template.json`: the fixed bar counts (title 2, rule 2, recap 2, end 2), a 2-line rule, scenes of 1–4 bars. It's read by both `rules.js` (picture) and `score_rules.py` (sound), and `buildTimeline()` throws if an episode breaks it.
+- `rules/epNN.json`: the number, hook, rule, recap line, `ruleAfter` (how many scenes come before the rule reveal), scenes (id, bars, captions `[bar, beat, line1, line2]`, chords per bar) and sound cues `[scene, bar, beat, cue]`.
+- `rules/epNN.js`: the draw functions for that episode's scene ids (`SCENES.id = (c, t, S) => …`, with `S.at(bar, beat)` for scene-relative time).
+- The page sets `window.EPISODE = "rules/epNN"` and loads `rules.js` then `rules/epNN.js`. `?ep=rules/other` swaps the data.
+
+Timeline: TITLE · scenes before the rule · RULE · scenes after · RECAP · END + official logo. Between segments the camera drops to the next one (a 0.3 s vertical push centred on the downbeat), with the same card-slide sound every time. The rule reveal's signature sound is a gavel + timpani + low brass + a high glock note under each of the rule's two stamp strikes (bar 1 beat 3, bar 2 beat 1).
+
+Episode 1, `rossen-rules-ep01.html`, "HANG UP. CALL BACK.", 16 bars = 40 s: title (bars 1–2) · the phone rings, "YOUR BANK", the Scammer on the line, URGENT (3–4) · rule (5–6) · caller ID can be faked, he swaps the name tags (7–8) · hang up, flip your card, call the number on the back, now you know who you're talking to (9–12) · recap: IT'S NOT RUDE. IT'S THE RULE. (13–14) · FOLLOW FOR RULE #2, then the logo, still for the last 1.7 s (15–16). No bank or company names; every number is 1-800-XXX-XXXX style.
+
+Score: `python3 score_rules.py rules/ep01`, then loudnorm (I -16, TP -2), `alimiter=limit=0.7`, mux. The arrangement is voiceover-ready: pizzicato bass, low horns and drums, with no melodic lines in the voice range. `HITS_ONLY=1` writes a hits-only stem for sync checks. Dummy data for a template check is in `rules/demo02.json` (render with `--query ep=rules/demo02`).
