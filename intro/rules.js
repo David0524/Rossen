@@ -90,10 +90,10 @@ function partRule(c, t, S) {   // RULE (2 bars): Jeff steps in, the rule stamps 
 }
 function partRecap(c, t, S) {   // RECAP (2 bars): the rule again, then the line that makes it stick
   bgDots(c, BLUE, .08, .45);
-  indexCard(c, 470, 1180, EP.num, 7220);
-  stampFit(c, EP.rule[0], BLK, 140, SCX, 610, -.04, .95, t, S.at(1), 680, 1.25);
-  stampFit(c, EP.rule[1], BLUE, 140, SCX, 790, .03, .95, t, S.at(1, 1.5), 680, 1.25);
-  EP.recap.forEach((s, i) => chip(c, s, SCX, 970 + i * 110, 70, i ? BLUE : BLK, CHIP, t, S.at(2) + i * E8, i ? .015 : -.015));
+  indexCard(c, 530, 1240, EP.num, 7220);   // tab top at 472, clear of the REMEMBER: chip (bottom 426)
+  stampFit(c, EP.rule[0], BLK, 140, SCX, 670, -.04, .95, t, S.at(1), 680, 1.25);
+  stampFit(c, EP.rule[1], BLUE, 140, SCX, 850, .03, .95, t, S.at(1, 1.5), 680, 1.25);
+  EP.recap.forEach((s, i) => chip(c, s, SCX, 1030 + i * 110, 70, i ? BLUE : BLK, CHIP, t, S.at(2) + i * E8, i ? .015 : -.015));
   chip(c, 'REMEMBER:', SCX, 380, 70, BLK, CHIP, t, S.at(1), -.015);
   const th = easeOutBack(seg(t, S.at(1, 2), S.at(1, 2.4)));
   jeffUp(c, t, S.at(1, 1.5), 140, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: .05 * Math.sin((t - S.t0) * TAU / (2 * BEAT)) }, .56);
