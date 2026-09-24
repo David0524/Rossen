@@ -1,6 +1,6 @@
 """Soundtrack for the Rossen Reports "SCAM OR LEGIT?" quiz (rossen-scam-or-legit.html). Recorded samples only, no synthesis.
 
-Music: an original 58.75 s cue sequenced from VSCO 2 Community Edition / VSCO 1 orchestral and drum samples (CC0), on the
+Music: an original 59 s cue sequenced from VSCO 2 Community Edition / VSCO 1 orchestral and drum samples (CC0), on the
 same 96 BPM grid and instruments as the case-file videos. Foley: Kenney CC0 packs (Interface, Impact, RPG, Casino, and
 two stings from Digital Audio for the right/wrong answer), placed by attack on the frame where its picture lands.
 Each round: a fanfare on SHOW, a ticking clock under the 2-bar countdown, a buzzer or a chime on the reveal, one
@@ -9,7 +9,7 @@ marker swipe per flag, then the takeaway.
 usage: python3 score_quiz.py [samples_dir]  ->  out/rossen-scam-or-legit/score.wav
 """
 import numpy as np, subprocess, wave, sys, os, re, glob, math
-SR = 48000; DUR = 58.75
+SR = 48000; DUR = 59.0
 ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio')
 out = np.zeros((int(SR * DUR), 2), np.float32)
 _cache = {}

@@ -125,18 +125,23 @@ Stamps and text stay out of the platform UI zones (the top bar, and the bottom c
 
 "Zelle" appears only as plain system-font text in the account's payment line. Score: `python3 score_live.py`, then loudnorm (I -16, TP -2) and `alimiter=limit=0.7` (the AAC encode overshoots a little), then mux. Multi-transient foley (coins, card fans) is aligned by its first audible transient (`fx_first`), not its loudest.
 
-## Quiz: "SCAM OR LEGIT?" (9:16, 42.5 s)
+## Quiz: "SCAM OR LEGIT?" (9:16, 59 s)
 
-`rossen-scam-or-legit.html` (script `quiz.js`) is a three-round play-along quiz for TikTok, Reels and Shorts in the approved case-file palette, built on `printkit.js` and `vertkit.js`. 96 BPM; every round is 5 bars: SHOW (1) · PAUSE with an 8-beat countdown (2) · REVEAL, where the SCAM/LEGIT stamp lands on beat 1 and a flag is highlighted and labelled on each following beat (1) · TAKEAWAY (1). The phone never moves while there is something to read; it slides to the next round on the last beat.
+`rossen-scam-or-legit.html` (script `quiz.js`) is a three-round play-along quiz for TikTok, Reels and Shorts in the approved case-file palette, built on `printkit.js` and `vertkit.js`. 96 BPM; every round is 7 bars: SHOW (1; the phone slides in on beat 1) · PAUSE with an 8-beat countdown (2) · REVEAL, where the verdict lands on beat 1 and a flag is highlighted and labelled every two beats (2) · TAKEAWAY (2). The phone never moves while there is something to read.
 
 | bars | round | answer | marked | takeaway |
 |---|---|---|---|---|
-| 1–5 | unpaid toll text | SCAM | PAY TODAY · SMALL FEE · LINK | DON'T CLICK. CHECK YOUR TOLL ACCOUNT YOURSELF. |
-| 6–10 | verification code | LEGIT | YOU ASKED FOR IT · NO LINK · NO REQUEST | NEVER READ A CODE TO ANYONE WHO CALLS. |
-| 11–15 | fraud alert, reply Y/N | SCAM | URGENT · REPLY YES OR NO | DON'T REPLY. CALL THE NUMBER ON YOUR CARD. |
-| 16–17 | HOW MANY DID YOU GET RIGHT?, the answers recap, COMMENT YOUR SCORE: 0, 1, 2 OR 3? (a full bar), then the official logo, still for the last 1.1 s | | | |
+| 1–7 | unpaid toll text | SCAM | PAY TODAY · SMALL FEE · LINK | DON'T CLICK. CHECK YOUR TOLL ACCOUNT YOURSELF. |
+| 8–14 | verification code | LEGIT | YOU ASKED FOR IT · NO LINK · NO REQUEST | NEVER READ A CODE TO ANYONE WHO CALLS. |
+| 15–21 | fraud alert, reply Y/N | SCAM | URGENT · REPLY YES OR NO | DON'T REPLY. CALL THE NUMBER ON YOUR CARD. |
+| 22–24 | HOW MANY DID YOU GET RIGHT?, the answers recap, COMMENT YOUR SCORE: 0, 1, 2 OR 3? (a full bar), then the official logo, still for the last 1.3 s | | | |
 
 - Play-along mechanics: the title *is* the answer pads, [SCAM] OR [LEGIT?], which take turns pulsing through the countdown; the countdown's last beat is a LOCK IT IN! slam (latch sound) and the pads lock; on the reveal the right pad lights up and takes the stamp while the wrong one dims under an X. A three-card scorecard across the top (current round highlighted) flips each card to its answer as it is revealed, and the end card recaps SCAM · LEGIT · SCAM with COMMENT YOUR SCORE: 0, 1, 2 OR 3?
 - Everything is sized up for phones: the quiz page sets `window.VERT_K = 0.895`, so content fills the safe width (x 164–916, still centred and clear of the right 15%), with message text at 48 px on screen. The other vertical films keep 0.857.
 - Flags are marked with a highlighter swiped *under* the words (yellow for scam flags, a pale tint of the logo blue for safe reasons), so no mark ever crosses a letter; each labelled chip pops on the same beat as its highlight. The Scammer appears only in scam reveals: caught in a spotlight beside the phone, then yanked off by a vaudeville hook.
 - Score: `python3 score_quiz.py`, then loudnorm (I -15.2, TP -2), `alimiter=limit=0.63`, mux. Two answer stings come from Kenney's Digital Audio pack (CC0, licence in `audio/kenney/digital/`). `HITS_ONLY=1 python3 score_quiz.py` writes `score_hits.wav` with the groove, rolls, fills and clock muted, for checking each hit's onset against its picture beat without neighbouring sounds.
+
+
+### Puppet neck fix
+
+Both cutters (`tools/cut_casefile_jeff.py`, `tools/cut_scammer.py`) add a hidden copy of the chin and jaw to the torso part, under the head. At rest the head covers it; when the head tilts it fills the slit that used to open along the cut and let the background show through. Measured at the largest tilt the films use: Jeff about 1,100 see-through pixels before, 0 after; the Scammer about 1,700 before, 0 after. Every film was re-rendered.

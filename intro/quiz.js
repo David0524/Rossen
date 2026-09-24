@@ -1,5 +1,5 @@
 'use strict';
-/* Rossen Reports: "SCAM OR LEGIT?" quiz. 58.75 s, 1080x1920 (9:16), 24 fps, one shot. Case-file screen-print look
+/* Rossen Reports: "SCAM OR LEGIT?" quiz. 59 s, 1080x1920 (9:16), 24 fps, one shot. Case-file screen-print look
    (printkit.js, the approved blue/black/cream/yellow inks) with the vertical kit (vertkit.js). 96 BPM, one idea per bar.
    Each round is 7 bars: SHOW (1; the phone slides in on beat 1), PAUSE with a countdown (2), REVEAL: the verdict on
    beat 1 and a flag every two beats (2), TAKEAWAY (2).
@@ -8,10 +8,10 @@
    bars 7-13   round 2  LEGIT  verification code       reasons YOU ASKED FOR IT, NO LINK, NO REQUEST
    bars 14-20  round 3  SCAM   fraud alert, reply Y/N  flags URGENT, REPLY YES OR NO
    bars 21-22  the last phone slides out; HOW MANY DID YOU GET RIGHT?, the answers, COMMENT YOUR SCORE: 0, 1, 2 OR 3?
-   bar 23      the rubber stamp lands on beat 1; the official logo, untouched, still from 57.65 to 58.75
+   bar 23      the rubber stamp lands on beat 1; the official logo, untouched, still from 57.65 to 59
    The phone never moves while there is something to read.
 */
-const DUR = at(23, 3), NFR = Math.round(FPS * DUR);
+const DUR = 59, NFR = Math.round(FPS * DUR);
 const CAPS = [];   // this film draws its own top band
 const END_B = 21, STAMP_T = at(23);
 
