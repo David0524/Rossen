@@ -216,7 +216,7 @@ Score and checks:
 
 ## Friday live tease + LIVE TODAY loop ×2 (9:16, 35 s)
 
-`rossen-tease-friday.html` and `friday-tease.js` make a 25 s one-shot tease: 10 bars at 96 BPM in D, the loop's own tempo and key. The approved 5 s Friday loop (`out/rossen-loop-friday/rossen-loop-friday.mp4`, 10 AM ET) is then appended untouched and played twice, joined by stream copy so its packets are never re-encoded. Each join (tease into loop, loop into loop) is the loop's own seamless wrap.
+`rossen-tease-friday.html` and `friday-tease.js` make a 25 s one-shot tease: 10 bars at 96 BPM in D, the loop's own tempo and key. The approved 5 s Friday loop (`out/rossen-loop-friday/rossen-loop-friday.mp4`, 10 AM ET) has a LIVE ON YOUTUBE variant for this video (`rossen-loop-friday-youtube.html`: `SHOW.extra` in `liveloop.js` adds a yellow chip under the day and moves Jeff down). That variant is appended untouched and played twice, joined by stream copy so its packets are never re-encoded. The standalone Friday loop is unchanged. Each join (tease into loop, loop into loop) is the loop's own seamless wrap.
 
 The film's beats:
 

@@ -258,15 +258,15 @@ function sceneLive(c, t) {
 }
 
 // HANDOFF (bar 9): the loop's own page. Its background is the loop's (same code, same seed); its pieces are cut from the
-// loop's own frames with masks, land on the beats in their exact places, and from PIECE_T[4] + .1 the whole loop frame
+// loop's own frames with masks, land on the beats in their exact places, and from PIECE_T[5] + .1 the whole loop frame
 // is shown, so the last tease frame is loop frame 119 and the next frame is the loop's own frame 0.
 const LOOP_F0 = 60;   // loop frames 60-119 play under bar 9 (loop time = t - 20 s)
-const PIECE_T = [at(9, 1), at(9, 2), at(9, 3), at(9, 3), at(9, 4)];   // logo, LIVE TODAY, the time card + FRIDAY, Jeff: each on a beat (and a whole frame)
+const PIECE_T = [at(9, 1), at(9, 2), at(9, 3), at(9, 3), at(9, 4), at(9, 4)];   // logo, LIVE TODAY, the time card + FRIDAY, LIVE ON YOUTUBE + Jeff: each on a beat (and a whole frame)
 let MASKS = null, PLATE = null; const SCRATCH = layer();   // its own scratch layer: L1/L2 carry the camera pushes
 const loopFrame = t => IMG['loop' + Math.min(119, Math.max(LOOP_F0, Math.round((t - 20) * FPS)))];
 function sceneHandoff(c, t) {
   screenSpace(c, () => {
-    const full = t >= PIECE_T[4] + .1, im = loopFrame(t);
+    const full = t >= PIECE_T[5] + .1, im = loopFrame(t);
     if (full) { c.drawImage(im, 0, 0, W, H); return; }
     c.drawImage(PLATE, 0, 0, W, H);   // the loop's background, finish included
     MASKS.forEach((m, k) => {
@@ -274,7 +274,7 @@ function sceneHandoff(c, t) {
       const g = SCRATCH.getContext('2d'); g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = 'source-over'; g.clearRect(0, 0, SCRATCH.width, SCRATCH.height);
       g.drawImage(im, 0, 0, SCRATCH.width, SCRATCH.height); g.globalCompositeOperation = 'destination-in'; g.drawImage(m.cv, 0, 0, SCRATCH.width, SCRATCH.height); g.globalCompositeOperation = 'source-over';
       const [mx, my] = m.c; let k2 = 1, dy = 0;
-      if (k === 4) dy = (1 - easeOut(land(t, t0))) * 700;   // Jeff rises from below, no overshoot: he never passes over FRIDAY
+      if (m.name === 'jeff') dy = (1 - easeOut(land(t, t0))) * 700;   // Jeff rises from below, no overshoot: he never passes over FRIDAY
       else k2 = t < t0 ? lerp(.8, 1, easeOut(land(t, t0))) : 1 + .02 * Math.exp(-(t - t0) * 12) * Math.cos((t - t0) * 30);   // the rest pop in place, never bigger than the loop's own frame (+2%): nothing travels over another piece
       c.save(); c.translate(mx, my + dy); c.scale(k2, k2); c.translate(-mx, -my); c.drawImage(SCRATCH, 0, 0, W, H); c.restore();
     });
@@ -289,8 +289,8 @@ function drawScene(c, t) {
   if (t < at(3) - PUSH / 2) { sceneNewPhone(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
   else if (t < at(3) + PUSH / 2) pushScenes(c, t, at(3), sceneNewPhone, scenePort, -1);   // the camera follows the phone up
   else if (t < at(6)) { scenePort(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
-  else if (t < at(6) + .45) { zoomThrough(c, t, at(6), at(6) + .45, vaultRect(), g => scenePort(g, at(6) - 1e-3), g => { sceneFix(g, t); contentT(g); captionsTop(g, Math.max(t, at(6) - SLAM)); });
-    contentT(c); printFinish(c); }   // dive into the vault
+  else if (t < at(6) + .45) { zoomThrough(c, t, at(6), at(6) + .45, vaultRect(), g => scenePort(g, at(6) - 1e-3), g => sceneFix(g, t));
+    contentT(c); captionsTop(c, t); printFinish(c); }   // dive into the vault; the caption stays full size on top (never inside the zooming window)
   else if (t < at(7) - PUSH / 2) { sceneFix(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
   else if (t < at(7) + PUSH / 2) pushScenes(c, t, at(7), sceneFix, sceneDeals);
   else if (t < at(8) - PUSH / 2) { sceneDeals(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
@@ -308,9 +308,9 @@ window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return
 (async () => {
   await loadPrintKit(); await loadVertKit(); makeCream();
   const pad = n => String(n).padStart(4, '0');
-  await Promise.all([...Array(60).keys()].map(k => loadImg('loop' + (LOOP_F0 + k), `out/rossen-loop-friday/frames/${pad(LOOP_F0 + k)}.png`)));
+  await Promise.all([...Array(60).keys()].map(k => loadImg('loop' + (LOOP_F0 + k), `out/rossen-loop-friday-youtube/frames/${pad(LOOP_F0 + k)}.png`)));
   if (!Q.has('plate')) { const M = await (await fetch('assets/tease/loop_masks.json')).json();
-  MASKS = await Promise.all(M.pieces.map(async (p, k) => { await loadImg('mask' + k, `assets/tease/${p.file}`); const cv = document.createElement('canvas'); cv.width = OUT_W; cv.height = OUT_H; cv.getContext('2d').drawImage(IMG['mask' + k], 0, 0, OUT_W, OUT_H); return { cv, c: p.centre }; })); }
+  MASKS = await Promise.all(M.pieces.map(async (p, k) => { await loadImg('mask' + k, `assets/tease/${p.file}`); const cv = document.createElement('canvas'); cv.width = OUT_W; cv.height = OUT_H; cv.getContext('2d').drawImage(IMG['mask' + k], 0, 0, OUT_W, OUT_H); return { cv, c: p.centre, name: p.name }; })); }
   PLATE = document.createElement('canvas'); PLATE.width = OUT_W; PLATE.height = OUT_H; { const g = PLATE.getContext('2d'); g.setTransform(OUT_W / W, 0, 0, OUT_H / H, 0, 0); bgDots(g, BLUE, .12, .55); printFinish(g); }
   frame(+(Q.get('frame') || 0));
   window.__ready = true;

@@ -1,7 +1,8 @@
 'use strict';
 /* LIVE TODAY loops: the approved LIVE TODAY card as a seamless 5 s loop (2 bars at 96 BPM) for Reels and Stories.
    Same card as the promo's end frame, scaled up to fill the safe area. Every motion is periodic in the loop length,
-   so the last frame flows straight back into the first. A page sets window.SHOW = { time, day } (default 5PM ET, WEDNESDAY).
+   so the last frame flows straight back into the first. A page sets window.SHOW = { time, day } (default 5PM ET, WEDNESDAY), and optionally
+   extra: a yellow chip under the day (e.g. 'LIVE ON YOUTUBE'); Jeff then stands a little lower. Without it the loop is unchanged.
    beat 1 and 3: LIVE TODAY and the time card pulse; beats 2 and 4: the day chip; once a bar: a signal ring behind the
    card; Jeff waves on every beat; the logo sticker rocks once per loop. */
 const SHOW = Object.assign({ time: '5PM ET', day: 'WEDNESDAY' }, window.SHOW || {});
@@ -42,9 +43,15 @@ function scene(c, t) {
   c.font = '72px Stamp'; const w = c.measureText(SHOW.day).width + 70;
   c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-w / 2 + 9, -52, w, 108); c.restore(); ink(c, rect(-w / 2, -56, w, 108), BLK, 5601, { amp: 3 });
   inkText(c, SHOW.day, 0, 4, 72, 'Stamp', CHIP, 780); c.restore();
+  if (SHOW.extra) {   // the extra chip pulses with the day chip, on 2 and 4
+    c.save(); c.translate(SCX, 1310); c.rotate(.012); c.scale(1 + .06 * p24, 1 + .06 * p24);
+    c.font = '64px Stamp'; const w2 = Math.min(c.measureText(SHOW.extra).width, 700) + 70;
+    c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-w2 / 2 + 9, -46, w2, 96); c.restore(); block(c, rect(-w2 / 2, -50, w2, 96), YEL, 5602, { kw: 5 });
+    inkText(c, SHOW.extra, 0, 4, 64, 'Stamp', BLK, 700); c.restore();
+  }
   // Jeff waves on every beat
   const wave = Math.sin(t * TAU / BEAT) * .22;
-  jeff(c, SCX, 1930, .78, { armR: -2.35 + wave, head: .05 * Math.sin(t * TAU_L * 2), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 8 });
+  jeff(c, SCX, SHOW.extra ? 2050 : 1930, .78, { armR: -2.35 + wave, head: .05 * Math.sin(t * TAU_L * 2), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 8 });
 }
 function drawScene(c, t) { contentT(c); scene(c, t); printFinish(c); if (SHOW_SAFE) safeOverlay(c); }
 

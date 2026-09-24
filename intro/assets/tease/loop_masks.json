@@ -28,16 +28,24 @@
    "name": "day",
    "file": "loop_mask_day.png",
    "centre": [
-    560.783236196568,
-    1156.5
+    554.0482286527092,
+    1153.5
+   ]
+  },
+  {
+   "name": "youtube",
+   "file": "loop_mask_youtube.png",
+   "centre": [
+    541.9518127473664,
+    1260.5
    ]
   },
   {
    "name": "jeff",
    "file": "loop_mask_jeff.png",
    "centre": [
-    541.082319704936,
-    1531.5
+    542.44628023479,
+    1618.5
    ]
   }
  ]

@@ -8,7 +8,7 @@ cd "$(dirname "$0")/.."
 O=out/rossen-tease-friday
 node render.mjs --html rossen-tease-friday.html --all > /dev/null
 python3 score_tease.py
-ffmpeg -v error -y -i out/rossen-loop-friday/rossen-loop-friday.mp4 -an -c:v copy $O/loop_v.mp4
+ffmpeg -v error -y -i out/rossen-loop-friday-youtube/rossen-loop-friday-youtube.mp4 -an -c:v copy $O/loop_v.mp4
 printf "file 'video.mp4'\nfile 'loop_v.mp4'\nfile 'loop_v.mp4'\n" > $O/concat.txt
 ffmpeg -v error -y -f concat -safe 0 -i $O/concat.txt -c copy $O/video_full.mp4
 ffmpeg -v error -y -i $O/video_full.mp4 -i $O/full_audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest $O/rossen-tease-friday.mp4
