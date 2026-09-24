@@ -186,6 +186,34 @@ Episode 1, `rossen-wwyd-ep01.html`, the grandparent scam, 18 bars = 45 s. The ch
 
 Score: `python3 score_wwyd.py wwyd/ep01`, then loudnorm (I -16, TP -2), `alimiter=limit=0.7`, mux. It writes `samples_used.txt` and `audio_sources.txt` (every recorded file with its source URL and licence, plus what is composed).
 
+## Explainer: the fake officer / jury-duty warrant scam (9:16, 52 s)
+
+`rossen-officer-scam.html` + `officer.js`: 20 bars at 96 BPM plus the official logo, in the MyChart explainer's style. It uses printkit.js, vertkit.js, Jeff, both logos and the approved palette unchanged (VERT_K 0.895).
+
+- **Hook:** the phone rings in frame 0 with the caller ID SHERIFF'S OFFICE.
+- **Why it feels real:** he knows the man's name and address, and gives a badge number and a case number. The real caller ID reads UNKNOWN NUMBER until a SHERIFF'S OFFICE sticker pops out of the Scammer's phone and is slapped over it.
+- **It gets crazier:** a text arrives with a fake warrant (AMOUNT DUE: $1,700, nonsense fine print). The demands then stack up: gift cards, a payment app, crypto, a wire transfer, then BRING CASH. I'LL MEET YOU.
+- **The tells:** the screen-print logo slams down and Jeff's magnifier busts three lies. Each lie breaks the disguise further: the cap slips over his eyes, the homemade badge drops face-down, then the cap flies off.
+- **The fix:** hang up, look up the court's number yourself, call it, and report at ReportFraud.ftc.gov.
+- **Sign-off:** HANG UP. CALL THE COURT YOURSELF., then the rubber stamp and the logo.
+
+Puppets: `tools/cut_officer.py` cuts the officer Scammer (head, separate cap, separate badge, torso, phone arm, legs) and the man (head, torso, phone arm, legs) into `assets/officer/`. Hidden underlays keep a tilt or a lost piece from opening a hole:
+
+- a chin and the cheeks behind the handset and collar
+- a sleeve at the elbow
+- the coat under the badge
+- a head dome under the cap
+
+The phone and warrant scenes sit on a static scrapbook page: torn ruled and grid paper scraps held down with masking tape.
+
+Every name and number is an obvious placeholder: JOHN DOE, 123 ANY STREET, BADGE #000-00, CASE NO. 00-0000 and 1-555-XXX-XXXX. There are no real courts, counties, agencies, officers, badges or seals. The only real address is ReportFraud.ftc.gov.
+
+Score and checks:
+
+1. `python3 score_officer.py` writes `score.wav`, `hits.json`, `samples_used.txt` and `audio_sources.txt`. The mood moves from tense and official (D minor, a snare march) through a layer-by-layer build to confident D major when Jeff enters.
+2. Run loudnorm (I -16, TP -2), then `alimiter=limit=0.7`, then mux.
+3. For sync, run `HITS_ONLY=1 python3 score_officer.py`, then `python3 tools/sync_check.py out/rossen-officer-scam/score_hits.wav out/rossen-officer-scam/hits.json`. Every synced hit sits on a whole frame.
+
 ## LIVE TODAY loops (9:16, 5 s)
 
 `rossen-loop-wednesday.html` and `rossen-loop-friday.html` (script `liveloop.js`) turn the LIVE TODAY card into seamless 5 s loops (2 bars at 96 BPM) for Reels and Stories. The card is scaled up to the full safe width, and every motion is periodic in the loop length:

@@ -176,3 +176,10 @@ Most of these came from a bug, a failed render, or a correction from the client.
 | `render.mjs` | `--html`, `--only`, `--grid`, `--all`, `--query` |
 | `tools/cut_casefile_jeff.py`, `tools/cut_scammer.py` | Cut reference art into puppet parts with pivots |
 | `score_casefile.py`, `score_mychart.py`, `tools/vo_bed.sh` | Sample-based scores on the bar grid; VO bed and stems |
+
+## Fake officer explainer
+- In a push between scenes, draw each scene's caption inside its own layer (the old caption frozen, the new one landing). A caption drawn on top of both layers lands on the old scene's content for the 0.15 s before the downbeat.
+- A slam-in logo must clear the captions at its largest landing scale, not just at rest (720 x 502 at y 880, landing from 1.15x).
+- At 24 fps an eighth-note hit falls between two frames (7.5 frames), about 21 ms from either. Put synced hits on beats (15 frames), and check with `tools/sync_check.py`, which also reports the mp4's container offset.
+- Puppet pieces that come off (a cap, a badge) need hidden fills under them, not only under joints: here a head dome tiled from the costume's own black, and the coat copied from just below the badge.
+- Dense black-on-cream dot backgrounds read as hypnotic. Use a static scrapbook page (torn ruled and grid scraps, masking tape) for close-ups.

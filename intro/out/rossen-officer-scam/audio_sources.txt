@@ -1,0 +1,245 @@
+Rossen Reports explainer: the fake officer / jury-duty warrant scam. Every recorded audio file in the mix, with its source and license.
+All are CC0 1.0 (public domain dedication, commercial use allowed, no attribution required). None come from a music library that registers with Content ID.
+
+kenney/casino/card-fan-1.ogg
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-place-1.ogg
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-place-2.ogg
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-slide-1.ogg
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-slide-2.ogg
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-slide-3.ogg
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/chips-stack-1.ogg
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/chips-stack-2.ogg
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactMetal_light_001.ogg
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactMetal_light_002.ogg
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactPlank_medium_000.ogg
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactPunch_heavy_000.ogg
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactSoft_heavy_000.ogg
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactWood_heavy_000.ogg
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/click_001.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/click_002.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/click_003.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/close_001.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/confirmation_001.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/confirmation_002.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/drop_001.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/pluck_001.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/pluck_002.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/scratch_004.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/tick_002.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/interface/toggle_001.ogg
+    source: https://kenney.nl/assets/interface-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/bookPlace1.ogg
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/cloth1.ogg
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/cloth2.ogg
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/cloth3.ogg
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/cloth4.ogg
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/rpg/handleCoins.ogg
+    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+vsco/Brass/F Horn/stac/MOHorn_stac_A2_v2_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/stac/MOHorn_stac_D2_v2_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/sus/MOHorn_sus_A2_v1_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/sus/MOHorn_sus_D2_v1_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/sus/MOHorn_sus_F2_v1_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_A#2_v3_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_D3_v3_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_F2_v3_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Tenor Trombone/sus/tenortbn_sus_A#1_v2_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Tenor Trombone/sus/tenortbn_sus_D2_v2_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_A4_v3_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_D4_v3_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_F4_v3_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/susvib/Sum_SHTrumpet_susvib_D4_v2_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Glock/glock_medium_C6.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Glock/glock_medium_G6.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Snare2-rollNS_v5_rr1_Sum.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Tamb1-Hit_v1_rr1_Sum.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Tamb1-Hit_v2_rr1_Sum.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Timpani/Rolls/Timpani4_Roll_v5_rr1_Sum.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Timpani/Timpani4_Hit_v4_rr1_Sum.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Xylo/Xylo_Medium_C5_ff_01_far.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Xylo/Xylo_Medium_C6_ff_01_far.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/Xylo/Xylo_Medium_G5_ff_01_far.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/cymbal-crash1_ff_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/cymbal-crash1_mf_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Percussion/susCymb1-cresc-Short_v1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Cello Section/pizzT/pizzT_A2_v2_RR1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Cello Section/pizzT/pizzT_B1_v2_RR1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Cello Section/pizzT/pizzT_D2_v2_RR1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_A#0_v1_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_C1_v1_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_D1_v1_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_E1_v1_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_F#1_v1_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_G#1_v1_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Viola Section/spic/Violas_spic_E4_v2_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Violin Section/Spic/VlnEns_Spic_B4_v2_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Strings/Violin Section/Spic/VlnEns_Spic_D5_v2_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/bass/bdrum_f_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/bass/bdrum_ff_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_f_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_mf_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/snare/drum2/snare2_rimshot_f_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/tenor/tenor_higher/tenorH_ff_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/VSCO 1 Percussion/drums/tenor/tenor_lower/tenor_ff_1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition, VSCO 1 drums folder)
+    license: CC0 1.0
+vsco/Woodwinds/Clarinet/stac/DCClar_stac_A#3_v3_rr1_sum.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Woodwinds/Clarinet/stac/DCClar_stac_F3_v3_rr1_sum.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+
+Composed (not recorded files): the whole score, written note by note in score_officer.py on the 96 BPM grid and played by the VSCO instrument recordings above: the snare march and ruffs of the call, the phone-ring trills (glockenspiel), the climbing brass stab on each new demand, the Scammer's clarinet sneak, the sagging trombone when the cap slips, the xylophone run when it flies off, the LIE stings, the ringback trills and the final chord. No synthesized tones are used anywhere; every sound effect is a recorded Kenney file.
