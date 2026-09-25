@@ -11,6 +11,51 @@ Most of these came from a bug, a failed render, or a correction from the client.
 
 ---
 
+## 0. Standing client direction (read this first, applies to every new video)
+
+### Text must be easy to read
+Viewer feedback: the text was hard to read because of motion, speed and everything being "fun": tilted cards, bouncing, wobbling and swinging. Readability now beats playfulness for any text a viewer has to read.
+
+- **Readable text sits straight.** Captions, cards, labels and anything with a sentence on it use rotation 0.
+  - Tilt is only for short decorative stamps of one or two words (LIE #1, FAKE!), at most ±0.03 rad.
+  - Never tilt and move a piece of text at the same time.
+- **Text lands, then holds still.** When a caption or card has landed, nothing about it moves: no bob, sway, swing, beat pulse, shake or drifting camera under it.
+  - Let the pictures around it carry the energy: Jeff, the Scammer, props.
+  - A swinging price tag must settle within about 0.3 s, or not swing at all.
+- **Gentle landings.** Readable text pops in from 1.05× at most (not 1.1–1.3×), overshoots by 2% or less, and is still within about 0.2 s. A short slide or a straight cut also works. It still arrives on the beat (`SLAM`).
+- **One thing to read at a time.** While a caption is landing, no other text on screen is moving. Have at most two text groups on screen at once: the caption plus one prop label.
+- **Don't let text get squeezed.** If `fitText` would shrink a line below about 85% of its natural width, rewrite the line or split it across two or three lines instead.
+  - Example: "AN ETHICAL HACKER / SHOWS YOU HOW / TO STOP IT".
+- **Stay high contrast, on a plain chip.** Use cream on black, black on yellow, or cream on blue. Never put text straight onto halftone dots, pattern or motion.
+- **Give reading time.** Every caption holds for its full bar (2.5 s at 96 BPM), with about 5 words per line at most. If an idea needs more words, give it two bars; don't speed up.
+- **Check it.** For each caption, grab the frame about 0.3 s after it lands and view it at half size, which is roughly a phone at arm's length. If you have to squint, fix it.
+- **In code, for new films:** the shared defaults were written for the "fun" look. Override them rather than changing the kits, so the approved videos render unchanged.
+  - The `vertkit.js` captions (tilt ±0.012, pop from 1.3) and the per-film `chip()` helpers (tilt, from 1.1, 6% wobble): pass rotation 0 and a landing of 1.05 or less, and drop the wobble.
+  - `stampLand` from 1.55, and the tilted `stampFit` calls: fine for one-word decorative stamps only.
+  - The loops' beat pulse (4.5–6% scale on LIVE TODAY, the time card and the day chip) is approved as is. Don't retrofit approved videos unless asked.
+
+### Transitions: more creative and interactive, but not every time
+- **Budget:** in a 30–60 s piece, plan 2–3 signature transitions. The rest are simple pushes or clean cuts on the downbeat. Never put two signature transitions back to back.
+- **"Interactive"** means the transition is an action the viewer can follow, done by a character or a prop. Examples:
+  - Jeff rips the scene away like a page, flicks it, or pulls it off like a sticker.
+  - A fishing hook yanks the scene out of frame.
+  - The Scammer pulls a thread and the camera follows it to the next scene.
+  - A tap on a button, or on a phone screen, dives into what it opens.
+  - A magnifier lens widens until it becomes the next scene.
+  - A door, vault or folder opens onto the next scene.
+  - A card flips over to reveal the next scene on its back.
+  - A camera flash freezes the frame into a Polaroid.
+  - A rubber stamp slams down and covers the frame.
+  - A zipper or tear strip opens the frame.
+- **Where they go:** on story turns (hook to escalation, scam to Jeff's fix, fix to sign-off), not in the middle of an idea.
+- **Rules for every transition:**
+  - It lands on a downbeat and takes 0.5 s or less.
+  - It never covers, distorts or shrinks a caption. The caption is readable just before and just after.
+  - Never draw a caption inside a zooming window (the 0:15 bug in the Friday tease).
+- **Plan them up front.** Label each transition in the timeline comment at the top of the film (for example `[SIGNATURE: hook yanks the phone]` or `[push]`) so they can be reviewed before rendering.
+
+---
+
 ## 1. Before building anything
 
 - **Check the brief against the assets.** A brief can contradict its own files. One asked to "match the red to the official logo", but the logo contains no red. Another asked for a red-accented palette when both logos were blue and yellow. Sample the logo's actual pixel colours before choosing inks. If there's a conflict, flag it and ask; don't guess. The client's answer was "use the logo's blue as the main ink". Once decided, that palette carries forward to later jobs, so reuse it and say so.
@@ -63,9 +108,9 @@ Most of these came from a bug, a failed render, or a correction from the client.
 - **Keep the accent small.** Too much yellow looked cheap. Use it for small highlights only (roughly 10% of the frame or less).
 - **Stamps and word labels must be fully opaque.** A semi-transparent stamp let content show through and got flagged. On a same-coloured background, add an offset black drop shadow.
 - **Shared helpers can hide off-palette colour.** An old kit function sprayed red ink spatter on every stamp. Audit every colour a shared helper draws.
-- **Legibility beats decoration.** Never put particles or confetti over text or logos. For text on busy backgrounds, use black paper chips with cream text.
+- **Legibility beats decoration.** Never put particles or confetti over text or logos. For text on busy backgrounds, use black paper chips with cream text. See section 0: readable text sits straight and holds still.
 - **Phone-readable sizes on a 1080-px-wide frame:** captions about 70–76 px, labels 44 px or more, small print 30 px minimum. Keep each caption to about 16 characters per line, two lines, ALL CAPS. `fitText` shrinks text to fit its box instead of letting it overflow the card.
-- **Transitions should come from props:**
+- **Transitions should come from props.** Section 0 sets how many and where (2–3 signature transitions per piece, on story turns). Props that worked:
   - a folder cover flipping open
   - zooming through a magnifier lens
   - clicking a button and zooming through it
