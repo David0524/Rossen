@@ -243,3 +243,19 @@ The textured-cream background (`makeCream` / `creamBg`) now lives in `vertkit.js
 - the logo sticker rocks once per loop
 
 A page sets `window.SHOW = { time, day, extra }`, and the time card always keeps the approved 5PM card's size. Both loops now carry `extra: "LIVE ON YOUTUBE"`: a yellow chip under the day that pulses with it, with Jeff standing a little lower. That's the same design as the Friday tease's ending page; the Friday loop is frame-for-frame the one the tease uses. Audio: `python3 score_loop.py` renders three cycles and keeps the middle one, so every tail wraps into the start. It's gained to -16 LUFS and muxed.
+
+## Closing card on every short
+
+Every short (not the teases or the LIVE TODAY loops) ends on `liveEndCard()` in `vertkit.js`. It has three levels: the official logo (largest), then WED 5 PM ET / FRI 10 AM ET, then a small LIVE ON line with the YouTube and Instagram icons (`assets/social/`, cleaned by `tools/clean_social_icons.py`).
+
+The rubber stamp lifts to reveal it, and it then holds still for about 4 s under a soft held D-major chord.
+
+Applied to:
+- MyChart (47 s)
+- Scam or Legit (61.5 s)
+- Jeff's Rules 1 and 2 (42.5 s each)
+- What Would You Do? 1 (47.5 s)
+- the fake officer explainer (54.5 s)
+
+Rebuild them all with `tools/build_shorts.sh`.
+

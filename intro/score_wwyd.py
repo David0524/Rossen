@@ -172,7 +172,7 @@ TONES = {'Dm': ('D5', 'F5', 'A5'), 'D': ('D5', 'F#5', 'A5'), 'Bb': ('D5', 'F5', 
 SEG = {s['id']: s for s in SEGS}
 def SA(seg, bar=1, beat=1): return AT(seg['b0'] + bar - 1, beat)
 REVEAL_CH = {'WRONG': ['Dm Dm Bb A', 'Dm Dm Bb A'], 'CLOSE': ['Bb Bb A A', 'Gm Gm A A'], 'RIGHT': ['D D G A', 'D D G D']}
-TCH = {'title': ['Dm Dm Bb A', 'Dm Dm Bb A'], 'takeaway': ['G G A A', 'D D G A'], 'end': ['D D G A', 'D D D D']}
+TCH = {'title': ['Dm Dm Bb A', 'Dm Dm Bb A'], 'takeaway': ['G G A A', 'D D G A'], 'end': ['D D G A', 'D D D D', 'D D D D']}   # the third end bar sits under the closing card (nothing plays past the stamp)
 rows, mood = {}, {}
 for s in SEGS:
     if s['kind'] in ('freeze', 'pause'): continue          # the music stops for the freeze and the pause

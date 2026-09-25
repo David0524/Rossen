@@ -171,7 +171,7 @@ PAD = {'Dm': ('D2', 'A2'), 'D': ('D2', 'A2'), 'Bb': ('Bb1', 'F2'), 'Gm': ('G1', 
 SEG = {s['id']: s for s in SEGS}
 def SA(seg, bar=1, beat=1): return AT(seg['b0'] + bar - 1, beat)
 # template chords (fixed); episode chords from the data
-TCH = {'title': ['D D G G', 'Bm Bm A A'], 'rule': ['G G A A', 'D D D D'], 'recap': ['G G A A', 'D D G A'], 'end': ['D D G A', 'D D D D']}
+TCH = {'title': ['D D G G', 'Bm Bm A A'], 'rule': ['G G A A', 'D D D D'], 'recap': ['G G A A', 'D D G A'], 'end': ['D D G A', 'D D D D', 'D D D D']}   # the third end bar sits under the closing card (nothing plays past the stamp)
 rows = {}
 for s in SEGS:
     ch = TCH.get(s['kind']) or next(x for x in EP['scenes'] if x['id'] == s['id']).get('chords') or ['D D G A'] * s['bars']
