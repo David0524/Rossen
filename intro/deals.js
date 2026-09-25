@@ -281,7 +281,8 @@ function drawScene(c, t) {
   if (SHOW_SAFE) safeOverlay(c);
 }
 
-// ================= runtime =================
+// ================= runtime (skipped when another film loads deals.js as a library: window.DEALS_LIB) =================
+if (!window.DEALS_LIB) {
 const CV = document.getElementById('c'); CV.width = OUT_W; CV.height = OUT_H; const CTX = CV.getContext('2d');
 function frame(i) { const t = Math.min(i / FPS, DUR - 1e-6); FILM_T = t; resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, t); resetT(CTX); }
 window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
@@ -296,3 +297,4 @@ window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image
   frame(+(Q.get('frame') || 0));
   window.__ready = true;
 })().catch(e => { console.error(e); window.__error = String(e); });
+}

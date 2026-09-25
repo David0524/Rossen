@@ -3,6 +3,7 @@
 #   edit deals/deals.json (the price-check time, prices, names, codes), then run:  sh tools/build_deals.sh
 # Renders the Facebook and Instagram versions (only the CTA differs), scores once (the timing is shared), sets loudness,
 # muxes, and makes a CRF 21 preview of each. Output: out/rossen-deals-still-live-<platform>/rossen-deals-still-live-<platform>.mp4
+# Then builds the Story frames (tools/build_stories.sh): out/rossen-deals-stories/story_<n>_<name>.mp4 / .png
 set -e
 cd "$(dirname "$0")/.."
 if grep -q '{{time}}' deals/deals.json; then echo "WARNING: deals.json still has the {{time}} placeholder for the price check"; fi
@@ -18,3 +19,4 @@ for P in facebook instagram; do
   rm -rf $O/frames
   echo built $O/rossen-deals-still-live-$P.mp4 $O/preview_crf21.mp4
 done
+sh tools/build_stories.sh

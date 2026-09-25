@@ -292,8 +292,22 @@ To update and rebuild both versions, edit `deals/deals.json` (for example, repla
     sh tools/build_deals.sh
     python3 tools/verify_deals.py out/rossen-deals-still-live-facebook/rossen-deals-still-live-facebook.mp4 facebook
     python3 tools/verify_deals.py out/rossen-deals-still-live-instagram/rossen-deals-still-live-instagram.mp4 instagram
+    python3 tools/verify_stories.py
 
 `build_deals.sh` scores once (`score_deals.py` reads the same deals.json, so the music always fits), sets the loudness (I -16, TP -2, `alimiter=limit=0.7`), renders and muxes both versions, and writes a CRF 21 preview of each. `verify_deals.py` checks the mp4 itself:
 - It OCRs every name, price, the price note, the disclosure, the credit and the CTA.
 - It matches each percent sticker against every value from 0% to 99%.
 - It checks the regular-price strike, the equal deal lengths, the full-bar stillness of the fine print, the still last second, and the logo colours against the file.
+
+### Story frames (Instagram / Facebook Stories)
+
+`rossen-deals-stories.html`, built from `stories.js`, which loads `deals.js` as a library so the deal cards are drawn by exactly the same code as the Reel. There is one slide per deal, then a last page whose lines (`storyEnd`) and platform icons (`storyPlatforms`) come from `deals/deals.json`.
+
+Each slide is a 5 s loop and ships as an mp4 plus a PNG still (the still is the slide's first frame):
+- **Still:** the photo, the prices, all the type and the fine print never move.
+- **Moving, on the beat:** only the yellow arrow, which nudges into the link-sticker outline, and a small bob from Jeff.
+- **Link sticker outline:** a dashed slot, empty inside. When posting, add the link sticker in the app and drop it into the slot.
+- **Fine print:** every slide carries the affiliate disclosure and the price check in small type under the tag.
+- **Safe zone:** the top 250 px (progress bar, profile) and the bottom 240 px (reply bar) stay clear.
+
+`sh tools/build_deals.sh` also rebuilds the Stories. Run `python3 tools/verify_stories.py` to check them.

@@ -7,6 +7,8 @@
   },
   "credit": "DEALS FROM DEALSEEK.COM",
   "disclosure": "AFFILIATE LINKS: JEFF ROSSEN AND DEALSEEK MAY EARN A COMMISSION.",
+  "storyEnd": ["TUNE IN NEXT FRIDAY", "AT 10 AM ET", "FOR MORE DEALS"],
+  "storyPlatforms": ["instagram", "facebook", "youtube"],
   "deals": [
     { "name": "VIBRATION PLATE EXERCISE MACHINE", "regular": "169.90", "deal": "39.90", "code": null, "image": "assets/deals/01_vibration_plate.png" },
     { "name": "SOLAR SECURITY CAMERA",            "regular": "79.99",  "deal": "39.99", "code": null, "image": "assets/deals/02_solar_camera.png" },
