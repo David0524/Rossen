@@ -307,7 +307,7 @@ Each slide is a 5 s loop and ships as an mp4 plus a PNG still (the still is the 
 - **Still:** the photo, the prices, all the type and the fine print never move.
 - **Moving, on the beat:** only the yellow arrow, which nudges into the link-sticker outline, and a small bob from Jeff.
 - **Link sticker outline:** a dashed slot, empty inside. When posting, add the link sticker in the app and drop it into the slot.
-- **Fine print:** every slide carries the affiliate disclosure and the price check in small type under the tag.
+- **Fine print:** every slide carries the affiliate disclosure in small type under the tag.
 - **Safe zone:** the top 250 px (progress bar, profile) and the bottom 240 px (reply bar) stay clear.
 
 `sh tools/build_deals.sh` also rebuilds the Stories. Run `python3 tools/verify_stories.py` to check them.

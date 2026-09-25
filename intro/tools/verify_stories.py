@@ -1,7 +1,7 @@
 """Verify the "STILL LIVE" Story frames (out/rossen-deals-stories) against deals/deals.json.
 usage: python3 tools/verify_stories.py
 Per deal slide (OCR on the lossless PNG still): the name, the regular price, the deal price, the percent off (matched against
-every value from 0% to 99% in the same font), the strike through the regular price, and the fine print. Per mp4: 5 s at 24 fps,
+every value from 0% to 99% in the same font), the strike through the regular price, and the fine print (the disclosure only). Per mp4: 5 s at 24 fps,
 1080x1920; the card (photo, prices, type, fine print) completely still in every frame; the loop seamless (the last frame
 leads back into the first like any other pair); the link-sticker slot empty inside. The last page: its lines and the icons."""
 import json, subprocess, os, re, glob
@@ -94,8 +94,8 @@ for s, mp4 in enumerate(files):
         got = [ocr_any(w, f, (60, round(y0 + i * 100 - 52), 1020, round(y0 + i * 100 + 52)), 'inkblue') for i, w in enumerate(want)]
         report(got == want, f'{tag} lines: read {got}')
         fy = round(y0 + len(want) * 100 + 40 + 90)
-    fl = [ocr_any(norm(x), f, (40, fy + i * 30 - 16, 1040, fy + i * 30 + 16), 'dark', psm=7) for i, x in enumerate([DJ['disclosure'], fine2])]
-    report(fl == [norm(DJ['disclosure']), norm(fine2)], f'{tag} fine print: read {fl}')
+    fl = ocr_any(norm(DJ['disclosure']), f, (40, fy - 16, 1040, fy + 16), 'dark', psm=7); report(fl == norm(DJ['disclosure']), f'{tag} fine print: read {fl!r}')
+    if s < N: below = f[fy + 18:fy + 60, 40:1040].astype(int); report((below.max(-1) < 110).mean() == 0, f'{tag}: nothing printed under the disclosure (no price-check line)')
     if s < N:
         x0, y0, x1, y1 = SLOT; inner = f[y0 + 14:y1 - 14, x0 + 50:x1 - 50].astype(int)
         report((np.maximum(np.maximum(inner[..., 0], inner[..., 1]), inner[..., 2]) < 150).mean() == 0, f'{tag}: the link-sticker slot is empty inside (nothing for the sticker to cover)')

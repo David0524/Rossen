@@ -10,7 +10,7 @@
    Stories layout (not the Reel's): the top 250 px (progress bar, profile) and the bottom 240 px (reply bar) stay clear of
    anything that matters; the sides keep 64 px. The deal card is the Reel's layout at full size (no K shrink).
      card        the Reel's deal layout, y 270-1340
-     fine print  two small lines under the tag: the affiliate disclosure and the price check
+     fine print  one small line under the tag: the affiliate disclosure
      link slot   a dashed outline where the link sticker goes (added in the app), with the arrow pointing into it
      Jeff        bottom right, pointing at the slot (deal slides) / thumbs up (last page) */
 window.DEALS_LIB = true;
@@ -22,9 +22,7 @@ const SLOT = { x: 110, y: 1452, w: 620, h: 140 };
 const FINE_Y = 1374, FINE_SIZE = 22, FINE = `bold ${FINE_SIZE}px "Liberation Sans"`;
 
 function finePrint(c, y = FINE_Y) {   // small and tucked away, but level and legible
-  const pc = DJ.priceCheck;
-  const l1 = up(DJ.disclosure), l2 = `PRICES AS OF ${up(pc.date)}, ${up(pc.time)} ET. DEALS CAN END ANYTIME.`;
-  [l1, l2].forEach((s, i) => { c.font = FINE; const w = c.measureText(s).width, sz = w > 930 ? Math.floor(FINE_SIZE * 930 / w) : FINE_SIZE; text(c, s, CX, y + i * 30, `bold ${sz}px "Liberation Sans"`, BLK); });
+  [up(DJ.disclosure)].forEach((s, i) => { c.font = FINE; const w = c.measureText(s).width, sz = w > 930 ? Math.floor(FINE_SIZE * 930 / w) : FINE_SIZE; text(c, s, CX, y + i * 30, `bold ${sz}px "Liberation Sans"`, BLK); });
 }
 function linkSlot(c) {   // the outline for the link sticker: dashed, empty inside, so the sticker sits in it
   const { x, y, w, h } = SLOT;
