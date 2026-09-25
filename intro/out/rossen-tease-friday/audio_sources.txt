@@ -1,4 +1,4 @@
-Rossen Reports Friday live tease (25 s) + the LIVE TODAY loop played twice (10 s). Every recorded audio file in the mix, with its source and license.
+Rossen Reports Friday live tease (30 s) + the LIVE TODAY loop played twice (10 s). Every recorded audio file in the mix, with its source and license.
 All are CC0 1.0 (public domain dedication, commercial use allowed, no attribution required). None come from a music library that registers with Content ID.
 
 kenney/casino/card-fan-1.ogg
@@ -15,6 +15,10 @@ kenney/casino/card-place-1.ogg
     license: CC0 1.0
 kenney/casino/card-place-2.ogg
     used in: tease + loop cue
+    source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/casino/card-slide-1.ogg
+    used in: tease
     source: https://kenney.nl/assets/casino-audio  (Kenney, kenney.nl)
     license: CC0 1.0
 kenney/casino/card-slide-2.ogg
@@ -46,6 +50,10 @@ kenney/impact/impactPunch_heavy_000.ogg
     source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
     license: CC0 1.0
 kenney/impact/impactSoft_heavy_000.ogg
+    used in: tease
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
+kenney/impact/impactSoft_medium_000.ogg
     used in: tease
     source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
     license: CC0 1.0

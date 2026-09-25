@@ -1,19 +1,19 @@
-"""Friday live-show tease score (friday-tease.js), 25 s, then the approved LIVE TODAY loop (rossen-loop-friday) follows.
-Same tempo and key as the loop (96 BPM, D): bars 0-7 are composed here, played by recorded instrument samples (VSCO 2 CE
-and its VSCO 1 drums, CC0); physical sound effects are recorded Kenney samples (CC0). Bars 8-9 carry the loop's own cue
-(out/rossen-loop/loop_norm.wav, composed in score_loop.py), so the tease hands off with no bump: bar 7 ends on A, the chord
-the loop ends on and whose tails ring into its first samples, and the cut at 25.0 s is the loop's own seamless wrap.
+"""Friday live-show tease score (friday-tease.js), 30 s, then the Friday LIVE TODAY loop (LIVE ON YOUTUBE variant) plays twice.
+Same tempo and key as the loop (96 BPM, D): bars 0-9 are composed here, played by recorded instrument samples (VSCO 2 CE
+and its VSCO 1 drums, CC0); physical sound effects are recorded Kenney samples (CC0). Bars 10-11 carry the loop's own cue
+(out/rossen-loop/loop_norm.wav, composed in score_loop.py), so the tease hands off with no bump: bar 9 ends on A, the chord
+the loop ends on and whose tails ring into its first samples, and the cut at 30.0 s is the loop's own seamless wrap.
 Mood: tense D minor through the scams (low strings, pizzicato, a ticking pulse, low brass), building layer by layer
-through port hacking, lifting toward major when Jeff and the hacker come in, then the loop's bright D major on the deals.
+through port hacking, lifting toward major when Jeff and the hacker come in, bright D major with a xylophone bounce on the deals and the Amazon promo codes, then the loop's own cue.
 
-usage: python3 score_tease.py            ->  out/rossen-tease-friday/tease_audio.wav (25 s), full_audio.wav (35 s: tease + the loop twice), hits.json,
+usage: python3 score_tease.py            ->  out/rossen-tease-friday/tease_audio.wav (30 s), full_audio.wav (40 s: tease + the loop twice), hits.json,
                                             samples_used.txt, audio_sources.txt
        HITS_ONLY=1 python3 score_tease.py ->  score_hits.wav (the synced hits alone)
 """
 import numpy as np, subprocess, wave, sys, os, re, glob, math, json
 SR = 48000
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio')
-DUR = 10 * 2.5 + 2   # 25 s plus room for tails (cut at 25 s)
+DUR = 12 * 2.5 + 2   # 30 s plus room for tails (cut at 30 s)
 out = np.zeros((int(SR * DUR), 2), np.float32)
 _cache = {}
 def load(rel):
@@ -157,17 +157,17 @@ BB = lambda bar, beat=1: bar * 4 + (beat - 1)            # the same point in bea
 HO = bool(os.environ.get('HITS_ONLY'))
 if HO: groove = roll_to = tomfill = swell_to = tamb = lambda *a, **k: None
 CH['Gm'] = (['D4', 'G4', 'Bb3'], ['G1', 'D2'], ['G2', 'Bb2'], 'G1')
-CROOT = {'Dm': 'D2', 'D': 'D2', 'Bb': 'Bb1', 'Gm': 'G2', 'G': 'G2', 'A': 'A1', 'C': 'C2', 'Eb': 'Eb2', 'F': 'F2'}
-TONES = {'Dm': ('D5', 'F5', 'A5'), 'D': ('D5', 'F#5', 'A5'), 'Bb': ('D5', 'F5', 'Bb5'), 'Gm': ('D5', 'G5', 'Bb5'), 'G': ('D5', 'G5', 'B5'),
+CROOT = {'Bm': 'B1', 'Dm': 'D2', 'D': 'D2', 'Bb': 'Bb1', 'Gm': 'G2', 'G': 'G2', 'A': 'A1', 'C': 'C2', 'Eb': 'Eb2', 'F': 'F2'}
+TONES = {'Bm': ('D5', 'F#5', 'B5'), 'Dm': ('D5', 'F5', 'A5'), 'D': ('D5', 'F#5', 'A5'), 'Bb': ('D5', 'F5', 'Bb5'), 'Gm': ('D5', 'G5', 'Bb5'), 'G': ('D5', 'G5', 'B5'),
          'A': ('C#5', 'E5', 'A5'), 'C': ('C5', 'E5', 'G5'), 'Eb': ('Eb5', 'G5', 'Bb5'), 'F': ('C5', 'F5', 'A5')}
-PAD = {'Dm': ('D2', 'F2', 'A2'), 'Bb': ('Bb1', 'D2', 'F2'), 'Gm': ('G1', 'D2', 'Bb2'), 'A': ('A1', 'C#2', 'E2'), 'C': ('C2', 'E2', 'G2'),
+PAD = {'Bm': ('B1', 'D2', 'F#2'), 'Dm': ('D2', 'F2', 'A2'), 'Bb': ('Bb1', 'D2', 'F2'), 'Gm': ('G1', 'D2', 'Bb2'), 'A': ('A1', 'C#2', 'E2'), 'C': ('C2', 'E2', 'G2'),
        'Eb': ('Eb2', 'G2', 'Bb2'), 'D': ('D3', 'F#3', 'A3'), 'G': ('G2', 'B2', 'D3'), 'F': ('F2', 'A2', 'C3')}
 HITS = []
 def H(t, what): HITS.append((round(t, 4), what))
-END = AT(10); LOOP_IN = AT(8)   # the loop's cue takes over at bar 8
+END = AT(12); LOOP_IN = AT(10)   # the loop's cue takes over at bar 10 (LIVE ON YOUTUBE)
 
 # ---------------- bars 0-7, composed ----------------
-ROWS = {0: 'Dm Dm Bb A', 1: 'Dm Dm Bb A', 2: 'Gm Gm A A', 3: 'Dm Dm Bb C', 4: 'Bb Bb C A', 5: 'Dm Bb C A', 6: 'G G A A', 7: 'D D G A'}   # the fix lifts toward major; the deals are bright D major
+ROWS = {0: 'Dm Dm Bb A', 1: 'Dm Dm Bb A', 2: 'Gm Gm A A', 3: 'Dm Dm Bb C', 4: 'Bb Bb C A', 5: 'Dm Bb C A', 6: 'G G A A', 7: 'D D G A', 8: 'D D G G', 9: 'Bm G A A'}   # the fix lifts toward major; the deals and the promo codes are bright D major, ending on A into the loop's D
 if not HO:
     for bar, row in ROWS.items():
         for k, ch in enumerate(row.split()):
@@ -175,18 +175,18 @@ if not HO:
             cbp(lo, B(bb), .42, dur=.3); cpz(r, B(bb), .6, dur=.28)
             if bar >= 3: cpz(r, B(bb + .5), .5, dur=.28)                                    # the bass doubles up for port hacking
             n = 2 if bar < 3 else 4                                                      # spiccato violins: eighths, then sixteenths
-            if bar < 7:
+            if bar < 7 or bar == 9:
               for j in range(n): vsp(TONES[ch][j % (2 if bar < 5 else 3)], B(bb + j / n), .24 + .02 * min(bar, 5), dur=.1)
             if k % 2 == 0: [ (hnl if bar < 6 else tpl)(nn, B(bb), .2 if bar < 6 else .13, dur=BEAT * 2 - .08, rel=.25) for nn in PAD[ch] ]
-            if bar == 7: xyl(TONES[ch][k % 3], B(bb), .3, dur=.15); xyl(TONES[ch][(k + 1) % 3], B(bb + .5), .26, dur=.15)   # the deals bounce
+            if bar in (7, 8, 9): xyl(TONES[ch][k % 3], B(bb), .3, dur=.15); xyl(TONES[ch][(k + 1) % 3], B(bb + .5), .26, dur=.15)   # the deals bounce
         timp(AT(bar), .45 + .04 * bar)
         if bar < 3:   # the tick of the clock: rim on every beat, snare on 2 and 4
             for q in range(4): one(RIM, AT(bar, q + 1), .16, .1)
             snare(AT(bar, 2), .28); snare(AT(bar, 4), .28); kick(AT(bar), .5); kick(AT(bar, 3), .4)
         else:
-            groove(BB(bar), BB(bar + 1), .5 + .03 * (bar - 3), .05 + .015 * (bar - 3) + (.05 if bar == 7 else 0))
+            groove(BB(bar), BB(bar + 1), .5 + .03 * (bar - 3), .05 + .015 * (bar - 3) + (.05 if bar >= 7 else 0))
     roll_to(AT(2, 3), AT(3), .3); swell_to(AT(6), .35)
-    roll_to(AT(7, 3), LOOP_IN, .28)                                                      # into the LIVE bar
+    roll_to(AT(9, 3), LOOP_IN, .28)                                                      # into the LIVE bar
 
 # ---------------- sounds on the picture's beats ----------------
 def capsnd(t): xyl('D6', t, .24); fx('casino/card-place-1.ogg', t, .13)
@@ -195,7 +195,7 @@ def push(t): fx('casino/card-slide-3.ogg', t - .15, .26)
 def fxa(name, t, g=1.0, pan=0.0):
     x = load(K + name); e = np.convolve(np.abs(x).max(1), np.ones(96) / 96, 'same'); att = int(np.argmax(e >= .15 * e.max()))
     USED.add(K + name); put(x, t - att / SR, g, pan)
-for bar, n in [(0, 2), (1, 2), (2, 2), (3, 1), (4, 2), (5, 2), (6, 2), (7, 2), (8, 2)]:
+for bar, n in [(0, 2), (1, 2), (2, 2), (3, 1), (4, 2), (5, 2), (6, 2), (7, 2), (8, 2), (10, 2)]:
     for i in range(n):
         if bar == 0 and i == 0: continue   # frame 0 belongs to the box
         capsnd(AT(bar) + i * E8)
@@ -232,15 +232,23 @@ for k, n in enumerate(('A5', 'C#6', 'E6')): glk(n, AT(6, 4) + k * S16, .32)
 # DEALS: a tag on 1, 2, 3; the chat bubble on 4
 push(AT(7))
 for b in range(1, 5): t = AT(7, b); fx('casino/card-place-2.ogg', t, .32); glk(('D6', 'F#6', 'A6', 'D7')[b - 1], t, .24); kick(t, .5); H(t, 'tag')
+# AMAZON PROMO CODES: the card lands on 8:1; tickets slide out on 8:2-4; REVEALED LIVE stamps on 9:1-3; Jeff's thumbs up on 9:4
+push(AT(8)); kick(AT(8), .8); one(CRASH_MF, AT(8), .3); fx('impact/impactSoft_medium_000.ogg', AT(8), .4); H(AT(8), 'amazon card')
+for k, b in enumerate((2, 3, 4)):
+    t = AT(8, b); fx(('casino/card-slide-1.ogg', 'casino/card-slide-2.ogg', 'casino/card-slide-4.ogg')[k], t - .35, .3); fx('casino/card-place-2.ogg', t, .34); glk(('A5', 'D6', 'F#6')[k], t, .3); kick(t, .55); H(t, 'ticket')
+for k, b in enumerate((1, 2, 3)):
+    t = AT(9, b); fx('rpg/bookPlace1.ogg', t, .35); one(RIM, t, .38, .1); kick(t, .7); xyl(('D6', 'F#6', 'A6')[k], t, .35, dur=.15); H(t, 'revealed')
+fx('interface/confirmation_001.ogg', AT(9, 4), .4); kick(AT(9, 4), .55); H(AT(9, 4), 'thumbs')
+for k, n in enumerate(('A5', 'C#6', 'E6', 'A6')): glk(n, AT(9, 4) + k * S16, .28)
 # LIVE ON YOUTUBE (the loop's cue carries the music from here): LIVE on 2, the channel row on 3, the chat bubble on 4
 FOLEY_END = END - .02
-push(AT(8))
-fx('interface/switch_007.ogg', AT(8, 2), .35); H(AT(8, 2), 'live')
-fx('rpg/bookPlace1.ogg', AT(8, 3), .3); H(AT(8, 3), 'channel')
-fx('casino/card-place-1.ogg', AT(8, 4), .3); fx('interface/pluck_001.ogg', AT(8, 4), .25); H(AT(8, 4), 'chat')
+push(AT(10))
+fx('interface/switch_007.ogg', AT(10, 2), .35); H(AT(10, 2), 'live')
+fx('rpg/bookPlace1.ogg', AT(10, 3), .3); H(AT(10, 3), 'channel')
+fx('casino/card-place-1.ogg', AT(10, 4), .3); fx('interface/pluck_001.ogg', AT(10, 4), .25); H(AT(10, 4), 'chat')
 # HANDOFF: the loop's pieces on the beats of bar 9
-push(AT(9))
-for b in (1, 2, 3, 4): t = AT(9, b); fx('rpg/bookPlace1.ogg', t, .3 if b < 4 else .22); H(t, 'piece')
+push(AT(11))
+for b in (1, 2, 3, 4): t = AT(11, b); fx('rpg/bookPlace1.ogg', t, .3 if b < 4 else .22); H(t, 'piece')
 
 # ---------------- mix: composed bars + the loop's cue ----------------
 n_end, n_in = int(END * SR), int(LOOP_IN * SR)
@@ -257,14 +265,14 @@ if not HO:
     comp *= g
     lim = 10 ** (-4.0 / 20); comp = np.tanh(comp / lim) * lim    # soft ceiling at -4 dBFS: the AAC encode overshoots transients by about 1.5 dB
     fade = int(.006 * SR); body = comp.copy()
-    # after bar 8 starts, only the composed tails of bar 7 and the foley remain; they must be silent by 25.0 s
+    # after the loop cue starts, only the composed tails and the foley remain; they must be silent by the end of the tease
     tail = np.ones(n_end, np.float32); t0 = int(FOLEY_END * SR) - int(.25 * SR); tail[t0:] = np.linspace(1, 0, n_end - t0) ** 2
     comp *= tail[:, None]
     duck = np.ones(n_end, np.float32); d0 = int((LOOP_IN - .04) * SR); d1 = int((LOOP_IN + .04) * SR); duck[d0:d1] = np.linspace(1, .6, d1 - d0); duck[d1:] = .6
     comp *= duck[:, None]   # the composed layer steps back as the loop's cue takes over, so the two downbeats don't stack
     lp = LOOP.copy(); lp[:fade] *= np.linspace(0, 1, fade)[:, None]                          # a 6 ms fade-in: the cue enters on its own downbeat
     comp[n_in:n_end] += lp[: n_end - n_in]
-    print('levels: composed bars 6-7 %.1f dBFS rms, loop bar 1 %.1f dBFS rms, peak %.2f' % (20 * np.log10(rms(comp[int(AT(6) * SR):n_in])), 20 * np.log10(target), np.abs(comp).max()))
+    print('levels: composed bars 6-9 %.1f dBFS rms, loop bar 1 %.1f dBFS rms, peak %.2f' % (20 * np.log10(rms(comp[int(AT(6) * SR):n_in])), 20 * np.log10(target), np.abs(comp).max()))
 od = 'out/rossen-tease-friday'; os.makedirs(od, exist_ok=True)
 def write(p, x):
     with wave.open(p, 'wb') as w: w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(x, -1, 1) * 32767).astype('<i2').tobytes())
@@ -279,7 +287,7 @@ if not HO:
             'casino': 'https://kenney.nl/assets/casino-audio', 'digital': 'https://kenney.nl/assets/digital-audio'}
     loop_used = [l.strip() for l in open('out/rossen-loop/samples_used.txt') if l.strip()]
     with open(od + '/audio_sources.txt', 'w') as f:
-        f.write('Rossen Reports Friday live tease (25 s) + the LIVE TODAY loop played twice (10 s). Every recorded audio file in the mix, with its source and license.\n')
+        f.write('Rossen Reports Friday live tease (30 s) + the LIVE TODAY loop played twice (10 s). Every recorded audio file in the mix, with its source and license.\n')
         f.write('All are CC0 1.0 (public domain dedication, commercial use allowed, no attribution required). None come from a music library that registers with Content ID.\n\n')
         for u in sorted(USED | set(loop_used)):
             if u.startswith('kenney/'): src = PACK[u.split('/')[1]] + '  (Kenney, kenney.nl)'

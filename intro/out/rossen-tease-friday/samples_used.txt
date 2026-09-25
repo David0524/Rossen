@@ -2,6 +2,7 @@ kenney/casino/card-fan-1.ogg
 kenney/casino/card-fan-2.ogg
 kenney/casino/card-place-1.ogg
 kenney/casino/card-place-2.ogg
+kenney/casino/card-slide-1.ogg
 kenney/casino/card-slide-2.ogg
 kenney/casino/card-slide-3.ogg
 kenney/casino/card-slide-4.ogg
@@ -10,6 +11,7 @@ kenney/casino/cards-pack-open-1.ogg
 kenney/impact/impactMetal_light_001.ogg
 kenney/impact/impactPunch_heavy_000.ogg
 kenney/impact/impactSoft_heavy_000.ogg
+kenney/impact/impactSoft_medium_000.ogg
 kenney/impact/impactWood_heavy_000.ogg
 kenney/interface/click_002.ogg
 kenney/interface/click_003.ogg

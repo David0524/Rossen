@@ -1,6 +1,6 @@
 'use strict';
-/* Friday live-show tease: 25 s (10 bars at 96 BPM, D minor into D major), 1080x1920 (9:16), 24 fps, one continuous film,
-   then the approved 5 s LIVE TODAY loop (rossen-loop-friday, 10 AM ET) is appended untouched and plays twice (35 s total). Case-file screen-print
+/* Friday live-show tease: 30 s (12 bars at 96 BPM, D minor into D major), 1080x1920 (9:16), 24 fps, one continuous film,
+   then the approved 5 s LIVE TODAY loop (rossen-loop-friday, 10 AM ET) is appended untouched and plays twice (40 s total). Case-file screen-print
    look (printkit.js), the approved palette, the vertical safe-zone content transform (VERT_K 0.895, like the loop).
    Tease the scams, don't explain them. Captions: one short ALL-CAPS card per bar, on screen for the whole bar.
 
@@ -13,14 +13,17 @@
               bar 5  12.5  cash streams out on eighths; the calendar tears DAY 1, DAY 4, WEEK 2, WEEK 3           "FOR DAYS. / EVEN WEEKS."
    THE FIX    bar 6  15.0  dive into the vault: a laptop typing; Jeff's magnifier on 2; a padlock slams on 3, a   "AN ETHICAL HACKER / HOW TO STOP IT"
                            check on 4
-   DEALS      bar 7  17.5  price tags swing in on 1, 2, 3; YOUR REQUESTS on 4                                    "PLUS: HOT DEALS / SECRET PROMO CODES"
-   LIVE       bar 8  20.0  a plain video player with Jeff live inside; LIVE on 2; the ROSSEN REPORTS CHANNEL row   "LIVE ON YOUTUBE / ROSSEN REPORTS"
+   DEALS      bar 7  17.5  price tags swing in on 1, 2, 3; YOUR REQUESTS on 4                                    "PLUS: HOT DEALS / AND LIVE REQUESTS"
+   AMAZON     bars 8-9 20.0 the official Amazon logo on a card; three code tickets slide out from behind it (8:2-4);   "WE FOUND HIDDEN / AMAZON PROMO CODES"
+                           REVEALED LIVE stamps cover the codes (9:1-3); Jeff thumbs up on 9:4
+   LIVE       bar 10 25.0  a plain video player with Jeff live inside; LIVE on 2; the ROSSEN REPORTS CHANNEL row   "LIVE ON YOUTUBE / ROSSEN REPORTS"
                            on 3; SEE YOU AT 10! on 4
-   HANDOFF    bar 9  22.5  the camera drops onto the loop's own page; its pieces land on the beats in their exact
-                           places (logo on 1, LIVE TODAY on 2, 10 AM ET + FRIDAY on 3, Jeff on 4), and from 24.5 s
-                           it is the loop's own frames, so the cut at 25.0 s is the loop's seamless wrap.
+   HANDOFF    bar 11 27.5  the camera drops onto the loop's own page; its pieces land on the beats in their exact
+                           places (logo on 1, LIVE TODAY on 2, 10 AM ET + FRIDAY on 3, LIVE ON YOUTUBE + Jeff on 4), and from 29.5 s
+                           it is the loop's own frames, so the cut at 30.0 s is the loop's seamless wrap.
 */
-const DUR = at(10), NFR = Math.round(FPS * DUR);
+const B_LIVE = 10, B_HAND = 11;   // the LIVE ON YOUTUBE bar and the handoff bar
+const DUR = at(12), NFR = Math.round(FPS * DUR);
 const SANS = '"Liberation Sans"', MONO = '"Liberation Mono"', FAKE_NUM = '1-555-XXX-XXXX';
 const PUSH = .3;
 
@@ -28,7 +31,7 @@ const PUSH = .3;
 const CAPS = [
   [at(0), 'OPENING A', 'NEW PHONE?'], [at(1), 'MINUTES LATER...', 'IT RINGS.'], [at(2), 'WITHIN THE HOUR,', "IT'S GONE."],
   [at(3), 'PORT HACKING'], [at(4), 'YOUR NUMBER...', 'OPENS YOUR BANK'], [at(5), 'FOR DAYS.', 'EVEN WEEKS.'],
-  [at(6), 'AN ETHICAL HACKER', 'HOW TO STOP IT'], [at(7), 'PLUS: HOT DEALS', 'SECRET PROMO CODES'], [at(8), 'LIVE ON YOUTUBE', 'ROSSEN REPORTS'], [at(9), null],
+  [at(6), 'AN ETHICAL HACKER', 'HOW TO STOP IT'], [at(7), 'PLUS: HOT DEALS', 'AND LIVE REQUESTS'], [at(8), 'WE FOUND HIDDEN', 'AMAZON PROMO CODES'], [at(B_LIVE), 'LIVE ON YOUTUBE', 'ROSSEN REPORTS'], [at(B_HAND), null],
 ];
 function chip(c, s, x, y, size, bg, fg, t, t0, rot = 0, maxW = 700, from = 1.1, font = 'Stamp') {
   if (t < t0 - SLAM) return; c.font = `${size}px ${font}`; const w = Math.min(c.measureText(s).width, maxW) + 60, h = size * 1.3, k = t < t0 ? lerp(from, 1, easeIn(land(t, t0))) : pop(t, t0);
@@ -43,8 +46,8 @@ function captionsTop(c, t) {   // 760 px wide at most: +-418 even at the 1.1x la
 }
 function pushScenes(c, t, tb, A, B, dir = 1) {   // the camera moves from A to B, centred on the downbeat; dir 1 = drops (B from below), -1 = rises
   const u = easeIO(seg(t, tb - PUSH / 2, tb + PUSH / 2)), g1 = L1.getContext('2d'), g2 = L2.getContext('2d');
-  contentT(g1); g1.globalAlpha = 1; A(g1, t); contentT(g1); captionsTop(g1, Math.min(t, tb - SLAM - 1e-3)); if (A.finish !== false) printFinish(g1);
-  contentT(g2); g2.globalAlpha = 1; B(g2, t); contentT(g2); captionsTop(g2, Math.max(t, tb - SLAM)); if (B.finish !== false) printFinish(g2);
+  contentT(g1); g1.globalAlpha = 1; A(g1, t); contentT(g1); captionsTop(g1, Math.min(t, tb - SLAM - 1e-3)); if (A.finish !== false) printFinish(g1); if (A.overlay) { contentT(g1); A.overlay(g1, t); }
+  contentT(g2); g2.globalAlpha = 1; B(g2, t); contentT(g2); captionsTop(g2, Math.max(t, tb - SLAM)); if (B.finish !== false) printFinish(g2); if (B.overlay) { contentT(g2); B.overlay(g2, t); }
   c.save(); resetT(c); c.drawImage(L1, 0, -dir * u * H, W, H); c.drawImage(L2, 0, dir * (1 - u) * H, W, H); c.restore();
 }
 
@@ -233,6 +236,41 @@ function sceneDeals(c, t) {
 
 // LIVE ON YOUTUBE (bar 8): a plain video player (no platform logo) with Jeff live inside; LIVE on 2; the channel row on 3;
 // a chat bubble on 4. "YouTube" appears only as plain text in the caption.
+// AMAZON PROMO CODES (bars 8-9), on the approved textured cream. The official Amazon logo (assets/tease/amazon_logo_official.png,
+// supplied by the client) sits on a card, drawn exactly as supplied: uniform scale only, no recolour, and it is drawn AFTER the print
+// finish so nothing covers it. Three code tickets slide out from behind the card (bottom slot first, so none passes another)
+// on 8:2, 8:3, 8:4; a REVEALED LIVE stamp covers each code on 9:1, 9:2, 9:3; Jeff gives a thumbs up on 9:4. No real codes.
+const AZ = { x: 160, y: 585, w: 640, h: 220 }, AZ_LW = 520;
+const TICKETS = [['PROMO CODE', 1170, at(8, 2), at(9, 1)], ['SECRET CODE', 1030, at(8, 3), at(9, 2)], ['HIDDEN CODE', 890, at(8, 4), at(9, 3)]];
+const azPop = t => t < at(8) ? 1 : 1 + .04 * Math.exp(-(t - at(8)) * 12) * Math.cos((t - at(8)) * 30);
+function ticket(c, label, y, t, tStamp, k) {   // 720 x 130, centred; the label and the hidden code sit either side of the tear line
+  c.save(); c.translate(SCX, y);
+  c.save(); c.globalAlpha = .28; c.fillStyle = BLK; c.fillRect(-360 + 10, -65 + 12, 720, 130); c.restore();
+  block(c, rect(-360, -65, 720, 130), CHIP, 9600 + k, { kw: 5 });
+  c.save(); c.strokeStyle = BLK; c.lineWidth = 4; c.setLineDash([12, 10]); c.beginPath(); c.moveTo(-90, -58); c.lineTo(-90, 58); c.stroke(); c.restore();
+  inkText(c, label, -225, 5, 44, 'Stamp', BLUE, 240);
+  inkText(c, '? ? ? ? ?', 135, 7, 52, MONO, BLK, 400);
+  if (t >= tStamp - SLAM) { const s2 = t < tStamp ? lerp(1.12, 1, easeIn(land(t, tStamp))) : pop(t, tStamp);   // lands inside the code area (at most 381 px wide): never over the label
+    c.save(); c.translate(135, 0); c.rotate(-.04); c.scale(s2, s2);
+    c.save(); c.globalAlpha = .45; c.fillStyle = BLK; c.fillRect(-170 + 7, -44 + 8, 340, 88); c.restore();
+    block(c, rect(-170, -44, 340, 88), YEL, 9610 + k, { kw: 5 }); inkText(c, 'REVEALED LIVE', 0, 4, 42, 'Stamp', BLK, 310); c.restore(); }
+  c.restore();
+}
+function sceneAmazon(c, t) {
+  creamBg(c);
+  TICKETS.forEach(([label, y, t0, ts], k) => { if (t < t0 - .4) return; const u = easeOut(seg(t, t0 - .4, t0));
+    ticket(c, label, lerp(AZ.y + AZ.h / 2, y, u), t, ts, k); sparkle(c, 830, y - 62, 40, t, t0); });
+  const k = azPop(t); c.save(); c.translate(SCX, AZ.y + AZ.h / 2); c.scale(k, k); c.translate(-SCX, -(AZ.y + AZ.h / 2));
+  c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(AZ.x + 12, AZ.y + 16, AZ.w, AZ.h); c.restore();
+  block(c, rrPts(AZ.x, AZ.y, AZ.w, AZ.h, 24, 5), '#ffffff', 9620, { kw: 6, reg: false }); c.restore();
+  const th = easeOutBack(seg(t, at(9, 4) - SLAM, at(9, 4) + .2)), pt = easeOut(seg(t, at(8, 2) - SLAM, at(8, 2)));
+  jeff(c, 150, 1860, .62, { armR: th > 0 ? lerp(-1.6, -2.5, th) : lerp(0, -1.6, pt), prop: th > .6 ? 'thumb' : pt > .5 ? 'point' : null, head: .04 * Math.sin(t * 4), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 4 });
+}
+sceneAmazon.overlay = (c, t) => {   // the official logo: after the finish, never covered
+  const im = IMG.amazon, lh = im.height * AZ_LW / im.width, k = azPop(t);
+  c.save(); c.translate(SCX, AZ.y + AZ.h / 2); c.scale(k, k); c.drawImage(im, -AZ_LW / 2, -lh / 2 + 4, AZ_LW, lh); c.restore();
+};
+
 const PL = { x: 110, y: 600, w: 740, h: 416 };
 const popUp = (t, t0) => t < t0 ? lerp(.8, 1, easeOut(land(t, t0))) : pop(t, t0);   // grows into place: never wider than its resting size (+6%)
 function sceneLive(c, t) {
@@ -245,25 +283,25 @@ function sceneLive(c, t) {
   c.restore();
   // the progress bar: at the live edge
   ink(c, rect(x + 30, y + h - 36, w - 60, 10), CHIP, 7904, { reg: false }); ink(c, rect(x + 30, y + h - 36, w - 60, 10), YEL, 7905, { reg: false });
-  if (t >= at(8, 2) - SLAM) { const k = popUp(t, at(8, 2)); c.save(); c.translate(x + 110, y + 62); c.scale(k, k);
+  if (t >= at(B_LIVE, 2) - SLAM) { const k = popUp(t, at(B_LIVE, 2)); c.save(); c.translate(x + 110, y + 62); c.scale(k, k);
     block(c, rrPts(-80, -30, 160, 60, 12, 4), BLK, 7906, { kw: 3 }); block(c, ellPts(-46, 0, 12, 12, 0, 14), YEL, 7907, { kw: 0, key: false });
     inkText(c, 'LIVE', 16, 3, 38, 'Stamp', YEL, 90); c.restore(); }
-  if (t >= at(8, 3) - SLAM) { const k = popUp(t, at(8, 3)); c.save(); c.translate(SCX, 1120); c.scale(k, k);
+  if (t >= at(B_LIVE, 3) - SLAM) { const k = popUp(t, at(B_LIVE, 3)); c.save(); c.translate(SCX, 1120); c.scale(k, k);
     c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-370 + 10, -60 + 12, 740, 120); c.restore();
     block(c, rect(-370, -60, 740, 120), CHIP, 7908, { kw: 5 });
     stickerLogo(c, -285, 0, 130, -.04, 1);
     inkText(c, 'ROSSEN REPORTS', -200, -14, 50, 'Stamp', BLK, 540, 'left'); inkText(c, 'CHANNEL  ·  10 AM ET', -200, 36, 34, SANS, BLUE, 540, 'left');
     c.restore(); }
-  if (t >= at(8, 4) - SLAM) { const k = popUp(t, at(8, 4)); c.save(); c.translate(SCX + 60, 1300); c.scale(k * 1.1, k * 1.1); chatBubble(c, 0, 0, -.03, 'SEE YOU AT 10!'); c.restore(); }
+  if (t >= at(B_LIVE, 4) - SLAM) { const k = popUp(t, at(B_LIVE, 4)); c.save(); c.translate(SCX + 60, 1300); c.scale(k * 1.1, k * 1.1); chatBubble(c, 0, 0, -.03, 'SEE YOU AT 10!'); c.restore(); }
 }
 
-// HANDOFF (bar 9): the loop's own page. Its background is the loop's (same code, same seed); its pieces are cut from the
+// HANDOFF (bar 11): the loop's own page. Its background is the loop's (same code, same seed); its pieces are cut from the
 // loop's own frames with masks, land on the beats in their exact places, and from PIECE_T[5] + .1 the whole loop frame
 // is shown, so the last tease frame is loop frame 119 and the next frame is the loop's own frame 0.
-const LOOP_F0 = 60;   // loop frames 60-119 play under bar 9 (loop time = t - 20 s)
-const PIECE_T = [at(9, 1), at(9, 2), at(9, 3), at(9, 3), at(9, 4), at(9, 4)];   // logo, LIVE TODAY, the time card + FRIDAY, LIVE ON YOUTUBE + Jeff: each on a beat (and a whole frame)
+const LOOP_F0 = 60;   // loop frames 60-119 play under the handoff bar (loop time = t - at(B_HAND - 1))
+const PIECE_T = [at(B_HAND, 1), at(B_HAND, 2), at(B_HAND, 3), at(B_HAND, 3), at(B_HAND, 4), at(B_HAND, 4)];   // logo, LIVE TODAY, the time card + FRIDAY, LIVE ON YOUTUBE + Jeff: each on a beat (and a whole frame)
 let MASKS = null, PLATE = null; const SCRATCH = layer();   // its own scratch layer: L1/L2 carry the camera pushes
-const loopFrame = t => IMG['loop' + Math.min(119, Math.max(LOOP_F0, Math.round((t - 20) * FPS)))];
+const loopFrame = t => IMG['loop' + Math.min(119, Math.max(LOOP_F0, Math.round((t - at(B_HAND - 1)) * FPS)))];
 function sceneHandoff(c, t) {
   screenSpace(c, () => {
     const full = t >= PIECE_T[5] + .1, im = loopFrame(t);
@@ -294,9 +332,11 @@ function drawScene(c, t) {
   else if (t < at(7) - PUSH / 2) { sceneFix(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
   else if (t < at(7) + PUSH / 2) pushScenes(c, t, at(7), sceneFix, sceneDeals);
   else if (t < at(8) - PUSH / 2) { sceneDeals(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
-  else if (t < at(8) + PUSH / 2) pushScenes(c, t, at(8), sceneDeals, sceneLive);
-  else if (t < at(9) - PUSH / 2) { sceneLive(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
-  else if (t < at(9) + PUSH / 2) pushScenes(c, t, at(9), sceneLive, sceneHandoff);
+  else if (t < at(8) + PUSH / 2) pushScenes(c, t, at(8), sceneDeals, sceneAmazon);
+  else if (t < at(B_LIVE) - PUSH / 2) { sceneAmazon(c, t); contentT(c); captionsTop(c, t); printFinish(c); contentT(c); sceneAmazon.overlay(c, t); }
+  else if (t < at(B_LIVE) + PUSH / 2) pushScenes(c, t, at(B_LIVE), sceneAmazon, sceneLive);
+  else if (t < at(B_HAND) - PUSH / 2) { sceneLive(c, t); contentT(c); captionsTop(c, t); printFinish(c); }
+  else if (t < at(B_HAND) + PUSH / 2) pushScenes(c, t, at(B_HAND), sceneLive, sceneHandoff);
   else sceneHandoff(c, t);
   if (SHOW_SAFE) safeOverlay(c);
 }
@@ -306,7 +346,7 @@ const CV = document.getElementById('c'); CV.width = OUT_W; CV.height = OUT_H; co
 function frame(i) { const t = Math.min(i / FPS, DUR - 1e-6); FILM_T = t; resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, t); resetT(CTX); }
 window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
 (async () => {
-  await loadPrintKit(); await loadVertKit(); makeCream();
+  await loadPrintKit(); await loadVertKit(); makeCream(); await loadImg('amazon', 'assets/tease/amazon_logo_official.png');
   const pad = n => String(n).padStart(4, '0');
   await Promise.all([...Array(60).keys()].map(k => loadImg('loop' + (LOOP_F0 + k), `out/rossen-loop-friday-youtube/frames/${pad(LOOP_F0 + k)}.png`)));
   if (!Q.has('plate')) { const M = await (await fetch('assets/tease/loop_masks.json')).json();
