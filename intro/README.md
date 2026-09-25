@@ -272,3 +272,28 @@ The map is Natural Earth's public-domain outline (`assets/toll/us_outline.json`)
 
 To build: `python3 score_toll.py`, then loudnorm (I -16, TP -2), `alimiter=limit=0.7`, then mux. `HITS_ONLY=1 python3 score_toll.py` writes the hits-only stem used for the sync check.
 
+
+## "STILL LIVE" weekend deals roundup (9:16, 54.5 s, Facebook and Instagram versions)
+
+`rossen-deals-still-live-facebook.html` and `rossen-deals-still-live-instagram.html`, built from `deals.js`. The only difference between them is the CTA. Everything on screen comes from `deals/deals.json`: the names, the regular and deal prices (exact strings, e.g. `"39.90"`), the promo codes, the price-check date and time, the credit, the disclosure and the CTA for each platform. Percent off is calculated from the prices in whole cents and rounded to the nearest whole percent. The product photos (`assets/deals/`) are drawn untouched.
+
+The film runs at 96 BPM:
+- The open is 1 bar.
+- Each deal gets 3 bars:
+  1. the photo pins in and the name lands;
+  2. the regular price;
+  3. the DEAL stamp slams as the deal price lands and the regular price is struck through, then the percent-off sticker lands on beat 2.
+- Then the price note, the disclosure, the credit and the CTA get 1 bar each, followed by the closing card.
+
+There are two signature transitions: the board flips like a price tag on its string (into deal 3), and a shopping box drops, pops open and dives in to the last deal. The other transitions are slides or cuts. The note and the disclosure cut in and out, so each is completely still for a full bar.
+
+To update and rebuild both versions, edit `deals/deals.json` (for example, replace `{{time}}` with `9:30 AM`), then run:
+
+    sh tools/build_deals.sh
+    python3 tools/verify_deals.py out/rossen-deals-still-live-facebook/rossen-deals-still-live-facebook.mp4 facebook
+    python3 tools/verify_deals.py out/rossen-deals-still-live-instagram/rossen-deals-still-live-instagram.mp4 instagram
+
+`build_deals.sh` scores once (`score_deals.py` reads the same deals.json, so the music always fits), sets the loudness (I -16, TP -2, `alimiter=limit=0.7`), renders and muxes both versions, and writes a CRF 21 preview of each. `verify_deals.py` checks the mp4 itself:
+- It OCRs every name, price, the price note, the disclosure, the credit and the CTA.
+- It matches each percent sticker against every value from 0% to 99%.
+- It checks the regular-price strike, the equal deal lengths, the full-bar stillness of the fine print, the still last second, and the logo colours against the file.

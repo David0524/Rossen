@@ -54,6 +54,9 @@ For explainers, use:
 
 Keep our look and the readability rules.
 
+### Product photos (deals roundups)
+Product photos are the one kind of real image we use now, and only when the team supplies them for a deals video. Draw each from its file, untouched: uniformly scaled and level, with no halftone, texture or finish over it. Present it as a print pinned to the cream board, with a clean cream border, a slight paper shadow and a pushpin on the border. Apply the paper-speck finish before the prints and all type, so nothing textures a product or a letter. Nothing (stamps, stickers, labels) ever overlaps a photo. Drive every name and price from `deals/deals.json`, compute percent off from the prices, and check the finished mp4 with `tools/verify_deals.py`.
+
 ### For the future: real images as evidence (not used yet)
 If real material becomes available, use it the way Vox does, as evidence and never as decoration: one or two per video, at the moment that needs proof.
 

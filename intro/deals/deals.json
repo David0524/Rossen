@@ -1,0 +1,17 @@
+{
+  "title": "STILL LIVE",
+  "priceCheck": { "date": "SAT 9/26", "time": "{{time}}" },
+  "cta": {
+    "facebook": "LINKS IN THE COMMENTS",
+    "instagram": "COMMENT DEAL FOR THE LINKS"
+  },
+  "credit": "DEALS FROM DEALSEEK.COM",
+  "disclosure": "AFFILIATE LINKS: JEFF ROSSEN AND DEALSEEK MAY EARN A COMMISSION.",
+  "deals": [
+    { "name": "VIBRATION PLATE EXERCISE MACHINE", "regular": "169.90", "deal": "39.90", "code": null, "image": "assets/deals/01_vibration_plate.png" },
+    { "name": "SOLAR SECURITY CAMERA",            "regular": "79.99",  "deal": "39.99", "code": null, "image": "assets/deals/02_solar_camera.png" },
+    { "name": "COLLAPSIBLE WAGON CART",           "regular": "49.99",  "deal": "29.99", "code": null, "image": "assets/deals/03_wagon.png" },
+    { "name": "MAGNETIC USB-C ADAPTER",           "regular": "15.99",  "deal": "7.99",  "code": null, "image": "assets/deals/04_usbc_adapter.png" },
+    { "name": "KEURIG K-MINI MATE COFFEE MAKER",  "regular": "89.99",  "deal": "49.99", "code": null, "image": "assets/deals/05_keurig_k_mini.png" }
+  ]
+}

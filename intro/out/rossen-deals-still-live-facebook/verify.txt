@@ -1,0 +1,48 @@
+out/rossen-deals-still-live-facebook/rossen-deals-still-live-facebook.mp4: 1308 frames = 54.500 s (expected 54.500 s)
+PASS duration
+PASS deal 1: the regular price is struck through on the deal bar (100% of the strike line is blue)
+PASS deal 1 reg: expected 'REG.$169.90', read 'REG.$169.90'
+PASS deal 1 deal: expected '$39.90', read '$39.90'
+PASS deal 1 pc: expected '77%', read '77%'
+PASS deal 1 name: expected 'VIBRATIONPLATEEXERCISEMACHINE', read 'VIBRATIONPLATEEXERCISEMACHINE'
+PASS deal 1 pc, font match over 0%-99%: best '77%' (correlation 0.842)
+PASS deal 2: the regular price is struck through on the deal bar (100% of the strike line is blue)
+PASS deal 2 reg: expected 'REG.$79.99', read 'REG.$79.99'
+PASS deal 2 deal: expected '$39.99', read '$39.99'
+PASS deal 2 pc: expected '50%', read '50%'
+PASS deal 2 name: expected 'SOLARSECURITYCAMERA', read 'SOLARSECURITYCAMERA'
+PASS deal 2 pc, font match over 0%-99%: best '50%' (correlation 0.848)
+PASS deal 3: the regular price is struck through on the deal bar (100% of the strike line is blue)
+PASS deal 3 reg: expected 'REG.$49.99', read 'REG.$49.99'
+PASS deal 3 deal: expected '$29.99', read '$29.99'
+PASS deal 3 pc: expected '40%', read '40%'
+PASS deal 3 name: expected 'COLLAPSIBLEWAGONCART', read 'COLLAPSIBLEWAGONCART'
+PASS deal 3 pc, font match over 0%-99%: best '40%' (correlation 0.912)
+PASS deal 4: the regular price is struck through on the deal bar (100% of the strike line is blue)
+PASS deal 4 reg: expected 'REG.$15.99', read 'REG.$15.99'
+PASS deal 4 deal: expected '$7.99', read '$7.99'
+PASS deal 4 pc: expected '50%', read '50%'
+PASS deal 4 name: expected 'MAGNETICUSB-CADAPTER', read 'MAGNETICUSB-CADAPTER'
+PASS deal 4 pc, font match over 0%-99%: best '50%' (correlation 0.858)
+PASS deal 5: the regular price is struck through on the deal bar (100% of the strike line is blue)
+PASS deal 5 reg: expected 'REG.$89.99', read 'REG.$89.99'
+PASS deal 5 deal: expected '$49.99', read '$49.99'
+PASS deal 5 pc: expected '44%'; OCR read '%'; best match of 0%-99% in the same font is '44%' (correlation 0.903)
+PASS deal 5 name: expected 'KEURIGK-MINIMATECOFFEEMAKER', read 'KEURIGK-MINIMATECOFFEEMAKER'
+PASS deal 5 pc, font match over 0%-99%: best '44%' (correlation 0.903)
+PASS deal lengths (s): [7.5, 7.5, 7.5, 7.5, 7.5] = 3 bars each
+PASS deal 2 starts at 10.000 s (picture change 26.2)
+PASS deal 3 starts at 17.500 s (picture change 39.2)
+PASS deal 4 starts at 25.000 s (picture change 27.7)
+PASS deal 5 starts at 32.500 s (picture change 15.4)
+PASS price note: 60 frames (2.50 s) with max frame change 0.000
+PASS price note text: read 'PRICESASOFSAT9/26,{{TIME}}ET.DEALSCANENDANYTIME.'
+PASS disclosure: 60 frames (2.50 s) with max frame change 0.007
+PASS disclosure text: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
+PASS CTA (facebook): read 'LINKSINTHECOMMENTS'
+PASS credit: read 'DEALSFROMDEALSEEK.COM'
+PASS last second: max frame change 0.0002
+PASS logo pixels vs the file: median abs difference 2.0/255, mean 5.36, over 221903 interior pixels
+PASS logo blue: file [9.8, 87.7, 193.1] vs video [9.6, 87.3, 188.7] (125311 px)
+PASS logo yellow: file [254.3, 208.2, 0.6] vs video [251.6, 204.6, 3.4] (52950 px)
+ALL PASS
