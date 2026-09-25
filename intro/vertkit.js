@@ -129,15 +129,15 @@ function creamBg(c) { c.save(); resetT(c); c.drawImage(CREAM_TEX, 0, 0, W, H); c
 // and the platform icons are drawn from their files at a uniform scale, untouched. Screen space, inside the tightest safe box
 // of any film (x 180-900, y 381-1349).
 const LIVE_SCHEDULE = ['WED 5 PM ET', 'FRI 10 AM ET'];
-function liveEndCard(c) {
+function liveEndCard(c, platforms = ['youtube', 'instagram']) {   // a film may pass more platforms (each needs IMG[<name>_icon])
   const lg = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 720, lh = bh * lw / bw, top = 530;   // the group sits a touch below centre and ends above y 1349
   c.drawImage(lg, bx, by, bw, bh, CX - lw / 2, top, lw, lh);
   const y0 = top + lh + 110;
   LIVE_SCHEDULE.forEach((s2, i) => inkText(c, s2, CX, y0 + i * 92, 74, 'Stamp', BLK, 700));
   // LIVE ON [YouTube] [Instagram], one small line
   const y = y0 + 92 + 118, ih = 46; c.font = '34px Stamp'; const tw = c.measureText('LIVE ON').width;
-  const icons = ['youtube', 'instagram'].map(k => { const im = IMG[k + '_icon']; return [im, im.width * ih / im.height]; });
-  const total = tw + 22 + icons[0][1] + 16 + icons[1][1]; let x = CX - total / 2;
+  const icons = platforms.map(k => { const im = IMG[k + '_icon']; return [im, im.width * ih / im.height]; });
+  const total = tw + 22 + icons.reduce((q, [, iw]) => q + iw, 0) + 16 * (icons.length - 1); let x = CX - total / 2;
   inkText(c, 'LIVE ON', x, y + 3, 34, 'Stamp', BLK, tw + 2, 'left'); x += tw + 22;
   for (const [im, iw] of icons) { c.drawImage(im, x, y - ih / 2, iw, ih); x += iw + 16; }
 }

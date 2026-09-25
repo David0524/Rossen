@@ -132,4 +132,15 @@ d = np.abs(src[..., :3][m] - vid[m]); report(np.median(d) < 4, f'logo pixels vs 
 for nm, rgb in (('blue', (8, 88, 192)), ('yellow', (248, 208, 0))):   # each logo ink, averaged over its interior
     q = m & (np.abs(src[..., :3] - rgb).sum(-1) < 40); sv, vv = src[..., :3][q].mean(0), vid[q].mean(0)
     report(np.abs(sv - vv).max() < 6, f'logo {nm}: file {sv.round(1).tolist()} vs video {vv.round(1).tolist()} ({q.sum()} px)')
+# ---- the platform icons on the closing card's LIVE ON line (as liveEndCard lays them out), each against its file
+ICONS = ['youtube', 'instagram', 'facebook']; ih = 46; y_line = 530 + lg.height * 720 / lg.width + 110 + 92 + 118
+ims = [Image.open(os.path.join(root, 'assets', 'social', f'{k}_icon.png')).convert('RGBA') for k in ICONS]; iws = [im.width * ih / im.height for im in ims]
+tw = ImageFont.truetype(FONT, 34).getlength('LIVE ON'); x = 540 - (tw + 22 + sum(iws) + 16 * (len(ims) - 1)) / 2 + tw + 22
+end = fr(DUR - .5)
+for k, im, iw in zip(ICONS, ims, iws):
+    x0, y0 = round(x), round(y_line - ih / 2); src = np.asarray(im.resize((round(iw), ih), Image.LANCZOS)).astype(float); vid = end[y0:y0 + ih, x0:x0 + round(iw)].astype(float)
+    m = src[..., 3] > 250
+    for _ in range(2): m = m & np.roll(m, 1, 0) & np.roll(m, -1, 0) & np.roll(m, 1, 1) & np.roll(m, -1, 1)
+    d = np.abs(src[..., :3][m] - vid[m]); report(np.median(d) < 8, f'{k} icon on the closing card vs its file: median abs difference {np.median(d):.1f}/255 over {m.sum()} px')
+    x += iw + 16
 print('ALL PASS' if ok_all else 'SOME CHECKS FAILED')

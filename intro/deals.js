@@ -188,7 +188,7 @@ function ctaScene(c, t) {
   const dd = seg(t, T_END - .35, T_END); if (dd > 0) screenSpace(c, () => rubberStamp(c, easeIn(dd)));
 }
 function sceneSignoff(c, t) {
-  paperBg(c); liveEndCard(c);   // the closing card (vertkit.js): untouched logos, still
+  paperBg(c); liveEndCard(c, ['youtube', 'instagram', 'facebook']);   // the closing card (vertkit.js), with Facebook added for this film: untouched logos, still
   const lift = seg(t, T_END, T_END + .3);
   if (lift < 1) { c.save(); c.translate(0, -(H + 320) * easeIn(lift)); rubberStampFlat(c); c.restore(); }
 }
@@ -286,7 +286,7 @@ const CV = document.getElementById('c'); CV.width = OUT_W; CV.height = OUT_H; co
 function frame(i) { const t = Math.min(i / FPS, DUR - 1e-6); FILM_T = t; resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, t); resetT(CTX); }
 window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
 (async () => {
-  await loadPrintKit(); await loadVertKit(); makeCream();
+  await loadPrintKit(); await loadVertKit(); makeCream(); await loadImg('facebook_icon', 'assets/social/facebook_icon.png');
   DJ = await (await fetch('deals/deals.json', { cache: 'no-store' })).json(); checkData(DJ); DEALS = DJ.deals;
   await Promise.all(DEALS.map((d, k) => loadImg('deal' + k, d.image)));
   DEALS.forEach((d, k) => { if (!IMG['deal' + k] || !IMG['deal' + k].width) throw new Error('missing image: ' + d.image); });

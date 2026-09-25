@@ -45,4 +45,7 @@ PASS last second: max frame change 0.0002
 PASS logo pixels vs the file: median abs difference 2.0/255, mean 5.36, over 221903 interior pixels
 PASS logo blue: file [9.8, 87.7, 193.1] vs video [9.6, 87.3, 188.7] (125311 px)
 PASS logo yellow: file [254.3, 208.2, 0.6] vs video [251.6, 204.6, 3.4] (52950 px)
+PASS youtube icon on the closing card vs its file: median abs difference 2.0/255 over 2241 px
+PASS instagram icon on the closing card vs its file: median abs difference 5.0/255 over 1755 px
+PASS facebook icon on the closing card vs its file: median abs difference 1.0/255 over 1312 px
 ALL PASS

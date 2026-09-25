@@ -283,7 +283,7 @@ The film runs at 96 BPM:
   1. the photo pins in and the name lands;
   2. the regular price;
   3. the DEAL stamp slams as the deal price lands and the regular price is struck through, then the percent-off sticker lands on beat 2.
-- Then the price note, the disclosure, the credit and the CTA get 1 bar each, followed by the closing card.
+- Then the price note, the disclosure, the credit and the CTA get 1 bar each, followed by the closing card. This film's closing card also shows the Facebook icon (`liveEndCard(c, ['youtube', 'instagram', 'facebook'])`); every other short keeps the default YouTube and Instagram.
 
 There are two signature transitions: the board flips like a price tag on its string (into deal 3), and a shopping box drops, pops open and dives in to the last deal. The other transitions are slides or cuts. The note and the disclosure cut in and out, so each is completely still for a full bar.
 
