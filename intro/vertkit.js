@@ -124,27 +124,22 @@ function makeCream() {
 }
 function creamBg(c) { c.save(); resetT(c); c.drawImage(CREAM_TEX, 0, 0, W, H); c.restore(); }
 
-// the closing card of every short (not the teases): the official logo, where he is live and when. Plain, on brand, and
-// completely still: cream paper, straight text, no finish over the logos. The Rossen logo and both platform icons are drawn
-// from their files at a uniform scale, untouched. Screen space, inside the tightest safe box of any film (x 180-900, y 381-1349).
+// the closing card of every short (not the teases). Minimal, three levels: the official logo (largest), then the days and
+// times, then the platforms, small. Cream paper, black type, no chips, rules or motion, and no finish over the logos. The logo
+// and the platform icons are drawn from their files at a uniform scale, untouched. Screen space, inside the tightest safe box
+// of any film (x 180-900, y 381-1349).
 const LIVE_SCHEDULE = ['WED 5 PM ET', 'FRI 10 AM ET'];
 function liveEndCard(c) {
-  const lg = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 520, lh = bh * lw / bw;
-  c.drawImage(lg, bx, by, bw, bh, CX - lw / 2, 545 - lh / 2, lw, lh);
-  // LIVE ON, on a straight black chip
-  c.font = '52px Stamp'; const cw = c.measureText('LIVE ON').width + 56;
-  ink(c, rect(CX - cw / 2, 775 - 40, cw, 80), BLK, 5701, { amp: 2 }); inkText(c, 'LIVE ON', CX, 778, 52, 'Stamp', CHIP, 400);
-  // the two platforms: icons in one column, names left-aligned beside them
-  const rows = [['youtube', 'YOUTUBE', 876, 84], ['instagram', 'INSTAGRAM', 990, 96]];
-  c.font = '66px Stamp'; const tw = Math.max(...rows.map(r => c.measureText(r[1]).width)), col = 130, gap = 26, x0 = CX - (col + gap + tw) / 2;
-  for (const [k, label, y, ih] of rows) {
-    const im = IMG[k + '_icon'], iw = im.width * ih / im.height;
-    c.drawImage(im, x0 + (col - iw) / 2, y - ih / 2, iw, ih);
-    inkText(c, label, x0 + col + gap, y + 4, 66, 'Stamp', BLK, tw + 4, 'left');
-  }
-  key(c, [[CX - 200, 1062], [CX + 200, 1062]], 4, 5702, false);
-  inkText(c, 'EVERY', CX, 1112, 46, 'Stamp', BLK, 400);
-  LIVE_SCHEDULE.forEach((s2, i) => inkText(c, s2, CX, 1190 + i * 88, 76, 'Stamp', BLUE, 700));
+  const lg = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 720, lh = bh * lw / bw, top = 530;   // the group sits a touch below centre and ends above y 1349
+  c.drawImage(lg, bx, by, bw, bh, CX - lw / 2, top, lw, lh);
+  const y0 = top + lh + 110;
+  LIVE_SCHEDULE.forEach((s2, i) => inkText(c, s2, CX, y0 + i * 92, 74, 'Stamp', BLK, 700));
+  // LIVE ON [YouTube] [Instagram], one small line
+  const y = y0 + 92 + 118, ih = 46; c.font = '34px Stamp'; const tw = c.measureText('LIVE ON').width;
+  const icons = ['youtube', 'instagram'].map(k => { const im = IMG[k + '_icon']; return [im, im.width * ih / im.height]; });
+  const total = tw + 22 + icons[0][1] + 16 + icons[1][1]; let x = CX - total / 2;
+  inkText(c, 'LIVE ON', x, y + 3, 34, 'Stamp', BLK, tw + 2, 'left'); x += tw + 22;
+  for (const [im, iw] of icons) { c.drawImage(im, x, y - ih / 2, iw, ih); x += iw + 16; }
 }
 
 // safe-zone overlay for ?safe=1 check renders (screen space)
