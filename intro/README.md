@@ -301,7 +301,10 @@ To update and rebuild both versions, edit `deals/deals.json` (for example, repla
 
 ### Story frames (Instagram / Facebook Stories)
 
-`rossen-deals-stories.html`, built from `stories.js`, which loads `deals.js` as a library so the deal cards are drawn by exactly the same code as the Reel. There is one slide per deal, then a last page whose lines (`storyEnd`) and platform icons (`storyPlatforms`) come from `deals/deals.json`.
+`rossen-deals-stories.html`, built from `stories.js`, which loads `deals.js` as a library so the deal cards are drawn by exactly the same code as the Reel. The slides, all from `deals/deals.json`, are:
+1. a title slide: the headline (`storyTitle`, `storySub`), every product pinned up as a small untouched print, and a "TAP FOR ALL 5 DEALS" prompt with an arrow;
+2. one slide per deal;
+3. a last page whose lines (`storyEnd`) and platform icons (`storyPlatforms`) also come from deals.json.
 
 Each slide is a 5 s loop and ships as an mp4 plus a PNG still (the still is the slide's first frame):
 - **Still:** the photo, the prices, all the type and the fine print never move.

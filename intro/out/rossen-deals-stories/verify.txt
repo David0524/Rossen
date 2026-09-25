@@ -1,62 +1,79 @@
-PASS 6 slides (expected 5 deals + the last page)
-PASS story_1_vibration_plate_exercise_machine.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
-PASS story_1_vibration_plate_exercise_machine.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0011/255, 0.00052% of pixels ever change by more than 4/255 (isolated codec blocks)
-PASS story_1_vibration_plate_exercise_machine.mp4: loops seamlessly (last->first change 0.613, frame-to-frame max 1.139)
-PASS story_1_vibration_plate_exercise_machine.mp4 name: read 'VIBRATIONPLATEEXERCISEMACHINE'
-PASS story_1_vibration_plate_exercise_machine.mp4 regular: expected 'REG.$169.90', read 'REG.$169.90'
-PASS story_1_vibration_plate_exercise_machine.mp4: the regular price is struck through (100% of the strike line)
-PASS story_1_vibration_plate_exercise_machine.mp4 deal: expected '$39.90', read '$39.90'
-PASS story_1_vibration_plate_exercise_machine.mp4 percent: expected 77%, best match of 0%-99% is 77% (correlation 0.944)
-PASS story_1_vibration_plate_exercise_machine.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
-PASS story_1_vibration_plate_exercise_machine.mp4: nothing printed under the disclosure (no price-check line)
-PASS story_1_vibration_plate_exercise_machine.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
-PASS story_2_solar_security_camera.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
-PASS story_2_solar_security_camera.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0012/255, 0.00047% of pixels ever change by more than 4/255 (isolated codec blocks)
-PASS story_2_solar_security_camera.mp4: loops seamlessly (last->first change 0.624, frame-to-frame max 1.140)
-PASS story_2_solar_security_camera.mp4 name: read 'SOLARSECURITYCAMERA'
-PASS story_2_solar_security_camera.mp4 regular: expected 'REG.$79.99', read 'REG.$79.99'
-PASS story_2_solar_security_camera.mp4: the regular price is struck through (100% of the strike line)
-PASS story_2_solar_security_camera.mp4 deal: expected '$39.99', read '$39.99'
-PASS story_2_solar_security_camera.mp4 percent: expected 50%, best match of 0%-99% is 50% (correlation 0.954)
-PASS story_2_solar_security_camera.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
-PASS story_2_solar_security_camera.mp4: nothing printed under the disclosure (no price-check line)
-PASS story_2_solar_security_camera.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
-PASS story_3_collapsible_wagon_cart.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
-PASS story_3_collapsible_wagon_cart.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0014/255, 0.00057% of pixels ever change by more than 4/255 (isolated codec blocks)
-PASS story_3_collapsible_wagon_cart.mp4: loops seamlessly (last->first change 0.628, frame-to-frame max 1.142)
-PASS story_3_collapsible_wagon_cart.mp4 name: read 'COLLAPSIBLEWAGONCART'
-PASS story_3_collapsible_wagon_cart.mp4 regular: expected 'REG.$49.99', read 'REG.$49.99'
-PASS story_3_collapsible_wagon_cart.mp4: the regular price is struck through (100% of the strike line)
-PASS story_3_collapsible_wagon_cart.mp4 deal: expected '$29.99', read '$29.99'
-PASS story_3_collapsible_wagon_cart.mp4 percent: expected 40%, best match of 0%-99% is 40% (correlation 0.956)
-PASS story_3_collapsible_wagon_cart.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
-PASS story_3_collapsible_wagon_cart.mp4: nothing printed under the disclosure (no price-check line)
-PASS story_3_collapsible_wagon_cart.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
-PASS story_4_magnetic_usb_c_adapter.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
-PASS story_4_magnetic_usb_c_adapter.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0027/255, 0.00070% of pixels ever change by more than 4/255 (isolated codec blocks)
-PASS story_4_magnetic_usb_c_adapter.mp4: loops seamlessly (last->first change 0.621, frame-to-frame max 1.173)
-PASS story_4_magnetic_usb_c_adapter.mp4 name: read 'MAGNETICUSB-CADAPTER'
-PASS story_4_magnetic_usb_c_adapter.mp4 regular: expected 'REG.$15.99', read 'REG.$15.99'
-PASS story_4_magnetic_usb_c_adapter.mp4: the regular price is struck through (100% of the strike line)
-PASS story_4_magnetic_usb_c_adapter.mp4 deal: expected '$7.99', read '$7.99'
-PASS story_4_magnetic_usb_c_adapter.mp4 percent: expected 50%, best match of 0%-99% is 50% (correlation 0.954)
-PASS story_4_magnetic_usb_c_adapter.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
-PASS story_4_magnetic_usb_c_adapter.mp4: nothing printed under the disclosure (no price-check line)
-PASS story_4_magnetic_usb_c_adapter.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0054/255, 0.00164% of pixels ever change by more than 4/255 (isolated codec blocks)
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4: loops seamlessly (last->first change 0.617, frame-to-frame max 1.185)
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4 name: read 'KEURIGK-MINIMATECOFFEEMAKER'
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4 regular: expected 'REG.$89.99', read 'REG.$89.99'
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4: the regular price is struck through (100% of the strike line)
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4 deal: expected '$49.99', read '$49.99'
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4 percent: expected 44%, best match of 0%-99% is 44% (correlation 0.966)
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4: nothing printed under the disclosure (no price-check line)
-PASS story_5_keurig_k_mini_mate_coffee_maker.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
-PASS story_6_tune_in.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
-PASS story_6_tune_in.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0015/255, 0.00056% of pixels ever change by more than 4/255 (isolated codec blocks)
-PASS story_6_tune_in.mp4: loops seamlessly (last->first change 0.966, frame-to-frame max 1.421)
-PASS story_6_tune_in.mp4 lines: read ['TUNEINNEXTFRIDAY', 'AT10AMET', 'FORMOREDEALS']
-PASS story_6_tune_in.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
+PASS 7 slides (expected the title, 5 deals and the last page)
+PASS story_1_title.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
+PASS story_1_title.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0048/255, 0.00140% of pixels ever change by more than 4/255 (isolated codec blocks)
+PASS story_1_title.mp4: loops seamlessly (last->first change 0.610, frame-to-frame max 1.142)
+PASS story_1_title.mp4 headline: read ['THESEDEALSARE', 'STILLLIVE']
+PASS story_1_title.mp4 subline: read 'FROMFRIDAYSLIVESHOW'
+PASS story_1_title.mp4 tap prompt: read 'TAPFORALL5DEALS'
+PASS story_1_title.mp4: photo 1 matches its file (median difference 0/255; top edge 0.8, no pin over it)
+PASS story_1_title.mp4: photo 2 matches its file (median difference 1/255; top edge 3.1, no pin over it)
+PASS story_1_title.mp4: photo 3 matches its file (median difference 1/255; top edge 0.8, no pin over it)
+PASS story_1_title.mp4: photo 4 matches its file (median difference 0/255; top edge 1.5, no pin over it)
+PASS story_1_title.mp4: photo 5 matches its file (median difference 0/255; top edge 0.1, no pin over it)
+PASS story_1_title.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
+PASS story_2_vibration_plate_exercise_machine.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
+PASS story_2_vibration_plate_exercise_machine.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0011/255, 0.00052% of pixels ever change by more than 4/255 (isolated codec blocks)
+PASS story_2_vibration_plate_exercise_machine.mp4: loops seamlessly (last->first change 0.613, frame-to-frame max 1.139)
+PASS story_2_vibration_plate_exercise_machine.mp4: photo 1 matches its file (median difference 0/255; top edge 0.5, no pin over it)
+PASS story_2_vibration_plate_exercise_machine.mp4 name: read 'VIBRATIONPLATEEXERCISEMACHINE'
+PASS story_2_vibration_plate_exercise_machine.mp4 regular: expected 'REG.$169.90', read 'REG.$169.90'
+PASS story_2_vibration_plate_exercise_machine.mp4: the regular price is struck through (100% of the strike line)
+PASS story_2_vibration_plate_exercise_machine.mp4 deal: expected '$39.90', read '$39.90'
+PASS story_2_vibration_plate_exercise_machine.mp4 percent: expected 77%, best match of 0%-99% is 77% (correlation 0.944)
+PASS story_2_vibration_plate_exercise_machine.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
+PASS story_2_vibration_plate_exercise_machine.mp4: nothing printed under the disclosure (no price-check line)
+PASS story_2_vibration_plate_exercise_machine.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
+PASS story_3_solar_security_camera.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
+PASS story_3_solar_security_camera.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0012/255, 0.00047% of pixels ever change by more than 4/255 (isolated codec blocks)
+PASS story_3_solar_security_camera.mp4: loops seamlessly (last->first change 0.624, frame-to-frame max 1.140)
+PASS story_3_solar_security_camera.mp4: photo 2 matches its file (median difference 0/255; top edge 0.9, no pin over it)
+PASS story_3_solar_security_camera.mp4 name: read 'SOLARSECURITYCAMERA'
+PASS story_3_solar_security_camera.mp4 regular: expected 'REG.$79.99', read 'REG.$79.99'
+PASS story_3_solar_security_camera.mp4: the regular price is struck through (100% of the strike line)
+PASS story_3_solar_security_camera.mp4 deal: expected '$39.99', read '$39.99'
+PASS story_3_solar_security_camera.mp4 percent: expected 50%, best match of 0%-99% is 50% (correlation 0.954)
+PASS story_3_solar_security_camera.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
+PASS story_3_solar_security_camera.mp4: nothing printed under the disclosure (no price-check line)
+PASS story_3_solar_security_camera.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
+PASS story_4_collapsible_wagon_cart.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
+PASS story_4_collapsible_wagon_cart.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0014/255, 0.00057% of pixels ever change by more than 4/255 (isolated codec blocks)
+PASS story_4_collapsible_wagon_cart.mp4: loops seamlessly (last->first change 0.628, frame-to-frame max 1.142)
+PASS story_4_collapsible_wagon_cart.mp4: photo 3 matches its file (median difference 0/255; top edge 0.6, no pin over it)
+PASS story_4_collapsible_wagon_cart.mp4 name: read 'COLLAPSIBLEWAGONCART'
+PASS story_4_collapsible_wagon_cart.mp4 regular: expected 'REG.$49.99', read 'REG.$49.99'
+PASS story_4_collapsible_wagon_cart.mp4: the regular price is struck through (100% of the strike line)
+PASS story_4_collapsible_wagon_cart.mp4 deal: expected '$29.99', read '$29.99'
+PASS story_4_collapsible_wagon_cart.mp4 percent: expected 40%, best match of 0%-99% is 40% (correlation 0.956)
+PASS story_4_collapsible_wagon_cart.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
+PASS story_4_collapsible_wagon_cart.mp4: nothing printed under the disclosure (no price-check line)
+PASS story_4_collapsible_wagon_cart.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
+PASS story_5_magnetic_usb_c_adapter.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
+PASS story_5_magnetic_usb_c_adapter.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0027/255, 0.00070% of pixels ever change by more than 4/255 (isolated codec blocks)
+PASS story_5_magnetic_usb_c_adapter.mp4: loops seamlessly (last->first change 0.621, frame-to-frame max 1.173)
+PASS story_5_magnetic_usb_c_adapter.mp4: photo 4 matches its file (median difference 0/255; top edge 0.9, no pin over it)
+PASS story_5_magnetic_usb_c_adapter.mp4 name: read 'MAGNETICUSB-CADAPTER'
+PASS story_5_magnetic_usb_c_adapter.mp4 regular: expected 'REG.$15.99', read 'REG.$15.99'
+PASS story_5_magnetic_usb_c_adapter.mp4: the regular price is struck through (100% of the strike line)
+PASS story_5_magnetic_usb_c_adapter.mp4 deal: expected '$7.99', read '$7.99'
+PASS story_5_magnetic_usb_c_adapter.mp4 percent: expected 50%, best match of 0%-99% is 50% (correlation 0.954)
+PASS story_5_magnetic_usb_c_adapter.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
+PASS story_5_magnetic_usb_c_adapter.mp4: nothing printed under the disclosure (no price-check line)
+PASS story_5_magnetic_usb_c_adapter.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0054/255, 0.00164% of pixels ever change by more than 4/255 (isolated codec blocks)
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4: loops seamlessly (last->first change 0.617, frame-to-frame max 1.185)
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4: photo 5 matches its file (median difference 0/255; top edge 0.2, no pin over it)
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4 name: read 'KEURIGK-MINIMATECOFFEEMAKER'
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4 regular: expected 'REG.$89.99', read 'REG.$89.99'
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4: the regular price is struck through (100% of the strike line)
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4 deal: expected '$49.99', read '$49.99'
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4 percent: expected 44%, best match of 0%-99% is 44% (correlation 0.966)
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4: nothing printed under the disclosure (no price-check line)
+PASS story_6_keurig_k_mini_mate_coffee_maker.mp4: the link-sticker slot is empty inside (nothing for the sticker to cover)
+PASS story_7_tune_in.mp4: 120 frames, 1080x1920 (5.00 s at 24 fps)
+PASS story_7_tune_in.mp4: the card (photo, prices, type, fine print) is still in every frame: mean change 0.0015/255, 0.00056% of pixels ever change by more than 4/255 (isolated codec blocks)
+PASS story_7_tune_in.mp4: loops seamlessly (last->first change 0.966, frame-to-frame max 1.421)
+PASS story_7_tune_in.mp4 lines: read ['TUNEINNEXTFRIDAY', 'AT10AMET', 'FORMOREDEALS']
+PASS story_7_tune_in.mp4 fine print: read 'AFFILIATELINKS:JEFFROSSENANDDEALSEEKMAYEARNACOMMISSION.'
 ALL PASS

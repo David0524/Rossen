@@ -50,6 +50,41 @@ function dealSlide(c, t, k) {
   cardT(c); photoPrint(c, k, L, 0); headChips(c, d.name, L, 0); regChip(c, d, L, 0, true); priceTag(c, d, L, 0); sticker(c, d, L, 0);
   resetT(c); finePrint(c); linkSlot(c); arrow(c, t);
 }
+// ================= the title slide: the headline, all the products pinned up as small prints, and a tap prompt =================
+const THUMB = { box: 250, bd: 20 };
+function thumbPrint(c, k, cx, top) {   // the same print as the deal cards, smaller: untouched photo, cream border, paper shadow, pin
+  const im = IMG['deal' + k], sc = Math.min(THUMB.box / im.width, THUMB.box / im.height), pw = im.width * sc, ph = im.height * sc;
+  const w = pw + 2 * THUMB.bd, h = ph + 2 * THUMB.bd, x = cx - w / 2, y = top + (THUMB.box - ph) / 2;
+  c.save(); c.shadowColor = 'rgba(29,27,31,0.30)'; c.shadowBlur = 14; c.shadowOffsetX = 7; c.shadowOffsetY = 10; c.fillStyle = CHIP; c.fillRect(x, y, w, h); c.restore();
+  c.imageSmoothingEnabled = true; c.imageSmoothingQuality = 'high'; c.drawImage(im, x + THUMB.bd, y + THUMB.bd, pw, ph);
+  pushpin(c, cx, y + 3);   // entirely on the border (radius 15 + ring < 20)
+}
+function thumbLayout(n) {   // rows of up to 3, centred: [cx, top] per product
+  const rows = [], P = []; for (let i = 0; i < n; i += 3) rows.push(Math.min(3, n - i));
+  rows.forEach((m, r) => { for (let j = 0; j < m; j++) P.push([CX + (j - (m - 1) / 2) * 320, 640 + r * 300]); });
+  return P;
+}
+const TAP = { y: 1330 };
+function tapPrompt(c, t) {   // "TAP FOR ALL 5 DEALS" and an arrow pointing to the next story, nudging right on every beat
+  const s = `TAP FOR ALL ${DEALS.length} DEALS`, size = 50; c.font = `${size}px Stamp`; const w = c.measureText(s).width + 58, h = size * 1.34, x = CX - 80;
+  c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(x - w / 2 + 8, TAP.y - h / 2 + 10, w, h); c.restore();
+  c.fillStyle = BLK; c.fillRect(x - w / 2, TAP.y - h / 2, w, h); text(c, s, x, TAP.y + size * .06, `${size}px Stamp`, CHIP);
+  const tip = x + w / 2 + 170 + 16 * beatU(t), y = TAP.y;
+  const P = [[tip, y], [tip - 64, y - 46], [tip - 64, y - 18], [tip - 150, y - 18], [tip - 150, y + 18], [tip - 64, y + 18], [tip - 64, y + 46]];
+  c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fill(polyPath(P.map(([a, b]) => [a + 8, b + 10]))); c.restore();
+  block(c, P, YEL, 9102, { kw: 6 });
+}
+function titleSlide(c, t) {
+  creamBg(c);
+  resetT(c); jeffStory(c, t, 'point');
+  printFinish(c);
+  const [l1, l2] = DJ.storyTitle;
+  chip(c, up(l1), CX, 330, 70, BLK, CHIP, 1e6, 0); chip(c, up(l2), CX, 452, 112, YEL, BLK, 1e6, 0);
+  if (DJ.storySub) fitText(c, up(DJ.storySub), CX, 578, 46, 'Stamp', BLUE, 900);
+  thumbLayout(DEALS.length).forEach(([cx, top], k) => thumbPrint(c, k, cx, top));
+  tapPrompt(c, t);
+  finePrint(c, 1420);
+}
 function endSlide(c, t) {
   creamBg(c);
   resetT(c); jeffStory(c, t, 'thumb');
@@ -74,7 +109,7 @@ let NSLIDE = 1;
 function frame(i) {
   const s = Math.min(NSLIDE - 1, Math.floor(i / SLIDE_F)), t = (i - s * SLIDE_F) / FPS; FILM_T = t;
   resetT(CTX); CTX.globalAlpha = 1;
-  if (s < DEALS.length) dealSlide(CTX, t, s); else endSlide(CTX, t);
+  if (s === 0) titleSlide(CTX, t); else if (s <= DEALS.length) dealSlide(CTX, t, s - 1); else endSlide(CTX, t);
   if (SHOW_SAFE) storySafe(CTX); resetT(CTX);
 }
 window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
@@ -85,7 +120,8 @@ window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image
   if (!Array.isArray(DJ.storyPlatforms)) throw new Error('deals.json: storyPlatforms missing');
   await Promise.all(DEALS.map((d, k) => loadImg('deal' + k, d.image)));
   DEALS.forEach((d, k) => { if (!IMG['deal' + k] || !IMG['deal' + k].width) throw new Error('missing image: ' + d.image); });
-  NSLIDE = DEALS.length + 1; window.__NFR = NSLIDE * SLIDE_F;
+  if (!Array.isArray(DJ.storyTitle) || DJ.storyTitle.length !== 2) throw new Error('deals.json: storyTitle needs two lines');
+  NSLIDE = DEALS.length + 2; window.__NFR = NSLIDE * SLIDE_F;
   window.__info = { slides: NSLIDE, slideFrames: SLIDE_F, slot: SLOT };
   frame(+(Q.get('frame') || 0));
   window.__ready = true;

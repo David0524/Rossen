@@ -1,6 +1,7 @@
 """Verify the "STILL LIVE" Story frames (out/rossen-deals-stories) against deals/deals.json.
 usage: python3 tools/verify_stories.py
-Per deal slide (OCR on the lossless PNG still): the name, the regular price, the deal price, the percent off (matched against
+The title slide: its headline, subline and tap prompt, and every product photo matching its file. Per deal slide (OCR on
+the lossless PNG still): the photo matching its file, the name, the regular price, the deal price, the percent off (matched against
 every value from 0% to 99% in the same font), the strike through the regular price, and the fine print (the disclosure only). Per mp4: 5 s at 24 fps,
 1080x1920; the card (photo, prices, type, fine print) completely still in every frame; the loop seamless (the last frame
 leads back into the first like any other pair); the link-sticker slot empty inside. The last page: its lines and the icons."""
@@ -62,20 +63,41 @@ def frames(mp4, scale=None):
     vf = ['-vf', f'scale={scale}'] if scale else []; w, h = (map(int, scale.split(':')) if scale else (1080, 1920))
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', mp4, *vf, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], capture_output=True, check=True).stdout
     return np.frombuffer(raw, np.uint8).reshape(-1, h, w, 3)
+def photo_check(f, k, x, y, pw, ph, tag):   # the photo on the slide vs its file, resized the same: untouched, nothing over it
+    src = np.asarray(Image.open(os.path.join(root, D[k]['image'])).convert('RGB').resize((round(pw), round(ph)), Image.LANCZOS)).astype(int)
+    got = f[round(y):round(y) + src.shape[0], round(x):round(x) + src.shape[1]].astype(int); d = np.abs(got - src).max(-1)
+    top = d[:24].mean()   # where a pushpin would land if it strayed onto the photo
+    report(np.median(d) <= 3 and top < 12, f'{tag}: photo {k + 1} matches its file (median difference {np.median(d):.0f}/255; top edge {top:.1f}, no pin over it)')
+def thumb_layout(n):   # stories.js thumbLayout / thumbPrint
+    rows = [min(3, n - i) for i in range(0, n, 3)]; P = []
+    for r, m in enumerate(rows): P += [(540 + (j - (m - 1) / 2) * 320, 640 + r * 300) for j in range(m)]
+    return P
 fine2 = f"PRICES AS OF {DJ['priceCheck']['date'].upper()}, {DJ['priceCheck']['time'].upper()} ET. DEALS CAN END ANYTIME."
 files = sorted(glob.glob(os.path.join(O, 'story_*.mp4')), key=lambda p: int(re.search(r'story_(\d+)_', p).group(1)))
-report(len(files) == N + 1, f'{len(files)} slides (expected {N} deals + the last page)')
+report(len(files) == N + 2, f'{len(files)} slides (expected the title, {N} deals and the last page)')
 for s, mp4 in enumerate(files):
     png = mp4[:-4] + '.png'; f = np.asarray(Image.open(png).convert('RGB')); tag = os.path.basename(mp4)
     V = frames(mp4); report(len(V) == 120 and V.shape[1:] == (1920, 1080, 3), f'{tag}: {len(V)} frames, {V.shape[2]}x{V.shape[1]} (5.00 s at 24 fps)')
     Vs = V[:, ::4, ::4].astype(np.int16)   # motion, measured on a quarter-size copy
-    cardzone = (slice(250 // 4, 1420 // 4), slice(0, 1080 // 4)) if s < N else (slice(250 // 4, 1260 // 4), slice(0, 1080 // 4))
+    kind = 'title' if s == 0 else 'deal' if s <= N else 'end'
+    cardzone = (slice(250 // 4, {'title': 1280, 'deal': 1420, 'end': 1260}[kind] // 4), slice(0, 1080 // 4))
     G = V[:, cardzone[0].start * 4:cardzone[0].stop * 4].astype(np.int16).mean(-1); dd = np.abs(np.diff(G, axis=0))   # full-size, grey
     report(dd.mean() < .01 and (dd > 4).mean() < 1e-4, f'{tag}: the card (photo, prices, type, fine print) is still in every frame: mean change {dd.mean():.4f}/255, {(dd > 4).mean():.5%} of pixels ever change by more than 4/255 (isolated codec blocks)')
     moves = [np.abs(Vs[i] - Vs[i - 1]).mean() for i in range(1, len(Vs))]; wrap = np.abs(Vs[0] - Vs[-1]).mean()
     report(wrap <= max(moves) + .05, f'{tag}: loops seamlessly (last->first change {wrap:.3f}, frame-to-frame max {max(moves):.3f})')
-    if s < N:
-        d = D[s]
+    if kind == 'title':
+        l1 = ocr_any(norm(DJ['storyTitle'][0]), f, (180, 296, 900, 364), 'light'); l2 = ocr_any(norm(DJ['storyTitle'][1]), f, (60, 390, 1020, 514), 'dark')
+        report([l1, l2] == [norm(x) for x in DJ['storyTitle']], f'{tag} headline: read {[l1, l2]}')
+        sub = ocr_any(norm(DJ['storySub']), f, (60, 548, 1020, 608), 'inkblue'); report(sub == norm(DJ['storySub']), f'{tag} subline: read {sub!r}')
+        tp = ocr_any(f'TAPFORALL{N}DEALS', f, (130, 1300, 790, 1360), 'light'); report(tp == f'TAPFORALL{N}DEALS', f'{tag} tap prompt: read {tp!r}')
+        for k, (cx, top) in enumerate(thumb_layout(N)):
+            im = Image.open(os.path.join(root, D[k]['image'])); sc = min(250 / im.width, 250 / im.height); pw, ph = im.width * sc, im.height * sc
+            photo_check(f, k, cx - pw / 2, top + (250 - ph) / 2 + 20, pw, ph, tag)   # the image sits inside the 20 px border
+        fy = 1420
+    elif kind == 'deal':
+        d = D[s - 1]; k = s - 1
+        im = Image.open(os.path.join(root, d['image'])); sc = min(480 / im.width, 480 / im.height); pw, ph = im.width * sc, im.height * sc
+        photo_check(f, k, 60 + (480 - pw) / 2 + 28 + DX, 530 + (480 - ph) / 2 + 28 + DY, pw, ph, tag)
         name = norm(chips(f, split2(d['name'].upper()))); report(name == norm(d['name']), f'{tag} name: read {name!r}')
         rw = ImageFont.truetype(FONT, 54).getlength('REG. $' + d['regular']) + 56
         a = f.copy(); y0s = 1120 + DY - 3; blu = lambda r: (r[..., 2] > 150) & (r[..., 0] < 80)   # read the regular price through its strike:
@@ -95,8 +117,8 @@ for s, mp4 in enumerate(files):
         report(got == want, f'{tag} lines: read {got}')
         fy = round(y0 + len(want) * 100 + 40 + 90)
     fl = ocr_any(norm(DJ['disclosure']), f, (40, fy - 16, 1040, fy + 16), 'dark', psm=7); report(fl == norm(DJ['disclosure']), f'{tag} fine print: read {fl!r}')
-    if s < N: below = f[fy + 18:fy + 60, 40:1040].astype(int); report((below.max(-1) < 110).mean() == 0, f'{tag}: nothing printed under the disclosure (no price-check line)')
-    if s < N:
+    if kind == 'deal': below = f[fy + 18:fy + 60, 40:1040].astype(int); report((below.max(-1) < 110).mean() == 0, f'{tag}: nothing printed under the disclosure (no price-check line)')
+    if kind == 'deal':
         x0, y0, x1, y1 = SLOT; inner = f[y0 + 14:y1 - 14, x0 + 50:x1 - 50].astype(int)
         report((np.maximum(np.maximum(inner[..., 0], inner[..., 1]), inner[..., 2]) < 150).mean() == 0, f'{tag}: the link-sticker slot is empty inside (nothing for the sticker to cover)')
 print('ALL PASS' if ok_all else 'SOME CHECKS FAILED')
