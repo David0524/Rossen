@@ -43,6 +43,17 @@ Live viewers drive the rest of his revenue: sponsor rates, Super Chats and membe
 - write times as "ET", not "EST": the shows run in EDT half the year
 - teases and the LIVE TODAY loops keep their own endings
 
+### Borrowing from Vox (see VOX_STUDY.md)
+For explainers, use:
+- a caption-first script, with one visual change per caption
+- scam artifacts shown as evidence, which Jeff marks up with a highlighter, a circle or a callout, while the camera pushes in on each mark
+- a 2.5D layered camera with a slow push
+- puppets and cut-outs moving on twos (12 fps), while text and the camera stay at 24 fps
+- one sourced number per video
+- a change of music cue at each act
+
+Keep our look and the readability rules.
+
 ### Transitions: more creative and interactive, but not every time
 - **Budget:** in a 30–60 s piece, plan 2–3 signature transitions. The rest are simple pushes or clean cuts on the downbeat. Never put two signature transitions back to back.
 - **"Interactive"** means the transition is an action the viewer can follow, done by a character or a prop. Examples:
