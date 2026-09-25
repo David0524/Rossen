@@ -185,7 +185,7 @@ if not HO:
         a = act(bar)
         for k, ch in enumerate(row.split()):
             bb = BB(bar, k + 1); t = B(bb)
-            if SIL0 - 1e-6 <= t < SIL1 or t >= STAMP - BEAT: continue
+            if AT(13, 3.5) - 1e-6 <= t < SIL1 or t >= STAMP - BEAT: continue   # nothing sustains past the button into the silence
             r = CROOT[ch]; lo = r.replace('2', '1') if r[-1] == '2' else r.replace('1', '0')
             if a == 'hook':
                 if k in (0, 2): cpz(r, t, .55, dur=.3); cbp(lo, t, .4, dur=.4)
@@ -211,7 +211,7 @@ if not HO:
                 if k % 2 == 0: [hnl(n, t, .3, dur=BEAT * 2 - .1, rel=.3) for n in PAD[ch]]
         if a == 'evidence' or a == 'hook': timp(AT(bar), .35)
         if a == 'scale': timp(AT(bar), .55); kick(AT(bar), .6); kick(AT(bar, 3), .5)
-        if a == 'how': groove(BB(bar), BB(bar, 4) if bar == 13 else BB(bar + 1), .5, .07)
+        if a == 'how': groove(BB(bar), BB(bar, 3.5) if bar == 13 else BB(bar + 1), .5, .07)
         if a == 'fix': groove(BB(bar), min(BB(bar + 1), STAMP / BEAT - 1), .58, .1)
     for n in ('D3', 'F#3', 'A3'): tpl(n, AT(14, 1.02), .16, dur=2.5 * 1.8, rel=.5)          # warm trumpets under the fix
     swell_to(AT(7), .3); roll_to(AT(15, 4), STAMP, .4, TIMP_ROLL); tomfill(AT(15, 4.25), STAMP, .4, S16 / 2)
@@ -249,7 +249,8 @@ fx('casino/card-slide-2.ogg', AT(12, 2), .35); fx('casino/card-place-2.ogg', AT(
 for i, b in enumerate((2, 3, 4)):
     t = AT(13, b)
     if t < SIL0 - 1e-6: fx('rpg/handleCoins.ogg', t, .35); kick(t, .55); H(t, 'reel')
-fx('rpg/handleCoins2.ogg', AT(13, 3.5), .3)
+# the button that ends the music before the silent beat: a short, dry tutti on the dominant (A), then nothing
+hit(AT(13, 3.5), 'A', .85, crash=0); fx('impact/impactPunch_heavy_001.ogg', AT(13, 3.5), .35); H(AT(13, 3.5), 'button')
 # FIX: the strip is pinned up on 1 and unfolds on 2 and 3; Jeff's thumbs up on bar 15
 fx('rpg/bookPlace1.ogg', AT(14), .5); fx('impact/impactSoft_medium_000.ogg', AT(14), .4); kick(AT(14), .8); H(AT(14), 'strip')
 for n in ('D2', 'A2'): hns(n, AT(14), .7, dur=.6)
@@ -267,8 +268,8 @@ if not HO:
     cpz('D2', _t0, .3)
 
 # ---------------- master ----------------
-# the silent beat: everything (tails included) fades out in 25 ms before it and stays at zero until the fix
-i0, i1, fz = int(SIL0 * SR), int(SIL1 * SR), int(.025 * SR)
+# the silent beat: everything (tails included) is damped out just before it and stays at zero until the fix
+i0, i1, fz = int(SIL0 * SR), int(SIL1 * SR), int(.12 * SR)   # the button's ring is damped over 120 ms, like a hand on the strings
 out[i0 - fz:i0] *= np.linspace(1, 0, fz)[:, None]; out[i0:i1] = 0
 fade = int(.8 * SR); out[-fade:] *= np.linspace(1, 0, fade)[:, None] ** 2
 out = np.tanh(out * 1.1) / 1.1

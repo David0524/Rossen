@@ -24,7 +24,7 @@
    HOW       bar 10    the Scammer sends a spray of texts                      "SCAMMERS TEXT / IN BULK"
              bar 11    a few phones in a row get tapped                        "A FEW PEOPLE / TAP THE LINK"
              bar 12    a card slides into the fake page                        "THE FAKE PAGE / TAKES THEIR CARD"
-             bar 13    the Scammer reels the cards in; the last beat is silent "AND THE SCAMMER / COLLECTS."
+             bar 13    the Scammer reels the cards in; the last beat is silent and frozen "AND THE SCAMMER / COLLECTS."
    FIX       bar 14-15 [3] the strip unfolds (1, 2, 3); Jeff; the stamp on 15:4   (the strip is the only text)
    END       bar 16    the closing card, still for its last 4.2 s
 */
@@ -117,7 +117,6 @@ function phoneEvidence(c, tt) {
   c.fillStyle = '#1a55c8'; c.font = `${L.size - 5}px ${SANS}`; c.fillText(LINK, L.x0, L.linkY, L.maxW);
   c.fillRect(L.x0, L.linkY + 5, Math.min(L.maxW, c.measureText(LINK).width), 2.5);
   c.save(); c.translate(x + w / 2, y - 6); c.rotate(-.05); c.globalAlpha = .9; ink(c, rect(-90, -26, 180, 52), CREAM, 7201, { amp: 4, reg: false }); c.restore();
-  pushpin(c, x + w - 36, y + 30);
 }
 function camEvidence(t) {   // one slow push (bars 0-5); then, into bar 6, the dive toward the link
   const u = easeIO(clamp01(t / at(6))), lb = linkBox();
@@ -128,7 +127,6 @@ function camEvidence(t) {   // one slow push (bars 0-5); then, into bar 6, the d
 function sceneEvidence(c, t) {
   creamBg(c);
   const tt = onTwos(t), cam = camEvidence(t);
-  camLayer(c, cam, .35, () => { for (const [px, py] of [[110, 680], [860, 740], [880, 1360]]) pushpin(c, px, py); });
   camLayer(c, cam, 1, () => { phoneEvidence(c, tt); marks(c, tt); });
   camLayer(c, cam, 1.15, () => {   // Jeff pops up on bar 1, then marks one clue per bar (on twos)
     if (tt < at(1) - SLAM) return;
@@ -217,6 +215,7 @@ function payCard(c, x, y, s, rot, seed) { c.save(); c.translate(x, y); c.rotate(
 function bubble(c, x, y, s) { c.save(); c.translate(x, y); c.scale(s, s); block(c, rrPts(-44, -26, 88, 52, 16, 4), CHIP, 7501, { kw: 4 });
   block(c, [[-20, 22], [-4, 22], [-24, 40]], CHIP, 7502, { kw: 0, key: false }); c.fillStyle = BLK; for (let i = 0; i < 3; i++) c.fillRect(-26 + i * 20, -4, 12, 8); c.restore(); }
 function sceneFlow(c, t) {
+  t = Math.min(t, at(13, 4));   // the silent beat: the picture freezes with the sound
   bgDots(c, BLUE, .07, .35);
   const tt = onTwos(t), cy = flowCam(t);
   c.save(); c.beginPath(); c.rect(-400, 612, 1800, 1400); c.clip();   // below the captions: earlier steps slide away under this edge, never under the text
@@ -306,7 +305,7 @@ function drawScene(c, t) {
   else if (t < at(7) + .15) pullBack(c, t);
   else if (t < at(10) - PUSH / 2) { sceneMap(c, t); contentT(c); captions(c, t); printFinish(c); }
   else if (t < at(10) + PUSH / 2) pushScenes(c, t, at(10), sceneMap, sceneFlow);
-  else if (t < at(14)) { sceneFlow(c, t); contentT(c); captions(c, t); printFinish(c); }
+  else if (t < at(14)) { sceneFlow(c, t); contentT(c); captions(c, Math.min(t, at(13, 4))); printFinish(c); }
   else { sceneFix(c, t); contentT(c); printFinish(c); }   // a clean cut after the silent beat
   if (SHOW_SAFE) safeOverlay(c);
 }

@@ -7,6 +7,7 @@ kenney/casino/card-slide-5.ogg
 kenney/casino/chip-lay-1.ogg
 kenney/impact/impactPlank_medium_000.ogg
 kenney/impact/impactPunch_heavy_000.ogg
+kenney/impact/impactPunch_heavy_001.ogg
 kenney/impact/impactSoft_heavy_000.ogg
 kenney/impact/impactSoft_medium_000.ogg
 kenney/interface/click_001.ogg
@@ -22,17 +23,21 @@ kenney/interface/tick_002.ogg
 kenney/rpg/bookFlip2.ogg
 kenney/rpg/bookPlace1.ogg
 kenney/rpg/handleCoins.ogg
-kenney/rpg/handleCoins2.ogg
+vsco/Brass/F Horn/stac/MOHorn_stac_A#1_v2_rr1.wav
 vsco/Brass/F Horn/stac/MOHorn_stac_A2_v2_rr1.wav
 vsco/Brass/F Horn/stac/MOHorn_stac_D2_v2_rr1.wav
+vsco/Brass/F Horn/stac/MOHorn_stac_F2_v2_rr1.wav
 vsco/Brass/F Horn/stac/MOHorn_stac_G1_v2_rr1.wav
 vsco/Brass/F Horn/sus/MOHorn_sus_A2_v1_1.wav
 vsco/Brass/F Horn/sus/MOHorn_sus_D2_v1_1.wav
 vsco/Brass/F Horn/sus/MOHorn_sus_F2_v1_1.wav
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_A#2_v3_rr1.wav
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_D3_v3_rr1.wav
 vsco/Brass/Tenor Trombone/sus/tenortbn_sus_A#1_v2_1.wav
 vsco/Brass/Tenor Trombone/sus/tenortbn_sus_D2_v2_1.wav
 vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_A4_v3_rr1.wav
 vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_D4_v3_rr1.wav
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_F4_v3_rr1.wav
 vsco/Brass/Trumpet/susvib/Sum_SHTrumpet_susvib_D4_v2_rr1.wav
 vsco/Percussion/Claves1_Hit_v2_rr1_Sum.wav
 vsco/Percussion/Glock/glock_medium_C6.wav

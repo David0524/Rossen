@@ -28,6 +28,9 @@ kenney/impact/impactPlank_medium_000.ogg
 kenney/impact/impactPunch_heavy_000.ogg
     source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
     license: CC0 1.0
+kenney/impact/impactPunch_heavy_001.ogg
+    source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
+    license: CC0 1.0
 kenney/impact/impactSoft_heavy_000.ogg
     source: https://kenney.nl/assets/impact-sounds  (Kenney, kenney.nl)
     license: CC0 1.0
@@ -73,13 +76,16 @@ kenney/rpg/bookPlace1.ogg
 kenney/rpg/handleCoins.ogg
     source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
     license: CC0 1.0
-kenney/rpg/handleCoins2.ogg
-    source: https://kenney.nl/assets/rpg-audio  (Kenney, kenney.nl)
+vsco/Brass/F Horn/stac/MOHorn_stac_A#1_v2_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
     license: CC0 1.0
 vsco/Brass/F Horn/stac/MOHorn_stac_A2_v2_rr1.wav
     source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
     license: CC0 1.0
 vsco/Brass/F Horn/stac/MOHorn_stac_D2_v2_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/F Horn/stac/MOHorn_stac_F2_v2_rr1.wav
     source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
     license: CC0 1.0
 vsco/Brass/F Horn/stac/MOHorn_stac_G1_v2_rr1.wav
@@ -94,6 +100,12 @@ vsco/Brass/F Horn/sus/MOHorn_sus_D2_v1_1.wav
 vsco/Brass/F Horn/sus/MOHorn_sus_F2_v1_1.wav
     source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
     license: CC0 1.0
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_A#2_v3_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Tenor Trombone/stac/tenortbn_stac_D3_v3_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
 vsco/Brass/Tenor Trombone/sus/tenortbn_sus_A#1_v2_1.wav
     source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
     license: CC0 1.0
@@ -104,6 +116,9 @@ vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_A4_v3_rr1.wav
     source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
     license: CC0 1.0
 vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_D4_v3_rr1.wav
+    source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
+    license: CC0 1.0
+vsco/Brass/Trumpet/stac/Sum_SHTrumpet_stac_F4_v3_rr1.wav
     source: https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition)
     license: CC0 1.0
 vsco/Brass/Trumpet/susvib/Sum_SHTrumpet_susvib_D4_v2_rr1.wav

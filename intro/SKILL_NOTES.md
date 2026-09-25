@@ -54,6 +54,26 @@ For explainers, use:
 
 Keep our look and the readability rules.
 
+### For the future: real images as evidence (not used yet)
+If real material becomes available, use it the way Vox does, as evidence and never as decoration: one or two per video, at the moment that needs proof.
+
+What's safe to use:
+- Jeff's own footage
+- scam texts sent in by viewers, with their permission and personal details removed
+- U.S. government alerts, cropped to the text (no seals)
+- your own photos
+
+How to treat it in our style: a torn-edge cut-out on the cream board, printed as a blue-and-black halftone, marked up by Jeff.
+
+Never use:
+- stock or news photos you haven't licensed
+- faces of real people other than Jeff
+- real logos
+- anything that points the blame at a real business
+
+### Silence needs a reason
+A beat of silence reads as a glitch if the music is cut off mid-phrase while the picture keeps moving. End the music on a short "button" hit, damp its ring, and freeze the picture for the silent beat. Then cut to the next act on the downbeat.
+
 ### Transitions: more creative and interactive, but not every time
 - **Budget:** in a 30–60 s piece, plan 2–3 signature transitions. The rest are simple pushes or clean cuts on the downbeat. Never put two signature transitions back to back.
 - **"Interactive"** means the transition is an action the viewer can follow, done by a character or a prop. Examples:
