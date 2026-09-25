@@ -259,3 +259,16 @@ Applied to:
 
 Rebuild them all with `tools/build_shorts.sh`.
 
+## Explainer: the "unpaid toll" text scam (9:16, 44.5 s)
+
+`rossen-toll-scam.html`, built from `vox.js` and `toll.js`: 16 bars at 96 BPM, then the closing card. It uses the house style plus a few techniques from `VOX_STUDY.md`, each placed on purpose:
+- The evidence mark-up happens only on the phone, one mark per clue, each clue with a different mark: a highlighter, a circle, a pointer with an underline, then a scribbled underline.
+- Puppets and cut-out graphics move on twos (`onTwos`, anchored so a new drawing lands on every beat). Text and the camera stay smooth.
+- One slow 2.5D camera push runs through the evidence.
+- One number appears: the FBI stat, sourced in `out/rossen-toll-scam/sources.txt`.
+- There are three standout transitions: the dive through the circled link, the pull-back from the fake page to a map pin, and the unfolding strip after a beat of true silence. Everything else is a plain slide or cut.
+
+The map is Natural Earth's public-domain outline (`assets/toll/us_outline.json`).
+
+To build: `python3 score_toll.py`, then loudnorm (I -16, TP -2), `alimiter=limit=0.7`, then mux. `HITS_ONLY=1 python3 score_toll.py` writes the hits-only stem used for the sync check.
+
