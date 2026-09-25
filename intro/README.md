@@ -222,7 +222,7 @@ The film's beats:
 
 - **New phone (bars 0–2):** on textured cream, a box slams down in frame 0 and a phone rises out. It activates, rings as CARRIER SUPPORT, and is hooked and yanked away.
 - **Port hacking (bars 3–5):** the camera follows it up to the Scammer, who pulls the phone number out like a thread. The thread leads to a vault that opens, cash streams out, and a calendar tears DAY 1 through WEEK 3.
-- **The fix (bar 6):** a dive into the vault finds a laptop and Jeff with the magnifier. A padlock slams onto the laptop, then a check lands.
+- **The fix (bar 6):** AN ETHICAL HACKER / SHOWS YOU HOW / TO STOP IT. A dive into the vault finds a laptop and Jeff with the magnifier. A padlock slams onto the laptop, then a check lands.
 - **Deals (bar 7):** PLUS: HOT DEALS / AND LIVE REQUESTS. Price tags pop in, plus a YOUR REQUESTS bubble.
 - **Amazon promo codes (bars 8–9):** WE FOUND HIDDEN / AMAZON PROMO CODES.
   - Jeff asked for the official Amazon logo; the file he supplied is `assets/tease/amazon_logo_official.png`. It's drawn exactly as supplied (uniform scale, no recolour) and after the print finish, so nothing covers it.

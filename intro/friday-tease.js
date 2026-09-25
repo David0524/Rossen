@@ -11,7 +11,7 @@
                            number out of it like a thread
               bar 4  10.0  the camera follows the thread right to a vault; it turns the lock; the door opens on 3 "YOUR NUMBER... / OPENS YOUR BANK"
               bar 5  12.5  cash streams out on eighths; the calendar tears DAY 1, DAY 4, WEEK 2, WEEK 3           "FOR DAYS. / EVEN WEEKS."
-   THE FIX    bar 6  15.0  dive into the vault: a laptop typing; Jeff's magnifier on 2; a padlock slams on 3, a   "AN ETHICAL HACKER / HOW TO STOP IT"
+   THE FIX    bar 6  15.0  dive into the vault: a laptop typing; Jeff's magnifier on 2; a padlock slams on 3, a   "AN ETHICAL HACKER / SHOWS YOU HOW / TO STOP IT"
                            check on 4
    DEALS      bar 7  17.5  price tags swing in on 1, 2, 3; YOUR REQUESTS on 4                                    "PLUS: HOT DEALS / AND LIVE REQUESTS"
    AMAZON     bars 8-9 20.0 the official Amazon logo on a card; three code tickets slide out from behind it (8:2-4);   "WE FOUND HIDDEN / AMAZON PROMO CODES"
@@ -31,7 +31,7 @@ const PUSH = .3;
 const CAPS = [
   [at(0), 'OPENING A', 'NEW PHONE?'], [at(1), 'MINUTES LATER...', 'IT RINGS.'], [at(2), 'WITHIN THE HOUR,', "IT'S GONE."],
   [at(3), 'PORT HACKING'], [at(4), 'YOUR NUMBER...', 'OPENS YOUR BANK'], [at(5), 'FOR DAYS.', 'EVEN WEEKS.'],
-  [at(6), 'AN ETHICAL HACKER', 'HOW TO STOP IT'], [at(7), 'PLUS: HOT DEALS', 'AND LIVE REQUESTS'], [at(8), 'WE FOUND HIDDEN', 'AMAZON PROMO CODES'], [at(B_LIVE), 'LIVE ON YOUTUBE', 'ROSSEN REPORTS'], [at(B_HAND), null],
+  [at(6), 'AN ETHICAL HACKER', 'SHOWS YOU HOW', 'TO STOP IT'], [at(7), 'PLUS: HOT DEALS', 'AND LIVE REQUESTS'], [at(8), 'WE FOUND HIDDEN', 'AMAZON PROMO CODES'], [at(B_LIVE), 'LIVE ON YOUTUBE', 'ROSSEN REPORTS'], [at(B_HAND), null],
 ];
 function chip(c, s, x, y, size, bg, fg, t, t0, rot = 0, maxW = 700, from = 1.1, font = 'Stamp') {
   if (t < t0 - SLAM) return; c.font = `${size}px ${font}`; const w = Math.min(c.measureText(s).width, maxW) + 60, h = size * 1.3, k = t < t0 ? lerp(from, 1, easeIn(land(t, t0))) : pop(t, t0);
@@ -206,7 +206,7 @@ function scenePort(c, t) {
 function vaultRect() { const x = VAULT_AT[0] - PAN; return [x - 270, VAULT_AT[1] - 270, 540, 540]; }
 
 // THE FIX (bars 6-7): a laptop, Jeff and the magnifier; then the phone gets its padlock
-const LAP = [480, 820];
+const LAP = [480, 900];   // below the three-line caption of bar 6 (its third chip ends at y 647)
 function sceneFix(c, t) {   // bar 6: the laptop typing; Jeff's magnifier on 2; a padlock slams onto it on 3; a check on 4
   bgDots(c, BLUE, .06, .3);
   const [sx, sy] = shake(t, [[at(6, 3), 14]]);
@@ -219,7 +219,7 @@ function sceneFix(c, t) {   // bar 6: the laptop typing; Jeff's magnifier on 2; 
       magnifier(c, cxm, cym, lerp(40, 120, up), J.hand, up > .6 ? () => { c.translate(cxm, cym); c.scale(1.8, 1.8); c.translate(-cxm, -cym); laptop(c, LAP[0], LAP[1], t, at(6)); } : null); }
   }
   if (t >= at(6, 3) - SLAM) { const k = t < at(6, 3) ? lerp(1.4, 1, easeIn(land(t, at(6, 3)))) : pop(t, at(6, 3)); padlock(c, LAP[0] + sx, LAP[1] + 40 + sy, 1.1 * k); }
-  check(c, 720, 690, .7, t, at(6, 4));
+  check(c, 740, 770, .7, t, at(6, 4));
 }
 
 // DEALS (bar 7): brighter; tags swing in on each beat
@@ -279,7 +279,7 @@ function sceneLive(c, t) {
   shadowRect(c, x, y, w, h); block(c, rect(x, y, w, h), BLK, 7901, { kw: 6 });
   c.save(); c.beginPath(); c.rect(x + 14, y + 14, w - 28, h - 28); c.clip();
   ink(c, rect(x, y, w, h), CREAM, 7902, { reg: false }); dotsIn(c, rect(x, y, w, h), YEL, .35, 7903, 14);
-  jeff(c, x + w / 2, y + h + 150, .42, { armR: -2.35 + .22 * Math.sin(t * TAU / BEAT), head: .05 * Math.sin(t * 3), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 5 });
+  jeff(c, x + w / 2, y + h + 60, .46, { armR: -2.35 + .22 * Math.sin(t * TAU / BEAT), head: .05 * Math.sin(t * 3), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 5 });
   c.restore();
   // the progress bar: at the live edge
   ink(c, rect(x + 30, y + h - 36, w - 60, 10), CHIP, 7904, { reg: false }); ink(c, rect(x + 30, y + h - 36, w - 60, 10), YEL, 7905, { reg: false });

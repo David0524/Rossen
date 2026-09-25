@@ -195,7 +195,7 @@ def push(t): fx('casino/card-slide-3.ogg', t - .15, .26)
 def fxa(name, t, g=1.0, pan=0.0):
     x = load(K + name); e = np.convolve(np.abs(x).max(1), np.ones(96) / 96, 'same'); att = int(np.argmax(e >= .15 * e.max()))
     USED.add(K + name); put(x, t - att / SR, g, pan)
-for bar, n in [(0, 2), (1, 2), (2, 2), (3, 1), (4, 2), (5, 2), (6, 2), (7, 2), (8, 2), (10, 2)]:
+for bar, n in [(0, 2), (1, 2), (2, 2), (3, 1), (4, 2), (5, 2), (6, 3), (7, 2), (8, 2), (10, 2)]:
     for i in range(n):
         if bar == 0 and i == 0: continue   # frame 0 belongs to the box
         capsnd(AT(bar) + i * E8)
