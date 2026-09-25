@@ -114,9 +114,7 @@ SCENES.placeholder = (c, t, S) => {   // the template's stand-in scene (the RULE
 function sceneBg(c) { bgDots(c, BLK, .04, .22, 18); }
 function sceneSignoff(c, t) {
   paperBg(c);
-  // the official logo: exact file, uniformly scaled, no texture or recolour, centred on the frame; held still
-  const im = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 720, lh = bh * lw / bw;
-  c.drawImage(im, bx, by, bw, bh, CX - lw / 2, SCY - lh / 2, lw, lh);
+  liveEndCard(c);   // the closing card (vertkit.js): the official logo, LIVE ON YOUTUBE + INSTAGRAM, WED 5 PM ET / FRI 10 AM ET; untouched, still
   const lift = seg(t, STAMP_T, STAMP_T + .15);
   if (lift < 1) { c.save(); c.translate(0, -(H + 320) * easeIn(lift)); rubberStampFlat(c); c.restore(); }
 }

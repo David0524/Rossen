@@ -11,7 +11,7 @@
    bar 23      the rubber stamp lands on beat 1; the official logo, untouched, still from 57.65 to 59
    The phone never moves while there is something to read.
 */
-const DUR = 59, NFR = Math.round(FPS * DUR);
+const DUR = 61.5, NFR = Math.round(FPS * DUR);
 const CAPS = [];   // this film draws its own top band
 const END_B = 21, STAMP_T = at(23);
 
@@ -219,9 +219,7 @@ function sceneEnd(c, t) {   // bars 21-22
 }
 function sceneSignoff(c, t) {
   paperBg(c);
-  // the official logo: exact file, uniformly scaled, no texture or recolour, centred on the frame; held still
-  const im = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 720, lh = bh * lw / bw;
-  c.drawImage(im, bx, by, bw, bh, CX - lw / 2, SCY - lh / 2, lw, lh);
+  liveEndCard(c);   // the closing card (vertkit.js): the official logo, LIVE ON YOUTUBE + INSTAGRAM, WED 5 PM ET / FRI 10 AM ET; untouched, still
   const lift = seg(t, STAMP_T, STAMP_T + .15);
   if (lift < 1) { c.save(); c.translate(0, -(H + 320) * easeIn(lift)); rubberStampFlat(c); c.restore(); }
 }

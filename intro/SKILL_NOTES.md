@@ -34,6 +34,15 @@ Viewer feedback: the text was hard to read because of motion, speed and everythi
   - `stampLand` from 1.55, and the tilted `stampFit` calls: fine for one-word decorative stamps only.
   - The loops' beat pulse (4.5–6% scale on LIVE TODAY, the time card and the day chip) is approved as is. Don't retrofit approved videos unless asked.
 
+### Every short ends on the live-show card (not the teases)
+Live viewers drive the rest of his revenue: sponsor rates, Super Chats and memberships. So every short and promo closes on `liveEndCard(c)` (vertkit.js), not the logo alone:
+- the official logo, then LIVE ON, then the YouTube and Instagram icons with their names, then EVERY WED 5 PM ET / FRI 10 AM ET
+- plain cream paper, straight text, completely still, and no print finish over the logos
+- the icons are `assets/social/*_icon.png`, cleaned of a baked-in checkerboard by `tools/clean_social_icons.py`; otherwise untouched
+- hold the card at least one full bar (the films give it about 4 s)
+- write times as "ET", not "EST": the shows run in EDT half the year
+- teases and the LIVE TODAY loops keep their own endings
+
 ### Transitions: more creative and interactive, but not every time
 - **Budget:** in a 30–60 s piece, plan 2–3 signature transitions. The rest are simple pushes or clean cuts on the downbeat. Never put two signature transitions back to back.
 - **"Interactive"** means the transition is an action the viewer can follow, done by a character or a prop. Examples:

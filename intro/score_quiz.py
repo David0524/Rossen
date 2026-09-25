@@ -9,7 +9,7 @@ marker swipe per flag, then the takeaway.
 usage: python3 score_quiz.py [samples_dir]  ->  out/rossen-scam-or-legit/score.wav
 """
 import numpy as np, subprocess, wave, sys, os, re, glob, math
-SR = 48000; DUR = 59.0
+SR = 48000; DUR = 61.5   # 23 bars, then the closing card
 ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio')
 out = np.zeros((int(SR * DUR), 2), np.float32)
 _cache = {}
@@ -222,6 +222,12 @@ for nt in ('D2', 'F#2', 'A2'): hnl(nt, t, .9, dur=1.2, rel=.3)
 for nt in ('D2', 'A1'): tbl(nt, t, .85, dur=1.2, rel=.3)
 cbp('D1', t, 1.0); cpz('D2', t, .9); timp(t, 1.0); kick(t, 1.0); one(CRASH, t, .6); glk('D6', t, .55)
 fx('impact/impactPlank_medium_000.ogg', t, .55); fx('impact/impactSoft_heavy_000.ogg', t, .4)
+
+# ---------------- under the closing card: a soft held D major, so the longer card never sits in silence ----------------
+_t0 = END + 1.2
+if not HO:
+    for n in ('D2', 'F#2', 'A2'): hnl(n, _t0, .3, dur=DUR - _t0 - .4, rel=1.0)
+    cpz('D2', _t0, .3)
 
 # ---------------- master ----------------
 fade = int(.5 * SR); out[-fade:] *= np.linspace(1, 0, fade)[:, None] ** 2

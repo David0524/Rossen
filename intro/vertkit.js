@@ -124,11 +124,35 @@ function makeCream() {
 }
 function creamBg(c) { c.save(); resetT(c); c.drawImage(CREAM_TEX, 0, 0, W, H); c.restore(); }
 
+// the closing card of every short (not the teases): the official logo, where he is live and when. Plain, on brand, and
+// completely still: cream paper, straight text, no finish over the logos. The Rossen logo and both platform icons are drawn
+// from their files at a uniform scale, untouched. Screen space, inside the tightest safe box of any film (x 180-900, y 381-1349).
+const LIVE_SCHEDULE = ['WED 5 PM ET', 'FRI 10 AM ET'];
+function liveEndCard(c) {
+  const lg = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 520, lh = bh * lw / bw;
+  c.drawImage(lg, bx, by, bw, bh, CX - lw / 2, 545 - lh / 2, lw, lh);
+  // LIVE ON, on a straight black chip
+  c.font = '52px Stamp'; const cw = c.measureText('LIVE ON').width + 56;
+  ink(c, rect(CX - cw / 2, 775 - 40, cw, 80), BLK, 5701, { amp: 2 }); inkText(c, 'LIVE ON', CX, 778, 52, 'Stamp', CHIP, 400);
+  // the two platforms: icons in one column, names left-aligned beside them
+  const rows = [['youtube', 'YOUTUBE', 876, 84], ['instagram', 'INSTAGRAM', 990, 96]];
+  c.font = '66px Stamp'; const tw = Math.max(...rows.map(r => c.measureText(r[1]).width)), col = 130, gap = 26, x0 = CX - (col + gap + tw) / 2;
+  for (const [k, label, y, ih] of rows) {
+    const im = IMG[k + '_icon'], iw = im.width * ih / im.height;
+    c.drawImage(im, x0 + (col - iw) / 2, y - ih / 2, iw, ih);
+    inkText(c, label, x0 + col + gap, y + 4, 66, 'Stamp', BLK, tw + 4, 'left');
+  }
+  key(c, [[CX - 200, 1062], [CX + 200, 1062]], 4, 5702, false);
+  inkText(c, 'EVERY', CX, 1112, 46, 'Stamp', BLK, 400);
+  LIVE_SCHEDULE.forEach((s2, i) => inkText(c, s2, CX, 1190 + i * 88, 76, 'Stamp', BLUE, 700));
+}
+
 // safe-zone overlay for ?safe=1 check renders (screen space)
 function safeOverlay(c) { c.save(); resetT(c); c.strokeStyle = '#ff00ff'; c.lineWidth = 4; c.strokeRect(CX - 420 * K, SCY - 565 * K, 840 * K, 1130 * K); c.globalAlpha = .15; c.fillStyle = '#ff00ff'; c.fillRect(0, 0, W, 288); c.fillRect(0, 1440, W, 480); c.fillRect(918, 0, 162, H); c.restore(); }
 // the scammer's parts and both logos
 async function loadVertKit() {
   SP = await (await fetch('assets/explainer/scammer_parts.json')).json();
-  await Promise.all([...Object.keys(SP.parts).map(k => loadImg('s_' + k, `assets/explainer/scammer_${k}.png`)), loadImg('logo', 'assets/official_logo.png'), loadImg('sp', 'assets/casefile/logo_screenprint.webp')]);
+  await Promise.all([...Object.keys(SP.parts).map(k => loadImg('s_' + k, `assets/explainer/scammer_${k}.png`)), loadImg('logo', 'assets/official_logo.png'), loadImg('sp', 'assets/casefile/logo_screenprint.webp'),
+    loadImg('youtube_icon', 'assets/social/youtube_icon.png'), loadImg('instagram_icon', 'assets/social/instagram_icon.png')]);
   IMG.logoBox = alphaBox(IMG.logo); IMG.spBox = alphaBox(IMG.sp);
 }

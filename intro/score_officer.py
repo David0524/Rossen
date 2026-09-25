@@ -11,7 +11,7 @@ usage: python3 score_officer.py            ->  out/rossen-officer-scam/score.wav
 import numpy as np, subprocess, wave, sys, os, re, glob, math, json
 SR = 48000
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio')
-DUR = 20 * 2.5 + 2
+DUR = 20 * 2.5 + 4.5   # then the closing card
 out = np.zeros((int(SR * DUR), 2), np.float32)
 _cache = {}
 def load(rel):
@@ -291,6 +291,12 @@ if not HO:
     for n in ('D2', 'A1'): tbl(n, STAMP, .85, dur=1.4, rel=.4)
 cbp('D1', STAMP, 1.0); cpz('D2', STAMP, .9); timp(STAMP, 1.0); kick(STAMP, 1.0); one(CRASH, STAMP, .5); glk('D6', STAMP, .45); H(STAMP, 'rubber stamp')
 fx('impact/impactPlank_medium_000.ogg', STAMP, .55); fx('impact/impactSoft_heavy_000.ogg', STAMP, .4)
+
+# ---------------- under the closing card: a soft held D major, so the longer card never sits in silence ----------------
+_t0 = STAMP + 1.2
+if not HO:
+    for n in ('D2', 'F#2', 'A2'): hnl(n, _t0, .3, dur=DUR - _t0 - .4, rel=1.0)
+    cpz('D2', _t0, .3)
 
 # ---------------- master ----------------
 fade = int(.8 * SR); out[-fade:] *= np.linspace(1, 0, fade)[:, None] ** 2

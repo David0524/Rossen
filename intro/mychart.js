@@ -24,7 +24,7 @@
    END    bar 17 42.5  the official logo, untouched, revealed as the stamp lifts; still from 42.8
 */
 // format, clock, safe zone and shared helpers: vertkit.js
-const DUR = at(17) + 2, NFR = Math.round(FPS * DUR);
+const DUR = at(17) + 4.5, NFR = Math.round(FPS * DUR);
 
 // the caption band: short ALL-CAPS lines on black paper chips, top of the safe zone, one set per downbeat
 const CAPS = [
@@ -307,9 +307,7 @@ function sceneLine(c, t) {   // bars 15-16: the protection line
 }
 function sceneSignoff(c, t) {
   paperBg(c);
-  // the official logo: exact file, no texture, no recolour, no distortion; centred on the frame, inside the safe zone; held still
-  const im = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 720, lh = bh * lw / bw;
-  c.drawImage(im, bx, by, bw, bh, CX - lw / 2, SCY - lh / 2, lw, lh);
+  liveEndCard(c);   // the closing card (vertkit.js): the official logo, LIVE ON YOUTUBE + INSTAGRAM, WED 5 PM ET / FRI 10 AM ET; untouched, still
   const lift = seg(t, at(17), at(17) + .3);
   if (lift < 1) { c.save(); c.translate(0, -(H + 320) * easeIn(lift)); rubberStampFlat(c); c.restore(); }
 }
@@ -339,7 +337,8 @@ window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return
 (async () => {
   await loadPrintKit();
   SP = await (await fetch('assets/explainer/scammer_parts.json')).json();
-  await Promise.all([...Object.keys(SP.parts).map(k => loadImg('s_' + k, `assets/explainer/scammer_${k}.png`)), loadImg('logo', 'assets/official_logo.png'), loadImg('sp', 'assets/casefile/logo_screenprint.webp')]);
+  await Promise.all([...Object.keys(SP.parts).map(k => loadImg('s_' + k, `assets/explainer/scammer_${k}.png`)), loadImg('logo', 'assets/official_logo.png'), loadImg('sp', 'assets/casefile/logo_screenprint.webp'),
+    loadImg('youtube_icon', 'assets/social/youtube_icon.png'), loadImg('instagram_icon', 'assets/social/instagram_icon.png')]);
   IMG.logoBox = alphaBox(IMG.logo); IMG.spBox = alphaBox(IMG.sp);
   frame(+(Q.get('frame') || 0));
   window.__ready = true;

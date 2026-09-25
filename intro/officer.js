@@ -29,7 +29,7 @@
            bar 19 47.5  held; the rubber stamp comes down on 4
    END     bar 20 50.0  the official logo, untouched, revealed as the stamp lifts; still from 50.3
 */
-const DUR = at(20) + 2, NFR = Math.round(FPS * DUR);
+const DUR = at(20) + 4.5, NFR = Math.round(FPS * DUR);
 const SANS = '"Liberation Sans"', MONO = '"Liberation Mono"', FAKE_NUM = '1-555-XXX-XXXX', URL_REAL = 'ReportFraud.ftc.gov';
 const PUSH = .3;   // the camera drop between scenes, centred on the downbeat
 
@@ -376,9 +376,7 @@ function sceneLine(c, t) {   // bars 18-19: the protection line
 }
 function sceneSignoff(c, t) {
   paperBg(c);
-  // the official logo: exact file, no texture, no recolour, no distortion; centred on the frame, inside the safe zone; held still
-  const im = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 720, lh = bh * lw / bw;
-  c.drawImage(im, bx, by, bw, bh, CX - lw / 2, SCY - lh / 2, lw, lh);
+  liveEndCard(c);   // the closing card (vertkit.js): the official logo, LIVE ON YOUTUBE + INSTAGRAM, WED 5 PM ET / FRI 10 AM ET; untouched, still
   const lift = seg(t, at(20), at(20) + .3);
   if (lift < 1) { c.save(); c.translate(0, -(H + 320) * easeIn(lift)); rubberStampFlat(c); c.restore(); }
 }

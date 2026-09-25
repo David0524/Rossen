@@ -14,7 +14,7 @@ outputs (out/rossen-mychart-scam/): score_music.wav, score_sfx.wav, score.wav (t
 usage: python3 score_mychart.py [samples_dir]  ->  out/rossen-mychart-scam/score.wav
 """
 import numpy as np, subprocess, wave, sys, os, re, glob, math
-SR = 48000; DUR = 44.5
+SR = 48000; DUR = 47.0   # 17 bars, then the closing card (4.5 s)
 ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio')
 out = np.zeros((int(SR * DUR), 2), np.float32)
 _cache = {}
@@ -269,6 +269,12 @@ for n in ('D2', 'F#2', 'A2'): hnl(n, t, .9, dur=1.4, rel=.6)
 for n in ('D2', 'A1'): tbl(n, t, .85, dur=1.4, rel=.6)
 cbp('D1', t, 1.0); cpz('D2', t, .9); timp(t, 1.0); kick(t, 1.0); one(CRASH, t, .6); glk('D6', t, .55)
 fx('impact/impactPlank_medium_000.ogg', t, .5); fx('impact/impactSoft_heavy_000.ogg', t, .4)
+
+# ---------------- under the closing card: a soft held D major, so the longer card never sits in silence ----------------
+_t0 = AT(17) + 1.2
+if True:
+    for n in ('D2', 'F#2', 'A2'): hnl(n, _t0, .3, dur=DUR - _t0 - .4, rel=1.0)
+    cpz('D2', _t0, .3)
 
 # ---------------- master ----------------
 FXG = .8   # foley a little under the music

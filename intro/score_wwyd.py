@@ -281,6 +281,12 @@ for sc in EP['scenes']:
     for cp in sc.get('caps', []): capsnd(SA(s, cp[0], cp[1]), len(cp) > 3)
 for sid, bar, beat, cue in EP['cues']: CUES[cue](SA(SEG[sid], bar, beat))
 
+# ---------------- under the closing card: a soft held D major, so the longer card never sits in silence ----------------
+_t0 = STAMP + 1.2
+if not HO:
+    for n in ('D2', 'F#2', 'A2'): hnl(n, _t0, .3, dur=DUR - _t0 - .4, rel=1.0)
+    cpz('D2', _t0, .3)
+
 # ---------------- master ----------------
 fade = int(.5 * SR); out[-fade:] *= np.linspace(1, 0, fade)[:, None] ** 2
 out = np.tanh(out * 1.1) / 1.1
