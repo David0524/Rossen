@@ -242,4 +242,4 @@ The textured-cream background (`makeCream` / `creamBg`) now lives in `vertkit.js
 - Jeff waves on every beat
 - the logo sticker rocks once per loop
 
-A page sets `window.SHOW = { time, day }`, and the time card always keeps the approved 5PM card's size. Audio: `python3 score_loop.py` renders three cycles and keeps the middle one, so every tail wraps into the start. It's gained to -16 LUFS and muxed.
+A page sets `window.SHOW = { time, day, extra }`, and the time card always keeps the approved 5PM card's size. Both loops now carry `extra: "LIVE ON YOUTUBE"`: a yellow chip under the day that pulses with it, with Jeff standing a little lower. That's the same design as the Friday tease's ending page; the Friday loop is frame-for-frame the one the tease uses. Audio: `python3 score_loop.py` renders three cycles and keeps the middle one, so every tail wraps into the start. It's gained to -16 LUFS and muxed.
