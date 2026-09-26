@@ -8,7 +8,9 @@
      SCENES['reveal_' + key]       what each answer leads to, drawn under the answer card
    S.at(bar, beat) is time inside the segment. Captions come from the data: [bar, beat, line 1, line 2].
 
-   timeline: TITLE | setup scenes | FREEZE | PAUSE | REVEAL A | REVEAL B | REVEAL C | TAKEAWAY | END (+ the official logo)
+   timeline: TITLE | setup scenes | FREEZE | PAUSE | REVEAL x3 | TAKEAWAY | [outro scenes] | END (+ the official logo)
+   Optional episode fields (absent in episode 1): revealOrder (reveal the options in another order, the right one last),
+   options[].word (reword a verdict stamp; its sting stays), outro (scenes after the takeaway), endPlatforms (closing card).
 */
 const EP_PATH = Q.get('ep') || window.EPISODE;
 const SCENES = {};
@@ -20,8 +22,13 @@ const NO_PUSH = { freeze: 1, pause: 1 };   // the freeze cuts in on the downbeat
 function buildTimeline(tpl, ep) {
   const fail = m => { throw new Error(`WHAT WOULD YOU DO? template: ${m}`); };
   if (!Array.isArray(ep.options) || ep.options.length !== tpl.options) fail(`exactly ${tpl.options} options`);
-  ep.options.forEach((o, i) => { if (o.verdict !== tpl.verdicts[i]) fail(`option ${o.key} must be ${tpl.verdicts[i]} (options run wrong, close, right)`);
-    if (!Array.isArray(o.lines) || o.lines.length < 1 || o.lines.length > 2) fail(`option ${o.key} needs 1 or 2 lines`); });
+  // the reveals run in option order unless the episode sets revealOrder (keys); either way the right answer lands last
+  const order = ep.revealOrder ? ep.revealOrder.map(k => ep.options.find(o => o.key === k)) : ep.options;
+  if (order.some(o => !o) || order.length !== tpl.options || new Set(order.map(o => o.key)).size !== tpl.options) fail('revealOrder must list every option key once');
+  if (!ep.revealOrder) ep.options.forEach((o, i) => { if (o.verdict !== tpl.verdicts[i]) fail(`option ${o.key} must be ${tpl.verdicts[i]} (options run wrong, close, right)`); });
+  else { if ([...ep.options.map(o => o.verdict)].sort().join() !== [...tpl.verdicts].sort().join()) fail(`the options must be one each of ${tpl.verdicts.join(', ')}`);
+    if (order[order.length - 1].verdict !== 'RIGHT') fail('the right answer must be revealed last'); }
+  ep.options.forEach(o => { if (!Array.isArray(o.lines) || o.lines.length < 1 || o.lines.length > 2) fail(`option ${o.key} needs 1 or 2 lines`); });
   if (!ep.takeaway || ep.takeaway.length !== 2 || !ep.bonus || ep.bonus.length !== 2) fail('takeaway and bonus are 2 lines each');
   ep.scenes.forEach(s => { if (!Number.isInteger(s.bars) || s.bars < 1 || s.bars > tpl.maxSceneBars) fail(`scene ${s.id} must be 1-${tpl.maxSceneBars} whole bars`);
     if (!SCENES[s.id]) fail(`no draw function for scene ${s.id}`); });
@@ -32,8 +39,9 @@ function buildTimeline(tpl, ep) {
   ep.scenes.forEach(s => add('scene', s.bars, s));
   add('freeze', tpl.bars.freeze, { id: 'freeze' });
   add('pause', tpl.bars.pause, { id: 'pause' });
-  ep.options.forEach((o, i) => add('reveal', tpl.bars.reveal, { id: o.key, opt: o, i, caps: o.caps }));
+  order.forEach((o, i) => add('reveal', tpl.bars.reveal, { id: o.key, opt: o, i, caps: o.caps }));
   add('takeaway', tpl.bars.takeaway, { id: 'takeaway' });
+  (ep.outro || []).forEach(s => { if (!Number.isInteger(s.bars) || s.bars < 1 || s.bars > tpl.maxSceneBars || !SCENES[s.id]) fail(`outro scene ${s.id} needs a draw function and 1-${tpl.maxSceneBars} bars`); add('outro', s.bars, s); });   // optional scenes after the takeaway
   add('end', tpl.bars.end, { id: 'end' });
   segs.forEach(s => { s.t0 = at(s.b0); s.t1 = at(s.b0 + s.bars); s.at = (bar, beat = 1) => at(s.b0 + bar - 1, beat); });
   return segs;
@@ -148,7 +156,7 @@ function partPause(c, t, S) {   // PAUSE (2 bars): the options hold still; COMME
 const VERDICT = { WRONG: ['WRONG.', BLK, -.06], CLOSE: ['CLOSE, BUT...', BLK, .04], RIGHT: ['RIGHT!', BLUE, -.04] };
 function partReveal(c, t, S) {   // REVEAL (2 bars each): the answer card, its verdict on the downbeat, what happens next
   sceneBg(c);
-  const o = S.opt, [word, col, rot] = VERDICT[o.verdict];
+  const o = S.opt, [word0, col, rot] = VERDICT[o.verdict], word = o.word || word0;   // an episode may reword a verdict (the sting stays the verdict's)
   SCENES['reveal_' + o.key](c, t, S);
   optionCard(c, o, SCX, 372, t, S.t0 - 1, o.verdict, .92);
   if (o.verdict === 'RIGHT') burst(c, SCX, 540, t, S.t0, 230);
@@ -180,7 +188,7 @@ function partEnd(c, t, S) {   // END (2 bars): COMMENT IF YOU GOT IT RIGHT, then
 }
 function sceneSignoff(c, t) {
   paperBg(c);
-  liveEndCard(c);   // the closing card (vertkit.js): the official logo, LIVE ON YOUTUBE + INSTAGRAM, WED 5 PM ET / FRI 10 AM ET; untouched, still
+  liveEndCard(c, EP.endPlatforms);   // the closing card (vertkit.js): the official logo, LIVE ON <platforms> (default YouTube + Instagram), WED 5 PM ET / FRI 10 AM ET; untouched, still
   const lift = seg(t, STAMP_T, STAMP_T + .15);
   if (lift < 1) { c.save(); c.translate(0, -(H + 320) * easeIn(lift)); rubberStampFlat(c); c.restore(); }
 }
@@ -188,7 +196,7 @@ function sceneSignoff(c, t) {
 // ================= assembly =================
 const PARTS = { title: partTitle, freeze: partFreeze, pause: partPause, reveal: partReveal, takeaway: partTakeaway, end: partEnd };
 function drawSeg(c, t, S) {
-  if (S.kind === 'scene') { SCENES[S.id](c, t, { ...S, lt: t - S.t0 }); captions(c, t, S); }
+  if (S.kind === 'scene' || S.kind === 'outro') { SCENES[S.id](c, t, { ...S, lt: t - S.t0 }); captions(c, t, S); }
   else PARTS[S.kind](c, t, S);
 }
 function drawScene(c, t) {
@@ -214,6 +222,8 @@ window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image
   EP = await (await fetch(EP_PATH + '.json')).json();
   for (const name of EP.cast || []) { PUP[name] = await (await fetch(`assets/wwyd/${name}_parts.json`)).json();
     await Promise.all(Object.keys(PUP[name].parts).map(k => loadImg(name + '_' + k, `assets/wwyd/${name}_${k}.png`))); }
+  for (const k of EP.endPlatforms || []) if (!IMG[k + '_icon']) await loadImg(k + '_icon', `assets/social/${k}_icon.png`);
+  if (window.EP_ASSETS) await window.EP_ASSETS();   // an episode's own extras (wwyd/epNN.js)
   TL = buildTimeline(TPL, EP);
   const E = TL[TL.length - 1]; STAMP_T = E.at(2, 2); DUR = E.t1; NFR = Math.round(FPS * DUR); window.__NFR = NFR;
   window.__timeline = TL.map(s => ({ kind: s.kind, id: s.id, b0: s.b0, bars: s.bars, t0: s.t0, t1: s.t1 }));

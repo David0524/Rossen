@@ -23,8 +23,11 @@ def _add(kind, bars, sid):
 _add('title', TPL['bars']['title'], 'title')
 for s in EP['scenes']: _add('scene', s['bars'], s['id'])
 _add('freeze', TPL['bars']['freeze'], 'freeze'); _add('pause', TPL['bars']['pause'], 'pause')
-for o in EP['options']: _add('reveal', TPL['bars']['reveal'], o['key'])
-_add('takeaway', TPL['bars']['takeaway'], 'takeaway'); _add('end', TPL['bars']['end'], 'end')
+ORDER = [next(o for o in EP['options'] if o['key'] == k) for k in EP['revealOrder']] if EP.get('revealOrder') else EP['options']   # the reveal order (wwyd.js)
+for o in ORDER: _add('reveal', TPL['bars']['reveal'], o['key'])
+_add('takeaway', TPL['bars']['takeaway'], 'takeaway')
+for s in EP.get('outro', []): _add('outro', s['bars'], s['id'])
+_add('end', TPL['bars']['end'], 'end')
 TOTAL_BARS = SEGS[-1]['b0'] + SEGS[-1]['bars']; DUR = TOTAL_BARS * 2.5
 out = np.zeros((int(SR * DUR), 2), np.float32)
 _cache = {}
@@ -170,6 +173,8 @@ CH['Gm'] = (['D4', 'G4', 'Bb3'], ['G1', 'D2'], ['G2', 'Bb2'], 'G1')
 CROOT = {'Dm': 'D2', 'D': 'D2', 'Bb': 'Bb1', 'Gm': 'G2', 'G': 'G2', 'A': 'A1', 'Bm': 'B1', 'Em': 'E2', 'C': 'C2'}
 TONES = {'Dm': ('D5', 'F5', 'A5'), 'D': ('D5', 'F#5', 'A5'), 'Bb': ('D5', 'F5', 'Bb5'), 'Gm': ('D5', 'G5', 'Bb5'), 'G': ('D5', 'G5', 'B5'), 'A': ('C#5', 'E5', 'A5')}
 SEG = {s['id']: s for s in SEGS}
+HITS = []   # every synced hit (time, what) -> hits.json
+def H(t, what): HITS.append((round(t, 4), what))
 def SA(seg, bar=1, beat=1): return AT(seg['b0'] + bar - 1, beat)
 REVEAL_CH = {'WRONG': ['Dm Dm Bb A', 'Dm Dm Bb A'], 'CLOSE': ['Bb Bb A A', 'Gm Gm A A'], 'RIGHT': ['D D G A', 'D D G D']}
 TCH = {'title': ['Dm Dm Bb A', 'Dm Dm Bb A'], 'takeaway': ['G G A A', 'D D G A'], 'end': ['D D G A', 'D D D D', 'D D D D']}   # the third end bar sits under the closing card (nothing plays past the stamp)
@@ -178,6 +183,7 @@ for s in SEGS:
     if s['kind'] in ('freeze', 'pause'): continue          # the music stops for the freeze and the pause
     if s['kind'] == 'reveal': ch = REVEAL_CH[next(o for o in EP['options'] if o['key'] == s['id'])['verdict']]; md = 'play'
     elif s['kind'] == 'scene': ch = next(x for x in EP['scenes'] if x['id'] == s['id'])['chords']; md = 'tense'
+    elif s['kind'] == 'outro': ch = next(x for x in EP['outro'] if x['id'] == s['id'])['chords']; md = 'warm'
     else: ch = TCH[s['kind']]; md = 'tense' if s['kind'] == 'title' else 'warm'
     for k in range(s['bars']): rows[s['b0'] + k] = ch[k]; mood[s['b0'] + k] = md
 STAMP = SA(SEG['end'], 2, 2)
@@ -206,13 +212,13 @@ def pushes():
 
 # ---------------- the recurring parts (identical in every episode) ----------------
 s = SEG['title']
-stamp_hit(0.0, 1.0, 'Dm'); fx('impact/impactWood_heavy_000.ogg', 0.0, .45)                   # WHAT WOULD YOU DO? on frame 0
+stamp_hit(0.0, 1.0, 'Dm'); fx('impact/impactWood_heavy_000.ogg', 0.0, .45); H(0.0, 'title')    # WHAT WOULD YOU DO? on frame 0
 for k, n in enumerate(('D5', 'F5', 'A5', 'G#5')): xyl(n, SA(s, 1, 2 + k * .5), .5, dur=.2)    # the question motif, left hanging
 fx('casino/card-place-1.ogg', SA(s, 1, 2), .2)                                                # EPISODE n
 s = SEG['freeze']; t = SA(s)
-fxa('interface/scratch_004.ogg', t, .55); fx('interface/switch_007.ogg', t, .5); kick(t, .9); timp(t, .9); cbp('D1', t, .8); one(CRASH_MF, t, .25)   # FREEZE!
+fxa('interface/scratch_004.ogg', t, .55); fx('interface/switch_007.ogg', t, .5); kick(t, .9); timp(t, .9); cbp('D1', t, .8); one(CRASH_MF, t, .25); H(t, 'freeze')   # FREEZE!
 for i in range(3):
-    tt = SA(s, 1, 2 + i); fx('casino/card-place-2.ogg', tt, .35); kick(tt, .6); one(RIM, tt, .4, .1); xyl(('A5', 'B5', 'C#6')[i], tt, .5)   # the options land
+    tt = SA(s, 1, 2 + i); fx('casino/card-place-2.ogg', tt, .35); kick(tt, .6); one(RIM, tt, .4, .1); xyl(('A5', 'B5', 'C#6')[i], tt, .5); H(tt, 'option')   # the options land
 s = SEG['pause']
 if not HO:
     for n in ('A1', 'E2'): hnl(n, SA(s), .35, dur=2 * 2.5 - .2, rel=.3)                         # held low horn under the clock
@@ -234,25 +240,25 @@ def sting(v, t):
         kick(t, 1.0); timp(t, .9); cbp('D1', t, 1.0); one(CRASH, t, .45); fx('interface/confirmation_002.ogg', t, .45); fx('digital/threeTone1.ogg', t, .25)
         for k, n in enumerate(('D4', 'F#4', 'A4', 'D5')): tps(n, t + k * S16, .8, dur=.2 if k < 3 else .5)
         for k, n in enumerate(('D6', 'F#6', 'A6')): glk(n, t + k * S16, .4)
-for i, o in enumerate(EP['options']):
-    s = SEG[o['key']]; sting(o['verdict'], SA(s))
+for i, o in enumerate(ORDER):
+    s = SEG[o['key']]; sting(o['verdict'], SA(s)); H(SA(s), 'verdict ' + o['verdict'])
     if i == 0: fx('interface/pluck_001.ogg', SA(s, 1, 1.5), .3)                                # Jeff steps in
-    for cp in o.get('caps', []): capsnd(SA(s, cp[0], cp[1]))
+    for cp in o.get('caps', []): capsnd(SA(s, cp[0], cp[1])); H(SA(s, cp[0], cp[1]), 'caption')
     if o['verdict'] == 'RIGHT' and not HO:                                                      # warm: held horns in D when he answers
         for n in ('D3', 'F#3', 'A3'): hnl(n, SA(s, 2), .45, dur=2.5 - .1, rel=.4)
 s = SEG['takeaway']
-stamp_hit(SA(s), 1.0, 'G'); stamp_hit(SA(s, 1, 1.5), .9, 'A')
+stamp_hit(SA(s), 1.0, 'G'); stamp_hit(SA(s, 1, 1.5), .9, 'A'); H(SA(s), 'lesson'); H(SA(s, 1, 1.5), 'lesson 2')
 glk('A6', SA(s, 2), .45); fx('casino/card-place-1.ogg', SA(s, 2), .3); kick(SA(s, 2), .6)       # BONUS TIP
 for k in range(2): t = SA(s, 2, 1.5) + k * E8; xyl(('D6', 'F#6')[k], t, .4); fx('casino/card-place-2.ogg', t, .2); kick(t, .5)
 fx('interface/pluck_002.ogg', SA(s, 1, 2), .28)
 s = SEG['end']
-stamp_hit(SA(s), 1.0); fx('rpg/bookPlace1.ogg', SA(s), .4)
+stamp_hit(SA(s), 1.0); fx('rpg/bookPlace1.ogg', SA(s), .4); H(SA(s), 'comment if')
 stamp_hit(SA(s, 1, 1.5), .9); glk('A6', SA(s, 1, 1.5), .4)
 fx('interface/pluck_002.ogg', SA(s, 1, 2), .28)
 roll_to(SA(s, 2), STAMP, .45, TIMP_ROLL); tomfill(SA(s, 2, 1.25), STAMP, .45, S16 / 2)
 for n in ('D2', 'F#2', 'A2'): hnl(n, STAMP, .9, dur=1.2, rel=.3)
 for n in ('D2', 'A1'): tbl(n, STAMP, .85, dur=1.2, rel=.3)
-cbp('D1', STAMP, 1.0); cpz('D2', STAMP, .9); timp(STAMP, 1.0); kick(STAMP, 1.0); one(CRASH, STAMP, .5); glk('D6', STAMP, .45)
+cbp('D1', STAMP, 1.0); cpz('D2', STAMP, .9); timp(STAMP, 1.0); kick(STAMP, 1.0); one(CRASH, STAMP, .5); glk('D6', STAMP, .45); H(STAMP, 'rubber stamp')
 fx('impact/impactPlank_medium_000.ogg', STAMP, .55); fx('impact/impactSoft_heavy_000.ogg', STAMP, .4)
 pushes()
 
@@ -260,6 +266,14 @@ pushes()
 def ring(t):
     for j in range(8): glk(('D6', 'F#6')[j % 2], t + j * .05, .3)
     fx('interface/tick_002.ogg', t, .3)
+def alarm(t):   # composed: a tritone two-tone alarm on stopped trumpets, xylophone and glock; sharp for one beat, then quieter; it ends before the freeze
+    end = SA(SEG['freeze']) - BEAT   # it stops before the freeze, so the freeze lands clean
+    one(CLAVE, t, .9); one(RIM, t, .9, .1); fx('casino/card-place-2.ogg', t, .6)   # a crisp front edge on the downbeat
+    for k in range(8):   # beat 1: sixteenths, loud enough to jolt, never piercing
+        tt = t + k * S16; n = ('A4', 'D#5')[k % 2]; tps(n, tt, .42, dur=.1); xyl(n.replace('4', '5').replace('D#5', 'D#6'), tt, .25, dur=.08)
+    tt, k = t + 2 * BEAT, 0
+    while tt + .14 < end:   # then a quieter two-tone pulse on eighths until the freeze
+        n = ('A4', 'D#5')[k % 2]; tps(n, tt, .16, dur=.1); glk(('A5', 'D#6')[k % 2], tt, .12, dur=.1); tt += E8; k += 1
 CUES = {
     'ring': ring,
     'answer': lambda t: (fx('interface/click_001.ogg', t, .6), kick(t, .6)),
@@ -274,12 +288,30 @@ CUES = {
     'hangup': lambda t: (fx('interface/click_001.ogg', t, .6), fx('interface/close_001.ogg', t, .45), kick(t, .7)),
     'call': lambda t: (fx('interface/click_001.ogg', t, .6), kick(t, .6), fx('interface/tick_002.ogg', t + E8, .35), fx('interface/tick_002.ogg', t + 2 * E8, .35)),
     'answerwarm': lambda t: (fx('interface/confirmation_001.ogg', t, .45), kick(t, .7), [glk(n, t + k * S16, .4) for k, n in enumerate(('D6', 'F#6', 'A6'))]),
+    # episode 2
+    'scroll': lambda t: (fx('interface/click_003.ogg', t, .45), one(RIM, t, .3, .1), fx('interface/scratch_001.ogg', t + .02, .15)),
+    'alarm': lambda t: alarm(t),
+    'popslam': lambda t: (stamp_hit(t, 1.0, 'Bb'), fx('impact/impactPunch_heavy_001.ogg', t, .4), one(RIM, t, .5, .1)),
+    'rub': lambda t: [one(RIM, t, .9, .1), one(CLAVE, t, .6), fx('casino/card-place-2.ogg', t, .5)] + [fx('rpg/cloth%d.ogg' % (1 + k % 2), t + k * S16, .22) for k in range(4)] + [cla(n, t + k * S16, .4, dur=.1) for k, n in enumerate(('A3', 'C4', 'A3', 'C4'))],
+    'rise': lambda t: (fx('interface/pluck_002.ogg', t, .4), kick(t, .6), one(RIM, t, .35, .1), [cla(n, t + E8 + k * S16 / 2, .4, dur=.08) for k, n in enumerate(('A3', 'Bb3', 'A3', 'Bb3'))]),   # the agent pops up (then the sneaky clarinet)
+    'click': lambda t: (fx('interface/click_002.ogg', t, .6), kick(t, .55), one(RIM, t, .3, .1)),
+    'download': lambda t: (fx('interface/tick_001.ogg', t, .3), [glk(n, t + k * S16, .22) for k, n in enumerate(('A5', 'B5', 'C#6', 'D6'))], kick(t, .5)),
+    'paypage': lambda t: (stamp_hit(t, .8, 'Bb'), fx('rpg/handleCoins.ogg', t, .35)),
+    'dial': lambda t: [fx('interface/click_003.ogg', t + j * BEAT / 8, .3, (-.15, .15)[j % 2]) for j in range(6)],
+    'pickup': lambda t: (fx('interface/click_001.ogg', t, .6), kick(t, .6), [cla(n, t + E8 + k * S16, .45, dur=.1) for k, n in enumerate(('A3', 'Bb3', 'A3', 'Bb3'))]),
+    'remote': lambda t: (fx('interface/toggle_001.ogg', t, .45), kick(t, .6), one(RIM, t, .35, .1), [fx('interface/tick_002.ogg', t + k * E8, .18) for k in range(1, 4)]),
+    'suck': lambda t: (fx('interface/close_001.ogg', t, .5), fx('impact/impactSoft_medium_000.ogg', t, .45), kick(t, .8), timp(t, .6)),
+    'clear': lambda t: (fx('interface/confirmation_001.ogg', t, .45), kick(t, .7), [glk(n, t + k * S16, .4) for k, n in enumerate(('D6', 'F#6', 'A6'))]),
+    'statland': lambda t: (stamp_hit(t, .9, 'D'), fx('casino/card-place-1.ogg', t, .3)),
+    'statlines': lambda t: (fx('casino/card-place-2.ogg', t, .35), kick(t, .6), xyl('D6', t, .3)),
+    'source': lambda t: (fx('casino/card-place-1.ogg', t, .25), one(RIM, t, .3, .1)),
     'collapse': lambda t: (fx('impact/impactSoft_heavy_000.ogg', t, .55), fx('rpg/cloth3.ogg', t + .05, .4), kick(t, .9), timp(t, .6), [tbs(n, t + .1 + k * S16, .55, dur=.12) for k, n in enumerate(('D3', 'C3', 'A2', 'F2', 'D2'))]),
 }
-for sc in EP['scenes']:
+for sc in EP['scenes'] + EP.get('outro', []):
     s = SEG[sc['id']]
-    for cp in sc.get('caps', []): capsnd(SA(s, cp[0], cp[1]), len(cp) > 3)
-for sid, bar, beat, cue in EP['cues']: CUES[cue](SA(SEG[sid], bar, beat))
+    for cp in sc.get('caps', []):
+        if len(cp) > 2: capsnd(SA(s, cp[0], cp[1]), len(cp) > 3); H(SA(s, cp[0], cp[1]), 'caption')   # an empty caption just clears the last one (silent)
+for sid, bar, beat, cue in EP['cues']: CUES[cue](SA(SEG[sid], bar, beat)); H(SA(SEG[sid], bar, beat), cue)
 
 # ---------------- under the closing card: a soft held D major, so the longer card never sits in silence ----------------
 _t0 = STAMP + 1.2
@@ -294,6 +326,7 @@ out *= (10 ** (-1 / 20)) / max(1e-6, np.abs(out).max())
 od = 'out/rossen-wwyd-' + os.path.basename(EP_PATH); os.makedirs(od, exist_ok=True)
 with wave.open(od + ('/score_hits.wav' if HO else '/score.wav'), 'wb') as w:
     w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(out, -1, 1) * 32767).astype('<i2').tobytes())
+json.dump(sorted(set(HITS)), open(od + '/hits.json', 'w'))
 if not HO:
     with open(od + '/samples_used.txt', 'w') as f: f.write('\n'.join(sorted(USED)) + '\n')
     PACK = {'interface': 'https://kenney.nl/assets/interface-sounds', 'impact': 'https://kenney.nl/assets/impact-sounds', 'rpg': 'https://kenney.nl/assets/rpg-audio',

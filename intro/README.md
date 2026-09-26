@@ -343,3 +343,31 @@ To build: `sh tools/build_shorts.sh rules3`. Then check the result:
     python3 tools/sync_check.py out/rossen-rules-ep03/rossen-rules-ep03.mp4 out/rossen-rules-ep03/hits.json
 
 `out/rossen-rules-ep03/recurring_vs_ep01.txt` records the frame-for-frame comparison of the recurring parts against episode 1.
+
+## WHAT WOULD YOU DO? #2: the fake virus pop-up (9:16, 52.5 s)
+
+`rossen-wwyd-ep02.html` is built from the series template (`wwyd.js`, `wwyd/template.json`, `score_wwyd.py`) plus this episode's data (`wwyd/ep02.json`) and drawings (`wwyd/ep02.js`). It runs 21 bars:
+
+| Part | Bars | What happens |
+|---|---|---|
+| Title | 2 | The laptop is on screen from frame 0. |
+| Setup | 3 | Just browsing; the screen is taken over (one hard flash, crawling hazard bands, no text), then the pop-up slams in and stays still; the fake tech-support agent rises behind the laptop, rubbing his hands. |
+| Freeze | 1 | Recurring. |
+| Pause | 2 | Recurring. |
+| Reveals | 2 each | A, then C, then B, so the right answer lands last. A uses the CLOSE sting, reworded to "IT'S A TRAP.". B is the signature: the close box sucks the pop-up and the agent away, headset last. |
+| Takeaway | 2 | Recurring. |
+| Stat | 2 | UP TO HALF OF TECH SUPPORT SCAMS START WITH A POP-UP, with SOURCE: BBB (`out/rossen-wwyd-ep02/sources.txt`). |
+| End | 3 | Recurring, with Facebook on the closing card. |
+
+The agent is cut from the reference by `tools/cut_tech.py`. The headset is a separate piece, and the gloves are separate so he can rub his hands. The computer user is the everyday man from the jury-duty explainer (`assets/wwyd/man_*`, the same files).
+
+The template gained optional fields, all absent in episode 1, which still scores bit-identically:
+- `revealOrder`: the right answer must still be last;
+- `options[].word`: rewords a verdict stamp, and the sting stays that verdict's;
+- `outro`: scenes after the takeaway;
+- `endPlatforms`.
+
+To build: `sh tools/build_shorts.sh wwyd2`. Then check the result:
+
+    python3 tools/verify_wwyd.py wwyd/ep02 out/rossen-wwyd-ep02/rossen-wwyd-ep02.mp4
+    python3 tools/sync_check.py out/rossen-wwyd-ep02/rossen-wwyd-ep02.mp4 out/rossen-wwyd-ep02/hits.json

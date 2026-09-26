@@ -1,0 +1,9 @@
+On-screen facts in WHAT WOULD YOU DO? #2 (the fake virus pop-up)
+
+"UP TO HALF OF TECH SUPPORT SCAMS START WITH A POP-UP" (shown with "SOURCE: BBB"): the Better Business Bureau's study of tech
+support scams reports that about 45% of the tech support scam incidents reported to BBB Scam Tracker describe being hooked by a
+pop-up warning message (45% by an unsolicited phone call, 10% by other means).
+    https://www.bbb.org/all/scamstudies/tech_support_scams/tech_support_scams_full_study
+    ("Pop-Ups and Impostors: A Better Business Bureau Study of the Growing Worldwide Problem of Computer Tech Support Scams")
+
+The pop-up's number is 1-800-XXX-XXXX (not a real number). No company, browser or operating system is named or drawn.

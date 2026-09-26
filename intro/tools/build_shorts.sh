@@ -1,6 +1,6 @@
 #!/bin/sh
 # Rebuild every short that ends on the closing card (liveEndCard in vertkit.js): render, score, loudness, mux.
-# usage: tools/build_shorts.sh [name ...]   (names: mychart quiz rules1 rules2 rules3 wwyd1 officer; default all)
+# usage: tools/build_shorts.sh [name ...]   (names: mychart quiz rules1 rules2 rules3 wwyd1 wwyd2 officer; default all)
 set -e
 cd "$(dirname "$0")/.."
 build() {   # html  out-dir  score-command  loudnorm-I  limit
@@ -18,5 +18,6 @@ for n in ${@:-mychart quiz rules1 rules2 wwyd1 officer}; do case $n in
   rules2)  build rossen-rules-ep02.html rossen-rules-ep02 "python3 score_rules.py rules/ep02" -16 0.7 ;;
   rules3)  build rossen-rules-ep03.html rossen-rules-ep03 "python3 score_rules.py rules/ep03" -16 0.7 ;;
   wwyd1)   build rossen-wwyd-ep01.html rossen-wwyd-ep01 "python3 score_wwyd.py wwyd/ep01" -16 0.7 ;;
+  wwyd2)   build rossen-wwyd-ep02.html rossen-wwyd-ep02 "python3 score_wwyd.py wwyd/ep02" -16 0.7 ;;
   officer) build rossen-officer-scam.html rossen-officer-scam "python3 score_officer.py" -16 0.7 ;;
 esac; done
