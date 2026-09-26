@@ -169,6 +169,8 @@ CH['Gm'] = (['D4', 'G4', 'Bb3'], ['G1', 'D2'], ['G2', 'Bb2'], 'G1')
 CROOT = {'Dm': 'D2', 'D': 'D2', 'Bb': 'Bb1', 'Gm': 'G2', 'G': 'G2', 'A': 'A1', 'Bm': 'B1', 'Em': 'E2', 'C': 'C2'}
 PAD = {'Dm': ('D2', 'A2'), 'D': ('D2', 'A2'), 'Bb': ('Bb1', 'F2'), 'Gm': ('G1', 'D2'), 'G': ('G1', 'D2'), 'A': ('A1', 'E2'), 'Bm': ('B1', 'F#2'), 'Em': ('E2', 'B2'), 'C': ('C2', 'G2')}
 SEG = {s['id']: s for s in SEGS}
+HITS = []   # every synced hit (time, what) -> hits.json, checked against the picture
+def H(t, what): HITS.append((round(t, 4), what))
 def SA(seg, bar=1, beat=1): return AT(seg['b0'] + bar - 1, beat)
 # template chords (fixed); episode chords from the data
 TCH = {'title': ['D D G G', 'Bm Bm A A'], 'rule': ['G G A A', 'D D D D'], 'recap': ['G G A A', 'D D G A'], 'end': ['D D G A', 'D D D D', 'D D D D']}   # the third end bar sits under the closing card (nothing plays past the stamp)
@@ -196,27 +198,27 @@ def RULE_STRIKE(t, k):   # the signature: gavel + timpani + low brass + a high g
 
 # ---------------- the recurring parts (identical in every episode) ----------------
 s = SEG['title']
-stamp_hit(0.0, .9); fx('impact/impactWood_heavy_000.ogg', 0.0, .5); glk('D6', 0.0, .4)          # JEFF'S RULES #n is already on screen
-for i in range(len(EP['hook'])): t = SA(s, 1, 2) + i * E8; xyl(('D6', 'A6')[i], t, .35); fx('casino/card-place-1.ogg', t, .2); kick(t, .5)   # the hook
+stamp_hit(0.0, .9); fx('impact/impactWood_heavy_000.ogg', 0.0, .5); glk('D6', 0.0, .4); H(0.0, 'title')   # JEFF'S RULES #n is already on screen
+for i in range(len(EP['hook'])): t = SA(s, 1, 2) + i * E8; xyl(('D6', 'A6')[i], t, .35); fx('casino/card-place-1.ogg', t, .2); kick(t, .5); H(t, 'hook')   # the hook
 fx('interface/pluck_001.ogg', SA(s, 2), .3)                                                  # Jeff pops up
 s = SEG['rule']
 push(s['b0'] * 2.5); capsnd(SA(s), False)
 fx('interface/pluck_002.ogg', SA(s, 1, 2), .3); roll_to(SA(s, 1, 2), SA(s, 1, 3), .35, TIMP_ROLL)   # Jeff steps in
-RULE_STRIKE(SA(s, 1, 3), 0); RULE_STRIKE(SA(s, 2), 1)
+RULE_STRIKE(SA(s, 1, 3), 0); RULE_STRIKE(SA(s, 2), 1); H(SA(s, 1, 3), 'rule strike 1'); H(SA(s, 2), 'rule strike 2')
 s = SEG['recap']
 push(s['b0'] * 2.5); capsnd(SA(s), False)
 for k in range(2): t = SA(s, 1, 1 + k * .5); kick(t, .7); fx('impact/impactWood_heavy_000.ogg', t, .35)   # the rule again, a lighter touch
 fx('interface/pluck_001.ogg', SA(s, 1, 1.5), .28)
-for k in range(2): t = SA(s, 2, 1 + k * .5); stamp_hit(t, .6, 'G' if k == 0 else 'A'); xyl(('D6', 'A6')[k], t, .35)   # IT'S NOT RUDE. IT'S THE RULE.
+for k in range(2): t = SA(s, 2, 1 + k * .5); stamp_hit(t, .6, 'G' if k == 0 else 'A'); xyl(('D6', 'A6')[k], t, .35); H(t, 'recap line')   # IT'S NOT RUDE. IT'S THE RULE.
 s = SEG['end']
 push(s['b0'] * 2.5)
-stamp_hit(SA(s), 1.0); fx('rpg/bookPlace1.ogg', SA(s), .4)                                    # FOLLOW FOR
-stamp_hit(SA(s, 1, 1.5), .9); glk('A6', SA(s, 1, 1.5), .4)                                   # RULE #n+1
+stamp_hit(SA(s), 1.0); fx('rpg/bookPlace1.ogg', SA(s), .4); H(SA(s), 'follow for')            # FOLLOW FOR
+stamp_hit(SA(s, 1, 1.5), .9); glk('A6', SA(s, 1, 1.5), .4); H(SA(s, 1, 1.5), 'rule #n+1')     # RULE #n+1
 fx('interface/pluck_002.ogg', SA(s, 1, 2), .28)
 roll_to(SA(s, 2), STAMP, .45, TIMP_ROLL); tomfill(SA(s, 2, 1.25), STAMP, .45, S16 / 2)       # the rubber stamp comes down
 for n in ('D2', 'F#2', 'A2'): hnl(n, STAMP, .9, dur=1.2, rel=.3)
 for n in ('D2', 'A1'): tbl(n, STAMP, .85, dur=1.2, rel=.3)
-cbp('D1', STAMP, 1.0); cpz('D2', STAMP, .9); timp(STAMP, 1.0); kick(STAMP, 1.0); one(CRASH, STAMP, .5); glk('D6', STAMP, .45)
+cbp('D1', STAMP, 1.0); cpz('D2', STAMP, .9); timp(STAMP, 1.0); kick(STAMP, 1.0); one(CRASH, STAMP, .5); glk('D6', STAMP, .45); H(STAMP, 'rubber stamp')
 fx('impact/impactPlank_medium_000.ogg', STAMP, .55); fx('impact/impactSoft_heavy_000.ogg', STAMP, .4)
 
 # ---------------- episode scenes: the camera move, captions, cues ----------------
@@ -250,11 +252,29 @@ CUES = {
     'highlight': lambda t: (fxa('interface/scratch_004.ogg', t, .4), kick(t, .55)),
     'rightaway': lambda t: (stamp_hit(t, 1.0, 'A'), fx('impact/impactPunch_heavy_001.ogg', t, .4)),
     'type': lambda t: [fx('interface/click_003.ogg', t + j * BEAT / 8, .32, (-.15, .15)[j % 2]) for j in range(len(EP.get('typeText', '')))],
+    # episode 3 (every attack lands on its beat; lead-ins end on it)
+    'listing': lambda t: (fx('casino/card-place-2.ogg', t, .4), glk('A6', t, .3), kick(t, .5)),
+    'tapbuy': lambda t: (fx('interface/click_002.ogg', t, .6), kick(t, .55), fx('interface/confirmation_002.ogg', t + E8, .3)),
+    'boxdrop': lambda t: (fx('casino/card-slide-1.ogg', t - .3, .28), fx('impact/impactSoft_heavy_000.ogg', t, .6), fx('impact/impactWood_heavy_000.ogg', t, .35), kick(t, .85), timp(t, .5)),
+    'boxopen': lambda t: (fxa('casino/cards-pack-open-1.ogg', t, .5), kick(t, .5)),
+    'fakes': lambda t: (stamp_hit(t, .8, 'Bb'), fx('impact/impactPunch_heavy_002.ogg', t, .35), [tbs(n, t + E8 + k * E8, .5, dur=.2) for k, n in enumerate(('D3', 'C#3', 'C3'))]),   # the "wah-wah-wah"
+    'curtain': lambda t: (fx('casino/card-slide-5.ogg', t, .4), fx('rpg/cloth1.ogg', t, .35), kick(t, .6)),
+    'flash': lambda t: (fx('rpg/cloth4.ogg', t, .45), one(RIM, t, .75, .1), fx('casino/card-place-2.ogg', t, .4), stab(t, 'A', .45, dur=.25), kick(t, .45), glk('A6', t + S16, .35), glk('D7', t + 2 * S16, .3)),   # the coat thrown open: ta-da (the rim gives it a crisp attack)
+    'flap': lambda t: (fx('rpg/cloth2.ogg', t, .35), one(RIM, t, .3, .1)),
+    'jeffpop': lambda t: (fx('interface/pluck_001.ogg', t, .32), kick(t, .45)),
+    'shutter': lambda t: (fx('rpg/metalLatch.ogg', t, .4), fx('rpg/creak1.ogg', t, .3), kick(t, .7), [fx('interface/tick_001.ogg', t + .04 + j * .045, .16 * (1 - j / 12)) for j in range(12)]),
+    'stalls': lambda t: [(fx('casino/chip-lay-1.ogg', t + k * S16, .3), glk(('D6', 'E6', 'F#6', 'A6', 'B6', 'D7')[k], t + k * S16, .22)) for k in range(6)],
+    'zoom': lambda t: (fx('casino/card-slide-3.ogg', t, .3), fx('interface/pluck_002.ogg', t, .28), kick(t, .55)),
+    'mark': lambda t: (fx('interface/toggle_001.ogg', t, .45), kick(t, .5), glk('A6', t, .25)),
+    'rank': lambda t: (fx('casino/card-place-1.ogg', t, .4), kick(t, .65), one(RIM, t, .35, .1)),
+    'rankrisk': lambda t: (stamp_hit(t, .8, 'Bm'), fx('interface/error_004.ogg', t, .2)),
+    'peek': lambda t: (fx('interface/pluck_002.ogg', t, .35), kick(t, .45)),
 }
+CH.setdefault('Bm', (['D4', 'F#4', 'B3'], ['B1', 'F#2'], ['B2', 'F#2'], 'B0'))
 for sc in EP['scenes']:
     s = SEG[sc['id']]; push(s['b0'] * 2.5)
-    for cp in sc.get('caps', []): capsnd(SA(s, cp[0], cp[1]), len(cp) > 3)
-for sid, bar, beat, cue in EP['cues']: CUES[cue](SA(SEG[sid], bar, beat))
+    for cp in sc.get('caps', []): capsnd(SA(s, cp[0], cp[1]), len(cp) > 3); H(SA(s, cp[0], cp[1]), 'caption')
+for sid, bar, beat, cue in EP['cues']: CUES[cue](SA(SEG[sid], bar, beat)); H(SA(SEG[sid], bar, beat), cue)
 
 # ---------------- under the closing card: a soft held D major, so the longer card never sits in silence ----------------
 _t0 = STAMP + 1.2
@@ -269,6 +289,16 @@ out *= (10 ** (-1 / 20)) / max(1e-6, np.abs(out).max())
 od = 'out/rossen-rules-' + os.path.basename(EP_PATH); os.makedirs(od, exist_ok=True)
 with wave.open(od + ('/score_hits.wav' if HO else '/score.wav'), 'wb') as w:
     w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(out, -1, 1) * 32767).astype('<i2').tobytes())
+json.dump(sorted(set(HITS)), open(od + '/hits.json', 'w'))
 if not HO:
     with open(od + '/samples_used.txt', 'w') as f: f.write('\n'.join(sorted(USED)) + '\n')
+    PACK = {'interface': 'https://kenney.nl/assets/interface-sounds', 'impact': 'https://kenney.nl/assets/impact-sounds', 'rpg': 'https://kenney.nl/assets/rpg-audio', 'casino': 'https://kenney.nl/assets/casino-audio'}
+    with open(od + '/audio_sources.txt', 'w') as f:
+        f.write(f"JEFF'S RULES #{EP['num']}. Every recorded audio file in the mix, with its source and license. All are CC0 1.0 (public domain dedication, commercial use allowed, no attribution required). None come from a music library that registers with Content ID.\n\n")
+        for u in sorted(USED):
+            src = PACK[u.split('/')[1]] + '  (Kenney, kenney.nl)' if u.startswith('kenney/') else 'https://github.com/sgossner/VSCO-2-CE  (Versilian Studios Chamber Orchestra 2 Community Edition' + (', VSCO 1 drums folder' if 'VSCO 1' in u else '') + ')'
+            f.write(f'{u}\n    source: {src}\n    license: CC0 1.0\n')
+        f.write('\nComposed (not recorded files): the whole score, written note by note in score_rules.py on the 96 BPM grid and played by the VSCO recordings above '
+                '(the series groove, pizzicato bass and low horns under every bar, the chords from the episode data, the rule-reveal signature of gavel, timpani, low brass and glock, '
+                "the brass stabs and the trombone \"wah-wah-wah\", the glockenspiel sparkles). Every sound effect is a recorded Kenney file; nothing is synthesized.\n")
 print(od, DUR, 's,', TOTAL_BARS, 'bars,', len(USED), 'samples;', ' | '.join(f"{s['id']} {s['b0']}+{s['bars']}" for s in SEGS))

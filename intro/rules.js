@@ -114,7 +114,8 @@ SCENES.placeholder = (c, t, S) => {   // the template's stand-in scene (the RULE
 function sceneBg(c) { bgDots(c, BLK, .04, .22, 18); }
 function sceneSignoff(c, t) {
   paperBg(c);
-  liveEndCard(c);   // the closing card (vertkit.js): the official logo, LIVE ON YOUTUBE + INSTAGRAM, WED 5 PM ET / FRI 10 AM ET; untouched, still
+  liveEndCard(c, EP.endPlatforms);   // the closing card (vertkit.js): the official logo, LIVE ON <platforms>, WED 5 PM ET / FRI 10 AM ET; untouched, still
+                                    // (episodes without endPlatforms keep the default YouTube + Instagram)
   const lift = seg(t, STAMP_T, STAMP_T + .15);
   if (lift < 1) { c.save(); c.translate(0, -(H + 320) * easeIn(lift)); rubberStampFlat(c); c.restore(); }
 }
@@ -146,6 +147,8 @@ window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image
   await loadPrintKit(); await loadVertKit();
   TPL = await (await fetch('rules/template.json')).json();
   EP = await (await fetch(EP_PATH + '.json')).json();
+  for (const k of EP.endPlatforms || []) if (!IMG[k + '_icon']) await loadImg(k + '_icon', `assets/social/${k}_icon.png`);
+  if (window.EP_ASSETS) await window.EP_ASSETS();   // an episode's own puppets and props (rules/epNN.js)
   TL = buildTimeline(TPL, EP);
   const E = TL[TL.length - 1]; STAMP_T = E.at(2, 2); DUR = E.t1; NFR = Math.round(FPS * DUR); window.__NFR = NFR;
   window.__timeline = TL.map(s => ({ kind: s.kind, id: s.id || s.kind, b0: s.b0, bars: s.bars, t0: s.t0, t1: s.t1 }));

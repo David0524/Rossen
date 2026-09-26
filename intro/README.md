@@ -314,3 +314,32 @@ Each slide is a 5 s loop and ships as an mp4 plus a PNG still (the still is the 
 - **Safe zone:** the top 250 px (progress bar, profile) and the bottom 240 px (reply bar) stay clear.
 
 `sh tools/build_deals.sh` also rebuilds the Stories. Run `python3 tools/verify_stories.py` to check them.
+
+## JEFF'S RULES #3: "CHECK THE SELLER." (9:16, 42.5 s)
+
+`rossen-rules-ep03.html` is built from the series template (`rules.js`, `rules/template.json`, `score_rules.py`) plus this episode's data (`rules/ep03.json`) and middle scenes (`rules/ep03.js`). It runs 17 bars at 96 BPM:
+
+| Part | Bars | What happens |
+|---|---|---|
+| Title | 2 | Recurring. |
+| Setup | 3 | The headphones deal and BUY; the box and the fake "HEDPHONES"; the listing yanked aside like a curtain onto the knockoff seller, who flashes his coat. |
+| Rule | 2 | Recurring. |
+| Why | 2 | One big storefront; Jeff pulls the cord, the shutter rolls up on a street of little stalls, one of them shady. |
+| How | 3 | The product page with SOLD BY and SHIPPED BY lit up; the three-rung ranking; the seller pops up at the risky end. |
+| Recap | 2 | Recurring. |
+| End | 3 | Recurring, with the Facebook logo added. |
+
+The knockoff seller is cut from the episode's reference by `tools/cut_knockoff.py` into head, centre strip, two coat flaps (hinged on the strip, so the coat opens and closes), two gloves and two legs. The shopper is the everyday man from the jury-duty explainer.
+
+Two template additions, both optional and inert for earlier episodes:
+- an episode may set `endPlatforms` (episode 3 adds Facebook to the closing card);
+- an episode may define `window.EP_ASSETS` to load its own puppets.
+
+Episodes 1 and 2 render and score exactly as before. Their scores were re-generated after the change and are bit-identical.
+
+To build: `sh tools/build_shorts.sh rules3`. Then check the result:
+
+    python3 tools/verify_rules.py rules/ep03 out/rossen-rules-ep03/rossen-rules-ep03.mp4
+    python3 tools/sync_check.py out/rossen-rules-ep03/rossen-rules-ep03.mp4 out/rossen-rules-ep03/hits.json
+
+`out/rossen-rules-ep03/recurring_vs_ep01.txt` records the frame-for-frame comparison of the recurring parts against episode 1.

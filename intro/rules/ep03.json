@@ -1,0 +1,33 @@
+{
+ "_doc": "JEFF'S RULES #3. Data only; the recurring parts come from rules.js + template.json, the middle scenes from rules/ep03.js. Posts right before the October sale days.",
+ "num": 3,
+ "hook": ["WHO'S REALLY", "SELLING THAT?"],
+ "rule": ["CHECK", "THE SELLER."],
+ "recap": ["GREAT PRICE? CHECK", "WHO'S SELLING IT."],
+ "endPlatforms": ["youtube", "instagram", "facebook"],
+ "ruleAfter": 1,
+ "discount": "70% OFF",
+ "fakeLabel": "HEDPHONES",
+ "seller": "QZX GOODS",
+ "ranking": [["THE BRAND"], ["THE STORE ITSELF"], ["A SELLER", "YOU DON'T KNOW"]],
+ "scenes": [
+  { "id": "setup", "bars": 3,
+    "caps": [[1, 1, "A HUGE DEAL", "ON HEADPHONES!"], [2, 1, "IT ARRIVES...", "AND UH-OH."], [3, 1, "WHO WAS", "SELLING IT?"]],
+    "chords": ["D D G G", "Bm Bm G A", "Dm Dm Bb A"] },
+  { "id": "why", "bars": 2,
+    "caps": [[1, 1, "SHOPPING ON", "A BIG SITE..."], [2, 1, "ISN'T ALWAYS BUYING", "FROM THAT SITE."]],
+    "chords": ["G G A A", "Bm Bm G A"] },
+  { "id": "how", "bars": 3,
+    "caps": [],
+    "chords": ["D D G G", "G G A A", "D D G A"] }
+ ],
+ "cues": [
+  ["setup", 1, 1, "listing"], ["setup", 1, 3, "tapbuy"],
+  ["setup", 2, 1, "boxdrop"], ["setup", 2, 2, "boxopen"], ["setup", 2, 3, "fakes"],
+  ["setup", 3, 1, "listing"], ["setup", 3, 2, "curtain"], ["setup", 3, 3, "flash"], ["setup", 3, 4, "flap"],
+  ["why", 1, 3, "jeffpop"], ["why", 2, 1, "shutter"], ["why", 2, 2, "stalls"], ["why", 2, 3, "flash"],
+  ["how", 1, 1, "zoom"], ["how", 1, 2, "mark"], ["how", 1, 3, "mark"],
+  ["how", 2, 1, "rank"], ["how", 2, 2, "rank"], ["how", 2, 3, "rankrisk"],
+  ["how", 3, 1, "peek"], ["how", 3, 2, "flash"]
+ ]
+}
