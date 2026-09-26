@@ -1,0 +1,8 @@
+Fonts used by the demo reel. All are licensed under the SIL Open Font License 1.1 (fonts/OFL.txt): free to use
+commercially and to embed in video; the fonts themselves may not be sold on their own. Downloaded from Google Fonts
+(fonts.google.com); the copyright lines above the license text are copied from each font file's own name table.
+
+PlayfairDisplay-Bold.ttf, PlayfairDisplay-Black.ttf   careers chapter (editorial serif)
+ArchivoBlack-Regular.ttf                              personal-finance chapter (chunky riso display)
+Inter-Light.ttf, Inter-Regular.ttf, Inter-SemiBold.ttf productivity chapter (clean light sans)
+Fredoka-SemiBold.ttf, Fredoka-Bold.ttf                travel chapter (rounded bold)

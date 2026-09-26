@@ -1,0 +1,14 @@
+  0.625s  letter lands  onset   0.630s  offset   +5 ms
+  1.250s  Raj nods      onset   1.255s  offset   +5 ms
+  2.190s  letter lifts  onset   2.194s  offset   +4 ms
+  2.500s  fold 1 (downbeat) onset   2.504s  offset   +4 ms
+  2.812s  fold 2        onset   2.812s  offset   +0 ms
+  3.125s  paycheck caught onset   3.130s  offset   +5 ms
+  3.750s  MONEY RULE #1 lands onset   3.755s  offset   +5 ms
+  4.375s  Maya lands    onset   4.380s  offset   +5 ms
+8 hits, worst offset 5 ms
+PASS the offer letter ("YOU GOT THE JOB.") holds still for 1.25 s once landed (largest change 1/255)
+PASS the MONEY RULE #1 card holds still for 0.92 s once landed (largest change 1/255)
+PASS ink bars (0-2.30 s): no fluorescent pink, teal or yellow anywhere (worst frame 0.0000% of pixels)
+PASS riso bars (2.98-5.0 s): no warm ink paper or sepia ink left (worst frame 0.0177% of pixels)
+ALL PASS
