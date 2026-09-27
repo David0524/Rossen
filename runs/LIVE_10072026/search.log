@@ -3,3 +3,25 @@ INFO beat L07-A1: 8 queries via brave -> 136 raw candidates
 INFO beat L07-A2: 15 queries via youtube -> 426 raw candidates
 INFO beat L07-A2: 8 queries via brave -> 147 raw candidates
 INFO beat L07-A2: 8 queries via brave -> 160 raw candidates
+INFO beat L07-A3: 8 queries via brave -> 154 raw candidates
+INFO beat L07-A3: 8 queries via brave -> 156 raw candidates
+INFO beat L07-A4: 16 queries via youtube -> 406 raw candidates
+INFO beat L07-A4: 8 queries via brave -> 150 raw candidates
+INFO beat L07-A4: 8 queries via brave -> 160 raw candidates
+INFO beat L07-A5: 15 queries via youtube -> 395 raw candidates
+INFO beat L07-A5: 8 queries via brave -> 142 raw candidates
+INFO beat L07-A5: 8 queries via brave -> 160 raw candidates
+INFO beat L07-B1: 8 queries via brave -> 158 raw candidates
+INFO beat L07-B1: 8 queries via brave -> 152 raw candidates
+INFO beat L07-B2: 8 queries via brave -> 160 raw candidates
+INFO beat L07-B2: 8 queries via brave -> 159 raw candidates
+3342 raw -> 2423 after dedupe across 7 beats (youtube + brave)
+  by platform: youtube 1660 · news_web 611 · reddit 141 · tiktok 6 · x 4 · instagram 1
+  L07-A1: 141
+  L07-A2: 537
+  L07-A3: 219
+  L07-A4: 572
+  L07-A5: 462
+  L07-B1: 239
+  L07-B2: 253
+wrote candidates.json
