@@ -1,0 +1,524 @@
+[
+ {
+  "beat_id": "L07-A1",
+  "pass": 2,
+  "flagged": null,
+  "status": "manual_clip",
+  "platform": "tiktok",
+  "title": "Target worker's basket-tracker TikTok (Aug 29, 2026)",
+  "manual_url": "https://www.tiktok.com/@user60342208753/video/7679448051202657566",
+  "flagged_reason": "MANUAL LANE \u2014 a real outcome, not a gap. source_native is tiktok: the worker's own post is the pick. Handle matches the source log, and the video ID decodes to 2026-08-29 13:40 UTC, the script's date. Not watched. TikTok ships no caption track and yt-dlp's TikTok extractor is failing this run, so the outcue is UNVERIFIED and no timecode is given.",
+  "better_query": "n/a \u2014 permalink in hand. Pull the live view count on show day (script says 3.4M).",
+  "source_mix": {
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@user60342208753/video/7679448051202657566",
+    "source_type": "first_person",
+    "score": 92,
+    "tone": 9,
+    "authenticity": 10,
+    "quality": 7,
+    "fit": 10,
+    "segments": [],
+    "reasoning": "The originating post.",
+    "flags": [
+     "outcue UNVERIFIED \u2014 no caption track, extractor failing"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=xBjs7LKtMHc",
+    "source_type": "creator_short",
+    "score": 20,
+    "reason": "Rhett Walker repost of the worker's video \u2014 aggregator, not graded over the native post."
+   }
+  ],
+  "cannot_determine": [
+   "whether the caption fragment '\u2026#files #government #flock | dei target' is this video's full caption"
+  ]
+ },
+ {
+  "beat_id": "L07-A2",
+  "pass": 2,
+  "flagged": null,
+  "status": "throttled",
+  "platform": "youtube",
+  "title": "License plate readers now at Home Depot, Lowe's Home Improvement stores (NBC Connecticut) \u2014 pending captions",
+  "manual_url": "https://www.foxnews.com/tech/license-plate-cameras-home-depot-lowes-spark-privacy-fears.amp",
+  "flagged_reason": "THROTTLED, not empty. Every caption fetch on this beat's YouTube shortlist hit YouTube's 'Sign in to confirm you're not a bot' wall \u2014 72 bot-check errors across the run, still blocked after a 10-minute cooldown and a retry through the normal path. Without a transcript there is no verifiable outcue, so nothing is flagged. The blocked calls were not cached; re-running captions later re-fetches cleanly. FALLBACK AVAILABLE NOW: the Fox News Connecticut report the source log was chasing (May 16, 2026, 144s) is on foxnews.com \u2014 a manual pull with no caption track, but the right story.",
+  "better_query": "Re-run Step 5 (captions) for this beat after the YouTube block lifts \u2014 no query change needed; the shortlist is good.",
+  "source_mix": {
+   "affiliate": 3,
+   "network": 1,
+   "creator_long": 1
+  },
+  "diversity_floor_applied": true,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=jTKvp41lHZc",
+    "source_type": "affiliate",
+    "score": 86,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: License plate readers at Home Depot and Lowe's \u2014 the Connecticut story the source log was chasing, on a captioned affiliate. Added by hand: the pre-scan found it, the harvest did not.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.foxnews.com/tech/license-plate-cameras-home-depot-lowes-spark-privacy-fears.amp",
+    "source_type": "network",
+    "score": 78,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: The exact Fox News Connecticut report the source log cites (May 16, 2026). news_web, no caption track.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=-RaHh0LVS7Q",
+    "source_type": "affiliate",
+    "score": 70,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Home Depot and Lowe's installing plate readers. Second market, same story.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=lq3mZnI8tnY",
+    "source_type": "affiliate",
+    "score": 52,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Flock privacy safeguards amid backlash \u2014 right company, not the stores.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=NyS782HGrbY",
+    "source_type": "creator_long",
+    "score": 48,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: DIVERSITY FLOOR PROMOTION over a fifth affiliate/network. Police use of Flock data \u2014 the 'who can search it' angle. Advocacy source; 38 below the top pick, not a peer.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "whether NBC CT shows the pole cameras on screen"
+  ]
+ },
+ {
+  "beat_id": "L07-A3",
+  "pass": 2,
+  "flagged": null,
+  "status": "throttled",
+  "platform": "youtube",
+  "title": "Caper Cart b-roll \u2014 pending captions",
+  "flagged_reason": "THROTTLED, not empty. Every caption fetch on this beat's YouTube shortlist hit YouTube's 'Sign in to confirm you're not a bot' wall \u2014 72 bot-check errors across the run, still blocked after a 10-minute cooldown and a retry through the normal path. Without a transcript there is no verifiable outcue, so nothing is flagged. The blocked calls were not cached; re-running captions later re-fetches cleanly. For a b-roll beat the transcript matters less than the picture, so a producer can eyeball Instacart's own launch video (IO1wx3zBR6s) now \u2014 but it is horizontal against a VERTICAL BROLL marker and will need a crop ruling.",
+  "better_query": "Re-run Step 5 (captions) for this beat after the YouTube block lifts \u2014 no query change needed; the shortlist is good.",
+  "source_mix": {
+   "creator_short": 2,
+   "creator_long": 1,
+   "affiliate": 1,
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/shorts/jqTpde_UWs4",
+    "source_type": "creator_short",
+    "score": 74,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Vertical Short \u2014 the only native-vertical Caper footage found. Commentary title ('strategy still isn't working'), so b-roll content is uncertain.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=IO1wx3zBR6s",
+    "source_type": "creator_long",
+    "score": 72,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Instacart's own launch video: clean, well-lit cart footage in an aisle \u2014 exactly the visual. But horizontal against a VERTICAL BROLL beat, and it's brand marketing.",
+    "flags": [
+     "orientation crossed: horizontal source on a vertical beat \u2014 producer rules on crop",
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=CU53EbSEVAA",
+    "source_type": "affiliate",
+    "score": 66,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Affiliate package on Caper carts in a grocery store. Horizontal.",
+    "flags": [
+     "orientation crossed",
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=BuUPAtCEKMM",
+    "source_type": "first_person",
+    "score": 60,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Shopper filming ShopRite Caper carts. Raw \u2014 could be the natural b-roll.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=v2Ea_skSdE4",
+    "source_type": "creator_short",
+    "score": 54,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: 26s cart demo, 2023. Short enough to be pure b-roll.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "which candidates are natively vertical"
+  ]
+ },
+ {
+  "beat_id": "L07-A4",
+  "pass": 2,
+  "flagged": null,
+  "status": "awaiting_approval",
+  "platform": null,
+  "title": null,
+  "flagged_reason": "EMPTY on the named case \u2014 genuinely, not throttled. Brianna Jones has no video in any reachable source: YouTube returned nothing on three name variants (confirmed on retry while search was live), and the Charlotte Observer, FOX8 and WAVY coverage is text (two of the three block direct fetch, so embedded video cannot be ruled out entirely). NAME COLLISION: a WCJB post about a Brianna Jones who was a Walmart manager in a fraud case is a DIFFERENT PERSON. The script's own DECIDE line anticipates this. Any swap changes what the show says \u2014 proposal held for producer approval.",
+  "better_query": "Ask FOX8/WAVY (Nexstar) whether their story has a video package with Jones on camera \u2014 that is the only route to the named case.",
+  "swap_proposal": {
+   "url": "https://www.youtube.com/watch?v=kEN0nL8mtXw",
+   "title": "Alabama woman falsely accused of shoplifting awarded $2.1 million in Walmart suit (CBS News / WKRG)",
+   "person": "Lesley Nurse, Mims, Alabama",
+   "segments": [
+    {
+     "in": "0:00",
+     "out": "0:41",
+     "outcue": "up to court by then she said the damage to her reputation had already been done"
+    },
+    {
+     "in": "0:52",
+     "out": "1:02",
+     "outcue": "anything wrong why would i pay for something that i didn't do but it turns"
+    }
+   ],
+   "why": "Self-checkout malfunction, stopped by asset protection, arrested and mugshotted over $48 of groceries, charge dropped when Walmart didn't show, then a $2.1M jury verdict. On camera, captioned, outcues verified. It fits 'think what you would do if this happened to you' better than any explainer, but it is a different woman, an older case (suit filed 2018), and involves no AI camera \u2014 the script's AI framing would need to come off this beat."
+  },
+  "source_mix": {
+   "network": 4,
+   "affiliate": 1
+  },
+  "diversity_floor_applied": true,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=kEN0nL8mtXw",
+    "source_type": "network",
+    "score": 78,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 5,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:41",
+      "outcue": "up to court by then she said the damage to her reputation had already been done"
+     },
+     {
+      "in": "0:52",
+      "out": "1:02",
+      "outcue": "anything wrong why would i pay for something that i didn't do but it turns"
+     }
+    ],
+    "reasoning": "Best available swap. Fit scored 5 because it is not the named case \u2014 the swap is what makes it fit.",
+    "flags": [
+     "case swap \u2014 requires producer approval",
+     "no AI camera involved; do not let the AI line sit over this clip"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=tmoQxq2P7Y4",
+    "source_type": "network",
+    "score": 62,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 4,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: A different woman accused after self-checkout (~891K views). Closest to the setup's emotional beat, but it is a CASE SWAP.",
+    "flags": [
+     "case swap \u2014 needs producer approval",
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=hunFGy5waws",
+    "source_type": "network",
+    "score": 58,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 4,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Fact-check of claims about Walmart's in-store AI cameras. Explainer \u2014 matches the script's DECIDE fallback \u2014 but it may cut AGAINST the segment's framing.",
+    "flags": [
+     "may contradict the show \u2014 read before using",
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=JS2ezxljX_c",
+    "source_type": "affiliate",
+    "score": 50,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 4,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: 'Walmart testing out artificial intelligence in stores' \u2014 short explainer. Likely old.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=IUpUy4UqZD4",
+    "source_type": "network",
+    "score": 40,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 4,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Walmart's 'AI factory' store \u2014 cameras in a store, raw AP. Old (2019).",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.facebook.com/WCJB20/posts/walmart-fraud-brianna-jones-a-manager-at-a-local-walmart-loaded-11000-on",
+    "source_type": "affiliate",
+    "score": 0,
+    "reason": "NAME COLLISION \u2014 a different Brianna Jones (Walmart manager, fraud case). Never pull."
+   }
+  ],
+  "cannot_determine": [
+   "whether FRANCE 24's fact-check (hunFGy5waws) undercuts the segment's framing \u2014 it could not be read this run"
+  ]
+ },
+ {
+  "beat_id": "L07-A5",
+  "pass": 2,
+  "flagged": null,
+  "status": "throttled",
+  "platform": "youtube",
+  "title": "We Had 400 People Shop For Groceries. What We Found Will Shock You. (More Perfect Union / Consumer Reports) \u2014 pending captions",
+  "flagged_reason": "THROTTLED, not empty. Every caption fetch on this beat's YouTube shortlist hit YouTube's 'Sign in to confirm you're not a bot' wall \u2014 72 bot-check errors across the run, still blocked after a 10-minute cooldown and a retry through the normal path. Without a transcript there is no verifiable outcue, so nothing is flagged. The blocked calls were not cached; re-running captions later re-fetches cleanly. The top candidate is the study's own video (~4.76M views); whether Eric Gardner is on camera is the thing the transcript would settle.",
+  "better_query": "Re-run Step 5 (captions) for this beat after the YouTube block lifts \u2014 no query change needed; the shortlist is good.",
+  "source_mix": {
+   "creator_long": 3,
+   "affiliate": 1,
+   "network": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=osxr7xSxsGo",
+    "source_type": "creator_long",
+    "score": 88,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: The study itself, from the outlet that ran it (~4.76M views). creator_long is this role's natural source type.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=WpX5kp5Svtk",
+    "source_type": "creator_long",
+    "score": 80,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Three-minute MPU cut on the same findings (Dec 14, 2025). Tighter runway than the long version.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=_I6qF2d3uYc",
+    "source_type": "creator_long",
+    "score": 60,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: CR's own 'Talking Carts' long-form. 29 minutes \u2014 over the ceiling, demoted.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=8V7Hl2jcWl8",
+    "source_type": "affiliate",
+    "score": 58,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Affiliate read of the CR findings. No Gardner.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=U5Rt7aPBDUE",
+    "source_type": "network",
+    "score": 52,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [],
+    "reasoning": "Pass-one metadata only: Instacart responds \u2014 useful for the rebuttal line, not the setup.",
+    "flags": [
+     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "Eric Gardner on camera; timing of the screenshots moment"
+  ]
+ },
+ {
+  "beat_id": "L07-B1",
+  "pass": 2,
+  "flagged": null,
+  "status": "manual_clip",
+  "platform": "tiktok",
+  "title": "Katelyn Montalbano's short video (@kb.montalbano)",
+  "manual_url": "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238",
+  "flagged_reason": "MANUAL LANE. The creator's own post; ID decodes to 2025-07-05, days before the July 2025 Prime Day. Found by the pre-scan and independently by the harvest. Not watched \u2014 confirm it is the cart video. Outcue UNVERIFIED (no caption track).",
+  "better_query": "n/a \u2014 permalink in hand.",
+  "source_mix": {
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238",
+    "source_type": "first_person",
+    "score": 88,
+    "tone": 9,
+    "authenticity": 10,
+    "quality": 7,
+    "fit": 9,
+    "segments": [],
+    "reasoning": "The originating post.",
+    "flags": [
+     "outcue UNVERIFIED",
+     "2025 video \u2014 keep it off any 'this week' line"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "that this is the cart post specifically"
+  ]
+ },
+ {
+  "beat_id": "L07-B2",
+  "pass": 2,
+  "flagged": null,
+  "status": "manual_clip",
+  "platform": "tiktok",
+  "title": "Jaymes (@semyajnotsemaj) \u2014 Prime Day fake-discount video, July 2024",
+  "manual_url": "https://www.tiktok.com/@semyajnotsemaj",
+  "flagged_reason": "MANUAL LANE, PROFILE ONLY \u2014 the specific video could not be pinned by Brave (web + video) or the harvest. Distractify (7/17/2024) supplies the content: INIU wireless charger, 41% off at $15.98 against an inflated $24.98, found on CamelCamelCamel; quote 'a 41 percent discount on a fake price'. Scroll the profile to mid-July 2024.",
+  "better_query": "Search TikTok in-app for @semyajnotsemaj, July 2024. Other creators' price-history TikToks exist (@chloesdealclub, @niickjackson) but the script names Jaymes.",
+  "source_mix": {
+   "creator_short": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@semyajnotsemaj",
+    "source_type": "creator_short",
+    "score": 70,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 6,
+    "fit": 9,
+    "segments": [],
+    "reasoning": "Profile of the named creator; permalink unpinned.",
+    "flags": [
+     "permalink not found",
+     "2024 video"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "the permalink"
+  ]
+ }
+]

@@ -1,0 +1,768 @@
+{
+ "https://www.tiktok.com/@user60342208753/video/7679448051202657566": {
+  "status": "not_youtube",
+  "platform": "tiktok"
+ },
+ "https://www.youtube.com/watch?v=jTKvp41lHZc": {
+  "status": "null",
+  "video_id": "jTKvp41lHZc",
+  "retried": true
+ },
+ "https://www.foxnews.com/tech/license-plate-cameras-home-depot-lowes-spark-privacy-fears.amp": {
+  "status": "not_youtube",
+  "platform": "news_web"
+ },
+ "https://www.youtube.com/watch?v=-RaHh0LVS7Q": {
+  "status": "null",
+  "video_id": "-RaHh0LVS7Q",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=lq3mZnI8tnY": {
+  "status": "null",
+  "video_id": "lq3mZnI8tnY",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=NyS782HGrbY": {
+  "status": "null",
+  "video_id": "NyS782HGrbY",
+  "retried": true
+ },
+ "https://www.youtube.com/shorts/jqTpde_UWs4": {
+  "status": "null",
+  "video_id": "jqTpde_UWs4",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=IO1wx3zBR6s": {
+  "status": "null",
+  "video_id": "IO1wx3zBR6s",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=CU53EbSEVAA": {
+  "status": "null",
+  "video_id": "CU53EbSEVAA",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=BuUPAtCEKMM": {
+  "status": "null",
+  "video_id": "BuUPAtCEKMM",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=v2Ea_skSdE4": {
+  "status": "null",
+  "video_id": "v2Ea_skSdE4",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=tmoQxq2P7Y4": {
+  "status": "null",
+  "video_id": "tmoQxq2P7Y4",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=hunFGy5waws": {
+  "status": "null",
+  "video_id": "hunFGy5waws",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=JS2ezxljX_c": {
+  "status": "null",
+  "video_id": "JS2ezxljX_c",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=kEN0nL8mtXw": {
+  "status": "ok",
+  "video_id": "kEN0nL8mtXw",
+  "source": "auto",
+  "duration": 143.84,
+  "n_cues": 130,
+  "retried": true,
+  "cues": [
+   {
+    "start": 1.12,
+    "end": 2.629,
+    "text": "leslie nurse says she was at the"
+   },
+   {
+    "start": 2.6390000000000002,
+    "end": 4.71,
+    "text": "leslie nurse says she was at the self-checkout at the sims walmart with"
+   },
+   {
+    "start": 4.71,
+    "end": 4.72,
+    "text": "self-checkout at the sims walmart with"
+   },
+   {
+    "start": 4.72,
+    "end": 6.63,
+    "text": "self-checkout at the sims walmart with her husband and three kids fighting a"
+   },
+   {
+    "start": 6.63,
+    "end": 6.64,
+    "text": "her husband and three kids fighting a"
+   },
+   {
+    "start": 6.64,
+    "end": 8.87,
+    "text": "her husband and three kids fighting a malfunctioning scanner even getting help"
+   },
+   {
+    "start": 8.87,
+    "end": 8.88,
+    "text": "malfunctioning scanner even getting help"
+   },
+   {
+    "start": 8.88,
+    "end": 11.03,
+    "text": "malfunctioning scanner even getting help from a walmart associate after she"
+   },
+   {
+    "start": 11.03,
+    "end": 11.04,
+    "text": "from a walmart associate after she"
+   },
+   {
+    "start": 11.04,
+    "end": 13.03,
+    "text": "from a walmart associate after she thought she'd finished and paid she was"
+   },
+   {
+    "start": 13.03,
+    "end": 13.04,
+    "text": "thought she'd finished and paid she was"
+   },
+   {
+    "start": 13.04,
+    "end": 15.749,
+    "text": "thought she'd finished and paid she was stopped by an asset protection manager i"
+   },
+   {
+    "start": 15.749,
+    "end": 15.759,
+    "text": "stopped by an asset protection manager i"
+   },
+   {
+    "start": 15.759,
+    "end": 17.029,
+    "text": "stopped by an asset protection manager i remember going in that little room and i"
+   },
+   {
+    "start": 17.029,
+    "end": 17.039,
+    "text": "remember going in that little room and i"
+   },
+   {
+    "start": 17.039,
+    "end": 18.71,
+    "text": "remember going in that little room and i was like this will be resolved this was"
+   },
+   {
+    "start": 18.71,
+    "end": 18.72,
+    "text": "was like this will be resolved this was"
+   },
+   {
+    "start": 18.72,
+    "end": 20.71,
+    "text": "was like this will be resolved this was an accident this wasn't on purpose she"
+   },
+   {
+    "start": 20.71,
+    "end": 20.72,
+    "text": "an accident this wasn't on purpose she"
+   },
+   {
+    "start": 20.72,
+    "end": 22.87,
+    "text": "an accident this wasn't on purpose she was eventually charged with stealing 48"
+   },
+   {
+    "start": 22.87,
+    "end": 22.88,
+    "text": "was eventually charged with stealing 48"
+   },
+   {
+    "start": 22.88,
+    "end": 25.349,
+    "text": "was eventually charged with stealing 48 dollars worth of groceries 11 items in"
+   },
+   {
+    "start": 25.349,
+    "end": 25.359,
+    "text": "dollars worth of groceries 11 items in"
+   },
+   {
+    "start": 25.359,
+    "end": 27.429,
+    "text": "dollars worth of groceries 11 items in all including christmas lights a loaf of"
+   },
+   {
+    "start": 27.429,
+    "end": 27.439,
+    "text": "all including christmas lights a loaf of"
+   },
+   {
+    "start": 27.439,
+    "end": 30.31,
+    "text": "all including christmas lights a loaf of bread and cap and crunch cereal she was"
+   },
+   {
+    "start": 30.31,
+    "end": 30.32,
+    "text": "bread and cap and crunch cereal she was"
+   },
+   {
+    "start": 30.32,
+    "end": 32.87,
+    "text": "bread and cap and crunch cereal she was eventually arrested mug shot taken but"
+   },
+   {
+    "start": 32.87,
+    "end": 32.88,
+    "text": "eventually arrested mug shot taken but"
+   },
+   {
+    "start": 32.88,
+    "end": 34.709,
+    "text": "eventually arrested mug shot taken but the criminal charge was eventually"
+   },
+   {
+    "start": 34.709,
+    "end": 34.719,
+    "text": "the criminal charge was eventually"
+   },
+   {
+    "start": 34.719,
+    "end": 36.549,
+    "text": "the criminal charge was eventually dropped when no one from walmart showed"
+   },
+   {
+    "start": 36.549,
+    "end": 36.559,
+    "text": "dropped when no one from walmart showed"
+   },
+   {
+    "start": 36.559,
+    "end": 39.11,
+    "text": "dropped when no one from walmart showed up to court by then she said the damage"
+   },
+   {
+    "start": 39.11,
+    "end": 39.12,
+    "text": "up to court by then she said the damage"
+   },
+   {
+    "start": 39.12,
+    "end": 41.35,
+    "text": "up to court by then she said the damage to her reputation had already been done"
+   },
+   {
+    "start": 41.35,
+    "end": 41.36,
+    "text": "to her reputation had already been done"
+   },
+   {
+    "start": 41.36,
+    "end": 43.51,
+    "text": "to her reputation had already been done her ability to make a living stifled by"
+   },
+   {
+    "start": 43.51,
+    "end": 43.52,
+    "text": "her ability to make a living stifled by"
+   },
+   {
+    "start": 43.52,
+    "end": 46.229,
+    "text": "her ability to make a living stifled by the criminal charge what was worse she"
+   },
+   {
+    "start": 46.229,
+    "end": 46.239,
+    "text": "the criminal charge what was worse she"
+   },
+   {
+    "start": 46.239,
+    "end": 48.31,
+    "text": "the criminal charge what was worse she continued to receive demand letters from"
+   },
+   {
+    "start": 48.31,
+    "end": 48.32,
+    "text": "continued to receive demand letters from"
+   },
+   {
+    "start": 48.32,
+    "end": 50.79,
+    "text": "continued to receive demand letters from a walmart affiliated law firm offering"
+   },
+   {
+    "start": 50.79,
+    "end": 50.8,
+    "text": "a walmart affiliated law firm offering"
+   },
+   {
+    "start": 50.8,
+    "end": 52.869,
+    "text": "a walmart affiliated law firm offering to drop the matter if she paid them two"
+   },
+   {
+    "start": 52.869,
+    "end": 52.879,
+    "text": "to drop the matter if she paid them two"
+   },
+   {
+    "start": 52.879,
+    "end": 55.35,
+    "text": "to drop the matter if she paid them two hundred dollars at first you think"
+   },
+   {
+    "start": 55.35,
+    "end": 55.36,
+    "text": "hundred dollars at first you think"
+   },
+   {
+    "start": 55.36,
+    "end": 57.51,
+    "text": "hundred dollars at first you think i'll pay it and it'll all go away but"
+   },
+   {
+    "start": 57.51,
+    "end": 57.52,
+    "text": "i'll pay it and it'll all go away but"
+   },
+   {
+    "start": 57.52,
+    "end": 58.869,
+    "text": "i'll pay it and it'll all go away but then i'm like you know i didn't do"
+   },
+   {
+    "start": 58.869,
+    "end": 58.879,
+    "text": "then i'm like you know i didn't do"
+   },
+   {
+    "start": 58.879,
+    "end": 60.47,
+    "text": "then i'm like you know i didn't do anything wrong why would i pay for"
+   },
+   {
+    "start": 60.47,
+    "end": 60.48,
+    "text": "anything wrong why would i pay for"
+   },
+   {
+    "start": 60.48,
+    "end": 62.549,
+    "text": "anything wrong why would i pay for something that i didn't do but it turns"
+   },
+   {
+    "start": 62.549,
+    "end": 62.559,
+    "text": "something that i didn't do but it turns"
+   },
+   {
+    "start": 62.559,
+    "end": 65.109,
+    "text": "something that i didn't do but it turns out many people do during testimony in"
+   },
+   {
+    "start": 65.109,
+    "end": 65.119,
+    "text": "out many people do during testimony in"
+   },
+   {
+    "start": 65.119,
+    "end": 66.63,
+    "text": "out many people do during testimony in the lawsuit she filed against the"
+   },
+   {
+    "start": 66.63,
+    "end": 66.64,
+    "text": "the lawsuit she filed against the"
+   },
+   {
+    "start": 66.64,
+    "end": 68.95,
+    "text": "the lawsuit she filed against the company an expert testified walmart"
+   },
+   {
+    "start": 68.95,
+    "end": 68.96,
+    "text": "company an expert testified walmart"
+   },
+   {
+    "start": 68.96,
+    "end": 71.27,
+    "text": "company an expert testified walmart routinely uses what are known as civil"
+   },
+   {
+    "start": 71.27,
+    "end": 71.28,
+    "text": "routinely uses what are known as civil"
+   },
+   {
+    "start": 71.28,
+    "end": 73.91,
+    "text": "routinely uses what are known as civil recovery laws in many states to get"
+   },
+   {
+    "start": 73.91,
+    "end": 73.92,
+    "text": "recovery laws in many states to get"
+   },
+   {
+    "start": 73.92,
+    "end": 75.91,
+    "text": "recovery laws in many states to get people they've accused of shoplifting to"
+   },
+   {
+    "start": 75.91,
+    "end": 75.92,
+    "text": "people they've accused of shoplifting to"
+   },
+   {
+    "start": 75.92,
+    "end": 76.95,
+    "text": "people they've accused of shoplifting to pay up"
+   },
+   {
+    "start": 76.95,
+    "end": 76.96,
+    "text": "pay up"
+   },
+   {
+    "start": 76.96,
+    "end": 78.789,
+    "text": "pay up university of nebraska assistant law"
+   },
+   {
+    "start": 78.789,
+    "end": 78.799,
+    "text": "university of nebraska assistant law"
+   },
+   {
+    "start": 78.799,
+    "end": 81.03,
+    "text": "university of nebraska assistant law professor ryan sullivan who has studied"
+   },
+   {
+    "start": 81.03,
+    "end": 81.04,
+    "text": "professor ryan sullivan who has studied"
+   },
+   {
+    "start": 81.04,
+    "end": 82.95,
+    "text": "professor ryan sullivan who has studied the practice testified that in a"
+   },
+   {
+    "start": 82.95,
+    "end": 82.96,
+    "text": "the practice testified that in a"
+   },
+   {
+    "start": 82.96,
+    "end": 86.07,
+    "text": "the practice testified that in a two-year period walmart charged some 1.4"
+   },
+   {
+    "start": 86.07,
+    "end": 86.08,
+    "text": "two-year period walmart charged some 1.4"
+   },
+   {
+    "start": 86.08,
+    "end": 88.149,
+    "text": "two-year period walmart charged some 1.4 million people across the country with"
+   },
+   {
+    "start": 88.149,
+    "end": 88.159,
+    "text": "million people across the country with"
+   },
+   {
+    "start": 88.159,
+    "end": 90.39,
+    "text": "million people across the country with criminal theft of property and ended up"
+   },
+   {
+    "start": 90.39,
+    "end": 90.4,
+    "text": "criminal theft of property and ended up"
+   },
+   {
+    "start": 90.4,
+    "end": 93.19,
+    "text": "criminal theft of property and ended up collecting more than 300 million dollars"
+   },
+   {
+    "start": 93.19,
+    "end": 93.2,
+    "text": "collecting more than 300 million dollars"
+   },
+   {
+    "start": 93.2,
+    "end": 94.95,
+    "text": "collecting more than 300 million dollars through their civil demand letters in"
+   },
+   {
+    "start": 94.95,
+    "end": 94.96,
+    "text": "through their civil demand letters in"
+   },
+   {
+    "start": 94.96,
+    "end": 97.27,
+    "text": "through their civil demand letters in the same period the lawsuit nurse filed"
+   },
+   {
+    "start": 97.27,
+    "end": 97.28,
+    "text": "the same period the lawsuit nurse filed"
+   },
+   {
+    "start": 97.28,
+    "end": 99.109,
+    "text": "the same period the lawsuit nurse filed against walmart charged the company with"
+   },
+   {
+    "start": 99.109,
+    "end": 99.119,
+    "text": "against walmart charged the company with"
+   },
+   {
+    "start": 99.119,
+    "end": 101.749,
+    "text": "against walmart charged the company with abusive process meaning the company used"
+   },
+   {
+    "start": 101.749,
+    "end": 101.759,
+    "text": "abusive process meaning the company used"
+   },
+   {
+    "start": 101.759,
+    "end": 103.83,
+    "text": "abusive process meaning the company used the criminal charges to bolster their"
+   },
+   {
+    "start": 103.83,
+    "end": 103.84,
+    "text": "the criminal charges to bolster their"
+   },
+   {
+    "start": 103.84,
+    "end": 106.469,
+    "text": "the criminal charges to bolster their chances of civil recovery exactly that"
+   },
+   {
+    "start": 106.469,
+    "end": 106.479,
+    "text": "chances of civil recovery exactly that"
+   },
+   {
+    "start": 106.479,
+    "end": 108.63,
+    "text": "chances of civil recovery exactly that they prosecute her solely for the"
+   },
+   {
+    "start": 108.63,
+    "end": 108.64,
+    "text": "they prosecute her solely for the"
+   },
+   {
+    "start": 108.64,
+    "end": 110.789,
+    "text": "they prosecute her solely for the purpose of getting what they call civil"
+   },
+   {
+    "start": 110.789,
+    "end": 110.799,
+    "text": "purpose of getting what they call civil"
+   },
+   {
+    "start": 110.799,
+    "end": 113.109,
+    "text": "purpose of getting what they call civil recovery on money to add insult to"
+   },
+   {
+    "start": 113.109,
+    "end": 113.119,
+    "text": "recovery on money to add insult to"
+   },
+   {
+    "start": 113.119,
+    "end": 115.51,
+    "text": "recovery on money to add insult to injury walmart never produced a video"
+   },
+   {
+    "start": 115.51,
+    "end": 115.52,
+    "text": "injury walmart never produced a video"
+   },
+   {
+    "start": 115.52,
+    "end": 116.87,
+    "text": "injury walmart never produced a video that would have been recorded at the"
+   },
+   {
+    "start": 116.87,
+    "end": 116.88,
+    "text": "that would have been recorded at the"
+   },
+   {
+    "start": 116.88,
+    "end": 118.789,
+    "text": "that would have been recorded at the self-checkout area that would have"
+   },
+   {
+    "start": 118.789,
+    "end": 118.799,
+    "text": "self-checkout area that would have"
+   },
+   {
+    "start": 118.799,
+    "end": 121.429,
+    "text": "self-checkout area that would have proved nurse shoplifted or didn't it"
+   },
+   {
+    "start": 121.429,
+    "end": 121.439,
+    "text": "proved nurse shoplifted or didn't it"
+   },
+   {
+    "start": 121.439,
+    "end": 123.03,
+    "text": "proved nurse shoplifted or didn't it would have shown the truth and that they"
+   },
+   {
+    "start": 123.03,
+    "end": 123.04,
+    "text": "would have shown the truth and that they"
+   },
+   {
+    "start": 123.04,
+    "end": 125.35,
+    "text": "would have shown the truth and that they didn't want the truth to be shown at the"
+   },
+   {
+    "start": 125.35,
+    "end": 125.36,
+    "text": "didn't want the truth to be shown at the"
+   },
+   {
+    "start": 125.36,
+    "end": 127.99,
+    "text": "didn't want the truth to be shown at the end of this lawsuit filed in 2018 and"
+   },
+   {
+    "start": 127.99,
+    "end": 128.0,
+    "text": "end of this lawsuit filed in 2018 and"
+   },
+   {
+    "start": 128.0,
+    "end": 130.07,
+    "text": "end of this lawsuit filed in 2018 and delayed by the covet pandemic a"
+   },
+   {
+    "start": 130.07,
+    "end": 130.08,
+    "text": "delayed by the covet pandemic a"
+   },
+   {
+    "start": 130.08,
+    "end": 132.39,
+    "text": "delayed by the covet pandemic a unanimous jury found for nurse and"
+   },
+   {
+    "start": 132.39,
+    "end": 132.4,
+    "text": "unanimous jury found for nurse and"
+   },
+   {
+    "start": 132.4,
+    "end": 135.03,
+    "text": "unanimous jury found for nurse and awarded her 2.1 million dollars in"
+   },
+   {
+    "start": 135.03,
+    "end": 135.04,
+    "text": "awarded her 2.1 million dollars in"
+   },
+   {
+    "start": 135.04,
+    "end": 136.63,
+    "text": "awarded her 2.1 million dollars in punitive damages"
+   },
+   {
+    "start": 136.63,
+    "end": 136.64,
+    "text": "punitive damages"
+   },
+   {
+    "start": 136.64,
+    "end": 137.83,
+    "text": "punitive damages i hope it makes a difference i don't"
+   },
+   {
+    "start": 137.83,
+    "end": 137.84,
+    "text": "i hope it makes a difference i don't"
+   },
+   {
+    "start": 137.84,
+    "end": 139.11,
+    "text": "i hope it makes a difference i don't want anybody else to have to go through"
+   },
+   {
+    "start": 139.11,
+    "end": 139.12,
+    "text": "want anybody else to have to go through"
+   },
+   {
+    "start": 139.12,
+    "end": 143.84,
+    "text": "want anybody else to have to go through this again bill ryles w-k-r-g news 5."
+   }
+  ]
+ },
+ "https://www.youtube.com/watch?v=IUpUy4UqZD4": {
+  "status": "null",
+  "video_id": "IUpUy4UqZD4",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=osxr7xSxsGo": {
+  "status": "null",
+  "video_id": "osxr7xSxsGo",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=WpX5kp5Svtk": {
+  "status": "null",
+  "video_id": "WpX5kp5Svtk",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=_I6qF2d3uYc": {
+  "status": "null",
+  "video_id": "_I6qF2d3uYc",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=8V7Hl2jcWl8": {
+  "status": "null",
+  "video_id": "8V7Hl2jcWl8",
+  "retried": true
+ },
+ "https://www.youtube.com/watch?v=U5Rt7aPBDUE": {
+  "status": "null",
+  "video_id": "U5Rt7aPBDUE",
+  "retried": true
+ },
+ "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238": {
+  "status": "not_youtube",
+  "platform": "tiktok"
+ },
+ "https://www.tiktok.com/@semyajnotsemaj": {
+  "status": "not_youtube",
+  "platform": "tiktok"
+ }
+}

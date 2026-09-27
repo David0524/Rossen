@@ -1,0 +1,398 @@
+[
+ {
+  "beat_id": "L07-A1",
+  "pass": 1,
+  "candidates": [
+   {
+    "url": "https://www.tiktok.com/@user60342208753/video/7679448051202657566",
+    "platform": "tiktok",
+    "source_type": "first_person",
+    "score": 92,
+    "duration": null,
+    "uploader": "@user60342208753",
+    "reason": "MANUAL LANE. The worker's own post. Handle matches the source log; ID decodes to 2026-08-29, the script's date. Surfaced independently by both the pre-scan and the harvest.",
+    "cannot_determine": [
+     "not watched; caption fragment reads '\u2026#files #government #flock | dei target' \u2014 confirm it is the basket video"
+    ],
+    "diversity_floor_promoted": false
+   }
+  ],
+  "source_mix": {
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "short_of_five_reason": "Manual lane: source_native tiktok. The native post is the pick; reposts (Rhett Walker xBjs7LKtMHc) and commentary (Taylor Lorenz Ho6Sg72mJtg) are not graded against it."
+ },
+ {
+  "beat_id": "L07-A2",
+  "pass": 1,
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=jTKvp41lHZc",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 86,
+    "duration": 142,
+    "uploader": "NBC Connecticut",
+    "reason": "License plate readers at Home Depot and Lowe's \u2014 the Connecticut story the source log was chasing, on a captioned affiliate. Added by hand: the pre-scan found it, the harvest did not.",
+    "cannot_determine": [
+     "whether it shows the pole cameras clearly, per 'here you can see'"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.foxnews.com/tech/license-plate-cameras-home-depot-lowes-spark-privacy-fears.amp",
+    "platform": "news_web",
+    "source_type": "network",
+    "score": 78,
+    "duration": 144,
+    "uploader": "Fox News",
+    "reason": "The exact Fox News Connecticut report the source log cites (May 16, 2026). news_web, no caption track.",
+    "cannot_determine": [
+     "no captions \u2014 outcue unverifiable from this copy"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=-RaHh0LVS7Q",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 70,
+    "duration": 121,
+    "uploader": "We Are Iowa Local 5",
+    "reason": "Home Depot and Lowe's installing plate readers. Second market, same story.",
+    "cannot_determine": [
+     "footage of the actual cameras vs anchor read"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=lq3mZnI8tnY",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 52,
+    "duration": 143,
+    "uploader": "KOMO News",
+    "reason": "Flock privacy safeguards amid backlash \u2014 right company, not the stores.",
+    "cannot_determine": [
+     "whether stores are mentioned"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=NyS782HGrbY",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "score": 48,
+    "duration": 227,
+    "uploader": "ACLU",
+    "reason": "DIVERSITY FLOOR PROMOTION over a fifth affiliate/network. Police use of Flock data \u2014 the 'who can search it' angle. Advocacy source; 38 below the top pick, not a peer.",
+    "cannot_determine": [
+     "whether stores are named"
+    ],
+    "diversity_floor_promoted": true
+   }
+  ],
+  "source_mix": {
+   "affiliate": 3,
+   "network": 1,
+   "creator_long": 1
+  },
+  "diversity_floor_applied": true
+ },
+ {
+  "beat_id": "L07-A3",
+  "pass": 1,
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/shorts/jqTpde_UWs4",
+    "platform": "youtube",
+    "source_type": "creator_short",
+    "score": 74,
+    "duration": 125,
+    "uploader": "Omni Talk Retail",
+    "reason": "Vertical Short \u2014 the only native-vertical Caper footage found. Commentary title ('strategy still isn't working'), so b-roll content is uncertain.",
+    "cannot_determine": [
+     "whether the cart is on screen and rolling, vs a talking head"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=IO1wx3zBR6s",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "score": 72,
+    "duration": 124,
+    "uploader": "Instacart",
+    "reason": "Instacart's own launch video: clean, well-lit cart footage in an aisle \u2014 exactly the visual. But horizontal against a VERTICAL BROLL beat, and it's brand marketing.",
+    "cannot_determine": [
+     "crop viability for vertical"
+    ],
+    "diversity_floor_promoted": false,
+    "flags": [
+     "orientation crossed: horizontal source on a vertical beat \u2014 producer rules on crop"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=CU53EbSEVAA",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 66,
+    "duration": 327,
+    "uploader": "FOX 5 New York",
+    "reason": "Affiliate package on Caper carts in a grocery store. Horizontal.",
+    "cannot_determine": [
+     "crop viability"
+    ],
+    "diversity_floor_promoted": false,
+    "flags": [
+     "orientation crossed"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=BuUPAtCEKMM",
+    "platform": "youtube",
+    "source_type": "first_person",
+    "score": 60,
+    "duration": 217,
+    "uploader": "Ankit",
+    "reason": "Shopper filming ShopRite Caper carts. Raw \u2014 could be the natural b-roll.",
+    "cannot_determine": [
+     "orientation, stability"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=v2Ea_skSdE4",
+    "platform": "youtube",
+    "source_type": "creator_short",
+    "score": 54,
+    "duration": 26,
+    "uploader": "The Spoon",
+    "reason": "26s cart demo, 2023. Short enough to be pure b-roll.",
+    "cannot_determine": [
+     "orientation; age of the cart model"
+    ],
+    "diversity_floor_promoted": false
+   }
+  ],
+  "source_mix": {
+   "creator_short": 2,
+   "creator_long": 1,
+   "affiliate": 1,
+   "first_person": 1
+  },
+  "diversity_floor_applied": false
+ },
+ {
+  "beat_id": "L07-A4",
+  "pass": 1,
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=tmoQxq2P7Y4",
+    "platform": "youtube",
+    "source_type": "network",
+    "score": 62,
+    "duration": 181,
+    "uploader": "Inside Edition",
+    "reason": "A different woman accused after self-checkout (~891K views). Closest to the setup's emotional beat, but it is a CASE SWAP.",
+    "cannot_determine": [
+     "date, which store, whether AI cameras are involved"
+    ],
+    "diversity_floor_promoted": false,
+    "flags": [
+     "case swap \u2014 needs producer approval"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=hunFGy5waws",
+    "platform": "youtube",
+    "source_type": "network",
+    "score": 58,
+    "duration": 301,
+    "uploader": "FRANCE 24 English",
+    "reason": "Fact-check of claims about Walmart's in-store AI cameras. Explainer \u2014 matches the script's DECIDE fallback \u2014 but it may cut AGAINST the segment's framing.",
+    "cannot_determine": [
+     "what it concludes about self-checkout specifically"
+    ],
+    "diversity_floor_promoted": false,
+    "flags": [
+     "may contradict the show \u2014 read before using"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=JS2ezxljX_c",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 50,
+    "duration": 52,
+    "uploader": "KHOU 11",
+    "reason": "'Walmart testing out artificial intelligence in stores' \u2014 short explainer. Likely old.",
+    "cannot_determine": [
+     "date; whether it's self-checkout"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kEN0nL8mtXw",
+    "platform": "youtube",
+    "source_type": "network",
+    "score": 48,
+    "duration": 146,
+    "uploader": "CBS News",
+    "reason": "Alabama woman awarded $2.1M after false shoplifting accusation at Walmart. A case swap, and a strong one, but not self-checkout AI.",
+    "cannot_determine": [
+     "whether self-checkout is involved"
+    ],
+    "diversity_floor_promoted": false,
+    "flags": [
+     "case swap \u2014 needs producer approval"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=IUpUy4UqZD4",
+    "platform": "youtube",
+    "source_type": "network",
+    "score": 40,
+    "duration": 203,
+    "uploader": "AP Archive",
+    "reason": "Walmart's 'AI factory' store \u2014 cameras in a store, raw AP. Old (2019).",
+    "cannot_determine": [
+     "date"
+    ],
+    "diversity_floor_promoted": false
+   }
+  ],
+  "source_mix": {
+   "network": 4,
+   "affiliate": 1
+  },
+  "diversity_floor_applied": true,
+  "notes": "No video of Brianna Jones exists in any reachable source (YouTube zero on three variants and a retry; Charlotte Observer, FOX8 and WAVY are text; FOX8 blocked a direct fetch). NAME COLLISION: a WCJB Facebook post about a Brianna Jones who was a Walmart manager in a fraud case is a DIFFERENT PERSON \u2014 do not pull it. Candidates below exist only to put the script's DECIDE options in front of the producer."
+ },
+ {
+  "beat_id": "L07-A5",
+  "pass": 1,
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=osxr7xSxsGo",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "score": 88,
+    "duration": 1114,
+    "uploader": "More Perfect Union and Consumer Reports",
+    "reason": "The study itself, from the outlet that ran it (~4.76M views). creator_long is this role's natural source type.",
+    "cannot_determine": [
+     "whether Eric Gardner is on camera; where the screenshots moment sits in 18 minutes"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=WpX5kp5Svtk",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "score": 80,
+    "duration": 175,
+    "uploader": "More Perfect Union",
+    "reason": "Three-minute MPU cut on the same findings (Dec 14, 2025). Tighter runway than the long version.",
+    "cannot_determine": [
+     "whether Gardner presents it"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=_I6qF2d3uYc",
+    "platform": "youtube",
+    "source_type": "creator_long",
+    "score": 60,
+    "duration": 1764,
+    "uploader": "Consumer Reports",
+    "reason": "CR's own 'Talking Carts' long-form. 29 minutes \u2014 over the ceiling, demoted.",
+    "cannot_determine": [
+     "everything; too long to scan in metadata"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=8V7Hl2jcWl8",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 58,
+    "duration": 129,
+    "uploader": "WISH-TV",
+    "reason": "Affiliate read of the CR findings. No Gardner.",
+    "cannot_determine": [
+     "whether any MPU footage is used"
+    ],
+    "diversity_floor_promoted": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=U5Rt7aPBDUE",
+    "platform": "youtube",
+    "source_type": "network",
+    "score": 52,
+    "duration": 152,
+    "uploader": "Good Morning America",
+    "reason": "Instacart responds \u2014 useful for the rebuttal line, not the setup.",
+    "cannot_determine": [
+     "whether the D.C. eggs example is cited"
+    ],
+    "diversity_floor_promoted": false
+   }
+  ],
+  "source_mix": {
+   "creator_long": 3,
+   "affiliate": 1,
+   "network": 1
+  },
+  "diversity_floor_applied": false
+ },
+ {
+  "beat_id": "L07-B1",
+  "pass": 1,
+  "candidates": [
+   {
+    "url": "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238",
+    "platform": "tiktok",
+    "source_type": "first_person",
+    "score": 88,
+    "duration": null,
+    "uploader": "@kb.montalbano",
+    "reason": "MANUAL LANE. 'Katelyn Montalbano's short video'. ID decodes to 2025-07-05 \u2014 days before that July's Prime Day, consistent with 'screenshotted before Prime Day'. Found by the pre-scan and again by the harvest.",
+    "cannot_determine": [
+     "not watched \u2014 confirm this is the cart post and not another from the account (@kb.montalbano, 'Katelyn | 4x Boy Mama')"
+    ],
+    "diversity_floor_promoted": false
+   }
+  ],
+  "source_mix": {
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "short_of_five_reason": "Manual lane: source_native tiktok. No YouTube copy exists."
+ },
+ {
+  "beat_id": "L07-B2",
+  "pass": 1,
+  "candidates": [
+   {
+    "url": "https://www.tiktok.com/@semyajnotsemaj",
+    "platform": "tiktok",
+    "source_type": "creator_short",
+    "score": 70,
+    "duration": null,
+    "uploader": "@semyajnotsemaj",
+    "reason": "MANUAL LANE, PROFILE ONLY. The specific video could not be pinned by any search. Distractify (7/17/2024) gives the product (INIU wireless charger, 41% off at $15.98 vs an inflated $24.98), the tool (CamelCamelCamel) and the quote 'a 41 percent discount on a fake price'.",
+    "cannot_determine": [
+     "the permalink itself \u2014 scroll the profile to July 2024"
+    ],
+    "diversity_floor_promoted": false
+   }
+  ],
+  "source_mix": {
+   "creator_short": 1
+  },
+  "diversity_floor_applied": false,
+  "short_of_five_reason": "Manual lane: source_native tiktok, permalink not pinned. Other creators' Prime-Day-price-history TikToks surfaced (@chloesdealclub, @niickjackson) but the script names Jaymes, so they are not substitutes without a script change."
+ }
+]

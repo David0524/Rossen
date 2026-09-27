@@ -78,3 +78,27 @@ b05 EMPTY->PICK (re-attributed), b09 EMPTY->LOCATED (found by plain web search).
 4. **Vertical is still 0-for-3 on captioned picks across two runs** — b07 LOCATED (native, manual by
    rule) and b09 resolved to horizontal. The vertical lane produces links, not timecodes. Write toward
    that.
+
+## Run LIVE_10072026 (retail surveillance / surveillance pricing / Prime Day fake discounts)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| L07-A1 | first_person_rant | V | LOCATED | TikTok @user60342208753/video/7679448051202657566, native; ID decodes to 2026-08-29 (script date). Outcue UNVERIFIED |
+| L07-A2 | authority_report | H | THROTTLED | NBC CT jTKvp41lHZc shortlisted; captions bot-walled. Fox News CT (foxnews.com) manual fallback |
+| L07-A3 | explainer_demo/creator_short | V | THROTTLED | Caper Cart b-roll shortlisted (Omni Talk Short, Instacart official); captions bot-walled |
+| L07-A4 | victim_interview | H | EMPTY (swap pending) | Brianna Jones: no video anywhere reachable, text only. Swap proposed: Lesley Nurse CBS/WKRG kEN0nL8mtXw, 2 verified segments |
+| L07-A5 | explainer_demo/creator_long | H | THROTTLED | More Perfect Union/CR osxr7xSxsGo (~4.76M) shortlisted; captions bot-walled |
+| L07-B1 | first_person_rant | V | LOCATED | TikTok @kb.montalbano/video/7523672986004606238, native; ID decodes to 2025-07-05 |
+| L07-B2 | explainer_demo/creator_short | V | LOCATED | TikTok @semyajnotsemaj profile only — permalink unpinned |
+
+**Yield:** 0 PICK / 3 LOCATED / 3 THROTTLED / 1 EMPTY (swap pending) of 7.
+**Patterns:**
+1. **The search phase can trip YouTube's bot wall for the caption phase.** ~3,300 YouTube results pulled in Step 3, then every
+   Step 5 caption fetch hit "Sign in to confirm you're not a bot", persisting past a 10-minute cooldown. Consider spacing Step 5
+   from Step 3, or fetching captions for the shortlist before the full harvest completes. THROTTLED is logged separately from
+   EMPTY so it doesn't read as a sourcing failure.
+2. **TikTok video IDs carry their upload time** (id >> 32 = unix seconds). That confirmed both native permalinks against the
+   script's dates without watching or scraping — cheaper and more reliable than trusting a search snippet.
+3. **Named victims from lawsuit coverage often have no video at all.** A4's case exists only in text (Nexstar rewrites plus the
+   Observer). Bibles built on a lawsuit filing should assume LOCATED-at-best unless an interview is confirmed first.
+4. **Name collisions are real.** A second Brianna Jones (Walmart manager, fraud case) sat in the candidate pool.
