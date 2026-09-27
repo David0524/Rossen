@@ -1,0 +1,34 @@
+  0.000s  car door      onset   0.000s  offset   +0 ms
+  1.250s  scammer       onset   1.256s  offset   +6 ms
+  2.500s  sidekick      onset   2.500s  offset   +0 ms
+  3.125s  hood          onset   3.125s  offset   +0 ms
+  3.750s  pour          onset   3.749s  offset   -1 ms
+  5.000s  smoke         onset   5.010s  offset  +10 ms
+  5.625s  jaw           onset   5.625s  offset   +0 ms
+  6.250s  price         onset   6.250s  offset   +0 ms
+  7.500s  site          onset   7.503s  offset   +3 ms
+  8.125s  site          onset   8.125s  offset   +0 ms
+  8.750s  stars         onset   8.758s  offset   +8 ms
+  9.375s  site          onset   9.375s  offset   +0 ms
+ 10.000s  tap           onset  10.000s  offset   +0 ms
+ 10.625s  paid          onset  10.625s  offset   +0 ms
+ 11.250s  curl          onset  11.252s  offset   +2 ms
+ 12.500s  scammer out   onset  12.500s  offset   +0 ms
+ 15.000s  mailbox       onset  15.000s  offset   +0 ms
+ 15.000s  total         onset  15.000s  offset   +0 ms
+ 15.625s  total         onset  15.624s  offset   -1 ms
+ 16.250s  total         onset  16.249s  offset   -1 ms
+ 16.875s  total         onset  16.874s  offset   -1 ms
+ 17.500s  flash         onset  17.500s  offset   +0 ms
+ 18.750s  marker        onset  18.750s  offset   +0 ms
+ 20.000s  peel          onset  20.008s  offset   +8 ms
+ 21.250s  plate lands   onset  21.250s  offset   +0 ms
+ 22.500s  jeff          onset  22.499s  offset   -1 ms
+ 23.750s  lens          onset  23.750s  offset   +0 ms
+ 25.000s  lens          onset  25.000s  offset   +0 ms
+ 26.250s  lens          onset  26.250s  offset   +0 ms
+ 27.500s  piece         onset  27.500s  offset   +0 ms
+ 28.125s  piece         onset  28.125s  offset   +0 ms
+ 28.750s  piece         onset  28.750s  offset   +0 ms
+ 29.375s  piece         onset  29.375s  offset   +0 ms
+33 hits, worst offset 10 ms

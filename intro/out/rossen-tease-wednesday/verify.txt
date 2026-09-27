@@ -1,0 +1,53 @@
+file: out/rossen-tease-wednesday/rossen-tease-wednesday.mp4
+
+== format
+PASS  video 1080x1920 at 24/1 fps, h264 yuv420p (the loop: 1080x1920, 24 fps)
+PASS  840 frames = 35.000 s (tease 720 frames = 30.000 s + loop 120 frames = 5.000 s)
+PASS  audio aac 48000 Hz 2 ch, 35.000 s
+
+== the three scams: equal bars, one idea per bar (whole bars at 96 BPM)
+      oil scam             bars 0-2:  0.000- 7.500 s = 3 bars = 7.500 s
+      fake AI dealership   bars 3-5:  7.500-15.000 s = 3 bars = 7.500 s
+      cloned plates        bars 6-8: 15.000-22.500 s = 3 bars = 7.500 s
+PASS  all three scams get 3 bars (7.5 s) each; the promise gets bars 9-10, the handoff bar 11
+      scene-change frames (mean change > 12 of 255): 168(7.00s smoke), 169(7.04s smoke), 170(7.08s smoke), 171(7.12s smoke), 172(7.17s smoke), 173(7.21s smoke), 174(7.25s smoke), 175(7.29s smoke), 176(7.33s smoke), 177(7.38s smoke), 232(9.67s zoomSite), 233(9.71s zoomSite), 234(9.75s zoomSite), 235(9.79s zoomSite), 236(9.83s zoomSite), 237(9.88s zoomSite), 288(12.00s swing), 352(14.67s toMail), 353(14.71s toMail), 354(14.75s toMail), 355(14.79s toMail), 356(14.83s toMail), 357(14.88s toMail), 414(17.25s zoomTicket), 415(17.29s zoomTicket), 416(17.33s zoomTicket), 417(17.38s zoomTicket), 421(17.54s flash), 537(22.38s cut to Jeff), 652(27.17s toLoop), 653(27.21s toLoop), 654(27.25s toLoop), 655(27.29s toLoop), 656(27.33s toLoop), 657(27.38s toLoop)
+PASS  every scene change happens inside a planned transition window (or the cut to Jeff; the camera flash is listed), never mid-bar
+
+== the cards: one at a time, present and still for their whole time, readable twice
+PASS  no two cards on screen together (each leaves before the next starts to land)
+PASS  no transition runs while a card is up
+PASS  "SELLING YOUR CAR?": on screen 2.50 s (-0.14-2.36), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.06/255, card box x 183-897 y 390-465
+PASS  "WHILE YOU'RE / DISTRACTED...": on screen 2.50 s (2.36-4.86), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.07/255, card box x 278-808 y 389-562
+PASS  "YOUR CAR: / WORTHLESS": on screen 1.96 s (4.86-6.82), dead still 1.83 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.04/255, card box x 318-769 y 390-561
+PASS  "BUYING A CAR / ONLINE?": on screen 2.28 s (7.36-9.64), dead still 2.17 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.06/255, card box x 274-804 y 390-563
+PASS  "THE DEALERSHIP / ISN'T REAL": on screen 2.12 s (9.86-11.98), dead still 2.00 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.05/255, card box x 238-842 y 391-563
+PASS  "THE CAR / DOESN'T EXIST": on screen 2.30 s (12.36-14.66), dead still 2.17 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.01/255, card box x 270-816 y 389-563
+PASS  "$3,000 / IN TICKETS": on screen 2.28 s (14.86-17.14), dead still 2.17 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.08/255, card box x 334-751 y 389-562
+PASS  "IT'S NOT / YOUR CAR": on screen 2.50 s (17.36-19.86), dead still 2.38 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.52/255, card box x 350-738 y 389-563
+PASS  "SOMEONE COPIED / YOUR PLATE": on screen 2.50 s (19.86-22.36), dead still 2.38 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.03/255, card box x 219-861 y 390-563
+PASS  "WE'LL SHOW YOU / THE RED FLAGS.": on screen 4.80 s (22.36-27.16), dead still 4.67 s (reading it twice at 300 wpm takes 2.40 s), max change while still 0.02/255, card box x 231-849 y 390-563
+      every card sits level (no rotation in wed-tease.js chip()); the promise card is level; solid ink with nothing drawn over it (drawn after the print finish)
+
+== the beat of silence before the promise
+PASS  21.885-22.488 s: peak -94.2 dBFS, rms -119.1 dBFS (the beat before it: rms -15.4 dBFS)
+
+== the handoff into the loop
+PASS  loop portion (frames 720-839) decodes identical to the delivered loop, pixel for pixel: 120/120 frames
+PASS  the tease's last frame is the loop's own frame 119 (decoded from the delivered file, re-encoded once): mean difference 2.78/255
+PASS  the cut 719 -> 720 changes the picture by 8.38/255; the loop's own wrap (119 -> 0) by 6.54/255, plus the re-encode 2.78: no frame jump
+PASS  audio across 30.0 s: -26.9 -> -11.6 dBFS (50 ms rms; the loop's own wrap: -26.9 -> -11.5); largest sample step at the join 0.068 vs 0.140 (99.9th pct nearby): no bump
+PASS  the loop portion's audio matches the delivered loop's audio: correlation 0.99972 (re-encoded once in the mux; the video is untouched)
+
+== the loop unchanged from the original file
+PASS  video packets 2-120 of the loop are byte-identical to the delivered loop's (stream copy): 119/119
+PASS  packet 1 (the loop's key frame): all its NAL units are byte-identical ([(6, 686), (5, 1088823)]); the join adds only the loop's own SPS/PPS in-band ([(7, 26), (8, 6)], taken from its own header: True)
+      delivered loop md5 82760fa09e2b5bad45fac986984c0e8b (unchanged on disk)
+
+== safe zone (screen: text and key action clear of the top 15% (y < 288), bottom 25% (y > 1440) and right 15% (x > 918))
+      separate overlay pass: _check/wedtease/safe/ (the film rendered with ?safe=1, one frame per beat, and a contact sheet safe_sheet.jpg)
+      cards: every card box above lies inside x 164-916 and below y 288
+
+== preview
+PASS  out/rossen-tease-wednesday/preview_crf21.mp4: 19.2 MB, x264 crf=21.0, 840 frames, audio aac
+
+0 failed

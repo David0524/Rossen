@@ -234,6 +234,51 @@ Audio: `score_tease.py` composes bars 0–9. Bars 10–11 play the loop's own cu
 
 The textured-cream background (`makeCream` / `creamBg`) now lives in `vertkit.js`.
 
+## Wednesday live tease: car scams + LIVE TODAY loop (9:16, 35 s)
+
+`rossen-tease-wednesday.html` and `wed-tease.js` make a 30 s one-shot tease for Wednesday's 5 PM ET show about three car scams: 12 bars at 96 BPM in D, the loop's own tempo and key. The approved Wednesday loop (`final-videos/09 Live Today Loop - Wednesday 5 PM (9x16).mp4`, the only Wednesday 5 PM candidate, byte-identical to `out/rossen-loop-wednesday/rossen-loop-wednesday.mp4`) is appended untouched, joined by stream copy. It's never re-rendered: its frames are decoded from the delivered file for the handoff bar.
+
+It reuses the repo's kit and cast:
+- printkit.js with the approved palette (`BLUE`, `BLK`, `YEL`, `CREAM`, `CHIP`) and the vertical safe-zone transform (`VERT_K 0.895`).
+- The Jeff puppet, the Scammer, and the everyday man (the car owner, from the officer film).
+- The screen-print logo and the official logo (the latter inside the loop).
+- The sample packs.
+
+**The sidekick.** He's the user's character drawing (`assets/wedtease/sidekick_ref.webp`). `tools/cut_sidekick.py` cuts him into a jointed paper-cutout puppet:
+- head, torso, hand and two legs;
+- the oil can as its own piece, held in the hand.
+
+The same script paints the man's gasp head (`man_head_gasp.png`).
+
+**The Scammer's hands.** They belong to his fishing-rod piece, so here they're blue mittens in his own ink, one of them on a reaching sleeve holding a fanned wad of bills.
+
+The film's beats. Each scam gets three bars (7.5 s), and every card lands on its downbeat, level and dead still:
+- **Oil scam (bars 0–2):** the man's car has FOR SALE $10,000 in the windshield from frame 0. The Scammer fans cash in his face while the sidekick pops up behind the car and pours oil under the hood. The engine smokes, the man's jaw drops, and the price flips to $0.
+- **Transition (creative):** the engine smoke billows across the whole frame and clears onto a laptop.
+- **Fake dealership (bars 3–5):** the TOTALLY REAL MOTORS site builds itself: name, dream car, five stars, reviews and PAY NOW. The camera zooms into the screen, a hand taps PAY NOW, and a corner curls to show painted board.
+- **Transition (creative):** the page swings away on its hinge like a stage flat, and the camera pulls back onto an empty lot. There, the Scammer waves the cash from behind the flat next to a dashed outline where the car should be.
+- **Cloned plates (bars 6–8):** the mailbox bursts, and tickets stack while a tag counts up to $3,000+. The camera zooms into a ticket's camera photo: a flash, a car that isn't his, plate ABC-0000, and the Scammer at the wheel. The plate peels off, showing a taped-on paper copy. Beat 4 of bar 8 is silent and still.
+- **The promise (bars 9–10):** cut with the card WE'LL SHOW YOU / THE RED FLAGS. Jeff rises with his magnifier, which settles on the oil can, the fake site and the paper plate. No flags and no fixes are shown, and there is no guest expert. The card holds for both bars, so its six words can be read twice.
+- **Handoff (bar 11):** the loop's pieces land on the beats, cut from its decoded frames with `assets/wedtease/loop_mask_*.png` (`tools/make_wed_masks.py`). The last tease frame is loop frame 119, so the cut into the loop is its own seamless wrap.
+
+Nothing in it is real: a generic car, an invented dealership, plate ABC-0000, and no phone numbers or URLs.
+
+Audio: `score_wed_tease.py` composes bars 0–9 with VSCO 2 CE recordings:
+- sneaky pizzicato and clarinet for the oil scam;
+- slick muted trumpet, glockenspiel and xylophone for the dealership;
+- spiccato and horns for the tickets, stopping on A;
+- the silent beat;
+- a confident D major bar for Jeff.
+
+Bars 10–11 play the loop's own cue, taken from the delivered loop file, so the handoff is sample-exact.
+
+The foley is all recorded CC0: BigSoundBank (Joseph Sardin), OpenGameArt and Kenney. It covers the car door, hood, pour, steam puff, engine sputter, keyboard, mailbox, camera, paper, tape and stamp thump, and each hit is placed by its attack. `audio/wedtease_sources.txt` has the sourcing notes. `out/rossen-tease-wednesday/audio_sources.txt` logs every file in the mix.
+
+Build and check everything with `sh tools/build_wed_tease.sh` (`SKIP_RENDER=1` reuses the frames). It writes:
+- `out/rossen-tease-wednesday/verify.txt` (`tools/verify_wed_tease.py` on the final mp4);
+- `sync.txt` and `sync_hits_only.txt`;
+- the safe-zone overlay pass in `_check/wedtease/safe/`.
+
 ## LIVE TODAY loops (9:16, 5 s)
 
 `rossen-loop-wednesday.html` and `rossen-loop-friday.html` (script `liveloop.js`) turn the LIVE TODAY card into seamless 5 s loops (2 bars at 96 BPM) for Reels and Stories. The card is scaled up to the full safe width, and every motion is periodic in the loop length:
