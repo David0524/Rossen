@@ -86,12 +86,12 @@ b05 EMPTY->PICK (re-attributed), b09 EMPTY->LOCATED (found by plain web search).
 | L07-A1 | first_person_rant | V | LOCATED | TikTok @user60342208753/video/7679448051202657566, native; ID decodes to 2026-08-29 (script date). Outcue UNVERIFIED |
 | L07-A2 | authority_report | H | THROTTLED | NBC CT jTKvp41lHZc shortlisted; captions bot-walled. Fox News CT (foxnews.com) manual fallback |
 | L07-A3 | explainer_demo/creator_short | V | THROTTLED | Caper Cart b-roll shortlisted (Omni Talk Short, Instacart official); captions bot-walled |
-| L07-A4 | victim_interview | H | EMPTY (swap pending) | Brianna Jones: no video anywhere reachable, text only. Swap proposed: Lesley Nurse CBS/WKRG kEN0nL8mtXw, 2 verified segments |
+| L07-A4 | victim_interview | H | PICK (approved swap) | Brianna Jones: no video anywhere reachable. Swapped to Lesleigh Nurse (Semmes, AL) CBS/WKRG kEN0nL8mtXw, 2 verified segments |
 | L07-A5 | explainer_demo/creator_long | H | THROTTLED | More Perfect Union/CR osxr7xSxsGo (~4.76M) shortlisted; captions bot-walled |
 | L07-B1 | first_person_rant | V | LOCATED | TikTok @kb.montalbano/video/7523672986004606238, native; ID decodes to 2025-07-05 |
 | L07-B2 | explainer_demo/creator_short | V | LOCATED | TikTok @semyajnotsemaj profile only — permalink unpinned |
 
-**Yield:** 0 PICK / 3 LOCATED / 3 THROTTLED / 1 EMPTY (swap pending) of 7.
+**Yield:** 1 PICK (approved swap) / 3 LOCATED / 3 THROTTLED of 7.
 **Patterns:**
 1. **The search phase can trip YouTube's bot wall for the caption phase.** ~3,300 YouTube results pulled in Step 3, then every
    Step 5 caption fetch hit "Sign in to confirm you're not a bot", persisting past a 10-minute cooldown. Consider spacing Step 5

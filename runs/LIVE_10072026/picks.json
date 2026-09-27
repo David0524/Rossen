@@ -230,16 +230,14 @@
  {
   "beat_id": "L07-A4",
   "pass": 2,
-  "flagged": null,
-  "status": "awaiting_approval",
-  "platform": null,
-  "title": null,
-  "flagged_reason": "EMPTY on the named case \u2014 genuinely, not throttled. Brianna Jones has no video in any reachable source: YouTube returned nothing on three name variants (confirmed on retry while search was live), and the Charlotte Observer, FOX8 and WAVY coverage is text (two of the three block direct fetch, so embedded video cannot be ruled out entirely). NAME COLLISION: a WCJB post about a Brianna Jones who was a Walmart manager in a fraud case is a DIFFERENT PERSON. The script's own DECIDE line anticipates this. Any swap changes what the show says \u2014 proposal held for producer approval.",
-  "better_query": "Ask FOX8/WAVY (Nexstar) whether their story has a video package with Jones on camera \u2014 that is the only route to the named case.",
+  "flagged": "https://www.youtube.com/watch?v=kEN0nL8mtXw",
+  "status": "approved_swap",
+  "platform": "youtube",
+  "title": "Alabama woman falsely accused of shoplifting awarded $2.1 million in Walmart suit (CBS News / WKRG)",
   "swap_proposal": {
    "url": "https://www.youtube.com/watch?v=kEN0nL8mtXw",
    "title": "Alabama woman falsely accused of shoplifting awarded $2.1 million in Walmart suit (CBS News / WKRG)",
-   "person": "Lesley Nurse, Mims, Alabama",
+   "person": "Lesleigh Nurse, Semmes, Alabama (the auto-captions render 'Semmes' as 'sims')",
    "segments": [
     {
      "in": "0:00",
@@ -252,7 +250,8 @@
      "outcue": "anything wrong why would i pay for something that i didn't do but it turns"
     }
    ],
-   "why": "Self-checkout malfunction, stopped by asset protection, arrested and mugshotted over $48 of groceries, charge dropped when Walmart didn't show, then a $2.1M jury verdict. On camera, captioned, outcues verified. It fits 'think what you would do if this happened to you' better than any explainer, but it is a different woman, an older case (suit filed 2018), and involves no AI camera \u2014 the script's AI framing would need to come off this beat."
+   "why": "Self-checkout malfunction, stopped by asset protection, arrested and mugshotted over $48 of groceries, charge dropped when Walmart didn't show, then a $2.1M jury verdict. On camera, captioned, outcues verified. It fits 'think what you would do if this happened to you' better than any explainer, but it is a different woman, an older case (suit filed 2018), and involves no AI camera \u2014 the script's AI framing would need to come off this beat.",
+   "approved": "Approved by producer 2026-09-27"
   },
   "source_mix": {
    "network": 4,
@@ -263,11 +262,11 @@
    {
     "url": "https://www.youtube.com/watch?v=kEN0nL8mtXw",
     "source_type": "network",
-    "score": 78,
+    "score": 84,
     "tone": 9,
     "authenticity": 9,
     "quality": 8,
-    "fit": 5,
+    "fit": 9,
     "segments": [
      {
       "in": "0:00",
@@ -280,10 +279,11 @@
       "outcue": "anything wrong why would i pay for something that i didn't do but it turns"
      }
     ],
-    "reasoning": "Best available swap. Fit scored 5 because it is not the named case \u2014 the swap is what makes it fit.",
+    "reasoning": "APPROVED SWAP for Brianna Jones, who has no video anywhere reachable. Lesleigh Nurse, Semmes, Alabama: self-checkout scanner malfunctioned (Nov 2016), stopped by asset protection, arrested over $48 of groceries, charge dropped when no one from Walmart came to court, then demand letters for $200, then a unanimous Mobile County jury awarded $2.1M in punitive damages. Walmart said it would appeal. Script setup rewritten to match; the AI-camera lines no longer sit directly over her.",
     "flags": [
-     "case swap \u2014 requires producer approval",
-     "no AI camera involved; do not let the AI line sit over this clip"
+     "no AI camera involved in her case \u2014 script bridges away from the AI lines before introducing her",
+     "Walmart said it would appeal \u2014 appeal outcome not checked; confirm before air",
+     "the $300M civil-recovery figure is expert testimony as reported by WKRG \u2014 attribute it"
     ]
    },
    {
@@ -355,7 +355,9 @@
   ],
   "cannot_determine": [
    "whether FRANCE 24's fact-check (hunFGy5waws) undercuts the segment's framing \u2014 it could not be read this run"
-  ]
+  ],
+  "swap_approved": true,
+  "flagged_reason_before_swap": "EMPTY on the named case \u2014 genuinely, not throttled. Brianna Jones has no video in any reachable source: YouTube returned nothing on three name variants (confirmed on retry while search was live), and the Charlotte Observer, FOX8 and WAVY coverage is text (two of the three block direct fetch, so embedded video cannot be ruled out entirely). NAME COLLISION: a WCJB post about a Brianna Jones who was a Walmart manager in a fraud case is a DIFFERENT PERSON. The script's own DECIDE line anticipates this. Any swap changes what the show says \u2014 proposal held for producer approval."
  },
  {
   "beat_id": "L07-A5",

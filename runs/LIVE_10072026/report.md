@@ -3,7 +3,7 @@
 Script: `10_07_LIVE_BIBLE_-_YOUR_STORE_IS_WATCHING_YOU.docx` · companion `SOURCE_LOG.md` · airdate Wed 10/07/2026.
 
 ```
-Outcomes, 7 beats:  3 LOCATED (manual lane) · 3 THROTTLED · 1 EMPTY on the named case, swap awaiting approval
+Outcomes, 7 beats:  1 PICK (approved swap) · 3 LOCATED (manual lane) · 3 THROTTLED
 Verified segments:  2 (on the A4 swap candidate only) — every other YouTube pick is blocked, not missing
 ```
 
@@ -25,12 +25,12 @@ and 2,000/month — consistent with a metered plan. Your $0 cap did not block an
 | A1 | first_person_rant | V | 1 | **LOCATED** | TikTok @user60342208753 `/video/7679448051202657566` | manual; ID decodes to **2026-08-29**, the script's date; outcue UNVERIFIED |
 | A2 | authority_report | H | 2 | **THROTTLED** | NBC Connecticut `jTKvp41lHZc` · fallback Fox News CT (foxnews.com, 5/16/2026) | captions blocked; Fox CT is a manual pull available now |
 | A3 | explainer_demo/short | V b-roll | 3 | **THROTTLED** | Omni Talk Short `jqTpde_UWs4` · Instacart `IO1wx3zBR6s` (horizontal) | captions blocked; b-roll, so eyeball-able now |
-| A4 | victim_interview | H | 2 | **EMPTY → swap proposed** | Lesley Nurse, CBS/WKRG `kEN0nL8mtXw` | **needs your approval** |
+| A4 | victim_interview | H | 2 | **PICK (approved swap)** | Lesleigh Nurse, CBS/WKRG `kEN0nL8mtXw` | 2 verified segments; script rewritten |
 | A5 | explainer_demo/long | H | 2 | **THROTTLED** | More Perfect Union / Consumer Reports `osxr7xSxsGo` (~4.76M) | captions blocked |
 | B1 | first_person_rant | V | 1 | **LOCATED** | TikTok @kb.montalbano `/video/7523672986004606238` | manual; ID decodes to 2025-07-05; outcue UNVERIFIED |
 | B2 | explainer_demo/short | V | 2 | **LOCATED (profile only)** | TikTok @semyajnotsemaj | permalink could not be pinned |
 
-## Checkpoint 2 — A4 needs your call
+## A4 — swap APPROVED and applied (checkpoint 2 closed)
 
 Brianna Jones has **no video anywhere reachable** — YouTube zero on three variants, confirmed on retry while search was live;
 Charlotte Observer, FOX8 and WAVY are text. That is a genuine absence, not the throttle. ⚠️ Name collision: a WCJB post about a
@@ -38,7 +38,7 @@ Brianna Jones who was a Walmart *manager* in a fraud case is a different person.
 
 Proposed swap, graded and verified:
 
-> **Lesley Nurse, Mims, Alabama** — CBS News / WKRG `kEN0nL8mtXw` (144s, captioned).
+> **Lesleigh Nurse, Semmes, Alabama** — CBS News / WKRG `kEN0nL8mtXw` (144s, captioned).
 > **IN 0:00 – OUT 0:41** — outcue: "up to court by then she said the damage to her reputation had already been done"
 > **IN 0:52 – OUT 1:02** — outcue: "anything wrong why would i pay for something that i didn't do but it turns"
 
@@ -76,3 +76,19 @@ None watched. yt-dlp's TikTok extractor is failing this run, so no TikTok metada
 
 Re-run captions for A2, A3, A5 (and the A4 alternates) once YouTube stops bot-checking this container — no query changes needed.
 Then pass two can flag picks with verified outcues.
+
+## Deliverable — filled bible
+
+`10_07_LIVE_BIBLE_-_YOUR_STORE_IS_WATCHING_YOU_FILLED.docx` — the original document edited in place. 432 of 441 source paragraphs
+byte-identical; the 9 rewritten for the approved swap each kept their own paragraph and run properties; 28 inserted paragraphs
+all use the source's Arial / 18pt / spacing. Blue = verified clip, amber = manual pull or pending captions, no timecode invented
+anywhere a transcript was unavailable.
+
+**Swap corrections found while applying it:** her name is spelled **Lesleigh** and the store is in **Semmes**, Alabama — the
+auto-captions render it "sims", and an earlier note of mine said "Mims". Confirmed against CBS News, NBC News and WVTM.
+
+**Script lines changed for the swap (A4 block + one cold-open line):** Jones's setup replaced with Nurse's facts from the tape; a
+bridge line inserted so the AI-camera lines don't sit directly over a case that involved no AI; post-clip lines now carry the
+$2.1M verdict, the attributed $300M civil-recovery testimony, and that Walmart said it would appeal.
+
+**Before air:** confirm the appeal outcome; attribute the $300M figure as testimony; confirm Eric Gardner is on camera in A5.
