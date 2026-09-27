@@ -4,23 +4,960 @@
   "platform": "tiktok"
  },
  "https://www.youtube.com/watch?v=jTKvp41lHZc": {
-  "status": "null",
+  "status": "ok",
   "video_id": "jTKvp41lHZc",
-  "retried": true
+  "source": "auto",
+  "duration": 143.76,
+  "n_cues": 67,
+  "cues": [
+   {
+    "start": 0.0,
+    "end": 3.52,
+    "text": "Hey, do you remember this video? It went"
+   },
+   {
+    "start": 2.0,
+    "end": 5.8,
+    "text": "viral. These suspects were caught"
+   },
+   {
+    "start": 3.52,
+    "end": 8.6,
+    "text": "loading up a van after robbing a grocery"
+   },
+   {
+    "start": 5.8,
+    "end": 10.52,
+    "text": "store in Oxford 5 years ago. Well, now"
+   },
+   {
+    "start": 8.6,
+    "end": 12.8,
+    "text": "large retailers are using a brand new"
+   },
+   {
+    "start": 10.52,
+    "end": 15.08,
+    "text": "tool to help prevent bold thefts like"
+   },
+   {
+    "start": 12.8,
+    "end": 17.64,
+    "text": "this. And they're in places you might"
+   },
+   {
+    "start": 15.08,
+    "end": 21.04,
+    "text": "not notice. NBC Connecticut's Jane Chaco"
+   },
+   {
+    "start": 17.64,
+    "end": 22.64,
+    "text": "shows us what it is and how to spot it."
+   },
+   {
+    "start": 21.04,
+    "end": 24.16,
+    "text": "You're probably used to seeing these in"
+   },
+   {
+    "start": 22.64,
+    "end": 25.8,
+    "text": "the parking lot where you shop. They're"
+   },
+   {
+    "start": 24.16,
+    "end": 27.72,
+    "text": "run-of-the-mill security cameras. But"
+   },
+   {
+    "start": 25.8,
+    "end": 30.6,
+    "text": "next time you're out, look out for this."
+   },
+   {
+    "start": 27.72,
+    "end": 33.44,
+    "text": "Automated license plate cameras. It"
+   },
+   {
+    "start": 30.6,
+    "end": 35.08,
+    "text": "scans and logs car plates. Positioned"
+   },
+   {
+    "start": 33.44,
+    "end": 37.16,
+    "text": "with some trees at the entrance of"
+   },
+   {
+    "start": 35.08,
+    "end": 39.36,
+    "text": "Lowe's in Newington, these cameras"
+   },
+   {
+    "start": 37.16,
+    "end": 41.04,
+    "text": "automatically capture images of vehicles"
+   },
+   {
+    "start": 39.36,
+    "end": 42.8,
+    "text": "and their license plates. Police have"
+   },
+   {
+    "start": 41.04,
+    "end": 45.68,
+    "text": "been using these kinds of cameras to"
+   },
+   {
+    "start": 42.8,
+    "end": 47.8,
+    "text": "track down stolen cars or suspects. But"
+   },
+   {
+    "start": 45.68,
+    "end": 50.2,
+    "text": "stores like Lowe's and Home Depot are"
+   },
+   {
+    "start": 47.8,
+    "end": 52.6,
+    "text": "now using them to prevent theft. It's an"
+   },
+   {
+    "start": 50.2,
+    "end": 54.24,
+    "text": "ongoing problem. Just tonight, Montville"
+   },
+   {
+    "start": 52.6,
+    "end": 56.2,
+    "text": "police said they're looking for these"
+   },
+   {
+    "start": 54.24,
+    "end": 59.68,
+    "text": "people accused of taking more than"
+   },
+   {
+    "start": 56.2,
+    "end": 62.28,
+    "text": "$1,700 of merchandise from Home Depot."
+   },
+   {
+    "start": 59.68,
+    "end": 64.68,
+    "text": "And last December, 13 people were busted"
+   },
+   {
+    "start": 62.28,
+    "end": 67.04,
+    "text": "in a Home Depot theft ring spanning nine"
+   },
+   {
+    "start": 64.68,
+    "end": 69.12,
+    "text": "states including Connecticut."
+   },
+   {
+    "start": 67.04,
+    "end": 71.8,
+    "text": ">> of LPRs is to"
+   },
+   {
+    "start": 69.12,
+    "end": 72.64,
+    "text": "obviously detect, deter, and solve or"
+   },
+   {
+    "start": 71.8,
+    "end": 74.68,
+    "text": "reduce crime."
+   },
+   {
+    "start": 72.64,
+    "end": 76.44,
+    "text": ">> Kimberly Perzalski is a criminal justice"
+   },
+   {
+    "start": 74.68,
+    "end": 78.64,
+    "text": "assistant professor at Quinnipiac"
+   },
+   {
+    "start": 76.44,
+    "end": 80.24,
+    "text": "University. She says there are some"
+   },
+   {
+    "start": 78.64,
+    "end": 82.88,
+    "text": "privacy concerns when it comes to"
+   },
+   {
+    "start": 80.24,
+    "end": 85.2,
+    "text": "retailers using automated license plate"
+   },
+   {
+    "start": 82.88,
+    "end": 86.8,
+    "text": "readers or ALPRs for short."
+   },
+   {
+    "start": 85.2,
+    "end": 89.08,
+    "text": ">> They're not held to the same standards"
+   },
+   {
+    "start": 86.8,
+    "end": 91.92,
+    "text": "as law enforcement. And so the legal"
+   },
+   {
+    "start": 89.08,
+    "end": 94.52,
+    "text": "frameworks differ quite a bit when it"
+   },
+   {
+    "start": 91.92,
+    "end": 96.56,
+    "text": "comes to just oversight mechanisms,"
+   },
+   {
+    "start": 94.52,
+    "end": 98.36,
+    "text": "accountability, data retention."
+   },
+   {
+    "start": 96.56,
+    "end": 100.56,
+    "text": ">> Lowe's website says it quote only"
+   },
+   {
+    "start": 98.36,
+    "end": 103.12,
+    "text": "discloses your personal information if"
+   },
+   {
+    "start": 100.56,
+    "end": 105.4,
+    "text": "required by law or legal process. Home"
+   },
+   {
+    "start": 103.12,
+    "end": 107.32,
+    "text": "Depot's privacy policy is similar,"
+   },
+   {
+    "start": 105.4,
+    "end": 109.2,
+    "text": "saying it does not sell or share"
+   },
+   {
+    "start": 107.32,
+    "end": 110.8,
+    "text": "information to a third party. We haven't"
+   },
+   {
+    "start": 109.2,
+    "end": 113.36,
+    "text": "heard back from the stores about where"
+   },
+   {
+    "start": 110.8,
+    "end": 115.6,
+    "text": "they got the cameras, but Flock Safety,"
+   },
+   {
+    "start": 113.36,
+    "end": 117.92,
+    "text": "a popular company that makes them, says"
+   },
+   {
+    "start": 115.6,
+    "end": 120.64,
+    "text": "only its customers have access."
+   },
+   {
+    "start": 117.92,
+    "end": 122.56,
+    "text": ">> I just worry that, you know, the"
+   },
+   {
+    "start": 120.64,
+    "end": 123.6,
+    "text": "license plate readers, Big Brother, all"
+   },
+   {
+    "start": 122.56,
+    "end": 125.32,
+    "text": "that stuff."
+   },
+   {
+    "start": 123.6,
+    "end": 126.8,
+    "text": "But, um"
+   },
+   {
+    "start": 125.32,
+    "end": 128.28,
+    "text": "it kind of makes sense cuz they're"
+   },
+   {
+    "start": 126.8,
+    "end": 130.28,
+    "text": "trying to catch people stealing stuff."
+   },
+   {
+    "start": 128.28,
+    "end": 132.36,
+    "text": ">> Governor Lamont signed a bill on Monday"
+   },
+   {
+    "start": 130.28,
+    "end": 134.68,
+    "text": "that lays out regulations for license"
+   },
+   {
+    "start": 132.36,
+    "end": 136.8,
+    "text": "plate readers, such as limiting how long"
+   },
+   {
+    "start": 134.68,
+    "end": 138.0,
+    "text": "data can be stored. You can read more"
+   },
+   {
+    "start": 136.8,
+    "end": 139.72,
+    "text": "about it on our website,"
+   },
+   {
+    "start": 138.0,
+    "end": 143.76,
+    "text": "nbcconnecticut.com."
+   },
+   {
+    "start": 139.72,
+    "end": 143.76,
+    "text": "Jane Chaco, NBC Connecticut News."
+   }
+  ]
  },
  "https://www.foxnews.com/tech/license-plate-cameras-home-depot-lowes-spark-privacy-fears.amp": {
   "status": "not_youtube",
   "platform": "news_web"
  },
  "https://www.youtube.com/watch?v=-RaHh0LVS7Q": {
-  "status": "null",
+  "status": "ok",
   "video_id": "-RaHh0LVS7Q",
-  "retried": true
+  "source": "auto",
+  "duration": 122.2,
+  "n_cues": 50,
+  "cues": [
+   {
+    "start": 0.0,
+    "end": 4.24,
+    "text": "Welcome back. New at midday, there is"
+   },
+   {
+    "start": 1.76,
+    "end": 6.76,
+    "text": "growing controversy over new technology"
+   },
+   {
+    "start": 4.24,
+    "end": 9.96,
+    "text": "being used outside some of your favorite"
+   },
+   {
+    "start": 6.76,
+    "end": 13.44,
+    "text": "retail stores. ABC's Hannah Betts looks"
+   },
+   {
+    "start": 9.96,
+    "end": 16.16,
+    "text": "into how it works and who's using it and"
+   },
+   {
+    "start": 13.44,
+    "end": 18.44,
+    "text": "the concerns being raised."
+   },
+   {
+    "start": 16.16,
+    "end": 20.48,
+    "text": "This morning, big box stores are taking"
+   },
+   {
+    "start": 18.44,
+    "end": 23.48,
+    "text": "controversial new steps to prevent"
+   },
+   {
+    "start": 20.48,
+    "end": 26.4,
+    "text": "crimes like this. A theft ring recently"
+   },
+   {
+    "start": 23.48,
+    "end": 29.6,
+    "text": "targeting Home Depot's in nine states."
+   },
+   {
+    "start": 26.4,
+    "end": 32.88,
+    "text": "This crew was amazingly coordinated,"
+   },
+   {
+    "start": 29.6,
+    "end": 35.84,
+    "text": "disciplined, meticulous, and dedicated."
+   },
+   {
+    "start": 32.88,
+    "end": 37.52,
+    "text": ">> Millions in merchandise stolen. Now,"
+   },
+   {
+    "start": 35.84,
+    "end": 39.76,
+    "text": "Home Depot and Lowe's are among the"
+   },
+   {
+    "start": 37.52,
+    "end": 41.72,
+    "text": "stores installing special cameras in"
+   },
+   {
+    "start": 39.76,
+    "end": 44.0,
+    "text": "their parking lots with automated"
+   },
+   {
+    "start": 41.72,
+    "end": 46.36,
+    "text": "license plate readers hoping to boost"
+   },
+   {
+    "start": 44.0,
+    "end": 48.44,
+    "text": "safety. Some critics have raised privacy"
+   },
+   {
+    "start": 46.36,
+    "end": 50.84,
+    "text": "concerns as law enforcement embraces"
+   },
+   {
+    "start": 48.44,
+    "end": 54.32,
+    "text": "this technology. They're literally"
+   },
+   {
+    "start": 50.84,
+    "end": 57.88,
+    "text": "tracking everybody that passes whether"
+   },
+   {
+    "start": 54.32,
+    "end": 59.76,
+    "text": "you're in violation of a law or not. The"
+   },
+   {
+    "start": 57.88,
+    "end": 62.36,
+    "text": "cameras, which capture license plate"
+   },
+   {
+    "start": 59.76,
+    "end": 64.76,
+    "text": "numbers, date, time, and location, are"
+   },
+   {
+    "start": 62.36,
+    "end": 66.72,
+    "text": "increasingly being used by police, but"
+   },
+   {
+    "start": 64.76,
+    "end": 68.56,
+    "text": "civil rights groups worry the technology"
+   },
+   {
+    "start": 66.72,
+    "end": 71.4,
+    "text": "could be used to target suspected"
+   },
+   {
+    "start": 68.56,
+    "end": 73.72,
+    "text": "undocumented workers or women seeking"
+   },
+   {
+    "start": 71.4,
+    "end": 75.68,
+    "text": "reproductive health care. Home Depot and"
+   },
+   {
+    "start": 73.72,
+    "end": 78.36,
+    "text": "Lowe's insist they do not share"
+   },
+   {
+    "start": 75.68,
+    "end": 80.32,
+    "text": "information with third parties. Lowe's"
+   },
+   {
+    "start": 78.36,
+    "end": 83.12,
+    "text": "saying it only discloses your personal"
+   },
+   {
+    "start": 80.32,
+    "end": 85.96,
+    "text": "information if required by law or legal"
+   },
+   {
+    "start": 83.12,
+    "end": 87.76,
+    "text": "process. Home Depot saying, \"We do not"
+   },
+   {
+    "start": 85.96,
+    "end": 90.12,
+    "text": "grant access to our license plate"
+   },
+   {
+    "start": 87.76,
+    "end": 91.92,
+    "text": "readers to federal law enforcement.\" But"
+   },
+   {
+    "start": 90.12,
+    "end": 93.44,
+    "text": "experts say with tens of thousands of"
+   },
+   {
+    "start": 91.92,
+    "end": 95.64,
+    "text": "cameras now installed across the"
+   },
+   {
+    "start": 93.44,
+    "end": 97.64,
+    "text": "country, adding more license plate"
+   },
+   {
+    "start": 95.64,
+    "end": 100.28,
+    "text": "readers will help law enforcement build"
+   },
+   {
+    "start": 97.64,
+    "end": 102.96,
+    "text": "what could become a nationwide mass"
+   },
+   {
+    "start": 100.28,
+    "end": 105.92,
+    "text": "surveillance system. They can literally"
+   },
+   {
+    "start": 102.96,
+    "end": 108.4,
+    "text": "trace it almost exactly where I've been"
+   },
+   {
+    "start": 105.92,
+    "end": 110.84,
+    "text": "just by connecting all of the different"
+   },
+   {
+    "start": 108.4,
+    "end": 113.04,
+    "text": "data points based upon that license"
+   },
+   {
+    "start": 110.84,
+    "end": 115.8,
+    "text": "plate number. I can find out where"
+   },
+   {
+    "start": 113.04,
+    "end": 118.24,
+    "text": "somebody lives just based upon tracking"
+   },
+   {
+    "start": 115.8,
+    "end": 119.76,
+    "text": "their data. They can recreate my morning"
+   },
+   {
+    "start": 118.24,
+    "end": 122.2,
+    "text": "probably better than I can recreate my"
+   },
+   {
+    "start": 119.76,
+    "end": 122.2,
+    "text": "morning."
+   }
+  ]
  },
  "https://www.youtube.com/watch?v=lq3mZnI8tnY": {
-  "status": "null",
+  "status": "ok",
   "video_id": "lq3mZnI8tnY",
-  "retried": true
+  "source": "auto",
+  "duration": 144.16,
+  "n_cues": 68,
+  "cues": [
+   {
+    "start": 0.0,
+    "end": 3.7199999999999998,
+    "text": "The company behind a nationwide network"
+   },
+   {
+    "start": 1.76,
+    "end": 6.04,
+    "text": "of surveillance cameras is making major"
+   },
+   {
+    "start": 3.7199999999999998,
+    "end": 8.24,
+    "text": "changes as concerns grow about privacy"
+   },
+   {
+    "start": 6.04,
+    "end": 9.76,
+    "text": "and misuse. Couple's Joel Moreno live"
+   },
+   {
+    "start": 8.24,
+    "end": 11.56,
+    "text": "this evening in Federal Way with the new"
+   },
+   {
+    "start": 9.76,
+    "end": 15.28,
+    "text": "rules by Flock Safety and why critics"
+   },
+   {
+    "start": 11.56,
+    "end": 17.12,
+    "text": "say they don't go far enough. Joel?"
+   },
+   {
+    "start": 15.28,
+    "end": 19.96,
+    "text": ">> Yeah, Preston, Flock cameras are"
+   },
+   {
+    "start": 17.12,
+    "end": 22.44,
+    "text": "watching every vehicle that travels this"
+   },
+   {
+    "start": 19.96,
+    "end": 24.4,
+    "text": "road, but now there are new restrictions"
+   },
+   {
+    "start": 22.44,
+    "end": 26.28,
+    "text": "on the information they can collect."
+   },
+   {
+    "start": 24.4,
+    "end": 29.84,
+    "text": "Even with that though, these stepped-up"
+   },
+   {
+    "start": 26.28,
+    "end": 31.92,
+    "text": "measures, they can still be bypassed."
+   },
+   {
+    "start": 29.84,
+    "end": 33.72,
+    "text": "Flock Safety cameras read license plates"
+   },
+   {
+    "start": 31.92,
+    "end": 36.2,
+    "text": "and create data that police can search"
+   },
+   {
+    "start": 33.72,
+    "end": 37.84,
+    "text": "across jurisdictions. The company CEO"
+   },
+   {
+    "start": 36.2,
+    "end": 39.68,
+    "text": "says the system has proven to be a"
+   },
+   {
+    "start": 37.84,
+    "end": 42.36,
+    "text": "powerful tool for finding missing"
+   },
+   {
+    "start": 39.68,
+    "end": 44.8,
+    "text": "people, stolen cars, and suspects."
+   },
+   {
+    "start": 42.36,
+    "end": 48.0,
+    "text": ">> Flock has helped so many cities,"
+   },
+   {
+    "start": 44.8,
+    "end": 49.64,
+    "text": "thousands of cities, reduce their crime."
+   },
+   {
+    "start": 48.0,
+    "end": 51.64,
+    "text": ">> Critics however call it mass"
+   },
+   {
+    "start": 49.64,
+    "end": 53.48,
+    "text": "surveillance and a growing number of"
+   },
+   {
+    "start": 51.64,
+    "end": 55.48,
+    "text": "cities including Renton, Redmond,"
+   },
+   {
+    "start": 53.48,
+    "end": 57.0,
+    "text": "Edmonds, and Lynnwood currently no"
+   },
+   {
+    "start": 55.48,
+    "end": 58.76,
+    "text": "longer use the system."
+   },
+   {
+    "start": 57.0,
+    "end": 60.84,
+    "text": ">> They're using it to actually like stalk"
+   },
+   {
+    "start": 58.76,
+    "end": 62.68,
+    "text": "people that"
+   },
+   {
+    "start": 60.84,
+    "end": 63.96,
+    "text": "aren't even in my opinion committing"
+   },
+   {
+    "start": 62.68,
+    "end": 65.76,
+    "text": "actual crimes."
+   },
+   {
+    "start": 63.96,
+    "end": 67.96,
+    "text": ">> If you look at the other things going on"
+   },
+   {
+    "start": 65.76,
+    "end": 69.96,
+    "text": "that are kind of maybe tied to it like"
+   },
+   {
+    "start": 67.96,
+    "end": 71.68,
+    "text": "ICE raids and things like that, I think"
+   },
+   {
+    "start": 69.96,
+    "end": 72.88,
+    "text": "people have legitimate concerns as to"
+   },
+   {
+    "start": 71.68,
+    "end": 74.56,
+    "text": "how it's being used."
+   },
+   {
+    "start": 72.88,
+    "end": 76.24,
+    "text": ">> Now, Flock Safety says suspicious"
+   },
+   {
+    "start": 74.56,
+    "end": 78.4,
+    "text": "searches by law enforcement will be"
+   },
+   {
+    "start": 76.24,
+    "end": 80.36,
+    "text": "flagged and police who misuse the"
+   },
+   {
+    "start": 78.4,
+    "end": 83.08,
+    "text": "network can be locked out."
+   },
+   {
+    "start": 80.36,
+    "end": 84.0,
+    "text": ">> We are finding bad cops and holding them"
+   },
+   {
+    "start": 83.08,
+    "end": 85.88,
+    "text": "accountable."
+   },
+   {
+    "start": 84.0,
+    "end": 88.88,
+    "text": ">> Flock is changing course in other ways"
+   },
+   {
+    "start": 85.88,
+    "end": 91.32,
+    "text": "as well including cutting its 30 days of"
+   },
+   {
+    "start": 88.88,
+    "end": 93.44,
+    "text": "data retention down to seven."
+   },
+   {
+    "start": 91.32,
+    "end": 95.2,
+    "text": "But there are still ways to bypass these"
+   },
+   {
+    "start": 93.44,
+    "end": 97.04,
+    "text": "protections and the surveillance"
+   },
+   {
+    "start": 95.2,
+    "end": 98.84,
+    "text": "company's biggest opponents say the new"
+   },
+   {
+    "start": 97.04,
+    "end": 100.64,
+    "text": "rules still don't resolve the biggest"
+   },
+   {
+    "start": 98.84,
+    "end": 102.8,
+    "text": "concern around police being able to"
+   },
+   {
+    "start": 100.64,
+    "end": 103.44,
+    "text": "search people's movements without a"
+   },
+   {
+    "start": 102.8,
+    "end": 106.44,
+    "text": "warrant."
+   },
+   {
+    "start": 103.44,
+    "end": 107.72,
+    "text": ">> And I feel like more can be done and"
+   },
+   {
+    "start": 106.44,
+    "end": 110.4,
+    "text": "it's just like they're trying to calm"
+   },
+   {
+    "start": 107.72,
+    "end": 112.44,
+    "text": "people down like, \"Hey, we'll do this."
+   },
+   {
+    "start": 110.4,
+    "end": 113.84,
+    "text": "Calm down.\" And I don't think I really"
+   },
+   {
+    "start": 112.44,
+    "end": 115.72,
+    "text": "like that actually."
+   },
+   {
+    "start": 113.84,
+    "end": 118.8,
+    "text": ">> And I don't think these changes to"
+   },
+   {
+    "start": 115.72,
+    "end": 120.52,
+    "text": "privacy policies necessarily goes far"
+   },
+   {
+    "start": 118.8,
+    "end": 123.6,
+    "text": "enough to really alleviate the fear of"
+   },
+   {
+    "start": 120.52,
+    "end": 123.6,
+    "text": "it being misused."
+   },
+   {
+    "start": 124.72,
+    "end": 130.039,
+    "text": ">> Despite the company's changes, how long"
+   },
+   {
+    "start": 127.88,
+    "end": 132.2,
+    "text": "this vehicle data is kept, who can"
+   },
+   {
+    "start": 130.039,
+    "end": 134.44,
+    "text": "search it and for what purpose, that is"
+   },
+   {
+    "start": 132.2,
+    "end": 137.0,
+    "text": "still governed by the rules set by each"
+   },
+   {
+    "start": 134.44,
+    "end": 138.64,
+    "text": "local police agency. So, here in"
+   },
+   {
+    "start": 137.0,
+    "end": 141.08,
+    "text": "Washington, the fight over these cameras"
+   },
+   {
+    "start": 138.64,
+    "end": 144.16,
+    "text": "is far from over. Reporting live, Joel"
+   },
+   {
+    "start": 141.08,
+    "end": 144.16,
+    "text": "Moreno, KOMO News."
+   }
+  ]
  },
  "https://www.youtube.com/watch?v=NyS782HGrbY": {
   "status": "null",
@@ -28,29 +965,1346 @@
   "retried": true
  },
  "https://www.youtube.com/shorts/jqTpde_UWs4": {
-  "status": "null",
+  "status": "ok",
   "video_id": "jqTpde_UWs4",
-  "retried": true
+  "source": "auto",
+  "duration": 126.44,
+  "n_cues": 60,
+  "cues": [
+   {
+    "start": 0.0,
+    "end": 3.96,
+    "text": "Chris, this is the A&M put you on the"
+   },
+   {
+    "start": 2.48,
+    "end": 6.72,
+    "text": "spot question of the week, and here it"
+   },
+   {
+    "start": 3.96,
+    "end": 9.24,
+    "text": "is. As investment continues for the"
+   },
+   {
+    "start": 6.72,
+    "end": 10.96,
+    "text": "Caper Cart, is the Nvidia integration,"
+   },
+   {
+    "start": 9.24,
+    "end": 12.84,
+    "text": "and specifically the idea that it can"
+   },
+   {
+    "start": 10.96,
+    "end": 14.96,
+    "text": "see items on the shelf and unlock"
+   },
+   {
+    "start": 12.84,
+    "end": 17.48,
+    "text": "Instacart, needs to increase Caper's"
+   },
+   {
+    "start": 14.96,
+    "end": 20.12,
+    "text": "relevance, or is throwing more money and"
+   },
+   {
+    "start": 17.48,
+    "end": 22.2,
+    "text": "hype at this a niche application?"
+   },
+   {
+    "start": 20.12,
+    "end": 24.56,
+    "text": "Oh my god, it's 100% the latter, Carter."
+   },
+   {
+    "start": 22.2,
+    "end": 26.72,
+    "text": "100%. This is This is the This is the"
+   },
+   {
+    "start": 24.56,
+    "end": 28.32,
+    "text": "hype of all hype announcements. And"
+   },
+   {
+    "start": 26.72,
+    "end": 31.84,
+    "text": "I mean"
+   },
+   {
+    "start": 28.32,
+    "end": 33.28,
+    "text": "They're laying AI on top of, you know,"
+   },
+   {
+    "start": 31.84,
+    "end": 35.08,
+    "text": "Yeah. the announcement to maybe get a"
+   },
+   {
+    "start": 33.28,
+    "end": 37.84,
+    "text": "little bit more press. The amount of"
+   },
+   {
+    "start": 35.08,
+    "end": 40.0,
+    "text": "ways this cart has been tried to be sold"
+   },
+   {
+    "start": 37.84,
+    "end": 42.4,
+    "text": "over the last X number of years is just"
+   },
+   {
+    "start": 40.0,
+    "end": 43.6,
+    "text": "unfathomable to me. So, like, this"
+   },
+   {
+    "start": 42.4,
+    "end": 45.44,
+    "text": "Here's the But here's the reason I think"
+   },
+   {
+    "start": 43.6,
+    "end": 48.4,
+    "text": "this this announcement is all hype."
+   },
+   {
+    "start": 45.44,
+    "end": 49.68,
+    "text": "Because to me, this is this actually The"
+   },
+   {
+    "start": 48.4,
+    "end": 53.4,
+    "text": "funny thing about this announcement is"
+   },
+   {
+    "start": 49.68,
+    "end": 55.36,
+    "text": "it's right strategy, wrong substrate."
+   },
+   {
+    "start": 53.4,
+    "end": 57.4,
+    "text": "For example, if the cart is the tool for"
+   },
+   {
+    "start": 55.36,
+    "end": 59.12,
+    "text": "this, why does it need to be a smart"
+   },
+   {
+    "start": 57.4,
+    "end": 61.12,
+    "text": "shopping cart at all? Couldn't you just"
+   },
+   {
+    "start": 59.12,
+    "end": 62.92,
+    "text": "equip a regular old cart unbenounced to"
+   },
+   {
+    "start": 61.12,
+    "end": 64.879,
+    "text": "shoppers and not require shoppers to"
+   },
+   {
+    "start": 62.92,
+    "end": 66.8,
+    "text": "adapt their behavior to using a new cart"
+   },
+   {
+    "start": 64.879,
+    "end": 68.52,
+    "text": "and get all the same information that"
+   },
+   {
+    "start": 66.8,
+    "end": 71.8,
+    "text": "you're reportedly trying to get from"
+   },
+   {
+    "start": 68.52,
+    "end": 73.88,
+    "text": "this? 100% you can. And with that said,"
+   },
+   {
+    "start": 71.8,
+    "end": 75.56,
+    "text": "though, there's even a better way to do"
+   },
+   {
+    "start": 73.88,
+    "end": 77.12,
+    "text": "this, and that better way is robotics."
+   },
+   {
+    "start": 75.56,
+    "end": 80.04,
+    "text": "Because the problem with the cart"
+   },
+   {
+    "start": 77.12,
+    "end": 82.12,
+    "text": "serving as the substrate is that despite"
+   },
+   {
+    "start": 80.04,
+    "end": 83.8,
+    "text": "what this headline says, you cannot"
+   },
+   {
+    "start": 82.12,
+    "end": 86.56,
+    "text": "guarantee the real-time view of the"
+   },
+   {
+    "start": 83.8,
+    "end": 88.44,
+    "text": "store is being captured the same way at"
+   },
+   {
+    "start": 86.56,
+    "end": 90.24,
+    "text": "the same time every time. Because when"
+   },
+   {
+    "start": 88.44,
+    "end": 91.56,
+    "text": "you're leaving that to customers or"
+   },
+   {
+    "start": 90.24,
+    "end": 93.72,
+    "text": "employees, they're going to do it"
+   },
+   {
+    "start": 91.56,
+    "end": 96.04,
+    "text": "differently. A robot is the only thing"
+   },
+   {
+    "start": 93.72,
+    "end": 98.0,
+    "text": "that can do it the same way every time."
+   },
+   {
+    "start": 96.04,
+    "end": 100.64,
+    "text": "And robotics are still the best way to"
+   },
+   {
+    "start": 98.0,
+    "end": 102.2,
+    "text": "do that because that's what they do. And"
+   },
+   {
+    "start": 100.64,
+    "end": 103.76,
+    "text": "their field of vision is better, too,"
+   },
+   {
+    "start": 102.2,
+    "end": 105.48,
+    "text": "for that reason as well, because they"
+   },
+   {
+    "start": 103.76,
+    "end": 107.48,
+    "text": "can get inside the nooks and crannies"
+   },
+   {
+    "start": 105.48,
+    "end": 109.52,
+    "text": "better than, say, a cart that's just"
+   },
+   {
+    "start": 107.48,
+    "end": 110.92,
+    "text": "randomly going through the store. So,"
+   },
+   {
+    "start": 109.52,
+    "end": 113.88,
+    "text": "once again,"
+   },
+   {
+    "start": 110.92,
+    "end": 115.52,
+    "text": "once again, Carter, like Instacart's out"
+   },
+   {
+    "start": 113.88,
+    "end": 117.36,
+    "text": "pushing the cart. I don't think it's"
+   },
+   {
+    "start": 115.52,
+    "end": 118.84,
+    "text": "going to work. They'd be better off At"
+   },
+   {
+    "start": 117.36,
+    "end": 120.96,
+    "text": "this point, they'd be better off just"
+   },
+   {
+    "start": 118.84,
+    "end": 123.32,
+    "text": "acquiring a robotics company and stop"
+   },
+   {
+    "start": 120.96,
+    "end": 126.44,
+    "text": "throwing more good money after bad."
+   },
+   {
+    "start": 123.32,
+    "end": 126.44,
+    "text": "That's my opinion."
+   }
+  ]
  },
  "https://www.youtube.com/watch?v=IO1wx3zBR6s": {
-  "status": "null",
+  "status": "ok",
   "video_id": "IO1wx3zBR6s",
-  "retried": true
+  "source": "auto",
+  "duration": 124.399,
+  "n_cues": 46,
+  "cues": [
+   {
+    "start": 0.96,
+    "end": 6.879,
+    "text": "this is Caper cart instacart's AI"
+   },
+   {
+    "start": 3.719,
+    "end": 9.48,
+    "text": "powered smart cart that customers love"
+   },
+   {
+    "start": 6.879,
+    "end": 12.48,
+    "text": "all they have to do is grab an item drop"
+   },
+   {
+    "start": 9.48,
+    "end": 14.36,
+    "text": "it in and Caper instantly adds it to"
+   },
+   {
+    "start": 12.48,
+    "end": 16.96,
+    "text": "their total on"
+   },
+   {
+    "start": 14.36,
+    "end": 19.199,
+    "text": "screen Caper cart is equipped with smart"
+   },
+   {
+    "start": 16.96,
+    "end": 21.16,
+    "text": "sensors and computer vision cameras that"
+   },
+   {
+    "start": 19.199,
+    "end": 23.439,
+    "text": "automatically recognize when a customer"
+   },
+   {
+    "start": 21.16,
+    "end": 25.48,
+    "text": "has added a"
+   },
+   {
+    "start": 23.439,
+    "end": 27.599,
+    "text": "product and the built-in weights and"
+   },
+   {
+    "start": 25.48,
+    "end": 28.8,
+    "text": "measure certified scales even know how"
+   },
+   {
+    "start": 27.599,
+    "end": 32.32,
+    "text": "much it"
+   },
+   {
+    "start": 28.8,
+    "end": 35.8,
+    "text": "weighs yep even"
+   },
+   {
+    "start": 32.32,
+    "end": 37.76,
+    "text": "produce it's easy for customers to add"
+   },
+   {
+    "start": 35.8,
+    "end": 41.96,
+    "text": "items remove"
+   },
+   {
+    "start": 37.76,
+    "end": 41.96,
+    "text": "them and even add them back"
+   },
+   {
+    "start": 43.239,
+    "end": 48.0,
+    "text": "in e-commerce Integrations let your"
+   },
+   {
+    "start": 46.0,
+    "end": 50.84,
+    "text": "customers build a shopping list on your"
+   },
+   {
+    "start": 48.0,
+    "end": 53.199,
+    "text": "app and easily shop it from the"
+   },
+   {
+    "start": 50.84,
+    "end": 55.6,
+    "text": "cart personalized features like"
+   },
+   {
+    "start": 53.199,
+    "end": 57.92,
+    "text": "location-based deals and your items on"
+   },
+   {
+    "start": 55.6,
+    "end": 61.199,
+    "text": "sale are available for retailers to"
+   },
+   {
+    "start": 57.92,
+    "end": 64.04,
+    "text": "tailor every shopping experience to the"
+   },
+   {
+    "start": 61.199,
+    "end": 65.88,
+    "text": "customer even ads on Caper cart can be"
+   },
+   {
+    "start": 64.04,
+    "end": 67.41,
+    "text": "personalized to make them relevant to"
+   },
+   {
+    "start": 65.88,
+    "end": 69.159,
+    "text": "your customer's"
+   },
+   {
+    "start": 67.41,
+    "end": 71.28,
+    "text": "[Music]"
+   },
+   {
+    "start": 69.159,
+    "end": 76.0,
+    "text": "experience surprise and Delight your"
+   },
+   {
+    "start": 71.28,
+    "end": 76.0,
+    "text": "customers with gamification like Spin to"
+   },
+   {
+    "start": 76.88,
+    "end": 81.079,
+    "text": "Win cut down lines with customers paying"
+   },
+   {
+    "start": 79.92,
+    "end": 84.159,
+    "text": "right on their"
+   },
+   {
+    "start": 81.079,
+    "end": 86.36,
+    "text": "cart when it's time to check out"
+   },
+   {
+    "start": 84.159,
+    "end": 88.84,
+    "text": "everyone"
+   },
+   {
+    "start": 86.36,
+    "end": 92.64,
+    "text": "wins your customers will even get to"
+   },
+   {
+    "start": 88.84,
+    "end": 92.64,
+    "text": "save with your store loyalty"
+   },
+   {
+    "start": 93.64,
+    "end": 98.439,
+    "text": "program Caper integrates into your"
+   },
+   {
+    "start": 95.92,
+    "end": 101.439,
+    "text": "store's infrastructure and POS system"
+   },
+   {
+    "start": 98.439,
+    "end": 104.0,
+    "text": "too conveniently access cart monitoring"
+   },
+   {
+    "start": 101.439,
+    "end": 106.68,
+    "text": "tools to help prevent"
+   },
+   {
+    "start": 104.0,
+    "end": 109.52,
+    "text": "shrink and nesting charging gives Caper"
+   },
+   {
+    "start": 106.68,
+    "end": 111.84,
+    "text": "carts enough juice to run all"
+   },
+   {
+    "start": 109.52,
+    "end": 113.719,
+    "text": "day when every trip feels like an"
+   },
+   {
+    "start": 111.84,
+    "end": 116.119,
+    "text": "adventure customers increase their"
+   },
+   {
+    "start": 113.719,
+    "end": 120.0,
+    "text": "basket size and keep coming back for"
+   },
+   {
+    "start": 116.119,
+    "end": 124.399,
+    "text": "more drive more Revenue more loyalty and"
+   },
+   {
+    "start": 120.0,
+    "end": 124.399,
+    "text": "bigger baskets with Caper cart"
+   }
+  ]
  },
  "https://www.youtube.com/watch?v=CU53EbSEVAA": {
-  "status": "null",
+  "status": "ok",
   "video_id": "CU53EbSEVAA",
-  "retried": true
+  "source": "auto",
+  "duration": 328.44,
+  "n_cues": 155,
+  "cues": [
+   {
+    "start": 0.08,
+    "end": 3.399,
+    "text": "well artificial intelligence it's been"
+   },
+   {
+    "start": 1.92,
+    "end": 5.48,
+    "text": "one of the biggest topics of discussion"
+   },
+   {
+    "start": 3.399,
+    "end": 7.24,
+    "text": "over the past year or so but could it"
+   },
+   {
+    "start": 5.48,
+    "end": 8.679,
+    "text": "affect the way we shop for groceries"
+   },
+   {
+    "start": 7.24,
+    "end": 10.719,
+    "text": "aren't we doing that already good day"
+   },
+   {
+    "start": 8.679,
+    "end": 13.32,
+    "text": "wake up B and danam Bowens I always need"
+   },
+   {
+    "start": 10.719,
+    "end": 14.839,
+    "text": "somebody to help me during checkout self"
+   },
+   {
+    "start": 13.32,
+    "end": 16.119,
+    "text": "self checkout yeah exactly whether"
+   },
+   {
+    "start": 14.839,
+    "end": 17.6,
+    "text": "you're going to do the self checkout or"
+   },
+   {
+    "start": 16.119,
+    "end": 19.56,
+    "text": "you're going to do it with somebody"
+   },
+   {
+    "start": 17.6,
+    "end": 21.96,
+    "text": "who's sort of the more traditional way"
+   },
+   {
+    "start": 19.56,
+    "end": 23.76,
+    "text": "and this is a whole new way to do it so"
+   },
+   {
+    "start": 21.96,
+    "end": 25.68,
+    "text": "let's try to keep it simple here for you"
+   },
+   {
+    "start": 23.76,
+    "end": 28.279,
+    "text": "cuz you can definitely add artificial"
+   },
+   {
+    "start": 25.68,
+    "end": 30.119,
+    "text": "intelligence to your grocery list AI"
+   },
+   {
+    "start": 28.279,
+    "end": 31.92,
+    "text": "powered shopping carts are popping up in"
+   },
+   {
+    "start": 30.119,
+    "end": 33.48,
+    "text": "more stores all across the country"
+   },
+   {
+    "start": 31.92,
+    "end": 35.2,
+    "text": "including a couple right in New Jersey"
+   },
+   {
+    "start": 33.48,
+    "end": 37.6,
+    "text": "they're revolutionizing the shopping"
+   },
+   {
+    "start": 35.2,
+    "end": 39.399,
+    "text": "experience and I spoke to the man behind"
+   },
+   {
+    "start": 37.6,
+    "end": 41.559,
+    "text": "this new technology to figure out how it"
+   },
+   {
+    "start": 39.399,
+    "end": 41.559,
+    "text": "all"
+   },
+   {
+    "start": 42.879,
+    "end": 49.68,
+    "text": "works man I want to get some ice cream"
+   },
+   {
+    "start": 46.76,
+    "end": 51.28,
+    "text": "too reimagining what's possible at the"
+   },
+   {
+    "start": 49.68,
+    "end": 53.079,
+    "text": "grocery store if you look at the"
+   },
+   {
+    "start": 51.28,
+    "end": 55.0,
+    "text": "shopping cart here you see that there"
+   },
+   {
+    "start": 53.079,
+    "end": 56.52,
+    "text": "sensors and and cameras that actually"
+   },
+   {
+    "start": 55.0,
+    "end": 59.28,
+    "text": "detect products as you throw them inside"
+   },
+   {
+    "start": 56.52,
+    "end": 61.64,
+    "text": "of the cart it's the Caper smart cart"
+   },
+   {
+    "start": 59.28,
+    "end": 62.879,
+    "text": "packed full of technology and sensors"
+   },
+   {
+    "start": 61.64,
+    "end": 64.479,
+    "text": "then there's a screen here so you can"
+   },
+   {
+    "start": 62.879,
+    "end": 66.6,
+    "text": "actually interact with the cart as"
+   },
+   {
+    "start": 64.479,
+    "end": 69.439,
+    "text": "you're shopping Ahmed basri is"
+   },
+   {
+    "start": 66.6,
+    "end": 72.84,
+    "text": "co-founder of the AI powered technology"
+   },
+   {
+    "start": 69.439,
+    "end": 75.119,
+    "text": "that was purchased by instacart for $350"
+   },
+   {
+    "start": 72.84,
+    "end": 76.36,
+    "text": "million so a customer just grabs any"
+   },
+   {
+    "start": 75.119,
+    "end": 78.2,
+    "text": "product off the shelf they'll just"
+   },
+   {
+    "start": 76.36,
+    "end": 79.759,
+    "text": "simply toss it inside of the cart and"
+   },
+   {
+    "start": 78.2,
+    "end": 81.759,
+    "text": "these cameras will actually leveraging"
+   },
+   {
+    "start": 79.759,
+    "end": 83.119,
+    "text": "AI that we've built in house pick up"
+   },
+   {
+    "start": 81.759,
+    "end": 84.439,
+    "text": "features from that product and"
+   },
+   {
+    "start": 83.119,
+    "end": 86.36,
+    "text": "automatically recognize it as you're"
+   },
+   {
+    "start": 84.439,
+    "end": 88.52,
+    "text": "adding it in the cart it's now located"
+   },
+   {
+    "start": 86.36,
+    "end": 90.84,
+    "text": "in dozens of stores across the country"
+   },
+   {
+    "start": 88.52,
+    "end": 92.64,
+    "text": "and at least two New Jersey locations"
+   },
+   {
+    "start": 90.84,
+    "end": 95.479,
+    "text": "including the Brookdale shop right on"
+   },
+   {
+    "start": 92.64,
+    "end": 98.2,
+    "text": "Broad Street in Bloomfield where I just"
+   },
+   {
+    "start": 95.479,
+    "end": 100.6,
+    "text": "got a unique grocery list all right so"
+   },
+   {
+    "start": 98.2,
+    "end": 102.24,
+    "text": "my daughter is H sick from school today"
+   },
+   {
+    "start": 100.6,
+    "end": 107.119,
+    "text": "she knew that I was going to be going to"
+   },
+   {
+    "start": 102.24,
+    "end": 109.36,
+    "text": "the grocery store hi Sabina hi hey um so"
+   },
+   {
+    "start": 107.119,
+    "end": 112.0,
+    "text": "Sabina this is my friend here we're here"
+   },
+   {
+    "start": 109.36,
+    "end": 113.6,
+    "text": "with the special cart what do you want"
+   },
+   {
+    "start": 112.0,
+    "end": 117.799,
+    "text": "from the grocery store you're home sick"
+   },
+   {
+    "start": 113.6,
+    "end": 121.2,
+    "text": "today um can I have the um Tostitos"
+   },
+   {
+    "start": 117.799,
+    "end": 125.6,
+    "text": "Tostitos okay yeah cheddar popcorn"
+   },
+   {
+    "start": 121.2,
+    "end": 128.64,
+    "text": "cheddar popcorn four plums four plums"
+   },
+   {
+    "start": 125.6,
+    "end": 130.959,
+    "text": "okay that's very specific four plums and"
+   },
+   {
+    "start": 128.64,
+    "end": 132.959,
+    "text": "pink lemonade pink lemonade okay you"
+   },
+   {
+    "start": 130.959,
+    "end": 135.08,
+    "text": "don't want orange juice you're home sick"
+   },
+   {
+    "start": 132.959,
+    "end": 138.48,
+    "text": "no I don't like it okay so that's it"
+   },
+   {
+    "start": 135.08,
+    "end": 142.599,
+    "text": "that you're good no can I have candy"
+   },
+   {
+    "start": 138.48,
+    "end": 145.16,
+    "text": "candy what kind of candy do you want um"
+   },
+   {
+    "start": 142.599,
+    "end": 146.8,
+    "text": "do they have the Airhead we got you"
+   },
+   {
+    "start": 145.16,
+    "end": 148.84,
+    "text": "we'll get all that all right so let's go"
+   },
+   {
+    "start": 146.8,
+    "end": 151.599,
+    "text": "shopping let's do"
+   },
+   {
+    "start": 148.84,
+    "end": 154.0,
+    "text": "it"
+   },
+   {
+    "start": 151.599,
+    "end": 155.879,
+    "text": "can find some okay here we go what we"
+   },
+   {
+    "start": 154.0,
+    "end": 158.76,
+    "text": "need to find I think she likes the party"
+   },
+   {
+    "start": 155.879,
+    "end": 160.92,
+    "text": "size yeah okay so let's get her uh you"
+   },
+   {
+    "start": 158.76,
+    "end": 164.4,
+    "text": "got to get her di too some party party"
+   },
+   {
+    "start": 160.92,
+    "end": 168.159,
+    "text": "size there you go it"
+   },
+   {
+    "start": 164.4,
+    "end": 170.28,
+    "text": "in get popcorn here I found the card"
+   },
+   {
+    "start": 168.159,
+    "end": 172.84,
+    "text": "very easy to use those sensors are"
+   },
+   {
+    "start": 170.28,
+    "end": 175.64,
+    "text": "precise and accurate there's also a very"
+   },
+   {
+    "start": 172.84,
+    "end": 177.159,
+    "text": "cool coupon and loyalty card feature so"
+   },
+   {
+    "start": 175.64,
+    "end": 179.44,
+    "text": "we give you you know eligible items you"
+   },
+   {
+    "start": 177.159,
+    "end": 180.48,
+    "text": "can clip coupons um and there's also a"
+   },
+   {
+    "start": 179.44,
+    "end": 182.0,
+    "text": "couple different different things here"
+   },
+   {
+    "start": 180.48,
+    "end": 183.239,
+    "text": "running total and running savings so you"
+   },
+   {
+    "start": 182.0,
+    "end": 186.36,
+    "text": "can see what you're spending in real"
+   },
+   {
+    "start": 183.239,
+    "end": 189.44,
+    "text": "time yes we got that candy as"
+   },
+   {
+    "start": 186.36,
+    "end": 190.519,
+    "text": "promised sweet and now for one of the"
+   },
+   {
+    "start": 189.44,
+    "end": 193.599,
+    "text": "smartest"
+   },
+   {
+    "start": 190.519,
+    "end": 196.08,
+    "text": "features weighing the produce those four"
+   },
+   {
+    "start": 193.599,
+    "end": 198.48,
+    "text": "plums the cart itself is like a big"
+   },
+   {
+    "start": 196.08,
+    "end": 200.879,
+    "text": "scale punching the code and you're all"
+   },
+   {
+    "start": 198.48,
+    "end": 203.599,
+    "text": "set what's the response been from the"
+   },
+   {
+    "start": 200.879,
+    "end": 205.56,
+    "text": "customer base unbelievable Jerry Manley"
+   },
+   {
+    "start": 203.599,
+    "end": 207.76,
+    "text": "is Vice President of Operations at this"
+   },
+   {
+    "start": 205.56,
+    "end": 210.28,
+    "text": "shop right at another in Newark and says"
+   },
+   {
+    "start": 207.76,
+    "end": 212.56,
+    "text": "the carts are available to anyone and"
+   },
+   {
+    "start": 210.28,
+    "end": 214.12,
+    "text": "those who use them love them I've had"
+   },
+   {
+    "start": 212.56,
+    "end": 215.68,
+    "text": "people coming to the store now that"
+   },
+   {
+    "start": 214.12,
+    "end": 217.599,
+    "text": "never shopped here before because they"
+   },
+   {
+    "start": 215.68,
+    "end": 220.519,
+    "text": "heard about it and they want to try it"
+   },
+   {
+    "start": 217.599,
+    "end": 223.64,
+    "text": "as for our list we got it all the card"
+   },
+   {
+    "start": 220.519,
+    "end": 226.4,
+    "text": "is keeping track ready to check out here"
+   },
+   {
+    "start": 223.64,
+    "end": 229.519,
+    "text": "and change the experience for customers"
+   },
+   {
+    "start": 226.4,
+    "end": 231.4,
+    "text": "everywhere we're thinking AI can be used"
+   },
+   {
+    "start": 229.519,
+    "end": 232.799,
+    "text": "just to to make your shop and your"
+   },
+   {
+    "start": 231.4,
+    "end": 234.599,
+    "text": "experience way better than than it"
+   },
+   {
+    "start": 232.799,
+    "end": 237.0,
+    "text": "typically could"
+   },
+   {
+    "start": 234.599,
+    "end": 238.72,
+    "text": "be it was a lot of fun there you know in"
+   },
+   {
+    "start": 237.0,
+    "end": 240.239,
+    "text": "that particular shop right you can't"
+   },
+   {
+    "start": 238.72,
+    "end": 241.64,
+    "text": "just check out with the cart but at"
+   },
+   {
+    "start": 240.239,
+    "end": 243.2,
+    "text": "other locations you can actually just"
+   },
+   {
+    "start": 241.64,
+    "end": 244.48,
+    "text": "pay right at the cart you have your bags"
+   },
+   {
+    "start": 243.2,
+    "end": 245.879,
+    "text": "packed and you just walk right out the"
+   },
+   {
+    "start": 244.48,
+    "end": 247.2,
+    "text": "door this one is pretty easy you had"
+   },
+   {
+    "start": 245.879,
+    "end": 249.599,
+    "text": "your own lane and you kind of did it"
+   },
+   {
+    "start": 247.2,
+    "end": 251.28,
+    "text": "that way so pretty e easy to use what"
+   },
+   {
+    "start": 249.599,
+    "end": 252.48,
+    "text": "happens if you like change your mind if"
+   },
+   {
+    "start": 251.28,
+    "end": 253.84,
+    "text": "you don't want an item to be take out"
+   },
+   {
+    "start": 252.48,
+    "end": 255.079,
+    "text": "you know we we did that if you take if"
+   },
+   {
+    "start": 253.84,
+    "end": 256.68,
+    "text": "you put one in and you want to take it"
+   },
+   {
+    "start": 255.079,
+    "end": 258.079,
+    "text": "out you take it out and you see it pop"
+   },
+   {
+    "start": 256.68,
+    "end": 259.799,
+    "text": "right back off on the screen we did it"
+   },
+   {
+    "start": 258.079,
+    "end": 261.44,
+    "text": "so much that there was a lady who was"
+   },
+   {
+    "start": 259.799,
+    "end": 264.04,
+    "text": "there by the door so when we went to go"
+   },
+   {
+    "start": 261.44,
+    "end": 265.68,
+    "text": "check out it popped up on her screen and"
+   },
+   {
+    "start": 264.04,
+    "end": 267.56,
+    "text": "said you need to go check them out so"
+   },
+   {
+    "start": 265.68,
+    "end": 270.16,
+    "text": "cuz we're taking you make it look very"
+   },
+   {
+    "start": 267.56,
+    "end": 272.199,
+    "text": "easy okay I mean we kind of have a AI"
+   },
+   {
+    "start": 270.16,
+    "end": 274.56,
+    "text": "right now you do the drugstore right you"
+   },
+   {
+    "start": 272.199,
+    "end": 277.199,
+    "text": "do yourself check out and why do I"
+   },
+   {
+    "start": 274.56,
+    "end": 279.6,
+    "text": "always need help why is like the buzzer"
+   },
+   {
+    "start": 277.199,
+    "end": 281.0,
+    "text": "always going off and I need help you"
+   },
+   {
+    "start": 279.6,
+    "end": 282.479,
+    "text": "know I can actually talk to the folks"
+   },
+   {
+    "start": 281.0,
+    "end": 284.36,
+    "text": "over there and maybe we can get you a"
+   },
+   {
+    "start": 282.479,
+    "end": 285.759,
+    "text": "customized cart one that won't beep so"
+   },
+   {
+    "start": 284.36,
+    "end": 286.919,
+    "text": "much there you go and that that could"
+   },
+   {
+    "start": 285.759,
+    "end": 288.72,
+    "text": "work for you I mean the good thing with"
+   },
+   {
+    "start": 286.919,
+    "end": 290.68,
+    "text": "this also or or the next part of this is"
+   },
+   {
+    "start": 288.72,
+    "end": 292.4,
+    "text": "they're going to start offering ads"
+   },
+   {
+    "start": 290.68,
+    "end": 294.759,
+    "text": "while you're shopping that's going to be"
+   },
+   {
+    "start": 292.4,
+    "end": 296.16,
+    "text": "in two stores in Southern California so"
+   },
+   {
+    "start": 294.759,
+    "end": 297.44,
+    "text": "while you're in different areas of the"
+   },
+   {
+    "start": 296.16,
+    "end": 298.759,
+    "text": "store you'll might see some different"
+   },
+   {
+    "start": 297.44,
+    "end": 300.199,
+    "text": "ads about what's going on there so do"
+   },
+   {
+    "start": 298.759,
+    "end": 303.199,
+    "text": "you have to put your credit card in"
+   },
+   {
+    "start": 300.199,
+    "end": 305.039,
+    "text": "first in not in this one but at"
+   },
+   {
+    "start": 303.199,
+    "end": 307.039,
+    "text": "eventually you may be able to just pay"
+   },
+   {
+    "start": 305.039,
+    "end": 308.88,
+    "text": "right there at your cart so does it also"
+   },
+   {
+    "start": 307.039,
+    "end": 310.44,
+    "text": "check like if you have like a pickle and"
+   },
+   {
+    "start": 308.88,
+    "end": 312.16,
+    "text": "then decide you don't want the pickles"
+   },
+   {
+    "start": 310.44,
+    "end": 313.84,
+    "text": "anymore you open the jar you mean if"
+   },
+   {
+    "start": 312.16,
+    "end": 315.44,
+    "text": "you're taking pickles out of the jar"
+   },
+   {
+    "start": 313.84,
+    "end": 317.6,
+    "text": "while you're shopping she's the one who"
+   },
+   {
+    "start": 315.44,
+    "end": 320.36,
+    "text": "puts the grapes in and eats like three"
+   },
+   {
+    "start": 317.6,
+    "end": 322.039,
+    "text": "of them on the way to the counter check"
+   },
+   {
+    "start": 320.36,
+    "end": 323.639,
+    "text": "the website to see if that's on the uh"
+   },
+   {
+    "start": 322.039,
+    "end": 326.199,
+    "text": "the list there it's interesting it"
+   },
+   {
+    "start": 323.639,
+    "end": 328.44,
+    "text": "really is for a friend all right thank"
+   },
+   {
+    "start": 326.199,
+    "end": 328.44,
+    "text": "all right"
+   }
+  ]
  },
  "https://www.youtube.com/watch?v=BuUPAtCEKMM": {
   "status": "null",
   "video_id": "BuUPAtCEKMM",
-  "retried": true
+  "reason": "no caption track (probe succeeded, so not a throttle)"
  },
  "https://www.youtube.com/watch?v=v2Ea_skSdE4": {
   "status": "null",
   "video_id": "v2Ea_skSdE4",
-  "retried": true
+  "reason": "no caption track (probe succeeded, so not a throttle)"
  },
  "https://www.youtube.com/watch?v=tmoQxq2P7Y4": {
   "status": "null",
@@ -733,14 +2987,2697 @@
   "retried": true
  },
  "https://www.youtube.com/watch?v=osxr7xSxsGo": {
-  "status": "null",
+  "status": "ok",
   "video_id": "osxr7xSxsGo",
-  "retried": true
+  "source": "manual",
+  "duration": 1098.764,
+  "n_cues": 447,
+  "cues": [
+   {
+    "start": 0.5,
+    "end": 4.838,
+    "text": "[Former FTC Chair] The holy grail for a long time has been, what if we could charge"
+   },
+   {
+    "start": 4.838,
+    "end": 9.843,
+    "text": "every single person the maximum amount that we know they're able to"
+   },
+   {
+    "start": 9.843,
+    "end": 11.261,
+    "text": "or willing to pay?"
+   },
+   {
+    "start": 11.261,
+    "end": 13.68,
+    "text": "[Expert] They know things about us that we don't know."
+   },
+   {
+    "start": 13.68,
+    "end": 16.224,
+    "text": "They're smarter than us and we're training them in a way"
+   },
+   {
+    "start": 16.224,
+    "end": 18.226,
+    "text": "that is incalculable."
+   },
+   {
+    "start": 18.226,
+    "end": 20.729,
+    "text": "[Eric] Walk into any grocery store and on average,"
+   },
+   {
+    "start": 20.729,
+    "end": 25.025,
+    "text": "everything is about 30% more expensive than it was in 2020."
+   },
+   {
+    "start": 25.025,
+    "end": 25.775,
+    "text": "Inflation."
+   },
+   {
+    "start": 25.775,
+    "end": 26.735,
+    "text": "Supply chains."
+   },
+   {
+    "start": 26.735,
+    "end": 27.444,
+    "text": "Tariffs."
+   },
+   {
+    "start": 27.444,
+    "end": 28.57,
+    "text": "We\u2019ve heard it all."
+   },
+   {
+    "start": 28.57,
+    "end": 30.613,
+    "text": "But what if something else is happening?"
+   },
+   {
+    "start": 30.613,
+    "end": 32.323,
+    "text": "Something intentional?"
+   },
+   {
+    "start": 32.323,
+    "end": 34.993,
+    "text": "What if someone is charged $2 for these eggs,"
+   },
+   {
+    "start": 34.993,
+    "end": 38.288,
+    "text": "but another person is charged $2.40 at the same exact store\u2014"
+   },
+   {
+    "start": 38.288,
+    "end": 40.498,
+    "text": "and it's pushing prices up?"
+   },
+   {
+    "start": 40.498,
+    "end": 43.668,
+    "text": "Five months ago, a researcher reached out to me about Instacart."
+   },
+   {
+    "start": 43.668,
+    "end": 46.337,
+    "text": "She'd been studying their Washington, D.C. workforce."
+   },
+   {
+    "start": 46.337,
+    "end": 48.965,
+    "text": "Different pay for nearly identical work."
+   },
+   {
+    "start": 48.965,
+    "end": 53.887,
+    "text": "Her question: if they do this to workers, what about consumers?"
+   },
+   {
+    "start": 53.887,
+    "end": 56.514,
+    "text": "Before joining More Perfect Union, I worked in grocery pricing."
+   },
+   {
+    "start": 56.514,
+    "end": 58.85,
+    "text": "So I agreed to help investigate."
+   },
+   {
+    "start": 58.85,
+    "end": 59.684,
+    "text": "The problem?"
+   },
+   {
+    "start": 59.684,
+    "end": 61.144,
+    "text": "It wasn't easy to test."
+   },
+   {
+    "start": 61.144,
+    "end": 64.731,
+    "text": "Grocery prices change all the time for legitimate reasons."
+   },
+   {
+    "start": 64.731,
+    "end": 67.108,
+    "text": "Receipts you can't compare."
+   },
+   {
+    "start": 67.108,
+    "end": 69.527,
+    "text": "If we wanted to do this, we\u2019d need a team."
+   },
+   {
+    "start": 69.527,
+    "end": 70.653,
+    "text": "A researcher."
+   },
+   {
+    "start": 70.653,
+    "end": 72.447,
+    "text": "Community organizers."
+   },
+   {
+    "start": 72.447,
+    "end": 73.656,
+    "text": "Other journalists."
+   },
+   {
+    "start": 73.656,
+    "end": 77.16,
+    "text": "And most importantly, regular people who care."
+   },
+   {
+    "start": 77.16,
+    "end": 78.453,
+    "text": "Lots of them."
+   },
+   {
+    "start": 78.453,
+    "end": 79.704,
+    "text": "Five months of digging."
+   },
+   {
+    "start": 79.704,
+    "end": 82.29,
+    "text": "What we found is bigger than Instacart."
+   },
+   {
+    "start": 82.29,
+    "end": 83.875,
+    "text": "Yes, inflation is real,"
+   },
+   {
+    "start": 83.875,
+    "end": 86.878,
+    "text": "but something else has been pushing prices higher this whole time."
+   },
+   {
+    "start": 86.878,
+    "end": 90.715,
+    "text": "There's a system, one that grocery stores and tech companies built together."
+   },
+   {
+    "start": 90.715,
+    "end": 93.802,
+    "text": "It learns from every purchase."
+   },
+   {
+    "start": 93.802,
+    "end": 95.303,
+    "text": "It's not just online."
+   },
+   {
+    "start": 95.303,
+    "end": 97.806,
+    "text": "It's in the physical stores you walk into."
+   },
+   {
+    "start": 97.806,
+    "end": 99.349,
+    "text": "With the primary goal:"
+   },
+   {
+    "start": 99.349,
+    "end": 101.518,
+    "text": "maximize profit."
+   },
+   {
+    "start": 101.518,
+    "end": 103.812,
+    "text": "Day by day, it's moving billions of dollars,"
+   },
+   {
+    "start": 103.812,
+    "end": 105.605,
+    "text": "one penny at a time."
+   },
+   {
+    "start": 105.605,
+    "end": 106.773,
+    "text": "Here's how we uncovered it."
+   },
+   {
+    "start": 106.773,
+    "end": 109.526,
+    "text": "How it's turning the grocery business into a gold mine."
+   },
+   {
+    "start": 109.526,
+    "end": 111.236,
+    "text": "And why without regulation,"
+   },
+   {
+    "start": 111.236,
+    "end": 115.615,
+    "text": "your grocery bill may keep climbing no matter what happens with inflation."
+   },
+   {
+    "start": 117.951,
+    "end": 120.995,
+    "text": "[Katie] I'm now going to ask you to take out your phone,"
+   },
+   {
+    "start": 120.995,
+    "end": 125.25,
+    "text": "and we're going to get started with shopping for 20 items at the Safeway."
+   },
+   {
+    "start": 125.25,
+    "end": 126.543,
+    "text": "[Eric] This is Katie Wells."
+   },
+   {
+    "start": 126.543,
+    "end": 129.337,
+    "text": "She's the Director of Research at Groundwork Collaborative."
+   },
+   {
+    "start": 129.337,
+    "end": 130.839,
+    "text": "She's the one who reached out."
+   },
+   {
+    "start": 130.839,
+    "end": 132.59,
+    "text": "The plan was pretty simple."
+   },
+   {
+    "start": 132.59,
+    "end": 134.175,
+    "text": "Get everyone in a room."
+   },
+   {
+    "start": 134.175,
+    "end": 135.426,
+    "text": "Open up Instacart."
+   },
+   {
+    "start": 135.426,
+    "end": 136.636,
+    "text": "Select the same store."
+   },
+   {
+    "start": 136.636,
+    "end": 137.971,
+    "text": "Same items."
+   },
+   {
+    "start": 137.971,
+    "end": 139.597,
+    "text": "On phones and computers."
+   },
+   {
+    "start": 139.597,
+    "end": 142.642,
+    "text": "Select pickup to remove any delivery calculations."
+   },
+   {
+    "start": 142.642,
+    "end": 145.478,
+    "text": "And write our basket totals down on a note card."
+   },
+   {
+    "start": 145.478,
+    "end": 147.522,
+    "text": "All to test a simple question:"
+   },
+   {
+    "start": 147.522,
+    "end": 148.731,
+    "text": "were shoppers being charged"
+   },
+   {
+    "start": 148.731,
+    "end": 152.694,
+    "text": "different amounts for the same exact item at the same exact store and time?"
+   },
+   {
+    "start": 152.694,
+    "end": 154.362,
+    "text": "Congratulations, guys."
+   },
+   {
+    "start": 154.362,
+    "end": 155.822,
+    "text": "You have finished the test."
+   },
+   {
+    "start": 155.822,
+    "end": 157.866,
+    "text": "[Eric] First, we all shared our cart totals."
+   },
+   {
+    "start": 164.581,
+    "end": 168.126,
+    "text": "[Participant] We\u2019re in the same room, the same address ordering,"
+   },
+   {
+    "start": 168.126,
+    "end": 170.378,
+    "text": "and we still had different prices."
+   },
+   {
+    "start": 170.378,
+    "end": 171.379,
+    "text": "[Eric] You're the highest."
+   },
+   {
+    "start": 171.379,
+    "end": 173.464,
+    "text": "I'm not surprised."
+   },
+   {
+    "start": 173.464,
+    "end": 176.05,
+    "text": "What I've come to understand is that a lot of things"
+   },
+   {
+    "start": 176.05,
+    "end": 179.929,
+    "text": "that we do online is predicated on algorithms."
+   },
+   {
+    "start": 179.929,
+    "end": 180.722,
+    "text": "Different totals."
+   },
+   {
+    "start": 180.722,
+    "end": 182.557,
+    "text": "There's plausible explanations."
+   },
+   {
+    "start": 182.557,
+    "end": 184.976,
+    "text": "Promotions, user error, app issues."
+   },
+   {
+    "start": 184.976,
+    "end": 188.813,
+    "text": "But if the items themselves had different prices, that's something else."
+   },
+   {
+    "start": 190.064,
+    "end": 193.651,
+    "text": "[Katie] The items had upwards of three different prices offered."
+   },
+   {
+    "start": 194.235,
+    "end": 196.237,
+    "text": "[Eric] Katie analyzed the data."
+   },
+   {
+    "start": 196.237,
+    "end": 199.782,
+    "text": "The greatest difference was about a 70 cent spread."
+   },
+   {
+    "start": 199.782,
+    "end": 204.329,
+    "text": "For eggs, the prices varied from $4.59 to $4.69,"
+   },
+   {
+    "start": 204.329,
+    "end": 206.497,
+    "text": "down to $4.28."
+   },
+   {
+    "start": 206.497,
+    "end": 208.625,
+    "text": "It was a 41 cent span."
+   },
+   {
+    "start": 208.625,
+    "end": 210.668,
+    "text": "One store, one moment in time."
+   },
+   {
+    "start": 210.668,
+    "end": 212.212,
+    "text": "It's a small sample size."
+   },
+   {
+    "start": 212.212,
+    "end": 213.88,
+    "text": "This could be a fluke."
+   },
+   {
+    "start": 213.88,
+    "end": 215.006,
+    "text": "Welcome, welcome, welcome."
+   },
+   {
+    "start": 215.006,
+    "end": 220.136,
+    "text": "You have found your way to the Consumer Reports grocery pricing webinar."
+   },
+   {
+    "start": 220.136,
+    "end": 224.098,
+    "text": "The problem with testing any of this is that these systems are so massive"
+   },
+   {
+    "start": 224.098,
+    "end": 226.184,
+    "text": "that you need scale to even try."
+   },
+   {
+    "start": 226.184,
+    "end": 228.853,
+    "text": "Consumer Reports joined the collaboration."
+   },
+   {
+    "start": 228.853,
+    "end": 230.355,
+    "text": "They brought a volunteer network."
+   },
+   {
+    "start": 230.355,
+    "end": 231.606,
+    "text": "Community organizers."
+   },
+   {
+    "start": 231.606,
+    "end": 232.857,
+    "text": "A reporter."
+   },
+   {
+    "start": 232.857,
+    "end": 235.568,
+    "text": "Alongside them, we recruited volunteers."
+   },
+   {
+    "start": 235.568,
+    "end": 237.445,
+    "text": "Over 400 people."
+   },
+   {
+    "start": 237.445,
+    "end": 238.613,
+    "text": "Same process."
+   },
+   {
+    "start": 238.613,
+    "end": 240.156,
+    "text": "Everyone opens Instacart."
+   },
+   {
+    "start": 240.156,
+    "end": 242.075,
+    "text": "Same store, same items."
+   },
+   {
+    "start": 242.075,
+    "end": 243.451,
+    "text": "When pickup wasn't available,"
+   },
+   {
+    "start": 243.451,
+    "end": 245.203,
+    "text": "same delivery address."
+   },
+   {
+    "start": 245.203,
+    "end": 246.204,
+    "text": "Same moment."
+   },
+   {
+    "start": 246.204,
+    "end": 248.331,
+    "text": "Screenshot everything."
+   },
+   {
+    "start": 248.331,
+    "end": 249.666,
+    "text": "Submit."
+   },
+   {
+    "start": 249.666,
+    "end": 251.084,
+    "text": "The team verified every entry."
+   },
+   {
+    "start": 251.084,
+    "end": 252.585,
+    "text": "Cross-checked every screenshot."
+   },
+   {
+    "start": 252.585,
+    "end": 253.92,
+    "text": "Built the database."
+   },
+   {
+    "start": 253.92,
+    "end": 255.213,
+    "text": "Katie crunched the data."
+   },
+   {
+    "start": 255.213,
+    "end": 257.84,
+    "text": "And when the data came back, I gotta be honest,"
+   },
+   {
+    "start": 257.84,
+    "end": 261.803,
+    "text": "I stared at it for a while, because what we found was weird."
+   },
+   {
+    "start": 261.803,
+    "end": 263.846,
+    "text": "I'm going to show you some basket totals."
+   },
+   {
+    "start": 263.846,
+    "end": 268.142,
+    "text": "Some people were charged about $114 for the 20 items."
+   },
+   {
+    "start": 268.142,
+    "end": 270.853,
+    "text": "Others nearly $124."
+   },
+   {
+    "start": 270.853,
+    "end": 272.939,
+    "text": "This wasn\u2019t in one or two cases."
+   },
+   {
+    "start": 272.939,
+    "end": 275.525,
+    "text": "This was the lion's share of shoppers"
+   },
+   {
+    "start": 275.525,
+    "end": 277.068,
+    "text": "for the lion's share of items."
+   },
+   {
+    "start": 277.652,
+    "end": 279.946,
+    "text": "[Eric] If you zoom in, nearly three out of four products had"
+   },
+   {
+    "start": 279.946,
+    "end": 282.323,
+    "text": "different prices during the experiments."
+   },
+   {
+    "start": 283.324,
+    "end": 286.035,
+    "text": "Four different prices for Wheat Thins."
+   },
+   {
+    "start": 286.035,
+    "end": 288.204,
+    "text": "Five different prices for eggs."
+   },
+   {
+    "start": 288.204,
+    "end": 290.957,
+    "text": "Three prices for peanut butter."
+   },
+   {
+    "start": 290.957,
+    "end": 292.125,
+    "text": "Wait, what?"
+   },
+   {
+    "start": 292.125,
+    "end": 294.46,
+    "text": "The system sorted people ino price groups,"
+   },
+   {
+    "start": 294.46,
+    "end": 297.463,
+    "text": "where each person was charged the same for every item."
+   },
+   {
+    "start": 297.463,
+    "end": 299.34,
+    "text": "For this test, there were four price groups."
+   },
+   {
+    "start": 299.34,
+    "end": 302.26,
+    "text": "Same cart, same store, same moment."
+   },
+   {
+    "start": 302.26,
+    "end": 304.554,
+    "text": "Same with this test."
+   },
+   {
+    "start": 304.554,
+    "end": 309.1,
+    "text": "For this store, seven different price groups."
+   },
+   {
+    "start": 309.1,
+    "end": 312.687,
+    "text": "This didn't seem random, but who or what was doing the sorting?"
+   },
+   {
+    "start": 312.687,
+    "end": 315.106,
+    "text": "Back in August, before we even ran the test,"
+   },
+   {
+    "start": 315.106,
+    "end": 316.441,
+    "text": "I called Instacart."
+   },
+   {
+    "start": 316.441,
+    "end": 319.11,
+    "text": "We don't set prices, retailers do."
+   },
+   {
+    "start": 319.11,
+    "end": 320.236,
+    "text": "And we believed them."
+   },
+   {
+    "start": 320.236,
+    "end": 322.905,
+    "text": "But the groups suggested something deeper was going on."
+   },
+   {
+    "start": 322.905,
+    "end": 324.907,
+    "text": "Why would an algorithm sort people into buckets"
+   },
+   {
+    "start": 324.907,
+    "end": 327.41,
+    "text": "where everyone pays the exact same prices?"
+   },
+   {
+    "start": 327.41,
+    "end": 330.413,
+    "text": "Not just on one item, but across multiple products."
+   },
+   {
+    "start": 330.413,
+    "end": 332.749,
+    "text": "All higher together, all lower together."
+   },
+   {
+    "start": 333.708,
+    "end": 335.335,
+    "text": "I started researching and that's when"
+   },
+   {
+    "start": 335.335,
+    "end": 337.712,
+    "text": "I stumbled on surveillance pricing."
+   },
+   {
+    "start": 337.712,
+    "end": 340.256,
+    "text": "Companies tracking your behavior, your purchase history,"
+   },
+   {
+    "start": 340.256,
+    "end": 341.966,
+    "text": "and charging you based on that."
+   },
+   {
+    "start": 341.966,
+    "end": 343.801,
+    "text": "It's a type of algorithmic pricing"
+   },
+   {
+    "start": 343.801,
+    "end": 346.846,
+    "text": "where companies hand pricing over to an algorithm."
+   },
+   {
+    "start": 346.846,
+    "end": 349.39,
+    "text": "It's almost impossible for people outside the companies"
+   },
+   {
+    "start": 349.39,
+    "end": 353.269,
+    "text": "practicing the art\u2014the dark art of algorithm price discrimination\u2014"
+   },
+   {
+    "start": 353.269,
+    "end": 358.107,
+    "text": "exactly what is driving those algorithms to set the prices that we observe."
+   },
+   {
+    "start": 358.107,
+    "end": 361.444,
+    "text": "[Eric] Len Sherman studies this at Columbia\u2019s Business School."
+   },
+   {
+    "start": 361.444,
+    "end": 363.78,
+    "text": "Was that what was happening here?"
+   },
+   {
+    "start": 363.78,
+    "end": 366.741,
+    "text": "When we showed Instacart the test results, they were clear."
+   },
+   {
+    "start": 366.741,
+    "end": 369.035,
+    "text": "Retailers control all pricing."
+   },
+   {
+    "start": 369.035,
+    "end": 370.578,
+    "text": "The findings were just stores putting out"
+   },
+   {
+    "start": 370.578,
+    "end": 373.623,
+    "text": "random feelers to see where the pricing sweet spot is."
+   },
+   {
+    "start": 373.623,
+    "end": 375.792,
+    "text": "They aren't targeting you specifically."
+   },
+   {
+    "start": 375.792,
+    "end": 378.002,
+    "text": "So we verified with the stores we tested."
+   },
+   {
+    "start": 378.002,
+    "end": 380.296,
+    "text": "First, Albertsons-Safeway."
+   },
+   {
+    "start": 380.296,
+    "end": 381.964,
+    "text": "They\u2019re an Instacart partner."
+   },
+   {
+    "start": 381.964,
+    "end": 383.216,
+    "text": "Silence."
+   },
+   {
+    "start": 383.216,
+    "end": 384.926,
+    "text": "Then we contacted Target."
+   },
+   {
+    "start": 384.926,
+    "end": 386.177,
+    "text": "They responded."
+   },
+   {
+    "start": 386.177,
+    "end": 388.471,
+    "text": "And honestly, my jaw dropped."
+   },
+   {
+    "start": 388.471,
+    "end": 390.973,
+    "text": "They told us, \u2018we don't work with Instacart."
+   },
+   {
+    "start": 390.973,
+    "end": 392.266,
+    "text": "We don't set prices."
+   },
+   {
+    "start": 392.266,
+    "end": 394.644,
+    "text": "We have nothing to do with any of this.\u2019"
+   },
+   {
+    "start": 394.644,
+    "end": 397.605,
+    "text": "Wait, Instacart says retailers control the prices"
+   },
+   {
+    "start": 397.605,
+    "end": 400.4,
+    "text": "and Target says they don't even work with Instacart?"
+   },
+   {
+    "start": 400.4,
+    "end": 401.692,
+    "text": "I started digging."
+   },
+   {
+    "start": 401.692,
+    "end": 405.905,
+    "text": "It turns out, in 2017, Target spent over half $1 billion to buy Shipt,"
+   },
+   {
+    "start": 405.905,
+    "end": 407.448,
+    "text": "Instacart\u2019s competitor."
+   },
+   {
+    "start": 407.448,
+    "end": 409.367,
+    "text": "Why would they help Instacart?"
+   },
+   {
+    "start": 409.367,
+    "end": 411.577,
+    "text": "We asked Instacart about Target's response."
+   },
+   {
+    "start": 411.577,
+    "end": 415.456,
+    "text": "Instacart admitted they actually do manage Target's prices on the marketplace."
+   },
+   {
+    "start": 415.456,
+    "end": 417.792,
+    "text": "And that they were running tests to figure out how much they can charge"
+   },
+   {
+    "start": 417.792,
+    "end": 419.961,
+    "text": "on top of Target's normal prices."
+   },
+   {
+    "start": 419.961,
+    "end": 424.465,
+    "text": "Their explanation shifted, but the question we started with was still the same."
+   },
+   {
+    "start": 424.465,
+    "end": 427.343,
+    "text": "How does the system sort people into different price groups?"
+   },
+   {
+    "start": 427.343,
+    "end": 431.848,
+    "text": "To figure that out, we needed to understand what Instacart actually does."
+   },
+   {
+    "start": 431.848,
+    "end": 435.977,
+    "text": "You may think of Instacart as a delivery app, but it's much bigger than that."
+   },
+   {
+    "start": 435.977,
+    "end": 438.771,
+    "text": "Instacart is more the technology."
+   },
+   {
+    "start": 438.771,
+    "end": 440.94,
+    "text": "I don't think of it as a grocery delivery company."
+   },
+   {
+    "start": 440.94,
+    "end": 442.984,
+    "text": "I think of it more of a technology company."
+   },
+   {
+    "start": 442.984,
+    "end": 445.403,
+    "text": "[Eric] Selling technology that powers grocery websites,"
+   },
+   {
+    "start": 445.403,
+    "end": 447.238,
+    "text": "advertising campaigns, promotions."
+   },
+   {
+    "start": 447.238,
+    "end": 450.158,
+    "text": "In 2022, Instacart bought Eversight,"
+   },
+   {
+    "start": 450.158,
+    "end": 453.453,
+    "text": "a company that optimizes grocery prices."
+   },
+   {
+    "start": 453.453,
+    "end": 455.705,
+    "text": "Eversight says it runs constant experiments"
+   },
+   {
+    "start": 455.705,
+    "end": 458.583,
+    "text": "that are not made visible to consumers"
+   },
+   {
+    "start": 458.583,
+    "end": 462.795,
+    "text": "and it is running tests, in part, to collect data"
+   },
+   {
+    "start": 462.795,
+    "end": 466.007,
+    "text": "about how much I'm willing to pay for canola oil."
+   },
+   {
+    "start": 466.007,
+    "end": 468.885,
+    "text": "And it's using that information to likely"
+   },
+   {
+    "start": 468.885,
+    "end": 472.722,
+    "text": "create more profits for these companies."
+   },
+   {
+    "start": 472.722,
+    "end": 475.308,
+    "text": "[Eric] The company calls it \u201cAI for everyday price performance.\u201d"
+   },
+   {
+    "start": 475.308,
+    "end": 479.103,
+    "text": "The website promises 2% to 5% profit increases."
+   },
+   {
+    "start": 479.103,
+    "end": 482.899,
+    "text": "In early November, Consumer Reports ran follow-up experiments at Costco."
+   },
+   {
+    "start": 482.899,
+    "end": 484.192,
+    "text": "They found price gaps."
+   },
+   {
+    "start": 484.192,
+    "end": 486.569,
+    "text": "15% on a bag of chips."
+   },
+   {
+    "start": 486.569,
+    "end": 489.405,
+    "text": "Derek asked Costco to explain."
+   },
+   {
+    "start": 489.405,
+    "end": 492.7,
+    "text": "We got an email a few hours later from"
+   },
+   {
+    "start": 492.7,
+    "end": 495.536,
+    "text": "a Costco Vice President of grocery."
+   },
+   {
+    "start": 495.536,
+    "end": 498.372,
+    "text": "The message described a program called \u201cSmart Rounding.\u201d"
+   },
+   {
+    "start": 498.372,
+    "end": 502.585,
+    "text": "You know, took us a little bit of time to realize what we were seeing,"
+   },
+   {
+    "start": 502.585,
+    "end": 504.962,
+    "text": "which was an internal communication"
+   },
+   {
+    "start": 504.962,
+    "end": 507.757,
+    "text": "between Instacart and Costco."
+   },
+   {
+    "start": 507.757,
+    "end": 510.176,
+    "text": "Inadvertently, this Costco executive"
+   },
+   {
+    "start": 510.176,
+    "end": 513.513,
+    "text": "forwarded us this internal email."
+   },
+   {
+    "start": 513.513,
+    "end": 517.225,
+    "text": "As far as we can tell, Instacart has only talked about Smart Rounding once,"
+   },
+   {
+    "start": 517.225,
+    "end": 519.644,
+    "text": "in a 2023 letter to shareholders."
+   },
+   {
+    "start": 519.644,
+    "end": 521.062,
+    "text": "The company defined it:"
+   },
+   {
+    "start": 521.062,
+    "end": 523.731,
+    "text": "\u201cmachine learning-driven tool that helps retailers"
+   },
+   {
+    "start": 523.731,
+    "end": 526.901,
+    "text": "improve price perception and drive incremental sales.\u201d"
+   },
+   {
+    "start": 526.901,
+    "end": 532.198,
+    "text": "Translation: flex prices up or down based on what the algorithm says will maximize profit."
+   },
+   {
+    "start": 532.198,
+    "end": 535.117,
+    "text": "[Derek] \u201cFor some of our major grocery partners,"
+   },
+   {
+    "start": 535.117,
+    "end": 537.203,
+    "text": "this has led to millions of dollars"
+   },
+   {
+    "start": 537.203,
+    "end": 539.872,
+    "text": "in annual incremental sales.\u201d"
+   },
+   {
+    "start": 539.872,
+    "end": 541.749,
+    "text": "Millions of dollars."
+   },
+   {
+    "start": 541.749,
+    "end": 545.545,
+    "text": "This is a very sophisticated,"
+   },
+   {
+    "start": 545.545,
+    "end": 550.091,
+    "text": "very, deliberate, explicit attempt to maximize profits,"
+   },
+   {
+    "start": 550.091,
+    "end": 552.718,
+    "text": "and do so somewhat surreptitiously."
+   },
+   {
+    "start": 552.718,
+    "end": 554.428,
+    "text": "We'd answered some questions."
+   },
+   {
+    "start": 554.428,
+    "end": 556.305,
+    "text": "Different prices for different people?"
+   },
+   {
+    "start": 556.305,
+    "end": 557.306,
+    "text": "Yes."
+   },
+   {
+    "start": 557.306,
+    "end": 557.974,
+    "text": "Random testing?"
+   },
+   {
+    "start": 557.974,
+    "end": 559.308,
+    "text": "Maybe not."
+   },
+   {
+    "start": 559.308,
+    "end": 561.435,
+    "text": "Smart Rounding showed its designed for profit."
+   },
+   {
+    "start": 561.435,
+    "end": 562.77,
+    "text": "Retailers in control?"
+   },
+   {
+    "start": 562.77,
+    "end": 563.563,
+    "text": "Debatable."
+   },
+   {
+    "start": 563.563,
+    "end": 565.773,
+    "text": "Instacart sets at least one grocer\u2019s prices."
+   },
+   {
+    "start": 565.773,
+    "end": 567.191,
+    "text": "But we still couldn't answer:"
+   },
+   {
+    "start": 567.191,
+    "end": 570.194,
+    "text": "how does the system sort people into price groups?"
+   },
+   {
+    "start": 570.194,
+    "end": 572.905,
+    "text": "Then one store showed us the bigger picture."
+   },
+   {
+    "start": 572.905,
+    "end": 574.74,
+    "text": "Schnucks. Regional Grocer."
+   },
+   {
+    "start": 574.74,
+    "end": 577.201,
+    "text": "They're on every Instacart press release."
+   },
+   {
+    "start": 577.201,
+    "end": 579.245,
+    "text": "No price variation at all."
+   },
+   {
+    "start": 579.245,
+    "end": 580.454,
+    "text": "One night, it hit me."
+   },
+   {
+    "start": 580.454,
+    "end": 583.165,
+    "text": "What if they already moved past online testing?"
+   },
+   {
+    "start": 583.165,
+    "end": 586.127,
+    "text": "You've probably heard stories about electronic shelf labels."
+   },
+   {
+    "start": 586.127,
+    "end": 588.879,
+    "text": "Digital price tags that can change prices instantly."
+   },
+   {
+    "start": 588.879,
+    "end": 592.008,
+    "text": "If they're testing prices in store with those labels,"
+   },
+   {
+    "start": 592.008,
+    "end": 593.968,
+    "text": "and the app just mirrors what's on the shelf,"
+   },
+   {
+    "start": 593.968,
+    "end": 596.22,
+    "text": "you'd never catch it with our test."
+   },
+   {
+    "start": 596.22,
+    "end": 597.805,
+    "text": "Which might explain Schnucks."
+   },
+   {
+    "start": 597.805,
+    "end": 600.474,
+    "text": "The typical fear with these labels is surge pricing."
+   },
+   {
+    "start": 600.474,
+    "end": 603.06,
+    "text": "Raising lemonade prices when it's hot out."
+   },
+   {
+    "start": 603.06,
+    "end": 605.479,
+    "text": "What if the goal isn't surge pricing at all?"
+   },
+   {
+    "start": 605.479,
+    "end": 607.607,
+    "text": "What if it's more subtle? More permanent?"
+   },
+   {
+    "start": 607.607,
+    "end": 610.151,
+    "text": "Would you rather charge $10 for a bottle of water"
+   },
+   {
+    "start": 610.151,
+    "end": 612.028,
+    "text": "during a single hurricane?"
+   },
+   {
+    "start": 612.028,
+    "end": 614.655,
+    "text": "Or 20 cents more every single day?"
+   },
+   {
+    "start": 614.655,
+    "end": 617.116,
+    "text": "Derek had a genius idea."
+   },
+   {
+    "start": 617.116,
+    "end": 619.577,
+    "text": "Patents. He found one."
+   },
+   {
+    "start": 619.577,
+    "end": 622.663,
+    "text": "It described an infrastructure for constant in-store price testing."
+   },
+   {
+    "start": 622.663,
+    "end": 625.416,
+    "text": "Take dozens of stores, cluster them together,"
+   },
+   {
+    "start": 625.416,
+    "end": 627.668,
+    "text": "test different prices in different clusters."
+   },
+   {
+    "start": 627.668,
+    "end": 628.753,
+    "text": "The purpose?"
+   },
+   {
+    "start": 628.753,
+    "end": 631.047,
+    "text": "Find out the most profitable price point."
+   },
+   {
+    "start": 631.047,
+    "end": 633.049,
+    "text": "Once you do, adopt it."
+   },
+   {
+    "start": 633.049,
+    "end": 635.426,
+    "text": "We asked Schnucks and Instacart."
+   },
+   {
+    "start": 635.426,
+    "end": 636.927,
+    "text": "Both denied it."
+   },
+   {
+    "start": 636.927,
+    "end": 640.014,
+    "text": "But for Instacart, their website told a different story."
+   },
+   {
+    "start": 640.014,
+    "end": 642.058,
+    "text": "If you go there right now, you'd see this:"
+   },
+   {
+    "start": 642.058,
+    "end": 643.267,
+    "text": "three features."
+   },
+   {
+    "start": 643.267,
+    "end": 644.31,
+    "text": "Before we asked?"
+   },
+   {
+    "start": 644.31,
+    "end": 645.77,
+    "text": "Four features."
+   },
+   {
+    "start": 645.77,
+    "end": 647.063,
+    "text": "And the one removed?"
+   },
+   {
+    "start": 647.063,
+    "end": 650.9,
+    "text": "Price optimization with Eversight via electronic shelf labels."
+   },
+   {
+    "start": 650.9,
+    "end": 652.526,
+    "text": "Gone."
+   },
+   {
+    "start": 652.526,
+    "end": 655.78,
+    "text": "So, Instacart denied doing it, then changed their website."
+   },
+   {
+    "start": 655.78,
+    "end": 657.99,
+    "text": "Later they told us it was never a feature"
+   },
+   {
+    "start": 657.99,
+    "end": 660.117,
+    "text": "and the update was made for accuracy."
+   },
+   {
+    "start": 660.117,
+    "end": 662.161,
+    "text": "But that didn't track."
+   },
+   {
+    "start": 662.161,
+    "end": 666.415,
+    "text": "The feature seems to show up in past marketing materials and press releases."
+   },
+   {
+    "start": 666.415,
+    "end": 667.583,
+    "text": "If it's operational,"
+   },
+   {
+    "start": 667.583,
+    "end": 670.586,
+    "text": "the system would be a truly impressive feat of engineering."
+   },
+   {
+    "start": 670.586,
+    "end": 673.547,
+    "text": "In-store? Testing across locations."
+   },
+   {
+    "start": 673.547,
+    "end": 676.509,
+    "text": "Online? Testing across individuals."
+   },
+   {
+    "start": 676.509,
+    "end": 679.47,
+    "text": "But we still couldn't answer how the online system decided"
+   },
+   {
+    "start": 679.47,
+    "end": 680.888,
+    "text": "who gets charged more."
+   },
+   {
+    "start": 680.888,
+    "end": 682.765,
+    "text": "So we started building a theory."
+   },
+   {
+    "start": 682.765,
+    "end": 687.52,
+    "text": "Not based on what Instacart told us, but on what Instacart told the government."
+   },
+   {
+    "start": 687.52,
+    "end": 688.604,
+    "text": "Patents."
+   },
+   {
+    "start": 688.604,
+    "end": 690.564,
+    "text": "The word that appears over and over in them?"
+   },
+   {
+    "start": 691.315,
+    "end": 692.858,
+    "text": "It's not random."
+   },
+   {
+    "start": 692.858,
+    "end": 696.028,
+    "text": "It's segmentation."
+   },
+   {
+    "start": 696.028,
+    "end": 699.156,
+    "text": "Derek started reading through the criteria they could use to sort people."
+   },
+   {
+    "start": 699.156,
+    "end": 700.825,
+    "text": "Some things raised red flags."
+   },
+   {
+    "start": 700.825,
+    "end": 701.909,
+    "text": "Demographics."
+   },
+   {
+    "start": 701.909,
+    "end": 704.745,
+    "text": "It's illegal to charge someone more based on those."
+   },
+   {
+    "start": 704.745,
+    "end": 706.038,
+    "text": "Katie controlled for that."
+   },
+   {
+    "start": 706.038,
+    "end": 707.998,
+    "text": "No correlation in the sample."
+   },
+   {
+    "start": 707.998,
+    "end": 710.876,
+    "text": "I don't believe they would try to vary prices"
+   },
+   {
+    "start": 710.876,
+    "end": 713.379,
+    "text": "based on those kinds of characteristics."
+   },
+   {
+    "start": 713.379,
+    "end": 715.631,
+    "text": "Nor would it be very effective if they did."
+   },
+   {
+    "start": 715.631,
+    "end": 718.384,
+    "text": "What would be way more effective"
+   },
+   {
+    "start": 718.384,
+    "end": 721.22,
+    "text": "and perfectly legal, as far as I know,"
+   },
+   {
+    "start": 721.22,
+    "end": 726.517,
+    "text": "is to vary prices based on behavioral characteristics."
+   },
+   {
+    "start": 726.517,
+    "end": 727.81,
+    "text": "Behavioral characteristics."
+   },
+   {
+    "start": 727.81,
+    "end": 729.895,
+    "text": "That's exactly what the patents show."
+   },
+   {
+    "start": 729.895,
+    "end": 732.022,
+    "text": "Buying behavior."
+   },
+   {
+    "start": 732.022,
+    "end": 732.982,
+    "text": "Purchase history."
+   },
+   {
+    "start": 732.982,
+    "end": 734.567,
+    "text": "How frequently you shop."
+   },
+   {
+    "start": 734.567,
+    "end": 736.026,
+    "text": "Whether you're shopping around."
+   },
+   {
+    "start": 736.026,
+    "end": 737.069,
+    "text": "Coupon usage."
+   },
+   {
+    "start": 737.069,
+    "end": 739.071,
+    "text": "Loyalty program participation."
+   },
+   {
+    "start": 739.071,
+    "end": 741.949,
+    "text": "An infrastructure that tracks everything you do."
+   },
+   {
+    "start": 741.949,
+    "end": 744.702,
+    "text": "Uses it to decide what to charge you."
+   },
+   {
+    "start": 744.702,
+    "end": 745.786,
+    "text": "We asked Instacart:"
+   },
+   {
+    "start": 745.786,
+    "end": 748.748,
+    "text": "does this explain who gets sorted into different price groups?"
+   },
+   {
+    "start": 748.748,
+    "end": 749.874,
+    "text": "Their response?"
+   },
+   {
+    "start": 749.874,
+    "end": 751.917,
+    "text": "One old patent from 2015,"
+   },
+   {
+    "start": 751.917,
+    "end": 753.669,
+    "text": "before we purchased Eversight."
+   },
+   {
+    "start": 753.669,
+    "end": 754.92,
+    "text": "Patents are always broad."
+   },
+   {
+    "start": 754.92,
+    "end": 757.923,
+    "text": "This doesn't prove we're actually using this technology."
+   },
+   {
+    "start": 757.923,
+    "end": 759.008,
+    "text": "Fair point."
+   },
+   {
+    "start": 759.008,
+    "end": 760.05,
+    "text": "Here's the same chart"
+   },
+   {
+    "start": 760.05,
+    "end": 763.012,
+    "text": "and a host of other patents, mostly about promotions,"
+   },
+   {
+    "start": 763.012,
+    "end": 765.431,
+    "text": "marketing material that touts the patents,"
+   },
+   {
+    "start": 765.431,
+    "end": 766.348,
+    "text": "and then this one."
+   },
+   {
+    "start": 766.348,
+    "end": 769.769,
+    "text": "A promotional patent that describes shopper and product headroom."
+   },
+   {
+    "start": 769.769,
+    "end": 773.022,
+    "text": "Meaning: how much more money could this person spend overall?"
+   },
+   {
+    "start": 773.022,
+    "end": 775.816,
+    "text": "And how much more could they spend on this product?"
+   },
+   {
+    "start": 775.816,
+    "end": 779.361,
+    "text": "The patent says they can calculate this for every individual consumer."
+   },
+   {
+    "start": 779.361,
+    "end": 783.407,
+    "text": "But for efficiency, typically people are \u201cgrouped with similar consumers.\u201d"
+   },
+   {
+    "start": 783.407,
+    "end": 784.617,
+    "text": "Groups."
+   },
+   {
+    "start": 784.617,
+    "end": 786.911,
+    "text": "Just like our tests showed."
+   },
+   {
+    "start": 786.911,
+    "end": 789.663,
+    "text": "Every company that I know is practicing"
+   },
+   {
+    "start": 789.663,
+    "end": 791.373,
+    "text": "first degree price discrimination,"
+   },
+   {
+    "start": 791.373,
+    "end": 793.918,
+    "text": "strenuously denies that they're doing so."
+   },
+   {
+    "start": 793.918,
+    "end": 798.881,
+    "text": "[Eric] And again, Instacart denies segmenting people by personal or behavioral data."
+   },
+   {
+    "start": 798.881,
+    "end": 802.176,
+    "text": "What happens when companies actually do this at scale?"
+   },
+   {
+    "start": 802.176,
+    "end": 806.096,
+    "text": "In 2022, Uber rolled out algorithmic pricing for riders and drivers."
+   },
+   {
+    "start": 806.096,
+    "end": 808.516,
+    "text": "Len studied what happened next."
+   },
+   {
+    "start": 808.516,
+    "end": 809.809,
+    "text": "For the next three years,"
+   },
+   {
+    "start": 809.809,
+    "end": 814.063,
+    "text": "average rider price per mile went up, up, up, up, up, up, up."
+   },
+   {
+    "start": 814.063,
+    "end": 815.815,
+    "text": "[Eric] Uber denies all of this."
+   },
+   {
+    "start": 815.815,
+    "end": 817.441,
+    "text": "But at about this time, they went from"
+   },
+   {
+    "start": 817.441,
+    "end": 820.152,
+    "text": "burning money to a cash machine."
+   },
+   {
+    "start": 820.152,
+    "end": 821.946,
+    "text": "[Len] That's why more and more companies are"
+   },
+   {
+    "start": 821.946,
+    "end": 824.281,
+    "text": "trying as hard as they can to perfect"
+   },
+   {
+    "start": 824.281,
+    "end": 828.369,
+    "text": "this dark art\u2014devilishly effective dark art, as I've called it."
+   },
+   {
+    "start": 828.369,
+    "end": 833.582,
+    "text": "That's how you turn grocery sales into a goldmine."
+   },
+   {
+    "start": 833.582,
+    "end": 836.377,
+    "text": "Now, algorithmic pricing sometimes offers lower prices."
+   },
+   {
+    "start": 836.377,
+    "end": 838.295,
+    "text": "And the total impact on grocery prices?"
+   },
+   {
+    "start": 838.295,
+    "end": 839.839,
+    "text": "Impossible to measure."
+   },
+   {
+    "start": 839.839,
+    "end": 841.799,
+    "text": "Instacart is just one company,"
+   },
+   {
+    "start": 841.799,
+    "end": 843.717,
+    "text": "a sliver of the grocery market."
+   },
+   {
+    "start": 843.717,
+    "end": 846.428,
+    "text": "They claim ten clients with Eversight."
+   },
+   {
+    "start": 846.428,
+    "end": 848.222,
+    "text": "What are other companies doing?"
+   },
+   {
+    "start": 848.222,
+    "end": 849.723,
+    "text": "I started looking."
+   },
+   {
+    "start": 849.723,
+    "end": 852.601,
+    "text": "[Stephen Mewborn] Pricing is the single most powerful lever to raise profits."
+   },
+   {
+    "start": 852.601,
+    "end": 853.769,
+    "text": "Far more effective than either"
+   },
+   {
+    "start": 853.769,
+    "end": 856.105,
+    "text": "boosting sales or cutting costs."
+   },
+   {
+    "start": 856.105,
+    "end": 859.108,
+    "text": "[Narrator] Prices optimized."
+   },
+   {
+    "start": 859.108,
+    "end": 860.693,
+    "text": "Profit increases."
+   },
+   {
+    "start": 860.693,
+    "end": 865.114,
+    "text": "[Eric] There\u2019s an entire industry built around optimizing grocery prices."
+   },
+   {
+    "start": 865.114,
+    "end": 866.407,
+    "text": "I called Errol Schweizer."
+   },
+   {
+    "start": 866.407,
+    "end": 867.867,
+    "text": "25 years in grocery."
+   },
+   {
+    "start": 867.867,
+    "end": 869.91,
+    "text": "Former VP of grocery at Whole Foods."
+   },
+   {
+    "start": 869.91,
+    "end": 872.58,
+    "text": "Why is everyone racing to adopt this?"
+   },
+   {
+    "start": 872.58,
+    "end": 873.998,
+    "text": "It's very much defensive."
+   },
+   {
+    "start": 873.998,
+    "end": 875.916,
+    "text": "Amazon's already doing it."
+   },
+   {
+    "start": 875.916,
+    "end": 877.334,
+    "text": "Walmart is doing it."
+   },
+   {
+    "start": 877.334,
+    "end": 879.795,
+    "text": "So everybody's got to keep up."
+   },
+   {
+    "start": 879.795,
+    "end": 883.465,
+    "text": "Merchants pricing teams, they all rely on technology and"
+   },
+   {
+    "start": 883.465,
+    "end": 886.635,
+    "text": "algorithms to safeguard their profits."
+   },
+   {
+    "start": 886.635,
+    "end": 888.762,
+    "text": "That's Walmart's former VP of pricing."
+   },
+   {
+    "start": 888.762,
+    "end": 891.682,
+    "text": "So, Instacart has played this really vital role"
+   },
+   {
+    "start": 891.682,
+    "end": 896.186,
+    "text": "for the competitors of Amazon and Walmart, which is pretty much"
+   },
+   {
+    "start": 896.186,
+    "end": 900.149,
+    "text": "almost everybody else, to have a lot of the same tools"
+   },
+   {
+    "start": 900.149,
+    "end": 903.611,
+    "text": "and access to consumers as the big guys."
+   },
+   {
+    "start": 903.611,
+    "end": 905.487,
+    "text": "[Eric] The systems are watching you."
+   },
+   {
+    "start": 905.487,
+    "end": 906.739,
+    "text": "Learning your patterns."
+   },
+   {
+    "start": 906.739,
+    "end": 909.074,
+    "text": "Using that to charge everyone accordingly."
+   },
+   {
+    "start": 909.074,
+    "end": 911.577,
+    "text": "[Errol] They know things about us that we don't know."
+   },
+   {
+    "start": 911.577,
+    "end": 912.661,
+    "text": "They're smarter than us"
+   },
+   {
+    "start": 912.661,
+    "end": 916.373,
+    "text": "and we're training them in a way that is incalculable."
+   },
+   {
+    "start": 916.373,
+    "end": 918.334,
+    "text": "This didn't happen overnight."
+   },
+   {
+    "start": 918.334,
+    "end": 920.586,
+    "text": "20 years of building this infrastructure."
+   },
+   {
+    "start": 920.586,
+    "end": 922.546,
+    "text": "It was kept in check by inertia."
+   },
+   {
+    "start": 922.546,
+    "end": 924.757,
+    "text": "Everyone was afraid to raise prices."
+   },
+   {
+    "start": 924.757,
+    "end": 926.258,
+    "text": "Covid changed that."
+   },
+   {
+    "start": 926.258,
+    "end": 927.76,
+    "text": "[Errol] There's no guardrails."
+   },
+   {
+    "start": 927.76,
+    "end": 928.928,
+    "text": "It's a free for all."
+   },
+   {
+    "start": 928.928,
+    "end": 930.679,
+    "text": "It's the wild, wild west."
+   },
+   {
+    "start": 930.679,
+    "end": 934.683,
+    "text": "[Eric] Companies are investing millions into systems designed to outsmart you."
+   },
+   {
+    "start": 934.683,
+    "end": 935.893,
+    "text": "Testing. Learning."
+   },
+   {
+    "start": 935.893,
+    "end": 938.27,
+    "text": "Finding the maximum profit."
+   },
+   {
+    "start": 938.27,
+    "end": 942.733,
+    "text": "The holy grail for a long time has been, what if we could charge"
+   },
+   {
+    "start": 942.733,
+    "end": 946.57,
+    "text": "every single person the maximum amount that we know"
+   },
+   {
+    "start": 946.57,
+    "end": 948.822,
+    "text": "they're able to or willing to pay?"
+   },
+   {
+    "start": 948.822,
+    "end": 951.617,
+    "text": "Studies like this are just validating"
+   },
+   {
+    "start": 951.617,
+    "end": 953.994,
+    "text": "that firms are very much already"
+   },
+   {
+    "start": 953.994,
+    "end": 957.039,
+    "text": "midway through trying this, executing it."
+   },
+   {
+    "start": 957.039,
+    "end": 958.29,
+    "text": "That's Lina Khan,"
+   },
+   {
+    "start": 958.29,
+    "end": 960.751,
+    "text": "former chair of the Federal Trade Commission."
+   },
+   {
+    "start": 960.751,
+    "end": 962.252,
+    "text": "She agreed to review our findings"
+   },
+   {
+    "start": 962.252,
+    "end": 964.964,
+    "text": "with an eye to how we should protect consumers."
+   },
+   {
+    "start": 964.964,
+    "end": 967.132,
+    "text": "[Lina] This could ultimately end up being"
+   },
+   {
+    "start": 967.132,
+    "end": 969.802,
+    "text": "another big form of wealth transfer"
+   },
+   {
+    "start": 969.802,
+    "end": 973.764,
+    "text": "from ordinary Americans to massive corporations."
+   },
+   {
+    "start": 973.764,
+    "end": 977.226,
+    "text": "I asked about the in-store testing apparatus, electronic shelf labels,"
+   },
+   {
+    "start": 977.226,
+    "end": 978.435,
+    "text": "the patents."
+   },
+   {
+    "start": 978.435,
+    "end": 980.854,
+    "text": "[Lina] Firms have been trying to figure that out for many decades."
+   },
+   {
+    "start": 980.854,
+    "end": 982.398,
+    "text": "But I think what's different now is"
+   },
+   {
+    "start": 982.398,
+    "end": 985.15,
+    "text": "both the sophistication of the tools that are available,"
+   },
+   {
+    "start": 985.15,
+    "end": 989.154,
+    "text": "just the deep information asymmetries that exist between consumers"
+   },
+   {
+    "start": 989.154,
+    "end": 992.116,
+    "text": "and these firms that are benefiting."
+   },
+   {
+    "start": 992.116,
+    "end": 994.284,
+    "text": "But there was something else that concerned her."
+   },
+   {
+    "start": 994.284,
+    "end": 996.37,
+    "text": "[Lina] When you have companies like Instacart"
+   },
+   {
+    "start": 996.37,
+    "end": 1001.5,
+    "text": "that could be facilitating, it could also ultimately allow firms"
+   },
+   {
+    "start": 1001.5,
+    "end": 1003.794,
+    "text": "that really should be competing against one another"
+   },
+   {
+    "start": 1003.794,
+    "end": 1005.587,
+    "text": "when setting these prices to actually"
+   },
+   {
+    "start": 1005.587,
+    "end": 1009.216,
+    "text": "engage more in something that looks like price fixing or collusion."
+   },
+   {
+    "start": 1009.216,
+    "end": 1012.219,
+    "text": "[Eric] Because it could mean that one company, Instacart,"
+   },
+   {
+    "start": 1012.219,
+    "end": 1015.931,
+    "text": "is setting prices for retailers who should be competing with each other."
+   },
+   {
+    "start": 1015.931,
+    "end": 1017.891,
+    "text": "Then I asked her about regulation."
+   },
+   {
+    "start": 1017.891,
+    "end": 1019.393,
+    "text": "Her answer surprised me."
+   },
+   {
+    "start": 1019.393,
+    "end": 1022.73,
+    "text": "I think we need to have a much more first order conversation about,"
+   },
+   {
+    "start": 1022.73,
+    "end": 1026.233,
+    "text": "do we even want to permit some of these tactics in the first instance?"
+   },
+   {
+    "start": 1026.233,
+    "end": 1030.863,
+    "text": "[Eric] Under Khan's watch, the FTC started an investigation into surveillance pricing."
+   },
+   {
+    "start": 1030.863,
+    "end": 1032.614,
+    "text": "This week it launched an investigation,"
+   },
+   {
+    "start": 1032.614,
+    "end": 1037.494,
+    "text": "the FTC, into the use of AI to rapidly change pricing."
+   },
+   {
+    "start": 1037.494,
+    "end": 1039.997,
+    "text": "That investigation is now in question."
+   },
+   {
+    "start": 1039.997,
+    "end": 1043.459,
+    "text": "The Trump administration claims it is ongoing, but Khan's replacement"
+   },
+   {
+    "start": 1043.459,
+    "end": 1045.335,
+    "text": "stopped public comments."
+   },
+   {
+    "start": 1045.335,
+    "end": 1046.879,
+    "text": "But Lina pointed out that states don't"
+   },
+   {
+    "start": 1046.879,
+    "end": 1049.173,
+    "text": "need to wait for the Trump administration."
+   },
+   {
+    "start": 1049.173,
+    "end": 1051.467,
+    "text": "[Lina] The steps we've seen, even from states like"
+   },
+   {
+    "start": 1051.467,
+    "end": 1054.553,
+    "text": "California and New York, to ban certain types of"
+   },
+   {
+    "start": 1054.553,
+    "end": 1058.557,
+    "text": "algorithmic price fixing, in areas like housing and rent,"
+   },
+   {
+    "start": 1058.557,
+    "end": 1062.144,
+    "text": "for example, I think are extraordinarily important steps."
+   },
+   {
+    "start": 1062.144,
+    "end": 1063.437,
+    "text": "We need more investigations."
+   },
+   {
+    "start": 1063.437,
+    "end": 1066.607,
+    "text": "So, I think we need a 360 view,"
+   },
+   {
+    "start": 1066.607,
+    "end": 1069.693,
+    "text": "to try to understand what's really happening here."
+   },
+   {
+    "start": 1069.693,
+    "end": 1070.819,
+    "text": "[Eric] Five months."
+   },
+   {
+    "start": 1070.819,
+    "end": 1072.196,
+    "text": "Three organizations."
+   },
+   {
+    "start": 1072.196,
+    "end": 1073.697,
+    "text": "400 volunteers."
+   },
+   {
+    "start": 1073.697,
+    "end": 1077.159,
+    "text": "We know the system exists for surveillance pricing,"
+   },
+   {
+    "start": 1077.159,
+    "end": 1078.702,
+    "text": "but we don't know if it's operational"
+   },
+   {
+    "start": 1078.702,
+    "end": 1080.537,
+    "text": "because we can't see inside."
+   },
+   {
+    "start": 1080.537,
+    "end": 1082.581,
+    "text": "And that's intentional."
+   },
+   {
+    "start": 1082.581,
+    "end": 1085.292,
+    "text": "It's a system that's designed to stay hidden."
+   },
+   {
+    "start": 1085.292,
+    "end": 1088.378,
+    "text": "[Lina] This work that you all have done is fantastic, but"
+   },
+   {
+    "start": 1088.378,
+    "end": 1090.923,
+    "text": "state AGs have subpoena power."
+   },
+   {
+    "start": 1090.923,
+    "end": 1093.967,
+    "text": "They can be requesting and demanding information so they could"
+   },
+   {
+    "start": 1093.967,
+    "end": 1096.011,
+    "text": "look under the hood and be understanding,"
+   },
+   {
+    "start": 1096.011,
+    "end": 1098.764,
+    "text": "how are firms actually using this data?"
+   }
+  ]
  },
  "https://www.youtube.com/watch?v=WpX5kp5Svtk": {
-  "status": "null",
+  "status": "ok",
   "video_id": "WpX5kp5Svtk",
-  "retried": true
+  "source": "auto",
+  "duration": 173.44,
+  "n_cues": 88,
+  "cues": [
+   {
+    "start": 0.0,
+    "end": 3.56,
+    "text": "The first bill to ban surveillance"
+   },
+   {
+    "start": 1.6,
+    "end": 5.36,
+    "text": "pricing was just introduced. It comes"
+   },
+   {
+    "start": 3.56,
+    "end": 6.76,
+    "text": "right after a month-long investigation"
+   },
+   {
+    "start": 5.36,
+    "end": 8.48,
+    "text": "with Consumer Reports, Groundwork"
+   },
+   {
+    "start": 6.76,
+    "end": 10.24,
+    "text": "Collaborative, and NPU that found"
+   },
+   {
+    "start": 8.48,
+    "end": 11.68,
+    "text": "Instacart is charging different people"
+   },
+   {
+    "start": 10.24,
+    "end": 13.32,
+    "text": "different prices for the exact same"
+   },
+   {
+    "start": 11.68,
+    "end": 14.64,
+    "text": "product at the exact same time."
+   },
+   {
+    "start": 13.32,
+    "end": 16.88,
+    "text": "Instacart claims that these price"
+   },
+   {
+    "start": 14.64,
+    "end": 19.08,
+    "text": "differences are random, but we uncovered"
+   },
+   {
+    "start": 16.88,
+    "end": 20.8,
+    "text": "an extensive patent portfolio that"
+   },
+   {
+    "start": 19.08,
+    "end": 22.6,
+    "text": "describes what could be a surveillance"
+   },
+   {
+    "start": 20.8,
+    "end": 25.12,
+    "text": "pricing system. The bill was drafted"
+   },
+   {
+    "start": 22.6,
+    "end": 26.68,
+    "text": "with help from Lee Hepner of AELP. I'm"
+   },
+   {
+    "start": 25.12,
+    "end": 28.32,
+    "text": "going to call Senator Gallego, the"
+   },
+   {
+    "start": 26.68,
+    "end": 30.2,
+    "text": "bill's sponsor, to tell us more about"
+   },
+   {
+    "start": 28.32,
+    "end": 31.84,
+    "text": "this new legislation. Walk me through"
+   },
+   {
+    "start": 30.2,
+    "end": 33.76,
+    "text": "what your bill does. How would it change"
+   },
+   {
+    "start": 31.84,
+    "end": 35.72,
+    "text": "things for companies like Instacart?"
+   },
+   {
+    "start": 33.76,
+    "end": 38.48,
+    "text": "Well, it would be make it illegal if"
+   },
+   {
+    "start": 35.72,
+    "end": 40.92,
+    "text": "they're using uh surveillance technology"
+   },
+   {
+    "start": 38.48,
+    "end": 44.16,
+    "text": "or data uh to [music] give individual"
+   },
+   {
+    "start": 40.92,
+    "end": 45.6,
+    "text": "prices to one consumer versus compared"
+   },
+   {
+    "start": 44.16,
+    "end": 47.16,
+    "text": "to the other consumer. This would give"
+   },
+   {
+    "start": 45.6,
+    "end": 49.4,
+    "text": "the Federal Trade Commission the right"
+   },
+   {
+    "start": 47.16,
+    "end": 51.76,
+    "text": "to shut down practices that are engaging"
+   },
+   {
+    "start": 49.4,
+    "end": 54.08,
+    "text": "in surveillance pricing. And then that"
+   },
+   {
+    "start": 51.76,
+    "end": 56.2,
+    "text": "includes the capability to increase with"
+   },
+   {
+    "start": 54.08,
+    "end": 57.76,
+    "text": "fines in case there's no compliance. You"
+   },
+   {
+    "start": 56.2,
+    "end": 59.28,
+    "text": "included a private right of action,"
+   },
+   {
+    "start": 57.76,
+    "end": 61.12,
+    "text": "which, you know, lets consumers sue"
+   },
+   {
+    "start": 59.28,
+    "end": 62.92,
+    "text": "directly. Why was that important to"
+   },
+   {
+    "start": 61.12,
+    "end": 64.16,
+    "text": "include? Inherently, [music]"
+   },
+   {
+    "start": 62.92,
+    "end": 65.76,
+    "text": "the consumer understands there's"
+   },
+   {
+    "start": 64.16,
+    "end": 68.64,
+    "text": "something something is up. They are"
+   },
+   {
+    "start": 65.76,
+    "end": 70.12,
+    "text": "starting to feel uneasy about [music]"
+   },
+   {
+    "start": 68.64,
+    "end": 72.6,
+    "text": "how easy it is for people to track what"
+   },
+   {
+    "start": 70.12,
+    "end": 74.32,
+    "text": "you're buying and potentially uh what"
+   },
+   {
+    "start": 72.6,
+    "end": 76.08,
+    "text": "information [music] is being held about"
+   },
+   {
+    "start": 74.32,
+    "end": 77.76,
+    "text": "you. They also understand that, you"
+   },
+   {
+    "start": 76.08,
+    "end": 79.48,
+    "text": "know, corporations,"
+   },
+   {
+    "start": 77.76,
+    "end": 81.76,
+    "text": "by their charter, have to maximize"
+   },
+   {
+    "start": 79.48,
+    "end": 83.84,
+    "text": "profits. And it's a responsibility of"
+   },
+   {
+    "start": 81.76,
+    "end": 85.52,
+    "text": "elected officials, again, to reset"
+   },
+   {
+    "start": 83.84,
+    "end": 87.8,
+    "text": "[music] uh that level to make sure the"
+   },
+   {
+    "start": 85.52,
+    "end": 90.12,
+    "text": "consumer has as much power and"
+   },
+   {
+    "start": 87.8,
+    "end": 91.88,
+    "text": "information as possible. Companies might"
+   },
+   {
+    "start": 90.12,
+    "end": 94.04,
+    "text": "say they're just optimizing prices with"
+   },
+   {
+    "start": 91.88,
+    "end": 95.68,
+    "text": "algorithms, not targeting individuals."
+   },
+   {
+    "start": 94.04,
+    "end": 97.92,
+    "text": "How does your bill address that? I don't"
+   },
+   {
+    "start": 95.68,
+    "end": 100.32,
+    "text": "want to depend on the kindness of"
+   },
+   {
+    "start": 97.92,
+    "end": 102.88,
+    "text": "corporations. Let's just have a level"
+   },
+   {
+    "start": 100.32,
+    "end": 104.4,
+    "text": "playing field where everyone knows what"
+   },
+   {
+    "start": 102.88,
+    "end": 105.88,
+    "text": "the rules of the road are and what the"
+   },
+   {
+    "start": 104.4,
+    "end": 107.8,
+    "text": "consequences are. So, [music] that way"
+   },
+   {
+    "start": 105.88,
+    "end": 109.36,
+    "text": "we don't have to be playing whack-a-mole"
+   },
+   {
+    "start": 107.8,
+    "end": 111.64,
+    "text": "with all these different corporations."
+   },
+   {
+    "start": 109.36,
+    "end": 113.0,
+    "text": "I've actually gone after companies that"
+   },
+   {
+    "start": 111.64,
+    "end": 115.4,
+    "text": "have been engaging in surveillance"
+   },
+   {
+    "start": 113.0,
+    "end": 117.56,
+    "text": "pricing. I've had their lobbyists and"
+   },
+   {
+    "start": 115.4,
+    "end": 119.04,
+    "text": "some of their CEOs call me up and try to"
+   },
+   {
+    "start": 117.56,
+    "end": 121.4,
+    "text": "claim that they this is not what we're"
+   },
+   {
+    "start": 119.04,
+    "end": 123.48,
+    "text": "actually doing. If you're not doing it"
+   },
+   {
+    "start": 121.4,
+    "end": 125.04,
+    "text": "and you're publicly held company, then"
+   },
+   {
+    "start": 123.48,
+    "end": 126.24,
+    "text": "you should announce at your next"
+   },
+   {
+    "start": 125.04,
+    "end": 128.119,
+    "text": "shareholder meetings that you're not"
+   },
+   {
+    "start": 126.24,
+    "end": 130.759,
+    "text": "doing it then. What's your message to"
+   },
+   {
+    "start": 128.119,
+    "end": 132.72,
+    "text": "other legislators and state AGs as um"
+   },
+   {
+    "start": 130.759,
+    "end": 134.24,
+    "text": "this topic becomes more and more"
+   },
+   {
+    "start": 132.72,
+    "end": 135.84,
+    "text": "impactful in the folks' lives? Right"
+   },
+   {
+    "start": 134.24,
+    "end": 139.44,
+    "text": "now, as people in this country barely"
+   },
+   {
+    "start": 135.84,
+    "end": 142.2,
+    "text": "have enough discretionary money as it is"
+   },
+   {
+    "start": 139.44,
+    "end": 143.92,
+    "text": "to feel comfortable. So, for the AGs uh"
+   },
+   {
+    "start": 142.2,
+    "end": 146.64,
+    "text": "across the country, this is a"
+   },
+   {
+    "start": 143.92,
+    "end": 148.44,
+    "text": "pro-consumer, pro-working class position"
+   },
+   {
+    "start": 146.64,
+    "end": 151.48,
+    "text": "to be able to protect them against big"
+   },
+   {
+    "start": 148.44,
+    "end": 153.76,
+    "text": "data. We are barely understanding uh the"
+   },
+   {
+    "start": 151.48,
+    "end": 155.96,
+    "text": "amount of information that is being"
+   },
+   {
+    "start": 153.76,
+    "end": 158.04,
+    "text": "transmitted and collected on us right"
+   },
+   {
+    "start": 155.96,
+    "end": 159.44,
+    "text": "now. We have to take steps as as early"
+   },
+   {
+    "start": 158.04,
+    "end": 161.92,
+    "text": "as things are right now in in this"
+   },
+   {
+    "start": 159.44,
+    "end": 163.48,
+    "text": "nascent technology to kind of start"
+   },
+   {
+    "start": 161.92,
+    "end": 166.24,
+    "text": "putting guardrails on this because it"
+   },
+   {
+    "start": 163.48,
+    "end": 167.64,
+    "text": "will get bigger and all-consuming. We've"
+   },
+   {
+    "start": 166.24,
+    "end": 169.08,
+    "text": "heard an outpouring of comments since"
+   },
+   {
+    "start": 167.64,
+    "end": 170.68,
+    "text": "we've published this report. If you have"
+   },
+   {
+    "start": 169.08,
+    "end": 173.44,
+    "text": "something you'd like to share, we'd love"
+   },
+   {
+    "start": 170.68,
+    "end": 173.44,
+    "text": "to hear from you."
+   }
+  ]
  },
  "https://www.youtube.com/watch?v=_I6qF2d3uYc": {
   "status": "null",
@@ -750,12 +5687,406 @@
  "https://www.youtube.com/watch?v=8V7Hl2jcWl8": {
   "status": "null",
   "video_id": "8V7Hl2jcWl8",
-  "retried": true
+  "reason": "no caption track (probe succeeded, so not a throttle)"
  },
  "https://www.youtube.com/watch?v=U5Rt7aPBDUE": {
-  "status": "null",
+  "status": "ok",
   "video_id": "U5Rt7aPBDUE",
-  "retried": true
+  "source": "auto",
+  "duration": 153.599,
+  "n_cues": 78,
+  "cues": [
+   {
+    "start": 0.16,
+    "end": 4.799,
+    "text": "The holiday [music] grocery alert. A new"
+   },
+   {
+    "start": 2.399,
+    "end": 7.205,
+    "text": "study finds some shoppers are paying a"
+   },
+   {
+    "start": 4.799,
+    "end": 9.12,
+    "text": "different price to buy the same cart of"
+   },
+   {
+    "start": 7.205,
+    "end": 10.88,
+    "text": "[music] food. Elizabeth Schulley is here"
+   },
+   {
+    "start": 9.12,
+    "end": 12.08,
+    "text": "with the answer to the question, how's"
+   },
+   {
+    "start": 10.88,
+    "end": 13.04,
+    "text": "that happening? Good morning, Elizabeth."
+   },
+   {
+    "start": 12.08,
+    "end": 14.799,
+    "text": ">> Good morning, Robin. [music] This is"
+   },
+   {
+    "start": 13.04,
+    "end": 17.119,
+    "text": "pretty stunning new research that could"
+   },
+   {
+    "start": 14.799,
+    "end": 18.64,
+    "text": "help explain why your grocery bill is so"
+   },
+   {
+    "start": 17.119,
+    "end": 21.039,
+    "text": "high. It shows that someone buying the"
+   },
+   {
+    "start": 18.64,
+    "end": 23.119,
+    "text": "exact same food as you, same time, same"
+   },
+   {
+    "start": 21.039,
+    "end": 25.119,
+    "text": "store, might be paying a different price"
+   },
+   {
+    "start": 23.119,
+    "end": 27.039,
+    "text": "as new technology changes how retailers"
+   },
+   {
+    "start": 25.119,
+    "end": 28.88,
+    "text": "are setting prices. So, as part of this"
+   },
+   {
+    "start": 27.039,
+    "end": 30.4,
+    "text": "small case study from Groundwork"
+   },
+   {
+    "start": 28.88,
+    "end": 32.559,
+    "text": "Collaborative and Consumer Reports,"
+   },
+   {
+    "start": 30.4,
+    "end": 34.16,
+    "text": "nearly 200 shoppers, four US cities,"
+   },
+   {
+    "start": 32.559,
+    "end": 36.32,
+    "text": "they all went on the app Instacart. They"
+   },
+   {
+    "start": 34.16,
+    "end": 38.879,
+    "text": "shoed for the exact same basket of foods"
+   },
+   {
+    "start": 36.32,
+    "end": 40.8,
+    "text": "at the same time. What they found at one"
+   },
+   {
+    "start": 38.879,
+    "end": 43.12,
+    "text": "store in Seattle, a box of crackers was"
+   },
+   {
+    "start": 40.8,
+    "end": 46.879,
+    "text": "$3.99 for some shoppers. For others, it"
+   },
+   {
+    "start": 43.12,
+    "end": 49.12,
+    "text": "was $4.89. That's 23% more expensive. In"
+   },
+   {
+    "start": 46.879,
+    "end": 51.92,
+    "text": "Washington DC, a dozen eggs, $3.99 for"
+   },
+   {
+    "start": 49.12,
+    "end": 54.8,
+    "text": "some shoppers, $479 for others. And in"
+   },
+   {
+    "start": 51.92,
+    "end": 58.399,
+    "text": "Ohio, peanut butter $2.99 for some."
+   },
+   {
+    "start": 54.8,
+    "end": 60.48,
+    "text": "others it was 359. In total, threearters"
+   },
+   {
+    "start": 58.399,
+    "end": 62.559,
+    "text": "of all of the grocery items were offered"
+   },
+   {
+    "start": 60.48,
+    "end": 64.64,
+    "text": "at different prices. So, I spoke with"
+   },
+   {
+    "start": 62.559,
+    "end": 66.56,
+    "text": "one of the researchers who said what's"
+   },
+   {
+    "start": 64.64,
+    "end": 69.119,
+    "text": "happening here is that Instacart is"
+   },
+   {
+    "start": 66.56,
+    "end": 70.4,
+    "text": "basically using AI to make those price"
+   },
+   {
+    "start": 69.119,
+    "end": 73.28,
+    "text": "changes in real time. It's trying to"
+   },
+   {
+    "start": 70.4,
+    "end": 74.88,
+    "text": "test how much it can raise prices before"
+   },
+   {
+    "start": 73.28,
+    "end": 76.479,
+    "text": "customers take something out of their"
+   },
+   {
+    "start": 74.88,
+    "end": 77.2,
+    "text": "cart or go to a different store"
+   },
+   {
+    "start": 76.479,
+    "end": 79.6,
+    "text": "altogether."
+   },
+   {
+    "start": 77.2,
+    "end": 80.0,
+    "text": ">> So, how is Instacart responding to all"
+   },
+   {
+    "start": 79.6,
+    "end": 81.6,
+    "text": "of this?"
+   },
+   {
+    "start": 80.0,
+    "end": 83.759,
+    "text": ">> Right. So, Instacart does acknowledge"
+   },
+   {
+    "start": 81.6,
+    "end": 85.36,
+    "text": "that these price tests are happening. In"
+   },
+   {
+    "start": 83.759,
+    "end": 86.88,
+    "text": "a statement, a spokesperson told us that"
+   },
+   {
+    "start": 85.36,
+    "end": 89.2,
+    "text": "these limited, short-term, and"
+   },
+   {
+    "start": 86.88,
+    "end": 91.04,
+    "text": "randomized tests help retail partners"
+   },
+   {
+    "start": 89.2,
+    "end": 92.96,
+    "text": "learn what matters most to consumers,"
+   },
+   {
+    "start": 91.04,
+    "end": 94.56,
+    "text": "how to keep essential items affordable."
+   },
+   {
+    "start": 92.96,
+    "end": 96.24,
+    "text": "They say the prices aren't adjusting in"
+   },
+   {
+    "start": 94.56,
+    "end": 98.32,
+    "text": "real time to supply and demand or based"
+   },
+   {
+    "start": 96.24,
+    "end": 100.079,
+    "text": "on customers personal data, like your"
+   },
+   {
+    "start": 98.32,
+    "end": 101.759,
+    "text": "income or your shopping history."
+   },
+   {
+    "start": 100.079,
+    "end": 104.0,
+    "text": ">> And this could cost some shoppers. I"
+   },
+   {
+    "start": 101.759,
+    "end": 105.759,
+    "text": "mean, this is some real money here."
+   },
+   {
+    "start": 104.0,
+    "end": 107.6,
+    "text": ">> This is And we already know groceries"
+   },
+   {
+    "start": 105.759,
+    "end": 109.52,
+    "text": "are unaffordable. This study finds these"
+   },
+   {
+    "start": 107.6,
+    "end": 112.96,
+    "text": "price changes could ultimately cost the"
+   },
+   {
+    "start": 109.52,
+    "end": 115.439,
+    "text": "typical family of four an extra $1,200"
+   },
+   {
+    "start": 112.96,
+    "end": 116.96,
+    "text": ">> per year on groceries. And they say,"
+   },
+   {
+    "start": 115.439,
+    "end": 118.399,
+    "text": "this is where it gets really crazy. This"
+   },
+   {
+    "start": 116.96,
+    "end": 121.119,
+    "text": "could start to expand in store with"
+   },
+   {
+    "start": 118.399,
+    "end": 122.799,
+    "text": "grocerers adopting digital price tags"
+   },
+   {
+    "start": 121.119,
+    "end": 125.119,
+    "text": "that adjust in real time. So the price"
+   },
+   {
+    "start": 122.799,
+    "end": 127.6,
+    "text": "that you pay when you pick a food off of"
+   },
+   {
+    "start": 125.119,
+    "end": 128.959,
+    "text": "the shelf, by the time you go check out,"
+   },
+   {
+    "start": 127.6,
+    "end": 130.479,
+    "text": "it could be a totally different"
+   },
+   {
+    "start": 128.959,
+    "end": 132.48,
+    "text": ">> almost certain to happen."
+   },
+   {
+    "start": 130.479,
+    "end": 134.16,
+    "text": ">> It is. And this is this is this is where"
+   },
+   {
+    "start": 132.48,
+    "end": 136.0,
+    "text": "we're seeing this idea where prices can"
+   },
+   {
+    "start": 134.16,
+    "end": 138.56,
+    "text": "change because we're in a digital era."
+   },
+   {
+    "start": 136.0,
+    "end": 140.16,
+    "text": "It's this idea that the price is set is"
+   },
+   {
+    "start": 138.56,
+    "end": 140.48,
+    "text": "no longer kind of the world we're living"
+   },
+   {
+    "start": 140.16,
+    "end": 141.44,
+    "text": "in."
+   },
+   {
+    "start": 140.48,
+    "end": 144.08,
+    "text": ">> Wow."
+   },
+   {
+    "start": 141.44,
+    "end": 145.28,
+    "text": ">> I know we're all like"
+   },
+   {
+    "start": 144.08,
+    "end": 147.36,
+    "text": "it just doesn't seem fair,"
+   },
+   {
+    "start": 145.28,
+    "end": 149.2,
+    "text": ">> right? It doesn't You got to stay on top"
+   },
+   {
+    "start": 147.36,
+    "end": 151.28,
+    "text": "of it. The future's here. That's it. You"
+   },
+   {
+    "start": 149.2,
+    "end": 153.599,
+    "text": "got to All right. Hey, Elizabeth. Thank"
+   },
+   {
+    "start": 151.28,
+    "end": 153.599,
+    "text": "you so"
+   }
+  ]
  },
  "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238": {
   "status": "not_youtube",

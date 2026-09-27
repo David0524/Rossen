@@ -1,0 +1,33 @@
+{
+ "A5": [
+  {
+   "in": "4:05",
+   "out": "4:53",
+   "outcue": "Wait, what?"
+  }
+ ],
+ "A2": [
+  {
+   "in": "0:17",
+   "out": "0:51",
+   "outcue": "now using them to prevent theft. It's an"
+  },
+  {
+   "in": "1:22",
+   "out": "1:37",
+   "outcue": "accountability, data retention."
+  }
+ ],
+ "A3": [
+  {
+   "in": "0:00",
+   "out": "0:43",
+   "outcue": "them and even add them back"
+  },
+  {
+   "in": "0:48",
+   "out": "1:08",
+   "outcue": "your customer's"
+  }
+ ]
+}

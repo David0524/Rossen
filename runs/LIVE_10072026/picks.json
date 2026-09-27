@@ -44,13 +44,11 @@
  {
   "beat_id": "L07-A2",
   "pass": 2,
-  "flagged": null,
-  "status": "throttled",
+  "flagged": "https://www.youtube.com/watch?v=jTKvp41lHZc",
+  "status": "flagged",
   "platform": "youtube",
-  "title": "License plate readers now at Home Depot, Lowe's Home Improvement stores (NBC Connecticut) \u2014 pending captions",
+  "title": "License plate readers now at Home Depot, Lowe's Home Improvement stores (NBC Connecticut)",
   "manual_url": "https://www.foxnews.com/tech/license-plate-cameras-home-depot-lowes-spark-privacy-fears.amp",
-  "flagged_reason": "THROTTLED, not empty. Every caption fetch on this beat's YouTube shortlist hit YouTube's 'Sign in to confirm you're not a bot' wall \u2014 72 bot-check errors across the run, still blocked after a 10-minute cooldown and a retry through the normal path. Without a transcript there is no verifiable outcue, so nothing is flagged. The blocked calls were not cached; re-running captions later re-fetches cleanly. FALLBACK AVAILABLE NOW: the Fox News Connecticut report the source log was chasing (May 16, 2026, 144s) is on foxnews.com \u2014 a manual pull with no caption track, but the right story.",
-  "better_query": "Re-run Step 5 (captions) for this beat after the YouTube block lifts \u2014 no query change needed; the shortlist is good.",
   "source_mix": {
    "affiliate": 3,
    "network": 1,
@@ -65,11 +63,23 @@
     "tone": 8,
     "authenticity": 8,
     "quality": 8,
-    "fit": 8,
-    "segments": [],
-    "reasoning": "Pass-one metadata only: License plate readers at Home Depot and Lowe's \u2014 the Connecticut story the source log was chasing, on a captioned affiliate. Added by hand: the pre-scan found it, the harvest did not.",
+    "fit": 10,
+    "segments": [
+     {
+      "in": "0:17",
+      "out": "0:51",
+      "outcue": "now using them to prevent theft. It's an"
+     },
+     {
+      "in": "1:22",
+      "out": "1:37",
+      "outcue": "accountability, data retention."
+     }
+    ],
+    "reasoning": "Segment 1 is the 'here you can see' payoff: 'next time you're out, look out for this. Automated license plate cameras\u2026 positioned with some trees at the entrance of Lowe's in Newington' \u2014 through 'stores like Lowe's and Home Depot are now using them to prevent theft.' Segment 2 is a Quinnipiac criminal-justice professor on why it matters: retailers 'are not held to the same standards as law enforcement\u2026 oversight mechanisms, accountability, data retention.'",
     "flags": [
-     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+     "segment 1 in-point catches the reporter toss ('NBC Connecticut's Jane Chaco shows us\u2026') \u2014 trim to 0:21 if Jeff doesn't want it",
+     "the Texas-sheriff Flock line in the script is NOT in this package \u2014 it still needs its own source (the source log flags the NY Post piece)"
     ]
    },
    {
@@ -135,12 +145,10 @@
  {
   "beat_id": "L07-A3",
   "pass": 2,
-  "flagged": null,
-  "status": "throttled",
+  "flagged": "https://www.youtube.com/watch?v=IO1wx3zBR6s",
+  "status": "flagged",
   "platform": "youtube",
-  "title": "Caper Cart b-roll \u2014 pending captions",
-  "flagged_reason": "THROTTLED, not empty. Every caption fetch on this beat's YouTube shortlist hit YouTube's 'Sign in to confirm you're not a bot' wall \u2014 72 bot-check errors across the run, still blocked after a 10-minute cooldown and a retry through the normal path. Without a transcript there is no verifiable outcue, so nothing is flagged. The blocked calls were not cached; re-running captions later re-fetches cleanly. For a b-roll beat the transcript matters less than the picture, so a producer can eyeball Instacart's own launch video (IO1wx3zBR6s) now \u2014 but it is horizontal against a VERTICAL BROLL marker and will need a crop ruling.",
-  "better_query": "Re-run Step 5 (captions) for this beat after the YouTube block lifts \u2014 no query change needed; the shortlist is good.",
+  "title": "Meet Caper Cart. The new smart cart from Instacart. (Instacart)",
   "source_mix": {
    "creator_short": 2,
    "creator_long": 1,
@@ -149,6 +157,32 @@
   },
   "diversity_floor_applied": false,
   "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=IO1wx3zBR6s",
+    "source_type": "creator_long",
+    "score": 80,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 9,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:43",
+      "outcue": "them and even add them back"
+     },
+     {
+      "in": "0:48",
+      "out": "1:08",
+      "outcue": "your customer's"
+     }
+    ],
+    "reasoning": "B-roll: the cart in an aisle, items dropped in, screen totals updating. Segment 2 is Instacart in its own words: 'personalized features like location-based deals\u2026 even ads on Caper cart can be personalized to make them relevant to your customer's' \u2014 backing the script's 'it puts ads and coupons on the screen right in front of you'.",
+    "flags": [
+     "ORIENTATION CROSSED: horizontal source on a VERTICAL BROLL marker. No captioned vertical cart footage exists \u2014 the only vertical candidate (Omni Talk Short) is a podcast talking head with no cart on screen. Needs a crop or a producer ruling.",
+     "Instacart marketing footage \u2014 used here to show the product and quote Instacart's own claim"
+    ]
+   },
    {
     "url": "https://www.youtube.com/shorts/jqTpde_UWs4",
     "source_type": "creator_short",
@@ -160,21 +194,6 @@
     "segments": [],
     "reasoning": "Pass-one metadata only: Vertical Short \u2014 the only native-vertical Caper footage found. Commentary title ('strategy still isn't working'), so b-roll content is uncertain.",
     "flags": [
-     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
-    ]
-   },
-   {
-    "url": "https://www.youtube.com/watch?v=IO1wx3zBR6s",
-    "source_type": "creator_long",
-    "score": 72,
-    "tone": 8,
-    "authenticity": 7,
-    "quality": 8,
-    "fit": 8,
-    "segments": [],
-    "reasoning": "Pass-one metadata only: Instacart's own launch video: clean, well-lit cart footage in an aisle \u2014 exactly the visual. But horizontal against a VERTICAL BROLL beat, and it's brand marketing.",
-    "flags": [
-     "orientation crossed: horizontal source on a vertical beat \u2014 producer rules on crop",
      "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
     ]
    },
@@ -362,12 +381,10 @@
  {
   "beat_id": "L07-A5",
   "pass": 2,
-  "flagged": null,
-  "status": "throttled",
+  "flagged": "https://www.youtube.com/watch?v=osxr7xSxsGo",
+  "status": "flagged",
   "platform": "youtube",
-  "title": "We Had 400 People Shop For Groceries. What We Found Will Shock You. (More Perfect Union / Consumer Reports) \u2014 pending captions",
-  "flagged_reason": "THROTTLED, not empty. Every caption fetch on this beat's YouTube shortlist hit YouTube's 'Sign in to confirm you're not a bot' wall \u2014 72 bot-check errors across the run, still blocked after a 10-minute cooldown and a retry through the normal path. Without a transcript there is no verifiable outcue, so nothing is flagged. The blocked calls were not cached; re-running captions later re-fetches cleanly. The top candidate is the study's own video (~4.76M views); whether Eric Gardner is on camera is the thing the transcript would settle.",
-  "better_query": "Re-run Step 5 (captions) for this beat after the YouTube block lifts \u2014 no query change needed; the shortlist is good.",
+  "title": "We Had 400 People Shop For Groceries. What We Found Will Shock You. (More Perfect Union / Consumer Reports)",
   "source_mix": {
    "creator_long": 3,
    "affiliate": 1,
@@ -378,15 +395,21 @@
    {
     "url": "https://www.youtube.com/watch?v=osxr7xSxsGo",
     "source_type": "creator_long",
-    "score": 88,
+    "score": 90,
     "tone": 9,
     "authenticity": 9,
-    "quality": 8,
-    "fit": 9,
-    "segments": [],
-    "reasoning": "Pass-one metadata only: The study itself, from the outlet that ran it (~4.76M views). creator_long is this role's natural source type.",
+    "quality": 9,
+    "fit": 10,
+    "segments": [
+     {
+      "in": "4:05",
+      "out": "4:53",
+      "outcue": "Wait, what?"
+     }
+    ],
+    "reasoning": "Eric Gardner (speaker-labeled [Eric] in the human-made captions) on the full 437-shopper results: 'when the data came back, I gotta be honest, I stared at it for a while, because what we found was weird' \u2014 basket totals from about $114 to nearly $124, nearly three out of four products at different prices, 'five different prices for eggs', ending on 'Wait, what?'. Exactly the screenshots payoff Jeff sets up. Deliberately NOT the earlier pilot segment (2:35-3:26), whose egg range ($4.28-$4.69) would contradict Jeff's $3.99-$4.79 setup line.",
     "flags": [
-     "captions blocked by YouTube bot-check this run \u2014 not graded in pass two"
+     "18-minute source: the pull is 4:05-4:53; the pilot test earlier uses different egg numbers \u2014 don't extend the in-point back into it"
     ]
    },
    {

@@ -3,7 +3,7 @@
 Script: `10_07_LIVE_BIBLE_-_YOUR_STORE_IS_WATCHING_YOU.docx` · companion `SOURCE_LOG.md` · airdate Wed 10/07/2026.
 
 ```
-Outcomes, 7 beats:  1 PICK (approved swap) · 3 LOCATED (manual lane) · 3 THROTTLED
+Outcomes, 7 beats:  4 PICK (7 verified segments, incl. 1 approved swap) · 3 LOCATED (native TikTok, manual lane)
 Verified segments:  2 (on the A4 swap candidate only) — every other YouTube pick is blocked, not missing
 ```
 
@@ -23,10 +23,10 @@ and 2,000/month — consistent with a metered plan. Your $0 cap did not block an
 | Beat | Role | Or. | Pri | Outcome | Best source | Status |
 |---|---|---|---|---|---|---|
 | A1 | first_person_rant | V | 1 | **LOCATED** | TikTok @user60342208753 `/video/7679448051202657566` | manual; ID decodes to **2026-08-29**, the script's date; outcue UNVERIFIED |
-| A2 | authority_report | H | 2 | **THROTTLED** | NBC Connecticut `jTKvp41lHZc` · fallback Fox News CT (foxnews.com, 5/16/2026) | captions blocked; Fox CT is a manual pull available now |
-| A3 | explainer_demo/short | V b-roll | 3 | **THROTTLED** | Omni Talk Short `jqTpde_UWs4` · Instacart `IO1wx3zBR6s` (horizontal) | captions blocked; b-roll, so eyeball-able now |
+| A2 | authority_report | H | 2 | **PICK** | NBC Connecticut `jTKvp41lHZc` | 0:17–0:51 · 1:22–1:37 |
+| A3 | explainer_demo/short | V b-roll | 3 | **PICK (crop needed)** | Instacart `IO1wx3zBR6s` | 0:00–0:43 · 0:48–1:08; horizontal on a vertical marker |
 | A4 | victim_interview | H | 2 | **PICK (approved swap)** | Lesleigh Nurse, CBS/WKRG `kEN0nL8mtXw` | 2 verified segments; script rewritten |
-| A5 | explainer_demo/long | H | 2 | **THROTTLED** | More Perfect Union / Consumer Reports `osxr7xSxsGo` (~4.76M) | captions blocked |
+| A5 | explainer_demo/long | H | 2 | **PICK** | More Perfect Union / CR `osxr7xSxsGo` | 4:05–4:53 |
 | B1 | first_person_rant | V | 1 | **LOCATED** | TikTok @kb.montalbano `/video/7392239491588705579` | manual; **corrected** — caption-confirmed, July 16, 2024 |
 | B2 | explainer_demo/short | V | 2 | **LOCATED** | TikTok `/video/7392290262262828318` (@jaymes.png, formerly @semyajnotsemaj) | caption-confirmed, July 16, 2024 |
 
@@ -116,3 +116,18 @@ the worker quoted on camera ("You are now being tracked at Target… these baske
 
 **Method change:** every native link is now checked against its TikTok oEmbed caption (a free metadata call) before it ships.
 A video ID's embedded date can rule a post *out*; it can never rule one *in*.
+
+## UPDATE — YouTube block lifted; A2, A3, A5 graded
+
+A later probe got through, so captions were fetched for the throttled beats — top candidates first, with a probe before each
+fetch, stopping the moment the bot check returned (it did, at the 13th video; the ones that mattered were already in).
+
+- **A5** — Eric Gardner on the full 437-shopper results, 4:05–4:53, out on "Wait, what?". The earlier pilot segment was avoided
+  on purpose: its egg range ($4.28–$4.69) would contradict Jeff's $3.99–$4.79 line.
+- **A2** — NBC Connecticut, "look out for this… at the entrance of Lowe's in Newington", plus a professor on retailers not being
+  held to police standards. The script's Texas-sheriff Flock line is not in this package and still needs its own source.
+- **A3** — Instacart's own launch video, including Instacart saying the cart's ads can be personalized. Horizontal on a
+  vertical b-roll marker; no captioned vertical cart footage exists, so it needs a crop.
+
+**Brave was never the problem.** It found every candidate with zero failures on the $0-cap key. The missing IN/OUTs were YouTube
+blocking transcript fetches from this container; TikTok beats can't get verified IN/OUTs at all without transcription.
