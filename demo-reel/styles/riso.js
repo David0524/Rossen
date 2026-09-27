@@ -41,10 +41,13 @@ function risoPrint(dst, P, o = {}) { const { grainOff = [0, 0], mis = 1, rect = 
 // paper: warm white with a faint tooth (full frame, drawn once)
 function risoPaper(L, seed = 9) { const g = L.getContext('2d'); resetT(g); g.fillStyle = RISO.paper; g.fillRect(0, 0, W, H);
   grain(g, rectPath(0, 0, W, H), [0, 0, W, H], 5000, '#B9B2A4', .12, seed, 1.2); grain(g, rectPath(0, 0, W, H), [0, 0, W, H], 900, '#FFFFFF', .7, seed + 1, 2); }
-// type: pink printed over teal, both solid (after the grain), a hair out of register. The overlap is deep navy.
+// type: pink printed over teal, a hair out of register; where they overlap the letters print deep navy. The navy core
+// is laid solid over the two fringes, so nothing of the paper or the grain shows inside a letter.
+const RISO_NAVY = '#002C75';
 function risoType(c, s, x, y, weight, size, family, maxW = 9999, align = 'center', mis = 2.2) {
   const sz = fitFont(c, s, weight, size, family, maxW); c.save(); c.font = `${weight} ${sz}px ${family}`; c.textAlign = align; c.textBaseline = 'middle'; c.globalCompositeOperation = 'multiply';
-  c.fillStyle = RISO.teal; c.fillText(s, x - mis, y + mis * .3); c.fillStyle = RISO.pink; c.fillText(s, x + mis, y - mis * .3); c.restore(); return sz; }
+  c.fillStyle = RISO.teal; c.fillText(s, x - mis, y + mis * .3); c.fillStyle = RISO.pink; c.fillText(s, x + mis, y - mis * .3);
+  c.globalCompositeOperation = 'source-over'; c.fillStyle = RISO_NAVY; c.fillText(s, x, y); c.restore(); return sz; }
 
 // ---------------- YOU (the hand), in riso: skin is yellow under pink; the sleeve teal, the cuff yellow ----------------
 // Overlapping parts don't overprint: each part knocks out what's under it with a hairline paper gap, then prints.

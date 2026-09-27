@@ -1,0 +1,16 @@
+{
+  "title": "YOUR FIRST BIG WIN",
+  "open": ["YOUR FIRST", "BIG WIN"],
+  "careers": {
+    "series": ["RED FLAG OR", "GREEN FLAG?"],
+    "postingA": [["We're like a", "family here."], ["Must be", "available 24/7."]],
+    "postingB": [["Clear salary", "range."], ["Flexible hours."]],
+    "red": "RED FLAG", "green": "GREEN FLAG", "apply": "APPLY",
+    "letter": ["YOU GOT", "THE JOB."]
+  },
+  "finance": { "series": ["MONEY RULE", "#1"], "caption": ["PAY YOURSELF", "FIRST."], "label": "TRIP FUND" },
+  "productivity": { "note": ["DAY 1 AT", "THE NEW JOB."], "series": "ONE HABIT", "caption": ["TWO-MINUTE RULE:", "IF IT TAKES UNDER", "2 MINUTES, DO IT NOW."], "last": "BOOK THE TRIP" },
+  "travel": { "series": "PACK OR PASS?", "question": ["POWER BANK IN", "YOUR CHECKED BAG?"], "verdict": "PASS", "caption": ["SPARE BATTERIES GO", "IN YOUR CARRY-ON."] },
+  "lineup": ["ONE STORY. FOUR STYLES.", "YOUR CHARACTER."],
+  "end": { "lines": ["ANIMATED SERIES", "FOR CREATORS"], "sub": "NEW EPISODES IN A DAY", "name": "{{YOUR NAME OR BUSINESS NAME}}", "email": "{{YOUR EMAIL}}" }
+}

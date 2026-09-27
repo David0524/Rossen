@@ -136,3 +136,28 @@ function letterBackBotInk(g) { const { w, ph } = SHEET; sheetStock(g, w, ph, 102
   inkHatch(g, [[0, ph - 30], [w, ph - 26], [w, ph], [0, ph]], { angle: .2, gap: 5, len: 22, al: .45, seed: 103, cross: true });
   g.save(); g.globalAlpha = .12; for (let k = 0; k < 4; k++) scrawl(g, 70, 440, 40 + k * 27, 104 + k, { w: 1.6, h: 5 }); g.restore();
   penLoop(g, [[0, 0], [w, 0], [w, ph], [0, ph]].flatMap((q, i, a) => { const n = a[(i + 1) % 4]; return [0, .5].map(t => [q[0] + (n[0] - q[0]) * t, q[1] + (n[1] - q[1]) * t]); }), 3, 108); }
+
+// ---------------- the job postings (same sheet as the letter) and the stamps ----------------
+function briefcase(c, x, y, seed) { const b = [[x - 34, y - 12], [x + 34, y - 12], [x + 34, y + 26], [x - 34, y + 26]];
+  wash(c, b, INK.wash, .5, seed); penLoop(c, b.flatMap((q, i, a) => { const n = a[(i + 1) % 4]; return [0, .5].map(t => [q[0] + (n[0] - q[0]) * t, q[1] + (n[1] - q[1]) * t]); }), 2.6, seed + 1);
+  pen(c, smooth([[x - 12, y - 12], [x - 12, y - 24], [x + 12, y - 24], [x + 12, y - 12]], false, 4), 2.4, seed + 2); pen(c, [[x - 34, y + 2], [x + 34, y + 2]], 1.6, seed + 3); }
+// the posting's text block: sentence case, one size for every line (the longest line sets it)
+function postingSize(g, groups) { g.save(); const lines = groups.flat(); let sz = 64; for (const l of lines) sz = Math.min(sz, fitFont(g, l, 700, 64, 'Playfair', 440)); g.restore(); return sz; }
+function postingFaceInk(g, seed) { const { w, h } = SHEET; sheetStock(g, w, h, seed); briefcase(g, w / 2, 72, seed + 1);
+  pen(g, [[70, 128], [450, 129]], 2.2, seed + 2, { taper: [.05, .1] }); pen(g, [[70, 136], [450, 136]], 1.2, seed + 3, { taper: [.05, .1] });
+  penLoop(g, rough([[0, 0], [w / 2, 0], [w, 0], [w, h / 2], [w, h], [w / 2, h], [0, h], [0, h / 2]].flatMap((q, i, a) => { const n = a[(i + 1) % a.length]; return [0, .25, .5, .75].map(t => [q[0] + (n[0] - q[0]) * t, q[1] + (n[1] - q[1]) * t]); }), 1.2, seed + 4), 3, seed + 5); }
+function postingText(g, groups, y0) { const sz = postingSize(g, groups); g.save(); g.fillStyle = INK.sepia; g.textAlign = 'center'; g.textBaseline = 'middle'; g.font = `700 ${sz}px Playfair`;
+  let y = y0; groups.forEach((grp, k) => { grp.forEach(l => { g.fillText(l, SHEET.w / 2, y); y += sz * 1.2; }); y += sz * .45; }); g.restore(); return y; }
+// a rubber stamp: a double border and the words, in one solid ink (fully opaque, no texture in the letters)
+function stampInk(c, s, x, y, col, rot = -.1, k = 1) { c.save(); c.translate(x, y); c.rotate(rot); c.scale(k, k);
+  const sz = fitFont(c, s, 900, 50, 'Playfair', 250), w = Math.max(230, c.measureText(s).width + 50), h = 84; c.fillStyle = INK.sheet; c.fillRect(-w / 2, -h / 2, w, h);
+  c.strokeStyle = col; c.lineWidth = 5; c.strokeRect(-w / 2, -h / 2, w, h); c.lineWidth = 2; c.strokeRect(-w / 2 + 9, -h / 2 + 9, w - 18, h - 18);
+  c.fillStyle = col; c.font = `900 ${sz}px Playfair`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(s, 0, 3); c.restore(); }
+// the APPLY button, drawn in pen; pressed, it fills with ink and the word shows in the paper's colour
+function applyButton(c, s, pressed, seed) { const x0 = 170, y0 = 592, w = 240, h = 66; const b = [[x0, y0], [x0 + w, y0], [x0 + w, y0 + h], [x0, y0 + h]];
+  c.save(); if (pressed) { c.fillStyle = INK.sepia; c.fill(roundRectPath(x0, y0, w, h, 14)); } penLoop(c, smooth([[x0 + 14, y0], [x0 + w - 14, y0], [x0 + w, y0 + 14], [x0 + w, y0 + h - 14], [x0 + w - 14, y0 + h], [x0 + 14, y0 + h], [x0, y0 + h - 14], [x0, y0 + 14]], true, 3), 2.8, seed);
+  c.fillStyle = pressed ? INK.sheet : INK.sepia; c.font = `900 ${fitFont(c, s, 900, 40, 'Playfair', 150)}px Playfair`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(s, x0 + 100, y0 + h / 2 + 2); c.restore(); }
+// Raj's flag: a pen-drawn stick and a washed pennant that flutters a little
+function inkFlag(c, x, y, len, col, t, seed) { pen(c, [[x, y], [x, y - len]], 4, seed, { taper: [.05, .2] });
+  const f = []; for (let k = 0; k <= 8; k++) { const u = k / 8; f.push([x + u * 120, y - len + 6 + u * 24 + Math.sin(u * 5 + t * 9) * 5 * u]); } for (let k = 8; k >= 0; k--) { const u = k / 8; f.push([x + u * 120, y - len + 74 - u * 24 + Math.sin(u * 5 + t * 9) * 5 * u]); }
+  c.fillStyle = col; c.fill(polyPath(f)); penLoop(c, f, 2.4, seed + 1); }

@@ -32,12 +32,16 @@ function textAt(c, s, x, y, weight, size, family, col, maxW = 9999, align = 'cen
 
 // ---------------- puppets ----------------
 const PUP = {};
-async function loadPuppet(name) { PUP[name] = await (await fetch(`assets/${name}_parts.json`)).json(); await Promise.all(Object.keys(PUP[name].parts).map(k => loadImg(name + '_' + k, `assets/${name}_${k}.png`))); }
-// pose: { head, arm, legL, legR (radians), bob (ref px), tilt, sx, sy (squash) }
+async function loadPuppet(name) { PUP[name] = await (await fetch(`assets/${name}_parts.json`)).json(); const M = PUP[name];
+  await Promise.all([...Object.keys(M.parts), ...Object.keys(M.alt || {})].map(k => loadImg(name + '_' + k, `assets/${name}_${k}.png`))); }
+// pose: { head, arm, arm2, legL, legR (radians), bob (ref px), tilt, sx, sy (squash), headImg (an alternate head drawing),
+//        armUnder(c) (drawn in the arm's own frame, under it: a prop in the hand), armScale }
 function puppet(c, name, x, y, s, p = {}) {
   const M = PUP[name]; c.save(); c.translate(x, y); c.rotate(p.tilt || 0); c.scale(s * (p.sx || 1), s * (p.sy || 1)); c.translate(-M.feet[0], -M.feet[1] - (p.bob || 0));
-  const part = (k, a = 0) => { const m = M.parts[k]; if (!m) return; const [px, py] = m.pivot; c.save(); c.translate(px, py); c.rotate(a); c.translate(-px, -py); c.drawImage(IMG[name + '_' + k], m.x, m.y); c.restore(); };
-  part('legL', p.legL || 0); part('legR', p.legR || 0); part('torso'); part('head', p.head || 0); part('arm', p.arm || 0);
+  const part = (k, a = 0, img = k, under = null, ks = 1) => { const m = M.parts[k]; if (!m) return; const [px, py] = m.pivot; c.save(); c.translate(px, py); c.rotate(a); c.scale(ks, ks); c.translate(-px, -py);
+    if (under) under(c); c.drawImage(IMG[name + '_' + img], m.x, m.y); c.restore(); };
+  if (p.armBehind) { const m = M.parts.arm, [px, py] = m.pivot; c.save(); c.translate(px, py); c.rotate(p.arm || 0); c.translate(-px, -py); p.armBehind(c); c.restore(); }   // a prop held behind the body
+  part('legL', p.legL || 0); part('legR', p.legR || 0); part('torso'); part('head', p.head || 0, p.headImg || 'head'); part('arm', p.arm || 0, 'arm', p.armUnder, p.armScale || 1); part('arm2', p.arm2 || 0);
   c.restore();
 }
 function refPoint(name, pt, x, y, s, p = {}) {   // a point of the reference drawing, where it lands on the page (no rotation)
@@ -117,3 +121,6 @@ function kf(t, KF) {
     return h00 * p1[j + 1] + h10 * m1 + h01 * p2[j + 1] + h11 * m2; });
 }
 const ring = (u, amp, decay, freq) => u <= 0 ? 0 : amp * Math.exp(-u * decay) * Math.cos(u * freq);   // a damped bounce after a contact
+// where a point of the reference drawing on the arm part lands on the page, the arm turned by its pose angle
+function armPoint(name, pt, x, y, s, p = {}, part = 'arm') { const M = PUP[name], [px, py] = M.parts[part].pivot, a = p[part] || 0, k = p.armScale || 1;
+  const dx = (pt[0] - px) * k, dy = (pt[1] - py) * k, q = [px + dx * Math.cos(a) - dy * Math.sin(a), py + dx * Math.sin(a) + dy * Math.cos(a)]; return refPoint(name, q, x, y, s, p); }

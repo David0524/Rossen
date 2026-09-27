@@ -20,6 +20,7 @@ try {
   await page.goto(`http://127.0.0.1:${port}/${html}?bare=1${query ? '&' + query : ''}`);
   await page.waitForFunction('window.__ready === true || window.__error', {timeout: 60000}).catch(()=>{}); const perr = await page.evaluate(() => window.__error); if (perr || errors.length) { console.error('load error', perr, errors); process.exit(1); }
   const N = await page.evaluate(() => window.__NFR);
+  const TL = await page.evaluate(() => window.__TL ? JSON.stringify(window.__TL) : null); if (TL) writeFileSync(path.join(out, 'timeline.json'), TL);   // the film's cue sheet, for the score and the checks
   const save = (f, d) => writeFileSync(f, Buffer.from(d.split(',')[1], 'base64'));
   let list;
   if (flag('--only')) list = flag('--only').split(',').map(Number);

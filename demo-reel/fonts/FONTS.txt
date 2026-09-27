@@ -6,3 +6,4 @@ PlayfairDisplay-Bold.ttf, PlayfairDisplay-Black.ttf   careers chapter (editorial
 ArchivoBlack-Regular.ttf                              personal-finance chapter (chunky riso display)
 Inter-Light.ttf, Inter-Regular.ttf, Inter-SemiBold.ttf productivity chapter (clean light sans)
 Fredoka-SemiBold.ttf, Fredoka-Bold.ttf                travel chapter (rounded bold)
+BricolageGrotesque-ExtraBold.ttf                      the open, the lineup and the end card (the reel's own neutral frame)

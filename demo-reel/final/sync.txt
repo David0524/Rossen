@@ -1,0 +1,56 @@
+  0.000s  YOUR FIRST BIG WIN onset   0.000s  offset   +0 ms
+  1.875s  page flipped  onset   1.875s  offset   +0 ms
+  2.500s  RED FLAG OR GREEN FLAG? onset   2.493s  offset   -7 ms
+  4.375s  posting A lands onset   4.368s  offset   -7 ms
+  5.000s  red flag up   onset   5.002s  offset   +2 ms
+  5.625s  RED FLAG stamp onset   5.623s  offset   -2 ms
+  6.500s  posting A flicked away onset   6.500s  offset   +0 ms
+  6.875s  posting B lands onset   6.875s  offset   +0 ms
+  7.500s  GREEN FLAG stamp onset   7.498s  offset   -2 ms
+  8.125s  APPLY pressed onset   8.124s  offset   -1 ms
+  8.438s  YOU GOT THE JOB. onset   8.437s  offset   -1 ms
+  8.750s  Raj nods      onset   8.750s  offset   +0 ms
+  9.690s  letter lifts  onset   9.688s  offset   -2 ms
+ 10.000s  fold 1 (downbeat) onset   9.997s  offset   -3 ms
+ 10.312s  fold 2        onset  10.307s  offset   -5 ms
+ 10.625s  paycheck caught onset  10.625s  offset   +0 ms
+ 11.250s  MONEY RULE #1 onset  11.250s  offset   +0 ms
+ 11.875s  Maya lands    onset  11.875s  offset   +0 ms
+ 13.125s  the paycheck tears onset  13.116s  offset   -9 ms
+ 13.438s  chunk into the piggy bank onset  13.432s  offset   -6 ms
+ 13.750s  PAY YOURSELF FIRST. onset  13.750s  offset   +0 ms
+ 14.375s  the rest lands on the spend pile onset  14.374s  offset   -1 ms
+ 15.000s  coin 1 in     onset  15.000s  offset   +0 ms
+ 15.312s  coin 2 in     onset  15.313s  offset   +1 ms
+ 15.625s  coin 3 in     onset  15.626s  offset   +1 ms
+ 15.938s  coin 4 in     onset  15.938s  offset   +0 ms
+ 16.250s  TRIP FUND     onset  16.250s  offset   +0 ms
+ 17.500s  hard cut (downbeat) onset  17.491s  offset   -9 ms
+ 19.062s  ONE HABIT     onset  19.062s  offset   +0 ms
+ 20.000s  the two-minute rule onset  19.996s  offset   -4 ms
+ 20.938s  check 1       onset  20.935s  offset   -3 ms
+ 21.250s  check 2       onset  21.250s  offset   +0 ms
+ 21.562s  check 3       onset  21.562s  offset   +0 ms
+ 21.875s  check 4       onset  21.875s  offset   +0 ms
+ 22.188s  check 5       onset  22.188s  offset   +0 ms
+ 22.500s  BOOK THE TRIP onset  22.498s  offset   -2 ms
+ 24.375s  Hana tears the page onset  24.375s  offset   +0 ms
+ 25.000s  Diego's world (downbeat) onset  25.000s  offset   +0 ms
+ 25.625s  PACK OR PASS? onset  25.625s  offset   +0 ms
+ 27.500s  the question lands onset  27.500s  offset   +0 ms
+ 28.125s  uh-oh         onset  28.125s  offset   +0 ms
+ 28.750s  PASS          onset  28.750s  offset   +0 ms
+ 29.375s  into the carry-on onset  29.375s  offset   +0 ms
+ 30.000s  SPARE BATTERIES GO IN YOUR CARRY-ON. onset  30.000s  offset   +0 ms
+ 31.250s  the bag zipped onset  31.250s  offset   +0 ms
+ 31.875s  Diego hops    onset  31.875s  offset   +0 ms
+ 32.500s  sticker 1     onset  32.500s  offset   +0 ms
+ 32.656s  sticker 2     onset  32.656s  offset   +0 ms
+ 32.812s  sticker 3     onset  32.812s  offset   +0 ms
+ 32.969s  sticker 4     onset  32.969s  offset   +0 ms
+ 33.125s  ONE STORY. FOUR STYLES. YOUR CHARACTER. onset  33.125s  offset   +0 ms
+ 35.000s  end card      onset  34.998s  offset   -2 ms
+ 36.250s  NEW EPISODES IN A DAY onset  36.249s  offset   -1 ms
+ 37.500s  name          onset  37.498s  offset   -2 ms
+ 38.125s  email         onset  38.125s  offset   +0 ms
+55 hits, worst offset 9 ms
