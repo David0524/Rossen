@@ -1,0 +1,499 @@
+[
+ {
+  "beat_id": "L07-A1",
+  "segment_title": "YOUR STORE IS WATCHING YOU\u2026 AND MAYBE CHARGING YOU MORE FOR IT",
+  "clip_role": "first_person_rant",
+  "orientation": "vertical",
+  "script_text": "A TARGET EMPLOYEE NAMED ELIJAH WAS AT WORK ON AUGUST 29TH\u2026 / AND HE NOTICED SOMETHING ON THE RED SHOPPING BASKETS. / A SMALL BLACK DEVICE\u2026 HELD ON WITH TWO SCREWS\u2026 / RIGHT ON THE SIDE OF THE BASKET. / SO HE PULLED OUT HIS PHONE AND POSTED A WARNING ON TIKTOK FOR EVERY TARGET SHOPPER. / THAT VIDEO HAS NOW BEEN WATCHED MORE THAN 3.4 MILLION TIMES!! / HE CALLED IT A PSA\u2026 AND PEOPLE IN THE COMMENTS THOUGHT HE WAS BEING PARANOID. / LISTEN TO WHAT THIS TARGET WORKER SAYS IS HIDING ON YOUR SHOPPING BASKET\u2026",
+  "news_anchor": "Target worker TikTok basket tracker Bluetooth beacon August 2026",
+  "visual_spec": "vertical selfie video in a Target aisle, worker pointing at a small black device on a red basket",
+  "platforms": [
+   "tiktok",
+   "shorts",
+   "instagram",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "source_native": "tiktok",
+  "native_url": "https://www.tiktok.com/@user60342208753/video/7679448051202657566",
+  "sourcability": "high",
+  "sourcability_note": "MANUAL LANE. Self-posted TikTok by the worker. Native permalink found via Brave web search on the handle the source log names (@user60342208753); its video ID decodes to 2026-08-29 13:40 UTC, matching the script's Aug 29 date. Not watched \u2014 account and date match, content unconfirmed. YouTube carries only reposts (e.g. Rhett Walker xBjs7LKtMHc) and commentary (Taylor Lorenz), which the skill says not to grade over the native post. yt-dlp's TikTok extractor is failing this run, so no metadata or transcript is reachable.",
+  "queries": {
+   "anchor": [
+    "Target worker basket tracker TikTok",
+    "Target basket Bluetooth beacon tracker",
+    "user60342208753 Target basket"
+   ],
+   "news": [
+    "Target employee reveals tracker on shopping baskets",
+    "Target tracking shoppers with basket beacons",
+    "worker warns Target shoppers about basket device"
+   ],
+   "victim": [
+    "there's a tracker on the Target baskets",
+    "they are tracking you at Target",
+    "this is on every basket at my store"
+   ],
+   "platform": [
+    "#target basket tracker",
+    "target basket device",
+    "you are now being tracked at target"
+   ],
+   "shorts": [
+    "#target they're tracking your basket #shorts",
+    "target worker exposes basket tracker #shorts",
+    "#targetfinds tracker on the basket",
+    "check your target basket #shorts"
+   ]
+  },
+  "platform_map": {
+   "tiktok": [
+    "platform",
+    "victim",
+    "anchor"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "instagram": [
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "vertical"
+  },
+  "episode": "10-07",
+  "expected_segments": 1
+ },
+ {
+  "beat_id": "L07-A2",
+  "segment_title": "BUT IT'S NOT JUST TARGET\u2026 LOWE'S CAMERAS KNOW WHICH AISLES YOU WALK DOWN!",
+  "clip_role": "authority_report",
+  "orientation": "horizontal",
+  "script_text": "LOWE'S OWN PRIVACY STATEMENT SAYS ITS STORE CAMERAS ANALYZE WHAT AISLES YOU VISIT\u2026 / AND HOW LONG YOU STAY IN THE STORE. / \u2026 SOME LOWE'S AND HOME DEPOT PARKING LOTS HAVE CAMERAS THAT SCAN YOUR LICENSE PLATE. / THE STORES SAY THE CAMERAS ARE THERE TO FIGHT THEFT. / BUT PUBLIC RECORDS SHOWED A TEXAS SHERIFF'S OFFICE COULD SEARCH DATA FROM HUNDREDS OF FLOCK CAMERAS TIED TO THOSE STORES. / HERE YOU CAN SEE THE LICENSE PLATE CAMERAS MOST SHOPPERS DRIVE RIGHT PAST WITHOUT NOTICING\u2026",
+  "news_anchor": "Lowe's Home Depot parking lot license plate reader Flock cameras",
+  "visual_spec": "Flock camera pole in a Home Depot or Lowe's parking lot, affiliate news package b-roll",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "priority": 2,
+  "sourcability": "high",
+  "sourcability_note": "Captioned affiliate coverage exists: NBC Connecticut jTKvp41lHZc 'License plate readers now at Home Depot, Lowe's Home Improvement stores' (~23K), plus We Are Iowa -RaHh0LVS7Q. The source log's lead was a Fox News Connecticut report it couldn't locate; NBC CT is the likely same story.",
+  "queries": {
+   "anchor": [
+    "Home Depot Lowe's license plate reader cameras",
+    "Flock cameras Home Depot parking lot",
+    "Lowe's Flock license plate cameras sheriff data"
+   ],
+   "news": [
+    "license plate readers installed at Home Depot and Lowe's",
+    "stores scanning license plates in parking lots",
+    "retailer parking lot cameras shared with police"
+   ],
+   "victim": [
+    "the store is scanning my license plate",
+    "I didn't know they tracked my car at Home Depot"
+   ],
+   "platform": [
+    "flock camera home depot",
+    "license plate reader lowes",
+    "flock cameras everywhere"
+   ],
+   "shorts": [
+    "#flock camera at home depot #shorts",
+    "they scan your plate at lowes #shorts",
+    "#privacy home depot is tracking your car",
+    "look up at the parking lot pole #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "10-07",
+  "offsite_likely": false,
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "L07-A3",
+  "segment_title": "NOW THE SHOPPING CART ITSELF HAS CAMERAS!!",
+  "clip_role": "explainer_demo/creator_short",
+  "orientation": "vertical",
+  "broll": true,
+  "script_text": "INSTACART MAKES A SMART SHOPPING CART CALLED THE CAPER CART. / IT HAS CAMERAS POINTED INTO YOUR BASKET\u2026 CAMERAS POINTED OUT\u2026 AND A LOCATION-TRACKING SYSTEM. / \u2026 SHOPRITE, WEGMANS AND WEIS MARKETS ARE ALL USING THEM RIGHT NOW! / THE CART KNOWS WHAT YOU PUT IN IT\u2026 / AND IT PUTS ADS AND COUPONS ON THE SCREEN RIGHT IN FRONT OF YOU. / \u2026 HAVE A LOOK AT ONE OF THESE CARTS ROLLING DOWN A GROCERY AISLE\u2026",
+  "news_anchor": "Instacart Caper Cart smart shopping cart cameras ShopRite Wegmans Weis",
+  "visual_spec": "vertical b-roll, Caper smart cart with screen rolling down a grocery aisle",
+  "platforms": [
+   "tiktok",
+   "shorts",
+   "instagram",
+   "news_web"
+  ],
+  "priority": 3,
+  "sourcability": "high",
+  "sourcability_note": "B-roll beat, no speaker needed. Plenty of footage: Instacart's own IO1wx3zBR6s (~23K), FOX 5 NY CU53EbSEVAA (~23K), ShopRite shopper BuUPAtCEKMM. Most is horizontal; orientation is VERTICAL BROLL, so the pick should be a Short or vertical creator clip, or a horizontal source flagged for a crop.",
+  "queries": {
+   "anchor": [
+    "Instacart Caper Cart",
+    "Caper Cart ShopRite",
+    "Caper smart cart Wegmans"
+   ],
+   "news": [
+    "smart shopping carts with cameras roll into grocery stores",
+    "AI shopping cart tracks what you buy"
+   ],
+   "victim": [
+    "this shopping cart has a camera",
+    "the cart knows what I put in it"
+   ],
+   "platform": [
+    "caper cart",
+    "smart cart grocery store",
+    "shoprite smart cart"
+   ],
+   "shorts": [
+    "#smartcart the cart is watching #shorts",
+    "this cart has cameras #shorts",
+    "#shoprite caper cart",
+    "ai shopping cart #shorts"
+   ]
+  },
+  "platform_map": {
+   "tiktok": [
+    "platform",
+    "victim",
+    "anchor"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "instagram": [
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "vertical"
+  },
+  "episode": "10-07",
+  "offsite_likely": false,
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "L07-A4",
+  "segment_title": "AND AT SELF-CHECKOUT\u2026 AI IS WATCHING YOUR HANDS!",
+  "clip_role": "victim_interview",
+  "orientation": "horizontal",
+  "script_text": "BRIANNA JONES WAS SHOPPING AT A WALMART IN CHARLOTTE, NORTH CAROLINA BACK IN MARCH. / HER SELF-CHECKOUT REGISTER SHUT DOWN IN THE MIDDLE OF HER ORDER\u2026 A CONDIMENT WOULDN'T SCAN. / HER LAWSUIT SAYS A MANAGER TOLD HER THE MACHINE WAS SHUT OFF BECAUSE SHE WAS SCANNING TOO FAST. / SHE HAD HER RECEIPTS\u2026 SHE ASKED FOR HELP\u2026 AND THAT'S WHEN IT GOT SCARY. / THINK WHAT YOU WOULD DO IF THIS HAPPENED TO YOU\u2026 / (((DECIDE CLIP - IF NO BRIANNA JONES INTERVIEW EXISTS, SWAP IN A NEWS EXPLAINER ON WALMART'S SELF-CHECKOUT CAMERAS)))",
+  "news_anchor": "Brianna Jones Walmart Wilkinson Boulevard Charlotte self-checkout lawsuit",
+  "visual_spec": "woman on camera describing the self-checkout incident, Charlotte affiliate interview setup",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "sourcability": "none",
+  "sourcability_note": "No video of Brianna Jones anywhere reachable. YouTube returns nothing on her name across three variants, confirmed on retry with search live. Text-only coverage: Charlotte Observer, FOX8 (myfox8.com), WAVY. The script already carries a DECIDE for this exact case (swap in a news explainer on Walmart's self-checkout cameras). Any swap changes what the show says, so it goes to the producer.",
+  "queries": {
+   "anchor": [
+    "Brianna Jones Walmart lawsuit",
+    "Charlotte Walmart self-checkout lawsuit Wilkinson",
+    "Walmart self checkout lawsuit Charlotte 2026"
+   ],
+   "news": [
+    "woman sues Walmart over self-checkout incident",
+    "shopper surrounded by employees and police at self-checkout",
+    "Walmart self-checkout AI camera flags shopper"
+   ],
+   "victim": [
+    "they said I was scanning too fast",
+    "I had my receipt and they still took my stuff",
+    "they surrounded me at self checkout"
+   ],
+   "platform": [
+    "walmart self checkout accused",
+    "self checkout falsely accused",
+    "walmart ai camera self checkout"
+   ],
+   "shorts": [
+    "#walmart they accused me at self checkout #shorts",
+    "she had her receipt #shorts",
+    "#selfcheckout falsely accused",
+    "walmart stopped her #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "10-07",
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "L07-A5",
+  "segment_title": "BUT HERE'S THE QUESTION THAT MATTERS\u2026 ARE THEY USING ALL THIS TO CHARGE YOU MORE???",
+  "clip_role": "explainer_demo/creator_long",
+  "orientation": "horizontal",
+  "script_text": "LAST FALL, CONSUMER REPORTS SET OUT TO FIND OUT\u2026 / WITH TWO NONPROFITS, GROUNDWORK COLLABORATIVE AND MORE PERFECT UNION. / THEY GOT 437 VOLUNTEERS TO SHOP ON INSTACART\u2026 SAME STORE, SAME TIME, SAME GROCERIES. / AT A SAFEWAY IN WASHINGTON, D.C., ONE DOZEN LUCERNE EGGS SHOWED UP AT FIVE DIFFERENT PRICES\u2026 / \u2026 SOME SHOPPERS SAW PRICES UP TO 23% HIGHER\u2026 / \u2026 ABOUT $1,200 A YEAR!! / ERIC GARDNER IS A REPORTER WITH MORE PERFECT UNION WHO HELPED RUN THE TEST. / LISTEN TO WHAT HE FOUND WHEN HE LINED UP EVERYONE'S SCREENSHOTS\u2026",
+  "news_anchor": "More Perfect Union Consumer Reports Instacart price test 437 shoppers Eric Gardner",
+  "visual_spec": "reporter on camera with shoppers' screenshots side by side, investigative creator package",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "priority": 2,
+  "sourcability": "high",
+  "sourcability_note": "The study video itself is on YouTube: More Perfect Union and Consumer Reports osxr7xSxsGo 'We Had 400 People Shop For Groceries. What We Found Will Shock You.' (~4.76M views, 1,114s). Whether Eric Gardner is the on-camera reporter is unconfirmed until the transcript is read. Backups: Consumer Reports _I6qF2d3uYc, GMA U5Rt7aPBDUE, CBS Mornings ZyTwEDN5JvU (Instacart ends tests).",
+  "queries": {
+   "anchor": [
+    "More Perfect Union Instacart price test",
+    "Consumer Reports Instacart prices 437 shoppers",
+    "Eric Gardner More Perfect Union Instacart"
+   ],
+   "news": [
+    "Instacart shows different prices to different shoppers study",
+    "same groceries different prices Instacart investigation",
+    "Instacart ends AI price tests after report"
+   ],
+   "victim": [
+    "I paid more for the same eggs",
+    "my cart cost more than my neighbor's"
+   ],
+   "platform": [
+    "instacart different prices",
+    "instacart price test",
+    "surveillance pricing instacart"
+   ],
+   "shorts": [
+    "#instacart charged me more #shorts",
+    "same eggs different price #shorts",
+    "#groceryprices instacart test",
+    "400 people same cart #shorts"
+   ]
+  },
+  "platform_map": {
+   "youtube": [
+    "anchor",
+    "news",
+    "platform"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news",
+    "victim"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "horizontal"
+  },
+  "episode": "10-07",
+  "offsite_likely": false,
+  "expected_segments": 1,
+  "source_native": "none"
+ },
+ {
+  "beat_id": "L07-B1",
+  "segment_title": "THIS SHOPPER SCREENSHOTTED HER CART BEFORE PRIME DAY\u2026 LOOK WHAT SHE FOUND!",
+  "clip_role": "first_person_rant",
+  "orientation": "vertical",
+  "script_text": "KATELYN MONTALBANO HAD ABOUT 25 ITEMS SITTING IN HER AMAZON CART, WAITING FOR THE SALE. / BEFORE PRIME DAY STARTED\u2026 SHE TOOK A SCREENSHOT OF EVERY SINGLE PRICE. / THEN THE SALE KICKED OFF\u2026 AND EVERYTHING IN HER CART WAS SUDDENLY MARKED \"ON SALE.\" / SO SHE PULLED UP HER SCREENSHOT AND COMPARED THE TWO, ITEM BY ITEM. / SHOPPERS IN HER COMMENTS SAID THE EXACT SAME THING HAPPENED TO THEIR CARTS. / GUESS WHAT SHE FOUND WHEN SHE PUT THE PRICES SIDE BY SIDE???",
+  "news_anchor": "Katelyn Montalbano TikTok Amazon cart prices before during Prime Day",
+  "visual_spec": "vertical phone video, cart screenshots side by side, creator talking to camera",
+  "platforms": [
+   "tiktok",
+   "shorts",
+   "instagram",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "source_native": "tiktok",
+  "native_url": "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238",
+  "sourcability": "high",
+  "sourcability_note": "MANUAL LANE. Candidate native post found via Brave: @kb.montalbano, 'Katelyn Montalbano's short video'. ID decodes to 2025-07-05, days before the July 2025 Prime Day \u2014 consistent with 'screenshotted before Prime Day', and consistent with the source log's note that the video predates this sale. Not watched; confirm it is the cart video and not another post from the same account. No YouTube copy exists (confirmed on retry).",
+  "queries": {
+   "anchor": [
+    "Katelyn Montalbano Prime Day cart",
+    "kb.montalbano tiktok Amazon cart"
+   ],
+   "news": [
+    "shopper says Amazon cart prices went up before Prime Day",
+    "Amazon Prime Day fake discounts cart screenshot"
+   ],
+   "victim": [
+    "my cart went up before prime day",
+    "everything in my cart is on sale but it's the same price",
+    "I screenshotted my cart before the sale"
+   ],
+   "platform": [
+    "#primeday cart went up",
+    "amazon cart prices before prime day",
+    "prime day scam cart"
+   ],
+   "shorts": [
+    "#primeday my cart went up #shorts",
+    "screenshot your cart before prime day #shorts",
+    "#amazon fake sale prices",
+    "prime day is lying to you #shorts"
+   ]
+  },
+  "platform_map": {
+   "tiktok": [
+    "platform",
+    "victim",
+    "anchor"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "instagram": [
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "vertical"
+  },
+  "episode": "10-07",
+  "expected_segments": 1
+ },
+ {
+  "beat_id": "L07-B2",
+  "segment_title": "BUT THIS GUY CAN SHOW YOU HOW TO CATCH IT IN SECONDS!",
+  "clip_role": "explainer_demo/creator_short",
+  "orientation": "vertical",
+  "script_text": "A SHOPPER NAMED JAYMES WENT VIRAL ON TIKTOK WITH A PRIME DAY WARNING. / HE PULLED UP THE PRICE HISTORY ON A PRODUCT AMAZON HAD MARKED 41% OFF. / THE CHART SHOWED THE PRICE GOT BUMPED UP RIGHT BEFORE PRIME DAY. / SO THAT 41% OFF\u2026 CAME OFF A PRICE IT HAD NEVER REALLY SOLD FOR. / HE CALLS IT A DISCOUNT ON A FAKE PRICE\u2026 / AND HE SHOWS YOU THE EXACT TOOL HE USED TO SPOT IT. / WATCH HIM SHOW YOU HOW HE CAUGHT IT\u2026",
+  "news_anchor": "Jaymes semyajnotsemaj TikTok Prime Day 41% off fake price camelcamelcamel",
+  "visual_spec": "vertical screen-record or green-screen over a CamelCamelCamel price chart, creator voiceover",
+  "platforms": [
+   "tiktok",
+   "shorts",
+   "instagram",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "source_native": "tiktok",
+  "sourcability": "commentary_only",
+  "sourcability_note": "MANUAL LANE, permalink NOT pinned. Distractify (7/17/2024) names @semyajnotsemaj, the product (INIU wireless charger, 41% off at $15.98 vs an inflated $24.98), the tool (CamelCamelCamel), and the quote 'a 41 percent discount on a fake price' \u2014 but gives no video URL. Brave finds no permalink. Hand the producer profile + date + caption fragment. Two years old \u2014 can't sit under a 'this week' line (the script doesn't put it under one).",
+  "queries": {
+   "anchor": [
+    "semyajnotsemaj Prime Day",
+    "Jaymes TikTok Prime Day fake price camelcamelcamel",
+    "INIU charger 41% off Prime Day fake price"
+   ],
+   "news": [
+    "TikToker exposes fake Prime Day discounts with price history",
+    "Amazon raises prices before Prime Day to inflate discounts"
+   ],
+   "victim": [
+    "they gave you a discount on a fake price",
+    "it was never that price before prime day"
+   ],
+   "platform": [
+    "camelcamelcamel prime day",
+    "prime day fake discount",
+    "check price history amazon"
+   ],
+   "shorts": [
+    "#primeday fake discount #shorts",
+    "check price history before you buy #shorts",
+    "#camelcamelcamel prime day hack",
+    "41% off a fake price #shorts"
+   ]
+  },
+  "platform_map": {
+   "tiktok": [
+    "platform",
+    "victim",
+    "anchor"
+   ],
+   "shorts": [
+    "shorts",
+    "platform"
+   ],
+   "instagram": [
+    "platform"
+   ],
+   "news_web": [
+    "anchor",
+    "news"
+   ]
+  },
+  "shorts_search": {
+   "suffix": "#shorts",
+   "match_filter": "duration < 60",
+   "surfaced_for": "vertical"
+  },
+  "episode": "10-07",
+  "expected_segments": 1
+ }
+]
