@@ -27,8 +27,8 @@ and 2,000/month — consistent with a metered plan. Your $0 cap did not block an
 | A3 | explainer_demo/short | V b-roll | 3 | **THROTTLED** | Omni Talk Short `jqTpde_UWs4` · Instacart `IO1wx3zBR6s` (horizontal) | captions blocked; b-roll, so eyeball-able now |
 | A4 | victim_interview | H | 2 | **PICK (approved swap)** | Lesleigh Nurse, CBS/WKRG `kEN0nL8mtXw` | 2 verified segments; script rewritten |
 | A5 | explainer_demo/long | H | 2 | **THROTTLED** | More Perfect Union / Consumer Reports `osxr7xSxsGo` (~4.76M) | captions blocked |
-| B1 | first_person_rant | V | 1 | **LOCATED** | TikTok @kb.montalbano `/video/7523672986004606238` | manual; ID decodes to 2025-07-05; outcue UNVERIFIED |
-| B2 | explainer_demo/short | V | 2 | **LOCATED (profile only)** | TikTok @semyajnotsemaj | permalink could not be pinned |
+| B1 | first_person_rant | V | 1 | **LOCATED** | TikTok @kb.montalbano `/video/7392239491588705579` | manual; **corrected** — caption-confirmed, July 16, 2024 |
+| B2 | explainer_demo/short | V | 2 | **LOCATED** | TikTok `/video/7392290262262828318` (@jaymes.png, formerly @semyajnotsemaj) | caption-confirmed, July 16, 2024 |
 
 ## A4 — swap APPROVED and applied (checkpoint 2 closed)
 
@@ -92,3 +92,27 @@ bridge line inserted so the AI-camera lines don't sit directly over a case that 
 $2.1M verdict, the attributed $300M civil-recovery testimony, and that Walmart said it would appeal.
 
 **Before air:** confirm the appeal outcome; attribute the $300M figure as testimony; confirm Eric Gardner is on camera in A5.
+
+## CORRECTION — B1 was the wrong video (caught by the producer)
+
+The B1 link first delivered (`@kb.montalbano/video/7523672986004606238`) was **wrong**. It has an empty caption and was picked
+on two facts only: it was her account, and its ID decoded to a date just before a Prime Day. Neither says anything about what
+the video is. The bible shipped it as a clean blue link anyway.
+
+**Fixed:** the right post is `@kb.montalbano/video/7392239491588705579` (July 16, 2024), confirmed by its own caption —
+*"…up the original price and 'discount it' to its original price… Thats not a deal #amazonscams"* — and by the Daily Dot
+article the source log cites ("My cart went up $7!", 7/17/2024).
+
+**Same pass pinned B2:** `/video/7392290262262828318`, caption *"WATCH OUT FOR SCAMS ON AMAZON! Shop smarter this Prime Day"*.
+The account is now **@jaymes.png**.
+
+**A1 re-checked the same way and holds:** its caption matches, character for character, the embed The Mary Sue published with
+the worker quoted on camera ("You are now being tracked at Target… these baskets, this thing, that's a tracker").
+
+**B1 script lines to check** (not changed — they're script edits and yours to approve):
+- "ABOUT 25 ITEMS SITTING IN HER AMAZON CART" — not in her caption or the Daily Dot write-up.
+- "SHE TOOK A SCREENSHOT OF EVERY SINGLE PRICE" — same.
+- The "$7" in the source log is a commenter's line, not hers. The script doesn't use it.
+
+**Method change:** every native link is now checked against its TikTok oEmbed caption (a free metadata call) before it ships.
+A video ID's embedded date can rule a post *out*; it can never rule one *in*.

@@ -88,8 +88,8 @@ b05 EMPTY->PICK (re-attributed), b09 EMPTY->LOCATED (found by plain web search).
 | L07-A3 | explainer_demo/creator_short | V | THROTTLED | Caper Cart b-roll shortlisted (Omni Talk Short, Instacart official); captions bot-walled |
 | L07-A4 | victim_interview | H | PICK (approved swap) | Brianna Jones: no video anywhere reachable. Swapped to Lesleigh Nurse (Semmes, AL) CBS/WKRG kEN0nL8mtXw, 2 verified segments |
 | L07-A5 | explainer_demo/creator_long | H | THROTTLED | More Perfect Union/CR osxr7xSxsGo (~4.76M) shortlisted; captions bot-walled |
-| L07-B1 | first_person_rant | V | LOCATED | TikTok @kb.montalbano/video/7523672986004606238, native; ID decodes to 2025-07-05 |
-| L07-B2 | explainer_demo/creator_short | V | LOCATED | TikTok @semyajnotsemaj profile only — permalink unpinned |
+| L07-B1 | first_person_rant | V | LOCATED | TikTok @kb.montalbano/video/7392239491588705579 (July 16, 2024), caption-confirmed. First link shipped (…7523672986004606238) was WRONG — empty caption, picked on handle + date; producer caught it |
+| L07-B2 | explainer_demo/creator_short | V | LOCATED | TikTok /video/7392290262262828318 (account now @jaymes.png), pinned via Daily Dot embed, caption-confirmed |
 
 **Yield:** 1 PICK (approved swap) / 3 LOCATED / 3 THROTTLED of 7.
 **Patterns:**
@@ -97,8 +97,10 @@ b05 EMPTY->PICK (re-attributed), b09 EMPTY->LOCATED (found by plain web search).
    Step 5 caption fetch hit "Sign in to confirm you're not a bot", persisting past a 10-minute cooldown. Consider spacing Step 5
    from Step 3, or fetching captions for the shortlist before the full harvest completes. THROTTLED is logged separately from
    EMPTY so it doesn't read as a sourcing failure.
-2. **TikTok video IDs carry their upload time** (id >> 32 = unix seconds). That confirmed both native permalinks against the
-   script's dates without watching or scraping — cheaper and more reliable than trusting a search snippet.
+2. **~~TikTok video IDs confirm a permalink~~ — WRONG, and it shipped a wrong clip.** An ID's embedded upload time (id >> 32)
+   can rule a post OUT, never IN. B1 was picked on handle + ID date and was an unrelated, captionless post. The fix: check every
+   native link's caption with TikTok oEmbed (`tiktok.com/oembed?url=…`, free, no scraping) and match it to the story — or to a
+   publication's embed — before it goes in a bible. Caption-match confirmed A1 and pinned B2 in the same pass.
 3. **Named victims from lawsuit coverage often have no video at all.** A4's case exists only in text (Nexstar rewrites plus the
    Observer). Bibles built on a lawsuit filing should assume LOCATED-at-best unless an interview is confirmed first.
 4. **Name collisions are real.** A second Brianna Jones (Walmart manager, fraud case) sat in the candidate pool.

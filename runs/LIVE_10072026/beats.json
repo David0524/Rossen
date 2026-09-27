@@ -370,9 +370,9 @@
   "offsite_likely": true,
   "priority": 1,
   "source_native": "tiktok",
-  "native_url": "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238",
+  "native_url": "https://www.tiktok.com/@kb.montalbano/video/7392239491588705579",
   "sourcability": "high",
-  "sourcability_note": "MANUAL LANE. Candidate native post found via Brave: @kb.montalbano, 'Katelyn Montalbano's short video'. ID decodes to 2025-07-05, days before the July 2025 Prime Day \u2014 consistent with 'screenshotted before Prime Day', and consistent with the source log's note that the video predates this sale. Not watched; confirm it is the cart video and not another post from the same account. No YouTube copy exists (confirmed on retry).",
+  "sourcability_note": "Native post caption-confirmed: https://www.tiktok.com/@kb.montalbano/video/7392239491588705579 (July 16, 2024). An earlier wrong link (\u20267523672986004606238) was replaced.",
   "queries": {
    "anchor": [
     "Katelyn Montalbano Prime Day cart",
@@ -442,8 +442,8 @@
   "offsite_likely": true,
   "priority": 2,
   "source_native": "tiktok",
-  "sourcability": "commentary_only",
-  "sourcability_note": "MANUAL LANE, permalink NOT pinned. Distractify (7/17/2024) names @semyajnotsemaj, the product (INIU wireless charger, 41% off at $15.98 vs an inflated $24.98), the tool (CamelCamelCamel), and the quote 'a 41 percent discount on a fake price' \u2014 but gives no video URL. Brave finds no permalink. Hand the producer profile + date + caption fragment. Two years old \u2014 can't sit under a 'this week' line (the script doesn't put it under one).",
+  "sourcability": "high",
+  "sourcability_note": "Native post caption-confirmed via the Daily Dot embed: https://www.tiktok.com/@semyajnotsemaj/video/7392290262262828318. Account renamed @jaymes.png.",
   "queries": {
    "anchor": [
     "semyajnotsemaj Prime Day",
@@ -494,6 +494,7 @@
    "surfaced_for": "vertical"
   },
   "episode": "10-07",
-  "expected_segments": 1
+  "expected_segments": 1,
+  "native_url": "https://www.tiktok.com/@semyajnotsemaj/video/7392290262262828318"
  }
 ]

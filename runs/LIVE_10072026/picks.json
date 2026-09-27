@@ -7,7 +7,7 @@
   "platform": "tiktok",
   "title": "Target worker's basket-tracker TikTok (Aug 29, 2026)",
   "manual_url": "https://www.tiktok.com/@user60342208753/video/7679448051202657566",
-  "flagged_reason": "MANUAL LANE \u2014 a real outcome, not a gap. source_native is tiktok: the worker's own post is the pick. Handle matches the source log, and the video ID decodes to 2026-08-29 13:40 UTC, the script's date. Not watched. TikTok ships no caption track and yt-dlp's TikTok extractor is failing this run, so the outcue is UNVERIFIED and no timecode is given.",
+  "flagged_reason": "MANUAL LANE \u2014 a real outcome, not a gap. The worker's own post. Confirmed by CAPTION MATCH, not just handle and date: TikTok's oEmbed caption for this video ('mote data for them ig #files #government #flock') matches the embed The Mary Sue published, whose write-up quotes him on camera: 'You are now being tracked at Target\u2026 These baskets, this thing, that's a tracker.' Video ID decodes to 2026-08-29, the script's date. Not watched. No caption track, so the outcue is UNVERIFIED and no timecode is given.",
   "better_query": "n/a \u2014 permalink in hand. Pull the live view count on show day (script says 3.4M).",
   "source_mix": {
    "first_person": 1
@@ -457,9 +457,9 @@
   "flagged": null,
   "status": "manual_clip",
   "platform": "tiktok",
-  "title": "Katelyn Montalbano's short video (@kb.montalbano)",
-  "manual_url": "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238",
-  "flagged_reason": "MANUAL LANE. The creator's own post; ID decodes to 2025-07-05, days before the July 2025 Prime Day. Found by the pre-scan and independently by the harvest. Not watched \u2014 confirm it is the cart video. Outcue UNVERIFIED (no caption track).",
+  "title": "Katelyn Montalbano (@kb.montalbano) \u2014 Prime Day cart video, July 16, 2024",
+  "manual_url": "https://www.tiktok.com/@kb.montalbano/video/7392239491588705579",
+  "flagged_reason": "MANUAL LANE. CORRECTED PERMALINK. The earlier link (\u2026/7523672986004606238, July 2025) was WRONG \u2014 it has no caption at all and was chosen only on handle and date; the producer caught it. The right post, confirmed by its own caption and by the Daily Dot article the source log cites ('My cart went up $7!', 7/17/2024): 'Amazon Prime im disappointed. Dont market prine day if all youre going to do is up the original price and \u201cdiscount it\u201d to itd original price\u2026 Thats not a deal #amazonprimeday #amazonscams'. Posted 2024-07-16, day one of that Prime Day. Daily Dot quotes her on camera: 'When I got on this morning, I noticed that all they did was up the price and then keep it at its original price and tell me it's on sale.' Not watched; outcue UNVERIFIED.",
   "better_query": "n/a \u2014 permalink in hand.",
   "source_mix": {
    "first_person": 1
@@ -467,7 +467,7 @@
   "diversity_floor_applied": false,
   "ranked": [
    {
-    "url": "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238",
+    "url": "https://www.tiktok.com/@kb.montalbano/video/7392239491588705579",
     "source_type": "first_person",
     "score": 88,
     "tone": 9,
@@ -475,16 +475,25 @@
     "quality": 7,
     "fit": 9,
     "segments": [],
-    "reasoning": "The originating post.",
+    "reasoning": "The originating post, caption-confirmed.",
     "flags": [
-     "outcue UNVERIFIED",
-     "2025 video \u2014 keep it off any 'this week' line"
+     "outcue UNVERIFIED \u2014 no caption track; her Daily Dot-quoted line is a guide for the editor, not a verified outcue",
+     "2024 video \u2014 keep it off any 'this week' line",
+     "script says 'about 25 items' and 'a screenshot of every single price' \u2014 neither appears in her caption or the Daily Dot write-up; verify or soften",
+     "the '$7' in the source log is a COMMENTER's line ('Amazon is messy! My cart went up $7!'), not hers \u2014 the script doesn't use it; keep it that way"
     ]
    }
   ],
-  "rejected": [],
+  "rejected": [
+   {
+    "url": "https://www.tiktok.com/@kb.montalbano/video/7523672986004606238",
+    "source_type": "first_person",
+    "score": 0,
+    "reason": "WRONG VIDEO \u2014 same account, empty caption, July 2025. Picked on handle + date alone; producer caught it."
+   }
+  ],
   "cannot_determine": [
-   "that this is the cart post specifically"
+   "whether the video shows her cart screenshots side by side, as the script's setup promises"
   ]
  },
  {
@@ -493,34 +502,35 @@
   "flagged": null,
   "status": "manual_clip",
   "platform": "tiktok",
-  "title": "Jaymes (@semyajnotsemaj) \u2014 Prime Day fake-discount video, July 2024",
-  "manual_url": "https://www.tiktok.com/@semyajnotsemaj",
-  "flagged_reason": "MANUAL LANE, PROFILE ONLY \u2014 the specific video could not be pinned by Brave (web + video) or the harvest. Distractify (7/17/2024) supplies the content: INIU wireless charger, 41% off at $15.98 against an inflated $24.98, found on CamelCamelCamel; quote 'a 41 percent discount on a fake price'. Scroll the profile to mid-July 2024.",
-  "better_query": "Search TikTok in-app for @semyajnotsemaj, July 2024. Other creators' price-history TikToks exist (@chloesdealclub, @niickjackson) but the script names Jaymes.",
+  "title": "Jaymes (@jaymes.png, formerly @semyajnotsemaj) \u2014 'WATCH OUT FOR SCAMS ON AMAZON!', July 16, 2024",
+  "manual_url": "https://www.tiktok.com/@semyajnotsemaj/video/7392290262262828318",
+  "flagged_reason": "MANUAL LANE. Permalink now PINNED via the Daily Dot embed: \u2026/video/7392290262262828318. The account has been renamed @jaymes.png. Caption confirmed via oEmbed: 'WATCH OUT FOR SCAMS ON AMAZON! Shop smarter this Prime Day #Amazon #PrimeDay'. Posted 2024-07-16. Content per Distractify/Daily Dot: a wireless charger at 41% off ($15.98), CamelCamelCamel shows it normally sells for about $16-$18. Not watched; outcue UNVERIFIED.",
+  "better_query": "n/a \u2014 permalink in hand.",
   "source_mix": {
    "creator_short": 1
   },
   "diversity_floor_applied": false,
   "ranked": [
    {
-    "url": "https://www.tiktok.com/@semyajnotsemaj",
+    "url": "https://www.tiktok.com/@semyajnotsemaj/video/7392290262262828318",
     "source_type": "creator_short",
-    "score": 70,
+    "score": 84,
     "tone": 8,
     "authenticity": 9,
-    "quality": 6,
+    "quality": 7,
     "fit": 9,
     "segments": [],
-    "reasoning": "Profile of the named creator; permalink unpinned.",
+    "reasoning": "The originating post, caption-confirmed.",
     "flags": [
-     "permalink not found",
-     "2024 video"
+     "outcue UNVERIFIED",
+     "2024 video",
+     "account renamed to @jaymes.png \u2014 credit the current handle on air"
     ]
    }
   ],
   "rejected": [],
   "cannot_determine": [
-   "the permalink"
+   "the exact on-screen price chart"
   ]
  }
 ]

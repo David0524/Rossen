@@ -68,6 +68,9 @@ def block(bid):
               if "tiktok.com/@" in p["manual_url"] and "/video/" in p["manual_url"] else
               "PERMALINK NOT PINNED — profile only. Scroll to the dated post. No timecode invented.")
         out.append(para(run(note,AMBER)))
+        for f in (p.get("ranked") or [{}])[0].get("flags",[]):
+            if not f.lower().startswith("outcue unverified"):
+                out.append(para(run("NOTE: "+f,AMBER)))
     elif st=="throttled":
         top=p["ranked"][0]
         out.append(para(run(tag+"  ·  PENDING CAPTIONS — YOUTUBE BLOCKED THIS RUN",AMBER,True)))
