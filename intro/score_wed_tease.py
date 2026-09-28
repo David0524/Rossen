@@ -287,7 +287,7 @@ fx('rpg/cloth1.ogg', AT(5, 3) - .3, .3); fx('rpg/cloth2.ogg', AT(5, 3) + .15, .2
 fx('casino/card-slide-2.ogg', TOMAIL + .1, .3)
 fxp(BSB + 'bsb-1527_metal-mailbox-1.wav', AT(6), .6, .1, .35, 1.0); fx('casino/cards-pack-open-1.ogg', AT(6) + .02, .4); kick(AT(6), .9); H(AT(6), 'mailbox')
 for k in range(7): fx(('casino/card-place-2.ogg', 'casino/card-place-3.ogg')[k % 2], AT(6) + k * E8, .28, .2)
-for b in (1, 2, 3, 4): fx('casino/chips-stack-1.ogg', AT(6, b), .3, .25); H(AT(6, b), 'total')
+for b in (2, 3, 4): fx('casino/chips-stack-1.ogg', AT(6, b), .3, .25); H(AT(6, b), 'total')   # the total counts on 2, 3, 4
 whoosh(AT(7) - .14, .3)
 fxp(BSB + 'bsb-3022_old-camera-trigger.wav', AT(7), .6, 0, .3, 1.3); kick(AT(7), .8); one(CRASH_MF, AT(7), .2); H(AT(7), 'flash')
 fx('interface/scratch_004.ogg', AT(7, 3), .2); one(RIM, AT(7, 3), .3, .1); H(AT(7, 3), 'marker')

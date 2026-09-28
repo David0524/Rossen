@@ -262,6 +262,8 @@ The film's beats. Each scam gets three bars (7.5 s), and every card lands on its
 - **The promise (bars 9–10):** cut with the card WE'LL SHOW YOU / THE RED FLAGS. Jeff rises with his magnifier, which settles on three photos pinned to the case board, one per scam: the smoking car, the fake site and the copied plate. No flags and no fixes are shown, and there is no guest expert. The card holds for both bars, so its six words can be read twice.
 - **Handoff (bar 11):** the loop's pieces land on the beats, cut from its decoded frames with `assets/wedtease/loop_mask_*.png` (`tools/make_wed_masks.py`). The last tease frame is loop frame 119, so the cut into the loop is its own seamless wrap.
 
+Pass 3 (the "alive" pass, `_check/wedtease/review/review_log.md`): readable text lands from 1.05x with no wobble and 72 px captions; no other text lands with a caption (the site's name on 3:2, the ticket total on 6:2-4); close-ups (laptop, page, mailbox) on the approved textured cream, character scenes on lighter dots over a flat drawn sidewalk; puppets and cut-outs on twos (`twos()`, beat frames exact), breathing, heads that trail their landings, and the gasp as a squint then a take; the intro exits by diving into the little car as the driveway dissolves in.
+
 Nothing in it is real: a generic car, an invented dealership, plate ABC-0000, and no phone numbers or URLs. The plate is drawn as a generic plate (holder, stamped rim, two bolts, a blank sticker, embossed characters) with no real state design; once it's peeled off and lands, a scissor-cut edge and a curled corner show that it's paper.
 
 Audio: `score_wed_tease.py` composes bars 0–9 with VSCO 2 CE recordings:

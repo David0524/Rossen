@@ -56,7 +56,8 @@ const CAPS = [
   [at(6), TR.zoomTicket[0], '$3,000', 'IN TICKETS'], [at(7), at(8) - SLAM, "IT'S NOT", 'YOUR CAR'], [at(8), at(B_JEFF) - SLAM, 'SOMEONE COPIED', 'YOUR PLATE'],
   [at(B_JEFF), TR.toLoop[0], "WE'LL SHOW YOU", 'THE RED FLAGS.'],
 ];
-const capPop = (t, t0) => t < t0 ? lerp(1.1, 1, easeIn(land(t, t0))) : 1;   // scale only, level: lands ON the beat and is still from that frame
+const capPop = (t, t0) => t < t0 ? lerp(1.05, 1, easeIn(land(t, t0))) : 1;   // scale only, level, from 1.05x: lands ON the beat and is still from that frame (SKILL_NOTES 0)
+const gentle = capPop;   // the same landing for every readable prop label
 function chip(c, s, x, y, size, bg, fg, t, t0, maxW = 740) {
   if (t < t0 - SLAM) return; c.font = `${size}px Stamp`; const w = Math.min(c.measureText(s).width, maxW) + 60, h = size * 1.3, k = capPop(t, t0);
   c.save(); c.translate(x, y); c.scale(k, k);
@@ -65,14 +66,23 @@ function chip(c, s, x, y, size, bg, fg, t, t0, maxW = 740) {
 }
 function captionsTop(c, t) {   // drawn after the print finish: solid ink, no texture inside the letters
   for (const cp of CAPS) { const [t0, t1] = cp; if (t < t0 - SLAM || t >= t1) continue;
-    cp.slice(2).forEach((s, i) => chip(c, s, SCX, 376 + i * 112, 66, i ? BLUE : BLK, CHIP, t, t0)); }
+    cp.slice(2).forEach((s, i) => chip(c, s, SCX, 372 + i * 116, 72, i ? BLUE : BLK, CHIP, t, t0)); }   // 72 px: the standing 70-76 px caption size
 }
 const capOn = t => CAPS.some(([t0, t1]) => t >= t0 - SLAM && t < t1);
 
 // ================= small helpers =================
-const sy = y => SCY + (y - SCY) * K;   // content y -> screen y (backgrounds are drawn full-frame in screen space)
-function ground(c, yC, col = BLK, tint = .22, line = true) {   // a full-width ground band from content y yC down
-  screenSpace(c, () => { const y = sy(yC); ink(c, rect(-20, y, W + 40, H - y + 20), CREAM, 5200, { reg: false }); dotsIn(c, rect(-20, y, W + 40, H - y + 20), col, tint, 5201, 14); if (line) key(c, [[-20, y], [W + 20, y]], 6, 5202, false); });
+const sy = y => SCY + (y - SCY) * K;
+function twos(t) {   // 12 drawings a second, but every beat frame (15 frames apart) is drawn exactly, so landings stay on the beat
+  const f = Math.round(t * FPS), b = Math.floor(f / 15) * 15; if (f === b) return t;
+  return Math.max(b, f - (((f % 2) + 2) % 2)) / FPS;
+}
+const breath = (t, ph = 0) => .012 * Math.sin(t * 2.2 + ph);   // a slow breath (±1.2 %), each character on its own phase
+const lag = (t, t0, a = .14) => t < t0 ? 0 : -a * Math.exp(-(t - t0) * 7) * Math.sin((t - t0) * 17);   // overlap: a head that trails a landing, then settles   // content y -> screen y (backgrounds are drawn full-frame in screen space)
+function ground(c, yC, o = {}) {   // pavement: flat paper, a black kerb line and a few drawn joints; no dots (the sky carries the texture)
+  screenSpace(c, () => { const y = sy(yC); ink(c, rect(-20, y, W + 40, H - y + 20), CREAM, 5200, { reg: false });
+    key(c, [[-20, y], [W + 20, y]], 6, 5202, false);
+    if (o.kerb !== false) key(c, [[-20, y + 96], [W + 20, y + 96]], 4, 5203, false);                                     // the kerb edge of a sidewalk
+    if (o.joints !== false) for (let k = 0; k < 6; k++) { const x = 40 + k * 200; key(c, [[x, y + 8], [x - 22, y + 90]], 3, 5204 + k, false); } });   // slab joints
 }
 function starPts(cx, cy, r, rot = 0) { const p = []; for (let k = 0; k < 10; k++) { const a = -Math.PI / 2 + rot + k * Math.PI / 5, rr = k % 2 ? r * .45 : r; p.push([cx + Math.cos(a) * rr, cy + Math.sin(a) * rr]); } return p; }
 function shine(c, x, y, r, t, t0, seed = 1) {   // a four-point sparkle that pops in on t0 and twinkles
@@ -95,16 +105,16 @@ function mitten(c, x, y, s, rot) { c.save(); c.translate(x, y); c.rotate(rot); c
 // head with the smile repainted as an open "O" (tools/cut_sidekick.py)
 let MANP = null, SKP = null;
 function man(c, x, y, s, p = {}) {
-  const M = MANP; c.save(); c.translate(x, y); c.rotate(p.tilt || 0); c.scale(s * (p.sx || 1), s); c.translate(-M.feet[0], -M.feet[1] - (p.bob || 0));
-  const part = (k, a = 0, img = null) => { const m = M.parts[k], [px, py] = m.pivot; c.save(); c.translate(px, py); c.rotate(a); c.translate(-px, -py); c.drawImage(img || IMG['man_' + k], m.x, m.y); c.restore(); };
-  part('legL', p.legL || 0); part('legR', p.legR || 0); part('torso'); part('head', p.head || 0, p.gasp ? IMG.man_gasp : null); part('arm', p.arm || 0);
+  const M = MANP; c.save(); c.translate(x, y); c.rotate(p.tilt || 0); c.scale(s * (p.sx || 1), s * (1 + (p.breath || 0))); c.translate(-M.feet[0], -M.feet[1] - (p.bob || 0));
+  const part = (k, a = 0, img = null, hs = null) => { const m = M.parts[k], [px, py] = m.pivot; c.save(); c.translate(px, py); c.rotate(a); if (hs) c.scale(hs[0], hs[1]); c.translate(-px, -py); c.drawImage(img || IMG['man_' + k], m.x, m.y); c.restore(); };
+  part('legL', p.legL || 0); part('legR', p.legR || 0); part('torso'); part('head', p.head || 0, p.gasp ? IMG.man_gasp : null, p.headS); part('arm', p.arm || 0);
   c.restore();
 }
 // the Scammer's sidekick: cut from the user's drawing (assets/wedtease/sidekick_*). The oil can is its own piece, held in the
 // hand: pose { head, arm (the hand, at the cuff), can (the can in the hand), legL, legR, bob, tilt, sx } -> the spout tip
 function sidekick(c, x, y, s, p = {}) {
   const M = SKP, base = c.getTransform();
-  c.save(); c.translate(x, y); c.rotate(p.tilt || 0); c.scale(s * (p.sx || 1), s); c.translate(-M.feet[0], -M.feet[1] - (p.bob || 0));
+  c.save(); c.translate(x, y); c.rotate(p.tilt || 0); c.scale(s * (p.sx || 1), s * (1 + (p.breath || 0))); c.translate(-M.feet[0], -M.feet[1] - (p.bob || 0));
   const draw = k => { const m = M.parts[k]; c.drawImage(IMG['sk_' + k], m.x, m.y); };
   const pv = (k, a) => { const [px, py] = M.parts[k].pivot; c.translate(px, py); c.rotate(a); c.translate(-px, -py); };
   for (const k of ['legL', 'legR']) { c.save(); pv(k, p[k] || 0); draw(k); c.restore(); }
@@ -119,7 +129,7 @@ function sidekick(c, x, y, s, p = {}) {
 // pose { head, legL, legR, bob, tilt, sx, hand: [x, y] in the caller's coordinates or null, cashRot, fan }
 function scammerCash(c, x, y, s, p = {}) {
   const base = c.getTransform();
-  c.save(); c.translate(x, y); c.rotate(p.tilt || 0); c.scale(s * (p.sx || 1), s); c.translate(-SP.feet[0], -SP.feet[1] - (p.bob || 0));
+  c.save(); c.translate(x, y); c.rotate(p.tilt || 0); c.scale(s * (p.sx || 1), s * (1 + (p.breath || 0))); c.translate(-SP.feet[0], -SP.feet[1] - (p.bob || 0));
   const part = (k, a = 0) => { const m = SP.parts[k], [px, py] = m.pivot; c.save(); c.translate(px, py); c.rotate(a); c.translate(-px, -py); c.drawImage(IMG['s_' + k], m.x, m.y); c.restore(); };
   part('legL', p.legL || 0); part('legR', p.legR || 0); part('torso');
   mitten(c, 872, 676, 1.3, .3);   // the resting hand, where the reel was
@@ -181,7 +191,7 @@ function puff(c, x, y, r, seed, a = 1) {   // a paper-cutout smoke cloud: cream 
 // the fake dealership's website, drawn in its own 660 x 400 page coordinates. st: build state (each 0..1 or a time)
 function site(c, t, st) {
   ink(c, rect(0, 0, 660, 400), CHIP, 5701, { reg: false });
-  if (st.name) { const k = st.name(t); c.save(); c.translate(330, 32); c.scale(k, k); ink(c, rect(-330, -32, 660, 64), BLUE, 5702, { reg: false }); inkText(c, DEALER, 0, 3, 36, 'Stamp', CHIP, 600); c.restore(); }
+  if (st.name && t >= at(3, 2) - SLAM) { const k = st.name(t); c.save(); c.translate(330, 32); c.scale(k, k); ink(c, rect(-330, -32, 660, 64), BLUE, 5702, { reg: false }); inkText(c, DEALER, 0, 3, 36, 'Stamp', CHIP, 600); c.restore(); }
   if (st.car) { const k = st.car(t); c.save(); c.translate(205, 200); c.scale(k, k); c.translate(-205, -200);
     dotsIn(c, rect(20, 84, 370, 232), YEL, .35, 5703, 10); key(c, rect(20, 84, 370, 232), 4, 5704);
     sedan(c, 205, 294, .5, { col: BLUE, shine: true }); c.restore();
@@ -190,9 +200,9 @@ function site(c, t, st) {
   if (st.reviews && t >= st.reviews - SLAM) [150, 224].forEach((by, i) => { const k = pop(t, st.reviews + i * S16); c.save(); c.translate(525, by + 30); c.scale(k, k); c.translate(-525, -(by + 30));
     block(c, rrPts(412, by, 226, 62, 14), '#ffffff', 5720 + i, { kw: 4, reg: false }); for (let j = 0; j < 5; j++) ink(c, starPts(430 + j * 20, by + 18, 8), YEL, 5725 + j, { reg: false });
     ink(c, rect(430, by + 34, 150, 8), BLK, 5730 + i, { reg: false }); ink(c, rect(430, by + 47, 110, 8), BLK, 5732 + i, { reg: false }); c.restore(); });
-  if (st.pay && t >= st.pay - SLAM) { const k = pop(t, st.pay), paid = st.paid && t >= st.paid - SLAM; c.save(); c.translate(525, 345); c.scale(k, k);
+  if (st.pay && t >= st.pay - SLAM) { const k = gentle(t, st.pay), paid = st.paid && t >= st.paid - SLAM; c.save(); c.translate(525, 345); c.scale(k, k);
     block(c, rrPts(-113, -34, 226, 68, 20), paid ? BLUE : YEL, 5740, { kw: 5 }); inkText(c, paid ? 'PAID' : 'PAY NOW', paid ? -14 : 0, 3, 36, 'Stamp', paid ? CHIP : BLK, 190);
-    if (paid) { c.save(); c.translate(70, 0); c.scale(.28 * pop(t, st.paid), .28 * pop(t, st.paid)); block(c, [[-90, -5], [-40, 45], [95, -95], [120, -65], [-40, 105], [-120, 25]], YEL, 5741, { kw: 10 }); c.restore(); }
+    if (paid) { c.save(); c.translate(70, 0); c.scale(.28 * gentle(t, st.paid), .28 * gentle(t, st.paid)); block(c, [[-90, -5], [-40, 45], [95, -95], [120, -65], [-40, 105], [-120, 25]], YEL, 5741, { kw: 10 }); c.restore(); }
     c.restore(); }
 }
 function laptop(c, x, y) {   // lid + screen frame + deck; the screen is 660 x 400 at (x - 330, y - 220)
@@ -202,7 +212,7 @@ function laptop(c, x, y) {   // lid + screen frame + deck; the screen is 660 x 4
   c.restore();
 }
 const LAP = [480, 960], SCR = [LAP[0] - 330, LAP[1] - 220, 660, 400];
-const SITE_BUILD = { name: t => pop(t, at(3)), car: t => pop(t, at(3, 2)), carT: at(3, 2), stars: [0, 1, 2, 3, 4].map(k => at(3, 3) + k * S16 / 2), reviews: at(3, 4), pay: at(3, 4) + E8 };
+const SITE_BUILD = { name: t => gentle(t, at(3, 2)), car: t => pop(t, at(3)), carT: at(3), stars: [0, 1, 2, 3, 4].map(k => at(3, 3) + k * S16 / 2), reviews: at(3, 4), pay: at(3, 4) + E8 };
 const SITE_FULL = Object.assign({}, SITE_BUILD, { paid: at(4, 2) });
 
 // ================= scenes =================
@@ -210,8 +220,9 @@ const SITE_FULL = Object.assign({}, SITE_BUILD, { paid: at(4, 2) });
 const CAR = [800, 1340], CAR_LEN = .9, MAN = [150, 1352, .56], SCAM = [318, 1352, .56], SK = [578, 1352, .44];   // left to right: the man, the Scammer facing him, the car (hood at its left end; its tail runs off the right edge), the sidekick behind it
 const MAN_FACE = [126, 988], OILK = 1.1, OILP = [480, 1352];   // the driveway is staged small, then shown 1.1x about the frame's centre line
 const oilPt = ([x, y]) => [OILP[0] + (x - OILP[0]) * OILK, OILP[1] + (y - OILP[1]) * OILK];
-function sceneOil(c, t) {
-  bgDots(c, BLUE, .05, .28); ground(c, 1345, BLK, .16);
+function sceneOil(c, tRaw) {
+  const t = twos(tRaw);   // the puppets and cut-outs, on twos
+  bgDots(c, BLUE, .03, .18); ground(c, 1345);
   c.save(); c.translate(...OILP); c.scale(OILK, OILK); c.translate(-OILP[0], -OILP[1]);
   const puffT = at(2), [shx, shy] = shake(t, [[puffT, 16], [puffT + E8, 10], [puffT + BEAT, 8]]);
   const hood = seg(t, at(1, 2) - SLAM, at(1, 2) + .2);
@@ -224,7 +235,7 @@ function sceneOil(c, t) {
     const lean = .12 * easeIO(seg(t, at(1, 2) + .1, at(1, 3) - .05)) * (1 - easeOut(seg(t, puffT - .05, puffT + .15)) * 1.6);
     pour = easeIO(seg(t, at(1, 3) - SLAM, at(1, 3))) * (1 - easeIO(seg(t, puffT - .05, puffT + .2)));
     const glee = t > puffT ? .06 * Math.sin((t - puffT) * 16) : 0;
-    tip = sidekick(c, x, SK[1], SK[2], { tilt: lean, can: 1.9 * pour, arm: .2 * pour, head: glee + .04 * Math.sin(t * 3), bob: -(1 - rise) * 640 });
+    tip = sidekick(c, x, SK[1], SK[2], { tilt: lean, can: 1.9 * pour, arm: .2 * pour, head: glee + .04 * Math.sin(t * 3) + lag(t, at(1) + .05, .18), bob: -(1 - rise) * 640, breath: breath(t, 2) });
     c.restore();
   }
   c.save(); c.translate(shx, shy);   // the car stands in front of him: only his top half shows over it
@@ -238,16 +249,18 @@ function sceneOil(c, t) {
     }
   }
   // the man: he turns to the buyer; follows the cash; his jaw drops on 2:2
-  const gasp = t >= at(2, 2) - SLAM, jump = gasp ? 26 * Math.exp(-(t - at(2, 2)) * 6) * Math.abs(Math.cos((t - at(2, 2)) * 12)) : 0;
+  const gasp = t >= at(2, 2), jump = gasp ? 26 * Math.exp(-(t - at(2, 2)) * 6) * Math.abs(Math.cos((t - at(2, 2)) * 12)) : 0;
   const follow = t >= at(1) && t < at(2) ? .05 * Math.sin((t - at(1)) * TAU / E8 * .5) : 0;
-  man(c, MAN[0], MAN[1] - jump, MAN[2], { gasp, head: (t > at(0, 3) ? .06 : 0) + follow - (gasp ? .1 : 0) + .02 * Math.sin(t * 2.1), bob: Math.abs(Math.sin(t * Math.PI / (2 * BEAT))) * 3 });
+  const GT = at(2, 2), squint = t >= GT - .1 && t < GT, take = t >= GT ? .12 * Math.exp(-(t - GT) * 9) * Math.cos((t - GT) * 22) : 0;   // anticipation, then a take that overshoots and settles
+  const turn = easeOutBack(seg(t, at(0, 3) - .05, at(0, 3) + .25)) * .06;   // he turns to the buyer as he rises in, with a little overshoot
+  man(c, MAN[0], MAN[1] - jump, MAN[2], { gasp: t >= GT, headS: squint ? [1.06, .9] : [1 - take * .5, 1 + take], head: turn + follow - (t >= GT ? .1 : 0) + .02 * Math.sin(t * 2.1), bob: Math.abs(Math.sin(t * Math.PI / (2 * BEAT))) * 3, breath: breath(t) });
   // the Scammer rises in on 0:3 holding up the cash; fans it in the man's face on the eighths of bar 1
   if (t >= at(0, 3) - SLAM) {
-    const a = easeOutBack(land(t, at(0, 3))), yy = lerp(2300, SCAM[1], a), reach = easeOutBack(seg(t, at(1) - SLAM, at(1))) * (1 - easeIO(seg(t, puffT + BEAT, puffT + BEAT + .3)));
+    const a = easeOutBack(land(t, at(0, 3))), yy = lerp(2300, SCAM[1], a), reach = easeOutBack(seg(t, at(1) - SLAM, at(1))) * (1 - easeIO(seg(t, puffT, puffT + .3)))   // the cash pulls back on the puff, so his face is clear for the jaw drop;
     const fanW = t >= at(1) && t < at(2) ? Math.sin((t - at(1)) * TAU / E8 * .5) : 0;
     const hand = [lerp(SCAM[0] - 70, MAN_FACE[0] + 70, reach) + 14 * fanW, lerp(SCAM[1] - 330, MAN_FACE[1] + 150, reach)];   // the wad fans up over his face
     const smug = t > puffT ? .05 * Math.sin((t - puffT) * 12) : .03 * Math.sin(t * 3);
-    scammerCash(c, SCAM[0], yy, SCAM[2], { sx: -1, hand: [hand[0], hand[1] + (yy - SCAM[1])], cashRot: .25 * fanW + .2 * reach, fan: 1 + .25 * Math.abs(fanW), head: smug, bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 4 });
+    scammerCash(c, SCAM[0], yy, SCAM[2], { sx: -1, hand: [hand[0], hand[1] + (yy - SCAM[1])], cashRot: .25 * fanW + .2 * reach, fan: 1 + .25 * Math.abs(fanW), head: smug + lag(t, at(0, 3)), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 4, breath: breath(t, 4) });
   }
   // the smoke puff on 2:1, then the engine keeps coughing on the beats
   const cap = [CAR[0] + CAR_CAP[0] * CAR_LEN + shx, CAR[1] + CAR_CAP[1] + shy];
@@ -268,7 +281,7 @@ function smokeWall(c, t) {   // the engine smoke billows across the whole frame 
 
 // FAKE DEALERSHIP (bars 3-5)
 function sceneSiteBuild(c, t) {   // bar 3: the laptop; the site builds itself
-  bgDots(c, BLUE, .08, .4);
+  creamBg(c);   // close-ups on the approved textured cream
   laptop(c, ...LAP);
   c.save(); c.beginPath(); c.rect(...SCR); c.clip(); c.translate(SCR[0], SCR[1]); site(c, t, SITE_BUILD); c.restore();
   if (t < at(3, 4) + E8 + .2 && Math.floor(t * 8) % 2) { c.fillStyle = BLK; c.fillRect(SCR[0] + 620, SCR[1] + 360, 16, 26); }   // a blinking cursor while it builds
@@ -305,7 +318,7 @@ function pointer(c, x, y, rot, s = 1) {   // the man's hand, pointing: his yello
   c.restore();
 }
 function sceneSite(c, t) {   // bar 4: the page; the tap on 1; PAID on 2; the corner curls on 3
-  bgDots(c, BLUE, .08, .4);
+  creamBg(c);
   const wob = t > at(4, 3) ? .012 * Math.exp(-(t - at(4, 3)) * 5) * Math.sin((t - at(4, 3)) * 22) : 0;
   c.save(); c.translate(PAGE.x, PAGE.y + PAGE.h); c.rotate(wob); c.translate(-PAGE.x, -(PAGE.y + PAGE.h)); drawPage(c, t, 0, 1, PAGE.x, PAGE.y + PAGE.h / 2); c.restore();
   const tap = at(4), inn = easeOut(seg(t, tap - .5, tap)), out = easeIn(seg(t, tap + .25, tap + .7)), press = t >= tap && t < tap + .12 ? 10 : 0;
@@ -314,8 +327,9 @@ function sceneSite(c, t) {   // bar 4: the page; the tap on 1; PAID on 2; the co
 }
 const FLAT = { a: 1.18, sc: .8, hx: 40, hy: 960 };   // where the page ends up: a painted flat standing in the lot
 const GHOST = [650, 1390, .72];
-function sceneLot(c, t, withFlat = true) {   // bar 5: the empty lot behind the flat; the Scammer waves from behind it
-  bgDots(c, BLUE, .05, .3); ground(c, 1195, BLK, .3);
+function sceneLot(c, tRaw, withFlat = true) {
+  const t = twos(tRaw);   // bar 5: the empty lot behind the flat; the Scammer waves from behind it
+  bgDots(c, BLUE, .03, .18); ground(c, 1195, { joints: false });
   for (const [x0, x1] of [[330, 280], [940, 890]]) screenSpace(c, () => block(c, [[CX + (x0 - SCX) * K, sy(1205)], [CX + (x0 - SCX) * K + 22, sy(1205)], [CX + (x1 - SCX) * K + 30, H + 10], [CX + (x1 - SCX) * K, H + 10]], YEL, 6301 + x0, { kw: 0, key: false }));
   // where the dream car should be: a dashed outline, nothing inside
   c.save(); c.translate(GHOST[0], GHOST[1]); c.scale(GHOST[2], GHOST[2]); c.strokeStyle = BLK; c.lineWidth = 11; c.setLineDash([28, 18]); c.lineJoin = 'round';
@@ -327,7 +341,7 @@ function sceneLot(c, t, withFlat = true) {   // bar 5: the empty lot behind the 
   block(c, rrPts(fx + 96, bot - 24, 80, 38, 16), YEL, 6312, { kw: 4 });
   // the Scammer, behind the flat: leans out on 1, waves the cash on 2, 3, 4
   if (t >= at(5) - .3) { const out = easeOutBack(seg(t, at(5) - .1, at(5) + .25)), wave = Math.sin((t - at(5)) * TAU / BEAT);
-    scammerCash(c, lerp(fx - 150, fx + 10, out), 1235, .8, { tilt: .14 * out, hand: [lerp(fx - 40, fx + 230, out) + 50 * wave, 840 + 24 * Math.abs(wave)], cashRot: .35 * wave, fan: 1.2, head: .05 * Math.sin(t * 5) }); }
+    scammerCash(c, lerp(fx - 150, fx + 10, out), 1235, .8, { tilt: .14 * out, hand: [lerp(fx - 40, fx + 230, out) + 50 * wave, 840 + 24 * Math.abs(wave)], cashRot: .35 * wave, fan: 1.2, head: .05 * Math.sin(t * 5) + lag(t, at(5) + .25), breath: breath(t, 4) }); }
   // a tumbleweed rolls through the empty space on 3
   { const u = seg(t, at(5, 3) - .45, at(5, 4) + .2); if (u > 0 && u < 1) { const x = lerp(980, 340, u), y = 1380 - 70 * Math.abs(Math.sin(u * Math.PI * 3)); c.save(); c.translate(x, y); c.rotate(-u * 9);
     c.strokeStyle = BLK; c.lineWidth = 6; c.lineCap = 'round'; const r = rng(6320); for (let k = 0; k < 11; k++) { c.beginPath(); c.arc((r() - .5) * 30, (r() - .5) * 30, 26 + r() * 30, r() * TAU, r() * TAU + 2.6); c.stroke(); } c.restore(); } }
@@ -345,7 +359,7 @@ function swing(c, t) {   // 4 -> 5: the page swings back on its left hinge like 
 const BOX = [260, 1060], MOUTH = [BOX[0] + 170, BOX[1] + 10], STACK = [660, 1400];
 const MAILK = 1.3, MAILP = [470, 1400], mailPt = ([x, y]) => [MAILP[0] + (x - MAILP[0]) * MAILK, MAILP[1] + (y - MAILP[1]) * MAILK];
 const TICKET_T = [...Array(7).keys()].map(k => at(6) + k * E8);
-const TOTALS = ['$250', '$900', '$1,800', '$3,000+'];
+const TOTALS = ['$900', '$1,800', '$3,000+'];   // on beats 2, 3, 4
 function ticket(c, x, y, rot, s, seed) { c.save(); c.translate(x, y); c.rotate(rot); c.scale(s, s);
   c.save(); c.globalAlpha = .25; c.fillStyle = BLK; c.fillRect(-140 + 6, -80 + 8, 280, 160); c.restore();
   block(c, rect(-140, -80, 280, 160), CHIP, 6400 + seed, { kw: 4 }); ink(c, rect(-140, -80, 280, 30), BLK, 6401 + seed, { reg: false });
@@ -362,8 +376,9 @@ function mailbox(c, t) {
   block(c, [[-10, 0], [10, 0], [10, -200], [-10, -200]], BLUE, 6505, { kw: 5 }); c.restore();
   if (door > .2) ink(c, ellPts(MOUTH[0] - 4, MOUTH[1] + 10, 18, 80, 0, 24), BLK, 6506, { reg: false });
 }
-function sceneMail(c, t) {   // bar 6
-  bgDots(c, YEL, .08, .35); ground(c, 1400, BLK, .16);
+function sceneMail(c, tRaw) {   // bar 6
+  const t = twos(tRaw);
+  creamBg(c); ground(c, 1400);   // a close-up on the approved textured cream (and no yellow field: yellow stays a small accent)
   c.save(); c.translate(...MAILP); c.scale(MAILK, MAILK); c.translate(-MAILP[0], -MAILP[1]);
   mailbox(c, t);
   TICKET_T.forEach((t0, k) => { const [x, y, r] = stackPos(k), u = seg(t, t0 - .34, t0);
@@ -373,8 +388,8 @@ function sceneMail(c, t) {   // bar 6
   for (let k = 0; k < 4; k++) { const u = seg(t, at(6) - .05, at(6) + .9); if (u <= 0 || u >= 1) continue; ticket(c, MOUTH[0] - (60 + k * 50) * easeOut(u), MOUTH[1] - 200 * Math.sin(u * 2.2) + 120 * u * k * .3, u * 4 * (k % 2 ? 1 : -1), .55, 100 + k * 10); }
   c.restore();
   // the running total, on a yellow tag that stays put
-  const n = [1, 2, 3, 4].filter(b => t >= at(6, b) - SLAM).length;
-  if (n) { const b = n, k = pop(t, at(6, b)); c.save(); c.translate(700, 690); c.scale(k, k); c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-150 + 8, -52 + 10, 300, 104); c.restore();
+  const n = [2, 3, 4].filter(b => t >= at(6, b) - SLAM).length;
+  if (n) { const b = n, k = gentle(t, at(6, b + 1)); c.save(); c.translate(700, 690); c.scale(k, k); c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-150 + 8, -52 + 10, 300, 104); c.restore();
     block(c, [[-150, -52], [130, -52], [150, 0], [130, 52], [-150, 52]], YEL, 6510, { kw: 5 }); inkText(c, TOTALS[b - 1], -8, 5, 56, 'Stamp', BLK, 250); c.restore(); }
 }
 const topTicketRect = () => { const [x, y] = mailPt(stackPos(6)); return [x - 140 * MAILK, y - 80 * MAILK, 280 * MAILK, 160 * MAILK]; };
@@ -447,12 +462,13 @@ function picSite(pw, ph, c) { ink(c, rect(-pw / 2, -ph / 2, pw, ph), BLK, 6923, 
 function picPlate(pw, ph, c) { ink(c, rect(-pw / 2, -ph / 2, pw, ph), BLUE, 6924, { reg: false }); plateCard(c, 0, 4, .48, 0); }
 const PICS = [picOil, picSite, picPlate];
 function drawProps(c) { PROPS.forEach(([px, py], k) => { polaroid(c, px, py, 172, 212, [-.05, .03, -.03][k], 6930 + k * 5, (pw, ph) => PICS[k](pw, ph, c)); pushpin(c, px, py - 96); }); }
-function sceneJeff(c, t) {
-  bgDots(c, BLUE, .1, .45);
+function sceneJeff(c, tRaw) {
+  const t = twos(tRaw);
+  bgDots(c, BLUE, .05, .3);
   shadowRect(c, BOARD.x, BOARD.y, BOARD.w, BOARD.h); block(c, rect(BOARD.x, BOARD.y, BOARD.w, BOARD.h), CHIP, 6910, { kw: 6 });
   drawProps(c);
   const t0 = at(B_JEFF), jin = easeOutBack(land(t, t0)), raise = easeOut(seg(t, t0 + .1, at(B_JEFF, 2)));
-  const J = jeff(c, 190, lerp(2600, 1415, jin), .5, { armR: lerp(0, -2.05, raise), head: -.05 + .03 * Math.sin(t * 2), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 4 });
+  const J = jeff(c, 190, lerp(2600, 1415, jin), .5, { armR: lerp(0, -2.05, raise), head: -.05 + .03 * Math.sin(t * 2) + lag(t, t0), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 4, sy: 1 + breath(t, 1) });
   if (raise > 0) {   // the lens arrives on each prop on 2, 3, 4
     const ARR = [at(B_JEFF, 3), at(B_JEFF + 1, 1), at(B_JEFF + 1, 3)], MV = .35;   // the lens arrives on each prop on these beats
     const idx = t < ARR[1] - MV ? 0 : t < ARR[2] - MV ? 1 : 2;
@@ -494,8 +510,13 @@ sceneHandoff.finish = false;
 const INTRO_TITLE = '3 CAR SCAMS', INTRO_SUB = 'LIVE WEDNESDAY  ·  5 PM ET';
 function sceneIntro(c, t) {
   bgDots(c, BLUE, .12, .55);
-  const u = easeOut(seg(t, -INTRO, -INTRO + 2 * BEAT));   // it parks on beat 3
-  sedan(c, lerp(-420, SCX, u), 1392, .5, { len: CAR_LEN });
+  const tt = twos(t), u = easeOut(seg(tt, -INTRO, -INTRO + 2 * BEAT)), park = -INTRO + 2 * BEAT;   // it parks on beat 3 and rocks on its springs
+  const z = easeIn(seg(t, TR_INTRO[0], TR_INTRO[1])), zk = 1 + 1.8 * z;   // the exit: the camera dives into the little car (smooth, on ones)
+  c.save(); c.translate(SCX, 1330); c.scale(zk, zk); c.translate(-SCX, -1330);
+  const rock = tt > park ? .025 * Math.exp(-(tt - park) * 8) * Math.sin((tt - park) * 20) : 0;
+  c.save(); c.translate(lerp(-420, SCX, u), 1392); c.rotate(rock); sedan(c, 0, 0, .5, { len: CAR_LEN }); c.restore();
+  if (tt >= park) { const v = seg(tt, park, park + .5); if (v < 1) puff(c, SCX + 170 - 60 * v, 1370 - 50 * v, lerp(14, 34, v), 6050, 1 - v); }   // a little exhaust puff as it stops
+  c.restore();
   const a = introA(t); if (a <= 0) return;
   c.save(); c.globalAlpha = a; chip(c, INTRO_TITLE, SCX, 905, 104, BLK, CHIP, t, -INTRO, 760); chip(c, INTRO_SUB, SCX, 1062, 46, YEL, BLK, t, -INTRO, 700); c.restore();
 }

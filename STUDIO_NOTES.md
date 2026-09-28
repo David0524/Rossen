@@ -1,5 +1,17 @@
 # Studio notes: lessons adopted from the Opus 5.5 motion-design course
 
+**Precedence:** the client's standing direction in `intro/SKILL_NOTES.md` §0 and the Vox study (`intro/VOX_STUDY.md`) come
+first. Where the course disagrees, the client wins:
+- **No camera drift under captions** ("text lands, then holds still ... no drifting camera under it"). A caption is up in
+  almost every bar, so the course's "camera never dead" becomes: camera moves only at transitions, and the life comes from
+  the puppets and props (breathing, overlap, anticipation, on twos).
+- **Gentle landings for readable text**: from 1.05x at most, no wobble, still within 0.2 s; no other text moves while a
+  caption lands. Snap-and-overshoot is for characters and props, not words.
+- **Captions 70-76 px**, one idea per bar, at most a caption plus one prop label on screen.
+- **Backgrounds**: textured cream for close-ups, lighter blue dots for character scenes, flat drawn pavement; one dotted
+  field per scene at most. Yellow stays a small accent.
+- **On twos** (Vox): puppets and cut-outs hold each drawing two frames (beat frames stay exact); text and camera on ones.
+
 Source: the "How to build a motion design studio with Opus 5.5" thread (Movez, Sep 27 2026) and the repos it links. What's here
 is what applies to this repo's pipeline (Canvas 2D pages with a deterministic `__frame(i)`, puppeteer → PNG → ffmpeg, recorded
 instruments and recorded foley, the case-file screen-print look). Things that don't apply are listed at the end, with why.
