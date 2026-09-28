@@ -66,7 +66,7 @@ check(dmi < 1.0 and hold >= 2 * 3 / WPS,
 del IC
 
 say('\n== the logo bug (the official logo, top-left, from the first scene until the loop; not on the title card)')
-BG = frames(F, 0, NT, post='crop=140:84:28:300', size=(140, 84)).astype(np.int16)
+BG = frames(F, 0, NT, post='crop=140:84:40:48', size=(140, 84)).astype(np.int16)
 b0, b1 = int(np.ceil(OFF * FPS)), int(TR['toLoop'][0] * FPS) - 1
 from PIL import Image as _I
 lg = _I.open('assets/official_logo.png').convert('RGBA'); bb = lg.getbbox(); lg = lg.crop(bb).resize((140, round(140 * (bb[3] - bb[1]) / (bb[2] - bb[0]))), _I.LANCZOS)

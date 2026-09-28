@@ -39,8 +39,8 @@ Viewer feedback: the text was hard to read because of motion, speed and everythi
 
 ### Jeff's logo in the corner (V2, Jeff's request)
 The official logo sits small in the top-left corner throughout every video (`logoBug()` in vertkit.js), except on the intro
-title card and the outro (closing card or loop). It is the same file, untouched and opaque; the only corner clear of the
-platforms' UI and our caption chips.
+title card and the outro (closing card or loop). It is the same file, untouched and opaque; tight in the top-left corner at (40, 48)
+(the client found it too low at y 300).
 
 ### Every short ends on the live-show card (not the teases)
 Live viewers drive the rest of his revenue: sponsor rates, Super Chats and memberships. So every short and promo closes on `liveEndCard(c)` (vertkit.js), not the logo alone:

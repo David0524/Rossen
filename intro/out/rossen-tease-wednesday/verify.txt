@@ -17,21 +17,21 @@ PASS  every scene change happens inside a planned transition window (or the cut 
 PASS  on screen from frame 0 for 1.25 s, dead still (max change 0.17/255 over the logo, title and time; the little car drives in below them); reading the 3-word title twice at 300 wpm takes 1.20 s
 
 == the logo bug (the official logo, top-left, from the first scene until the loop; not on the title card)
-PASS  present and still (the rendered frames are pixel-identical there; the mp4 adds H.264 noise from the scenes changing around it, < 3/255) from 1.88 s to 28.96 s (max change over its opaque pixels 2.33/255); absent on the title card (frame 0 differs by 88.1/255); drawn untouched (opaque-interior colour within 4.3 levels of the file)
+PASS  present and still (the rendered frames are pixel-identical there; the mp4 adds H.264 noise from the scenes changing around it, < 3/255) from 1.88 s to 28.96 s (max change over its opaque pixels 2.36/255); absent on the title card (frame 0 differs by 85.8/255); drawn untouched (opaque-interior colour within 4.2 levels of the file)
 
 == the cards: one at a time, present and still for their whole time, readable twice
 PASS  no two cards on screen together (each leaves before the next starts to land)
 PASS  no transition runs while a card is up
-PASS  "SELLING YOUR CAR?": on screen 2.50 s (1.73-4.24), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.06/255, card box x 182-897 y 383-465
-PASS  "WHILE YOU'RE / DISTRACTED...": on screen 2.50 s (4.24-6.74), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.05/255, card box x 258-829 y 382-565
-PASS  "YOUR CAR: / WORTHLESS": on screen 1.95 s (6.74-8.69), dead still 1.83 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.08/255, card box x 300-787 y 382-565
+PASS  "SELLING YOUR CAR?": on screen 2.50 s (1.73-4.24), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.05/255, card box x 182-897 y 383-465
+PASS  "WHILE YOU'RE / DISTRACTED...": on screen 2.50 s (4.24-6.74), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.06/255, card box x 258-829 y 382-565
+PASS  "YOUR CAR: / WORTHLESS": on screen 1.95 s (6.74-8.69), dead still 1.83 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.03/255, card box x 300-787 y 382-565
 PASS  "BUYING A CAR / ONLINE?": on screen 2.28 s (9.23-11.52), dead still 2.17 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.02/255, card box x 253-827 y 382-565
 PASS  "THE DEALERSHIP / ISN'T REAL": on screen 2.12 s (11.73-13.86), dead still 2.00 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.02/255, card box x 212-867 y 383-565
-PASS  "THE CAR / DOESN'T EXIST": on screen 2.30 s (14.23-16.54), dead still 2.17 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.06/255, card box x 249-837 y 382-565
-PASS  "$3,000 / IN TICKETS": on screen 2.28 s (16.73-19.02), dead still 2.17 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.06/255, card box x 318-769 y 382-565
-PASS  "IT'S NOT / YOUR CAR": on screen 2.50 s (19.23-21.73), dead still 2.38 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.37/255, card box x 334-753 y 383-566
+PASS  "THE CAR / DOESN'T EXIST": on screen 2.30 s (14.23-16.54), dead still 2.17 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.03/255, card box x 249-837 y 382-565
+PASS  "$3,000 / IN TICKETS": on screen 2.28 s (16.73-19.02), dead still 2.17 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.05/255, card box x 317-769 y 382-565
+PASS  "IT'S NOT / YOUR CAR": on screen 2.50 s (19.23-21.73), dead still 2.38 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.41/255, card box x 334-753 y 383-566
 PASS  "SOMEONE COPIED / YOUR PLATE": on screen 2.50 s (21.73-24.23), dead still 2.38 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.04/255, card box x 192-887 y 383-565
-PASS  "WE'LL SHOW YOU / THE RED FLAGS.": on screen 4.80 s (24.23-29.04), dead still 4.67 s (reading it twice at 300 wpm takes 2.40 s), max change while still 0.03/255, card box x 204-875 y 383-566
+PASS  "WE'LL SHOW YOU / THE RED FLAGS.": on screen 4.80 s (24.23-29.04), dead still 4.67 s (reading it twice at 300 wpm takes 2.40 s), max change while still 0.04/255, card box x 204-875 y 383-566
       every card sits level (no rotation in wed-tease.js chip()); the promise card is level; solid ink with nothing drawn over it (drawn after the print finish)
 
 == the beat of silence before the promise
@@ -41,7 +41,7 @@ PASS  23.760-24.363 s: peak -83.4 dBFS, rms -118.2 dBFS (the beat before it: rms
 PASS  loop copy 1 (frames 765-884) decodes identical to the delivered loop, pixel for pixel: 120/120 frames
 PASS  loop copy 2 (frames 885-1004) decodes identical to the delivered loop, pixel for pixel: 120/120 frames
 PASS  the tease's last frame is the loop's own frame 119 (decoded from the delivered file, re-encoded once): mean difference 2.75/255
-PASS  the cut 764 -> 765 changes the picture by 8.32/255; the loop's own wrap (119 -> 0) by 6.46/255, plus the re-encode 2.75: no frame jump
+PASS  the cut 764 -> 765 changes the picture by 8.31/255; the loop's own wrap (119 -> 0) by 6.46/255, plus the re-encode 2.75: no frame jump
       the cut 884 -> 885 (loop into loop) is the loop's own wrap: both copies decode identical to the delivered loop (above)
 PASS  audio at 31.9 s (tease into loop): -26.9 -> -11.5 dBFS (50 ms rms; the loop's own wrap: -26.9 -> -11.5); largest sample step 0.068 vs 0.141 (99.9th pct nearby): no bump
 PASS    the audio after it matches the delivered loop's audio: correlation 0.99974 (re-encoded once in the mux; the video is untouched)
@@ -60,6 +60,6 @@ PASS  copy 2, packet 1 (the key frame): all its NAL units are byte-identical ([(
       cards: every card box above lies inside x 164-916 and below y 288
 
 == preview
-PASS  out/rossen-tease-wednesday/preview_crf21.mp4: 21.7 MB, x264 crf=21.0, 1005 frames, audio aac
+PASS  out/rossen-tease-wednesday/preview_crf21.mp4: 21.6 MB, x264 crf=21.0, 1005 frames, audio aac
 
 0 failed

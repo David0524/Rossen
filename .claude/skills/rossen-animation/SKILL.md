@@ -73,9 +73,9 @@ Settled conflicts: no camera drift or push while a caption is up (the camera mov
 
 - **Opens** on a 1–2 s title card: the official logo from its file, untouched, after the print finish; the title; a short line
   (show day and time). Still and level from frame 0; one moving element below it is fine; it fades and dissolves out (≤ 0.5 s).
-- **Logo bug** (Jeff's request): `logoBug()` (vertkit.js) throughout the video, top-left at (28, 300), 140 px, the official logo
+- **Logo bug** (Jeff's request): `logoBug()` (vertkit.js) throughout the video, top-left corner at (40, 48), 140 px, the official logo
   untouched and opaque, drawn last in screen space; fades in with the first scene and out into the outro; never on the title
-  card, the closing card or a loop. Keep scene content and captions clear of its box (x 28–168, y 300–384).
+  card, the closing card or a loop. Keep scene content and captions clear of its box (x 40–180, y 48–132).
 - **Ends**: shorts on the closing card (`liveEndCard`, with YouTube, Instagram and Facebook for new films), still for at least a
   bar; teases on their LIVE TODAY loop ×2 (stream copy, the loop's own wrap); loops loop.
 - **Readable text** (craft.md §0): ALL CAPS on a solid chip, captions 70–76 px, rotation 0, from 1.05× at most with no wobble,
