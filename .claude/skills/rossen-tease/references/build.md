@@ -1,22 +1,27 @@
 # Building a new tease from the Wednesday build
 
-Work in `intro/`. `<day>` is `wed` or `fri`; `<Day>` is `wednesday` or `friday`. The Wednesday files are the reference. Copy
-them and change only what's listed here, so the proven parts (captions, handoff, joins, verify) stay identical.
+Work in `intro/`. Every new tease gets its own **slug**: `<wd>_<topic>`, lowercase with underscores (so Python scripts stay importable), e.g.
+`fri_giftcards` or `wed_carscams2` (`<wd>` is `wed` or `fri`). (The approved Wednesday tease predates this and uses
+`wed-tease.js`, `score_wed_tease.py`, `assets/wedtease/`, `_check/wedtease/`.) Never reuse or overwrite an existing tease's names: `rossen-tease-friday.html`, `friday-tease.js`,
+`score_tease.py`, `tools/build_tease.sh` and `tools/make_tease_masks.py` belong to the older Friday Amazon-codes tease (`final-videos/12`, which the client calls a demo; it predates the title card and the loop ×2 rule, so it is not a template),
+and the `*wed*`/`*wednesday*` files to the approved Wednesday tease. `<Loop>` below is the loop's own folder name:
+`wednesday` or `friday` (`out/rossen-loop-<Loop>/`). The Wednesday files are the reference. Copy them and change only what's
+listed here, so the proven parts (captions, handoff, joins, verify) stay identical.
 
 ## Files
 
 | copy from | to | change |
 |---|---|---|
-| `rossen-tease-wednesday.html` | `rossen-tease-<Day>.html` | title, script name |
-| `wed-tease.js` | `<day>-tease.js` | the header timeline comment, `CAPS`, `TR`, the scenes, `INTRO_TITLE`/`INTRO_SUB`, the loop frames path, the masks folder |
-| `score_wed_tease.py` | `score_<day>_tease.py` | `ROWS` (chords per bar), the melodic lines, the foley block, `LOOP_MP4`, the output folder, the audio_sources header |
-| `tools/build_wed_tease.sh` | `tools/build_<day>_tease.sh` | `O=`, `L=` (the loop file), the html and score names |
-| `tools/verify_wed_tease.py` | `tools/verify_<day>_tease.py` | `LOOP`, `NT` (frames before the loop), `TR`, `CAPS`, `FLASH`, `SCAMS`, the intro title |
-| `tools/make_wed_masks.py` | `tools/make_<day>_masks.py` | `LOOP` frames folder, the assets folder |
+| `rossen-tease-wednesday.html` | `rossen-tease-<slug>.html` | title, script name |
+| `wed-tease.js` | `<slug>.js` | the header timeline comment, `B_JEFF`, `B_HAND`, `DUR`, `CAPS`, `TR`, `FLASH`-style windows, the scenes, `INTRO_TITLE`/`INTRO_SUB`, the loop frames path (`out/rossen-loop-<Loop>/frames`), the masks folder (`assets/<slug>/`) |
+| `score_wed_tease.py` | `score_<slug>.py` | `ROWS` (chords per bar), `B_JEFF`, `B_HAND`, `END`, `LOOP_IN`, `SIL`, the transition times, the melodic lines, the foley block, `LOOP_MP4`, the output folder `out/rossen-tease-<slug>`, the sources-notes file, the audio_sources header |
+| `tools/build_wed_tease.sh` | `tools/build_<slug>.sh` | `O=`, `L=` (the loop file), the html, score and verify names, the loop frames folder, the safe-pass list (`range(48)` → `range(4 * (S + 3))`), the `_check/<slug>/` folder |
+| `tools/verify_wed_tease.py` | `tools/verify_<slug>.py` | `LOOP`, `NT` (`45 + 60 * (S + 3)`), `TR`, `CAPS`, `FLASH`, `SCAMS`, the intro title |
+| `tools/make_wed_masks.py` | `tools/make_<slug>_masks.py` | `LOOP` frames folder, the assets folder |
 | `tools/cut_sidekick.py` | `tools/cut_<name>.py` | only when a new character is attached |
 
-Assets for the film go in `assets/<day>tease/`; check renders go in `_check/<day>tease/` (the safe pass in `safe/`, critique
-rounds in `review/`).
+Assets for the film go in `intro/assets/<slug>/`; check renders go in `intro/_check/<slug>/` (the safe pass in `safe/`,
+critique rounds in `review/`). The render output folder is `intro/out/rossen-tease-<slug>/` (from the html name).
 
 ## What stays exactly as in the Wednesday film (don't rewrite)
 
@@ -35,26 +40,26 @@ rounds in `review/`).
 ```sh
 cd intro
 L="../final-videos/09 Live Today Loop - Wednesday 5 PM (9x16).mp4"   # Friday: 10 Live Today Loop - Friday 10 AM (9x16).mp4
-md5sum "$L" out/rossen-loop-<Day>/rossen-loop-<Day>.mp4            # the delivered loop and the repo copy must match
+md5sum "$L" out/rossen-loop-<Loop>/rossen-loop-<Loop>.mp4            # the delivered loop and the repo copy must match
 ffprobe -v error -show_entries stream=width,height,r_frame_rate,nb_frames "$L"   # 1080x1920, 24/1, 120
 
 # the loop's frames, decoded read-only (for the handoff bar and the masks)
-rm -rf out/rossen-loop-<Day>/frames && mkdir -p out/rossen-loop-<Day>/frames
-ffmpeg -v error -i "$L" -start_number 0 out/rossen-loop-<Day>/frames/%04d.png
+rm -rf out/rossen-loop-<Loop>/frames && mkdir -p out/rossen-loop-<Loop>/frames
+ffmpeg -v error -i "$L" -start_number 0 out/rossen-loop-<Loop>/frames/%04d.png
 
 # masks: the loop's bare background from the tease page, then the diff
-node render.mjs --html rossen-tease-<Day>.html --query plate=1 --only 0
-cp out/rossen-tease-<Day>_check/frames/0000.png assets/<day>tease/loop_plate.png
-python3 tools/make_<day>_masks.py            # check the overlay: each band must hold one loop piece
+node render.mjs --html rossen-tease-<slug>.html --query plate=1 --only 0
+cp out/rossen-tease-<slug>_check/frames/0000.png assets/<slug>/loop_plate.png
+python3 tools/make_<slug>_masks.py            # check the overlay: each band must hold one loop piece
 
 # the critique loop (before any full render): one frame per beat, then a sheet
-node render.mjs --html rossen-tease-<Day>.html --only $(python3 -c "print(','.join(['0','20','30','40']+[str(45+k*15+7) for k in range(48)]))")
+node render.mjs --html rossen-tease-<slug>.html --only $(python3 -c "S=9; print(','.join(['0','20','30','40']+[str(45+k*15+7) for k in range(4*(S+3))]))")   # S = story bars
 # strips around fast actions: render 12-16 consecutive frames and tile them
 # phone test (after a build): ffmpeg -i preview.mp4 -vf "fps=1,scale=360:-1,tile=8x4" -frames:v 1 phone.png
 
 # the whole thing: render, score, join ×2, preview, sync, verify, safe pass
-sh tools/build_<day>_tease.sh                 # SKIP_RENDER=1 reuses frames/video.mp4 after a score-only change
-tail -1 out/rossen-tease-<Day>/verify.txt     # must be "0 failed"
+sh tools/build_<slug>.sh                 # SKIP_RENDER=1 reuses frames/video.mp4 after a score-only change
+tail -1 out/rossen-tease-<slug>/verify.txt     # must be "0 failed"
 ```
 
 A render of 1005 frames takes about 2.5 minutes; the full build about 5 minutes. After changing only a few frames, re-render
@@ -67,7 +72,7 @@ those with `--only`, re-encode `video.mp4` from the frames folder with the same 
   expected (verify checks every other NAL unit byte for byte).
 - **Masks from decoded frames** need a diff threshold of 90 (codec noise on halftone edges reaches ~60).
 - **The decoded AAC** of the loop has 640 samples of padding after 5.000 s: trim to `5 * SR`.
-- **Render output collisions**: rendering a loop page writes into `out/rossen-loop-<Day>/frames`, the same folder the tease
+- **Render output collisions**: rendering a loop page writes into `out/rossen-loop-<Loop>/frames`, the same folder the tease
   reads its decoded frames from. Re-decode after any loop render.
 - **A comment pasted mid-line** can swallow the rest of a JS statement (the intro car vanished). Put comments at line ends.
 - **Hits masked by the loop cue**: in the last two bars the measured onsets are the loop's own (8–16 ms "late" in the original

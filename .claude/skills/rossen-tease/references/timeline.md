@@ -16,8 +16,18 @@ time + the intro pickup.
 | 11 | handoff | the loop's own page: its pieces land on beats 1–4 (masks), full loop frames from beat 4 + 0.1 s |
 | then | loop ×2 | appended by stream copy |
 
-Two stories → 3 bars each is still right; four stories → 2 bars each only if every card is 4 words or fewer. Tease length
-target 25–30 s (the brief's range), total with the loop ×2 about 35–42 s. Pick the length the story needs; whole bars only.
+### Maps by story count (S = story bars in total; the length counts the bars, not the intro pickup)
+
+| stories | bars each | S | promise | handoff | bars | tease | with the intro | NT (frames before the loop) |
+|---|---|---|---|---|---|---|---|---|
+| 2 | 4 | 8 | 8–9 | 10 | 11 | 27.5 s | 29.375 s | 705 |
+| 3 | 3 | 9 | 9–10 | 11 | 12 | 30.0 s | 31.875 s | 765 |
+| 4 | 2 | 8 | 8–9 | 10 | 11 | 27.5 s | 29.375 s | 705 (only if every card is 4 words or fewer) |
+
+General: `B_JEFF = S`, `B_HAND = S + 2`, `DUR = at(S + 3)`, `NT = 45 + 60 * (S + 3)`, beats for the safe pass = `4 * (S + 3)`.
+The musical stop is beat 3 of bar `S − 1` (the last story bar), beat 4 silent; the composed part runs to the end of bar `S`
+(Jeff's confident bar); the loop's own cue enters on bar `S + 1` and plays under the last two bars. The brief's 25–30 s range
+means the bars (without the intro); the total with the loop ×2 is about 39–42 s. Whole bars only.
 
 ## Timing constants (from the approved build)
 
@@ -35,10 +45,14 @@ target 25–30 s (the brief's range), total with the loop ×2 about 35–42 s. P
 
 ## Card rules (check each one on the contact sheet)
 
-- 72 px Bowlby One SC (`Stamp`), cream on black for line 1, cream on blue for line 2; two lines at most; ≤ 16 characters a line.
-- `fitText` must not squeeze a line below 85 % of its natural width; measure with PIL and the font file before building.
+- 72 px Bowlby One SC (`Stamp`), cream on black for line 1, cream on blue for line 2; two lines at most.
+- The chip's text box is `maxW = 740` content px (`chip()` in the film). `fitText` must not squeeze a line below 85 %, so a
+  line may measure at most **870 px** at 72 px. Measure every line before building:
+  `python3 -c "from PIL import ImageFont; f=ImageFont.truetype('intro/assets/fonts/BowlbyOneSC-Regular.ttf',72); print(f.getlength('YOUR LINE'))"`
+  (character counts don't guarantee a fit: 16 wide capitals can reach 800 px).
 - Card band: content y ≈ 330–540 (screen 330–600). Scene content starts below content y ≈ 560.
-- No prop label lands on a card's downbeat: move it to beat 2 (the site's name, the ticket total).
+- No prop label lands or moves on a card's downbeat: move it to beat 2 (the site's name, the ticket total). Static prop text
+  already on screen (a phone's message) may stay while a card lands.
 - At most a card plus one prop label on screen.
 
 ## Sound on the grid

@@ -44,10 +44,10 @@ From `.claude/skills/claude-animation/references/motion.md` and the course's spr
   transition. Put the ease on the settle, not the change.
 - **Anticipation**: a small move the opposite way first (lean back before the tug, sink before the pop).
 - **Overlap**: parts arrive at different times: body first, head and hands 2–3 frames later.
-- **Holds need life**: breathing (±2 %), a blink every ~3 s, a slow head drift. Our puppets currently hold stiff apart from a
+- **Holds need life**: breathing (±1.2 % in our films), a blink every ~3 s, a slow head drift. Our puppets currently hold stiff apart from a
   head sine; add breathing and overlap on every puppet call.
 - **Loops never in phase**: every repeated thing gets its own phase offset.
-- **Camera**: a slow push (+5–10 % over a shot) keeps a held shot from reading as a slide. Keep cards and logos out of the
+- **Camera** (course advice; for Rossen films only where no card is up, i.e. in transitions): a slow push (+5–10 % over a shot) keeps a held shot from reading as a slide. Keep cards and logos out of the
   camera transform.
 - **Scale**: at 1x, a small character on a 1920-tall frame reads as an icon. Stage characters big (the course's ~1.3x world
   zoom). This matches the notes on the Wednesday opening ("crowded", later fixed by letting the car run off the edge).
@@ -72,7 +72,7 @@ Read, not installed (they are film projects, not skills). The points that transf
 - **Push poses further than feels natural**; subtle reads as nothing. Block key poses as stills before in-betweens.
 - **Characters big**: about 40 % of frame height in hero shots.
 - **Props touch the hand**: compute the prop's point from the same pose and check it with a crop.
-- **The camera is never dead**: every shot has a slow drift, push, pan or an on-beat shake. **Sets, not cards**: a chapter
+- **The camera is never dead** (course advice; overridden for Rossen films: no drift under a card, so this applies only to shots without one): every shot has a slow drift, push, pan or an on-beat shake. **Sets, not cards**: a chapter
   happens in one place and the camera moves through it.
 - **Every seam gets a transition that belongs to the story**, including into the first shot. For the case-file look: a folder
   slamming shut, a stamp filling the frame, a zoom into a document. (Our briefs ask for one or two creative transitions and
@@ -100,7 +100,8 @@ grammar, never the content. The demo-reel pause ("so far from Jeff's animation")
 
 Centered title on a gradient; everything fading in; corner labels and frame borders; glow on UI; generic particle bursts;
 dead beats. Note: the new intro title card rule (CLAUDE.md) risks the first one. Keep the card on the case-file look, make it
-land with a hit (a stamp, a slam) rather than a fade, and give it one moving element so it's a hook, not a slide.
+land with a hit rather than a slide-in (it is already landed at frame 0, with the music's downbeat as the hit), give it one
+moving element below it (the Wednesday card's little car), and exit with a fade + dissolve (the client asked for the fade).
 
 ## 5. Briefs and packaging
 

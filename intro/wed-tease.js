@@ -30,7 +30,7 @@
                            the fake site on 10:1 and the paper plate on 10:3 (no flags and no fixes shown); (10:4&) the camera
                            drops to the loop
    HANDOFF    bar 11 27.5  the loop's own page; its pieces land on the beats in their exact places (logo on 1, LIVE TODAY on 2,
-                           5 PM ET + WEDNESDAY on 3, LIVE ON YOUTUBE + Jeff on 4), and from 29.6 s it is the loop's own frames,
+                           5 PM ET + WEDNESDAY on 3, the LIVE ON row (the platform logos; its mask file is still named loop_mask_youtube) + Jeff on 4), and from 29.6 s it is the loop's own frames,
                            so the cut at 30.0 s is the loop's seamless wrap.
    Nothing here is real: a generic car, an invented dealership (TOTALLY REAL MOTORS), plate ABC-0000, no phone numbers or URLs.
 */
