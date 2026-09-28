@@ -37,3 +37,11 @@ THE CAR / DOESN'T EXIST · $3,000 / IN TICKETS · IT'S NOT / YOUR CAR · SOMEONE
 
 Pattern: a question to open, then the turn of each story in two short lines, a dollar figure where there is one, and the
 promise last (level, two bars).
+
+## Lessons the client picked from the outside references (2026-09-28): on trial
+The client noted REFERENCES.md lessons 11, 13, 14 and 15 and asked for a 5 s demo (`intro/style-demo.js`,
+`out/rossen-style-demo/rossen-style-demo.mp4`). Its verdict is still pending, so none of these is standing direction yet:
+- **11** Print marks as decoration: crop marks, registration targets and a colour bar around a printed panel, instead of more dots.
+- **13** Halftone dots as shading, locked to each puppet part (`shadedPart`: black dots away from the light, blue rim-light dots on dark coats).
+- **14** A real paper scan (ambientCG Paper002, CC0) overlaid through every ink in screen space (`paperFinish`), replacing the generated specks.
+- **15** Fewer inks per shot: blue and black first, with yellow held back as the warning ink (the disguise's yellow reprinted blue in bar 0).
