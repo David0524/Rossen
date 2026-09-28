@@ -1,6 +1,8 @@
-# What the client said about teases, and what fixed it
+# What the client said, and what fixed it
 
-Each row is a real note from a review round (Friday tease, Wednesday car-scams tease). Check your plan and your contact sheet
+The general notes from earlier films (readability, pacing, sync, legibility, centring) are in `craft.md` §0 and §9. This
+file collects the notes from the tease rounds. Each row is a real note from a review round (Friday tease, Wednesday car-scams
+tease); most apply to every film type. Check your plan and your contact sheet
 against every row before showing anything.
 
 | the note | the cause | the fix (now a rule) |
@@ -16,7 +18,7 @@ against every row before showing anything.
 | "Did you cut the frames per second?" / "Everything feels very laggy." | Puppets on twos (12 drawings/s) | Everything on ones (24 fps). Never on twos. |
 | "The car in the intro drives in backwards." | The car faces left but entered from the left | A vehicle enters nose first: it comes in from the side it faces away from. Check the direction of every mover on a strip. |
 | (Found in critique) the jaw drop was hidden behind the cash | The occluder left one beat after the reaction | A reaction must be visible when it happens: clear anything in front of a face before the face acts. Check reactions on a strip. |
-| (Standing direction) text hard to read | Tilted, bouncing, fast cards | Cards level, from 1.05× at most, dead still, 70–76 px, read-twice time, no camera drift under them (SKILL_NOTES §0). |
+| (Standing direction) text hard to read | Tilted, bouncing, fast cards | Cards level, from 1.05× at most, dead still, 70–76 px, read-twice time, no camera drift under them (craft.md §0). |
 
 ## The acting pass that made it feel alive (keep it)
 

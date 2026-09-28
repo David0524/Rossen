@@ -44,7 +44,7 @@ each point. Skip generic advice and anything specific to another stack.
 ## Checking a plan (optional second opinion)
 
 ```
-Read /home/user/Rossen/.claude/skills/rossen-tease/SKILL.md and its references/, intro/SKILL_NOTES.md §0 and
+Read /home/user/Rossen/.claude/skills/rossen-animation/SKILL.md and its references/, references/craft.md §0 and
 STUDIO_NOTES.md. Then read this plan: [the timeline comment]. List every rule the plan breaks or risks breaking (cards,
 timing, transitions, safe zone, content rules), with the bar and the rule. Do not edit files.
 ```

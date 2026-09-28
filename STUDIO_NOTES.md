@@ -109,8 +109,8 @@ moving element below it (the Wednesday card's little car), and exit with a fade 
   every 3–5 s, text rules, workflow gates (plan → stills → animatic → full pass → polish → audio → render), the critique loop,
   a deliverables list. Our tease briefs already follow most of this.
 - For multi-scene films split across subagents, write an `ANIMATION_GUIDE.md` first so every subagent codes in the same style.
-- Package a repeated pipeline as a skill so the next one is a sentence. Candidate: a `rossen-tease` project skill (brief →
-  beat grid → film → score → loop ×2 → verify), built from `intro/wed-tease.js` and `intro/tools/build_wed_tease.sh`.
+- Package a repeated pipeline as a skill so the next one is a sentence. Done: `.claude/skills/rossen-animation/` (V2), which
+  covers every Rossen film type, with the tease pipeline as one chapter.
 
 ## Not adopted, and why
 

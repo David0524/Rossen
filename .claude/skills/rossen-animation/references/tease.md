@@ -1,9 +1,4 @@
----
-name: rossen-tease
-description: Make a Rossen Reports live-show tease video (9:16 social promo for Jeff Rossen's Wednesday 5 PM ET or Friday 10 AM ET live show) in the approved case-file screen-print animation style, from a topic brief to a verified mp4 that ends on the LIVE TODAY loop played twice. Use whenever the user asks for a tease, teaser, promo or "live show" video for a Rossen show, wants the topics of an upcoming show animated, says "make the Wednesday/Friday tease", wants to revise an existing tease, or asks how to prompt/brief one. Also use to write the brief (prompt) for a tease. Not for the full-length explainers, the LIVE TODAY loops themselves, or clip sourcing for the live show (that is rossen-pipeline).
----
-
-# Rossen live-show tease
+# Film type: live-show tease
 
 A 25–30 s one-shot animated tease for an upcoming live show, then the approved LIVE TODAY loop for that day, appended untouched
 and played twice. Built in code: a Canvas 2D page per film (`intro/*.js` + `.html`), rendered by `intro/render.mjs`, scored by a
@@ -12,26 +7,6 @@ Python script from recorded instrument samples, joined to the loop by stream cop
 The reference build is the Wednesday car-scams tease: `intro/wed-tease.js`, `intro/rossen-tease-wednesday.html`,
 `intro/score_wed_tease.py`, `intro/tools/build_wed_tease.sh`, `intro/tools/verify_wed_tease.py`, `intro/tools/make_wed_masks.py`,
 `intro/tools/cut_sidekick.py`. Every new tease starts as a copy of these. `intro/README.md` has a section describing it.
-
-## Which rule wins
-
-When sources disagree: **`intro/SKILL_NOTES.md` (§0, the client's standing direction, first; then the rest of the file) > `CLAUDE.md` > this skill > the
-precedence block at the top of `STUDIO_NOTES.md` > the rest of `STUDIO_NOTES.md` > `.claude/skills/claude-animation/`.**
-Settled conflicts: no camera drift or push while a card is up (camera moves only in transitions); everything on ones, never on
-twos; breathing ±1.2 %; the intro card is already landed and still at frame 0 (its "hit" is the music's downbeat, and one
-moving element such as the little car may play below it), and it exits with a fade + dissolve, as the client asked.
-
-## Read first (every time)
-
-| file | why |
-|---|---|
-| `CLAUDE.md` (repo root) | standing rules: intro title card, loop ×2 |
-| `intro/SKILL_NOTES.md` §0, §2, §3, §5 | the client's standing direction (readability, timing, look, 9:16) — it overrides everything else |
-| `STUDIO_NOTES.md` | critique loop, acting rules, what was rejected (on twos, camera drift under captions) |
-| `references/lessons.md` (this skill) | the notes this client gave on teases, and what fixed each |
-| `references/timeline.md` | the bar map, timing constants and card rules |
-| `references/build.md` | how to clone the Wednesday build into a new tease, file by file, with commands |
-| `.claude/skills/claude-animation/references/motion.md` | timing and acting vocabulary (snap then hold, anticipation, overlap) |
 
 ## Inputs to collect (ask for anything missing, then stop if an asset is missing)
 
@@ -54,13 +29,13 @@ moving element such as the little car may play below it), and it exits with a fa
    loop) and the screen-print logo (`intro/assets/casefile/logo_screenprint.webp`, `IMG.sp`: may appear inside scenes).
 5. **Suggested cards**, if the user has them. Otherwise write them (see Prompting below).
 
-If the user hasn't written a brief, hand them `templates/brief.md` filled in with what you know and ask them to correct it.
+If the user hasn't written a brief, hand them `templates/brief-tease.md` filled in with what you know and ask them to correct it.
 
 ## The pipeline, with gates
 
 1. **Stop-checks** (before any code): the loop (unique, right day and time), printkit.js and the palette, every puppet's parts,
    both logos, the sample packs (`intro/audio/`), every attached image. Missing → stop and tell the user. No stand-ins.
-2. **Plan on the beat grid** (`references/timeline.md`, which has the maps for 2, 3 and 4 stories): intro pickup (3 beats),
+2. **Plan on the beat grid** (`references/tease-timeline.md`, which has the maps for 2, 3 and 4 stories): intro pickup (3 beats),
    one idea per bar, equal bars per story, the promise (2 bars), the handoff bar. Write the timeline comment at the top of the
    film first (bar, time, what happens, the card, the transition labelled `[SIGNATURE]` or `[push]`/`[cut]`). For each bar
    write its **reads** (what the viewer must understand, in order; never two at once). **Always show the user the bar plan and
@@ -68,7 +43,7 @@ If the user hasn't written a brief, hand them `templates/brief.md` filled in wit
    don't need this gate.
 3. **Assets**: cut any new character (`tools/cut_sidekick.py` is the pattern), check the part sheet visually, and make any
    expression heads (the gasp head). Source any missing foley with a subagent (`templates/subagent-prompts.md`).
-4. **Build the film** by cloning the Wednesday files under a new slug (`references/build.md`). Never overwrite an existing
+4. **Build the film** by cloning the Wednesday files under a new slug (`references/tease-build.md`). Never overwrite an existing
    tease's files. Scenes are pure functions of `t`.
 5. **Critique loop, before the full render** (STUDIO_NOTES §1): render one frame per beat, tile a contact sheet, score it 1–10
    on hook, readability, motion, variety, composition, brand and sync, write the 3 worst problems with timestamps, fix them,
@@ -105,31 +80,14 @@ If the user hasn't written a brief, hand them `templates/brief.md` filled in wit
   attack, hits within ~10 ms on the final mp4 (`tools/sync_check.py`).
 - **Content**: tease, don't explain; never show the answer (red flags, fixes). No real brands of any kind: car makes, dealers,
   carriers and couriers, retailers, gift-card brands, banks, apps, state plate designs; no real phone numbers or URLs (a fake
-  link, if a prop needs one, is obviously garbled and uses no real top-level domain, per SKILL_NOTES §1: `htp://pkg-trak.l0gin.zz`);
+  link, if a prop needs one, is obviously garbled and uses no real top-level domain, per craft.md §1: `htp://pkg-trak.l0gin.zz`);
   no real people except Jeff; no guest experts drawn. Plates read ABC-0000.
 - **Sound**: warm, real instruments (VSCO 2 CE); recorded CC0 or commercial-use foley, each file logged (the sourcing notes in
   `intro/audio/<slug>_sources.txt`; the score writes the final log, `intro/out/<film>/audio_sources.txt`) with source URL and license; say which sounds are composed (none, ideally). No synthesized tones.
 
-## Prompting
+## Prompting a tease
 
-### How the user should ask (give them this)
-
-A good tease prompt is a short director's brief, not a vibe. `templates/brief.md` is the fill-in template; the Wednesday brief
-that produced the approved tease followed it. The parts that matter most, in order of how often leaving them out cost a round:
-
-1. **The show and the loop**: day, time, and "append the existing loop, played twice".
-2. **The stories as one sentence each**, with the stake (a dollar figure) and the twist.
-3. **The hook line** and what must *not* be shown (the answer, the fix, the guest).
-4. **The story spine**: one line per story beat, in order, naming the visual gag (e.g. "the website peels away like a stage
-   set"). This is where the charm comes from; if the user doesn't have one, propose it and let them edit.
-5. **Suggested cards** (short, ALL CAPS).
-6. **Which characters**, and any new character art attached ("a reference, not a frame").
-7. **Transitions**: "one or two creative ones caused by a character or prop; the rest simple".
-8. **Audio mood per story**, and "recorded sound effects, logged".
-9. **Rules and stop conditions**: "if an asset is missing, stop and tell me", "no real brands", "verify on the final mp4".
-
-Short follow-up notes work well once a tease exists ("the opening is crowded", "the car drives in backwards", "it feels
-laggy"). Fix exactly what's named, fix the same class of bug everywhere else, and say so.
+Hand the user `templates/brief-tease.md` (the fill-in brief). The general prompting rules are in SKILL.md.
 
 ### How to prompt yourself (planning)
 
@@ -143,7 +101,7 @@ laggy"). Fix exactly what's named, fix the same class of bug everywhere else, an
 - When you write cards: they carry the story with the sound off, but must not restate exactly what the puppets act out; make
   the card add the stakes or the turn ("YOUR CAR: WORTHLESS" over the smoke, not "THE ENGINE SMOKES").
 
-### How to prompt subagents
+### Subagents
 
 Use subagents for foley sourcing and for reading long reference material, with the ready prompts in
 `templates/subagent-prompts.md`. Rules for any subagent brief: state the working folder and that it must not edit other files
