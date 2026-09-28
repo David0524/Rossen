@@ -514,7 +514,7 @@ function sceneIntro(c, t) {
   const z = easeIn(seg(t, TR_INTRO[0], TR_INTRO[1])), zk = 1 + 1.8 * z;   // the exit: the camera dives into the little car (smooth, on ones)
   c.save(); c.translate(SCX, 1330); c.scale(zk, zk); c.translate(-SCX, -1330);
   const rock = tt > park ? .025 * Math.exp(-(tt - park) * 8) * Math.sin((tt - park) * 20) : 0;
-  c.save(); c.translate(lerp(-420, SCX, u), 1392); c.rotate(rock); sedan(c, 0, 0, .5, { len: CAR_LEN }); c.restore();
+  c.save(); c.translate(lerp(1380, SCX, u), 1392); c.rotate(-rock); sedan(c, 0, 0, .5, { len: CAR_LEN }); c.restore();   // it faces left, so it drives in from the right, nose first (like the driveway car)
   if (tt >= park) { const v = seg(tt, park, park + .5); if (v < 1) puff(c, SCX + 170 - 60 * v, 1370 - 50 * v, lerp(14, 34, v), 6050, 1 - v); }   // a little exhaust puff as it stops
   c.restore();
   const a = introA(t); if (a <= 0) return;

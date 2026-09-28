@@ -14,14 +14,14 @@ PASS  all three scams get 3 bars (7.5 s) each; the promise gets bars 9-10, the h
 PASS  every scene change happens inside a planned transition window (or the cut to Jeff; the camera flash is listed), never mid-bar
 
 == the intro title card (3 CAR SCAMS / LIVE WEDNESDAY 5 PM ET, the official logo)
-PASS  on screen from frame 0 for 1.25 s, dead still (max change 0.17/255 over the logo, title and time; the little car drives in below them); reading the 3-word title twice at 300 wpm takes 1.20 s
+PASS  on screen from frame 0 for 1.25 s, dead still (max change 0.18/255 over the logo, title and time; the little car drives in below them); reading the 3-word title twice at 300 wpm takes 1.20 s
 
 == the cards: one at a time, present and still for their whole time, readable twice
 PASS  no two cards on screen together (each leaves before the next starts to land)
 PASS  no transition runs while a card is up
-PASS  "SELLING YOUR CAR?": on screen 2.50 s (1.73-4.24), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.04/255, card box x 182-897 y 383-465
-PASS  "WHILE YOU'RE / DISTRACTED...": on screen 2.50 s (4.24-6.74), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.05/255, card box x 258-829 y 382-565
-PASS  "YOUR CAR: / WORTHLESS": on screen 1.95 s (6.74-8.69), dead still 1.83 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.04/255, card box x 300-787 y 382-565
+PASS  "SELLING YOUR CAR?": on screen 2.50 s (1.73-4.24), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.03/255, card box x 182-897 y 383-465
+PASS  "WHILE YOU'RE / DISTRACTED...": on screen 2.50 s (4.24-6.74), dead still 2.38 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.06/255, card box x 258-829 y 382-565
+PASS  "YOUR CAR: / WORTHLESS": on screen 1.95 s (6.74-8.69), dead still 1.83 s (reading it twice at 300 wpm takes 1.20 s), max change while still 0.03/255, card box x 300-787 y 382-565
 PASS  "BUYING A CAR / ONLINE?": on screen 2.28 s (9.23-11.52), dead still 2.17 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.03/255, card box x 253-827 y 382-565
 PASS  "THE DEALERSHIP / ISN'T REAL": on screen 2.12 s (11.73-13.86), dead still 2.00 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.01/255, card box x 212-867 y 383-565
 PASS  "THE CAR / DOESN'T EXIST": on screen 2.30 s (14.23-16.54), dead still 2.17 s (reading it twice at 300 wpm takes 1.60 s), max change while still 0.07/255, card box x 249-837 y 382-565
