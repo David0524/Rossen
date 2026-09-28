@@ -242,7 +242,7 @@ if not HO:
 
 # ---------------- the intro (the pickup, -1.875 to 0) ----------------
 # frame 0: the title card is there. A bright D major hit with a glockenspiel sparkle; the little car drives in (a soft tambourine
-# shimmer) and parks on beat 3; then a two-note pizzicato pickup and the camera drops into bar 0's tiptoe.
+# shimmer) and parks on beat 3; then a two-note pizzicato pickup under the dissolve into bar 0's tiptoe.
 IN0 = -T0
 if not HO:
     hit(IN0, 'D', .85, .3)
@@ -252,7 +252,7 @@ if not HO:
     cpz('A2', IN0 + 2 * BEAT, .5, dur=.2); cpz('C#3', IN0 + 2.5 * BEAT, .45, dur=.2)
 fx('rpg/bookPlace1.ogg', IN0, .3); H(IN0, 'title card')
 fx('impact/footstep_concrete_000.ogg', IN0 + 2 * BEAT, .25); one(RIM, IN0 + 2 * BEAT, .25, .1); H(IN0 + 2 * BEAT, 'car parks')
-whoosh(-.14, .3)   # the camera drops into the driveway (it lands .14 s before the downbeat)
+swell_to(-.02, .16)   # a soft cymbal swell under the dissolve into the driveway
 
 # ---------------- sounds on the picture's beats (recorded; placed by their attack) ----------------
 for bar in range(1, 10): capsnd(AT(bar))   # each card lands (both lines together); frame 0 belongs to the car door

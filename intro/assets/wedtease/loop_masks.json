@@ -20,7 +20,7 @@
    "name": "card",
    "file": "loop_mask_card.png",
    "centre": [
-    545.0805394674428,
+    545.0873623799484,
     994.5
    ]
   },
@@ -28,7 +28,7 @@
    "name": "day",
    "file": "loop_mask_day.png",
    "centre": [
-    549.306210445789,
+    552.8799056713636,
     1153.5
    ]
   },
@@ -36,7 +36,7 @@
    "name": "youtube",
    "file": "loop_mask_youtube.png",
    "centre": [
-    540.81166656876,
+    542.8792483636728,
     1260.5
    ]
   },
@@ -44,7 +44,7 @@
    "name": "jeff",
    "file": "loop_mask_jeff.png",
    "centre": [
-    542.3439851938344,
+    540.8468960768031,
     1618.5
    ]
   }

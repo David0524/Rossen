@@ -2,7 +2,9 @@
 /* LIVE TODAY loops: the approved LIVE TODAY card as a seamless 5 s loop (2 bars at 96 BPM) for Reels and Stories.
    Same card as the promo's end frame, scaled up to fill the safe area. Every motion is periodic in the loop length,
    so the last frame flows straight back into the first. A page sets window.SHOW = { time, day } (default 5PM ET, WEDNESDAY), and optionally
-   extra: a yellow chip under the day (e.g. 'LIVE ON YOUTUBE'); Jeff then stands a little lower. Without it the loop is unchanged.
+   extra: a yellow chip under the day (e.g. 'LIVE ON YOUTUBE'), or platforms: a LIVE ON row with the platforms' own logos (e.g.
+   ['youtube', 'instagram', 'facebook'], drawn from assets/social untouched, after the print finish); Jeff then stands a little lower.
+   Without either the loop is unchanged.
    beat 1 and 3: LIVE TODAY and the time card pulse; beats 2 and 4: the day chip; once a bar: a signal ring behind the
    card; Jeff waves on every beat; the logo sticker rocks once per loop. */
 const SHOW = Object.assign({ time: '5PM ET', day: 'WEDNESDAY' }, window.SHOW || {});
@@ -43,6 +45,11 @@ function scene(c, t) {
   c.font = '72px Stamp'; const w = c.measureText(SHOW.day).width + 70;
   c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-w / 2 + 9, -52, w, 108); c.restore(); ink(c, rect(-w / 2, -56, w, 108), BLK, 5601, { amp: 3 });
   inkText(c, SHOW.day, 0, 4, 72, 'Stamp', CHIP, 780); c.restore();
+  if (SHOW.platforms) {   // LIVE ON + the platforms' logos, on a cream chip that holds still (the logos are drawn in platformRow, after the finish)
+    const R0 = platformRow(c); c.save(); c.translate(SCX, 1310);
+    c.save(); c.globalAlpha = .3; c.fillStyle = BLK; c.fillRect(-R0.w / 2 + 9, -46, R0.w, 96); c.restore(); block(c, rect(-R0.w / 2, -50, R0.w, 96), CHIP, 5603, { kw: 5, reg: false });
+    inkText(c, 'LIVE ON', R0.x0 - SCX, 4, 56, 'Stamp', BLK, R0.tw + 2, 'left'); c.restore();
+  }
   if (SHOW.extra) {   // the extra chip pulses with the day chip, on 2 and 4
     c.save(); c.translate(SCX, 1310); c.rotate(.012); c.scale(1 + .06 * p24, 1 + .06 * p24);
     c.font = '64px Stamp'; const w2 = Math.min(c.measureText(SHOW.extra).width, 700) + 70;
@@ -51,16 +58,26 @@ function scene(c, t) {
   }
   // Jeff waves on every beat
   const wave = Math.sin(t * TAU / BEAT) * .22;
-  jeff(c, SCX, SHOW.extra ? 2050 : 1930, .78, { armR: -2.35 + wave, head: .05 * Math.sin(t * TAU_L * 2), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 8 });
+  jeff(c, SCX, SHOW.extra || SHOW.platforms ? 2050 : 1930, .78, { armR: -2.35 + wave, head: .05 * Math.sin(t * TAU_L * 2), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 8 });
 }
-function drawScene(c, t) { contentT(c); scene(c, t); printFinish(c); if (SHOW_SAFE) safeOverlay(c); }
+const ICON_H = 62;
+function platformRow(c) {   // the row's geometry (content coords): LIVE ON, then each logo at a uniform scale
+  c.font = '56px Stamp'; const tw = c.measureText('LIVE ON').width, icons = SHOW.platforms.map(k => { const im = IMG[k + '_icon']; return [im, im.width * ICON_H / im.height]; });
+  const total = tw + 26 + icons.reduce((q, [, iw]) => q + iw, 0) + 18 * (icons.length - 1);
+  return { tw, icons, total, w: total + 70, x0: SCX - total / 2 };
+}
+function drawIcons(c) {   // after the finish: nothing is printed over the logos
+  const R0 = platformRow(c); let x = R0.x0 + R0.tw + 26;
+  for (const [im, iw] of R0.icons) { c.drawImage(im, x, 1310 - ICON_H / 2 + 2, iw, ICON_H); x += iw + 18; }
+}
+function drawScene(c, t) { contentT(c); scene(c, t); printFinish(c); if (SHOW.platforms) { contentT(c); drawIcons(c); } if (SHOW_SAFE) safeOverlay(c); }
 
 // ================= runtime =================
 const CV = document.getElementById('c'); CV.width = OUT_W; CV.height = OUT_H; const CTX = CV.getContext('2d');
 function frame(i) { const t = (i % NFR) / FPS; FILM_T = t; resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, t); resetT(CTX); }
 window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
 (async () => {
-  await loadPrintKit(); await loadVertKit();
+  await loadPrintKit(); await loadVertKit(); if (SHOW.platforms) await loadImg('facebook_icon', 'assets/social/facebook_icon.png');
   frame(+(Q.get('frame') || 0));
   window.__ready = true;
 })().catch(e => { console.error(e); window.__error = String(e); });

@@ -9,7 +9,7 @@
    transition runs while one is up.
 
    INTRO      pickup -1.9  the title card: the official logo, 3 CAR SCAMS, LIVE WEDNESDAY · 5 PM ET, a little yellow car   (the title)
-                           drives in and parks; the card leaves and the camera drops into the driveway on the downbeat
+                           drives in and parks on beat 3; the words and logo fade and the driveway dissolves in, done as bar 0's card lands
    OIL SCAM   bar 0  0.0   the man's car, FOR SALE $10,000 in the windshield, from frame 0; the Scammer rises in on 3    "SELLING YOUR CAR?"
               bar 1  2.5   he fans cash in the man's face; the sidekick tiptoes in, the hood pops on 2, he pours on 3   "WHILE YOU'RE / DISTRACTED..."
               bar 2  5.0   a smoke puff on 1; the man's jaw drops on 2; the price flips to $0 on 3                  "YOUR CAR: / WORTHLESS"
@@ -37,7 +37,9 @@
 const B_JEFF = 9, B_HAND = 11;   // the promise gets two bars (9-10): long enough to read its card twice
 const INTRO = 3 * BEAT;   // the intro title card: a 3-beat pickup (1.875 s) before bar 0; film time t runs from -INTRO
 const DUR = at(12), NFR = Math.round(FPS * (INTRO + DUR));
-const TR_INTRO = [-.34, -SLAM];   // the title card leaves, then the camera drops into the driveway
+const TR_INTRO = [-BEAT, -SLAM];   // after beat 3 the driveway dissolves in under the title card (0.49 s)
+const INTRO_FADE = [-BEAT, -BEAT + .22];   // the title card's words and logo fade out, after 1.25 s dead still
+const introA = t => 1 - easeIO(seg(t, ...INTRO_FADE));
 const MONO = '"Liberation Mono"', PLATE_NO = 'ABC-0000', DEALER = 'TOTALLY REAL MOTORS';
 // transitions: each runs between two cards, ending as the next card starts to land (never while a card is up)
 const TR = {
@@ -492,12 +494,17 @@ sceneHandoff.finish = false;
 const INTRO_TITLE = '3 CAR SCAMS', INTRO_SUB = 'LIVE WEDNESDAY  ·  5 PM ET';
 function sceneIntro(c, t) {
   bgDots(c, BLUE, .12, .55);
-  if (t < TR_INTRO[0]) { chip(c, INTRO_TITLE, SCX, 905, 104, BLK, CHIP, t, -INTRO, 760); chip(c, INTRO_SUB, SCX, 1062, 46, YEL, BLK, t, -INTRO, 700); }
-  const u = easeOut(seg(t, -INTRO, -INTRO + 2 * BEAT)), off = easeIn(seg(t, TR_INTRO[0] - .1, TR_INTRO[1]));   // it parks on beat 3, then pulls away with the camera
-  sedan(c, lerp(-420, SCX, u) + 900 * off, 1392, .5, { len: CAR_LEN });
+  const u = easeOut(seg(t, -INTRO, -INTRO + 2 * BEAT));   // it parks on beat 3
+  sedan(c, lerp(-420, SCX, u), 1392, .5, { len: CAR_LEN });
+  const a = introA(t); if (a <= 0) return;
+  c.save(); c.globalAlpha = a; chip(c, INTRO_TITLE, SCX, 905, 104, BLK, CHIP, t, -INTRO, 760); chip(c, INTRO_SUB, SCX, 1062, 46, YEL, BLK, t, -INTRO, 700); c.restore();
 }
-sceneIntro.overlay = (c, t) => { if (t >= TR_INTRO[0]) return;   // the official logo, screen space
-  screenSpace(c, () => { const lg = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 620, lh = bh * lw / bw; c.drawImage(lg, bx, by, bw, bh, CX - lw / 2, 400, lw, lh); }); };
+sceneIntro.overlay = (c, t) => { const a = introA(t); if (a <= 0) return;   // the official logo, screen space (it fades with the words)
+  screenSpace(c, () => { const lg = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 620, lh = bh * lw / bw; c.globalAlpha = a; c.drawImage(lg, bx, by, bw, bh, CX - lw / 2, 400, lw, lh); c.globalAlpha = 1; }); };
+function dissolve(c, t, [t0, t1], A, B) {   // B fades in over A
+  const u = easeIO(seg(t, t0, t1)); layerOf(L1, A, t); layerOf(L2, B, t);
+  c.save(); resetT(c); c.drawImage(L1, 0, 0, W, H); c.globalAlpha = u; c.drawImage(L2, 0, 0, W, H); c.restore();
+}
 
 // ================= assembly =================
 function layerOf(L, scene, t) { const g = L.getContext('2d'); contentT(g); g.globalAlpha = 1; scene(g, t); if (scene.finish !== false) printFinish(g); if (scene.overlay) { contentT(g); scene.overlay(g, t); } return L; }
@@ -513,7 +520,7 @@ function drawScene(c, t) {
   contentT(c);
   if (Q.has('plate')) { screenSpace(c, () => { bgDots(c, BLUE, .12, .55); printFinish(c); }); return; }
   if (t < TR_INTRO[0]) { sceneIntro(c, t); printFinish(c); sceneIntro.overlay(c, t); }
-  else if (t < TR_INTRO[1]) pushTo(c, t, TR_INTRO, sceneIntro, sceneOil);
+  else if (t < TR_INTRO[1]) dissolve(c, t, TR_INTRO, sceneIntro, sceneOil);
   else if (t < TR.smoke[0]) { sceneOil(c, t); printFinish(c); }
   else if (inT(TR.smoke, t)) { if (t < SMOKE_MID) sceneOil(c, t); else sceneSiteBuild(c, t); printFinish(c); contentT(c); smokeWall(c, t); }
   else if (t < TR.zoomSite[0]) { sceneSiteBuild(c, t); printFinish(c); }

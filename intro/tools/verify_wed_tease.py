@@ -10,7 +10,7 @@ BEAT, BAR, SLAM, E8 = .625, 2.5, .14, .3125
 OFF = 3 * BEAT   # the intro title card (a 3-beat pickup) comes first: video time = film time + OFF
 at = lambda bar, beat=1: OFF + bar * BAR + (beat - 1) * BEAT
 # the film's own timeline (wed-tease.js: TR and CAPS)
-TR = {'intro card -> driveway': (OFF - .34, OFF - SLAM), 'smoke': (at(2, 4) - .06, at(3) - SLAM), 'zoomSite': (at(4) - .36, at(4) - SLAM), 'swing': (at(5) - .52, at(5) - SLAM),
+TR = {'intro card -> driveway (dissolve)': (OFF - BEAT, OFF - SLAM), 'smoke': (at(2, 4) - .06, at(3) - SLAM), 'zoomSite': (at(4) - .36, at(4) - SLAM), 'swing': (at(5) - .52, at(5) - SLAM),
       'toMail': (at(6) - .34, at(6) - SLAM), 'zoomTicket': (at(7) - .36, at(7) - SLAM), 'cut to Jeff': (at(9) - SLAM, at(9) - SLAM + 1 / 24), 'toLoop': (at(11) - .34, at(11) - SLAM)}
 FLASH = (at(7), at(7) + .3)   # the camera flash (full frame, under the card): a flash, not a scene change
 CAPS = [(at(0), at(1) - SLAM, 'SELLING YOUR CAR?'), (at(1), at(2) - SLAM, "WHILE YOU'RE / DISTRACTED..."), (at(2), TR['smoke'][0], 'YOUR CAR: / WORTHLESS'),
@@ -58,7 +58,7 @@ say('      scene-change frames (mean change > 12 of 255): ' + ', '.join(f'{f}({f
 check(not outside, 'every scene change happens inside a planned transition window (or the cut to Jeff; the camera flash is listed), never mid-bar')
 
 say('\n== the intro title card (3 CAR SCAMS / LIVE WEDNESDAY 5 PM ET, the official logo)')
-IC = frames(F, 0, int((OFF - .34) * FPS), post='crop=1080:740:0:380', size=(1080, 740)).astype(np.int16)
+IC = frames(F, 0, int(round((OFF - BEAT) * FPS)), post='crop=1080:740:0:380', size=(1080, 740)).astype(np.int16)   # still until its words start to fade
 dmi = np.abs(IC - IC[0]).mean((1, 2, 3)).max(); hold = len(IC) / FPS
 check(dmi < 1.0 and hold >= 2 * 3 / WPS,
       f'on screen from frame 0 for {hold:.2f} s, dead still (max change {dmi:.2f}/255 over the logo, title and time; the little car drives in below them); '

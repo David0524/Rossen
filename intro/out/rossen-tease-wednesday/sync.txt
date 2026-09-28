@@ -5,7 +5,7 @@
   4.375s  sidekick      onset   4.375s  offset   +0 ms
   5.000s  hood          onset   4.999s  offset   -1 ms
   5.625s  pour          onset   5.624s  offset   -1 ms
-  6.875s  smoke         onset   6.882s  offset   +7 ms
+  6.875s  smoke         onset   6.879s  offset   +4 ms
   7.500s  jaw           onset   7.500s  offset   +0 ms
   8.125s  price         onset   8.124s  offset   -1 ms
   9.375s  site          onset   9.378s  offset   +3 ms
@@ -16,8 +16,8 @@
  12.500s  paid          onset  12.500s  offset   +0 ms
  13.125s  curl          onset  13.133s  offset   +8 ms
  14.375s  scammer out   onset  14.375s  offset   +0 ms
- 16.875s  mailbox       onset  16.875s  offset   +0 ms
- 16.875s  total         onset  16.875s  offset   +0 ms
+ 16.875s  mailbox       onset  16.874s  offset   -1 ms
+ 16.875s  total         onset  16.874s  offset   -1 ms
  17.500s  total         onset  17.499s  offset   -1 ms
  18.125s  total         onset  18.124s  offset   -1 ms
  18.750s  total         onset  18.749s  offset   -1 ms

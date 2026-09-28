@@ -236,7 +236,7 @@ The textured-cream background (`makeCream` / `creamBg`) now lives in `vertkit.js
 
 ## Wednesday live tease: car scams + LIVE TODAY loop ×2 (9:16, 41.9 s)
 
-`rossen-tease-wednesday.html` and `wed-tease.js` open on a 1.9 s intro title card, then make a 30 s one-shot tease for Wednesday's 5 PM ET show about three car scams: 12 bars at 96 BPM in D, the loop's own tempo and key. The approved Wednesday loop (`final-videos/09 Live Today Loop - Wednesday 5 PM (9x16).mp4`, the only Wednesday 5 PM candidate, byte-identical to `out/rossen-loop-wednesday/rossen-loop-wednesday.mp4`) is appended untouched and played twice (every tease ends on its loop ×2), joined by stream copy. It's never re-rendered: its frames are decoded from the delivered file for the handoff bar.
+`rossen-tease-wednesday.html` and `wed-tease.js` open on a 1.9 s intro title card, then make a 30 s one-shot tease for Wednesday's 5 PM ET show about three car scams: 12 bars at 96 BPM in D, the loop's own tempo and key. The Wednesday loop (`final-videos/09 Live Today Loop - Wednesday 5 PM (9x16).mp4`, byte-identical to `out/rossen-loop-wednesday/rossen-loop-wednesday.mp4`, now with the YouTube / Instagram / Facebook row) is appended untouched and played twice (every tease ends on its loop ×2), joined by stream copy. It's never re-rendered: its frames are decoded from the delivered file for the handoff bar.
 
 It reuses the repo's kit and cast:
 - printkit.js with the approved palette (`BLUE`, `BLK`, `YEL`, `CREAM`, `CHIP`) and the vertical safe-zone transform (`VERT_K 0.895`).
@@ -288,7 +288,7 @@ Build and check everything with `sh tools/build_wed_tease.sh` (`SKIP_RENDER=1` r
 - Jeff waves on every beat
 - the logo sticker rocks once per loop
 
-A page sets `window.SHOW = { time, day, extra }`, and the time card always keeps the approved 5PM card's size. Both loops now carry `extra: "LIVE ON YOUTUBE"`: a yellow chip under the day that pulses with it, with Jeff standing a little lower. That's the same design as the Friday tease's ending page; the Friday loop is frame-for-frame the one the tease uses. Audio: `python3 score_loop.py` renders three cycles and keeps the middle one, so every tail wraps into the start. It's gained to -16 LUFS and muxed.
+A page sets `window.SHOW = { time, day, extra | platforms }`, and the time card always keeps the approved 5PM card's size. Both permanent loops (`final-videos/09` and `10`) carry `platforms: ["youtube", "instagram", "facebook"]`: a LIVE ON row with the three platforms' own logos, like the shorts' closing card, on a cream chip under the day, with Jeff standing a little lower. The logos are drawn from `assets/social/` at a uniform scale, untouched, after the print finish, and hold still while the card pulses. The older `extra` option (a yellow text chip) remains only for `rossen-loop-friday-youtube.html`, the variant the Friday tease was built on. Audio: `python3 score_loop.py` renders three cycles and keeps the middle one, so every tail wraps into the start. It's gained to -16 LUFS and muxed.
 
 ## Closing card on every short
 
