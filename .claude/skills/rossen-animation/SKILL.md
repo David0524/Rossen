@@ -27,6 +27,7 @@ Settled conflicts: no camera drift or push while a caption is up (the camera mov
 | `references/film-types.md` | always: pick the type, find its reference build |
 | `STUDIO_NOTES.md` | always: the scored critique loop, acting rules |
 | `references/tease.md`, `tease-timeline.md`, `tease-build.md` | a live-show tease |
+| `intro/REFERENCES.md` | outside references to study before planning (scam explainers and print-style studios) |
 | `intro/VOX_STUDY.md` | an explainer (evidence mark-up, one number, a camera through layered evidence at transitions) |
 | `intro/README.md` | the section for the reference film you're cloning |
 | `.claude/skills/claude-animation/references/motion.md`, `characters.md` | acting, timing, new rigs |
