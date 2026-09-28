@@ -270,7 +270,7 @@ A beat of silence reads as a glitch if the music is cut off mid-phrase while the
 - **Who decides (2026-09-28):** the user (David) has the final say on taste. Jeff cares most about having enough content to
   post, not the details.
 - **What the animations are for:** four posts a day are planned: Jeff direct to camera, a clip from the live show, one of
-  these case-file animations, and an animation in a more modern style closer to his logo (a separate style; ask before
+  these case-file animations, and an animation in a more modern style closer to his logo (a separate style that Kyle is making; not ours for now, maybe later; ask before
   building one). So throughput matters: favour templates and reusable pieces over bespoke one-offs.
 - **Settled, so don't reopen:**
   - The sound is good.
