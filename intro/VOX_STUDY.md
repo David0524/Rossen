@@ -26,7 +26,7 @@ Vox's videos can't be watched from this environment, so this comes from written 
 - **Consistent easing** everywhere, with quick moves for energy and held frames for emphasis.
 - **A background that "boils"**: textures swap 2–3 times a second behind static elements. This is subtle, but see the caution below.
 
-**For us:** put the puppets and cut-out props on twos. That fits the paper-cutout look perfectly. Text keeps our readability rule: it lands, then holds still, with nothing boiling underneath it.
+**For us (update):** on twos was tried on the Wednesday tease and rejected by the client as "very laggy"; keep everything on ones. (Original idea: put the puppets and cut-out props on twos. That fits the paper-cutout look perfectly.) Text keeps our readability rule: it lands, then holds still, with nothing boiling underneath it.
 
 ### 4. Camera: 2.5D depth
 - Scenes are built as stacked layers at different depths (background paper, evidence, props, annotations), with a camera that pushes or drifts slowly through them. The parallax gives depth without 3D models.

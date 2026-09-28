@@ -4,13 +4,14 @@
 first. Where the course disagrees, the client wins:
 - **No camera drift under captions** ("text lands, then holds still ... no drifting camera under it"). A caption is up in
   almost every bar, so the course's "camera never dead" becomes: camera moves only at transitions, and the life comes from
-  the puppets and props (breathing, overlap, anticipation, on twos).
+  the puppets and props (breathing, overlap, anticipation), always at 24 fps.
 - **Gentle landings for readable text**: from 1.05x at most, no wobble, still within 0.2 s; no other text moves while a
   caption lands. Snap-and-overshoot is for characters and props, not words.
 - **Captions 70-76 px**, one idea per bar, at most a caption plus one prop label on screen.
 - **Backgrounds**: textured cream for close-ups, lighter blue dots for character scenes, flat drawn pavement; one dotted
   field per scene at most. Yellow stays a small accent.
-- **On twos** (Vox): puppets and cut-outs hold each drawing two frames (beat frames stay exact); text and camera on ones.
+- **Always on ones: smooth 24 fps motion for everything.** On twos (the Vox study's 12 drawings a second for puppets) was tried on
+  the Wednesday tease and rejected by the client as "very laggy". Don't use it.
 
 Source: the "How to build a motion design studio with Opus 5.5" thread (Movez, Sep 27 2026) and the repos it links. What's here
 is what applies to this repo's pipeline (Canvas 2D pages with a deterministic `__frame(i)`, puppeteer → PNG → ffmpeg, recorded
@@ -53,7 +54,7 @@ From `.claude/skills/claude-animation/references/motion.md` and the course's spr
 - **Every hit is several things on the same frame**: the contact, a flash or shake, a burst, a sound pair.
 - **Springs for multi-target values**: when something changes target several times (a cursor, a lens moving prop to prop), sum
   one closed-form spring per change instead of restarting an ease. It stays a pure function of time.
-- **Exposure**: acting on twos (12 drawings/s) gives a hand-made cadence; camera moves and fast travel stay on ones.
+- **Exposure**: always on ones (24 drawings/s). On twos was rejected by the client as laggy.
 
 ## 2b. From the two reference repos (JohnHeibel/ClaudeAnimationBase and PDoomVideo guides)
 

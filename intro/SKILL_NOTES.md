@@ -48,7 +48,7 @@ For explainers, use:
 - a caption-first script, with one visual change per caption
 - scam artifacts shown as evidence, which Jeff marks up with a highlighter, a circle or a callout, while the camera pushes in on each mark
 - a 2.5D layered camera with a slow push
-- puppets and cut-outs moving on twos (12 fps), while text and the camera stay at 24 fps
+- ~~puppets and cut-outs moving on twos~~: rejected by the client as laggy. Everything moves at 24 fps.
 - one sourced number per video
 - a change of music cue at each act
 

@@ -72,10 +72,7 @@ const capOn = t => CAPS.some(([t0, t1]) => t >= t0 - SLAM && t < t1);
 
 // ================= small helpers =================
 const sy = y => SCY + (y - SCY) * K;
-function twos(t) {   // 12 drawings a second, but every beat frame (15 frames apart) is drawn exactly, so landings stay on the beat
-  const f = Math.round(t * FPS), b = Math.floor(f / 15) * 15; if (f === b) return t;
-  return Math.max(b, f - (((f % 2) + 2) % 2)) / FPS;
-}
+const twos = t => t;   // everything moves on ones (24 drawings a second): on twos read as laggy to the client (rejected)
 const breath = (t, ph = 0) => .012 * Math.sin(t * 2.2 + ph);   // a slow breath (±1.2 %), each character on its own phase
 const lag = (t, t0, a = .14) => t < t0 ? 0 : -a * Math.exp(-(t - t0) * 7) * Math.sin((t - t0) * 17);   // overlap: a head that trails a landing, then settles   // content y -> screen y (backgrounds are drawn full-frame in screen space)
 function ground(c, yC, o = {}) {   // pavement: flat paper, a black kerb line and a few drawn joints; no dots (the sky carries the texture)
