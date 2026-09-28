@@ -44,3 +44,38 @@ Researched 2026-09-28. Every link was checked; the Behance and Vimeo rows were c
 - **Scam-awareness live action:** Starling, HSBC and Barclays campaigns, and the Home Office TV spot.
 - **No animated work found:** Monzo, Revolut, Chase, Wells Fargo, CFPB, Action Fraud, Which?, Citizens Advice.
 - **Not found at all:** a TikTok-native animated scam creator, and a TV consumer unit doing animated social explainers. That gap is ours.
+
+## Lessons (reviewed 2026-09-28)
+
+YouTube blocked full downloads from the cloud session, so the videos were reviewed from three frames each (at ¼, ½ and ¾) plus the studios' own process write-ups. These are ideas to try, not rules: none changes craft.md §0 until the client approves.
+
+### Story and structure
+1. **One mantra across every film.** Take Five ("STOP · CHALLENGE · PROTECT"), Scamwatch ("Stop. Check. Protect.") and the ABA ("banks never ask that") each end every film on the same short rule, in the same layout. Jeff's explainers end on a different protection line each time. A recurring Jeff sign-off rule, as a fixed card before the closing card, would build recall.
+2. **Name the tactic, not just the scam.** Consumer Affairs Victoria puts the manipulation itself in a marquee: "PRESSURE". A small recurring set of tactic stamps (PRESSURE, URGENCY, SECRECY, PAY THIS WAY) would carry across every scam and teach the pattern.
+3. **Make the payoff one word.** Take Five's film ends on a bubble with only "NO." Our fix lines run 4 to 6 words; the hold would be stronger if the last beat shrinks to one word.
+4. **Dramatic irony.** Singapore's NCPC shows the scammer lurking behind the victim's monitor while the victim smiles. The viewer knows before the victim does. Our puppets can stage this (the scammer peeking in behind the phone), and it adds charm without a caption.
+5. **A motif that adds up.** Media Smart's film is built on red "SCAM" flags piling up until they fill the phone. A counter that grows every bar (flags, strikes on a case-file tab) pays off the ending and suits the beat grid.
+6. **The victim as hero.** Canada's FCAC hero is an older woman in a karate gi punching a bag labelled FRAUD. When the everyday man wins the fix beat, it lands better than Jeff simply telling him.
+7. **The series template.** Scamwatch made seven films on one structure (hook, ask, red flag, stop, report). Our explainers could become a data-driven template, the way the series already are.
+
+### Look
+8. **Two type voices.** Take Five puts narration on solid block chips and the victim's own words in hand-lettered bubbles. Our chips speak for everyone; a hand-lettered bubble for things a character says would split the narrator from the characters.
+9. **Quote marks mean impostor.** The FTC writes the fake agency as "FTC" in quote marks on the caller screen. It's a cheap, readable tell for our fake SHERIFF'S OFFICE and bank screens.
+10. **Restraint.** Vanquis (cream card, one engraved object, one line) and Take Five (one yellow field, no characters) are the most legible of all the references. Our busiest scenes (the car-scam board) are furthest from them. When in doubt, one object and one line.
+11. **Print marks as decoration.** BBC × The Open University scatters crop and registration marks and graph paper. They fit our case-file look better than more dots, and they're quieter.
+12. **Halftone the evidence.** DTAN and Vox threshold real photos to one or two inks. A real screenshot (a text, a bill), cleaned of names and brands and halftoned in BLUE and BLK, would sit in our look as evidence. Needs the client's OK.
+13. **Dots as shading, not a flat tint** (Spider-Verse). Dots larger on the shadow side of a puppet's part and smaller in the light, locked to the part so it doesn't swim through the pattern. Our `dotScreen` is flat per shape; try it on one puppet.
+14. **Real paper.** Hiromu Oka printed every frame on six real papers. We can't do that, but one scanned sheet of cream stock, and one real solid of each ink, would make better texture plates than generated specks. Keep them fixed in screen space.
+15. **Fewer inks per shot.** Ren Chu makes whole loops in two inks. Four inks is our ceiling, not our default: blue and black carry most shots, and yellow comes in only on the warning beat.
+
+### Already doing (confirmed by the references)
+- Fixed per-ink misregistration, translation only, with the black plate registered (`REG` in printkit.js). This is how a real riso misregisters (Jack B. Du).
+- Per-ink screen angles (`ANG`), and paper specks fixed in screen space (`printFinish`), so nothing boils at 24 fps.
+- Holding still on a caption (Daniel Savage: "resist the urge to fill every moment").
+- A logo bug in the corner. BBC × OU runs both brands' logos in the top corners throughout.
+
+### Avoid
+- Generic corporate cartoon (NHS, FCAC, NCPC): smooth vector, gradients, sentence-case subtitles at the bottom. It's forgettable, and it's what our print look is meant to beat.
+- Faces too small to act (NHS's lineup). Stage characters big.
+- On twos (Spider-Verse, Vox): rejected by the client.
+- A white-label kit for partners (ABA) without Jeff's corner logo.
