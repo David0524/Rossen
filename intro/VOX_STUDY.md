@@ -33,7 +33,7 @@ Vox's videos can't be watched from this environment, so this comes from written 
 - The "tracking transition": the camera pulls back fast with a short motion blur that peaks exactly on the cut, and then moves into the next scene.
 - Map and zoom moves (Google Earth style) establish scale before the detail.
 
-**For us:** we move scenes around as flat layers. A real camera over layered depth, with a slow continuous push under still captions, would add life without making the text harder to read.
+**For us:** we move scenes around as flat layers. A real camera over layered depth adds life, but (later client direction) the camera moves only between captions, never under one.
 
 ### 5. Data made simple
 - One big number or one simple chart per idea, building on screen (a bar grows, a counter ticks up), with nothing else on the screen.
@@ -68,7 +68,7 @@ Vox's videos can't be watched from this environment, so this comes from written 
 | Hook | 0–1 | The text is already on screen in frame 0, as evidence pinned to the cream board: "UNPAID TOLL: $4.15. PAY TODAY TO AVOID FEES." The question caption lands on it. |
 | The evidence | 2–5 | Jeff marks it up the Vox way, one mark per bar: highlighter over PAY TODAY (urgency), a circle around the link (a strange web address), a callout on the tiny fee ("small, so you don't think twice"), a highlight on the sender (a random number). The camera pushes in to each mark in turn. **[SIGNATURE 1]** On the link, the camera dives through the circle into the fake payment page. |
 | The scale | 6–8 | **[SIGNATURE 2]** A pull-back to a flat map of the U.S. covered in pins: "THEY SEND IT TO EVERYONE." One sourced stat builds as a big number or a simple bar, to be verified from FTC or FBI data at build time. |
-| The mechanism | 9–12 | A step-by-step flow built on the beats: millions of texts, then a few clicks, then the fake page, then the card number is stolen. The pieces are cut-out paper on twos, and the Scammer collects at the end. |
+| The mechanism | 9–12 | A step-by-step flow built on the beats: millions of texts, then a few clicks, then the fake page, then the card number is stolen. The pieces are cut-out paper (on ones: twos was rejected), and the Scammer collects at the end. |
 | The fix | 13–16 | The music drops for a beat, then turns confident. **[SIGNATURE 3]** Jeff unfolds a paper strip reading "DON'T TAP THE LINK. CHECK YOUR TOLL ACCOUNT YOURSELF." Then: go to the toll agency's site or app yourself, and report it (placeholders only, no real agency names). |
 | End | 17–18 | The rubber stamp, then the closing card. |
 
@@ -77,12 +77,12 @@ Vox's videos can't be watched from this environment, so this comes from written 
 2. **Evidence layer.** Documents and phones on the cream board, with tape and torn edges.
 3. **Annotation kit, new in `vertkit.js`.** `highlighter()` sweeps a ragged yellow stroke behind the text (never over it); `circleMark()` draws itself on in a few steps; `callout()` draws a line to a straight label.
 4. **2.5D camera, new.** A `cam` with depth layers, a slow push, and a tracking transition whose blur peaks on the cut.
-5. **On twos.** Puppets and cut-outs move at 12 fps. Text and the camera stay at 24 fps so reading stays smooth.
+5. ~~**On twos.**~~ Rejected by the client as laggy (Wednesday tease): everything moves at 24 fps.
 6. **One data moment**, with its source written down in a `sources.txt` next to `audio_sources.txt`.
 7. **Music cues** change at each act, with one deliberate silence before the fix.
 8. **The existing rules still apply:** safe zone, opaque labels, nothing crossing text, sync within 10 ms, readability, and the closing card.
 
-**Before the full build:** make a 5-second test of one evidence beat (the highlighter swipe, circle and push-in, with the puppet on twos) so the new techniques can be approved before they go into a whole video.
+**Before the full build:** make a 5-second test of one evidence beat (the highlighter swipe, circle and push-in; twos was later rejected) so the new techniques can be approved before they go into a whole video.
 
 ## Sources
 - [PremiumBeat: 5 breakdowns on replicating the Vox motion-graphics look](https://www.premiumbeat.com/blog/replicating-vox-motion-graphic/)

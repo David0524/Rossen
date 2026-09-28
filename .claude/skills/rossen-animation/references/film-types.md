@@ -1,6 +1,6 @@
 # Film types: what each one is, and its reference build
 
-Everything is in `intro/`, 96 BPM on the bar grid, the case-file screen-print look, 1080×1920 at 24 fps unless noted. Every
+Lengths here exclude the intro title card's pickup (add about 1.9 s). Everything is in `intro/`, 96 BPM on the bar grid, the case-file screen-print look, 1080×1920 at 24 fps unless noted. Every
 film opens on the intro title card (CLAUDE.md). New films end on `liveEndCard(c, ['youtube', 'instagram', 'facebook'])` unless
 the type says otherwise. Start from the reference build of the same type: copy it under a new name, never edit an approved
 film in place (series episodes share recurring parts that must stay frame-identical).
@@ -8,7 +8,7 @@ film in place (series episodes share recurring parts that must stay frame-identi
 | type | reference | length | ends on | build | check |
 |---|---|---|---|---|---|
 | Live-show tease | `wed-tease.js` (+ `references/tease*.md`) | 25–30 s + loop ×2 | the LIVE TODAY loop ×2 | `tools/build_wed_tease.sh` pattern | `tools/verify_wed_tease.py` pattern |
-| Scam explainer | `officer.js` (story), `toll.js` + `vox.js` (evidence mark-up), `mychart.js` (first one) | 44–55 s | closing card | `tools/build_shorts.sh officer` pattern; toll: manual steps in README | `tools/sync_check.py`, safe pass |
+| Scam explainer | `officer.js` (story, music mix), `toll.js` + `vox.js` (evidence mark-up), `mychart.js` + `score_mychart.py` + `tools/vo_bed.sh` (the narrated VO-bed pattern) | 44–55 s | closing card | `tools/build_shorts.sh officer` pattern; toll: manual steps in README | `tools/sync_check.py`, safe pass |
 | LIVE TODAY promo | `livepromo.js` (Zelle) | 15 s | the live card, the rubber stamp, the official logo | score + loudnorm + mux (README) | sync, safe pass |
 | Quiz (play-along) | `quiz.js` (Scam or Legit) | ~60 s | recap, COMMENT YOUR SCORE, closing card | `tools/build_shorts.sh quiz` | sync, safe pass |
 | Series: JEFF'S RULES | `rules.js` + `rules/template.json` + `rules/epNN.json` + `rules/epNN.js` | ~42 s | closing card | `tools/build_shorts.sh rulesN` | `tools/verify_rules.py`, recurring parts vs ep01 |
@@ -26,10 +26,14 @@ answers. Ends on the loop ×2, never on the closing card.
   (the key moves to major), the protection line held two bars, then the rubber stamp and the closing card.
 - **Evidence** (VOX_STUDY.md): the scam's artifact (text, email, page) is the evidence on the board; Jeff marks it up one clue
   per bar, each with a different mark (highlighter under the words, a circle, a pointer, an underline); never over a letter.
+  VOX_STUDY's "camera pushes in on each mark" and "slow push" happen only between captions (at the bar change, as the
+  transition into the next mark), never while a caption is up; its on-twos advice is rejected.
 - **One sourced number** at most, with `out/<film>/sources.txt`; verified at build time.
 - **Two or three signature transitions** on story turns (the dive through the circled link, the pull-back to a map pin…).
 - **Audio**: a music mix (-16 LUFS) by default. If Jeff will narrate, make a voiceover bed instead (craft.md §8: no melodic
-  lines in the voice range, -23 LUFS, stems, a timed VO script).
+  lines in the voice range, -23 LUFS, stems, a timed VO script). No current film combines narration with the title card and
+  closing card: take the story structure from `officer.js`, the bed from `score_mychart.py` + `tools/vo_bed.sh` (MyChart itself
+  predates both cards and ends on the bare logo), and add both cards.
 - The toll explainer moved puppets on twos; that is now rejected (everything on ones).
 
 ## LIVE TODAY promo
@@ -46,8 +50,16 @@ every two beats) (2) · TAKEAWAY (2). The phone never moves while there's someth
   re-render ep01 and compare).
 - New puppets: an episode may load them via `window.EP_ASSETS`; cut them with a `tools/cut_*.py` like the others.
 - An episode may set `endPlatforms` (use all three for new episodes).
-- The intro title card rule applies to new episodes: add it as a pickup before the recurring TITLE segment in a new optional
-  template field, so earlier episodes stay unchanged; check with the user the first time, since it touches the recurring open.
+- The intro title card rule applies to new episodes, but **no mechanism exists yet** in either series: `buildTimeline()` has
+  fixed bar counts and the verify scripts don't know a pickup. The first new episode must add it: an optional `intro` field in
+  `epNN.json` (absent in earlier episodes), drawn by the series script before TITLE with the timeline offset by the pickup (as
+  `INTRO` in `wed-tease.js`), the score and hits shifted the same way (`T0`), and the verify script's times offset. Earlier
+  episodes must still render and score bit-identically. Ask the user before building it, since it changes the recurring open.
+- Bar counts: `rules/template.json` and `wwyd/template.json` are authoritative (END is 3 bars in both).
+- **Recurring parts are approved as they are**, even where they predate the readability rules (the rules END's tilted
+  FOLLOW FOR stamp landing from 1.25×): don't change them silently. New scenes follow craft.md §0; tell the user about the
+  conflict and ask whether to modernize the recurring parts (which would change every episode that re-renders).
+- `tools/build_shorts.sh` needs a case line added by hand for each new episode (and its default list updated).
 - WWYD: options in the order WRONG · CLOSE · RIGHT; the right answer is revealed last (`revealOrder`).
 
 ## Deals roundup

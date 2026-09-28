@@ -15,7 +15,7 @@ The case-file screen print:
 - paper-cutout puppets on paper stock;
 - rubber stamps, pinned index cards and halftone dots.
 
-Every film is 96 BPM. One idea lands per bar, and every landing hits the beat. The standing client direction (readable text, when to use creative transitions, the closing card) is written up in `intro/SKILL_NOTES.md` §0. New work is expected to follow it.
+Every film is 96 BPM. One idea lands per bar, and every landing hits the beat. The standing client direction (readable text, when to use creative transitions, the closing card) is written up in `.claude/skills/rossen-animation/references/craft.md` §0 (the Rossen animation skill). New work is expected to follow it.
 
 ### Characters
 
@@ -71,7 +71,7 @@ Everything is code, and every frame is drawn from data:
   - for the deals, OCR of every price, plus the percent sticker matched against all values from 0% to 99%.
 
   The results are saved as `verify.txt` / `sync.txt` next to each video.
-- **Documentation:** `intro/README.md` has a section per film with its build command. `intro/SKILL_NOTES.md` holds the lessons learned, and `intro/VOX_STUDY.md` the research notes on the Vox style.
+- **Documentation:** `intro/README.md` has a section per film with its build command. The Rossen animation skill (`.claude/skills/rossen-animation/`) holds the lessons learned, and `intro/VOX_STUDY.md` the research notes on the Vox style.
 
 ---
 

@@ -150,7 +150,7 @@ Both cutters (`tools/cut_casefile_jeff.py`, `tools/cut_scammer.py`) add a hidden
 
 A template for one-rule episodes. `rules.js` holds the recurring parts, and each episode is data plus its own middle scenes:
 
-- `rules/template.json`: the fixed bar counts (title 2, rule 2, recap 2, end 2), a 2-line rule, scenes of 1–4 bars. It's read by both `rules.js` (picture) and `score_rules.py` (sound), and `buildTimeline()` throws if an episode breaks it.
+- `rules/template.json`: the fixed bar counts (title 2, rule 2, recap 2, end 3), a 2-line rule, scenes of 1–4 bars. It's read by both `rules.js` (picture) and `score_rules.py` (sound), and `buildTimeline()` throws if an episode breaks it.
 - `rules/epNN.json`: the number, hook, rule, recap line, `ruleAfter` (how many scenes come before the rule reveal), scenes (id, bars, captions `[bar, beat, line1, line2]`, chords per bar) and sound cues `[scene, bar, beat, cue]`.
 - `rules/epNN.js`: the draw functions for that episode's scene ids (`SCENES.id = (c, t, S) => …`, with `S.at(bar, beat)` for scene-relative time).
 - The page sets `window.EPISODE = "rules/epNN"` and loads `rules.js` then `rules/epNN.js`. `?ep=rules/other` swaps the data.
@@ -176,7 +176,7 @@ The phone, ringing and lurking-Scammer helpers now live in `rules/props.js`, sha
 
 A play-along scam game. `wwyd.js` holds the recurring parts and each episode is data plus drawings:
 
-- `wwyd/template.json`: the fixed bar counts (title 2, freeze 1, pause 2, each reveal 2, takeaway 2, end 2), 3 options in the order WRONG · CLOSE · RIGHT, and scenes of 1–4 bars. It's read by both `wwyd.js` and `score_wwyd.py`, and `buildTimeline()` refuses data that breaks it.
+- `wwyd/template.json`: the fixed bar counts (title 2, freeze 1, pause 2, each reveal 2, takeaway 2, end 3), 3 options in the order WRONG · CLOSE · RIGHT, and scenes of 1–4 bars. It's read by both `wwyd.js` and `score_wwyd.py`, and `buildTimeline()` refuses data that breaks it.
 - `wwyd/epNN.json`: the cast, the setup scenes (captions and chords), the options (key, lines, verdict, reveal captions), takeaway, bonus tip and sound cues.
 - `wwyd/epNN.js`: `SCENES.tease` (the title card's picture), one function per setup scene, and `SCENES.reveal_A/B/C`.
 
@@ -294,7 +294,7 @@ A page sets `window.SHOW = { time, day, extra | platforms }`, and the time card 
 
 ## Closing card on every short
 
-Every short (not the teases or the LIVE TODAY loops) ends on `liveEndCard()` in `vertkit.js`. It has three levels: the official logo (largest), then WED 5 PM ET / FRI 10 AM ET, then a small LIVE ON line with the YouTube and Instagram icons (`assets/social/`, cleaned by `tools/clean_social_icons.py`).
+Every short (not the teases or the LIVE TODAY loops) ends on `liveEndCard()` in `vertkit.js`. It has three levels: the official logo (largest), then WED 5 PM ET / FRI 10 AM ET, then a small LIVE ON line with the YouTube and Instagram icons (`assets/social/`, cleaned by `tools/clean_social_icons.py`). Newer films (Jeff's Rules 3, What Would You Do? 2, the deals roundup) add Facebook, and every new film should.
 
 The rubber stamp lifts to reveal it, and it then holds still for about 4 s under a soft held D-major chord.
 
@@ -304,6 +304,7 @@ Applied to:
 - Jeff's Rules 1 and 2 (42.5 s each)
 - What Would You Do? 1 (47.5 s)
 - the fake officer explainer (54.5 s)
+- the unpaid toll explainer, Jeff's Rules 3 and What Would You Do? 2 (with Facebook)
 
 Rebuild them all with `tools/build_shorts.sh`.
 

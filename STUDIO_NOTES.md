@@ -1,6 +1,6 @@
 # Studio notes: lessons adopted from the Opus 5.5 motion-design course
 
-**Precedence:** the client's standing direction in `intro/SKILL_NOTES.md` §0 and the Vox study (`intro/VOX_STUDY.md`) come
+**Precedence:** the client's standing direction in `.claude/skills/rossen-animation/references/craft.md` §0 (formerly `intro/SKILL_NOTES.md`) and the Vox study (`intro/VOX_STUDY.md`) come
 first. Where the course disagrees, the client wins:
 - **No camera drift under captions** ("text lands, then holds still ... no drifting camera under it"). A caption is up in
   almost every bar, so the course's "camera never dead" becomes: camera moves only at transitions, and the life comes from

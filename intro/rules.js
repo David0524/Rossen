@@ -98,7 +98,7 @@ function partRecap(c, t, S) {   // RECAP (2 bars): the rule again, then the line
   const th = easeOutBack(seg(t, S.at(1, 2), S.at(1, 2.4)));
   jeffUp(c, t, S.at(1, 1.5), 140, { armR: lerp(0, -2.5, th), prop: th > .6 ? 'thumb' : null, head: .05 * Math.sin((t - S.t0) * TAU / (2 * BEAT)) }, .56);
 }
-function partEnd(c, t, S) {   // END (2 bars): FOLLOW FOR RULE #n+1, then the rubber stamp and the official logo
+function partEnd(c, t, S) {   // END (3 bars, rules/template.json): FOLLOW FOR RULE #n+1, then the rubber stamp and the official logo
   bgDots(c, BLUE, .12, .55);
   stickerLogo(c, SCX, 420, 420, -.03, lerp(1.4, 1, easeIn(land(t, S.at(1)))));
   stampFit(c, 'FOLLOW FOR', BLK, 150, SCX, 660, -.04, .95, t, S.at(1), 840, 1.25);

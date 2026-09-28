@@ -21,7 +21,7 @@ Settled conflicts: no camera drift or push while a caption is up (the camera mov
 
 | file | when |
 |---|---|
-| `CLAUDE.md` (repo root) | always: title card, closing rules |
+| `CLAUDE.md` (repo root) | always: the title card, a tease's loop ×2 (the closing card for shorts is in `craft.md` §0) |
 | `references/craft.md` | always: §0 standing direction; §1 brands and assets; §2 timing; §3 the look; §4 puppets; §5 9:16; §6 render traps; §7 story; §8 VO audio; §9 working with this client |
 | `references/client-notes.md` | always: every review note the client gave and the fix it became |
 | `references/film-types.md` | always: pick the type, find its reference build |
@@ -34,7 +34,9 @@ Settled conflicts: no camera drift or push while a caption is up (the camera mov
 ## The pipeline, with gates
 
 1. **Pick the type** (`references/film-types.md`) and its reference build. New films are copies under a new name; never edit
-   an approved film in place. Series episodes are new data + scenes on the series template.
+   an approved film in place. Series episodes are new data + scenes on the series template. **Check for overlap**: search
+   `final-videos/` and `intro/README.md` for the topic (the grandparent scam, gift cards, wire transfers and more are already
+   covered) and ask the user how the new film should differ from the earlier one.
 2. **Stop-checks, before any code**: every asset the brief names (character art, both logos: the official
    `intro/assets/official_logo.png` and the screen-print `intro/assets/casefile/logo_screenprint.webp`, the platform icons in
    `intro/assets/social/`, product photos), the sample packs (`intro/audio/`), any loop or clip to be appended (unique, the
@@ -53,7 +55,8 @@ Settled conflicts: no camera drift or push while a caption is up (the camera mov
 6. **Critique loop, before any full render** (STUDIO_NOTES §1): one frame per beat → a contact sheet → score 1–10 on hook,
    readability, motion, variety, composition, brand, sync → fix the 3 worst → repeat until every score is 8+. Add 12-frame
    strips around every fast action and every reaction, and a phone test (360 px wide). Log rounds in
-   `intro/_check/<film>/review/review_log.md`.
+   `intro/_check/<film>/review/review_log.md` (`<film>` = the html name without `rossen-`, e.g. `officer-scam`; a tease uses
+   its slug; the Wednesday tease's `_check/wedtease/` predates this).
 7. **Score**: composed bars in the film's key (D for anything that joins a loop), warm recorded instruments (VSCO 2 CE),
    recorded CC0 foley placed by its audible attack, a clean silent beat where the story turns (end the music on a button hit
    and freeze the picture). Loudness: music mix `loudnorm I=-16:TP=-2` + `alimiter`; a VO bed -23 LUFS (craft.md §8).
@@ -61,7 +64,8 @@ Settled conflicts: no camera drift or push while a caption is up (the camera mov
    still for its time (read twice at 300 wpm), the safe-zone overlay pass (`--query safe=1` into `_check`), the ending
    (closing card still ≥ 1 bar, or loop joins bit-exact), a CRF 20–22 preview under 30 MB. The film type's verify script if
    it has one.
-9. **Deliver**: the master to `final-videos/NN <Title> (9x16).mp4` (NN = the next free number), the README section, commit
+9. **Deliver**: the master to `final-videos/NN <Title> (9x16).mp4` (NN = the next free number), the README section (and, for a
+   short, its line in the closing-card list and a case line in `tools/build_shorts.sh`), commit
    and push, send the preview. Report what changed, what was verified, and what you couldn't check (you can measure audio,
    not hear it).
 
@@ -85,9 +89,11 @@ Settled conflicts: no camera drift or push while a caption is up (the camera mov
   backgrounds, flashes and logos full-frame; scenery may run off the edges to give the action room.
 - **Rhythm**: 96 BPM, whole bars, equal parts get equal bars, landings start `SLAM` (0.14 s) early, repeated sounds on the
   groove, sync measured on the final mp4.
-- **Content**: no real brands (makes, dealers, carriers, retailers, banks, apps, card brands, state designs) except as plain
-  system-font text where the story needs the name; no real phone numbers or URLs (fake links obviously garbled, no real
-  top-level domain); obvious placeholders for names and numbers (JOHN DOE, 1-555-XXX-XXXX, ABC-0000); no real people except
+- **Content**: no real brands (makes, dealers, carriers, retailers, banks, wire services, apps, card brands, state designs)
+  except as plain system-font text where the story needs the name (prefer a generic noun: "A WIRE SERVICE"); no real phone
+  numbers or URLs, except the government reporting sites a fix step needs (ReportFraud.ftc.gov, FTC.GOV, as plain text); fake
+  links obviously garbled, no real top-level domain; AI and tech shown generically (a waveform, an unbranded app screen), and
+  any victim or family member is a puppet, never a realistic child; obvious placeholders for names and numbers (JOHN DOE, 1-555-XXX-XXXX, ABC-0000); no real people except
   Jeff; numbers are the user's or sourced (`sources.txt`), never invented.
 - **Sound**: recorded instruments and recorded foley only; every file logged with source URL and license in the film's
   `audio_sources.txt`; say which sounds are composed.
@@ -122,6 +128,12 @@ Once a film exists, one-line notes with a timestamp work best ("the opening is c
 - Captions carry the story with the sound off, but must not restate what the puppets act out: they add the stakes or the turn.
 - Tease vs explain: a tease shows the scam happening and stops before the answer; an explainer gives the answer (the fix),
   held two bars at the end.
+
+### Who writes the words
+
+This skill writes an animation's captions and, for a narrated film, its timed voiceover script (about 2.4 words a second,
+the closing card's last 2 s clear). The captions say the same thing as the VO in fewer words; they don't have to match it
+word for word. `rossen-script-writer` is only for the live show's bible.
 
 ### How to prompt subagents
 
