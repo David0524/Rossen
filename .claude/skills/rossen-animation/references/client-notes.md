@@ -38,10 +38,16 @@ THE CAR / DOESN'T EXIST · $3,000 / IN TICKETS · IT'S NOT / YOUR CAR · SOMEONE
 Pattern: a question to open, then the turn of each story in two short lines, a dollar figure where there is one, and the
 promise last (level, two bars).
 
-## Lessons the client picked from the outside references (2026-09-28): on trial
-The client noted REFERENCES.md lessons 11, 13, 14 and 15 and asked for a 5 s demo (`intro/style-demo.js`,
-`out/rossen-style-demo/rossen-style-demo.mp4`). Its verdict is still pending, so none of these is standing direction yet:
-- **11** Print marks as decoration: crop marks, registration targets and a colour bar around a printed panel, instead of more dots.
-- **13** Halftone dots as shading, locked to each puppet part (`shadedPart`: black dots away from the light, blue rim-light dots on dark coats).
-- **14** A real paper scan (ambientCG Paper002, CC0) overlaid through every ink in screen space (`paperFinish`), replacing the generated specks.
-- **15** Fewer inks per shot: blue and black first, with yellow held back as the warning ink (the disguise's yellow reprinted blue in bar 0).
+## Lessons the client picked from the outside references (2026-09-28)
+The client noted REFERENCES.md lessons 11, 13, 14 and 15 and saw the 5 s demo (`intro/style-demo.js`,
+`out/rossen-style-demo/rossen-style-demo.mp4`). Verdict: "some potential here as long as we're smart about how we use it."
+So these are tools to use on purpose, not defaults on every shot. Never retrofit them into approved films.
+- **14, real paper** (a CC0 scan through every ink, `paperFinish`): the most broadly useful, and quiet. Fine for new films.
+  Keep it fixed in screen space. The scan must be CC0 and logged.
+- **15, yellow as the warning ink**: a story device for a film with a reveal (the tell, the fake part). Print blue and black
+  until the moment, then let the yellow arrive with it. Don't recolour puppet art unless it serves that reveal.
+- **13, dots as shading locked to parts** (`shadedPart`): for characters staged big (hero shots). At small sizes it reads as
+  noise, and over dark art it's invisible. Build it once per part at load, never per frame.
+- **11, print marks** (crop marks, registration targets, colour bar): one framing device per film at most, e.g. the title
+  card or an evidence close-up, not every scene. Keep the marks out of the logo bug's corner and the caption area. They are
+  decoration; nothing readable goes in them.
