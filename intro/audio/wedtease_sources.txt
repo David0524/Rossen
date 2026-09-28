@@ -1,0 +1,51 @@
+WEDNESDAY TEASE - SFX SOURCES (all recorded sounds, CC0 / no attribution required)
+Compiled 2026-09-27. Paths are relative to /home/user/Rossen/intro/audio/
+All files checked with `ffmpeg -v error -i FILE -f null -` (no errors).
+Only the files used in the mix are kept in the repo (the other candidates that were auditioned were deleted); the final log is out/rossen-tease-wednesday/audio_sources.txt.
+
+LICENSE TEXT SEEN
+- BigSoundBank (every page below shows, in its download box): "License CC0 (public domain): Free and royalty-free"
+  plus page FAQ: "Is this sound free for commercial use? Yes." / "Do I have to credit LaSonotheque or the author? No. Attribution isn't required".
+  Author on every BSB page: "Author : Joseph SARDIN". Direct download = https://bigsoundbank.com/UPLOAD/bwf-en/<ID>.wav
+- OpenGameArt: page field "License(s): CC0" (links creativecommons.org/publicdomain/zero/1.0/).
+- archive.org Glitch item: item licenseurl "https://creativecommons.org/publicdomain/zero/1.0/"; the archived Tiny Speck licensing page
+  (https://web.archive.org/web/20200922020741/https://www.glitchthegame.com/licensing/) says the assets are "licensed under a Creative Commons
+  CC0 1.0 Universal Public Domain Dedication ... 'No Rights Reserved'". Glitch sounds are game SFX: likely foley-based but possibly
+  processed/designed; treat as backups.
+- Kenney packs (CC0): License.txt: "License: (Creative Commons Zero, CC0) ... free to use in personal, educational and commercial projects.
+  Support us by crediting Kenney or www.kenney.nl (this is not mandatory)"
+
+FORMAT: local path | sounds like | page URL | direct download URL | author | license | duration
+
+1. CAR DOOR / HOOD CLUNK
+bigsoundbank/joseph-sardin/bsb-0119_car-hood-closing.wav | single car hood slam, one metal clunk | https://bigsoundbank.com/car-hood-closing-s0119.html | https://bigsoundbank.com/UPLOAD/bwf-en/0119.wav | Joseph Sardin | CC0 "Free and royalty-free" | 0.35 s
+bigsoundbank/joseph-sardin/bsb-1526_car-door-4.wav | Peugeot 107 door open then slam, exterior (events ~0.0-0.3, 0.7-1.1, 2.5-2.8 s) | https://bigsoundbank.com/car-door-4-s1526.html | https://bigsoundbank.com/UPLOAD/bwf-en/1526.wav | Joseph Sardin | CC0 "Free and royalty-free" | 3.83 s
+
+2. ENGINE SPUTTER / STALL / FAILING START (all need trimming to 1-3 s)
+bigsoundbank/joseph-sardin/bsb-0761_generator-attempts-to-start.wav | 3 pull-start attempts of a 1 kW generator, cough/sputter bursts (~0-1.2, 3.1-4.1, 6.1-7.3 s) | https://bigsoundbank.com/generator-attempts-to-start-s0761.html | https://bigsoundbank.com/UPLOAD/bwf-en/0761.wav | Joseph Sardin | CC0 "Free and royalty-free" | 9.48 s
+
+3. SMOKE PUFF / STEAM BURST / WHOOSH-POOF
+opengameart/bart-steam-release-sounds/steam_hiss_marker1.wav | short steam release hiss burst | https://opengameart.org/content/steam-release-sounds | https://opengameart.org/sites/default/files/steam_hisses.zip ("steam hisses - Marker #1.wav") | bart | CC0 ("License(s): CC0"; page says "Attribution appreciated") | 1.85 s
+bigsoundbank/joseph-sardin/bsb-1798_whoosh-10.wav | single short whoosh (bamboo stick swing) | https://bigsoundbank.com/whoosh-10-s1798.html | https://bigsoundbank.com/UPLOAD/bwf-en/1798.wav | Joseph Sardin | CC0 "Free and royalty-free" | 0.46 s
+bigsoundbank/joseph-sardin/bsb-1486_air-leak.wav | continuous air leak (tire puncture) hiss - long, trim a slice | https://bigsoundbank.com/air-leak-s1486.html | https://bigsoundbank.com/UPLOAD/bwf-en/1486.wav | Joseph Sardin | CC0 "Free and royalty-free" | 21.95 s
+
+4. KEYBOARD TYPING (trim a few strokes)
+bigsoundbank/joseph-sardin/bsb-1733_slow-keyboard.wav | slow, separated computer keystrokes, dry | https://bigsoundbank.com/slow-keyboard-s1733.html | https://bigsoundbank.com/UPLOAD/bwf-en/1733.wav | Joseph Sardin | CC0 "Free and royalty-free" | 39.39 s
+
+5. METAL MAILBOX / TIN LID CLANK
+bigsoundbank/joseph-sardin/bsb-1527_metal-mailbox-1.wav | letter put into metal mailbox: flap opens/clanks shut | https://bigsoundbank.com/metal-mailbox-1-s1527.html | https://bigsoundbank.com/UPLOAD/bwf-en/1527.wav | Joseph Sardin | CC0 "Free and royalty-free" | 3.11 s
+
+6. CAMERA SHUTTER / FLASH
+bigsoundbank/joseph-sardin/bsb-3022_old-camera-trigger.wav | vintage camera with flash bulb: shutter + small bulb crack | https://bigsoundbank.com/old-camera-trigger-s3022.html | https://bigsoundbank.com/UPLOAD/bwf-en/3022.wav | Joseph Sardin | CC0 "Free and royalty-free" | 2.43 s
+
+7. RUBBER STAMP THUMP: no true rubber-stamp recording found; the recorded Kenney thumps below are used
+
+8. POUR / GLUG FROM A CAN
+bigsoundbank/joseph-sardin/bsb-0117_glass-of-soda.wav | pouring a can of soda into a glass (can glug + fizz) | https://bigsoundbank.com/glass-of-soda-s0117.html | https://bigsoundbank.com/UPLOAD/bwf-en/0117.wav | Joseph Sardin | CC0 "Free and royalty-free" | 6.89 s
+
+9. PAPER TEAR / PEEL
+bigsoundbank/joseph-sardin/bsb-3240_torn-paper-3.wav | single short sheet tear | https://bigsoundbank.com/torn-paper-3-s3240.html | https://bigsoundbank.com/UPLOAD/bwf-en/3240.wav | Joseph Sardin | CC0 "Free and royalty-free" | 0.84 s
+bigsoundbank/joseph-sardin/bsb-0298_adhesive-tape-2.wav | adhesive tape unrolled/peeled, high-to-low (sticker-peel stand-in) | https://bigsoundbank.com/adhesive-tape-2-s0298.html | https://bigsoundbank.com/UPLOAD/bwf-en/0298.wav | Joseph Sardin | CC0 "Free and royalty-free" | 4.00 s
+
+KENNEY (CC0): the Kenney files in the mix are the copies already in intro/audio/kenney/ (interface, impact, rpg, casino packs).
+7. The stamp thump (the price flip) is Kenney impact/impactPunch_heavy_000.ogg with rpg/bookPlace1.ogg.

@@ -1,0 +1,10 @@
+{
+  "_doc": "Dummy data for the template check only: proves the recurring parts render for another episode without code changes.",
+  "num": 2,
+  "hook": ["DUMMY HOOK", "FOR RULE TWO"],
+  "rule": ["TEST RULE", "LINE TWO."],
+  "recap": ["RECAP ONE.", "RECAP TWO."],
+  "ruleAfter": 1,
+  "scenes": [ { "id": "placeholder", "bars": 1, "caps": [[1, 1, "SCENE", "GOES HERE"]] } ],
+  "cues": []
+}

@@ -1,0 +1,38 @@
+container offset vs out/rossen-rules-ep03/score_norm.wav: 0.00 ms
+  0.000s  title         onset   0.004s  offset   +4 ms
+  0.625s  hook          onset   0.644s  offset  +19 ms   <-- over 10 ms
+  0.938s  hook          onset   0.957s  offset  +19 ms   <-- over 10 ms
+  5.000s  caption       onset   5.004s  offset   +4 ms
+  5.000s  listing       onset   5.004s  offset   +4 ms
+  6.250s  tapbuy        onset   6.254s  offset   +4 ms
+  7.500s  boxdrop       onset   7.504s  offset   +4 ms
+  7.500s  caption       onset   7.504s  offset   +4 ms
+  8.125s  boxopen       onset   8.133s  offset   +8 ms
+  8.750s  fakes         onset   8.754s  offset   +4 ms
+ 10.000s  caption       onset  10.004s  offset   +4 ms
+ 10.000s  listing       onset  10.004s  offset   +4 ms
+ 10.625s  curtain       onset  10.629s  offset   +4 ms
+ 11.250s  flash         onset  11.255s  offset   +5 ms
+ 11.875s  flap          onset  11.882s  offset   +7 ms
+ 13.750s  rule strike 1 onset  13.754s  offset   +4 ms
+ 15.000s  rule strike 2 onset  15.004s  offset   +4 ms
+ 17.500s  caption       onset  17.518s  offset  +18 ms   <-- over 10 ms
+ 18.750s  jeffpop       onset  18.755s  offset   +5 ms
+ 20.000s  caption       onset  20.004s  offset   +4 ms
+ 20.000s  shutter       onset  20.004s  offset   +4 ms
+ 20.625s  stalls        onset  20.630s  offset   +5 ms
+ 21.250s  flash         onset  21.255s  offset   +5 ms
+ 22.500s  zoom          onset  22.505s  offset   +5 ms
+ 23.125s  mark          onset  23.130s  offset   +5 ms
+ 23.750s  mark          onset  23.755s  offset   +5 ms
+ 25.000s  rank          onset  25.004s  offset   +4 ms
+ 25.625s  rank          onset  25.629s  offset   +4 ms
+ 26.250s  rankrisk      onset  26.254s  offset   +4 ms
+ 27.500s  peek          onset  27.504s  offset   +4 ms
+ 28.125s  flash         onset  28.129s  offset   +4 ms
+ 32.500s  recap line    onset  32.505s  offset   +5 ms
+ 32.812s  recap line    onset  32.817s  offset   +5 ms
+ 35.000s  follow for    onset  35.004s  offset   +4 ms
+ 35.312s  rule #n+1     onset  35.317s  offset   +5 ms
+ 38.125s  rubber stamp  onset  38.129s  offset   +4 ms
+36 hits, worst offset 19 ms

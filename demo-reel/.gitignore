@@ -1,0 +1,6 @@
+node_modules
+out/
+_check/*/frames/
+_check/*/*.wav
+_check/*/video.mp4
+_check/cuts/

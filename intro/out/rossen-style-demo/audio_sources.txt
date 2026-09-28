@@ -1,0 +1,7 @@
+STYLE DEMO - AUDIO SOURCES
+Music bed: out/rossen-loop/loop_norm.wav, the approved LIVE TODAY loop cue (composed in score_loop.py, 2 bars at 96 BPM in D, played by VSCO 2 CE instrument recordings; see out/rossen-loop/samples_used.txt).
+Recorded CC0 sound effects (Kenney, License.txt: "Creative Commons Zero, CC0 ... free to use in personal, educational and commercial projects"):
+- audio/kenney/rpg/bookPlace1.ogg: the yellow plate printing, 2.5 s (placed by its attack, 53 ms in)
+- audio/kenney/impact/impactPunch_heavy_000.ogg + audio/kenney/rpg/bookPlace1.ogg: the FAKE label slapped on, 3.125 s
+- audio/kenney/interface/drop_002.ogg: the cap popping up, 3.75 s
+Paper: assets/demo/paper_grain.png and ink_tooth.png, made from ambientCG "Paper 002" (photographed paper), https://ambientcg.com/view?id=Paper002, CC0 1.0 (https://docs.ambientcg.com/license/).

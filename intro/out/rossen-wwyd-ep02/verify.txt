@@ -1,0 +1,26 @@
+PASS duration 52.500 s (timeline 52.5 s = 21 bars)
+PASS the three reveals have equal bars: A (CLOSE) 2 bars from 20.0 s, C (WRONG) 2 bars from 25.0 s, B (RIGHT) 2 bars from 30.0 s; the right answer lands last
+PASS the takeover hits 7.50 s with 1 hard flash (under 3 a second, the photosensitivity limit), with no text on screen
+PASS no caption on screen while it strobes (caption band still: largest change 2/255)
+PASS from the moment its text lands, the pop-up holds completely still until the freeze (4.17 s; largest change 2/255)
+PASS reveal A: the pop-up on screen 20.20-20.58 s never flashes (largest brightness jump 0.1/255; only the cursor moves)
+PASS reveal B: the pop-up on screen 30.20-30.58 s never flashes (largest brightness jump 0.7/255; only the cursor moves)
+PASS the pop-up never flashes at the freeze or after: it is static from its landing to the end of the setup, and static in the reveals
+PASS the options are on screen, landed and still, for the whole pause (4.88 s; largest change 0/255); they landed on the freeze's beats 2-4
+PASS caption "JUST BROWSING...": on screen 2.50 s, landed and still for 1.92 s (largest change 2/255)
+PASS caption "IT INSTALLS FAKE / "SECURITY" SOFTWARE...": on screen 1.87 s, landed and still for 0.96 s (largest change 3/255)
+PASS caption "...OR OPENS A / PAYMENT PAGE.": on screen 2.49 s, landed and still for 1.58 s (largest change 1/255)
+PASS caption "THE NUMBER GOES / STRAIGHT TO HIM.": on screen 1.87 s, landed and still for 0.96 s (largest change 2/255)
+PASS caption "HE WANTS REMOTE / ACCESS AND MONEY.": on screen 2.49 s, landed and still for 1.58 s (largest change 1/255)
+PASS caption "CLOSE IT, AND / THE POP-UP IS GONE.": on screen 1.87 s, landed and still for 0.96 s (largest change 1/255)
+PASS caption "AND SO IS / THE SCAMMER.": on screen 2.49 s, landed and still for 1.58 s (largest change 1/255)
+PASS the takeaway card (lesson + bonus) still for 1.29 s (largest change 1/255)
+PASS the stat card (UP TO HALF ... SOURCE: BBB), level, still for 3.17 s (largest change 0/255)
+PASS the last second is still (1.00 s; largest change 0/255)
+PASS official logo blue: file [9.8, 87.7, 193.1] vs video [9.6, 87.3, 188.7]
+PASS official logo yellow: file [254.3, 208.2, 0.6] vs video [251.6, 204.6, 3.4]
+PASS official logo pixels vs the file: median difference 2/255 (uniform scale, untextured)
+PASS closing card youtube icon vs its file: median difference 2/255
+PASS closing card instagram icon vs its file: median difference 5/255
+PASS closing card facebook icon vs its file: median difference 1/255
+ALL PASS

@@ -1,0 +1,497 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Rossen Title Sequence</title>
+<style>
+@font-face { font-family: Stamp; src: url(assets/fonts/BowlbyOneSC-Regular.ttf); }
+@font-face { font-family: Marker; src: url(assets/fonts/PermanentMarker-Regular.ttf); }
+body { margin: 0; background: #111; } canvas { display: block; max-width: 100vw; }
+</style>
+<script src="core.js"></script><script src="kit.js"></script>
+</head><body><canvas id="c"></canvas>
+<script>
+'use strict';
+/* Rossen Reports: 18 s title sequence for the live show. One continuous piece at 1920x1080, 24 fps.
+   96 BPM: one beat = 0.625 s = 15 frames, one bar = 2.5 s. Every scene is one bar and plays at natural speed, and every
+   landing (numbers, stamps, tags, cards, logo) FINISHES on its beat or eighth, exactly where its sound is.
+
+   bar 1  0.0-2.5    COUNTDOWN  3 / 2 / 1 / LIVE on the four beats; zoom into the LIVE dot on the last half beat
+   bar 2  2.5-5.0    RUN        sprint beats 1-2 (a footfall every 16th), skid on beat 3, magnifier on 3.5, lens on 4
+   bar 3  5.0-7.5    PHONE      bubble on 1, button on 1.5, scammer rises on 2, SCAM! on 3, phone tips on 4, feed on 4.5
+   bar 4  7.5-10.0   HIDDEN CAM Jeff lands on beat 2, CAUGHT! on 3, scammer bolts on 3.5, whip pan from beat 4
+   bar 5  10.0-12.5  DEALS      tags land on eighths 1-2.5, Jeff up on 2, DEAL! on 3, page turn from 4.5
+   bar 6  12.5-15.0  CARDS      one card per beat (mirrors the countdown); the logo starts falling on the "and" of 4
+   bar 7  15.0-18.0  LOGO       lands on the downbeat and blows the cards away; Jeff up on 2; LIVE on 3; still from 16.6
+*/
+setFormat({ ar: '16:9', width: 1920 });
+const FPS = 24, DUR = 18.0, NFR = Math.round(FPS * DUR);
+// one palette: cream paper, the logo's yellow and blue, the stamp red (plus ink and pencil grey)
+const BLUE = '#5f86bd', MRED = '#cf5a48', YEL = '#efd488', PALEBLUE = '#c9d7e8', PINK = '#ecc6b8', CREAM = '#efe5cc', PENCIL = '#8b877d';
+const L1 = layer(), L2 = layer();
+let PAPER_TEX = null, CLIPPINGS = null;
+// newspaper clippings pinned around the edges (the phone covers the middle): generic headlines, squiggle copy, redaction bars
+function buildClippings() {
+  const o = document.createElement('canvas'); o.width = W + 80; o.height = H + 40; const g = o.getContext('2d'); g.drawImage(PAPER_TEX, 0, 0, o.width, o.height);
+  const heads = ['SCAM ALERT', 'FRAUD', 'WARNING', 'RIP-OFF', 'BEWARE', 'RECALL', 'CAUGHT', 'EXPOSED'];
+  const spots = [[210, 190, -.08], [230, 560, .06], [260, 900, -.05], [620, 120, .05], [560, 880, .07], [1370, 150, -.06], [1720, 330, .07], [1420, 880, -.07], [1760, 760, .04]];
+  spots.forEach(([x, y, rot], k) => { const r = rng(300 + k), w = 300 + r() * 80, h = 210 + r() * 70;
+    g.save(); g.translate(x, y); g.rotate(rot);
+    g.globalAlpha = .18; g.fillStyle = INK; g.fillRect(-w / 2 + 10, -h / 2 + 12, w, h); g.globalAlpha = 1;
+    shape(g, [[-w / 2, -h / 2], [w / 2, -h / 2], [w / 2, h / 2], [-w / 2, h / 2]], '#f6f0e1', 310 + k, { lw: 3, hc: '#ddd4c0', ha: .35 });
+    fitText(g, heads[k % heads.length], 0, -h / 2 + 40, 44, 'Stamp', INK, w - 40);
+    squiggleText(g, -w / 2 + 22, -h / 2 + 88, w - 44, Math.floor((h - 110) / 20), { seed: 320 + k, lineH: 20, color: '#6b645a' });
+    g.fillStyle = '#26211d'; for (let q = 0; q < 2; q++) { const ry = -h / 2 + 92 + Math.floor(r() * ((h - 130) / 20)) * 20; g.fillRect(-w / 2 + 22 + r() * 60, ry - 12, 80 + r() * 90, 14); }   // redactions
+    g.globalAlpha = .55; g.fillStyle = YEL; g.fillRect(-36, -h / 2 - 12, 72, 24); g.globalAlpha = 1;   // tape
+    g.restore(); });
+  return o;
+}
+const paperBg = c => { c.save(); resetT(c); c.drawImage(PAPER_TEX, 0, 0, W, H); c.restore(); };
+const pulseAt = (t, times, k = 9) => { let v = 0; for (const b of times) if (t >= b) v = Math.max(v, Math.exp(-(t - b) * k)); return v; };
+function shakeAt(t, hits) { let x = 0, y = 0; for (const [ti, a] of hits) if (t >= ti && t < ti + .14) { const r = rng(Math.round(t * 997)); const d = 1 - (t - ti) / .14; x += (r() - .5) * a * 2 * d; y += (r() - .5) * a * 2 * d; } return [x, y]; }
+function bracketFrame(c, t, o = {}) {   // viewfinder corners + REC
+  const ins = o.ins ?? 70, L = 120, lw = 11;
+  for (const [x, y, sx, sy] of [[ins, ins, 1, 1], [W - ins, ins, -1, 1], [ins, H - ins, 1, -1], [W - ins, H - ins, -1, -1]])
+    crayon(c, [[x, y + sy * L], [x, y], [x + sx * L, y]], INK, lw, 900 + x + y, false);
+  if (Math.floor(t * 4) % 2 === 0 || o.solid) { c.fillStyle = RED; c.beginPath(); c.arc(ins + 70, ins + 62, 17, 0, TAU); c.fill(); }
+  text(c, 'REC', ins + 100, ins + 64, '52px Stamp', INK, 'left');
+  // battery
+  const bx = W - ins - 190, by = ins + 40; crayon(c, rrPts(bx, by, 110, 50, 8, 3), INK, 5, 950, true); c.fillStyle = INK; c.fillRect(bx + 112, by + 16, 10, 18);
+  for (let k = 0; k < 3; k++) { c.fillStyle = k < 2 ? BLUE : '#d9d2c3'; c.fillRect(bx + 10 + k * 33, by + 9, 26, 32); }
+  if (o.tc !== undefined) { const s = o.tc, f = Math.floor((s % 1) * 24), p2 = v => String(v).padStart(2, '0'); text(c, `${p2(Math.floor(s / 3600))}:${p2(Math.floor(s / 60) % 60)}:${p2(Math.floor(s) % 60)}:${p2(f)}`, W - ins - 20, H - ins - 60, '42px Stamp', INK, 'right'); }
+}
+function crosshair(c, x, y, R) { c.save(); c.strokeStyle = INK; c.globalAlpha = .55; c.lineWidth = 3; c.beginPath(); c.moveTo(x - R, y); c.lineTo(x - R * .35, y); c.moveTo(x + R * .35, y); c.lineTo(x + R, y); c.moveTo(x, y - R); c.lineTo(x, y - R * .35); c.moveTo(x, y + R * .35); c.lineTo(x, y + R); c.stroke(); c.restore(); }
+function stampAt(c, img, x, y, rot, s, t, tl, spat = .4) { drawStamp(c, img, x, y, rot, s, t, tl, spat); }
+
+// ================= 1. VIEWFINDER COUNTDOWN =================
+const LIVE_S = 1.9;   // big LIVE badge scale in the countdown
+let FILM_T = 0;   // film clock, for things that keep moving while a scene's own clock holds
+const liveScale = () => LIVE_S;
+function liveDotWorld() { const b = liveBadge(300, 122, true), [dx, dy] = b.dot, rot = -.05, S_ = liveScale();
+  const lx = (dx - b.width / 2) * S_, ly = (dy - b.height / 2) * S_; return [960 + lx * Math.cos(rot) - ly * Math.sin(rot), 560 + lx * Math.sin(rot) + ly * Math.cos(rot), b.dot[2] * S_]; }
+function sceneCountdown(c, t) {
+  paperBg(c);
+  const [shx, shy] = shakeAt(t, [[0, 6], [.625, 6], [1.25, 6], [1.875, 14]]);
+  const punch = 1 + .045 * pulseAt(t, [0, .625, 1.25, 1.875]);
+  // zoom into the LIVE dot from 1.75
+  const dz = seg(t, 2.1875, 2.5), [dxw, dyw] = liveDotWorld(), Z = Math.exp(Math.log(60) * easeIn(dz));
+  c.save(); c.translate(shx, shy);
+  c.translate(dxw, dyw); c.scale(punch * Z, punch * Z); c.translate(-dxw, -dyw);
+  c.translate(960, 560); c.scale(1, 1); c.translate(-960, -560);
+  // film leader
+  const cx = 960, cy = 560, R = 360;
+  if (t < 1.875) {
+    const a = ((t % .625) / .625) * TAU, wedge = new Path2D(); wedge.moveTo(cx, cy); wedge.arc(cx, cy, R, -Math.PI / 2, -Math.PI / 2 + a); wedge.closePath();
+    c.save(); c.globalAlpha = .9; c.fillStyle = tint(BLUE, .55); c.fill(wedge); hatch(c, wedge, [cx - R, cy - R, 2 * R, 2 * R], { gap: 5, len: 16, color: BLUE, alpha: .45, seed: 3 }); c.restore();
+  }
+  crayon(c, ellPts(cx, cy, R, R, 0, 90), INK, 6, 21, true); crayon(c, ellPts(cx, cy, R * .82, R * .82, 0, 80), INK, 3.5, 22, true);
+  c.save(); c.strokeStyle = INK; c.globalAlpha = .6; c.lineWidth = 3; c.beginPath(); c.moveTo(cx - R * 1.25, cy); c.lineTo(cx + R * 1.25, cy); c.moveTo(cx, cy - R * 1.2); c.lineTo(cx, cy + R * 1.2); c.stroke(); c.restore();
+  // numerals
+  if (t < 1.875 - .12) {
+    const lead = .09, n = t < .625 - lead ? 3 : t < 1.25 - lead ? 2 : 1, t0 = (3 - n) * .625, u = t0 === 0 ? 1 : seg(t, t0 - lead, t0), s = lerp(1.45, 1, easeOut(u));
+    c.save(); c.translate(cx, cy + 10); c.scale(s, s); c.font = '430px Stamp'; c.textAlign = 'center'; c.textBaseline = 'middle';
+    c.fillStyle = alpha(MRED, .85); c.fillText(String(n), 10, 8); c.fillStyle = INK; c.fillText(String(n), 0, 0); c.restore();
+  }
+  // LIVE stamp at 1.5
+  drawStamp(c, liveBadge(300, 122, true), 960, 560, -.05, liveScale(), t, 1.875, .2);
+  c.restore();
+  if (dz < .3) bracketFrame(c, FILM_T);
+}
+
+// ================= 2. STREET RUN =================
+const BLD = [], FAR = [];
+{ const r = rng(77); let x = -400; for (let i = 0; i < 60; i++) { const w = 250 + r() * 150; BLD.push({ x, w, h: 360 + r() * 220, col: [PINK, '#bcd0e6', YEL, PALEBLUE, CREAM][i % 5], win: 2 + Math.floor(r() * 2), awn: r() < .55, seed: 100 + i }); x += w + 18 + r() * 30; }
+  x = -300; for (let i = 0; i < 80; i++) { const w = 90 + r() * 150; FAR.push({ x, w, h: 160 + r() * 300, spire: r() < .18, seed: 300 + i }); x += w + r() * 20; } }
+function streetScroll(t) { const v = 1000; if (t < 3.75) return v * (t - 2.5); const u = Math.min(t - 3.75, .3); return v * 1.25 + v * (u - u * u / .6); }
+function building(c, b, x, base) {
+  const top = base - b.h;
+  shape(c, [[x, base], [x + b.w, base], [x + b.w, top], [x, top]], b.col, b.seed, { lw: 4.5, ha: .4 });
+  shape(c, [[x - 8, top], [x + b.w + 8, top], [x + b.w + 8, top + 16], [x - 8, top + 16]], shade(b.col, .12), b.seed + 1, { lw: 3.5 });
+  const cols = b.win + 1, ww = (b.w - 40) / cols - 18, rows = Math.floor((b.h - 190) / 95);
+  for (let rr = 0; rr < rows; rr++) for (let k = 0; k < cols; k++) {
+    const wx = x + 29 + k * (ww + 18), wy = top + 40 + rr * 95;
+    c.fillStyle = '#f4efe2'; c.fillRect(wx, wy, ww, 62); c.strokeStyle = '#3a352f'; c.lineWidth = 3.6; c.strokeRect(wx, wy, ww, 62);
+    c.beginPath(); c.moveTo(wx + ww / 2, wy); c.lineTo(wx + ww / 2, wy + 62); c.moveTo(wx, wy + 31); c.lineTo(wx + ww, wy + 31); c.stroke();
+  }
+  // shopfront
+  const sy = base - 130; c.fillStyle = '#e8eef3'; c.fillRect(x + 24, sy, b.w - 110, 110); c.strokeStyle = '#4a453e'; c.lineWidth = 3; c.strokeRect(x + 24, sy, b.w - 110, 110);
+  c.fillStyle = shade(b.col, .25); c.fillRect(x + b.w - 70, sy - 10, 46, 120); c.strokeRect(x + b.w - 70, sy - 10, 46, 120);
+  if (b.awn) { const ax = x + 16, aw = b.w - 94, ay = sy - 44; const n = 6;
+    for (let k = 0; k < n; k++) { c.fillStyle = k % 2 ? '#f4efe2' : (b.col === '#bcd0e6' ? MRED : BLUE); c.beginPath(); c.moveTo(ax + k * aw / n, ay); c.lineTo(ax + (k + 1) * aw / n, ay); c.lineTo(ax + (k + 1) * aw / n + 6, ay + 44); c.lineTo(ax + k * aw / n + 6, ay + 44); c.closePath(); c.fill(); }
+    crayon(c, [[ax, ay], [ax + aw, ay], [ax + aw + 6, ay + 44], [ax + 6, ay + 44]], '#4a453e', 3.5, b.seed + 3, true); }
+}
+function sceneStreet(c, t, withLens = true) {
+  paperBg(c);
+  const X = streetScroll(t), [shx, shy] = shakeAt(t, [[3.75, 5]]);
+  const push = 1 + .06 * easeIO(seg(t, 3.75, 4.35));
+  c.save(); c.translate(shx, shy); c.translate(820, 700); c.scale(push, push); c.translate(-820, -700);
+  // far skyline
+  const fx = -X * .22;
+  c.save(); c.globalAlpha = .9;
+  for (const f of FAR) { const x = f.x + fx; if (x > W + 50 || x + f.w < -50) continue; const top = 760 - f.h;
+    c.fillStyle = '#e2ddd0'; c.fillRect(x, top, f.w, f.h); crayon(c, [[x, 760], [x, top], [x + f.w, top], [x + f.w, 760]], '#aaa396', 2.6, f.seed, false);
+    if (f.spire) crayon(c, [[x + f.w * .3, top], [x + f.w * .5, top - 120], [x + f.w * .7, top]], '#aaa396', 2.6, f.seed + 1, false);
+    c.fillStyle = '#cfc9bb'; for (let yy = top + 24; yy < 740; yy += 38) for (let xx = x + 14; xx < x + f.w - 16; xx += 30) c.fillRect(xx, yy, 10, 16); }
+  c.restore();
+  // mid buildings
+  const mx = -X * .62;
+  for (const b of BLD) { const x = b.x + mx; if (x > W + 40 || x + b.w < -40) continue; building(c, b, x, 905); }
+  // sidewalk + street
+  shape(c, [[-60, 905], [W + 60, 905], [W + 60, 1040], [-60, 1040]], '#dcd5c6', 61, { lw: 4, ink: '#4a453e', angle: .05, len: 40, ha: .3 });
+  c.fillStyle = '#c9c1b0'; c.fillRect(-60, 1040, W + 120, 60); crayon(c, [[-60, 1040], [W + 60, 1040]], INK, 5, 62, false);
+  const nx = -X * 1.0;
+  c.strokeStyle = '#a9a192'; c.lineWidth = 3; for (let k = -1; k < 14; k++) { const x = ((k * 170 + nx) % 2380 + 2380) % 2380 - 230; c.beginPath(); c.moveTo(x, 905); c.lineTo(x - 40, 1040); c.stroke(); }
+  // near props: lamp posts and hydrants
+  for (let k = 0; k < 8; k++) { const x = k * 760 + 300 + nx * 1.08; if (x < -120 || x > W + 120) continue;
+    shape(c, [[x - 9, 1030], [x + 9, 1030], [x + 7, 470], [x - 7, 470]], '#5a5650', 70 + k, { lw: 3.5 });
+    shape(c, [[x - 44, 470], [x + 44, 470], [x + 26, 430], [x - 26, 430]], '#5a5650', 80 + k, { lw: 3.5 });
+    c.fillStyle = '#f6e6a6'; c.beginPath(); c.ellipse(x, 480, 30, 12, 0, 0, TAU); c.fill();
+    const hx = x + 330; shape(c, rrPts(hx - 26, 948, 52, 80, 14, 3), MRED, 90 + k, { lw: 4 }); shape(c, rrPts(hx - 38, 968, 76, 20, 8, 2), shade(MRED, .15), 95 + k, { lw: 3.5 }); }
+  // Jeff running, then skidding
+  const run = t < 3.75, ph = X / (1000 * .15625 / Math.PI), skid = seg(t, 3.75, 4.05);   // a footfall every 16th note
+  const p = run ? { bob: Math.abs(Math.sin(ph)) * 14, tilt: .08 + .03 * Math.sin(ph), lift: [Math.max(0, Math.sin(ph)) * 26, Math.max(0, -Math.sin(ph)) * 26] }
+                : { tilt: lerp(-.1, 0, easeOut(seg(t, 3.9, 4.2))), sy: 1 - .04 * Math.sin(skid * Math.PI) };
+  const jx = 760, gy = 1022;
+  if (t >= 3.75 && t < 4.35) for (let k = 0; k < 5; k++) { const u = seg(t, 3.75 + k * .04, 4.2 + k * .04); if (u <= 0 || u >= 1) continue; c.save(); c.globalAlpha = .6 * (1 - u); crayon(c, ellPts(jx - 60 - k * 38 - u * 60, gy - 18 - u * 30, 18 + u * 30, 12 + u * 18, 0, 20), PENCIL, 3, 700 + k, true); c.restore(); }
+  if (run) { const r = rng(Math.floor(t * 12)); c.save(); c.strokeStyle = INK; c.globalAlpha = .28; c.lineWidth = 3; c.lineCap = 'round'; for (let k = 0; k < 7; k++) { const y = 200 + r() * 760, x = r() * W, L = 140 + r() * 220; c.beginPath(); c.moveTo(x, y); c.lineTo(x + L, y); c.stroke(); } c.restore(); }
+  const lensT = seg(t, 4.0625, 4.375);
+  const arm = drawJeff(c, jx, gy, .92, p, (Sw, rest) => {
+    if (t < 4.0625) return null;
+    const hold = [Sw[0] + 110, Sw[1] - 150], a = easeOut(lensT); return { mode: 'glass', hand: [lerp(rest[0], hold[0], a), lerp(rest[1], hold[1], a)] };
+  });
+  c.restore();
+  // the magnifier comes at the camera; inside the lens: the next scene
+  if (withLens && t >= 4.0625 && arm && arm.hc) {
+    const g = easeIn(seg(t, 4.0625, 4.97)), R = lerp(70, 1250, g * g), Lc = [lerp(arm.hc[0] + 120, 1000, easeOut(lensT)), lerp(arm.hc[1] - 110, 520, easeOut(lensT))];
+    handleTo(c, arm.hc, Lc, R, 600); drawHand(c, arm.hc, 'fist', null, .92);
+    sceneInto(c, L2, g2 => scenePhone(g2, 5.0), Lc, R, lerp(.28, 1, g));
+    glassRing(c, Lc, R, 610);
+    c.save(); c.strokeStyle = 'rgba(255,255,255,.7)'; c.lineWidth = 9; c.lineCap = 'round'; c.beginPath(); c.arc(Lc[0], Lc[1], R * .78, Math.PI * 1.1, Math.PI * 1.4); c.stroke(); c.restore();
+  }
+}
+// draw a scene into a layer, then show it inside a circle, scaled about the circle centre
+function sceneInto(c, Lyr, fn, Lc, R, k) {
+  const g = Lyr.getContext('2d'); resetT(g); g.globalAlpha = 1; fn(g);
+  c.save(); c.beginPath(); c.arc(Lc[0], Lc[1], R, 0, TAU); c.clip();
+  c.translate(Lc[0], Lc[1]); c.scale(k, k); c.translate(-W / 2, -H / 2); c.drawImage(Lyr, 0, 0, W, H); c.restore();
+}
+
+// ================= 3. PHONE / PHISHING =================
+const PH = { cx: 960, cy: 560, w: 470, h: 860, sx: -208, sy: -350, sw: 416, sh: 700 };
+function scenePhone(c, t) {
+  paperBg(c);
+  const [shx, shy] = shakeAt(t, [[6.25, 14]]);
+  // a wall of pinned clippings, drifting slowly
+  c.save(); resetT(c); c.drawImage(CLIPPINGS, -40 - (t - 5) * 14, -20, W + 80, H + 40); c.restore();
+  const zoom = easeIn(seg(t, 7.1875, 7.5)), turn = easeIO(seg(t, 6.875, 7.1875));
+  const beat = pulseAt(t, [5, 5.625, 6.25, 6.875], 10);
+  const rot = lerp(-.06, -Math.PI / 2, turn), s0 = 1 + .025 * beat;   // tip the phone to landscape, then push in
+  // camera push into the screen centre
+  const scx = PH.cx + (PH.sx + PH.sw / 2), scy = PH.cy + (PH.sy + PH.sh / 2);
+  const Zend = W / PH.sh, Z = Math.exp(Math.log(Zend) * zoom);
+  c.save(); c.translate(shx, shy); c.translate(lerp(960, W / 2, zoom), lerp(540, H / 2, zoom)); c.scale(Z, Z); c.translate(-scx, -scy);
+  c.translate(PH.cx, PH.cy); c.rotate(rot); c.scale(s0, s0);
+  // scammer behind the phone, fishing
+  const up = easeOutBack(seg(t, 5.625, 5.875)) * (1 - easeIn(seg(t, 6.65, 6.875)));
+  const panic = t >= 6.25;
+  if (up > 0) {
+    const sx = 205 + (panic ? Math.sin(t * 80) * 4 : 0), sy = -300 + (1 - up) * 260;
+    scammer(c, sx, sy + 40, 2.1, { mood: panic ? 1 : 0, look: panic ? 0 : (Math.sin(t * 7) > 0 ? -1 : 1), t, noSack: true });
+  }
+  // phone body + screen
+  shape(c, rrPts(-PH.w / 2, -PH.h / 2, PH.w, PH.h, 56, 6), '#3a3d52', 201, { hc: '#23253a', lw: 6 });
+  const SC = rrPts(PH.sx, PH.sy, PH.sw, PH.sh, 26, 5);
+  c.save(); c.clip(polyPath(SC));
+  if (t < 7.1875) {
+    shape(c, SC, '#c9dcef', 202, { hc: '#a7c3e2', outline: false, ha: .35 });
+    c.fillStyle = '#23253a'; c.beginPath(); c.roundRect(-40, PH.sy + 10, 80, 18, 9); c.fill();
+    const b1 = easeOutBack(seg(t, 5.0, 5.2)), b2 = easeOutBack(seg(t, 5.3125, 5.5125));
+    if (b1 > 0) { c.save(); c.translate(0, -180); c.scale(b1, b1); shape(c, rrPts(-188, -130, 376, 260, 30, 5), '#fbf8f0', 203, { lw: 4.5, hc: '#e4dfd2', ha: .3 });
+      fitText(c, 'YOU WON', 0, -62, 64, 'Stamp', INK, 316); fitText(c, '$1,000!', 0, 38, 92, 'Stamp', MRED, 316); c.restore(); }
+    if (b2 > 0) { const pul = 1 + .05 * Math.sin(t * 14); c.save(); c.translate(0, 135); c.scale(b2 * pul, b2 * pul); shape(c, rrPts(-165, -58, 330, 116, 40, 5), MRED, 204, { lw: 5 }); fitText(c, 'CLAIM NOW', 0, 4, 50, 'Stamp', '#fbf8f0', 280); c.restore(); }
+  } else {
+    // hidden-camera feed takes over the screen
+    const g = L1.getContext('2d'); resetT(g); sceneHidden(g, t);
+    c.save(); c.fillStyle = '#1d1f2c'; c.fillRect(PH.sx, PH.sy, PH.sw, PH.sh); c.rotate(Math.PI / 2); const sc = PH.sh / W; c.drawImage(L1, -W * sc / 2, -H * sc / 2, W * sc, H * sc); c.restore();
+    if (t < 7.29) { const r = rng(Math.floor(t * 48)); for (let k = 0; k < 9; k++) { c.fillStyle = [MRED, BLUE, INK, '#fbf8f0'][k % 4]; c.globalAlpha = .7; c.fillRect(PH.sx + (r() - .5) * 60, PH.sy + r() * PH.sh, PH.sw, 10 + r() * 34); } c.globalAlpha = 1; }
+  }
+  c.restore();
+  crayon(c, SC, '#23253a', 4, 205, true);
+  if (up > 0 && !panic) {   // phishing: the rod pokes over the top, the hook dangles onto CLAIM NOW
+    const sx = 205, sy = -300 + (1 - up) * 260, tip = [-30, -560 + Math.sin(t * 6) * 6], hook = [-10, 70 + Math.sin(t * 9) * 12];
+    line(c, [[sx - 50, sy - 110], tip], 10, 31, '#8a5a3c');
+    c.save(); c.strokeStyle = INK; c.lineWidth = 3; c.beginPath(); c.moveTo(tip[0], tip[1]); c.lineTo(hook[0], hook[1] - 30); c.stroke(); c.restore();
+    crayon(c, [[hook[0], hook[1] - 30], [hook[0], hook[1] + 10], [hook[0] - 8, hook[1] + 26], [hook[0] - 26, hook[1] + 22], [hook[0] - 30, hook[1] + 6]], '#5a5e68', 7, 33, false);
+  }
+  c.restore();
+  // SCAM! stamp across the phone
+  if (t < 6.875) stampAt(c, wordStamp('SCAM!', { color: RED, style: 'outline', size: 200 }), 960 + shx, 705 + shy, -.1, 1, t, 6.25);
+}
+
+// ================= 4. HIDDEN CAMERA =================
+function sceneHidden(c, t) {
+  const u = t - 6;
+  paperBg(c);
+  const r0 = rng(Math.floor(t * 12)), jit = [(r0() - .5) * 5, (r0() - .5) * 5];
+  const [shx, shy] = shakeAt(t, [[8.75, 14]]);
+  c.save(); c.translate(jit[0] + shx, jit[1] + shy); c.translate(960, 540); c.scale(1.03, 1.03); c.translate(-960, -540);
+  // wall + floor
+  shape(c, [[-40, -40], [W + 40, -40], [W + 40, 820], [-40, 820]], '#cfd9e6', 401, { outline: false, ha: .3, angle: 1.57, gap: 6, len: 60 });
+  c.save(); c.strokeStyle = alpha('#9fb3cc', .5); c.lineWidth = 10; for (let x = 40; x < W; x += 90) { c.beginPath(); c.moveTo(x, -40); c.lineTo(x, 820); c.stroke(); } c.restore();
+  shape(c, [[-40, 820], [W + 40, 820], [W + 40, 1120], [-40, 1120]], '#d8c9ae', 402, { ha: .35, angle: .08, len: 60, lw: 5 });
+  // window with blinds, framed picture, clock
+  shape(c, rrPts(1440, 150, 330, 360, 8, 2), '#e9eef2', 403, { lw: 5 });
+  c.strokeStyle = '#8b877d'; c.lineWidth = 4; for (let y = 180; y < 500; y += 26) { c.beginPath(); c.moveTo(1450, y); c.lineTo(1760, y); c.stroke(); }
+  shape(c, rrPts(380, 200, 260, 190, 6, 2), '#b98a5a', 404, { lw: 5 }); shape(c, rrPts(400, 220, 220, 150, 4, 2), '#e8d6a8', 405, { lw: 3 });
+  crayon(c, [[410, 350], [470, 280], [520, 330], [560, 290], [610, 350]], BLUE, 4, 406, false);
+  // scammer behind the desk, counting cash
+  const bolt = seg(t, 9.0625, 9.4), jump = t >= 8.8 ? Math.sin(seg(t, 8.8, 9.05) * Math.PI) * 120 : 0;
+  const sx = lerp(1230, 2400, easeIn(bolt)), sy = 780 - jump - Math.sin(bolt * Math.PI) * 160;
+  if (sx < 2300) scammer(c, sx, sy, 2.45, { mood: t >= 7.95 ? 1 : 0, t, look: t < 7.95 ? Math.sin(t * 4) : -1, run: bolt > 0 ? t * 40 : null, noSack: true });
+  if (t < 8.8) for (let k = 0; k < 2; k++) { const ph = ((t * 2 + k * .5) % 1), b = bill(); c.save(); c.translate(1150 + k * 60, 640 - ph * 70); c.rotate(-.4 + ph * .8); c.globalAlpha = 1 - ph; c.drawImage(b, -b.width / 2, -b.height / 2); c.restore(); }
+  if (t >= 8.8) for (let k = 0; k < 7; k++) { const r = rng(600 + k), ph = seg(t, 8.8, 9.6), b = bill(); c.save(); c.translate(1300 + (r() - .5) * 200 + (r() - .5) * 900 * ph, 640 - 500 * ph + 700 * ph * ph); c.rotate(r() * 6 * ph); c.scale(1.3, 1.3 * Math.cos(ph * 12 + k)); c.drawImage(b, -b.width / 2, -b.height / 2); c.restore(); }
+  // desk, laptop (back of the lid), cash pile
+  shape(c, [[900, 690], [1580, 690], [1560, 720], [920, 720]], '#b98a5a', 410, { lw: 5 });
+  shape(c, [[930, 720], [1550, 720], [1550, 900], [930, 900]], '#a47a4f', 411, { lw: 5 });
+  c.strokeStyle = '#6b4a2a'; c.lineWidth = 4; c.strokeRect(970, 750, 250, 110); c.strokeRect(1260, 750, 250, 110);
+  shape(c, [[980, 690], [1150, 690], [1170, 560], [1000, 560]], '#9ea3ab', 412, { lw: 4.5 });
+  if (t < 8.8) for (let k = 0; k < 5; k++) { const b = bill(); c.drawImage(b, 1380 + (k % 2) * 8, 666 - k * 9, b.width * 1.2, b.height * 1.2); }
+  c.restore();
+  // Jeff barges in
+  if (t >= 7.85) {
+    const a = easeOutBack(seg(t, 7.85, 8.12)), jx = lerp(-320, 430, a);
+    drawJeff(c, jx + shx, 1045 + shy, .95, { tilt: .05 * (1 - a) + .03, hop: t < 8.85 && t > 8.7 ? Math.sin(seg(t, 8.7, 8.85) * Math.PI) * 18 : 0 }, (Sw, rest) => {
+      if (t < 8.12) return null; const tgt = [Math.min(sx, 1500), sy - 200], ax = tgt[0] - Sw[0], ay = tgt[1] - Sw[1] - 120, d = Math.hypot(ax, ay);
+      const hand = [Sw[0] + ax / d * 175, Sw[1] + ay / d * 175], dd = Math.hypot(tgt[0] - hand[0], tgt[1] - hand[1]); const e = easeOut(seg(t, 8.12, 8.27));
+      return { mode: 'point', hand: [lerp(rest[0], hand[0], e), lerp(rest[1], hand[1], e)], dir: [(tgt[0] - hand[0]) / dd, (tgt[1] - hand[1]) / dd] };
+    });
+  }
+  // hidden-camera treatment: tint, scanlines, hatched vignette, viewfinder
+  c.save(); c.fillStyle = 'rgba(60,80,110,.08)'; c.fillRect(0, 0, W, H); c.fillStyle = 'rgba(30,30,30,.06)'; for (let y = 0; y < H; y += 6) c.fillRect(0, y, W, 2); c.restore();
+  const vig = new Path2D(); vig.rect(0, 0, W, H); vig.ellipse(960, 540, 1080, 660, 0, 0, TAU);
+  c.save(); c.clip(vig, 'evenodd'); hatch(c, vig, [0, 0, W, H], { gap: 5, len: 22, color: INK, alpha: .22, seed: 440, angle: .8 }); c.restore();
+  bracketFrame(c, t, { tc: 6 * 60 + t, solid: false });
+  shape(c, rrPts(710, 64, 500, 86, 20, 4), INK, 450, { outline: false, ha: .2 }); fitText(c, 'HIDDEN CAMERA', 960, 110, 46, 'Stamp', '#fbf8f0', 440);
+  stampAt(c, wordStamp('CAUGHT!', { color: RED, style: 'fill', size: 150 }), 1160, 300, -.08, 1, t, 8.75);
+}
+
+// ================= 5. DEALS =================
+const TAGS2 = [
+  { x: 230, y: 600, old: '$129', neu: '$59', t0: 10.0 - .16, rot: -.1 }, { x: 560, y: 380, old: '$80', neu: '$29', t0: 10.3125 - .16, rot: .08 },
+  { x: 1370, y: 380, old: '$250', neu: '$99', t0: 10.625 - .16, rot: -.06 }, { x: 1690, y: 610, old: '$45', neu: '$15', t0: 10.9375 - .16, rot: .1 },
+];
+function tagBase(seed) {
+  const key = 'tb' + seed; if (CACHE[key]) return CACHE[key];
+  const w = 300, h = 170, pad = 16, o = document.createElement('canvas'); o.width = w + pad * 2; o.height = h + pad * 2; const g = o.getContext('2d'); g.translate(pad, pad);
+  shape(g, [[44, 0], [w, 0], [w, h], [44, h], [0, h * .72], [0, h * .28]], '#ecd39e', seed, { hc: '#c9a86a', ha: .35, lw: 5 });
+  g.fillStyle = PAPER; g.beginPath(); g.arc(28, h / 2, 10, 0, TAU); g.fill(); g.strokeStyle = INK; g.lineWidth = 3.5; g.stroke();
+  return CACHE[key] = o;
+}
+function hangingTag(c, g, t, k) {
+  const u = t - g.t0; if (u < 0) return;
+  const drop = Math.min(1, u / .16), spring = u < .16 ? 0 : Math.exp(-(u - .16) * 6) * Math.sin((u - .16) * 22);
+  const y = lerp(-260, g.y, easeIn(drop)) + spring * 30, sw = g.rot + Math.sin(t * 3.2 + k) * .05 + spring * .15;
+  c.save(); c.strokeStyle = '#8b6b4a'; c.lineWidth = 3; c.beginPath(); c.moveTo(g.x + 40 * Math.sin(k), -20); c.lineTo(g.x - 118, y - 12); c.stroke(); c.restore();
+  const img = tagBase(700 + k);
+  c.save(); c.translate(g.x, y); c.rotate(sw); c.drawImage(img, -img.width / 2 + 10, -img.height / 2);
+  const strike = seg(t, g.t0 + .2, g.t0 + .3), write = easeOutBack(seg(t, g.t0 + .3, g.t0 + .42));
+  fitText(c, g.old, 30, -42, 50, 'Marker', '#4a3f38', 190);
+  if (strike > 0) { c.save(); { c.font = '50px Marker'; const w0 = c.measureText(g.old).width; c.font = `${w0 > 190 ? Math.floor(50 * 190 / w0) : 50}px Marker`; } const tw = c.measureText(g.old).width; c.strokeStyle = RED; c.lineWidth = 7; c.lineCap = 'round'; c.beginPath(); c.moveTo(30 - tw / 2 - 10, -34); c.lineTo(30 - tw / 2 - 10 + (tw + 20) * strike, -48); c.stroke(); c.restore(); }
+  if (write > 0) { c.save(); c.translate(32, 34); c.scale(write, write); fitText(c, g.neu, 0, 0, 84, 'Marker', RED, 210); c.restore(); }
+  c.restore();
+}
+function sceneDeals(c, t) {
+  paperBg(c);
+  const [shx, shy] = shakeAt(t, [[11.25, 12]]);
+  c.save(); c.translate(shx, shy);
+  // wall of soft diamonds
+  c.save(); c.fillStyle = alpha(YEL, .55); c.fillRect(0, 0, W, H); c.strokeStyle = alpha('#c9a55a', .35); c.lineWidth = 3;
+  for (let k = -12; k < 30; k++) { c.beginPath(); c.moveTo(k * 120, 0); c.lineTo(k * 120 + 1080, H); c.moveTo(k * 120 + 1080, 0); c.lineTo(k * 120, H); c.stroke(); } c.restore();
+  const z = 1 + .03 * pulseAt(t, [10, 10.625, 11.25, 11.875], 10);
+  c.translate(960, 540); c.scale(z, z); c.translate(-960, -540);
+  TAGS2.forEach((g, k) => hangingTag(c, g, t, k));
+  // Jeff pops up
+  const a = easeOutBack(seg(t, 10.375, 10.625)), gy = lerp(1750, 1050, a);
+  if (a > 0) { c.save(); c.globalAlpha = .18 * clamp(a, 0, 1); c.fillStyle = INK; c.beginPath(); c.ellipse(960, 1052, 190, 22, 0, 0, TAU); c.fill(); c.restore(); }
+  drawJeff(c, 960, gy, .92, { hop: pulseAt(t, [11.25, 11.875], 8) * 14 }, (Sw, rest) => {
+    if (t < 10.625) return null; const up = [Sw[0] + 80, Sw[1] - 118], e = easeOutBack(seg(t, 10.625, 10.825)); return { mode: 'thumb', hand: [lerp(rest[0], up[0], e), lerp(rest[1], up[1], e)] };
+  });
+  if (t > 10.85 && t < 11.45) sparkle(c, 1060, 600, seg(t, 10.85, 11.45), 720);
+  c.restore();
+  stampAt(c, wordStamp('DEAL!', { color: BLUE, style: 'fill', size: 170 }), 960 + shx, 175 + shy, -.08, 1, t, 11.25);
+}
+
+// ================= 6. MONTAGE CARDS =================
+const CARDS = [
+  { x: 520, y: 330, rot: -.09, word: 'SCAMS EXPOSED', col: PINK, t0: 12.5 },
+  { x: 1400, y: 320, rot: .07, word: 'HIDDEN CAMERA', col: PALEBLUE, t0: 13.125 },
+  { x: 560, y: 770, rot: .06, word: 'WARNINGS', col: '#efdca0', t0: 13.75 },
+  { x: 1370, y: 760, rot: -.07, word: 'REAL DEALS', col: CREAM, t0: 14.375 },
+];
+function cardIcon(c, k, t) {
+  if (k === 0) { scammer(c, 0, 70, 1.35, { t, look: Math.sin(t * 5), noSack: true }); glassRing(c, [18, -40], 70, 820); line(c, [[70, 15], [130, 80]], 16, 821, '#8a5a3c'); }
+  if (k === 1) { shape(c, rrPts(-110, -80, 220, 140, 22, 4), '#4a4d5e', 830, { lw: 5 }); shape(c, rrPts(-40, -110, 80, 34, 8, 2), '#4a4d5e', 831, { lw: 4 });
+    shape(c, ellPts(0, -10, 50, 50, 0, 30), '#26252c', 832, { lw: 5 }); shape(c, ellPts(0, -10, 30, 30, 0, 24), '#5d76a8', 833, { lw: 3 }); c.fillStyle = 'rgba(255,255,255,.85)'; c.beginPath(); c.arc(-10, -22, 8, 0, TAU); c.fill();
+    if (Math.floor(t * 4) % 2 === 0) { c.fillStyle = '#e8352b'; c.beginPath(); c.arc(80, -55, 11, 0, TAU); c.fill(); } }
+  if (k === 2) { shape(c, [[0, -115], [120, 80], [-120, 80]], '#f2c85a', 840, { lw: 6 }); text(c, '!', 0, 10, '120px Stamp', INK); }
+  if (k === 3) { c.save(); c.rotate(-.12); const img = tagBase(850); c.drawImage(img, -img.width * .38, -img.height * .38 - 20, img.width * .76, img.height * .76); fitText(c, '$19', 22, -12, 66, 'Marker', RED, 150); c.restore();
+    shape(c, [[110, -40], [140, -40], [140, 30], [170, 30], [125, 90], [80, 30], [110, 30]], MRED, 851, { lw: 4 }); }
+}
+function card(c, k, x, y, rot, s, t) {
+  const C = CARDS[k], w = 560, h = 400;
+  c.save(); c.translate(x, y); c.rotate(rot); c.scale(s, s);
+  c.save(); c.globalAlpha = .18; c.fillStyle = INK; c.beginPath(); c.roundRect(-w / 2 + 16, -h / 2 + 20, w, h, 14); c.fill(); c.restore();
+  shape(c, rrPts(-w / 2, -h / 2, w, h, 14, 3), '#faf6ec', 860 + k, { lw: 5, hc: '#e7e0d0', ha: .3 });
+  shape(c, rrPts(-w / 2 + 22, -h / 2 + 22, w - 44, h - 120, 8, 2), C.col, 870 + k, { lw: 3.5 });
+  c.save(); c.beginPath(); c.rect(-w / 2 + 22, -h / 2 + 22, w - 44, h - 120); c.clip(); c.translate(0, -40); cardIcon(c, k, t); c.restore();
+  photoCorners(c, -w / 2 + 22, -h / 2 + 22, w - 44, h - 120);
+  fitText(c, C.word, 0, h / 2 - 50, 54, 'Marker', INK, w - 70);
+  pushpin(c, 0, -h / 2 + 4);
+  c.restore();
+}
+function photoCorners(c, x, y, w, h) {   // evidence-photo mounts
+  c.save(); c.fillStyle = '#2c2825';
+  for (const [px, py, sx, sy] of [[x, y, 1, 1], [x + w, y, -1, 1], [x, y + h, 1, -1], [x + w, y + h, -1, -1]]) { c.beginPath(); c.moveTo(px - sx * 4, py - sy * 4); c.lineTo(px + sx * 40, py - sy * 4); c.lineTo(px - sx * 4, py + sy * 40); c.closePath(); c.fill(); }
+  c.restore();
+}
+function pushpin(c, x, y) { shape(c, ellPts(x, y, 17, 17, 0, 20), MRED, 880, { lw: 3, hc: shade(MRED, .3) }); c.save(); c.fillStyle = 'rgba(255,255,255,.75)'; c.beginPath(); c.arc(x - 5, y - 6, 5, 0, TAU); c.fill(); c.restore(); }
+function pinWorld(C, s = .95) { const py = (-200 + 4) * s; return [C.x - py * Math.sin(C.rot), C.y + py * Math.cos(C.rot)]; }   // card-local (0, py) after the card's rotation
+function burst(c, cx, cy, ang, cols, n = 20, al = .5) {
+  for (let k = 0; k < n; k++) { const a0 = ang + k / n * TAU, a1 = ang + (k + 1) / n * TAU, w = new Path2D(); w.moveTo(cx, cy); w.arc(cx, cy, 1500, a0, a1); w.closePath();
+    c.save(); c.globalAlpha = al; c.fillStyle = cols[k % cols.length]; c.fill(w); c.restore(); if (k % 2 === 0) hatch(c, w, [cx - 1500, cy - 1500, 3000, 3000], { gap: 8, len: 22, color: shade(cols[k % cols.length], .2), alpha: .22, seed: 60 + k }); }
+}
+// case file: ledger paper with a red margin, like a reporter's notebook
+function caseFile(c) {
+  c.save(); c.strokeStyle = alpha(BLUE, .28); c.lineWidth = 2.5; for (let y = 90; y < H; y += 58) { c.beginPath(); c.moveTo(0, y); c.lineTo(W, y); c.stroke(); }
+  c.strokeStyle = alpha(MRED, .45); c.lineWidth = 3; c.beginPath(); c.moveTo(150, 0); c.lineTo(150, H); c.stroke(); c.restore();
+}
+// red string from pin to pin, drawn in as each card lands (sags a little, like real string)
+const STRINGS = [[0, 1], [2, 3]];   // top pair and bottom pair, so the string never crosses a card face
+function redString(c, t) {
+  for (let k = 0; k < STRINGS.length; k++) {
+    const a = CARDS[STRINGS[k][0]], b = CARDS[STRINGS[k][1]], t0 = Math.max(a.t0, b.t0), u = easeOut(seg(t, t0, t0 + .25));
+    if (u <= 0) continue;
+    const pa = pinWorld(a), pb = pinWorld(b), mid = [(pa[0] + pb[0]) / 2, (pa[1] + pb[1]) / 2 + 40];
+    const pts = []; for (let i = 0; i <= 24 * u; i++) { const q = i / 24; pts.push([(1 - q) * (1 - q) * pa[0] + 2 * (1 - q) * q * mid[0] + q * q * pb[0], (1 - q) * (1 - q) * pa[1] + 2 * (1 - q) * q * mid[1] + q * q * pb[1]]); }
+    if (pts.length > 1) crayon(c, pts, '#c23b2f', 4, 890 + k, false);
+  }
+  for (const C of CARDS) if (t >= C.t0) { const p = pinWorld(C); pushpin(c, p[0], p[1]); }
+}
+// cards land ON their beat (the slam animation finishes at t0, exactly when the sound plays)
+const SLAM = .14;
+function sceneMontage(c, t) {
+  paperBg(c);
+  const [shx, shy] = shakeAt(t, CARDS.map(C => [C.t0, 9]));
+  caseFile(c);
+  const z = (1 + .05 * pulseAt(t, CARDS.map(C => C.t0), 7)) * (1 + .04 * easeIO(seg(t, 12.5, 15.0)));
+  c.save(); c.translate(shx, shy); c.translate(960, 540); c.scale(z, z); c.translate(-960, -540);
+  CARDS.forEach((C, k) => { if (t < C.t0 - SLAM) return; const u = seg(t, C.t0 - SLAM, C.t0); card(c, k, C.x, C.y, C.rot + (1 - u) * .3, lerp(1.7, 1, easeIn(u)) * .95, t); });
+  redString(c, t);
+  c.restore();
+  if (t >= LOGO_FALL) drawLogo(c, t);   // the logo is already falling on the "and" of beat 4
+}
+
+// ================= 7. LOGO =================
+const LOGO_C = [1110, 470], LOGO_W = 900;
+const LOGO_FALL = 14.6875, LOGO_LAND = 15.0, JEFF_POP = 15.625, LIVE_LAND = 16.25, STILL = 16.6;
+const CONF = Array.from({ length: 80 }, (_, k) => { const r = rng(1000 + k), a = r() * TAU, ex = Math.cos(a), ey = Math.sin(a), v = 900 + r() * 900, sp = [Math.sign(ex) * (.6 + r() * .4), ey - .6 - r() * .5]; const n = Math.hypot(...sp); return { ex: Math.max(-1, Math.min(1, ex * 1.4)), ey: Math.max(-1, Math.min(1, ey * 1.4)), vx: sp[0] / n * v, vy: sp[1] / n * v, col: [MRED, BLUE, YEL, PALEBLUE, PINK][k % 5], w: 16 + r() * 18, h: 10 + r() * 12, spin: (r() - .5) * 20, seed: k }; });
+function logoDims() { const [bx, by, bw, bh] = IMG.logoBox, sc = LOGO_W / bw; return { bx, by, bw, bh, w: bw * sc, h: bh * sc }; }
+function drawLogo(c, t) {   // falls from LOGO_FALL, lands on the LOGO_LAND downbeat, one small bounce, settled by 15.5
+  const { bx, by, bw, bh, w, h } = logoDims();
+  let y = LOGO_C[1], rot = 0, sx = 1, sy = 1;
+  if (t < LOGO_LAND) { const u = seg(t, LOGO_FALL, LOGO_LAND); y = lerp(-h * .8, LOGO_C[1], easeIn(u)); rot = .06 * (1 - u); }
+  else if (t < 15.5) { const u = t - LOGO_LAND; y = LOGO_C[1] - Math.sin(seg(t, LOGO_LAND, 15.25) * Math.PI) * 26; const sq = Math.exp(-u * 12) * Math.cos(u * 30) * .06; sx = 1 + sq; sy = 1 - sq; }
+  const lift = clamp((LOGO_C[1] - y) / 500, 0, 1);
+  c.save(); c.globalAlpha = .75 * (1 - lift); c.translate(LOGO_C[0] + 16 + 30 * lift, LOGO_C[1] + 24 + 40 * lift); c.drawImage(IMG.logoHatch, bx, by, bw, bh, -w / 2, -h / 2, w, h); c.restore();
+  c.save(); c.translate(LOGO_C[0], y + h / 2); c.rotate(rot); c.scale(sx, sy); c.translate(0, -h / 2); c.drawImage(IMG.logo, bx, by, bw, bh, -w / 2, -h / 2, w, h); c.restore();
+}
+function sceneLogo(c, t) {
+  paperBg(c);
+  const T = Math.min(t, STILL);   // everything is still from STILL
+  const [shx, shy] = t < STILL ? shakeAt(t, [[LOGO_LAND, 12], [LIVE_LAND, 6]]) : [0, 0];
+  burst(c, LOGO_C[0], LOGO_C[1], T * .2, [alpha(YEL, .6), 'rgba(0,0,0,0)'], 22, 1);
+  c.save(); c.translate(shx, shy);
+  // the landing logo blows the cards away
+  if (t < 15.6) CARDS.forEach((C, k) => { const u = easeOut(seg(t, LOGO_LAND, 15.55)), dx = C.x - 960, dy = C.y - 540; card(c, k, C.x + dx * u * 2.6, C.y + dy * u * 2.6, C.rot + u * (k % 2 ? 1.2 : -1.2), .95 * (1 + u * .5), t); });
+  const { w, h } = logoDims();
+  // confetti from behind the logo's edges, gone before STILL
+  if (t >= LOGO_LAND && t < STILL) { const u = t - LOGO_LAND;
+    for (const f of CONF) { const x = LOGO_C[0] + f.ex * (w / 2) + f.vx * u, y = LOGO_C[1] + f.ey * (h / 2) + f.vy * u + 5200 * u * u; if (y > H + 50 || x < -60 || x > W + 60) continue;
+      c.save(); c.translate(x, y); c.rotate(f.spin * u); c.scale(1, Math.cos(u * 14 + f.seed)); c.fillStyle = f.col; c.fillRect(-f.w / 2, -f.h / 2, f.w, f.h); c.strokeStyle = INK; c.lineWidth = 2; c.strokeRect(-f.w / 2, -f.h / 2, f.w, f.h); c.restore(); } }
+  drawLogo(c, t);
+  // Jeff pops up on beat 2, thumbs up
+  const a = easeOutBack(seg(t, JEFF_POP - .25, JEFF_POP)), gy = lerp(1750, 1045, a);
+  const hop = T < STILL ? pulseAt(T, [LIVE_LAND], 9) * 14 : 0;
+  c.save(); c.globalAlpha = .16 * clamp(a, 0, 1); c.fillStyle = INK; c.beginPath(); c.ellipse(330, 1047, 180, 20, 0, 0, TAU); c.fill(); c.restore();
+  if (t >= JEFF_POP - .25) drawJeff(c, 330, gy, .92, { hop }, (Sw, rest) => {
+    if (t < JEFF_POP) return null; const up = [Sw[0] + 80, Sw[1] - 118], e = easeOutBack(seg(t, JEFF_POP, JEFF_POP + .2)); return { mode: 'thumb', hand: [lerp(rest[0], up[0], e), lerp(rest[1], up[1], e)] };
+  });
+  c.restore();
+  if (t >= LIVE_LAND - .13) drawStamp(c, liveBadge(300, 122, true), LOGO_C[0] + w / 2 - 20, LOGO_C[1] - h / 2 - 10, -.1, .78, t, LIVE_LAND, .2);
+}
+
+// ================= transitions + assembly =================
+function pageTurn(c, front, back, p) {   // front curls away from the bottom-right corner, back revealed
+  const d = [-.78, -.62], n0 = Math.hypot(...d); d[0] /= n0; d[1] /= n0;
+  const s = p * 2500, q = [W - 0 + d[0] * s, H + d[1] * s];
+  const frame = [[0, 0], [W, 0], [W, H], [0, H]], n = [d[0] * -1, d[1] * -1];   // n points toward the corner (revealed side)
+  blit(c, back);
+  const keep = clipHalf(frame, q, [-n[0], -n[1]]);
+  if (keep.length > 2) { c.save(); c.clip(polyPath(keep)); blit(c, front); c.restore(); }
+  const lifted = clipHalf(frame, q, n);
+  if (lifted.length > 2) {
+    const refl = lifted.map(([x, y]) => { const v = (x - q[0]) * n[0] + (y - q[1]) * n[1]; return [x - 2 * v * n[0], y - 2 * v * n[1]]; });
+    const flap = clipHalf(refl, q, [-n[0], -n[1]]);
+    if (flap.length > 2) { c.save(); c.globalAlpha = .22; c.fillStyle = INK; c.fill(polyPath(flap.map(([x, y]) => [x + 18, y + 22]))); c.restore();
+      shape(c, flap, '#e3dccb', 990, { lw: 5, hc: '#cfc6b2', ha: .45 }); }
+  }
+}
+function drawAt(g, fn, t) { resetT(g); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; fn(g, t); }
+function drawScene(c, t) {
+  resetT(c);
+  if (t < 2.1875) return sceneCountdown(c, t);
+  if (t < 2.5) {   // zoom into the LIVE dot: the dot becomes an iris onto the street
+    sceneCountdown(c, t);
+    const dz = seg(t, 2.1875, 2.5), Z = Math.exp(Math.log(60) * easeIn(dz)), [dx, dy, dr] = liveDotWorld();
+    const r = dr * Z * (1 + .045 * pulseAt(t, [1.875])); drawAt(L1.getContext('2d'), sceneStreet, 2.5);
+    c.save(); c.beginPath(); c.arc(dx, dy, r, 0, TAU); c.clip(); blit(c, L1); c.restore();
+    crayon(c, ellPts(dx, dy, r, r, 0, 60), INK, 6, 31, true); return;
+  }
+  if (t < 5.0) return sceneStreet(c, t);
+  if (t < 7.5) return scenePhone(c, t);
+  if (t < 9.375) return sceneHidden(c, t);
+  if (t < 10.0) {   // whip pan: beat 4 into the downbeat
+    const e = easeIO(seg(t, 9.375, 10.0)); drawAt(L1.getContext('2d'), sceneHidden, t); drawAt(L2.getContext('2d'), sceneDeals, t);
+    c.save(); resetT(c);
+    for (let k = 2; k >= 0; k--) { c.globalAlpha = k ? .25 : 1; c.drawImage(L1, -e * W - k * 60 * Math.sin(e * Math.PI), 0, W, H); c.drawImage(L2, W - e * W - k * 60 * Math.sin(e * Math.PI), 0, W, H); }
+    c.globalAlpha = 1; const r = rng(Math.floor(t * 48)); c.strokeStyle = INK; c.lineCap = 'round';
+    for (let k = 0; k < 16; k++) { c.globalAlpha = .35 * Math.sin(e * Math.PI); c.lineWidth = 2 + r() * 5; const y = r() * H, x = r() * W; c.beginPath(); c.moveTo(x, y); c.lineTo(x + 300 + r() * 400, y); c.stroke(); }
+    c.restore(); return;
+  }
+  if (t < 12.1875) return sceneDeals(c, t);
+  if (t < 12.5) { drawAt(L1.getContext('2d'), sceneDeals, t); drawAt(L2.getContext('2d'), sceneMontage, t); pageTurn(c, L1, L2, easeIn(seg(t, 12.1875, 12.49))); return; }
+  if (t < 15.0) return sceneMontage(c, t);
+  return sceneLogo(c, t);
+}
+
+// ---------------- runtime ----------------
+const CV = document.getElementById('c'); CV.width = OUT_W; CV.height = OUT_H; const CTX = CV.getContext('2d');
+// 96 BPM: one beat = 15 frames = 0.625 s, one bar = 2.5 s. Every scene is exactly one bar and plays at natural speed:
+// countdown | run | phone | hidden camera | deals | cards | logo arrives | logo lands on the downbeat of bar 8 (17.5 s).
+const SCENE_CLOCK = [[0, 0, 1]];
+function sceneTime(t) { let r = SCENE_CLOCK[0]; for (const c of SCENE_CLOCK) if (t >= c[0] - 1e-9) r = c; return r[1] + (t - r[0]) * r[2]; }
+function frame(i) { const t = Math.min(i / FPS, DUR - 1e-6); FILM_T = t; resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, sceneTime(t)); resetT(CTX); }
+window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
+(async () => {
+  await Promise.all([loadImg('body', 'assets/jeff_body.png'), loadImg('legL', 'assets/jeff_legL.png'), loadImg('legR', 'assets/jeff_legR.png'), loadImg('logo', 'assets/official_logo.png')]);
+  IMG.logoBox = alphaBox(IMG.logo);
+  { // the logo's shadow, drawn in pencil: diagonal hatching masked by the logo's silhouette
+    const o = document.createElement('canvas'); o.width = IMG.logo.width; o.height = IMG.logo.height; const g = o.getContext('2d'), r = rng(77);
+    g.strokeStyle = '#3a342d'; g.lineCap = 'round';
+    for (let k = -o.height; k < o.width; k += 5) { g.globalAlpha = .35 + r() * .35; g.lineWidth = 1.4 + r() * 1.2; g.beginPath(); g.moveTo(k + r() * 3, o.height); g.lineTo(k + o.height * .7 + r() * 3, 0); g.stroke(); }
+    g.globalAlpha = 1; g.globalCompositeOperation = 'destination-in'; g.drawImage(IMG.logo, 0, 0); IMG.logoHatch = o; }
+  { const o = document.createElement('canvas'); o.width = IMG.logo.width; o.height = IMG.logo.height; const g = o.getContext('2d'); g.drawImage(IMG.logo, 0, 0); g.globalCompositeOperation = 'source-in'; g.fillStyle = INK; g.fillRect(0, 0, o.width, o.height); IMG.logoShadow = o; }
+  await document.fonts.load('40px Stamp'); await document.fonts.load('40px Marker');
+  PAPER_TEX = paperTexture(W, H);
+  CLIPPINGS = buildClippings();
+  const q = new URLSearchParams(location.search); frame(+(q.get('frame') || 0));
+  window.__ready = true;
+})().catch(e => { console.error(e); window.__error = String(e); });
+</script></body></html>

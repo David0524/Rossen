@@ -1,0 +1,232 @@
+{
+ "_doc": "JEFF'S RULES #2. Data only; the recurring parts come from rules.js + template.json, the middle scenes from rules/ep02.js.",
+ "num": 2,
+ "hook": [
+  "WHO ASKS FOR",
+  "GIFT CARDS?"
+ ],
+ "rule": [
+  "GIFT CARDS",
+  "ARE FOR GIFTS."
+ ],
+ "recap": [
+  "NO REAL BILL IS",
+  "PAID IN GIFT CARDS."
+ ],
+ "demand": [
+  "GO BUY GIFT CARDS.",
+  "READ ME THE NUMBERS."
+ ],
+ "ruleAfter": 1,
+ "scenes": [
+  {
+   "id": "disguises",
+   "bars": 3,
+   "caps": [
+    [
+     1,
+     1,
+     "\"YOU OWE",
+     "BACK TAXES!\""
+    ],
+    [
+     2,
+     1,
+     "\"YOUR COMPUTER",
+     "IS INFECTED!\""
+    ],
+    [
+     3,
+     1,
+     "\"I'M IN TROUBLE!",
+     "I NEED HELP!\""
+    ]
+   ],
+   "chords": [
+    "Dm Dm Bb A",
+    "Dm Dm Bb A",
+    "Dm Dm Bb A"
+   ]
+  },
+  {
+   "id": "cash",
+   "bars": 2,
+   "caps": [
+    [
+     1,
+     1,
+     "A GIFT CARD",
+     "IS LIKE CASH."
+    ],
+    [
+     2,
+     1,
+     "READ THE NUMBERS...",
+     "AND IT'S GONE."
+    ]
+   ],
+   "chords": [
+    "G G A A",
+    "Bb Bb A A"
+   ]
+  },
+  {
+   "id": "whatnow",
+   "bars": 3,
+   "caps": [
+    [
+     1,
+     1,
+     "ANYONE ASKING?",
+     "HANG UP."
+    ],
+    [
+     2,
+     1,
+     "ALREADY PAID?",
+     "CALL THE CARD COMPANY."
+    ],
+    [
+     3,
+     1,
+     "THEN REPORT IT AT",
+     "FTC.GOV"
+    ]
+   ],
+   "chords": [
+    "D D G G",
+    "Bm Bm G A",
+    "G G A A"
+   ]
+  }
+ ],
+ "cues": [
+  [
+   "disguises",
+   1,
+   1,
+   "poof"
+  ],
+  [
+   "disguises",
+   1,
+   3,
+   "demand"
+  ],
+  [
+   "disguises",
+   2,
+   1,
+   "poof"
+  ],
+  [
+   "disguises",
+   2,
+   3,
+   "demand"
+  ],
+  [
+   "disguises",
+   3,
+   1,
+   "poof"
+  ],
+  [
+   "disguises",
+   3,
+   3,
+   "demand"
+  ],
+  [
+   "cash",
+   1,
+   2,
+   "label"
+  ],
+  [
+   "cash",
+   1,
+   3,
+   "label"
+  ],
+  [
+   "cash",
+   1,
+   4,
+   "label"
+  ],
+  [
+   "cash",
+   2,
+   1.5,
+   "digits"
+  ],
+  [
+   "cash",
+   2,
+   2,
+   "digits"
+  ],
+  [
+   "cash",
+   2,
+   2.5,
+   "digits"
+  ],
+  [
+   "cash",
+   2,
+   3,
+   "vanish"
+  ],
+  [
+   "whatnow",
+   1,
+   3,
+   "hangup"
+  ],
+  [
+   "whatnow",
+   1,
+   3.5,
+   "yank"
+  ],
+  [
+   "whatnow",
+   2,
+   1,
+   "cardup"
+  ],
+  [
+   "whatnow",
+   2,
+   2,
+   "highlight"
+  ],
+  [
+   "whatnow",
+   2,
+   3,
+   "rightaway"
+  ],
+  [
+   "whatnow",
+   3,
+   1.5,
+   "type"
+  ],
+  [
+   "whatnow",
+   3,
+   3,
+   "call"
+  ],
+  [
+   "whatnow",
+   3,
+   4,
+   "check"
+  ]
+ ],
+ "typeText": "FTC.GOV"
+}

@@ -1,0 +1,4 @@
+title 112 frames compared | episode-3-with-episode-1-words vs episode 1: 0 differing pixels | real episode 3 vs episode 1: 2.62% of pixels per frame differ, all inside x102-986 y572-949
+rule 112 frames compared | episode-3-with-episode-1-words vs episode 1: 0 differing pixels | real episode 3 vs episode 1: 3.92% of pixels per frame differ, all inside x123-964 y385-1061
+recap 112 frames compared | episode-3-with-episode-1-words vs episode 1: 0 differing pixels | real episode 3 vs episode 1: 5.39% of pixels per frame differ, all inside x132-957 y521-1181
+end 176 frames compared | episode-3-with-episode-1-words vs episode 1: 0 differing pixels | real episode 3 vs episode 1: 0.72% of pixels per frame differ, all inside x96-995 y734-1301 | end-part frames that differ: 845-1019

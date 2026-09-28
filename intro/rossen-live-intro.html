@@ -1,0 +1,577 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Rossen Live Intro</title>
+<style>
+@font-face { font-family: Stamp; src: url(assets/fonts/BowlbyOneSC-Regular.ttf); }
+@font-face { font-family: Marker; src: url(assets/fonts/PermanentMarker-Regular.ttf); }
+body { margin: 0; background: #111; color: #ddd; font: 13px ui-monospace, monospace; }
+canvas { display: block; max-width: 100vw; }
+</style>
+<script src="core.js"></script>
+</head><body><canvas id="c"></canvas><div id="info"></div>
+<script>
+'use strict';
+/* Rossen Reports: 15 s live-stream opener, one continuous shot, 1920x1080, drawn at 24 fps.
+
+   Beat sheet (seconds)
+   0.00-0.45  empty paper street (reference plate, Jeff removed). LIVE badge stamps down at 0.33 (thunk + shake).
+   0.45-2.60  Jeff waddles in from the left, mic with the hand-drawn logo flag, settles at x=380.
+   2.95-3.40  he pulls out a telescoping magnifier; the handle extends toward the table.
+   3.40-4.60  lens over the phone: magnified view shows a sneaky scammer peeking from behind it.
+   4.60-5.70  lens over the smoke detector: a tiny camera lens slides out of the grille, red dot blinking.
+   5.70-6.55  lens over the gift card: tampered barcode sticker peels back.
+   6.55-7.00  lens swings back to the phone; Jeff tosses the magnifier away.
+   7.00-8.30  Jeff points; the scammer pops out; SCAM! stamp slams down at 7.30; scammer panics.
+   8.30-9.40  scammer runs off right; six stolen bills flutter back into the wallet (8.35-10.3).
+   10.55-10.75 wallet snaps shut, sparkle.
+   10.90-12.90 shipping box drops, flaps pop, three price tags fly out: old price crossed out, new price written in.
+   12.90-13.40 tags whoosh off; Jeff turns square to camera, hops, thumbs up.
+   13.20-13.95 official logo paper-drops to centre with a soft bounce; the LIVE badge flies over and stamps beside it (13.82).
+   14.00-15.00 hold: nothing moves.
+*/
+setFormat({ ar: '16:9', width: 1920 });
+const FPS = 24, DUR = 15, NFR = FPS * DUR;
+const G = 1016;                 // ground line in the plate
+const TY = 800;                 // table top
+const K = 0.94;                 // Jeff sprite px -> frame px
+const AX = 252, AY = 694;       // sprite anchor: between the feet
+const INK = '#2b2622', RED = '#d63a31', PAPER = '#ece8dc';
+const SKIN = '#e8a474', JACKET = '#3d3a38', SHIRT = '#b9c9de';
+
+// ---------------- assets ----------------
+const IMG = {};
+function loadImg(k, src) { return new Promise((res, rej) => { const im = new Image(); im.onload = () => { IMG[k] = im; res(); }; im.onerror = () => rej(new Error('missing ' + src)); im.src = src; }); }
+function alphaBox(im) {   // trim transparent margins so the logo is centred on its ink, not its canvas
+  const o = document.createElement('canvas'); o.width = im.width; o.height = im.height; const g = o.getContext('2d'); g.drawImage(im, 0, 0);
+  const d = g.getImageData(0, 0, o.width, o.height).data; let x0 = o.width, y0 = o.height, x1 = 0, y1 = 0;
+  for (let y = 0; y < o.height; y++) for (let x = 0; x < o.width; x++) if (d[(y * o.width + x) * 4 + 3] > 8) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+  return x1 >= x0 ? [x0, y0, x1 - x0 + 1, y1 - y0 + 1] : [0, 0, im.width, im.height];
+}
+
+// ---------------- small helpers ----------------
+const seg = (t, a, b) => clamp((t - a) / (b - a), 0, 1);
+const easeOutBack = x => { const c1 = 1.9, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+function rrPts(x, y, w, h, r, n = 6) {
+  const p = [], cs = [[x + w - r, y + r, -Math.PI / 2], [x + w - r, y + h - r, 0], [x + r, y + h - r, Math.PI / 2], [x + r, y + r, Math.PI]];
+  for (const [cx, cy, a0] of cs) for (let k = 0; k <= n; k++) { const a = a0 + k / n * Math.PI / 2; p.push([cx + Math.cos(a) * r, cy + Math.sin(a) * r]); }
+  return p;
+}
+function densify(pts, step = 14, close = true) {
+  const out = []; const n = pts.length;
+  for (let i = 0; i < (close ? n : n - 1); i++) { const a = pts[i], b = pts[(i + 1) % n], L = Math.hypot(b[0] - a[0], b[1] - a[1]), m = Math.max(1, Math.ceil(L / step));
+    for (let k = 0; k < m; k++) out.push([lerp(a[0], b[0], k / m), lerp(a[1], b[1], k / m)]); }
+  if (!close) out.push(pts[n - 1]); return out;
+}
+function bbox(pts) { let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9; for (const [x, y] of pts) { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); } return [x0 - 4, y0 - 4, x1 - x0 + 8, y1 - y0 + 8]; }
+// crayon-filled shape in the reference's coloured-pencil manner: flat fill, dense same-hue strokes, paper flecks, dark wobbly outline
+function shape(c, pts, fill, seed, o = {}) {
+  const P = polyPath(pts), box = bbox(pts);
+  c.fillStyle = fill; c.fill(P);
+  hatch(c, P, box, { angle: o.angle ?? 1.05, gap: o.gap ?? 3.4, len: o.len ?? 13, jitter: 4, color: o.hc || shade(fill, .22), alpha: o.ha ?? .45, width: 1.3, seed });
+  grain(c, P, box, Math.min(900, box[2] * box[3] / (o.fleck ?? 55)), '#fbf7ee', o.fa ?? .45, seed + 3, 1.6);
+  if (o.outline !== false) crayon(c, densify(pts, 12, o.open ? false : true), o.ink || INK, o.lw ?? 5, seed + 9, !o.open);
+  return P;
+}
+function line(c, pts, w, seed, col = INK) { crayon(c, densify(pts, 10, false), col, w, seed, false); }
+function capsulePts(a, b, r, n = 10) {  // stadium around segment a-b
+  const ang = Math.atan2(b[1] - a[1], b[0] - a[0]), p = [];
+  for (let k = 0; k <= n; k++) { const t = ang - Math.PI / 2 + k / n * Math.PI; p.push([b[0] + Math.cos(t) * r, b[1] + Math.sin(t) * r]); }
+  for (let k = 0; k <= n; k++) { const t = ang + Math.PI / 2 + k / n * Math.PI; p.push([a[0] + Math.cos(t) * r, a[1] + Math.sin(t) * r]); }
+  return p;
+}
+function text(c, s, x, y, font, col, align = 'center') { c.font = font; c.textAlign = align; c.textBaseline = 'middle'; c.fillStyle = col; c.fillText(s, x, y); }
+
+// ---------------- stamps (ink impressions), cached ----------------
+const CACHE = {};
+function inkTexture(g, w, h, seed, amount) {   // knock paper back through the ink: specks and dry drags
+  const r = rng(seed); g.save(); g.globalCompositeOperation = 'destination-out';
+  for (let i = 0; i < amount; i++) { g.globalAlpha = .25 + r() * .6; const s = .8 + r() * 2.6; g.fillRect(r() * w, r() * h, s, s * (.5 + r())); }
+  g.lineCap = 'round'; for (let i = 0; i < amount / 60; i++) { g.globalAlpha = .18 + r() * .25; g.lineWidth = 1 + r() * 3; const x = r() * w, y = r() * h; g.beginPath(); g.moveTo(x, y); g.lineTo(x + 30 + r() * 90, y + (r() - .5) * 14); g.stroke(); }
+  g.restore();
+}
+function liveBadge(w, h, dotOn = true) {
+  const key = `live${w}x${h}${dotOn}`; if (CACHE[key]) return CACHE[key];
+  const pad = 20, o = document.createElement('canvas'); o.width = w + pad * 2; o.height = h + pad * 2; const g = o.getContext('2d'); g.translate(pad, pad);
+  const r = rng(w), pts = rrPts(0, 0, w, h, h * .22, 8).map(([x, y]) => [x + (r() - .5) * 2.4, y + (r() - .5) * 2.4]);
+  g.fillStyle = RED; g.fill(polyPath(pts));
+  g.globalCompositeOperation = 'destination-out';
+  const fs = h * .66; g.font = `${fs}px Stamp`; g.textAlign = 'left'; g.textBaseline = 'middle';
+  const tw = g.measureText('LIVE').width, dotR = h * .15, gap = h * .2, total = dotR * 2 + gap + tw, x0 = (w - total) / 2;
+  g.fillText('LIVE', x0 + dotR * 2 + gap, h * .56);
+  g.globalCompositeOperation = 'source-over';
+  if (dotOn) { g.fillStyle = PAPER; g.beginPath(); g.arc(x0 + dotR, h * .5, dotR, 0, TAU); g.fill(); }
+  else { g.globalCompositeOperation = 'destination-out'; g.lineWidth = Math.max(2, h * .035); g.beginPath(); g.arc(x0 + dotR, h * .5, dotR * .8, 0, TAU); g.stroke(); g.globalCompositeOperation = 'source-over'; }
+  g.setTransform(1, 0, 0, 1, 0, 0); inkTexture(g, o.width, o.height, w + 7, w * h / 55);
+  return CACHE[key] = o;
+}
+function scamStamp() {
+  if (CACHE.scam) return CACHE.scam;
+  const w = 470, h = 170, pad = 24, o = document.createElement('canvas'); o.width = w + pad * 2; o.height = h + pad * 2; const g = o.getContext('2d'); g.translate(pad, pad);
+  g.strokeStyle = RED; g.lineJoin = 'round'; const r = rng(5);
+  const frame = (ins, lw) => { g.lineWidth = lw; g.beginPath(); rrPts(ins, ins, w - ins * 2, h - ins * 2, 14, 5).forEach(([x, y], k) => { x += (r() - .5) * 2; y += (r() - .5) * 2; k ? g.lineTo(x, y) : g.moveTo(x, y); }); g.closePath(); g.stroke(); };
+  frame(4, 9); frame(18, 3.5);
+  g.fillStyle = RED; g.font = '118px Stamp'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('SCAM!', w / 2, h * .54);
+  g.setTransform(1, 0, 0, 1, 0, 0); inkTexture(g, o.width, o.height, 77, 1500);
+  return CACHE.scam = o;
+}
+// stamp animation: drops from above scale, lands at tLand, small squash after
+function drawStamp(c, img, x, y, rot, scale, t, tLand, spat = .5) {
+  const a = seg(t, tLand - .12, tLand); if (t < tLand - .12) return;
+  const s = t < tLand ? lerp(1.55, 1, easeIn(a)) : t < tLand + .12 ? 1 + .04 * Math.exp(-(t - tLand) * 30) * Math.cos((t - tLand) * 60) : 1;
+  c.save(); c.translate(x, y); c.rotate(rot); c.scale(scale * s, scale * s); c.globalAlpha = t < tLand ? .25 + .6 * a : .93;
+  c.drawImage(img, -img.width / 2, -img.height / 2); c.restore();
+  if (t >= tLand && t < tLand + spat) {   // ink spatter at impact
+    const r = rng(Math.round(x + y)); c.save(); c.fillStyle = RED; c.globalAlpha = .75 * (1 - seg(t, tLand + spat * .5, tLand + spat));
+    for (let k = 0; k < 11; k++) { const ang = r() * TAU, d = (img.width * scale * .5) * (.75 + r() * .45), s2 = 2 + r() * 5; c.beginPath(); c.arc(x + Math.cos(ang) * d, y + Math.sin(ang) * d * .45, s2, 0, TAU); c.fill(); }
+    c.restore();
+  }
+}
+
+// ---------------- price tags and bills, cached ----------------
+function priceTag(oldP, newP, seed) {
+  const key = 'tag' + seed; if (CACHE[key]) return CACHE[key];
+  const w = 230, h = 132, pad = 14, o = document.createElement('canvas'); o.width = w + pad * 2; o.height = h + pad * 2; const g = o.getContext('2d'); g.translate(pad, pad);
+  const pts = [[34, 0], [w, 0], [w, h], [34, h], [0, h * .72], [0, h * .28]];
+  shape(g, pts, '#ecd39e', seed, { hc: '#c9a86a', ha: .35, lw: 4.5 });
+  g.fillStyle = PAPER; g.beginPath(); g.arc(22, h / 2, 8, 0, TAU); g.fill(); g.strokeStyle = INK; g.lineWidth = 3; g.stroke();
+  text(g, oldP, 132, 34, '38px Marker', '#4a3f38');
+  g.strokeStyle = RED; g.lineWidth = 5; g.lineCap = 'round'; const tw = g.measureText(oldP).width; const r = rng(seed);
+  g.beginPath(); g.moveTo(132 - tw / 2 - 8, 38 + r() * 4); g.lineTo(132 + tw / 2 + 8, 30 - r() * 4); g.stroke();
+  g.beginPath(); g.moveTo(132 - tw / 2 - 6, 30); g.lineTo(132 + tw / 2 + 6, 40); g.stroke();
+  text(g, newP, 134, 92, '62px Marker', RED);
+  return CACHE[key] = o;
+}
+function bill() {
+  if (CACHE.bill) return CACHE.bill;
+  const w = 96, h = 46, pad = 8, o = document.createElement('canvas'); o.width = w + pad * 2; o.height = h + pad * 2; const g = o.getContext('2d'); g.translate(pad, pad);
+  shape(g, rrPts(0, 0, w, h, 5, 3), '#9cc98a', 31, { hc: '#6f9f5f', lw: 3.2 });
+  g.strokeStyle = '#4f7d44'; g.lineWidth = 2; g.strokeRect(7, 6, w - 14, h - 12);
+  g.fillStyle = '#c7e3b8'; g.beginPath(); g.ellipse(w / 2, h / 2, 14, 15, 0, 0, TAU); g.fill(); g.stroke();
+  text(g, '$', w / 2, h / 2 + 1, '24px Marker', '#3f6b36');
+  return CACHE.bill = o;
+}
+
+// ---------------- props ----------------
+function table(c) {
+  shape(c, [[640, TY + 22], [656, TY + 22], [652, G], [636, G]], '#b98a5a', 41, { lw: 4 });
+  shape(c, [[1432, TY + 22], [1448, TY + 22], [1452, G], [1436, G]], '#b98a5a', 42, { lw: 4 });
+  shape(c, [[656, TY + 60], [1432, TY + 60], [1432, TY + 74], [656, TY + 74]], '#a97c50', 43, { lw: 3.5 });
+  shape(c, [[612, TY], [1478, TY], [1470, TY + 26], [620, TY + 26]], '#cf9f68', 44, { lw: 5, angle: .08, len: 40 });
+}
+function wallet(c, t) {
+  const x = 722, fillN = billsIn(t), close = seg(t, 10.55, 10.72), pop = t > 10.72 ? .06 * Math.exp(-(t - 10.72) * 9) * Math.sin((t - 10.72) * 40) : 0;
+  const bw = 78, bh = 92, y = TY - bh;
+  c.save(); c.translate(x, TY); c.scale(1 + pop, 1 - pop); c.translate(-x, -TY);
+  // cash pocket content (bills sticking out of the top)
+  if (close < 1) for (let k = 0; k < fillN; k++) {
+    const r = rng(90 + k); c.save(); c.translate(x - 30 + k * 11 + (r() - .5) * 6, y + 14 - k * 2); c.rotate((r() - .5) * .3); const b = bill(); c.drawImage(b, -b.width * .32, -b.height * .45, b.width * .64, b.height * .64); c.restore();
+  }
+  if (close < 1) {
+    const L = shape(c, rrPts(x - bw, y, bw, bh, 8, 3), '#8e5c3a', 51, { hc: '#6b4128' });
+    // right flap folds over as the wallet closes
+    const fw = bw * (1 - 2 * close);
+    const fx = fw >= 0 ? x : x + fw;
+    shape(c, rrPts(fx, y, Math.max(6, Math.abs(fw)), bh, 8, 3), fw >= 0 ? '#9a6844' : '#7c4d30', 52, { hc: '#6b4128' });
+    if (fw > 20) { c.strokeStyle = '#5a3620'; c.lineWidth = 2.5; for (let k = 0; k < 3; k++) { c.beginPath(); c.moveTo(fx + 10, y + 26 + k * 20); c.lineTo(fx + Math.abs(fw) - 10, y + 26 + k * 20); c.stroke(); } }
+    c.strokeStyle = '#e8d2b0'; c.setLineDash([5, 5]); c.lineWidth = 2; c.strokeRect(x - bw + 8, y + 8, bw - 16, bh - 16); c.setLineDash([]);
+  } else {
+    // closed and plump
+    shape(c, rrPts(x - bw, y - 8, bw, bh + 8, 10, 3), '#8e5c3a', 53, { hc: '#6b4128' });
+    const b = bill(); c.save(); c.translate(x - bw / 2, y - 6); c.rotate(-.08); c.drawImage(b, -b.width * .3, -b.height * .3, b.width * .6, b.height * .6); c.restore();
+    shape(c, rrPts(x - bw, y + 18, bw, bh - 18, 8, 3), '#9a6844', 54, { hc: '#6b4128' });
+    c.strokeStyle = '#e8d2b0'; c.setLineDash([5, 5]); c.lineWidth = 2; c.strokeRect(x - bw + 7, y + 25, bw - 14, bh - 32); c.setLineDash([]);
+    shape(c, rrPts(x - 18, y + 42, 22, 18, 5, 2), '#c9b27a', 55, { lw: 3 });
+  }
+  c.restore();
+}
+function phone(c) {
+  const x = 905, w = 112, h = 198, y = TY - h;
+  shape(c, [[x + 24, TY], [x + 70, TY - 70], [x + 80, TY - 64], [x + 42, TY]], '#9a948c', 61, { lw: 3.5 });   // kickstand
+  shape(c, rrPts(x - w / 2, y, w, h, 18, 5), '#34364a', 62, { hc: '#1f2030' });
+  const sx = x - w / 2 + 9, sy = y + 18, sw = w - 18, sh = h - 36;
+  shape(c, rrPts(sx, sy, sw, sh, 8, 3), '#a9cdec', 63, { hc: '#86b1d8', lw: 2.5, ink: '#1f2030' });
+  const cols = ['#e27d6a', '#f2c65c', '#7fb77e', '#6d8fd1', '#c58ad8', '#f09a5b'];
+  for (let k = 0; k < 6; k++) { const cx = sx + 20 + (k % 3) * 27, cy = sy + 26 + Math.floor(k / 3) * 30; c.fillStyle = cols[k]; c.beginPath(); c.roundRect(cx - 9, cy - 9, 18, 18, 5); c.fill(); }
+  c.fillStyle = '#1f2030'; c.beginPath(); c.roundRect(x - 14, y + 7, 28, 6, 3); c.fill();
+}
+function detector(c, t, reveal) {
+  const x = 1125, cy = TY - 84, R = 66;
+  shape(c, [[x - 44, TY], [x + 44, TY], [x + 26, TY - 26], [x - 26, TY - 26]], '#c9c4b8', 71, { lw: 4 });
+  shape(c, ellPts(x, cy, R, R, 0, 40), '#f1efe8', 72, { hc: '#c9c6bd', ha: .5 });
+  crayon(c, ellPts(x, cy, R * .62, R * .62, 0, 34), '#8b877d', 2.6, 73, true);
+  c.strokeStyle = '#8b877d'; c.lineWidth = 3; c.lineCap = 'round';
+  for (let k = -2; k <= 2; k++) { c.beginPath(); c.moveTo(x - 22, cy + k * 9); c.lineTo(x + 22, cy + k * 9); c.stroke(); }
+  c.fillStyle = '#6fbf5a'; c.beginPath(); c.arc(x + R * .72, cy - R * .2, 4.5, 0, TAU); c.fill();
+  const out = reveal ? seg(t, 4.95, 5.2) : 0;
+  if (out > 0) {   // tiny camera sliding out of the grille
+    const r = 5 + 13 * easeOutBack(out);
+    c.fillStyle = '#26252c'; c.beginPath(); c.arc(x, cy, r + 5, 0, TAU); c.fill();
+    c.fillStyle = '#4a5f8f'; c.beginPath(); c.arc(x, cy, r, 0, TAU); c.fill();
+    c.fillStyle = '#0f1016'; c.beginPath(); c.arc(x, cy, r * .55, 0, TAU); c.fill();
+    c.fillStyle = 'rgba(255,255,255,.85)'; c.beginPath(); c.arc(x - r * .35, cy - r * .35, r * .22, 0, TAU); c.fill();
+    if (Math.floor(t * 4) % 2 === 0) { c.fillStyle = '#e8352b'; c.beginPath(); c.arc(x + r + 12, cy - r - 4, 5, 0, TAU); c.fill(); }
+  } else { c.fillStyle = '#3a3836'; c.beginPath(); c.arc(x, cy, 2.6, 0, TAU); c.fill(); }
+}
+function giftCard(c, t, reveal) {
+  const x = 1345, w = 188, h = 120;
+  shape(c, [[x - 30, TY], [x + 30, TY], [x + 20, TY - 12], [x - 20, TY - 12]], '#9a948c', 81, { lw: 3.5 });
+  c.save(); c.translate(x, TY - 10); c.rotate(-.09);
+  shape(c, rrPts(-w / 2, -h, w, h, 12, 4), '#d9574c', 82, { hc: '#b43e35' });
+  c.fillStyle = '#f3d36b'; c.fillRect(-w / 2 + 50, -h, 18, h); c.fillRect(-w / 2, -h + 44, w, 16);
+  crayon(c, [[-w / 2 + 50, -h], [-w / 2 + 50, 0]], shade('#f3d36b', .3), 1.5, 83);
+  c.save(); c.translate(-w / 2 + 59, -h + 52);
+  shape(c, ellPts(-16, -10, 17, 10, -.5, 18), '#f3d36b', 84, { lw: 3 }); shape(c, ellPts(16, -10, 17, 10, .5, 18), '#f3d36b', 85, { lw: 3 });
+  shape(c, ellPts(0, 0, 8, 8, 0, 12), '#e9bf4a', 86, { lw: 3 }); c.restore();
+  text(c, '$50', 38, -h + 38, '38px Marker', PAPER);
+  // barcode sticker
+  const bx = -w / 2 + 92, by = -h + 70, bw2 = 80, bh2 = 36;
+  const bars = (ox, oy, seed) => { const r = rng(seed); c.fillStyle = '#26252c'; let u = 6; while (u < bw2 - 6) { const ww = 1.5 + r() * 3.5; c.fillRect(ox + u, oy + 5, ww, bh2 - 10); u += ww + 1.5 + r() * 3; } };
+  const peel = reveal ? seg(t, 6.0, 6.28) : 0;
+  if (peel > 0) { c.fillStyle = '#f7f4ea'; c.fillRect(bx, by, bw2, bh2); bars(bx, by, 88); c.fillStyle = 'rgba(214,58,49,.22)'; c.fillRect(bx, by, bw2, bh2); }
+  c.save();
+  if (peel > 0) { c.beginPath(); c.rect(bx - 200, by - 200, 200 + bw2 * (1 - .55 * peel), 400); c.clip(); }
+  c.fillStyle = '#f7f4ea'; c.fillRect(bx, by, bw2, bh2); bars(bx, by, 87); c.strokeStyle = '#8b877d'; c.lineWidth = 1.5; c.strokeRect(bx, by, bw2, bh2);
+  c.restore();
+  if (peel > 0) { const px = bx + bw2 * (1 - .55 * peel); c.fillStyle = '#dcd6c6'; c.beginPath(); c.moveTo(px, by); c.lineTo(px + 18 * peel, by + 4); c.lineTo(px + 22 * peel, by + bh2 - 2); c.lineTo(px, by + bh2); c.closePath(); c.fill(); c.strokeStyle = '#8b877d'; c.stroke(); }
+  c.restore();
+}
+
+// ---------------- the scammer ----------------
+// local coords: origin between the feet, ~110 px tall. mood: 0 sly, 1 panic. run: leg phase or null.
+function scammer(c, x, y, s, o = {}) {
+  const { mood = 0, run = null, peek = 0, look = 0, t = 0, flip = 1 } = o;
+  c.save(); c.translate(x, y); c.scale(s * flip, s);
+  const shake = mood > .5 ? Math.sin(t * 90) * 2.2 : 0; c.translate(shake, 0);
+  const lp = run == null ? 0 : run;
+  // legs
+  const leg = (dx, ph) => { const lift = run == null ? 0 : Math.max(0, Math.sin(ph)) * 10, fw = run == null ? 0 : Math.cos(ph) * 9;
+    shape(c, capsulePts([dx, -26], [dx + fw, -6 - lift], 7, 6), '#3b3446', 100 + dx, { lw: 3.5 });
+    shape(c, ellPts(dx + fw + 5, -5 - lift, 12, 7, 0, 16), '#26222c', 102 + dx, { lw: 3.5 }); };
+  leg(-14, lp); leg(14, lp + Math.PI);
+  // loot sack over the shoulder (behind body)
+  if (!o.noSack) {
+    shape(c, ellPts(-40, -64, 26, 30, -.3, 26), '#b58656', 110, { hc: '#8d6337', lw: 4 });
+    line(c, [[-50, -92], [-40, -88], [-30, -94]], 3.5, 111);
+    text(c, '$', -41, -60, '30px Marker', '#5b3a1e');
+  }
+  // body
+  shape(c, ellPts(0, -54, 38, 44, 0, 40), '#6f5f8f', 112, { hc: '#554672' });
+  // striped jumper band
+  c.save(); c.clip(ellPath(0, -54, 38, 44)); c.fillStyle = 'rgba(40,34,48,.55)'; for (let k = 0; k < 3; k++) c.fillRect(-40, -46 + k * 14, 80, 6); c.restore();
+  // beanie
+  shape(c, [[-30, -86], [-24, -104], [0, -112], [24, -104], [30, -86]], '#2e2a33', 113, { hc: '#1c1a20', lw: 4 });
+  shape(c, rrPts(-33, -90, 66, 10, 4, 2), '#46404f', 114, { lw: 3 });
+  // bandit mask
+  shape(c, rrPts(-34, -80, 68, 18, 8, 3), '#1f1c22', 115, { hc: '#111', lw: 3 });
+  const ew = mood > .5 ? 9 : 7.5, eh = mood > .5 ? 9 : 5.5;
+  for (const ex of [-13, 13]) { c.fillStyle = '#fbf7ee'; c.beginPath(); c.ellipse(ex, -71, ew, eh, 0, 0, TAU); c.fill();
+    c.fillStyle = '#111'; c.beginPath(); c.arc(ex + look * 3.5, -71 + (mood > .5 ? 0 : 1), mood > .5 ? 2.6 : 3, 0, TAU); c.fill(); }
+  // eyebrows / mouth
+  if (mood > .5) {
+    line(c, [[-22, -88], [-6, -84]], 3, 116); line(c, [[22, -88], [6, -84]], 3, 117);
+    c.fillStyle = '#2a1f2a'; c.beginPath(); c.ellipse(0, -48, 9, 11, 0, 0, TAU); c.fill();
+    c.fillStyle = '#9bd0f0'; for (const [dx, dy] of [[34, -92], [-38, -88]]) { c.beginPath(); c.moveTo(dx, dy - 10); c.quadraticCurveTo(dx + 6, dy, dx, dy + 4); c.quadraticCurveTo(dx - 6, dy, dx, dy - 10); c.fill(); }
+  } else {
+    line(c, [[-12, -50], [-2, -46], [12, -52]], 3, 118);   // sly smirk
+  }
+  // arms
+  if (mood > .5) { line(c, [[-34, -60], [-50, -86]], 6, 119, '#554672'); line(c, [[34, -60], [52, -88]], 6, 120, '#554672'); }
+  c.restore();
+}
+// where the scammer is at time t (world, feet), and what he's doing
+function scammerState(t) {
+  if (t < 7.05) return null;
+  if (t < 7.28) { const a = seg(t, 7.05, 7.28); return { x: lerp(905, 1012, a), y: TY - Math.sin(a * Math.PI) * 95, mood: 0, run: null, look: -1 }; }
+  if (t < 8.3) { const mood = t > 7.36 ? 1 : 0; return { x: 1012, y: TY, mood, run: t > 7.9 ? (t - 7.9) * 34 : null, look: 0 }; }
+  const a = seg(t, 8.3, 9.4), x = lerp(1012, 2080, easeIn(Math.min(1, a * 1.08)) * .55 + a * .45);
+  let y = TY; if (x > 1478) { const u = clamp((x - 1478) / 110, 0, 1); y = lerp(TY, G, u * u); }
+  return { x, y, mood: 1, run: (t - 8.3) * 42, look: 0 };
+}
+
+// ---------------- bills flying back to the wallet ----------------
+const BILLS = [0, 1, 2, 3, 4, 5].map(k => ({ t0: 8.36 + k * .11, dur: 1.15 + (k % 3) * .12, seed: 200 + k }));
+function billsIn(t) { return BILLS.filter(b => t >= b.t0 + b.dur).length; }
+function drawBills(c, t) {
+  const img = bill();
+  for (const b of BILLS) {
+    if (t < b.t0 || t >= b.t0 + b.dur) continue;
+    const st = scammerState(b.t0), p0 = [st.x - 40, st.y - 70], p3 = [712 + (b.seed % 3) * 10, TY - 86], r = rng(b.seed);
+    const u = seg(t, b.t0, b.t0 + b.dur), e = easeIO(u);
+    const p1 = [p0[0] - 60, p0[1] - 260 - r() * 120], p2 = [p3[0] + 160 + r() * 120, p3[1] - 300 - r() * 80];
+    const [bx, by] = bez(p0, p1, p2, p3, e);
+    const flut = Math.sin(u * 14 + b.seed) * 22 * (1 - u);
+    c.save(); c.translate(bx + flut, by); c.rotate(Math.sin(u * 9 + b.seed) * .7); c.scale(.9 - .25 * u, (.9 - .25 * u) * Math.cos(u * 17 + b.seed));
+    c.drawImage(img, -img.width / 2, -img.height / 2); c.restore();
+  }
+}
+
+// ---------------- shipping box and price tags ----------------
+const BX = 1672, TAGS = [
+  { old: '$89', neu: '$39', to: [1420, 520], t0: 11.32, seed: 301, rot: -.12 },
+  { old: '$199', neu: '$99', to: [1580, 330], t0: 11.5, seed: 302, rot: .08 },
+  { old: '$25', neu: '$9', to: [1800, 540], t0: 11.68, seed: 303, rot: -.05 },
+];
+function box(c, t) {
+  if (t < 10.9) return;
+  const drop = seg(t, 10.9, 11.04), y = lerp(-260, G, easeIn(drop));
+  const land = t > 11.04 ? Math.exp(-(t - 11.04) * 10) * Math.cos((t - 11.04) * 34) * .09 : 0;
+  const w = 250, h = 176;
+  c.save(); c.translate(BX, y); c.scale(1 + land, 1 - land);
+  const open = easeOutBack(seg(t, 11.12, 11.34));
+  // back flaps
+  shape(c, [[-w / 2 + 8, -h], [w / 2 - 8, -h], [w / 2 - 20 - 10 * (1 - open), -h - 58 * open], [-w / 2 + 20 + 10 * (1 - open), -h - 58 * open]], '#b8844f', 401, { hc: '#946434', lw: 4 });
+  shape(c, [[-w / 2, 0], [w / 2, 0], [w / 2, -h], [-w / 2, -h]], '#c9955e', 402, { hc: '#a3713f' });
+  // tape strip + side flaps swinging out
+  shape(c, [[-w / 2, -h], [-w / 2 - 70 * open, -h - 34 * open], [-w / 2 - 60 * open, -h - 4], [-w / 2, -h + 14]], '#d6a46c', 403, { hc: '#a3713f', lw: 4 });
+  shape(c, [[w / 2, -h], [w / 2 + 70 * open, -h - 34 * open], [w / 2 + 60 * open, -h - 4], [w / 2, -h + 14]], '#d6a46c', 404, { hc: '#a3713f', lw: 4 });
+  c.fillStyle = 'rgba(232,214,170,.9)'; c.fillRect(-20, -h, 40, 60);
+  // "this side up" arrows, no text
+  c.strokeStyle = '#6b4a2a'; c.lineWidth = 4; c.lineCap = 'round'; for (const dx of [-70, 70]) { c.beginPath(); c.moveTo(dx, -40); c.lineTo(dx, -100); c.moveTo(dx - 14, -86); c.lineTo(dx, -100); c.lineTo(dx + 14, -86); c.stroke(); }
+  c.restore();
+}
+function tags(c, t) {
+  for (const g of TAGS) {
+    if (t < g.t0) continue;
+    const img = priceTag(g.old, g.neu, g.seed), p0 = [BX, G - 176];
+    const u = seg(t, g.t0, g.t0 + .55), e = easeOut(u);
+    let x = lerp(p0[0], g.to[0], e), y = lerp(p0[1], g.to[1], e) - Math.sin(u * Math.PI) * 120;
+    let rot = g.rot + (1 - e) * 5 + Math.sin(t * 3 + g.seed) * .05 * e, s = lerp(.35, 1, easeOutBack(u));
+    const off = seg(t, 12.92, 13.3);   // whoosh away before the logo lands
+    if (off > 0) { const k = easeIn(off); y -= k * 900; x += (g.to[0] - 1300) * k * .8; rot += k * 2; }
+    if (y < -200) continue;
+    c.save(); c.translate(x, y); c.rotate(rot); c.scale(s, s);
+    c.strokeStyle = '#8b6b4a'; c.lineWidth = 2.5; c.beginPath(); c.moveTo(-img.width / 2 + 34, 0); c.quadraticCurveTo(-img.width / 2 - 10, -30, -img.width / 2 - 20, -58); c.stroke();
+    c.drawImage(img, -img.width / 2, -img.height / 2); c.restore();
+  }
+}
+
+// ---------------- Jeff ----------------
+function jeffPose(t) {
+  let x = 380, bob = 0, tilt = 0, sx = 1, sy = 1, lift = [0, 0], hop = 0;
+  if (t < 2.6) {
+    const p = seg(t, .45, 2.6), e = 1 - Math.pow(1 - p, 1.7); x = lerp(-300, 380, e);
+    const ph = (x + 300) / 113 * Math.PI;
+    if (p < 1) { bob = Math.abs(Math.sin(ph)) * 11; tilt = .035 * Math.sin(ph); lift = [Math.max(0, Math.sin(ph)) * 18, Math.max(0, -Math.sin(ph)) * 18]; }
+  }
+  const settle = seg(t, 2.6, 2.85); if (t >= 2.6 && t < 2.85) sy = 1 - .035 * Math.sin(settle * Math.PI);
+  // leaning toward the table while investigating, square to camera at the end
+  const lean = sm(3.05, 3.4, t) * (1 - sm(6.85, 7.0, t)) * .04 + sm(6.95, 7.1, t) * (1 - sm(8.55, 8.9, t)) * .06
+    + sm(8.6, 8.9, t) * (1 - sm(10.9, 11.1, t)) * .015 + sm(10.95, 11.25, t) * (1 - sm(12.95, 13.2, t)) * .035;
+  tilt += lean; sx *= 1 - lean * .8;
+  if (t > 7.02 && t < 7.22) hop = Math.sin(seg(t, 7.02, 7.22) * Math.PI) * 16;
+  if (t > 13.0 && t < 13.32) hop = Math.sin(seg(t, 13.0, 13.32) * Math.PI) * 26;
+  if (t > 13.32 && t < 13.5) sy = 1 - .04 * Math.sin(seg(t, 13.32, 13.5) * Math.PI);
+  if (t > 10.62 && t < 10.9) sy = 1 - .025 * Math.sin(seg(t, 10.62, 10.9) * Math.PI);   // satisfied nod
+  if (t > 2.85 && t < 13.9) sy *= 1 + .006 * Math.sin((t - 2.85) * TAU * .75);           // breathing
+  return { x, bob, tilt, sx, sy, lift, hop };
+}
+function ik(a, b, l1, l2, down = 1) {
+  let dx = b[0] - a[0], dy = b[1] - a[1], d = Math.hypot(dx, dy); const dd = clamp(d, 1, l1 + l2 - .5);
+  const ang = Math.atan2(dy, dx), cosA = clamp((l1 * l1 + dd * dd - l2 * l2) / (2 * l1 * dd), -1, 1), A = Math.acos(cosA);
+  const e1 = [a[0] + Math.cos(ang + A) * l1, a[1] + Math.sin(ang + A) * l1], e2 = [a[0] + Math.cos(ang - A) * l1, a[1] + Math.sin(ang - A) * l1];
+  const e = (e1[1] > e2[1]) === (down > 0) ? e1 : e2; const hx = e[0] + Math.cos(Math.atan2(b[1] - e[1], b[0] - e[0])) * l2, hy = e[1] + Math.sin(Math.atan2(b[1] - e[1], b[0] - e[0])) * l2;
+  return [e, [hx, hy]];
+}
+const SHOULDER = [398, 468];   // sprite coords, Jeff's left shoulder (screen right)
+function lensPath(t) {         // lens centre in world coords while scanning
+  const K2 = [[3.0, 700, 760], [3.38, 820, 650], [3.62, 948, 712], [4.55, 956, 706], [4.85, 1125, 700], [5.65, 1132, 694], [5.95, 1340, 716], [6.5, 1350, 708], [6.72, 985, 700], [6.85, 975, 700]];
+  if (t <= K2[0][0]) return [K2[0][1], K2[0][2]];
+  for (let k = 1; k < K2.length; k++) if (t <= K2[k][0]) { const a = easeIO(seg(t, K2[k - 1][0], K2[k][0])); return [lerp(K2[k - 1][1], K2[k][1], a), lerp(K2[k - 1][2], K2[k][2], a)]; }
+  return [K2[K2.length - 1][1], K2[K2.length - 1][2]];
+}
+function armState(t, M) {   // M: sprite->world matrix. Returns {handW, mode, dir}
+  const S = M.transformPoint(new DOMPoint(...SHOULDER)); const Sw = [S.x, S.y];
+  const rest = (() => { const p = M.transformPoint(new DOMPoint(430, 640)); return [p.x, p.y]; })();
+  if (t >= 2.95 && t < 6.85) {
+    const L = lensPath(t), d = Math.hypot(L[0] - Sw[0], L[1] - Sw[1]), dir = [(L[0] - Sw[0]) / d, (L[1] - Sw[1]) / d];
+    const hold = [Sw[0] + 120 + dir[0] * 18, Sw[1] - 70 + dir[1] * 18], a = easeOut(seg(t, 2.95, 3.25));
+    return { mode: 'glass', hand: [lerp(rest[0], hold[0], a), lerp(rest[1], hold[1], a)], Sw };
+  }
+  if (t >= 6.85 && t < 8.75) {
+    const st = scammerState(Math.max(t, 7.06)) || { x: 1012, y: TY }, tgt = [st.x, st.y - 90];
+    const ax = tgt[0] - Sw[0], ay = tgt[1] - Sw[1] - 190, ad = Math.hypot(ax, ay);
+    const pt = [Sw[0] + ax / ad * 166, Sw[1] + ay / ad * 166];
+    const d = Math.hypot(tgt[0] - pt[0], tgt[1] - pt[1]), dir = [(tgt[0] - pt[0]) / d, (tgt[1] - pt[1]) / d];
+    const inA = easeOut(seg(t, 6.85, 7.02)), outA = easeIO(seg(t, 8.5, 8.75));
+    const tossHand = [Sw[0] + 70, Sw[1] - 140];
+    let h = t < 7.0 ? [lerp(tossHand[0], pt[0], inA), lerp(tossHand[1], pt[1], inA)] : pt;
+    h = [lerp(h[0], rest[0], outA), lerp(h[1], rest[1], outA)];
+    return { mode: outA > .6 ? 'fist' : 'point', hand: h, dir, Sw };
+  }
+  if (t >= 13.1) {
+    const up = [Sw[0] + 78, Sw[1] - 112], a = easeOutBack(seg(t, 13.1, 13.38));
+    return { mode: 'thumb', hand: [lerp(rest[0], up[0], a), lerp(rest[1], up[1], a)], Sw };
+  }
+  return null;
+}
+function drawArm(c, A, seedBase) {
+  const l1 = 96 * K, l2 = 88 * K, [E, H] = ik(A.Sw, A.hand, l1, l2, 1);
+  const r = 29 * K;
+  // sleeve: upper + fore as one outlined crayon shape each
+  shape(c, capsulePts(A.Sw, E, r, 10), JACKET, seedBase, { hc: '#6f6b67', ha: .5, fleck: 30, fa: .5 });
+  shape(c, capsulePts(E, H, r * .95, 10), JACKET, seedBase + 1, { hc: '#6f6b67', ha: .5, fleck: 30, fa: .5 });
+  const ang = Math.atan2(H[1] - E[1], H[0] - E[0]), cuff = [H[0] - Math.cos(ang) * 6, H[1] - Math.sin(ang) * 6];
+  shape(c, ellPts(cuff[0], cuff[1], 9, r * .95, ang, 18), SHIRT, seedBase + 2, { lw: 3.5 });
+  const hc = [H[0] + Math.cos(ang) * 16, H[1] + Math.sin(ang) * 16];
+  return { E, H, hc, ang };
+}
+function drawHand(c, hc, mode, dir, seed) {
+  if (mode === 'thumb') { shape(c, capsulePts([hc[0] - 4, hc[1] - 6], [hc[0] - 6, hc[1] - 44], 10, 8), SKIN, seed + 1, { lw: 4, hc: '#c98457' }); }
+  shape(c, rrPts(hc[0] - 24, hc[1] - 21, 48, 44, 17, 4), SKIN, seed, { lw: 4.5, hc: '#c98457' });
+  if (mode === 'point') { const b0 = [hc[0] + dir[0] * 10, hc[1] + dir[1] * 10], tip = [hc[0] + dir[0] * 62, hc[1] + dir[1] * 62]; shape(c, capsulePts(b0, tip, 10, 8), SKIN, seed + 1, { lw: 4, hc: '#c98457' }); }
+  if (mode !== 'point') { c.strokeStyle = INK; c.lineWidth = 2.5; c.lineCap = 'round'; for (let k = 0; k < 2; k++) { c.beginPath(); c.moveTo(hc[0] + 6, hc[1] - 8 + k * 12); c.lineTo(hc[0] + 18, hc[1] - 8 + k * 12); c.stroke(); } }
+}
+function drawJeff(c, t) {
+  const p = jeffPose(t);
+  c.save(); c.translate(p.x, G - p.hop); c.rotate(p.tilt); c.scale(K * p.sx, K * p.sy);
+  const M = c.getTransform(), Minv = M.inverse();
+  const legs = [['legL', p.lift[0]], ['legR', p.lift[1]]];
+  for (const [k, lift] of legs) c.drawImage(IMG[k], -AX, -AY - lift);
+  c.drawImage(IMG.body, -AX, -AY - p.bob);
+  c.restore();
+  // arm is drawn in world space from the sprite-space shoulder
+  const Mb = M.translate(-AX, -AY - p.bob);
+  const A = armState(t, Mb); if (!A) return null;
+  const arm = drawArm(c, A, 500);
+  if (A.mode === 'glass') return { ...arm, mode: 'glass' };   // hand drawn after the glass handle
+  drawHand(c, arm.hc, A.mode, A.dir, 520);
+  return { ...arm, mode: A.mode };
+}
+
+// ---------------- magnifying glass ----------------
+function lensView(c, t, L, R, mag) {
+  c.save(); c.beginPath(); c.arc(L[0], L[1], R, 0, TAU); c.clip();
+  c.translate(L[0], L[1]); c.scale(mag, mag); c.translate(-L[0], -L[1]);
+  c.drawImage(IMG.plate, 0, 0, W, H); drawTableScene(c, t, true);
+  c.restore();
+  c.save(); c.globalAlpha = .12; c.fillStyle = '#bfe0ff'; c.beginPath(); c.arc(L[0], L[1], R, 0, TAU); c.fill(); c.restore();
+}
+function glassRing(c, L, R, seed) {
+  c.save(); c.lineCap = 'round';
+  c.strokeStyle = 'rgba(255,255,255,.75)'; c.lineWidth = 7; c.beginPath(); c.arc(L[0], L[1], R * .72, Math.PI * 1.08, Math.PI * 1.42); c.stroke();
+  c.lineWidth = 4; c.beginPath(); c.arc(L[0], L[1], R * .72, Math.PI * 1.5, Math.PI * 1.58); c.stroke(); c.restore();
+  const outer = ellPts(L[0], L[1], R + 12, R + 12, 0, 60), inner = ellPts(L[0], L[1], R, R, 0, 60);
+  const ring = new Path2D(); ring.addPath(polyPath(outer)); ring.addPath(polyPath([...inner].reverse()));
+  c.fillStyle = '#34302d'; c.fill(ring, 'evenodd');
+  hatch(c, ring, [L[0] - R - 14, L[1] - R - 14, 2 * R + 28, 2 * R + 28], { gap: 3, len: 10, color: '#6f6b67', alpha: .5, seed });
+  crayon(c, outer, INK, 4.5, seed + 1, true); crayon(c, inner, INK, 3.5, seed + 2, true);
+}
+function handleTo(c, from, L, R, seed) {   // grip at the hand, telescoping chrome shaft to the ring
+  const ang = Math.atan2(L[1] - from[1], L[0] - from[0]), d = Math.hypot(L[0] - from[0], L[1] - from[1]) - R - 10;
+  const at = u => [from[0] + Math.cos(ang) * u, from[1] + Math.sin(ang) * u];
+  const segs = [[40, d, 5.5, '#c9ccd2'], [40, d * .66 + 40 * .34, 7.5, '#b4b8bf'], [-22, 40, 11, '#8a5a3c']];
+  if (d > 60) { shape(c, capsulePts(at(40), at(d), 5.5, 6), '#c9ccd2', seed, { lw: 3.5, hc: '#9a9ea6' }); shape(c, capsulePts(at(40), at(40 + (d - 40) * .5), 7.5, 6), '#b4b8bf', seed + 1, { lw: 3.5, hc: '#8d9199' }); }
+  shape(c, capsulePts(at(-24), at(44), 11, 8), '#8a5a3c', seed + 2, { lw: 4, hc: '#6b4128' });
+  shape(c, capsulePts(at(40), at(46), 12, 4), '#d8b35a', seed + 3, { lw: 3 });
+}
+function magnifier(c, t, arm) {
+  if (!arm) return;
+  if (arm.mode === 'glass') {
+    const grow = easeOut(seg(t, 3.0, 3.38)), R = lerp(34, 100, grow);
+    const hand = arm.hc, Lf = lensPath(t), L = [lerp(hand[0] + 70, Lf[0], grow), lerp(hand[1] - 40, Lf[1], grow)];
+    handleTo(c, hand, L, R, 600);
+    drawHand(c, hand, 'fist', null, 520);
+    if (grow > .5) lensView(c, t, L, R, 1.5);
+    else { c.save(); c.globalAlpha = .25; c.fillStyle = '#bfe0ff'; c.beginPath(); c.arc(L[0], L[1], R, 0, TAU); c.fill(); c.restore(); }
+    glassRing(c, L, R, 610);
+  }
+}
+function tossedGlass(c, t) {   // flies up and off after 6.85
+  if (t < 6.85 || t > 7.5) return;
+  const u = seg(t, 6.85, 7.35), L0 = lensPath(6.85), R = 100;
+  const L = [L0[0] - 380 * u, L0[1] - 1250 * u + 380 * u * u];
+  if (L[1] < -260) return;
+  c.save(); c.translate(L[0], L[1]); c.rotate(u * 7); c.translate(-L[0], -L[1]);
+  handleTo(c, [L[0] - 230, L[1] + 40], L, R, 600);
+  c.save(); c.globalAlpha = .18; c.fillStyle = '#bfe0ff'; c.beginPath(); c.arc(L[0], L[1], R, 0, TAU); c.fill(); c.restore();
+  glassRing(c, L, R, 610); c.restore();
+  speedLinesAt(c, L[0] + 120, L[1] + 110, Math.atan2(1250, 380), 620, 1 - u);
+}
+function speedLinesAt(c, x, y, ang, seed, a) {
+  const r = rng(seed); c.save(); c.strokeStyle = INK; c.globalAlpha = .55 * a; c.lineWidth = 3; c.lineCap = 'round';
+  for (let k = 0; k < 4; k++) { const o = (k - 1.5) * 28 + (r() - .5) * 10, L = 50 + r() * 40, px = x - Math.sin(ang) * o, py = y + Math.cos(ang) * o;
+    c.beginPath(); c.moveTo(px, py); c.lineTo(px + Math.cos(ang) * L, py + Math.sin(ang) * L); c.stroke(); }
+  c.restore();
+}
+
+// ---------------- scene assembly ----------------
+function drawTableScene(c, t, reveal) {
+  table(c);
+  wallet(c, t);
+  // scammer hiding behind the phone: only the lens sees him before he is exposed
+  if (reveal && t < 7.05) {
+    const peek = easeOutBack(seg(t, 3.52, 3.82)) * (1 - .6 * seg(t, 6.6, 6.8));
+    scammer(c, 905 + 70 * peek, TY - 4 * peek, 1.25, { look: Math.sin(t * 5) > 0 ? -1 : 1, t, noSack: false });
+  }
+  phone(c);
+  detector(c, t, reveal);
+  giftCard(c, t, reveal);
+}
+function drawScene(c, t) {
+  // camera shake on impacts
+  let sx = 0, sy = 0; for (const [ti, amp] of [[.33, 7], [7.3, 11], [13.55, 4], [13.82, 5]]) if (t >= ti && t < ti + .14) { const r = rng(Math.round(t * 1000)); sx += (r() - .5) * amp * 2; sy += (r() - .5) * amp * 2; }
+  resetT(c); c.fillStyle = PAPER; c.fillRect(0, 0, W, H);
+  c.translate(sx, sy);
+  c.drawImage(IMG.plate, 0, 0, W, H);
+  // big LIVE badge on the paper
+  const blink = Math.floor(t * 2) % 2 === 0 || t < 1;
+  if (t < 12.9) drawStamp(c, liveBadge(300, 122, blink), 960, 300, -.05, 1, t, .33);
+  drawTableScene(c, t, false);
+  const st = scammerState(t);
+  if (st && st.x < 2100) scammer(c, st.x, st.y, 1.25, { mood: st.mood, run: st.run, look: st.look, t });
+  drawStamp(c, scamStamp(), 1030, 468, -.13, 1, t, 7.3);
+  box(c, t); tags(c, t);
+  drawBills(c, t);
+  if (t > 10.72 && t < 11.3) sparkle(c, 682, TY - 120, seg(t, 10.72, 11.3), 700);
+  const arm = drawJeff(c, t);
+  magnifier(c, t, arm);
+  tossedGlass(c, t);
+  if (t > 13.28 && t < 13.9 && arm) sparkle(c, arm.hc[0] - 6, arm.hc[1] - 62, seg(t, 13.28, 13.9), 710);
+  finale(c, t);
+}
+function sparkle(c, x, y, u, seed) {
+  const r = rng(seed); c.save(); c.strokeStyle = '#f2b84b'; c.lineWidth = 4; c.lineCap = 'round'; c.globalAlpha = 1 - u;
+  for (let k = 0; k < 6; k++) { const a = k / 6 * TAU + r() * .3, d0 = 16 + u * 40, d1 = d0 + 18 * (1 - u) + 6; c.beginPath(); c.moveTo(x + Math.cos(a) * d0, y + Math.sin(a) * d0); c.lineTo(x + Math.cos(a) * d1, y + Math.sin(a) * d1); c.stroke(); }
+  c.restore();
+}
+// logo: paper drop to centre, soft bounce, then perfectly still from 13.95
+const LOGO_BOX = [720, 400], LOGO_C = [960, 520];
+function finale(c, t) {
+  // LIVE badge lifts off the paper and hovers toward its spot beside the logo, then stamps
+  const small = [1480, 360], sScale = .62;
+  if (t >= 12.9) {
+    const fly = easeIO(seg(t, 12.9, 13.4));
+    if (t < 13.70) {
+      const x = lerp(960, small[0], fly), y = lerp(300, small[1] - 40, fly) - Math.sin(fly * Math.PI) * 60, s = lerp(1.06, sScale * 1.25, fly);
+      c.save(); c.globalAlpha = .18; c.fillStyle = INK; c.translate(x + 14, y + 22); c.rotate(-.05 + fly * -.03); c.beginPath(); c.roundRect(-150 * s, -61 * s, 300 * s, 122 * s, 26 * s); c.fill(); c.restore();
+      const img = liveBadge(300, 122, true); c.save(); c.translate(x, y); c.rotate(-.05 - fly * .05); c.scale(s, s); c.globalAlpha = .95; c.drawImage(img, -img.width / 2, -img.height / 2); c.restore();
+    }
+  }
+  if (t >= 13.2) {
+    const im = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, sc = Math.min(LOGO_BOX[0] / bw, LOGO_BOX[1] / bh), w = bw * sc, h = bh * sc;
+    let y = LOGO_C[1], rot = 0, sx = 1, sy = 1, shA = .16;
+    if (t < 13.55) { const a = seg(t, 13.2, 13.55); y = lerp(-h, LOGO_C[1], easeIn(a)); rot = .07 * Math.cos(a * 5) * (1 - a); shA = .16 * a; }
+    else if (t < 13.95) { const u = t - 13.55; y = LOGO_C[1] - Math.abs(Math.sin(seg(t, 13.55, 13.8) * Math.PI)) * 26 * (t < 13.8 ? 1 : 0); const sq = Math.exp(-u * 14) * Math.cos(u * 36) * .05; sx = 1 + sq; sy = 1 - sq; }
+    const lift = clamp((LOGO_C[1] - y) / 400, 0, 1);
+    c.save(); c.globalAlpha = shA * (1 - .5 * lift); c.translate(LOGO_C[0] + 12 + 30 * lift, LOGO_C[1] + 18 + 40 * lift); c.drawImage(IMG.logoShadow, bx, by, bw, bh, -w / 2, -h / 2, w, h); c.restore();
+    c.save(); c.translate(LOGO_C[0], y + h / 2); c.rotate(rot); c.scale(sx, sy); c.translate(0, -h / 2);
+    c.drawImage(im, bx, by, bw, bh, -w / 2, -h / 2, w, h); c.restore();
+  }
+  if (t >= 13.70) drawStamp(c, liveBadge(300, 122, true), small[0], small[1], -.1, sScale, t, 13.82, .16);
+}
+
+// ---------------- runtime ----------------
+const CV = document.getElementById('c'); CV.width = OUT_W; CV.height = OUT_H; const CTX = CV.getContext('2d');
+function frame(i) { const t = Math.min(i / FPS, DUR - 1e-6); resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, t); resetT(CTX); }
+window.__NFR = NFR; window.__FPS = FPS;
+window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
+(async () => {
+  await Promise.all([loadImg('plate', 'assets/plate.png'), loadImg('body', 'assets/jeff_body.png'), loadImg('legL', 'assets/jeff_legL.png'), loadImg('legR', 'assets/jeff_legR.png'), loadImg('logo', 'assets/official_logo.png')]);
+  IMG.logoBox = alphaBox(IMG.logo);
+  { const o = document.createElement('canvas'); o.width = IMG.logo.width; o.height = IMG.logo.height; const g = o.getContext('2d'); g.drawImage(IMG.logo, 0, 0); g.globalCompositeOperation = 'source-in'; g.fillStyle = INK; g.fillRect(0, 0, o.width, o.height); IMG.logoShadow = o; }
+  await document.fonts.load('40px Stamp'); await document.fonts.load('40px Marker');
+  const q = new URLSearchParams(location.search), f = +(q.get('frame') || 0);
+  frame(f); document.getElementById('info').textContent = `frame ${f} t=${(f / FPS).toFixed(2)}s`;
+  if (!q.has('bare')) { let s = performance.now(); const loop = () => { frame(Math.floor((performance.now() - s) / 1000 * FPS) % NFR); requestAnimationFrame(loop); }; if (q.has('play')) loop(); }
+  window.__ready = true;
+})().catch(e => { console.error(e); window.__error = String(e); });
+</script></body></html>

@@ -1,0 +1,198 @@
+{
+ "_doc": "JEFF'S RULES #1. Everything episode-specific lives here; the recurring parts come from rules.js + template.json. Scene ids name draw functions in rules/ep01.js and are the anchors for cues.",
+ "num": 1,
+ "hook": [
+  "IS IT REALLY",
+  "YOUR BANK?"
+ ],
+ "rule": [
+  "HANG UP.",
+  "CALL BACK."
+ ],
+ "recap": [
+  "IT'S NOT RUDE.",
+  "IT'S THE RULE."
+ ],
+ "ruleAfter": 1,
+ "scenes": [
+  {
+   "id": "setup",
+   "bars": 2,
+   "caps": [
+    [
+     1,
+     1,
+     "\"YOUR BANK\"",
+     "IS CALLING..."
+    ],
+    [
+     2,
+     1,
+     "\"WE NEED TO VERIFY",
+     "YOUR ACCOUNT NOW!\""
+    ]
+   ],
+   "chords": [
+    "Dm Dm Bb Bb",
+    "Gm Gm A A"
+   ]
+  },
+  {
+   "id": "why",
+   "bars": 2,
+   "caps": [
+    [
+     1,
+     1,
+     "CALLER ID",
+     "CAN BE FAKED."
+    ],
+    [
+     2,
+     1,
+     "THE NAME ON SCREEN",
+     "PROVES NOTHING."
+    ]
+   ],
+   "chords": [
+    "Dm Dm Bb Bb",
+    "Gm Gm A A"
+   ]
+  },
+  {
+   "id": "how",
+   "bars": 4,
+   "caps": [
+    [
+     1,
+     1,
+     "STEP 1:",
+     "HANG UP."
+    ],
+    [
+     2,
+     1,
+     "STEP 2:",
+     "FLIP YOUR CARD."
+    ],
+    [
+     3,
+     1,
+     "STEP 3: CALL THE",
+     "NUMBER ON THE BACK."
+    ],
+    [
+     4,
+     1,
+     "NOW YOU KNOW",
+     "WHO YOU'RE TALKING TO."
+    ]
+   ],
+   "chords": [
+    "D D G G",
+    "Bm Bm G A",
+    "D D G A",
+    "G G A A"
+   ]
+  }
+ ],
+ "cues": [
+  [
+   "setup",
+   1,
+   1,
+   "ring"
+  ],
+  [
+   "setup",
+   1,
+   3,
+   "ring"
+  ],
+  [
+   "setup",
+   2,
+   1,
+   "pickup"
+  ],
+  [
+   "setup",
+   2,
+   3,
+   "urgent"
+  ],
+  [
+   "why",
+   1,
+   2,
+   "swap"
+  ],
+  [
+   "why",
+   1,
+   3,
+   "swap"
+  ],
+  [
+   "why",
+   1,
+   4,
+   "swap"
+  ],
+  [
+   "why",
+   2,
+   3,
+   "fake"
+  ],
+  [
+   "how",
+   1,
+   3,
+   "hangup"
+  ],
+  [
+   "how",
+   1,
+   3.5,
+   "yank"
+  ],
+  [
+   "how",
+   2,
+   1,
+   "cardup"
+  ],
+  [
+   "how",
+   2,
+   3,
+   "flip"
+  ],
+  [
+   "how",
+   3,
+   1.5,
+   "dial"
+  ],
+  [
+   "how",
+   3,
+   3,
+   "call"
+  ],
+  [
+   "how",
+   4,
+   1,
+   "connect"
+  ],
+  [
+   "how",
+   4,
+   2,
+   "check"
+  ]
+ ],
+ "dialDigits": "18000000000"
+}

@@ -1,0 +1,16 @@
+title         58 frames compared: 0 differing pixels
+freeze        30 frames compared: 0 differing pixels
+pause         58 frames compared: 0 differing pixels
+reveal RIGHT  56 frames compared: 0 differing pixels
+reveal CLOSE  56 frames compared: 4061605 differing pixels | differing frames 56 (segment frames 4-54), all inside x0-581 y1221-1762
+reveal WRONG  56 frames compared: 4063707 differing pixels | differing frames 56 (segment frames 4-54), all inside x0-581 y1222-1762
+takeaway      56 frames compared: 0 differing pixels
+end           88 frames compared: 0 differing pixels
+
+Method: both episodes rendered through the template with every episode picture blanked (tease, setup scene, reveal
+scenes, stat) and episode 1's words and options in episode 2's structure (the reveals in episode 2's order, the stat
+outro, the same three-bar setup). Reveals are matched by verdict. The CLOSE and WRONG reveals differ only in Jeff
+(x 0-581, y 1221-1762): the template stands him at y 1830 in the first reveal (he steps in there) and at 1850 in the
+others, so he sits 20 px differently when a verdict moves between first and second place. Everything else is
+pixel-identical. The closing card's Facebook icon (endPlatforms) was left out of this test; it is the only intended
+addition, checked against its file in verify.txt.

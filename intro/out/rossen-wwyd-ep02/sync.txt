@@ -1,0 +1,40 @@
+container offset vs out/rossen-wwyd-ep02/score_norm.wav: 0.00 ms
+  0.000s  title         onset   0.004s  offset   +4 ms
+  5.000s  caption       onset   5.021s  offset  +21 ms   <-- over 10 ms
+  6.250s  scroll        onset   6.254s  offset   +4 ms
+  7.500s  alarm         onset   7.505s  offset   +5 ms
+  8.125s  popslam       onset   8.129s  offset   +4 ms
+ 10.000s  rise          onset  10.004s  offset   +4 ms
+ 11.250s  rub           onset  11.254s  offset   +4 ms
+ 12.500s  freeze        onset  12.505s  offset   +5 ms
+ 13.125s  option        onset  13.130s  offset   +5 ms
+ 13.750s  option        onset  13.755s  offset   +5 ms
+ 14.375s  option        onset  14.380s  offset   +5 ms
+ 20.000s  verdict CLOSE onset  20.004s  offset   +4 ms
+ 20.625s  caption       onset  20.629s  offset   +4 ms
+ 20.625s  click         onset  20.629s  offset   +4 ms
+ 21.250s  download      onset  21.255s  offset   +5 ms
+ 22.500s  caption       onset  22.504s  offset   +4 ms
+ 22.500s  paypage       onset  22.504s  offset   +4 ms
+ 23.750s  rub           onset  23.754s  offset   +4 ms
+ 25.000s  verdict WRONG onset  25.004s  offset   +4 ms
+ 25.625s  caption       onset  25.629s  offset   +4 ms
+ 25.625s  dial          onset  25.629s  offset   +4 ms
+ 26.250s  pickup        onset  26.254s  offset   +4 ms
+ 27.500s  caption       onset  27.504s  offset   +4 ms
+ 27.500s  remote        onset  27.504s  offset   +4 ms
+ 28.750s  cash          onset  28.754s  offset   +4 ms
+ 30.000s  verdict RIGHT onset  30.005s  offset   +5 ms
+ 30.625s  caption       onset  30.629s  offset   +4 ms
+ 30.625s  click         onset  30.629s  offset   +4 ms
+ 31.250s  suck          onset  31.254s  offset   +4 ms
+ 32.500s  caption       onset  32.504s  offset   +4 ms
+ 32.500s  clear         onset  32.504s  offset   +4 ms
+ 35.000s  lesson        onset  35.004s  offset   +4 ms
+ 35.312s  lesson 2      onset  35.317s  offset   +5 ms
+ 40.000s  statland      onset  40.004s  offset   +4 ms
+ 40.625s  statlines     onset  40.629s  offset   +4 ms
+ 41.250s  source        onset  41.254s  offset   +4 ms
+ 45.000s  comment if    onset  45.004s  offset   +4 ms
+ 48.125s  rubber stamp  onset  48.129s  offset   +4 ms
+38 hits, worst offset 21 ms

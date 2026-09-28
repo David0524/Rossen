@@ -1,0 +1,19 @@
+PASS duration 42.500 s (timeline 42.5 s = 17 bars)
+PASS caption "A HUGE DEAL / ON HEADPHONES!": on screen 2.50 s (a full bar), landed and still for 1.58 s (largest change 1/255)
+PASS caption "IT ARRIVES... / AND UH-OH.": on screen 2.50 s (a full bar), landed and still for 1.58 s (largest change 1/255)
+PASS caption "WHO WAS / SELLING IT?": on screen 2.49 s (a full bar), landed and still for 1.58 s (largest change 1/255)
+PASS caption "SHOPPING ON / A BIG SITE...": on screen 2.50 s (a full bar), landed and still for 1.58 s (largest change 1/255)
+PASS caption "ISN'T ALWAYS BUYING / FROM THAT SITE.": on screen 2.49 s (a full bar), landed and still for 1.58 s (largest change 1/255)
+PASS the rule card: both lines landed and still for 1.92 s (largest change 0/255)
+PASS the recap card: rule + recap line still for 1.58 s (largest change 1/255)
+PASS the rule is on screen twice: the reveal (13.75 s) and the recap (30.00 s)
+PASS the product page: SOLD BY / SHIPPED BY lines still (zoom settled at 22.81 s; still between the highlights, largest change 0/255)
+PASS the ranking card: all three rungs landed and still for 3.17 s, more than a bar (largest change 0/255)
+PASS the last second is still: 24 frames, largest change 0/255
+PASS official logo blue: file [9.8, 87.7, 193.1] vs video [9.6, 87.3, 188.7] (125311 px)
+PASS official logo yellow: file [254.3, 208.2, 0.6] vs video [251.6, 204.6, 3.4] (52950 px)
+PASS official logo pixels vs the file: median difference 2/255 (uniform scale, untextured)
+PASS closing card youtube icon vs its file: median difference 2/255
+PASS closing card instagram icon vs its file: median difference 5/255
+PASS closing card facebook icon vs its file: median difference 1/255
+ALL PASS

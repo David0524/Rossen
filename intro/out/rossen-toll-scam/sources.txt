@@ -1,0 +1,7 @@
+On-screen facts and data used in the "unpaid toll" explainer
+
+"60,000+ COMPLAINTS TO THE FBI IN 2024" (shown with "SOURCE: FBI"): the FBI Internet Crime Complaint Center (IC3) received more than 60,000 complaints about unpaid-toll scam texts in 2024, as reported from FBI figures, e.g.
+    https://www.newsweek.com/fbi-warning-scam-smishing-texts-delete-phones-2043344
+    FBI IC3 public service announcement on road-toll smishing (April 2024): https://www.ic3.gov/PSA/2024/PSA240412
+
+Map outline: Natural Earth 1:110m admin-0 countries (public domain), https://www.naturalearthdata.com/ (via https://github.com/nvkelso/natural-earth-vector)

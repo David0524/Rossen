@@ -1,0 +1,4 @@
+PASS PAY YOURSELF FIRST. still 0.00-1.72 s (largest change 2/255)
+PASS RED FLAG OR GREEN FLAG? still 3.74-4.72 s (largest change 3/255)
+PASS ink bar (2.80-5.0 s): no fluorescent inks (worst 0.000%)
+PASS riso bar (0-2.40 s): no warm ink paper on the page (worst 0.000%)

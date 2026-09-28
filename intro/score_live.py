@@ -1,0 +1,219 @@
+"""Soundtrack for the Rossen Reports LIVE TODAY promo (rossen-live-today.html). Recorded samples only, no synthesis.
+
+Music: an original 15 s cue sequenced from VSCO 2 Community Edition / VSCO 1 orchestral and drum samples (CC0), on the
+same 96 BPM grid and instruments as the case-file intro. Foley: Kenney CC0 packs, placed by attack on the frame where its
+picture lands. D minor and urgent while the text does its damage; D major with the Rossen trumpet theme for LIVE TODAY.
+
+usage: python3 score_live.py [samples_dir]  ->  out/rossen-live-today/score.wav
+"""
+import numpy as np, subprocess, wave, sys, os, re, glob, math
+SR = 48000; DUR = 15.0
+ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio')
+out = np.zeros((int(SR * DUR), 2), np.float32)
+_cache = {}
+def load(rel):
+    if rel not in _cache:
+        raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', os.path.join(ROOT, rel), '-ac', '2', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
+        x = np.frombuffer(raw, np.float32).reshape(-1, 2).copy()
+        i0 = int(np.argmax(np.abs(x).max(1) > 0.003)); _cache[rel] = x[max(0, i0 - 48):]   # trim leading silence
+    return _cache[rel]
+USED = set()
+def put(x, t, gain=1.0, pan=0.0, dur=None, rel=0.08):
+    if dur is not None:
+        n = min(len(x), int((dur + rel) * SR)); x = x[:n].copy(); r = min(n, int(rel * SR)); x[n - r:] *= np.linspace(1, 0, r)[:, None]
+    lg, rg = math.cos((pan + 1) * math.pi / 4) * 1.414, math.sin((pan + 1) * math.pi / 4) * 1.414
+    x = x * gain * np.array([min(1, lg), min(1, rg)], np.float32)
+    i0 = int(round(t * SR))
+    if i0 < 0: x = x[-i0:]; i0 = 0
+    i1 = min(len(out), i0 + len(x))
+    if i1 > i0: out[i0:i1] += x[: i1 - i0]
+
+# ---------------- instruments ----------------
+NAMES = {'C': 0, 'C#': 1, 'Db': 1, 'D': 2, 'D#': 3, 'Eb': 3, 'E': 4, 'F': 5, 'F#': 6, 'Gb': 6, 'G': 7, 'G#': 8, 'Ab': 8, 'A': 9, 'A#': 10, 'Bb': 10, 'B': 11}
+def midi(n): m = re.match(r'([A-G][#b]?)(-?\d)', n); return NAMES[m.group(1)] + 12 * (int(m.group(2)) + 1)
+class Inst:
+    """pattern: glob under ROOT with the note name as the only varying token, e.g. 'vsco/.../VlnEns_Pizz_*_v2_rr1.wav'.
+    Note names follow the library's convention (one octave below concert pitch), used consistently for every instrument."""
+    def __init__(self, pattern, pan=0.0, gain=1.0):
+        self.map = {}; pre, post = pattern.split('*')
+        for f in glob.glob(os.path.join(ROOT, pattern)):
+            rel = os.path.relpath(f, ROOT); tok = rel[len(pre):len(rel) - len(post)]
+            if re.fullmatch(r'[A-G][#b]?-?\d', tok): self.map[midi(tok)] = rel
+        assert self.map, pattern
+        self.pan, self.gain = pan, gain
+    def __call__(self, note, t, vel=1.0, dur=None, rel=0.08, pan=None):
+        m = midi(note) if isinstance(note, str) else note
+        k = min(self.map, key=lambda s: (abs(s - m), s < m))   # nearest sample, prefer repitching down
+        x = load(self.map[k]); USED.add(self.map[k])
+        if k != m:   # sampler-style repitch: resample the recording
+            ratio = 2 ** ((m - k) / 12); n = int(len(x) / ratio); src = np.arange(n) * ratio
+            x = np.stack([np.interp(src, np.arange(len(x)), x[:, c]) for c in (0, 1)], 1).astype(np.float32)
+        put(x, t, vel * self.gain, self.pan if pan is None else pan, dur, rel)
+def one(rel, t, gain=1.0, pan=0.0, dur=None, relz=0.08):
+    if os.environ.get('PITCHED_ONLY'): return
+    USED.add(rel); put(load(rel), t, gain, pan, dur, relz)
+
+V = 'vsco/'
+vpz = Inst(V + 'Strings/Violin Section/Pizz/VlnEns_Pizz_*_v2_rr1.wav', pan=-.35, gain=.75)
+vsp = Inst(V + 'Strings/Violin Section/Spic/VlnEns_Spic_*_v2_rr1.wav', pan=-.3, gain=.55)
+vla = Inst(V + 'Strings/Viola Section/spic/Violas_spic_*_v2_rr1.wav', pan=.2, gain=.55)
+cpz = Inst(V + 'Strings/Cello Section/pizzT/pizzT_*_v2_RR1.wav', pan=.3, gain=.95)
+cbp = Inst(V + 'Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_*_v1_rr1.wav', pan=.05, gain=1.0)
+tps = Inst(V + 'Brass/Trumpet/stac/Sum_SHTrumpet_stac_*_v3_rr1.wav', pan=-.15, gain=.6)
+tpl = Inst(V + 'Brass/Trumpet/susvib/Sum_SHTrumpet_susvib_*_v2_rr1.wav', pan=-.15, gain=.5)
+hns = Inst(V + 'Brass/F Horn/stac/MOHorn_stac_*_v2_rr1.wav', pan=.25, gain=.7)
+hnl = Inst(V + 'Brass/F Horn/sus/MOHorn_sus_*_v1_1.wav', pan=.25, gain=.55)
+tbs = Inst(V + 'Brass/Tenor Trombone/stac/tenortbn_stac_*_v3_rr1.wav', pan=.1, gain=.7)
+tbl = Inst(V + 'Brass/Tenor Trombone/sus/tenortbn_sus_*_v2_1.wav', pan=.1, gain=.55)
+cla = Inst(V + 'Woodwinds/Clarinet/stac/DCClar_stac_*_v3_rr1_sum.wav', pan=-.1, gain=.7)
+glk = Inst(V + 'Percussion/Glock/glock_medium_*.wav', pan=.15, gain=.6)
+xyl = Inst(V + 'Percussion/Xylo/Xylo_Medium_*_ff_01_far.wav', pan=-.1, gain=.5)
+P = V + 'Percussion/'
+TIMP, TIMP_ROLL = P + 'Timpani/Timpani4_Hit_v4_rr1_Sum.wav', P + 'Timpani/Rolls/Timpani4_Roll_v5_rr1_Sum.wav'
+def timp(t, g=1.0, dur=None):
+    if os.environ.get('PITCHED_ONLY'): return
+   # Timpani4 rings a little sharp of Eb; pulled down to D
+    x = load(TIMP); USED.add(TIMP); ratio = 2 ** (-0.8 / 12); src = np.arange(int(len(x) / ratio)) * ratio
+    y = np.stack([np.interp(src, np.arange(len(x)), x[:, c]) for c in (0, 1)], 1).astype(np.float32); put(y, t, g * .9, 0, dur, .3)
+BD, CRASH, CRASH_MF, SWELL = P + 'BDrumNewhit_v6_rr1_Sum.wav', P + 'cymbal-crash1_ff_rr1.wav', P + 'cymbal-crash1_mf_rr1.wav', P + 'susCymb1-cresc-Short_v1.wav'
+SN_ROLL, SN, TRI, CLAVE, TAMB = P + 'Snare2-rollNS_v5_rr1_Sum.wav', P + 'Snare2-HitNS_v3_rr1_Sum.wav', P + 'Triangle3-Hit_v2_rr1_Sum.wav', P + 'Claves1_Hit_v2_rr1_Sum.wav', P + 'Tamb1-Hit_v1_rr1_Sum.wav'
+K = 'kenney/'
+def fx(name, t, g=1.0, pan=0.0, dur=None):   # foley is placed so its ATTACK (first reach of half its peak) lands on t
+    if os.environ.get('PITCHED_ONLY'): return
+    x = load(K + name); env = np.abs(x).max(1); att = int(np.argmax(env >= .5 * env.max()))
+    USED.add(K + name); put(x, t - att / SR, g, pan, dur)
+
+BEAT = 0.625; E8, S16 = BEAT / 2, BEAT / 4
+B = lambda b: b * BEAT   # beat -> seconds (beat 0 = first frame = first downbeat)
+BAR = lambda n, b=0: B(4 * n + b)   # bar n (0-based), beat b
+D1_ = V + 'VSCO 1 Percussion/drums/'
+KICK, KICK2, SNR, SNR2, SNRF, RIM = D1_ + 'bass/bdrum_ff_1.wav', D1_ + 'bass/bdrum_f_1.wav', D1_ + 'snare/drum2/snare2_f_1.wav', D1_ + 'snare/drum2/snare2_mf_1.wav', D1_ + 'snare/drum2/snare2_ff_1.wav', D1_ + 'snare/drum2/snare2_rimshot_f_1.wav'
+TOMH, TOML = D1_ + 'tenor/tenor_higher/tenorH_ff_1.wav', D1_ + 'tenor/tenor_lower/tenor_ff_1.wav'
+TAMB2 = P + 'Tamb1-Hit_v2_rr1_Sum.wav'
+_tuned = {}
+def tuned(rel, t, g, semis, pan=0.0):   # drums pulled into the key (kick -> A, toms -> A and E)
+    if os.environ.get('PITCHED_ONLY'): return
+    if (rel, semis) not in _tuned:
+        x = load(rel); ratio = 2 ** (semis / 12); src = np.arange(int(len(x) / ratio)) * ratio
+        _tuned[(rel, semis)] = np.stack([np.interp(src, np.arange(len(x)), x[:, c]) for c in (0, 1)], 1).astype(np.float32)
+    USED.add(rel); put(_tuned[(rel, semis)], t, g, pan)
+def kick(t, g=.9): tuned(KICK if g > .6 else KICK2, t, g, 1.47 if g > .6 else 0)
+def snare(t, g=.5): one(SNR if g > .35 else SNR2, t, g, .05)
+def tamb(t0, t1, g=.16):
+    k = 0; t = t0
+    while t < t1 - 1e-6: one(TAMB if k % 2 == 0 else TAMB2, t, g * (1.0 if k % 2 else .7), .35); t += E8; k += 1
+def swell_to(t, g=.4):
+    if os.environ.get('PITCHED_ONLY'): return
+    x = load(SWELL); USED.add(SWELL); pk = int(np.argmax(np.abs(x).max(1))); put(x[:pk], t - pk / SR, g, dur=pk / SR, rel=.02)
+def roll_to(t0, t1, g=.45, rel=SN_ROLL):
+    if os.environ.get('PITCHED_ONLY'): return
+    x = load(rel); USED.add(rel); n = int((t1 - t0) * SR); put(x[:n] * np.linspace(.12, 1, n)[:, None] ** 1.5, t0, g)
+def tomfill(t0, t1, g=.55, step=S16):
+    k = 0; t = t0
+    while t < t1 - 1e-6: hi = (k // 2) % 2 == 0; tuned(TOMH if hi else TOML, t, g * (.7 + .3 * k * step / (t1 - t0)), -.32 if hi else -.82, .1 * (1 if k % 2 else -1)); t += step; k += 1
+CH = {   # chord voicings: trumpets / horns / trombones / contrabass root (library note names)
+    'Dm': (['D4', 'F4', 'A3'], ['D2', 'A2'], ['D3', 'F2'], 'D1'), 'Bb': (['D4', 'F4', 'Bb3'], ['Bb1', 'F2'], ['Bb2', 'F2'], 'Bb0'),
+    'C': (['E4', 'G4', 'C4'], ['C2', 'G2'], ['C3', 'G2'], 'C1'), 'Eb': (['Eb4', 'G3', 'Bb3'], ['Eb2', 'Bb2'], ['Eb3', 'G2'], 'Eb1'),
+    'D': (['D4', 'F#4', 'A3'], ['D2', 'A2'], ['D3', 'F#2'], 'D1'), 'F': (['F4', 'A3', 'C4'], ['F2', 'C2'], ['F2', 'A2'], 'F1'),
+    'G': (['G4', 'B3', 'D4'], ['G1', 'D2'], ['G2', 'B2'], 'G1'), 'A': (['A4', 'C#4', 'E4'], ['A1', 'E2'], ['A2', 'C#3'], 'A0'),
+}
+def stab(t, ch, g=1.0, dur=.32, bass=True):
+    tp, hn, tb, root = CH[ch]
+    for n in tp: tps(n, t, g, dur=dur)
+    for n in hn: hns(n, t, g, dur=dur + .05)
+    for n in tb: tbs(n, t, g * .9, dur=dur + .05)
+    if bass: cbp(root, t, g)
+def hit(t, ch, g=1.0, crash=.5):   # stab + kick + timpani + crash
+    stab(t, ch, g); kick(t, g); timp(t, g * .9)
+    if crash: one(CRASH, t, crash)
+def ostinato(t0, t1, notes, inst, g=.5, step=E8, dur=.16):
+    k = 0; t = t0
+    while t < t1 - 1e-6: inst(notes[k % len(notes)], t, g, dur=dur); t += step; k += 1
+
+def groove(b0, b1, g=.75, tamb_g=.15):   # kick on 1, the "and" of 2 and 3; snare on 2 and 4; tambourine eighths
+    for bb in range(int(b0), int(b1)):
+        pos = bb % 4
+        if pos in (0, 2): kick(B(bb), g)
+        if pos == 1: kick(B(bb + .5), g * .7)
+        if pos in (1, 3): snare(B(bb), .45)
+    tamb(B(b0), B(b1), tamb_g)
+def bass(beats):   # eighth-note bass, one root per beat: {beat: note}
+    for bb, n in beats.items(): cpz(n, B(bb), .7, dur=.28); cpz(n, B(bb + .5), .6, dur=.28); cbp(n.replace('2', '1').replace('A1', 'A0').replace('B1', 'B0'), B(bb), .35, dur=.3)
+def strings(beats):   # viola eighths on chord tones: {beat: (lo, hi)}
+    for bb, (lo, hi) in beats.items(): vla(lo, B(bb), .38, dur=.2); vla(hi, B(bb + .5), .34, dur=.2)
+def downbeat(bb, g=.22): one(CRASH_MF, B(bb), g)   # scene changes: a light cymbal, no brass
+
+AT = lambda bar, beat=1: bar * 2.5 + (beat - 1) * BEAT   # same clock as the picture (bar 0-based, beat 1-based)
+BB = lambda bar, beat=1: bar * 4 + (beat - 1)            # the same point in beats from the start
+
+
+def fx_first(name, t, g=1.0, pan=0.0):   # multi-transient foley (coins, card fans): align the FIRST audible transient, not the loudest
+    x = load(K + name); e = np.convolve(np.abs(x).max(1), np.ones(96) / 96, 'same'); att = int(np.argmax(e >= .2 * e.max()))
+    USED.add(K + name); put(x, t - att / SR, g, pan)
+CHORDS = {0: 'Dm Dm Dm Dm', 1: 'Bb Bb A A', 2: 'Dm Dm Gm A', 3: 'Bb Bb A A', 4: 'D D D D', 5: 'D D D D'}
+CROOT = {'Dm': 'D2', 'D': 'D2', 'Bb': 'Bb1', 'Gm': 'G2', 'A': 'A1'}
+VOX = {'Dm': ('D3', 'F3', 'A3'), 'D': ('D3', 'F#3', 'A3'), 'Bb': ('D3', 'F3', 'Bb3'), 'Gm': ('D3', 'G3', 'Bb3'), 'A': ('C#3', 'E3', 'A3')}
+CH['Gm'] = (['D4', 'G4', 'Bb3'], ['G1', 'D2'], ['G2', 'Bb2'], 'G1')
+END = AT(5, 2.5)                                         # the rubber stamp lands; the official logo is under it
+groove(0, BB(5, 2.5))
+for bar, row in CHORDS.items():
+    for k, ch in enumerate(row.split()):
+        bb = BB(bar, k + 1)
+        if B(bb) >= END: break
+        r = CROOT[ch]; lo, mid, hi = VOX[ch]
+        cpz(r, B(bb), .75, dur=.28); cpz(r, B(bb + .5), .65, dur=.28); cbp(r.replace('2', '1') if r[-1] == '2' else r.replace('1', '0'), B(bb), .4, dur=.3)
+        vla(lo if k % 2 == 0 else mid, B(bb), .4, dur=.2); vla(hi, B(bb + .5), .36, dur=.2)
+def capsnd(t, notes=('D5', 'A5'), two=True):
+    xyl(notes[0], t, .5); fx('casino/card-place-1.ogg', t, .16)
+    if two: xyl(notes[1], t + E8, .45); fx('casino/card-place-2.ogg', t + E8, .14)
+
+# bar 1: the text is already there
+hit(0.0, 'Dm', .9, .45); fx('interface/glass_001.ogg', 0.0, .55); glk('D6', 0.0, .45); capsnd(0.0, two=False)
+fx('interface/tick_002.ogg', AT(0, 3), .4); glk('A5', AT(0, 3), .35)                                # WAS THIS YOU? pulses
+for k, n in enumerate(('A3', 'Bb3', 'A3', 'G#3')): cla(n, AT(0, 3) + k * E8, .5, dur=.2)            # something's off
+# bar 2: the thumb creeps, the hook drops; DON'T REPLY!
+fx('rpg/cloth3.ogg', AT(1) - .1, .3)
+for k, tt in enumerate((AT(1, 1.5), AT(1, 1.75), AT(1, 2))): fx('interface/click_003.ogg', tt, .45, .15); xyl(('A5', 'Bb5', 'C#6')[k], tt, .3)   # Y, E, S
+for k in range(4): one(CLAVE, AT(1, 2) + k * S16, .25 + k * .06)
+roll_to(AT(1, 2), AT(1, 3), .45)
+hit(AT(1, 3), 'Dm', 1.0, .6); fx('impact/impactPunch_heavy_001.ogg', AT(1, 3), .6); fx('interface/error_004.ogg', AT(1, 3), .3)   # DON'T REPLY!
+for j in range(6): fx('interface/tick_001.ogg', AT(1, 3) + .05 + j * S16 / 2, .3 - j * .03)         # the hook is yanked away
+fx('interface/maximize_006.ogg', AT(1, 4), .4); swell_to(AT(2), .35)                                 # into the screen
+# bar 3: the account drains
+capsnd(AT(2))
+for k, tt in enumerate((AT(2, 1.5), AT(2, 2), AT(2, 2.5))):
+    fx_first('rpg/handleCoins.ogg' if k % 2 == 0 else 'rpg/handleCoins2.ogg', tt, .45, (-.3, .3)[k % 2]); fx_first('casino/card-fan-1.ogg', tt + .02, .25, -.4)
+    vpz(('A4', 'F4', 'D4')[k], tt, .7, dur=.2); tbs(('A2', 'F2', 'D2')[k], tt, .55, dur=.18); kick(tt, .75); one(RIM, tt, .45, .1)   # each -$750 lands hard
+hit(AT(2, 3), 'Bb', 1.0, .55); fx('impact/impactPunch_heavy_002.ogg', AT(2, 3), .55); fx('interface/error_004.ogg', AT(2, 3) + .05, .25)   # $0.00
+fx_first('casino/card-fan-2.ogg', AT(2, 3) + .1, .3)
+# bar 4: the tease
+fx('rpg/bookPlace1.ogg', AT(3), .45); capsnd(AT(3), ('D5', 'F5'))                                   # the phone drops back in
+fx('interface/pluck_001.ogg', AT(3, 1.5), .32)                                                        # Jeff
+fx('rpg/metalClick.ogg', AT(3, 2), .4, .2); stab(AT(3, 2), 'Bb', .5, bass=False)                    # magnifier up
+hit(AT(3, 3), 'A', .95, .45); fx('interface/switch_007.ogg', AT(3, 3), .4); glk('C#6', AT(3, 3), .5); glk('E6', AT(3, 3.25), .45)   # the hook, in the lens
+roll_to(AT(3, 4), AT(4), .45, TIMP_ROLL); swell_to(AT(4), .45); tomfill(AT(3, 4.5), AT(4), .45, S16)   # through the lens
+# bar 5: LIVE TODAY 5PM ET
+hit(AT(4), 'D', 1.0, .65); fx('impact/impactPlank_medium_000.ogg', AT(4), .5); fx('impact/impactPunch_heavy_000.ogg', AT(4), .5)   # LIVE TODAY + the sticker
+hit(AT(4, 1.5), 'D', .9, .4); fx('impact/impactPunch_heavy_001.ogg', AT(4, 1.5), .45)             # 5PM ET
+fx('interface/pluck_002.ogg', AT(4, 2), .3); glk('A5', AT(4, 2), .4)                                  # WEDNESDAY, Jeff
+for bb, n, d in [(2.5, 'D4', .15), (3, 'D4', .28), (3.5, 'F#4', .28), (4, 'A4', .5)]: tps(n, AT(4, bb), .85, dur=d)   # the Rossen theme
+for bb, n, d in [(1, 'D4', .28), (1.5, 'F#4', .2)]: tps(n, AT(5, bb), .8, dur=d)
+glk('D6', AT(5), .4)
+roll_to(AT(5, 1.5), END, .45, TIMP_ROLL); tomfill(AT(5, 1.75), END, .45, S16)                        # the rubber stamp comes down
+# the sign-off
+t = END
+for n in ('D4', 'F#4', 'A4'): tpl(n, t, .95, dur=1.2, rel=.4)
+for n in ('D2', 'F#2', 'A2'): hnl(n, t, .9, dur=1.2, rel=.4)
+for n in ('D2', 'A1'): tbl(n, t, .85, dur=1.2, rel=.4)
+cbp('D1', t, 1.0); cpz('D2', t, .9); timp(t, 1.0); kick(t, 1.0); one(CRASH, t, .6); glk('D6', t, .55)
+fx('impact/impactPlank_medium_000.ogg', t, .55); fx('impact/impactSoft_heavy_000.ogg', t, .4)
+
+# ---------------- master ----------------
+fade = int(.6 * SR); out[-fade:] *= np.linspace(1, 0, fade)[:, None] ** 2
+out = np.tanh(out * 1.1) / 1.1
+out *= (10 ** (-1 / 20)) / max(1e-6, np.abs(out).max())
+od = 'out/rossen-live-today'; os.makedirs(od, exist_ok=True)
+with wave.open(od + '/score.wav', 'wb') as w:
+    w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(out, -1, 1) * 32767).astype('<i2').tobytes())
+with open(od + '/samples_used.txt', 'w') as f: f.write('\n'.join(sorted(USED)) + '\n')
+print(od + '/score.wav', DUR, 's,', len(USED), 'samples')
