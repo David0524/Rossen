@@ -267,6 +267,18 @@ A beat of silence reads as a glitch if the music is cut off mid-phrase while the
 
 ## 9. Working with this client
 
+- **Who decides (2026-09-28):** the user (David) has the final say on taste. Jeff cares most about having enough content to
+  post, not the details.
+- **What the animations are for:** four posts a day are planned: Jeff direct to camera, a clip from the live show, one of
+  these case-file animations, and an animation in a more modern style closer to his logo (a separate style; ask before
+  building one). So throughput matters: favour templates and reusable pieces over bespoke one-offs.
+- **Settled, so don't reopen:**
+  - The sound is good.
+  - The intro title card is short enough not to worry about the hook.
+  - The branding (title card, logo bug, closing card or loop ×2) isn't too much. Viewers leave during the end loop anyway.
+- **Most films haven't been posted yet.** The team's focus is on writing the show bibles; the films will go out slowly.
+  The team loves them. There's no performance data yet.
+
 - They review closely, frame by frame and beat by beat. Expect notes on:
   - sync ("there's an extra beat")
   - legibility ("text bleeding off cards", "a bit see-through")
