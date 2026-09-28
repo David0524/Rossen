@@ -1,6 +1,6 @@
 'use strict';
 /* Wednesday live-show tease: 30 s (12 bars at 96 BPM, D, the loop's tempo and key), 1080x1920 (9:16), 24 fps, one
-   continuous film, then the approved 5 s LIVE TODAY loop (rossen-loop-wednesday, 5 PM ET) is appended untouched (35 s).
+   continuous film, then the approved 5 s LIVE TODAY loop (rossen-loop-wednesday, 5 PM ET) is appended untouched and plays twice (40 s).
    Case-file screen-print look (printkit.js), the approved palette (printkit.js: BLUE, BLK, YEL, CREAM, CHIP), the vertical
    safe-zone content transform (VERT_K 0.895, like the loop). Three car scams, teased, not explained; the red flags and the
    fixes are saved for the show. One short ALL-CAPS card per bar (the promise's card holds for its two bars). A card lands on
@@ -200,8 +200,8 @@ const SITE_FULL = Object.assign({}, SITE_BUILD, { paid: at(4, 2) });
 
 // ================= scenes =================
 // OIL SCAM (bars 0-2): the driveway. The car faces left; the sidekick works at the hood, the Scammer faces the man.
-const CAR = [620, 1340], CAR_LEN = .9, MAN = [80, 1352, .56], SCAM = [232, 1352, .56], SK = [400, 1352, .44];   // left to right: the man, the Scammer facing him, the car (hood at its left end), the sidekick behind it
-const MAN_FACE = [56, 988], OILK = 1.1, OILP = [928, 1352];   // the driveway is staged small, then shown 1.1x about OILP (the car's tail ends inside the safe right edge)
+const CAR = [800, 1340], CAR_LEN = .9, MAN = [150, 1352, .56], SCAM = [318, 1352, .56], SK = [578, 1352, .44];   // left to right: the man, the Scammer facing him, the car (hood at its left end; its tail runs off the right edge), the sidekick behind it
+const MAN_FACE = [126, 988], OILK = 1.1, OILP = [480, 1352];   // the driveway is staged small, then shown 1.1x about the frame's centre line
 const oilPt = ([x, y]) => [OILP[0] + (x - OILP[0]) * OILK, OILP[1] + (y - OILP[1]) * OILK];
 function sceneOil(c, t) {
   bgDots(c, BLUE, .05, .28); ground(c, 1345, BLK, .16);
@@ -373,14 +373,25 @@ function sceneMail(c, t) {   // bar 6
 const topTicketRect = () => { const [x, y] = mailPt(stackPos(6)); return [x - 140 * MAILK, y - 80 * MAILK, 280 * MAILK, 160 * MAILK]; };
 // the big ticket (bars 7-8): a camera photo of a car that is not his, his plate on it, the Scammer at the wheel
 const TK = { x: 90, y: 560, w: 780, h: 850 }, PH = { x: 140, y: 690, w: 680, h: 480 };
-const PLATE = { x: 480, y: 1129, w: 240, h: 80 };   // the plate on the photo (content coords)
-function plateCard(c, x, y, s, rot, back = false) {   // the plate: a paper printout (ABC-0000), taped on
+const PLATE = { x: 480, y: 1084, w: 240, h: 120 };   // a plate's 2:1 proportions   // the plate on the photo (content coords)
+function plateCard(c, x, y, s, rot, back = false, paper = false) {   // the plate: ABC-0000 on an embossed plate (no real state design);
+  // it is a paper printout taped on: back = its blank back, paper = seen for what it is (cut edge, curl, tape)
   c.save(); c.translate(x, y); c.rotate(rot); c.scale(s, s);
   const w = PLATE.w, h = PLATE.h;
-  block(c, rect(-w / 2, -h / 2, w, h), CHIP, 6601, { kw: 4 });
-  if (!back) { key(c, rect(-w / 2 + 8, -h / 2 + 7, w - 16, h - 14), 3, 6602); inkText(c, PLATE_NO, 0, 4, 54, 'Stamp', BLK, w - 34); }
-  else for (let k = 0; k < 4; k++) ink(c, rect(-w / 2 + 14, -h / 2 + 12 + k * 12, w - 28 - (k % 2) * 40, 3), BLK, 6603 + k, { reg: false, tint: .6, cell: 4 });
-  for (const [tx, ty, r] of [[-w / 2, -h / 2, -.6], [w / 2, -h / 2, .6]]) { c.save(); c.translate(tx, ty); c.rotate(r); ink(c, rect(-20, -8, 40, 16), YEL, 6610 + tx, { reg: false }); c.restore(); }
+  if (paper) { c.save(); c.globalAlpha = .25; c.fillStyle = BLK; c.fillRect(-w / 2 + 8, -h / 2 + 10, w, h); c.restore(); }
+  else if (!back) block(c, rrPts(-w / 2 - 9, -h / 2 - 9, w + 18, h + 18, 18), BLK, 6600, { kw: 0, key: false });   // the plate holder
+  block(c, rrPts(-w / 2, -h / 2, w, h, 12), back ? CHIP : '#ffffff', 6601, { kw: 4, reg: false });
+  if (!back) {
+    key(c, rrPts(-w / 2 + 8, -h / 2 + 8, w - 16, h - 16, 8), 3, 6602);                                             // the stamped rim
+    ink(c, rect(-w / 2 + 14, -h / 2 + 14, w - 28, 10), BLUE, 6603, { reg: false });                                // a plain band across the top (no words)
+    ink(c, rect(-w / 2 + 14, h / 2 - 22, w - 28, 6), BLUE, 6604, { reg: false });
+    for (const bx of [-62, 62]) { block(c, ellPts(bx, -h / 2 + 34, 7, 7, 0, 14), CHIP, 6605 + bx, { kw: 3, reg: false }); key(c, [[bx - 4, -h / 2 + 34], [bx + 4, -h / 2 + 34]], 2, 6606 + bx, false); }   // the two bolts
+    block(c, rrPts(w / 2 - 50, -h / 2 + 30, 30, 22, 4), YEL, 6607, { kw: 2 });                                     // a registration sticker, blank
+    c.save(); c.globalAlpha = .3; inkText(c, PLATE_NO, 3, 16, 60, 'Stamp', BLK, w - 44); c.restore(); inkText(c, PLATE_NO, 0, 12, 60, 'Stamp', BLK, w - 44);   // embossed characters
+  } else for (let k = 0; k < 4; k++) ink(c, rect(-w / 2 + 16, -h / 2 + 20 + k * 20, w - 32 - (k % 2) * 50, 3), BLK, 6608 + k, { reg: false, tint: .6, cell: 4 });
+  if (paper) { c.save(); c.strokeStyle = BLK; c.lineWidth = 3; c.setLineDash([10, 8]); c.strokeRect(-w / 2 - 6, -h / 2 - 6, w + 12, h + 12); c.restore();   // the scissor line of a printout
+    block(c, [[w / 2 - 40, h / 2], [w / 2, h / 2 - 40], [w / 2, h / 2]], CHIP, 6612, { kw: 3 }); }                // a curled corner
+  for (const [tx, ty, r] of [[-w / 2, -h / 2, -.6], [w / 2, -h / 2, .6]]) { c.save(); c.translate(tx, ty); c.rotate(r); ink(c, rect(-24, -9, 48, 18), YEL, 6610 + tx, { reg: false }); c.restore(); }
   c.restore();
 }
 function frontCar(c, x, y, s) {   // a generic car from the front, blue (his car is yellow), the Scammer at the wheel
@@ -393,10 +404,10 @@ function frontCar(c, x, y, s) {   // a generic car from the front, blue (his car
   block(c, rrPts(-110, -126, 220, 40, 10), BLK, 6708, { kw: 0, key: false }); for (let k = 0; k < 5; k++) ink(c, rect(-96 + k * 42, -118, 24, 24), CHIP, 6709 + k, { reg: false, tint: .4, cell: 6 });
   block(c, rrPts(-270, -40, 540, 34, 14), BLK, 6715, { kw: 0, key: false });
   for (const wx of [-200, 200]) block(c, rrPts(wx - 40, -10, 80, 50, 12), BLK, 6716 + wx, { kw: 0, key: false });
-  ink(c, rect(-104, -66, 208, 72), BLK, 6718, { reg: false });   // the plate's recess: bare once the paper comes off
+  ink(c, rect(-104, -82, 208, 104), BLK, 6718, { reg: false });   // the plate's recess: bare once the paper comes off
   c.restore();
 }
-const PEEL = [at(8) - SLAM, at(8, 2) + .1], DROP = [at(8, 2) + .1, at(8, 3)], REST = [640, 1305, .1];
+const PEEL = [at(8) - SLAM, at(8, 2) + .1], DROP = [at(8, 2) + .1, at(8, 3)], REST = [640, 1290, .1];
 function sceneTicket(c, t) {   // bars 7-8
   creamBg(c);
   shadowRect(c, TK.x, TK.y, TK.w, TK.h); block(c, rect(TK.x, TK.y, TK.w, TK.h), CHIP, 6801, { kw: 6 }); ink(c, rect(TK.x, TK.y, TK.w, 90), BLK, 6802, { reg: false });
@@ -405,30 +416,33 @@ function sceneTicket(c, t) {   // bars 7-8
   c.save(); c.beginPath(); c.rect(PH.x, PH.y, PH.w, PH.h); c.clip();
   ink(c, rect(PH.x, PH.y, PH.w, PH.h), CHIP, 6810, { reg: false }); dotsIn(c, rect(PH.x, PH.y, PH.w, PH.h * .5), BLUE, .18, 6811, 10); dotsIn(c, rect(PH.x, PH.y + PH.h * .62, PH.w, PH.h * .4), BLK, .35, 6812, 10);
   const grin = t > at(7, 3) ? .02 * Math.sin((t - at(7, 3)) * 20) * Math.exp(-(t - at(7, 3)) * 2) : 0;
-  c.save(); c.translate(480, 1165); c.rotate(grin); frontCar(c, 0, 0, 1.2); c.restore();
+  c.save(); c.translate(480, 1120); c.rotate(grin); frontCar(c, 0, 0, 1.2); c.restore();
   c.restore(); key(c, rect(PH.x, PH.y, PH.w, PH.h), 8, 6813);
   for (let k = 0; k < 4; k++) ink(c, rect(TK.x + 60 + k * 40, TK.y + TK.h - 150, 24, 90), BLK, 6820 + k, { reg: false, tint: .7, cell: 6 });   // a barcode-ish block, no digits
   block(c, rect(TK.x + TK.w - 290, TK.y + TK.h - 150, 230, 90), YEL, 6825, { kw: 4 });
   // the marker circle round the plate on 7:3
   const mc = seg(t, at(7, 3) - SLAM, at(7, 3) + .25);
-  if (mc > 0 && t < PEEL[1]) { c.save(); c.strokeStyle = YEL; c.lineWidth = 12; c.lineCap = 'round'; c.beginPath(); c.ellipse(PLATE.x, PLATE.y, 175, 74, -.05, -1.6, -1.6 + TAU * 1.05 * easeOut(mc)); c.stroke(); c.restore(); }
+  if (mc > 0 && t < PEEL[1]) { c.save(); c.strokeStyle = YEL; c.lineWidth = 12; c.lineCap = 'round'; c.beginPath(); c.ellipse(PLATE.x, PLATE.y, 180, 98, -.05, -1.6, -1.6 + TAU * 1.05 * easeOut(mc)); c.stroke(); c.restore(); }
   // the plate: on the photo; peels off on its left edge (8:1-2), flutters down and lands face up (8:3)
   const pu = easeIO(seg(t, ...PEEL)), du = seg(t, ...DROP);
   if (du <= 0) { const f = Math.cos(pu * Math.PI * .9), lift = 1 + .15 * Math.sin(pu * Math.PI); c.save(); c.translate(PLATE.x - PLATE.w / 2, PLATE.y); c.scale(f * lift, lift); c.translate(PLATE.w / 2, 0); plateCard(c, 0, 0, 1, -.1 * pu, f < 0); c.restore(); }
   else { const e = easeOut(du), x = lerp(PLATE.x - PLATE.w / 2 - PLATE.w / 2 * .95, REST[0], e) + 40 * Math.sin(du * 8) * (1 - du), y = lerp(PLATE.y - 40, REST[1], easeIn(du)), f = Math.cos(lerp(Math.PI * .9, TAU, e));
-    c.save(); c.translate(x, y); c.rotate(lerp(-.1, REST[2], e) + .3 * Math.sin(du * 7) * (1 - du)); c.scale(f * 1.15, 1.15); plateCard(c, 0, 0, 1, 0, f < 0); c.restore(); }
+    c.save(); c.translate(x, y); c.rotate(lerp(-.1, REST[2], e) + .3 * Math.sin(du * 7) * (1 - du)); c.scale(f * 1.1, 1.1); plateCard(c, 0, 0, 1, 0, f < 0, du > .6); c.restore(); }
 }
 function flashFull(c, t, t0) { const u = seg(t, t0, t0 + .3); if (u <= 0 || u >= 1) return; screenSpace(c, () => { c.save(); c.globalAlpha = .9 * (1 - u) ** 2; c.fillStyle = '#ffffff'; c.fillRect(0, 0, W, H); c.restore(); }); }
 
 // THE PROMISE (bar 9): Jeff and his magnifier over the three props, on a case-file board. No flags, no fixes.
-const BOARD = { x: 318, y: 680, w: 560, h: 400 }, PROPS = [[408, 885], [592, 885], [772, 885]];   // Jeff stands whole inside the safe zone below it
-function propCan(c, x, y, s) { const m = SKP.parts.can; c.save(); c.translate(x, y); c.scale(s, s); c.drawImage(IMG.sk_can, -m.w / 2, -m.h / 2); c.restore(); }
-function propSite(c, x, y, s) { c.save(); c.translate(x, y); c.scale(s, s); block(c, rrPts(-190, -130, 380, 260, 14), BLK, 6901, { kw: 4 }); c.save(); c.translate(-165, -105); c.scale(330 / 660, 210 / 400); site(c, at(4) + 1, SITE_BUILD); c.restore(); c.restore(); }
-function drawProps(c) { propCan(c, PROPS[0][0], PROPS[0][1], 1.3); propSite(c, PROPS[1][0], PROPS[1][1], .46); plateCard(c, PROPS[2][0], PROPS[2][1], .7, .06); }
+const BOARD = { x: 318, y: 680, w: 560, h: 400 }, PROPS = [[410, 885], [596, 885], [782, 885]];   // Jeff stands whole inside the safe zone below it
+// the case board: one pinned photo per scam, a recap of what the viewer just saw
+function picOil(pw, ph, c) { ink(c, rect(-pw / 2, -ph / 2, pw, ph), CHIP, 6920, { reg: false }); dotsIn(c, rect(-pw / 2, ph * .22, pw, ph), BLK, .3, 6921, 6);
+  sedan(c, 8, ph * .3, .2, { len: CAR_LEN, hood: 1 }); puff(c, -32, -ph * .12, 30, 6922); }
+function picSite(pw, ph, c) { ink(c, rect(-pw / 2, -ph / 2, pw, ph), BLK, 6923, { reg: false }); c.save(); c.translate(-pw / 2 + 4, -ph / 2 + 16); c.scale((pw - 8) / 660, (pw - 8) / 660); site(c, at(4) + 1, SITE_BUILD); c.restore(); }
+function picPlate(pw, ph, c) { ink(c, rect(-pw / 2, -ph / 2, pw, ph), BLUE, 6924, { reg: false }); plateCard(c, 0, 4, .48, 0); }
+const PICS = [picOil, picSite, picPlate];
+function drawProps(c) { PROPS.forEach(([px, py], k) => { polaroid(c, px, py, 172, 212, [-.05, .03, -.03][k], 6930 + k * 5, (pw, ph) => PICS[k](pw, ph, c)); pushpin(c, px, py - 96); }); }
 function sceneJeff(c, t) {
   bgDots(c, BLUE, .1, .45);
   shadowRect(c, BOARD.x, BOARD.y, BOARD.w, BOARD.h); block(c, rect(BOARD.x, BOARD.y, BOARD.w, BOARD.h), CHIP, 6910, { kw: 6 });
-  for (const [px, py] of PROPS) pushpin(c, px, py - 150);
   drawProps(c);
   const t0 = at(B_JEFF), jin = easeOutBack(land(t, t0)), raise = easeOut(seg(t, t0 + .1, at(B_JEFF, 2)));
   const J = jeff(c, 190, lerp(2600, 1415, jin), .5, { armR: lerp(0, -2.05, raise), head: -.05 + .03 * Math.sin(t * 2), bob: Math.abs(Math.sin(t * Math.PI / BEAT)) * 4 });

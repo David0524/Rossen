@@ -1,4 +1,4 @@
-"""Wednesday live-show tease score (wed-tease.js), 30 s, then the Wednesday 5 PM LIVE TODAY loop (5 s) appended untouched.
+"""Wednesday live-show tease score (wed-tease.js), 30 s, then the Wednesday 5 PM LIVE TODAY loop (5 s) appended untouched and played twice.
 Same tempo and key as the loop (96 BPM, D). Bars 0-8 are composed here, played by recorded instrument samples (VSCO 2 CE and its
 VSCO 1 drums, CC0). Sound effects are recorded files (Kenney, BigSoundBank, OpenGameArt; all CC0), each placed by its audible attack.
 Bar 8 lands on A on beat 3 and beat 4 is silent; Jeff steps in on bar 9 with a confident D major bar (brass, full groove) that ends on A,
@@ -6,7 +6,7 @@ the chord the loop ends on; on bar 10 the loop's own cue enters (its first half 
 handoff bar), so the cut at 30.0 s into the loop is the loop's own seamless wrap.
 Mood: sneaky and comic for the oil scam, slick and too good for the fake dealership, tense for the tickets, confident for Jeff.
 
-usage: python3 score_wed_tease.py            ->  out/rossen-tease-wednesday/tease_audio.wav (30 s), full_audio.wav (35 s), hits.json,
+usage: python3 score_wed_tease.py            ->  out/rossen-tease-wednesday/tease_audio.wav (30 s), full_audio.wav (40 s: the tease + the loop twice), hits.json,
                                                 samples_used.txt, audio_sources.txt
        HITS_ONLY=1 python3 score_wed_tease.py ->  score_hits.wav (the synced hits alone)
 """
@@ -309,7 +309,7 @@ def write(p, x):
 if HO: write(od + '/score_hits.wav', comp / max(1e-6, np.abs(comp).max()) * .9)
 else:
     write(od + '/tease_audio.wav', comp)
-    write(od + '/full_audio.wav', np.concatenate([comp, LOOP]))   # the loop's own audio under the loop
+    write(od + '/full_audio.wav', np.concatenate([comp, LOOP, LOOP]))   # the loop's own audio, sample for sample, twice: its end wraps into its start
 json.dump(sorted(set(HITS)), open(od + '/hits.json', 'w'))
 if not HO:
     with open(od + '/samples_used.txt', 'w') as f: f.write('\n'.join(sorted(USED)) + '\n')
@@ -328,7 +328,7 @@ if not HO:
         return '?', '?'
     loop_used = [l.strip() for l in open('out/rossen-loop/samples_used.txt') if l.strip()]
     with open(od + '/audio_sources.txt', 'w') as f:
-        f.write('Rossen Reports Wednesday live tease (30 s, car scams) + the Wednesday 5 PM LIVE TODAY loop (5 s). Every recorded audio file in the mix, with its source and license.\n')
+        f.write('Rossen Reports Wednesday live tease (30 s, car scams) + the Wednesday 5 PM LIVE TODAY loop played twice (10 s). Every recorded audio file in the mix, with its source and license.\n')
         f.write('All are CC0 1.0 (public domain dedication, commercial use allowed, no attribution required). None come from a music library that registers with Content ID.\n\n')
         for u in sorted(USED | set(loop_used)):
             src, lic = page_of(u); who = ('tease' if u in USED else '') + (' + ' if u in USED and u in loop_used else '') + ('loop cue' if u in loop_used else '')

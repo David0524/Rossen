@@ -39,8 +39,8 @@ st, fm = probe(F); v, a = st['video'], st['audio']
 nf = int(v['nb_frames'])
 say('\n== format')
 check(v['width'] == 1080 and v['height'] == 1920 and v['r_frame_rate'] == '24/1', f"video {v['width']}x{v['height']} at {v['r_frame_rate']} fps, {v['codec_name']} {v['pix_fmt']} (the loop: 1080x1920, 24 fps)")
-check(nf == NT + 120, f'{nf} frames = {nf / FPS:.3f} s (tease {NT} frames = {NT / FPS:.3f} s + loop 120 frames = 5.000 s)')
-check(abs(float(a['duration']) - (NT / FPS + 5)) < .03 and a['sample_rate'] == '48000', f"audio {a['codec_name']} {a['sample_rate']} Hz {a['channels']} ch, {float(a['duration']):.3f} s")
+check(nf == NT + 240, f'{nf} frames = {nf / FPS:.3f} s (tease {NT} frames = {NT / FPS:.3f} s + the loop twice, 2 x 120 frames = 10.000 s)')
+check(abs(float(a['duration']) - (NT / FPS + 10)) < .03 and a['sample_rate'] == '48000', f"audio {a['codec_name']} {a['sample_rate']} Hz {a['channels']} ch, {float(a['duration']):.3f} s")
 
 say('\n== the three scams: equal bars, one idea per bar (whole bars at 96 BPM)')
 for name, b0, b1 in SCAMS: say(f'      {name:20s} bars {b0}-{b1 - 1}: {at(b0):6.3f}-{at(b1):6.3f} s = {b1 - b0} bars = {at(b1) - at(b0):.3f} s')
@@ -81,43 +81,48 @@ pk = np.abs(A[s0:s1]).max(); rm = np.sqrt((A[s0:s1] ** 2).mean())
 pre = np.sqrt((A[int((at(8, 3)) * SR):int(at(8, 3.8) * SR)] ** 2).mean())
 check(pk < 10 ** (-60 / 20), f'{at(8, 4) + .01:.3f}-{at(9) - .012:.3f} s: peak {db(pk):.1f} dBFS, rms {db(rm):.1f} dBFS (the beat before it: rms {db(pre):.1f} dBFS)')
 
-say('\n== the handoff into the loop')
-L = frames(LOOP); T = frames(F, NT, 120)
-same = [int(np.array_equal(L[k], T[k])) for k in range(120)]
-check(sum(same) == 120, f'loop portion (frames {NT}-{NT + 119}) decodes identical to the delivered loop, pixel for pixel: {sum(same)}/120 frames')
+say('\n== the handoff into the loop, and the loop into itself (it plays twice)')
+L = frames(LOOP)
+for r in range(2):
+    T = frames(F, NT + 120 * r, 120); same = sum(int(np.array_equal(L[k], T[k])) for k in range(120))
+    check(same == 120, f'loop copy {r + 1} (frames {NT + 120 * r}-{NT + 120 * r + 119}) decodes identical to the delivered loop, pixel for pixel: {same}/120 frames')
+    if r == 0: T0 = T[0].copy()
+    del T
 del band, G
 last = frames(F, NT - 1, 1)[0].astype(np.int16); m_last = np.abs(last - L[119].astype(np.int16)).mean()
-jump = np.abs(T[0].astype(np.int16) - last).mean(); wrap = np.abs(L[0].astype(np.int16) - L[119].astype(np.int16)).mean()
+jump = np.abs(T0.astype(np.int16) - last).mean(); wrap = np.abs(L[0].astype(np.int16) - L[119].astype(np.int16)).mean()
 check(m_last < 4.0, f"the tease's last frame is the loop's own frame 119 (decoded from the delivered file, re-encoded once): mean difference {m_last:.2f}/255")
 check(jump <= wrap + m_last + .5, f'the cut {NT - 1} -> {NT} changes the picture by {jump:.2f}/255; the loop\'s own wrap (119 -> 0) by {wrap:.2f}/255, plus the re-encode {m_last:.2f}: no frame jump')
-LA = pcm(LOOP)[: 5 * SR]; j = NT * SR // FPS   # the decoded AAC carries 640 samples of encoder padding after its 5.000 s
+say(f'      the cut {NT + 119} -> {NT + 120} (loop into loop) is the loop\'s own wrap: both copies decode identical to the delivered loop (above)')
+LA = pcm(LOOP)[: 5 * SR]   # the decoded AAC carries 640 samples of encoder padding after its 5.000 s
 seg = lambda x, i: np.sqrt((x[i:i + int(.05 * SR)] ** 2).mean())
-before, after = seg(A, j - int(.05 * SR)), seg(A, j); lb, la = seg(LA, len(LA) - int(.05 * SR)), seg(LA, 0)
-step = np.abs(np.diff(A[j - 480:j + 480], axis=0)).max(); nb = np.percentile(np.abs(np.diff(A[j - 24000:j + 24000], axis=0)).max(1), 99.9)
-check(abs(db(after) - db(before) - (db(la) - db(lb))) < 1.5 and step <= nb * 1.5,
-      f'audio across {NT / FPS:.1f} s: {db(before):.1f} -> {db(after):.1f} dBFS (50 ms rms; the loop\'s own wrap: {db(lb):.1f} -> {db(la):.1f}); largest sample step at the join {step:.3f} vs {nb:.3f} (99.9th pct nearby): no bump')
-n = min(len(LA), len(A) - j); c = np.corrcoef(A[j:j + n, 0], LA[:n, 0])[0, 1]
-check(c > .99, f'the loop portion\'s audio matches the delivered loop\'s audio: correlation {c:.5f} (re-encoded once in the mux; the video is untouched)')
+lb, la = seg(LA, len(LA) - int(.05 * SR)), seg(LA, 0)
+for j, name in ((NT * SR // FPS, 'tease into loop'), ((NT + 120) * SR // FPS, 'loop into loop')):
+    before, after = seg(A, j - int(.05 * SR)), seg(A, j)
+    step = np.abs(np.diff(A[j - 480:j + 480], axis=0)).max(); nb = np.percentile(np.abs(np.diff(A[j - 24000:j + 24000], axis=0)).max(1), 99.9)
+    check(abs(db(after) - db(before) - (db(la) - db(lb))) < 1.5 and step <= nb * 1.5,
+          f'audio at {j / SR:.1f} s ({name}): {db(before):.1f} -> {db(after):.1f} dBFS (50 ms rms; the loop\'s own wrap: {db(lb):.1f} -> {db(la):.1f}); largest sample step {step:.3f} vs {nb:.3f} (99.9th pct nearby): no bump')
+    n = min(len(LA), len(A) - j); c = np.corrcoef(A[j:j + n, 0], LA[:n, 0])[0, 1]
+    check(c > .99, f'  the audio after it matches the delivered loop\'s audio: correlation {c:.5f} (re-encoded once in the mux; the video is untouched)')
 
-say('\n== the loop unchanged from the original file')
+say('\n== the loop unchanged from the original file (both copies)')
 def pk_md5(f):
     out = subprocess.run(['ffmpeg', '-v', 'error', '-i', f, '-map', '0:v', '-c', 'copy', '-f', 'framemd5', '-'], capture_output=True, check=True).stdout.decode()
     return [l.split(',')[-1].strip() for l in out.splitlines() if l and not l.startswith('#')]
-po, pf = pk_md5(LOOP), pk_md5(F)
-nsame = sum(x == y for x, y in zip(po[1:], pf[NT + 1:]))
-check(nsame == 119, f'video packets 2-120 of the loop are byte-identical to the delivered loop\'s (stream copy): {nsame}/119')
 def raw_v(f): return subprocess.run(['ffmpeg', '-v', 'error', '-i', f, '-map', '0:v', '-c', 'copy', '-f', 'data', '-'], capture_output=True, check=True).stdout
 def sizes(f): return [int(p['size']) for p in json.loads(subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'packet=size', '-of', 'json', f], capture_output=True, check=True).stdout)['packets']]
 def nals(b):
     i, r = 0, []
     while i + 4 <= len(b): n = int.from_bytes(b[i:i + 4], 'big'); r.append(b[i + 4:i + 4 + n]); i += 4 + n
     return r
-so, sf = sizes(LOOP), sizes(F); ro, rf = raw_v(LOOP), raw_v(F); off = sum(sf[:NT])
-No, Nf = nals(ro[:so[0]]), nals(rf[off:off + sf[NT]]); extra = [x for x in Nf if x not in No]
+po, pf = pk_md5(LOOP), pk_md5(F); so, sf = sizes(LOOP), sizes(F); ro, rf = raw_v(LOOP), raw_v(F)
 avcc = subprocess.run(['ffmpeg', '-v', 'error', '-i', LOOP, '-map', '0:v', '-c', 'copy', '-bsf:v', 'h264_mp4toannexb', '-frames:v', '1', '-f', 'h264', '-'], capture_output=True, check=True).stdout
-own = all(x in avcc for x in extra)
-check(all(x in Nf for x in No) and {x[0] & 31 for x in extra} <= {7, 8} and own,
-      f'packet 1 (the loop\'s key frame): all its NAL units are byte-identical ({[(x[0] & 31, len(x)) for x in No]}); the join adds only the loop\'s own SPS/PPS in-band ({[(x[0] & 31, len(x)) for x in extra]}, taken from its own header: {own})')
+for r in range(2):
+    k0 = NT + 120 * r; nsame = sum(x == y for x, y in zip(po[1:], pf[k0 + 1:k0 + 120]))
+    check(nsame == 119, f'copy {r + 1}: video packets 2-120 are byte-identical to the delivered loop\'s (stream copy): {nsame}/119')
+    off = sum(sf[:k0]); No, Nf = nals(ro[:so[0]]), nals(rf[off:off + sf[k0]]); extra = [x for x in Nf if x not in No]; own = all(x in avcc for x in extra)
+    check(all(x in Nf for x in No) and {x[0] & 31 for x in extra} <= {7, 8} and own,
+          f'copy {r + 1}, packet 1 (the key frame): all its NAL units are byte-identical ({[(x[0] & 31, len(x)) for x in No]}); the join adds only the loop\'s own SPS/PPS in-band ({[(x[0] & 31, len(x)) for x in extra]}, from its own header: {own})')
 say(f'      delivered loop md5 {hashlib.md5(open(LOOP, "rb").read()).hexdigest()} (unchanged on disk)')
 
 say('\n== safe zone (screen: text and key action clear of the top 15% (y < 288), bottom 25% (y > 1440) and right 15% (x > 918))')

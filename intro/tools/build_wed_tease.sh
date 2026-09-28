@@ -1,8 +1,8 @@
 #!/bin/sh
-# Wednesday tease + the approved Wednesday 5 PM LIVE TODAY loop, appended untouched (35 s).
+# Wednesday tease + the approved Wednesday 5 PM LIVE TODAY loop, appended untouched and played twice (40 s). Every tease ends on its loop x2.
 #   0. decode the delivered loop's frames (read-only) for the handoff bar and its masks
 #   1. render the 30 s tease (same x264 settings as the loop, so the streams join)
-#   2. score it (the loop's own cue carries bars 10-11; full_audio.wav = tease audio + the loop's own audio)
+#   2. score it (the loop's own cue carries bars 10-11; full_audio.wav = tease audio + the loop's own audio, twice)
 #   3. join the loop's video by stream copy (its packets are not re-encoded), mux the audio, make a CRF 21 preview
 set -e
 cd "$(dirname "$0")/.."
@@ -12,7 +12,7 @@ mkdir -p out/rossen-loop-wednesday/frames
 [ -n "$SKIP_RENDER" ] || node render.mjs --html rossen-tease-wednesday.html --all > /dev/null
 python3 score_wed_tease.py
 ffmpeg -v error -y -i "$L" -an -c:v copy $O/loop_v.mp4
-printf "file 'video.mp4'\nfile 'loop_v.mp4'\n" > $O/concat.txt
+printf "file 'video.mp4'\nfile 'loop_v.mp4'\nfile 'loop_v.mp4'\n" > $O/concat.txt
 ffmpeg -v error -y -f concat -safe 0 -i $O/concat.txt -c copy $O/video_full.mp4
 ffmpeg -v error -y -i $O/video_full.mp4 -i $O/full_audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart $O/rossen-tease-wednesday.mp4
 ffmpeg -v error -y -i $O/video_full.mp4 -an -c:v libx264 -crf 21 -preset slow -pix_fmt yuv420p $O/pv.mp4
