@@ -51,3 +51,5 @@ So these are tools to use on purpose, not defaults on every shot. Never retrofit
 - **11, print marks** (crop marks, registration targets, colour bar): one framing device per film at most, e.g. the title
   card or an evidence close-up, not every scene. Keep the marks out of the logo bug's corner and the caption area. They are
   decoration; nothing readable goes in them.
+- **4, the lurk** (the scammer peeking in behind the unaware victim; Singapore NCPC): the client likes it and wants it in the
+  toolbox. How to stage it: craft.md §7 "The lurk".

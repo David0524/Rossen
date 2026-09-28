@@ -46,7 +46,7 @@ Settled conflicts: no camera drift or push while a caption is up (the camera mov
 3. **Plan on the beat grid**: the intro title card (a pickup of whole beats), then one idea per bar, whole bars, equal bars for
    equal parts. Write the timeline comment at the top of the film first: bar, time, what happens, the caption, the sound hit,
    the transition labelled `[SIGNATURE]`, `[push]` or `[cut]` (2–3 signatures per piece, never back to back). For each bar
-   write its **reads** (what the viewer must understand, in order; never two at once). **Show the user the bar plan and the
+   write its **reads** (what the viewer must understand, in order; never two at once). Look for a spot for the lurk (craft.md §7) in the bait or trap. **Show the user the bar plan and the
    captions before building a new film**, unless they said to go ahead; revisions don't need this gate.
 4. **Assets**: cut new characters into jointed puppets (craft.md §4; `intro/tools/cut_*.py` are the patterns) and check the part
    sheet visually; draw expression heads (a gasp); source missing foley with a subagent (`templates/subagent-prompts.md`).

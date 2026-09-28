@@ -232,6 +232,22 @@ A beat of silence reads as a glitch if the music is cut off mid-phrase while the
 - **Show "looks real" on screen.** A fake SECURE badge and a copied header, with the host's magnifier exposing the garbled address.
 - **Let the host's first appearance feel like a turn.** Here the scammer was knocked out by a logo sticker slam, and the key moved from minor to major.
 - **Evidence continuity pays off.** The client asked for the SCAM snapshot to be pinned next to the CAUGHT snapshot: things caught earlier should reappear on the evidence wall.
+- **The lurk (client-approved, 2026-09-28; from Singapore's NCPC scam films, REFERENCES.md lesson 4).** The viewer sees the
+  scammer before the victim does: he peeks in behind the victim's screen, the car, the mailbox or a doorway while the victim
+  smiles on, unaware. It adds charm and tension with no words, and it suits the scam's "hidden in plain sight" point.
+  - **When:** in the bait or the trap, while the victim trusts the message, and at most once or twice a film. It's a gag that
+    stops working when repeated.
+  - **Staging:** the victim is in front, big, with the face clear (nothing crosses it). The scammer is behind and partly hidden:
+    only his head and hands, and maybe his cash or rod, rise from behind a prop's edge.
+  - **Inside the frame:** keep the lurker inside the safe zone and out of the logo corner and the caption area.
+  - **Puppets:** any scammer puppet works: the explainer Scammer (`scammerCash` has no rod), the officer, the sidekick.
+  - **Timing:** he rises on a beat where no caption is landing (usually beat 2 or 3), with anticipation: a slow rise, a
+    snap to the peek, then a hold. He holds at least a beat so it reads, keeping his breathing and a slow head turn towards
+    the victim. He ducks away on the eighth before the victim turns round (a near miss), or, at the turn, he's caught.
+  - **Sound:** a soft creak or cloth rustle as he rises (recorded, placed by its attack). No sting until he's caught.
+  - **Caption:** it never says what we can see ("A SCAMMER IS BEHIND YOU"). It adds the stakes or the irony instead:
+    "LOOKS LEGIT, RIGHT?", "HE'S ALREADY INSIDE."
+  - **Reads:** the victim is happy (one read), then the lurker appears (the next read). Never both at once.
 
 ## 8. Audio for voiceover
 
