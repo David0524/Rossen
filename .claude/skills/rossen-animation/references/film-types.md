@@ -1,7 +1,8 @@
 # Film types: what each one is, and its reference build
 
 Lengths here exclude the intro title card's pickup (add about 1.9 s). Everything is in `intro/`, 96 BPM on the bar grid, the case-file screen-print look, 1080×1920 at 24 fps unless noted. Every
-film opens on the intro title card (CLAUDE.md). New films end on `liveEndCard(c, ['youtube', 'instagram', 'facebook'])` unless
+film opens on the intro title card (CLAUDE.md; a series' recurring open counts as one) and carries the logo bug in the
+corner between its open and its outro. New films end on `liveEndCard(c, ['youtube', 'instagram', 'facebook'])` unless
 the type says otherwise. Start from the reference build of the same type: copy it under a new name, never edit an approved
 film in place (series episodes share recurring parts that must stay frame-identical).
 
@@ -50,15 +51,11 @@ every two beats) (2) · TAKEAWAY (2). The phone never moves while there's someth
   re-render ep01 and compare).
 - New puppets: an episode may load them via `window.EP_ASSETS`; cut them with a `tools/cut_*.py` like the others.
 - An episode may set `endPlatforms` (use all three for new episodes).
-- The intro title card rule applies to new episodes, but **no mechanism exists yet** in either series: `buildTimeline()` has
-  fixed bar counts and the verify scripts don't know a pickup. The first new episode must add it: an optional `intro` field in
-  `epNN.json` (absent in earlier episodes), drawn by the series script before TITLE with the timeline offset by the pickup (as
-  `INTRO` in `wed-tease.js`), the score and hits shifted the same way (`T0`), and the verify script's times offset. Earlier
-  episodes must still render and score bit-identically. Ask the user before building it, since it changes the recurring open.
+- **The series' recurring opens already act as the title card** (the client confirmed): no separate pickup card for episodes.
 - Bar counts: `rules/template.json` and `wwyd/template.json` are authoritative (END is 3 bars in both).
-- **Recurring parts are approved as they are**, even where they predate the readability rules (the rules END's tilted
-  FOLLOW FOR stamp landing from 1.25×): don't change them silently. New scenes follow craft.md §0; tell the user about the
-  conflict and ask whether to modernize the recurring parts (which would change every episode that re-renders).
+- **Recurring parts are approved as they are**, including the rules END's tilted FOLLOW FOR stamp landing from 1.25× (the
+  client confirmed: keep it). New scenes follow craft.md §0.
+- The logo bug goes on an episode's own scenes; add it through an optional template flag so earlier episodes render unchanged.
 - `tools/build_shorts.sh` needs a case line added by hand for each new episode (and its default list updated).
 - WWYD: options in the order WRONG · CLOSE · RIGHT; the right answer is revealed last (`revealOrder`).
 

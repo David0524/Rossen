@@ -37,6 +37,11 @@ Viewer feedback: the text was hard to read because of motion, speed and everythi
   - `stampLand` from 1.55, and the tilted `stampFit` calls: fine for one-word decorative stamps only.
   - The loops' beat pulse (4.5–6% scale on LIVE TODAY, the time card and the day chip) is approved as is. Don't retrofit approved videos unless asked.
 
+### Jeff's logo in the corner (V2, Jeff's request)
+The official logo sits small in the top-left corner throughout every video (`logoBug()` in vertkit.js), except on the intro
+title card and the outro (closing card or loop). It is the same file, untouched and opaque; the only corner clear of the
+platforms' UI and our caption chips.
+
 ### Every short ends on the live-show card (not the teases)
 Live viewers drive the rest of his revenue: sponsor rates, Super Chats and memberships. So every short and promo closes on `liveEndCard(c)` (vertkit.js), not the logo alone:
 - the official logo, then LIVE ON, then the YouTube and Instagram icons with their names, then EVERY WED 5 PM ET / FRI 10 AM ET

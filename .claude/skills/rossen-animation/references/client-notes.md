@@ -18,6 +18,8 @@ against every row before showing anything.
 | "Did you cut the frames per second?" / "Everything feels very laggy." | Puppets on twos (12 drawings/s) | Everything on ones (24 fps). Never on twos. |
 | "The car in the intro drives in backwards." | The car faces left but entered from the left | A vehicle enters nose first: it comes in from the side it faces away from. Check the direction of every mover on a strip. |
 | (Found in critique) the jaw drop was hidden behind the cash | The occluder left one beat after the reaction | A reaction must be visible when it happens: clear anything in front of a face before the face acts. Check reactions on a strip. |
+| "Jeff asked for his logo to appear in the corner throughout the video… except on the intro and outro cards." | — | `logoBug()` top-left (the only corner clear of platform UI and captions), official logo untouched and opaque, from the first scene to the outro. |
+| "Their opens already act as title card" (series) / keep the rules FOLLOW FOR ending | — | Series episodes need no extra title card; their recurring parts stay as approved. |
 | (Standing direction) text hard to read | Tilted, bouncing, fast cards | Cards level, from 1.05× at most, dead still, 70–76 px, read-twice time, no camera drift under them (craft.md §0). |
 
 ## The acting pass that made it feel alive (keep it)

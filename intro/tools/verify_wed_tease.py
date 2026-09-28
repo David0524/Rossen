@@ -65,6 +65,19 @@ check(dmi < 1.0 and hold >= 2 * 3 / WPS,
       f'reading the 3-word title twice at 300 wpm takes {2 * 3 / WPS:.2f} s')
 del IC
 
+say('\n== the logo bug (the official logo, top-left, from the first scene until the loop; not on the title card)')
+BG = frames(F, 0, NT, post='crop=140:84:28:300', size=(140, 84)).astype(np.int16)
+b0, b1 = int(np.ceil(OFF * FPS)), int(TR['toLoop'][0] * FPS) - 1
+from PIL import Image as _I
+lg = _I.open('assets/official_logo.png').convert('RGBA'); bb = lg.getbbox(); lg = lg.crop(bb).resize((140, round(140 * (bb[3] - bb[1]) / (bb[2] - bb[0]))), _I.LANCZOS)
+la = np.array(lg).astype(np.int16); m = np.zeros((84, 140), bool)   # the logo's own opaque pixels, inset 2 px (its corners are transparent and its edge pixels blend with the scene)
+m[:la.shape[0]] = np.array(_I.fromarray(((la[..., 3] > 250) * 255).astype(np.uint8)).filter(__import__('PIL.ImageFilter', fromlist=['x']).MinFilter(5))) > 0
+dmb = max(float(np.abs(BG[k] - BG[b0])[m].mean()) for k in range(b0, b1 + 1)); away = float(np.abs(BG[0] - BG[b0])[m].mean())
+inner = BG[b0][m].mean(0)
+ref = la[..., :3][m[:la.shape[0]]].mean(0); col = float(np.abs(inner - ref).max())
+check(dmb < 3.0 and away > 20 and col < 8, f'present and still (the rendered frames are pixel-identical there; the mp4 adds H.264 noise from the scenes changing around it, < 3/255) from {b0 / FPS:.2f} s to {b1 / FPS:.2f} s (max change over its opaque pixels {dmb:.2f}/255); absent on the title card (frame 0 differs by {away:.1f}/255); drawn untouched (opaque-interior colour within {col:.1f} levels of the file)')
+del BG
+
 say('\n== the cards: one at a time, present and still for their whole time, readable twice')
 ov = [(CAPS[k][2], CAPS[k + 1][2]) for k in range(len(CAPS) - 1) if CAPS[k][1] > CAPS[k + 1][0] - SLAM]
 check(not ov, 'no two cards on screen together (each leaves before the next starts to land)')

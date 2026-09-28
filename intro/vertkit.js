@@ -129,6 +129,12 @@ function creamBg(c) { c.save(); resetT(c); c.drawImage(CREAM_TEX, 0, 0, W, H); c
 // and the platform icons are drawn from their files at a uniform scale, untouched. Screen space, inside the tightest safe box
 // of any film (x 180-900, y 381-1349).
 const LIVE_SCHEDULE = ['WED 5 PM ET', 'FRI 10 AM ET'];
+// the logo bug: Jeff's official logo, small, in the top-left corner throughout a video (not on the intro title card or the
+// closing card / loop). Top-left is the only corner clear of the platforms' UI (top 15 %, bottom 25 %, right 15 %) and it sits
+// left of every caption chip (x >= 182). Drawn from its file, untouched and opaque, in screen space after everything else.
+const LOGO_BUG = { x: 28, y: 300, w: 140 };
+function logoBug(c, a = 1) { if (a <= 0) return;
+  screenSpace(c, () => { const lg = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lh = bh * LOGO_BUG.w / bw; c.globalAlpha = Math.min(1, a); c.drawImage(lg, bx, by, bw, bh, LOGO_BUG.x, LOGO_BUG.y, LOGO_BUG.w, lh); c.globalAlpha = 1; }); }
 function liveEndCard(c, platforms = ['youtube', 'instagram']) {   // a film may pass more platforms (each needs IMG[<name>_icon])
   const lg = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 720, lh = bh * lw / bw, top = 530;   // the group sits a touch below centre and ends above y 1349
   c.drawImage(lg, bx, by, bw, bh, CX - lw / 2, top, lw, lh);

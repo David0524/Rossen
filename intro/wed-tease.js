@@ -554,6 +554,7 @@ function drawScene(c, t) {
   else if (inT(TR.toLoop, t)) pushTo(c, t, TR.toLoop, sceneJeff, sceneHandoff);
   else sceneHandoff(c, t);
   contentT(c); captionsTop(c, t);
+  logoBug(c, easeIO(seg(t, ...TR_INTRO)) * (1 - easeIO(seg(t, ...TR.toLoop))));   // the logo bug: from the first scene until the loop (not on the title card or the loop)
   if (SHOW_SAFE) safeOverlay(c);
 }
 
