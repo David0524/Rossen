@@ -19,6 +19,7 @@ kenney/casino/card-slide-2.ogg
 kenney/casino/card-slide-3.ogg
 kenney/casino/cards-pack-open-1.ogg
 kenney/casino/chips-stack-1.ogg
+kenney/impact/footstep_concrete_000.ogg
 kenney/impact/impactPlank_medium_000.ogg
 kenney/impact/impactPunch_heavy_000.ogg
 kenney/impact/impactSoft_heavy_000.ogg

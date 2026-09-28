@@ -7,16 +7,17 @@ F = sys.argv[1]; PV = sys.argv[2] if len(sys.argv) > 2 else None
 LOOP = '../final-videos/09 Live Today Loop - Wednesday 5 PM (9x16).mp4'
 W, H, FPS, SR = 1080, 1920, 24, 48000
 BEAT, BAR, SLAM, E8 = .625, 2.5, .14, .3125
-at = lambda bar, beat=1: bar * BAR + (beat - 1) * BEAT
+OFF = 3 * BEAT   # the intro title card (a 3-beat pickup) comes first: video time = film time + OFF
+at = lambda bar, beat=1: OFF + bar * BAR + (beat - 1) * BEAT
 # the film's own timeline (wed-tease.js: TR and CAPS)
-TR = {'smoke': (at(2, 4) - .06, at(3) - SLAM), 'zoomSite': (at(4) - .36, at(4) - SLAM), 'swing': (at(5) - .52, at(5) - SLAM),
+TR = {'intro card -> driveway': (OFF - .34, OFF - SLAM), 'smoke': (at(2, 4) - .06, at(3) - SLAM), 'zoomSite': (at(4) - .36, at(4) - SLAM), 'swing': (at(5) - .52, at(5) - SLAM),
       'toMail': (at(6) - .34, at(6) - SLAM), 'zoomTicket': (at(7) - .36, at(7) - SLAM), 'cut to Jeff': (at(9) - SLAM, at(9) - SLAM + 1 / 24), 'toLoop': (at(11) - .34, at(11) - SLAM)}
 FLASH = (at(7), at(7) + .3)   # the camera flash (full frame, under the card): a flash, not a scene change
 CAPS = [(at(0), at(1) - SLAM, 'SELLING YOUR CAR?'), (at(1), at(2) - SLAM, "WHILE YOU'RE / DISTRACTED..."), (at(2), TR['smoke'][0], 'YOUR CAR: / WORTHLESS'),
         (at(3), TR['zoomSite'][0], 'BUYING A CAR / ONLINE?'), (at(4), TR['swing'][0], "THE DEALERSHIP / ISN'T REAL"), (at(5), TR['toMail'][0], "THE CAR / DOESN'T EXIST"),
         (at(6), TR['zoomTicket'][0], '$3,000 / IN TICKETS'), (at(7), at(8) - SLAM, "IT'S NOT / YOUR CAR"), (at(8), at(9) - SLAM, 'SOMEONE COPIED / YOUR PLATE'),
         (at(9), TR['toLoop'][0], "WE'LL SHOW YOU / THE RED FLAGS.")]
-NT = 720   # tease frames (30 s); the loop follows
+NT = 765   # intro + tease frames (1.875 + 30 s); the loop follows
 SCAMS = [('oil scam', 0, 3), ('fake AI dealership', 3, 6), ('cloned plates', 6, 9)]
 WPS = 5.0   # reading speed for a short ALL-CAPS card: 300 words a minute; "read twice" = 2 x words / WPS
 rep, fails = [], []
@@ -39,7 +40,7 @@ st, fm = probe(F); v, a = st['video'], st['audio']
 nf = int(v['nb_frames'])
 say('\n== format')
 check(v['width'] == 1080 and v['height'] == 1920 and v['r_frame_rate'] == '24/1', f"video {v['width']}x{v['height']} at {v['r_frame_rate']} fps, {v['codec_name']} {v['pix_fmt']} (the loop: 1080x1920, 24 fps)")
-check(nf == NT + 240, f'{nf} frames = {nf / FPS:.3f} s (tease {NT} frames = {NT / FPS:.3f} s + the loop twice, 2 x 120 frames = 10.000 s)')
+check(nf == NT + 240, f'{nf} frames = {nf / FPS:.3f} s (intro card 45 frames = 1.875 s + tease 720 frames = 30.000 s + the loop twice, 2 x 120 frames = 10.000 s)')
 check(abs(float(a['duration']) - (NT / FPS + 10)) < .03 and a['sample_rate'] == '48000', f"audio {a['codec_name']} {a['sample_rate']} Hz {a['channels']} ch, {float(a['duration']):.3f} s")
 
 say('\n== the three scams: equal bars, one idea per bar (whole bars at 96 BPM)')
@@ -55,6 +56,14 @@ within = lambda t: within0(t) or ('flash' if FLASH[0] <= t <= FLASH[1] else None
 outside = [f for f in big if not within(f / FPS) and f / FPS < at(11)]
 say('      scene-change frames (mean change > 12 of 255): ' + ', '.join(f'{f}({f / FPS:.2f}s {within(f / FPS) or "?"})' for f in big if f / FPS < at(11)))
 check(not outside, 'every scene change happens inside a planned transition window (or the cut to Jeff; the camera flash is listed), never mid-bar')
+
+say('\n== the intro title card (3 CAR SCAMS / LIVE WEDNESDAY 5 PM ET, the official logo)')
+IC = frames(F, 0, int((OFF - .34) * FPS), post='crop=1080:740:0:380', size=(1080, 740)).astype(np.int16)
+dmi = np.abs(IC - IC[0]).mean((1, 2, 3)).max(); hold = len(IC) / FPS
+check(dmi < 1.0 and hold >= 2 * 3 / WPS,
+      f'on screen from frame 0 for {hold:.2f} s, dead still (max change {dmi:.2f}/255 over the logo, title and time; the little car drives in below them); '
+      f'reading the 3-word title twice at 300 wpm takes {2 * 3 / WPS:.2f} s')
+del IC
 
 say('\n== the cards: one at a time, present and still for their whole time, readable twice')
 ov = [(CAPS[k][2], CAPS[k + 1][2]) for k in range(len(CAPS) - 1) if CAPS[k][1] > CAPS[k + 1][0] - SLAM]

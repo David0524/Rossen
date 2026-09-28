@@ -1,7 +1,7 @@
 #!/bin/sh
-# Wednesday tease + the approved Wednesday 5 PM LIVE TODAY loop, appended untouched and played twice (40 s). Every tease ends on its loop x2.
+# Wednesday tease + the approved Wednesday 5 PM LIVE TODAY loop, appended untouched and played twice (41.9 s, after a 1.9 s intro title card). Every video opens on a title card; every tease ends on its loop x2.
 #   0. decode the delivered loop's frames (read-only) for the handoff bar and its masks
-#   1. render the 30 s tease (same x264 settings as the loop, so the streams join)
+#   1. render the intro card + the 30 s tease (same x264 settings as the loop, so the streams join)
 #   2. score it (the loop's own cue carries bars 10-11; full_audio.wav = tease audio + the loop's own audio, twice)
 #   3. join the loop's video by stream copy (its packets are not re-encoded), mux the audio, make a CRF 21 preview
 set -e
@@ -23,7 +23,7 @@ python3 tools/verify_wed_tease.py $O/rossen-tease-wednesday.mp4 $O/preview_crf21
 tail -1 $O/sync.txt; tail -1 $O/verify.txt
 HITS_ONLY=1 python3 score_wed_tease.py > /dev/null && python3 tools/sync_check.py $O/score_hits.wav $O/hits.json > $O/sync_hits_only.txt && tail -1 $O/sync_hits_only.txt
 # the safe-zone overlay pass: one frame per beat, rendered with ?safe=1, and a contact sheet
-L=$(python3 -c "print(','.join(str(k * 15 + 7) for k in range(48)))")
+L=$(python3 -c "print(','.join(['0', '20'] + [str(45 + k * 15 + 7) for k in range(48)]))")   # the intro card, then one frame per beat
 node render.mjs --html rossen-tease-wednesday.html --query safe=1 --only $L > /dev/null
 mkdir -p _check/wedtease/safe && rm -f _check/wedtease/safe/*.jpg
 for i in $(echo $L | tr , ' '); do f=$(printf %04d $i); python3 -c "from PIL import Image; Image.open('out/rossen-tease-wednesday_check/frames/$f.png').convert('RGB').save('_check/wedtease/safe/$f.jpg', quality=80)"; done

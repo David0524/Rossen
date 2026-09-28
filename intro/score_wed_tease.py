@@ -1,4 +1,4 @@
-"""Wednesday live-show tease score (wed-tease.js), 30 s, then the Wednesday 5 PM LIVE TODAY loop (5 s) appended untouched and played twice.
+"""Wednesday live-show tease score (wed-tease.js): a 1.875 s intro title card (a 3-beat pickup), 30 s of tease, then the Wednesday 5 PM LIVE TODAY loop (5 s) appended untouched and played twice.
 Same tempo and key as the loop (96 BPM, D). Bars 0-8 are composed here, played by recorded instrument samples (VSCO 2 CE and its
 VSCO 1 drums, CC0). Sound effects are recorded files (Kenney, BigSoundBank, OpenGameArt; all CC0), each placed by its audible attack.
 Bar 8 lands on A on beat 3 and beat 4 is silent; Jeff steps in on bar 9 with a confident D major bar (brass, full groove) that ends on A,
@@ -13,7 +13,8 @@ usage: python3 score_wed_tease.py            ->  out/rossen-tease-wednesday/teas
 import numpy as np, subprocess, wave, sys, os, re, glob, math, json
 SR = 48000
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio')
-DUR = 12 * 2.5 + 2   # 30 s plus room for tails (cut at 30 s)
+T0 = 3 * 0.625         # the intro title card: a 3-beat pickup before bar 0. Score times are film times (bar 0 = 0 s); the file starts at -T0
+DUR = T0 + 12 * 2.5 + 2   # the intro + 30 s, plus room for tails
 out = np.zeros((int(SR * DUR), 2), np.float32)
 _cache = {}
 def load(rel):
@@ -28,7 +29,7 @@ def put(x, t, gain=1.0, pan=0.0, dur=None, rel=0.08):
         n = min(len(x), int((dur + rel) * SR)); x = x[:n].copy(); r = min(n, int(rel * SR)); x[n - r:] *= np.linspace(1, 0, r)[:, None]
     lg, rg = math.cos((pan + 1) * math.pi / 4) * 1.414, math.sin((pan + 1) * math.pi / 4) * 1.414
     x = x * gain * np.array([min(1, lg), min(1, rg)], np.float32)
-    i0 = int(round(t * SR))
+    i0 = int(round((t + T0) * SR))
     if i0 < 0: x = x[-i0:]; i0 = 0
     i1 = min(len(out), i0 + len(x))
     if i1 > i0: out[i0:i1] += x[: i1 - i0]
@@ -165,7 +166,7 @@ TONES = {'Bm': ('D5', 'F#5', 'B5'), 'Dm': ('D5', 'F5', 'A5'), 'D': ('D5', 'F#5',
 PAD = {'Bm': ('B1', 'D2', 'F#2'), 'Dm': ('D2', 'F2', 'A2'), 'Bb': ('Bb1', 'D2', 'F2'), 'Gm': ('G1', 'D2', 'Bb2'), 'A': ('A1', 'C#2', 'E2'), 'C': ('C2', 'E2', 'G2'),
        'Eb': ('Eb2', 'G2', 'Bb2'), 'D': ('D3', 'F#3', 'A3'), 'G': ('G2', 'B2', 'D3'), 'F': ('F2', 'A2', 'C3')}
 HITS = []
-def H(t, what): HITS.append((round(t, 4), what))
+def H(t, what): HITS.append((round(t + T0, 4), what))   # hits.json is in video time
 B_JEFF, B_HAND = 9, 11
 END = AT(12); LOOP_IN = AT(B_JEFF + 1)    # the loop's own cue takes over for the promise's second bar
 SIL = (AT(8, 4), AT(B_JEFF))               # the beat of silence before the promise
@@ -239,6 +240,20 @@ if not HO:
     for n, d, l in [('A4', 0, .5), ('D5', .5, .5), ('F#5', 1, 1), ('E5', 2, .5), ('F#5', 2.5, .5), ('A5', 3, 1.0)]: tpl(n, B(BB(9) + d), .3, dur=l * BEAT - .05, rel=.12)
     stab(AT(9, 4), 'A', .7, dur=.3); swell_to(AT(10), .25)
 
+# ---------------- the intro (the pickup, -1.875 to 0) ----------------
+# frame 0: the title card is there. A bright D major hit with a glockenspiel sparkle; the little car drives in (a soft tambourine
+# shimmer) and parks on beat 3; then a two-note pizzicato pickup and the camera drops into bar 0's tiptoe.
+IN0 = -T0
+if not HO:
+    hit(IN0, 'D', .85, .3)
+    for k, n in enumerate(('D6', 'F#6', 'A6', 'D7')): glk(n, IN0 + k * S16, .3)
+    for n in PAD['D']: hnl(n, IN0, .2, dur=2 * BEAT - .1, rel=.3)
+    tamb(IN0 + E8, IN0 + 2 * BEAT, .1)
+    cpz('A2', IN0 + 2 * BEAT, .5, dur=.2); cpz('C#3', IN0 + 2.5 * BEAT, .45, dur=.2)
+fx('rpg/bookPlace1.ogg', IN0, .3); H(IN0, 'title card')
+fx('impact/footstep_concrete_000.ogg', IN0 + 2 * BEAT, .25); one(RIM, IN0 + 2 * BEAT, .25, .1); H(IN0 + 2 * BEAT, 'car parks')
+whoosh(-.14, .3)   # the camera drops into the driveway (it lands .14 s before the downbeat)
+
 # ---------------- sounds on the picture's beats (recorded; placed by their attack) ----------------
 for bar in range(1, 10): capsnd(AT(bar))   # each card lands (both lines together); frame 0 belongs to the car door
 # OIL SCAM
@@ -285,7 +300,8 @@ fx('casino/card-slide-3.ogg', TOLOOP + .1, .26)
 for b in (1, 2, 3, 4): fx('rpg/bookPlace1.ogg', AT(B_HAND, b), .3 if b < 4 else .22); one(RIM, AT(B_HAND, b), .4, .1); H(AT(B_HAND, b), 'piece')
 
 # ---------------- mix: composed bars + the loop's own cue ----------------
-n_end, n_in = int(END * SR), int(LOOP_IN * SR)
+S_ = lambda t: int(round((t + T0) * SR))   # film time -> sample index in the file
+n_end, n_in = S_(END), S_(LOOP_IN)
 comp = out[:n_end].copy()
 LOOP_MP4 = '../final-videos/09 Live Today Loop - Wednesday 5 PM (9x16).mp4'   # the delivered loop's own audio, decoded (read-only)
 raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', LOOP_MP4, '-vn', '-ac', '2', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
@@ -293,16 +309,16 @@ LOOP = np.frombuffer(raw, np.float32).reshape(-1, 2).copy(); assert abs(len(LOOP
 LOOP = np.pad(LOOP, ((0, max(0, 5 * SR - len(LOOP))), (0, 0)))[: 5 * SR]
 rms = lambda x: float(np.sqrt((x ** 2).mean() + 1e-12))
 if not HO:
-    target = rms(LOOP[: int(2.5 * SR)]); cur = rms(comp[int(AT(6) * SR): int(SIL[0] * SR)])
+    target = rms(LOOP[: int(2.5 * SR)]); cur = rms(comp[S_(AT(6)): S_(SIL[0])])
     comp *= target / cur * 10 ** (-1.0 / 20)
     lim = 10 ** (-4.0 / 20); comp = np.tanh(comp / lim) * lim
-    gate = np.ones(n_end, np.float32); a0, a1 = int(SIL[0] * SR), int(SIL[1] * SR); f = int(.04 * SR)
+    gate = np.ones(n_end, np.float32); a0, a1 = S_(SIL[0]), S_(SIL[1]); f = int(.04 * SR)
     gate[a0 - f: a0] = np.linspace(1, 0, f); gate[a0: a1] = 0          # the silence: everything stops on 8:4
     gate[n_in:] = .6                                                   # under the loop's cue, only the picture's foley
-    t0, t1 = int((END - .45) * SR), int((END - .1) * SR); gate[t0:t1] *= np.linspace(1, 0, t1 - t0) ** 2; gate[t1:] = 0   # silent before the join: it is the loop's own wrap
+    t0, t1 = S_(END - .45), S_(END - .1); gate[t0:t1] *= np.linspace(1, 0, t1 - t0) ** 2; gate[t1:] = 0   # silent before the join: it is the loop's own wrap
     comp *= gate[:, None]
     comp[n_in:n_end] += LOOP[: n_end - n_in]
-    print('levels: bars 6-8 %.1f dBFS rms, bar 9 %.1f, loop %.1f dBFS rms, peak %.2f' % (20 * np.log10(rms(comp[int(AT(6) * SR):a0])), 20 * np.log10(rms(comp[a1:n_in])), 20 * np.log10(target), np.abs(comp).max()))
+    print('levels: bars 6-8 %.1f dBFS rms, bar 9 %.1f, loop %.1f dBFS rms, peak %.2f' % (20 * np.log10(rms(comp[S_(AT(6)):a0])), 20 * np.log10(rms(comp[a1:n_in])), 20 * np.log10(target), np.abs(comp).max()))
 od = 'out/rossen-tease-wednesday'; os.makedirs(od, exist_ok=True)
 def write(p, x):
     with wave.open(p, 'wb') as w: w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(x, -1, 1) * 32767).astype('<i2').tobytes())
@@ -328,7 +344,7 @@ if not HO:
         return '?', '?'
     loop_used = [l.strip() for l in open('out/rossen-loop/samples_used.txt') if l.strip()]
     with open(od + '/audio_sources.txt', 'w') as f:
-        f.write('Rossen Reports Wednesday live tease (30 s, car scams) + the Wednesday 5 PM LIVE TODAY loop played twice (10 s). Every recorded audio file in the mix, with its source and license.\n')
+        f.write('Rossen Reports Wednesday live tease (1.9 s intro title card + 30 s, car scams) + the Wednesday 5 PM LIVE TODAY loop played twice (10 s). Every recorded audio file in the mix, with its source and license.\n')
         f.write('All are CC0 1.0 (public domain dedication, commercial use allowed, no attribution required). None come from a music library that registers with Content ID.\n\n')
         for u in sorted(USED | set(loop_used)):
             src, lic = page_of(u); who = ('tease' if u in USED else '') + (' + ' if u in USED and u in loop_used else '') + ('loop cue' if u in loop_used else '')
@@ -336,6 +352,6 @@ if not HO:
         f.write('\nComposed (not recorded files): the whole score. Bars 0-8 are written note by note in score_wed_tease.py on the 96 BPM grid in D '
                 '(the loop\'s tempo and key) and played by the VSCO recordings above: the tiptoe pizzicato and creeping clarinet of the oil scam, the xylophone jaw drop, '
                 'the slick muted trumpet, glockenspiel and xylophone of the fake dealership, the sliding trombone of the reveal, the spiccato and horns of the tickets, '
-                'the stop on A and the beat of silence, Jeff\'s D major hit and trumpet call (bar 9). Bars 10-11 and the appended loop are the LIVE TODAY loop cue (composed in score_loop.py), taken from the delivered loop file itself. '
+                'the intro title card\'s D major hit and pizzicato pickup, the stop on A and the beat of silence, Jeff\'s D major hit and trumpet call (bar 9). Bars 10-11 and the appended loop are the LIVE TODAY loop cue (composed in score_loop.py), taken from the delivered loop file itself. '
                 'No synthesized tones are used anywhere, and no sound effect is composed: every effect is a recorded file listed above.\n')
 print(od, len(set(HITS)), 'hits,', len(USED), 'samples')

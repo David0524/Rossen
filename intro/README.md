@@ -234,9 +234,9 @@ Audio: `score_tease.py` composes bars 0–9. Bars 10–11 play the loop's own cu
 
 The textured-cream background (`makeCream` / `creamBg`) now lives in `vertkit.js`.
 
-## Wednesday live tease: car scams + LIVE TODAY loop ×2 (9:16, 40 s)
+## Wednesday live tease: car scams + LIVE TODAY loop ×2 (9:16, 41.9 s)
 
-`rossen-tease-wednesday.html` and `wed-tease.js` make a 30 s one-shot tease for Wednesday's 5 PM ET show about three car scams: 12 bars at 96 BPM in D, the loop's own tempo and key. The approved Wednesday loop (`final-videos/09 Live Today Loop - Wednesday 5 PM (9x16).mp4`, the only Wednesday 5 PM candidate, byte-identical to `out/rossen-loop-wednesday/rossen-loop-wednesday.mp4`) is appended untouched and played twice (every tease ends on its loop ×2), joined by stream copy. It's never re-rendered: its frames are decoded from the delivered file for the handoff bar.
+`rossen-tease-wednesday.html` and `wed-tease.js` open on a 1.9 s intro title card, then make a 30 s one-shot tease for Wednesday's 5 PM ET show about three car scams: 12 bars at 96 BPM in D, the loop's own tempo and key. The approved Wednesday loop (`final-videos/09 Live Today Loop - Wednesday 5 PM (9x16).mp4`, the only Wednesday 5 PM candidate, byte-identical to `out/rossen-loop-wednesday/rossen-loop-wednesday.mp4`) is appended untouched and played twice (every tease ends on its loop ×2), joined by stream copy. It's never re-rendered: its frames are decoded from the delivered file for the handoff bar.
 
 It reuses the repo's kit and cast:
 - printkit.js with the approved palette (`BLUE`, `BLK`, `YEL`, `CREAM`, `CHIP`) and the vertical safe-zone transform (`VERT_K 0.895`).
@@ -253,6 +253,7 @@ The same script paints the man's gasp head (`man_head_gasp.png`).
 **The Scammer's hands.** They belong to his fishing-rod piece, so here they're blue mittens in his own ink, one of them on a reaching sleeve holding a fanned wad of bills.
 
 The film's beats. Each scam gets three bars (7.5 s), and every card lands on its downbeat, level and dead still:
+- **Intro title card (a 3-beat pickup, 1.875 s):** from frame 0, the official ROSSEN REPORTS logo (drawn from its file, untouched), 3 CAR SCAMS, and LIVE WEDNESDAY · 5 PM ET, over the loop's blue halftone. A little yellow car drives in underneath and parks on beat 3. The card leaves and the camera drops into the driveway on bar 0's downbeat. The score opens on a D major hit with a glockenspiel sparkle and a pizzicato pickup. Every video now opens on a title card like this one (see `CLAUDE.md`).
 - **Oil scam (bars 0–2):** the man's car has FOR SALE $10,000 in the windshield from frame 0. The car sits to the right, its tail running off the frame's edge, so the opening has room. The Scammer fans cash in his face while the sidekick pops up behind the car and pours oil under the hood. The engine smokes, the man's jaw drops, and the price flips to $0.
 - **Transition (creative):** the engine smoke billows across the whole frame and clears onto a laptop.
 - **Fake dealership (bars 3–5):** the TOTALLY REAL MOTORS site builds itself: name, dream car, five stars, reviews and PAY NOW. The camera zooms into the screen, a hand taps PAY NOW, and a corner curls to show painted board.

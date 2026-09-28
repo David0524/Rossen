@@ -1,3 +1,4 @@
 # Rossen Reports: standing rules
 
+- **Every video opens on a 1–2 s intro title card.** It titles the video and carries the official ROSSEN REPORTS logo (`assets/official_logo.png`, drawn from its file, untouched, after the print finish), plus whatever short line helps (e.g. the show day and time). Keep it on the beat grid: a pickup of whole beats before bar 0 (the Wednesday tease uses 3 beats = 1.875 s at 96 BPM). The card is on screen, level and still, from frame 0; it leaves before the transition into the first scene. Reference: `sceneIntro` in `intro/wed-tease.js`.
 - **Every live-show tease ends on its LIVE TODAY loop played twice.** Append the approved loop untouched (stream copy, never re-rendered) two times after the tease; each join must be the loop's own seamless wrap. (Friday tease: `intro/tools/build_tease.sh`; Wednesday tease: `intro/tools/build_wed_tease.sh`.)

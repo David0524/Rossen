@@ -1,12 +1,15 @@
 'use strict';
-/* Wednesday live-show tease: 30 s (12 bars at 96 BPM, D, the loop's tempo and key), 1080x1920 (9:16), 24 fps, one
-   continuous film, then the approved 5 s LIVE TODAY loop (rossen-loop-wednesday, 5 PM ET) is appended untouched and plays twice (40 s).
+/* Wednesday live-show tease: a 1.9 s intro title card (a 3-beat pickup), then 30 s (12 bars at 96 BPM, D, the loop's tempo and key), 1080x1920 (9:16), 24 fps, one
+   continuous film, then the approved 5 s LIVE TODAY loop (rossen-loop-wednesday, 5 PM ET) is appended untouched and plays twice (41.9 s).
+   Times below are film time: the intro runs from -1.875 s, so video time = film time + 1.875 s.
    Case-file screen-print look (printkit.js), the approved palette (printkit.js: BLUE, BLK, YEL, CREAM, CHIP), the vertical
    safe-zone content transform (VERT_K 0.895, like the loop). Three car scams, teased, not explained; the red flags and the
    fixes are saved for the show. One short ALL-CAPS card per bar (the promise's card holds for its two bars). A card lands on
    its downbeat, sits level and dead still, and leaves before any transition starts: nothing moves across the words and no
    transition runs while one is up.
 
+   INTRO      pickup -1.9  the title card: the official logo, 3 CAR SCAMS, LIVE WEDNESDAY · 5 PM ET, a little yellow car   (the title)
+                           drives in and parks; the card leaves and the camera drops into the driveway on the downbeat
    OIL SCAM   bar 0  0.0   the man's car, FOR SALE $10,000 in the windshield, from frame 0; the Scammer rises in on 3    "SELLING YOUR CAR?"
               bar 1  2.5   he fans cash in the man's face; the sidekick tiptoes in, the hood pops on 2, he pours on 3   "WHILE YOU'RE / DISTRACTED..."
               bar 2  5.0   a smoke puff on 1; the man's jaw drops on 2; the price flips to $0 on 3                  "YOUR CAR: / WORTHLESS"
@@ -32,7 +35,9 @@
    Nothing here is real: a generic car, an invented dealership (TOTALLY REAL MOTORS), plate ABC-0000, no phone numbers or URLs.
 */
 const B_JEFF = 9, B_HAND = 11;   // the promise gets two bars (9-10): long enough to read its card twice
-const DUR = at(12), NFR = Math.round(FPS * DUR);
+const INTRO = 3 * BEAT;   // the intro title card: a 3-beat pickup (1.875 s) before bar 0; film time t runs from -INTRO
+const DUR = at(12), NFR = Math.round(FPS * (INTRO + DUR));
+const TR_INTRO = [-.34, -SLAM];   // the title card leaves, then the camera drops into the driveway
 const MONO = '"Liberation Mono"', PLATE_NO = 'ABC-0000', DEALER = 'TOTALLY REAL MOTORS';
 // transitions: each runs between two cards, ending as the next card starts to land (never while a card is up)
 const TR = {
@@ -482,8 +487,20 @@ function sceneHandoff(c, t) {
 }
 sceneHandoff.finish = false;
 
+// INTRO (the 3-beat pickup): the title card. The official logo (drawn from its file, untouched, after the finish), the title,
+// the show time, and a little yellow car that drives in underneath. Everything is on screen, level and still, from frame 0.
+const INTRO_TITLE = '3 CAR SCAMS', INTRO_SUB = 'LIVE WEDNESDAY  ·  5 PM ET';
+function sceneIntro(c, t) {
+  bgDots(c, BLUE, .12, .55);
+  if (t < TR_INTRO[0]) { chip(c, INTRO_TITLE, SCX, 905, 104, BLK, CHIP, t, -INTRO, 760); chip(c, INTRO_SUB, SCX, 1062, 46, YEL, BLK, t, -INTRO, 700); }
+  const u = easeOut(seg(t, -INTRO, -INTRO + 2 * BEAT)), off = easeIn(seg(t, TR_INTRO[0] - .1, TR_INTRO[1]));   // it parks on beat 3, then pulls away with the camera
+  sedan(c, lerp(-420, SCX, u) + 900 * off, 1392, .5, { len: CAR_LEN });
+}
+sceneIntro.overlay = (c, t) => { if (t >= TR_INTRO[0]) return;   // the official logo, screen space
+  screenSpace(c, () => { const lg = IMG.logo, [bx, by, bw, bh] = IMG.logoBox, lw = 620, lh = bh * lw / bw; c.drawImage(lg, bx, by, bw, bh, CX - lw / 2, 400, lw, lh); }); };
+
 // ================= assembly =================
-function layerOf(L, scene, t) { const g = L.getContext('2d'); contentT(g); g.globalAlpha = 1; scene(g, t); if (scene.finish !== false) printFinish(g); return L; }
+function layerOf(L, scene, t) { const g = L.getContext('2d'); contentT(g); g.globalAlpha = 1; scene(g, t); if (scene.finish !== false) printFinish(g); if (scene.overlay) { contentT(g); scene.overlay(g, t); } return L; }
 function pushTo(c, t, [t0, t1], A, B, dir = 1) {   // the camera moves from A to B (B from below); no card is up
   const u = easeIO(seg(t, t0, t1)); layerOf(L1, A, t); layerOf(L2, B, t);
   c.save(); resetT(c); c.drawImage(L1, 0, -dir * u * H, W, H); c.drawImage(L2, 0, dir * (1 - u) * H, W, H); c.restore();
@@ -495,7 +512,9 @@ const inT = ([a, b], t) => t >= a && t < b;
 function drawScene(c, t) {
   contentT(c);
   if (Q.has('plate')) { screenSpace(c, () => { bgDots(c, BLUE, .12, .55); printFinish(c); }); return; }
-  if (t < TR.smoke[0]) { sceneOil(c, t); printFinish(c); }
+  if (t < TR_INTRO[0]) { sceneIntro(c, t); printFinish(c); sceneIntro.overlay(c, t); }
+  else if (t < TR_INTRO[1]) pushTo(c, t, TR_INTRO, sceneIntro, sceneOil);
+  else if (t < TR.smoke[0]) { sceneOil(c, t); printFinish(c); }
   else if (inT(TR.smoke, t)) { if (t < SMOKE_MID) sceneOil(c, t); else sceneSiteBuild(c, t); printFinish(c); contentT(c); smokeWall(c, t); }
   else if (t < TR.zoomSite[0]) { sceneSiteBuild(c, t); printFinish(c); }
   else if (inT(TR.zoomSite, t)) zoomTo(c, t, TR.zoomSite, sceneSiteBuild, SCR, sceneSite);
@@ -515,7 +534,7 @@ function drawScene(c, t) {
 
 // ================= runtime =================
 const CV = document.getElementById('c'); CV.width = OUT_W; CV.height = OUT_H; const CTX = CV.getContext('2d');
-function frame(i) { const t = Math.min(i / FPS, DUR - 1e-6); FILM_T = t; resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, t); resetT(CTX); }
+function frame(i) { const t = Math.min(i / FPS - INTRO, DUR - 1e-6); FILM_T = t; resetT(CTX); CTX.globalAlpha = 1; drawScene(CTX, t); resetT(CTX); }
 window.__NFR = NFR; window.__FPS = FPS; window.__frame = i => { frame(i); return CV.toDataURL('image/png'); };
 window.__caps = () => CAPS.map(([t0, t1, ...s]) => ({ t0, t1, s })); window.__tr = () => TR;
 (async () => {
