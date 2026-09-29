@@ -24,10 +24,10 @@ Dread builds through A (arrested at gunpoint, months inside, nobody checked), st
 
 ### Decisions before we write
 
-- A's victim is 50: a grandmother, just under the 55+ line. And A's fix is thin (lock photos, keep an alibi trail, demand the face-match report). Enough for an A?
-- B, per Jeff: lead with the grocery AI cart and Lowe's cameras, not Target. Keep B beat 2 (the viral Target-worker TikTok, B's only person) without naming the brand, or drop it?
+- A's victim is 50: a grandmother, just under the 55+ line. A's fix is reworked (9/29): Jeff shows the location history already on his phone, the kind of record that freed her. Keeping location history on is a privacy trade-off; say so on air.
+- B, per Jeff: lead with the grocery AI cart and Lowe's cameras, not Target. B beat 2 stays (producer, 9/29): Target shows have done poorly, but this clip went viral. Don't lean on the brand in copy.
 - B beat 1 wants vertical cart b-roll; a horizontal company video would be a crop. B beat 3 has no person, just Lowe's own privacy statement over plate-camera footage.
-- C beat 1 replaces Jeff's drive-thru test (he won't shoot one) with a viral AI drive-thru fail. Frame C as "bringing the humans back," not "ditching the robots": McDonald's is doing both.
+- C beat 1 replaces Jeff's drive-thru test (he won't shoot one) with a viral AI drive-thru fail. Frame C as "bringing the humans back," not "ditching the robots": McDonald's is doing both. C beats 2 and 3 stay; if no video turns up, a graphic or a cut.
 
 # A. A COMPUTER SAID IT WAS HER FACE… SHE SPENT MONTHS IN JAIL
 
@@ -46,13 +46,14 @@ Dread builds through A (arrested at gunpoint, months inside, nobody checked), st
 | 5 | "Errors were made" | Dave Zibolski, then-Fargo police chief | In March the chief admits errors, apologizes and issues a new facial-recognition policy. | FIND · HORIZONTAL — March press conference |
 | 6 | The lawsuit | Eric Rice, Lipps' attorney | She sues Fargo and the former detective for $10 million in federal court. | FIND · HORIZONTAL — lawsuit coverage, CBS or KSTP |
 | 7 | Could it be you | You (the viewer) | A face match is supposed to be a lead, not an ID, and many searches start from public social-media photos. | JEFF |
-| 8 | The fix | You (the viewer) | Jeff locks his public photos down to friends-only on his own phone, live. | DEMO |
+| 8 | Your alibi is in your pocket | You (the viewer) | Jeff opens the location history already on his phone, the kind of record that freed her. | DEMO |
 
 ### The fix
 
-- Set Facebook and Instagram profile and tagged photos to friends-only. *(verify which systems scrape social media)*
-- Keep an alibi trail: bank and card records and phone location history are what freed her.
-- If you're ever charged, have your lawyer demand the facial-recognition report and whether a human confirmed it.
+- **Your alibi is already on your phone.** iPhone: Settings → Privacy & Security → Location Services → System Services → Significant Locations & Routes. Android: Google Maps → your profile picture → Your Timeline. Keep it on, or know it's there. *(verify on current iOS/Android)*
+- Your bank and card statements are the other half of an alibi. Know how to download them fast.
+- If you're ever charged: say nothing without a lawyer, and have the lawyer demand the facial-recognition report and whether a human confirmed the match.
+- Want your face out of public face-search sites? PimEyes has a free opt-out form (pimeyes.com/en/opt-out). It doesn't touch police databases. *(verify)*
 
 ### Gaps
 
