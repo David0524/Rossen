@@ -1,6 +1,6 @@
 # PRE-BIBLE PITCH SHEET
 
-Airdate: **Wednesday, Oct 7, 2026** · A + B + C · Prepared Tue, Sept 29, 2026 · Researched from national, local and official sources plus YouTube search counts (observed Sept 29). Audience 55+; no kids, Amazon, Target or Flock.
+Airdate: **Wednesday, Oct 7, 2026** · A + B + two Cs · Prepared Tue, Sept 29, 2026 · Researched from national, local and official sources plus YouTube search counts (observed Sept 29). Audience 55+; no kids, Amazon, Target or Flock.
 
 ## THE SHORTLIST — RANKED
 
@@ -9,8 +9,9 @@ Airdate: **Wednesday, Oct 7, 2026** · A + B + C · Prepared Tue, Sept 29, 2026 
 | 1 | **YOU HIRED HER TO CARE FOR DAD… SHE TOOK HIS HOUSE FOR $5** | Dad's caregiver got his deed for $5. His daughter found him dead three days, and police cuffed *her*. | 🔥 YouTube 5.7M (WSMV Short) | Wednesday A story | HIGH — caregiver accused, not charged |
 | 2 | **A COMPUTER SAID IT WAS HER FACE… SHE SPENT MONTHS IN JAIL** | AI matched a grandmother's face to a bank thief in a state she'd never visited. | 🔥 YouTube 420K (CBS News) | Wednesday B story | HIGH — thin payoff, needs Jeff's fix |
 | 3 | **HE CALLED FOR A GARAGE DOOR REPAIR… THE BILL WAS $12,000** | An 89-year-old called for a garage-door fix. The bill: $12,000. | — (ABC7 LA 215K) | Wednesday C story | HIGH — company response needed |
+| 4 | **YOUR IPHONE CAN NOW SPOT A SCAM IN PROGRESS… BUT IT'S TURNED OFF** | A new iOS 27 setting can warn your apps you're being worked by a scammer. It ships switched off. | — (creator explainer 61K) | Wednesday C story (2nd) | HIGH — no app named yet |
 
-**SLATE FIT:** Fills an A + B + C Wednesday. #1 carries the A: a named daughter on camera and the biggest fresh clip found (5.7M). #2 is a full B with its own victim. #3 is a light C with an 89-year-old. No title matches on the Rossen channel; #3 sits next to a past home-repair live.
+**SLATE FIT:** Fills an A + B + two-C Wednesday. #1 carries the A: a named daughter on camera and the biggest fresh clip found (5.7M). #2 is a full B with its own victim. #3 is a light C with an 89-year-old. #4 is the do-it-now exhale: update the phone, flip one switch. No title matches on the Rossen channel; #3 sits next to a past home-repair live.
 
 # 1. YOU HIRED HER TO CARE FOR DAD… SHE TOOK HIS HOUSE FOR $5
 
@@ -132,6 +133,41 @@ A past live, "THESE Home Repair Scams Are EXPLODING in 2026" (128K), was general
 - Ignore rock-bottom "tune-up" ads. They're the way in, not the price.
 - Get a second quote if the tech says you need "everything."
 
+# 4. YOUR IPHONE CAN NOW SPOT A SCAM IN PROGRESS… BUT IT'S TURNED OFF
+
+**Slot:** Wednesday C story (2nd) · **Confidence: HIGH** · *Service segment; which apps use it is still unknown*
+
+**SLOT FIT:** Wednesday C story. It fits a short closing slot: a do-it-now fix for every iPhone viewer, fresh (iOS 27, Sept 2026), with a natural hand-off from the A and B stories. No victim and no news footage, so it's Jeff and a screen-share. It won't carry more than a C.
+
+### WORKING TEASE
+
+> SCAMMERS DON'T HACK YOUR PHONE. THEY TALK YOU INTO DOING IT YOURSELF.
+> NOW YOUR IPHONE CAN SPOT THE SIGNS… AND WARN YOUR APPS BEFORE YOU SEND THE MONEY.
+> BUT APPLE SHIPPED IT TURNED OFF.
+> GRAB YOUR PHONE. WE'LL DO IT TOGETHER, RIGHT NOW.
+
+### THE HOOK
+
+iOS 27 adds Impersonation Risk Detection, built for the scam where someone posing as your bank, the government or a loved one talks you into sending money or changing your account. When you take a risky step in an app that supports it, the iPhone judges on the device whether a scam may be in progress. It uses patterns like how many calls and emails you've sent and received, plus Apple Account activity. The app gets back only a rating (Unknown, Medium or High) and can ask for extra verification or show a warning. Apple says it doesn't read your Photos, Messages or Mail. **It's off by default,** and Apple hasn't said which apps use it.
+
+### HOW IT WORKS
+
+- You're about to pay or change account details in a supporting app.
+- **The iPhone rates the risk on the device**: Unknown, Medium or High.
+- **The app sees only the rating**, not your data, and decides whether to warn you or add a check.
+- "Unknown" doesn't mean safe. It means no signs were found.
+
+### FOOTAGE — BE HONEST ABOUT THIS
+
+No news package and no victim. The segment is **Jeff on his own iPhone**: update to iOS 27, then flip the switch, live. Creator explainers exist for b-roll with permission: "iOS 27 Can Now Detect Scams on Your iPhone — Turn This ON!" (Pixel & POD, 60,917 views, this month) and Trevor Nace (28,285).
+
+### THE PAYOFF
+
+- **Update your phone:** Settings → General → Software Update → install iOS 27. *(verify your model is supported)*
+- **Turn it on:** Settings → Privacy & Security → Impersonation Risk Detection → Share with App Developers.
+- Update your banking apps too. The protection only works in apps that add it.
+- Still the rule: no real bank or agency asks you to move money while they're on the phone. Hang up and call the number on your card.
+
 ## RESEARCH SOURCES & VERIFICATION FLAGS
 
 ### READ THIS FIRST
@@ -195,6 +231,27 @@ I cannot watch video. Every clip is described from its title, description or pre
 - 🚨 Naming "24-7 Garage Door Service" on air: get its response or attribute strictly to ABC7's reporting. It's overcharging, not a fraud finding.
 - ⚠️ The pass-1 note said Wexler answered a "$97 text ad." The article says Thompson did; Wexler used an 800 number. The tease keeps them apart.
 
+### STORY 4 — iOS 27 IMPERSONATION RISK DETECTION
+
+**Confirmed:**
+
+- 9to5Mac, Sept 16, 2026: protects "against active social engineering scams… an attacker might pose as a bank, government agency, or someone you trust to pressure or guide you into making a payment or changing your account details." Apps receive Unknown / Medium / High and decide the action. Path: Settings → Privacy & Security → Impersonation Risk Detection → Share with App Developers. Off by default. "Apple hasn't published a list of those apps." 9to5mac.com/2026/09/16/ios-27-adds-scam-prevention-feature-to-iphone-heres-how-to-enable-it/
+- Help Net Security, Sept 24, 2026: signals include "device-use patterns, including the approximate number of phone calls and emails sent or received" and "Apple Account information, such as app downloads and content purchases." "Processed on the device"; Apple doesn't analyze Photos, Messages or Mail. The app gets "only the resulting risk level." helpnetsecurity.com/2026/09/24/apple-ios-27-impersonation-risk-detection/
+- Apple support doc cited by both: support.apple.com/en-us/127906 (not loaded).
+- Clips (Sept 29, this-month search): Pixel & POD 60,917 (NeEWKhV4aoE); Trevor Nace 28,285 (lFzfSVxOsO0).
+- Repeat check: no iOS 27 or Impersonation Risk Detection title on the Rossen channel. Adjacent: "This iPhone Setting Tracks You" (742K) and "iPhone Hack Warning — Change These 2 Settings NOW!" were settings segments, not this feature.
+
+**Sources:** URL at the end of each Confirmed line above.
+
+**NEEDS VERIFICATION:**
+
+- 🚨 **The sexiest line outruns the sourcing.** "Your iPhone can spot a scam in progress" is true only inside apps that support it, and **no bank or app is confirmed.** Call Chase, Bank of America, Wells Fargo, PayPal and Zelle before air. If none have it, the tease becomes "turn it on now, before your bank switches it on."
+- ⚠️ The user brief said "iOS 17." The feature is in **iOS 27** (Sept 2026). iOS 17 was 2023. Air "iOS 27."
+- ⚠️ Not loaded: iOS 27's exact release date and supported iPhone models. Pull them from Apple before telling viewers to update.
+- ⚠️ Does it react to *being on a call*? Sources say only "approximate number of phone calls." Don't say "it listens to your calls." It doesn't read content, per Apple.
+- ⚠️ Optional add-on: iOS 26's Call Screening (screen unknown callers). Sourced only from search results (gHacks, HuffPost). Verify the path before adding it.
+- ⚠️ Software Update path is the standard iOS path. Confirm on Jeff's phone.
+
 ### STORIES CUT — SOURCING PRESERVED
 
 All in `runs/W_10072026/research/`:
@@ -211,3 +268,4 @@ All in `runs/W_10072026/research/`:
 - **Guest?** AARP Maryland's Karen Morgan (quoted by CBS Baltimore) or an elder-law attorney could carry Story 1's fix. Not yet approached.
 - **Story 2:** the payoff is thin. Is "lock down your photos, keep an alibi trail" enough, or does Jeff walk a PimEyes search on his own face live?
 - **Story 3:** do we name the company without its response?
+- **Story 4:** if no bank supports it by air, do we still run it as "turn it on now"? And do we fold in iOS 26 Call Screening for the 'detect scam calls' angle?
