@@ -2,6 +2,31 @@
 
 All view counts were observed **Sep 29, 2026** from YouTube search results. YouTube blocked full-metadata pulls (HTTP 429, "sign in to confirm you're not a bot"), so **exact upload dates are not confirmed**. The dates below are YouTube's relative "published" labels ("2w ago" and so on) as of 9/29, converted to approximate dates. Nothing here was watched. Every clip description comes from its title, its search snippet or press coverage.
 
+## RE-WEIGHT (update from Jeff: no kids-focused stories; the audience is 55+)
+
+**Kids items dropped:** teen sextortion, the Meta settlement and kid-targeted scams. They are no longer candidates. The note on them below is kept only as a record of what was checked.
+
+**Order for a 55+ audience:**
+1. **Rank 1, spoofed bank/FBI number plus the Google bank ad.** Stays #1. Retirees' savings are the target. Victim: Alisha Watford.
+2. **Rank 2, the courier at the door.** Moves up and now leads with a grandparent victim (new material below). It pairs as the second half of Rank 1.
+3. **Rank 3, home title theft.** The paid-off, senior-owned home. Seniors took 44% of real-estate fraud losses.
+4. **Rank 4, MyChart "Medicare kit."** Aimed at Medicare recipients.
+5. **Social Security "fake call transfer" / three-way call.** Could run as a line inside Rank 1. No video found.
+6. Brushing and parking-meter QR move down to fillers.
+
+**New grandparent-as-victim material (Rank 2):**
+- **Kountze, TX: Vickie Nelson, 69.** A fake bank "fraudulent activity" alert led her to hand over $100,000 in cash across three pickups: $50K at a Family Dollar, $30K by her mailbox, $20K at a Valero. At the next pickup her grandson Cutler Jackson hid under a blanket in her back seat while his brothers David and Hunter watched nearby. When the courier walked up, Cutler popped out and the courier ran. MD Imran Hossain and Zakia Hossain, both 29, were arrested on organized crime and elder financial abuse charges, with ICE detainers. The grandsons were charged with misdemeanor assault on $2,000 bond each.
+  - Dated **Jul 13–15, 2026**, which is before the preferred window.
+  - https://kfdm.com/news/local/grandsons-stop-alleged-scammers-trying-to-add-to-the-100000-they-took-from-grandma
+  - https://www.yahoo.com/news/us/articles/grandmother-lost-100k-cash-pickup-175045704.html
+  - Clip: KFDM "Grandsons stop alleged scammers trying to add to the $100,000 grandma lost" https://youtu.be/j_x-n6F7NaU. YouTube, 98 views on 9/29, "2mo ago" (~Jul 2026). Local package, per title and article. Very low views, but the family story is strong. It's worth asking whether Nelson or the grandsons would go on camera.
+- **Grandparent-scam guilty plea, Sep 14, 2026.** Elvys Nicanor Nunez Valerio, 33, pleaded guilty in federal court (Judge Nora Barry Fischer, W.D. Pa.) in a Dominican Republic–run scheme. Callers posed as grandchildren in trouble, and a **rideshare driver came to the victim's home** to collect the cash. One Western Pennsylvania victim lost $22K. Sentencing is Dec 1. https://townhall.com/news/scott-mcclallen/2026/09/19/illegal-alien-pleads-guilty-in-grandparent-scam-money-laundering-case-faces-up-to-20-years-n2683240
+- **FBI Cleveland, Sep 8, 2026 (Grandparents Day).** The FBI warns of AI-cloned grandchild voices. Ohio victims 60+ lost $80M last year, averaging $20K each. SA Koeth: if you report to IC3 within 24–72 hours, the FBI has "over a 50% recovery rate" on wires. That makes a useful protection payoff. https://www.cleveland19.com/2026/09/08/fbi-warns-rising-grandparent-scams-ahead-grandparents-day/
+  - Clip: 19 News "FBI warns of rising grandparent scams ahead of Grandparents Day" https://youtu.be/ciGQTQq1S30. YouTube, 320 views, "2w ago".
+- **Other 55+ clips seen but not researched:**
+  - KRGV "McAllen family targeted by in-person Medicare scam as elder fraud cases rise" https://youtu.be/fAfZ46-UD_I. 1,400 views, "1mo ago".
+  - wgaltv "Medicare scam calls and emails spark warnings to seniors" https://youtu.be/1cSzXJ4Ihkk. 316 views, "2w ago".
+
 ---
 
 ## RANK 1 — "The call showed your bank's real number. It wasn't your bank." (spoofed caller ID + the top Google link is a trap)
@@ -170,7 +195,7 @@ I found **no YouTube video** of the Sep 9 Harris County story. KPRC surely aired
 
 ## Checked, not pitched
 
-- **Teen sextortion.** Nothing fresh with strong video in the window. There are September arrests: GBI arrested an Ellijay 19-year-old on 9/22 (https://gbi.georgia.gov/press-releases/2026-09-22/gbi-arrests-ellijay-man-sextortion, search result) and there are Hesperia, CA cases. But none has on-camera family video. The bigger kids peg is **Meta's ~$18B multistate settlement (Aug 26, 2026)**, which includes anti-sextortion protections (https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children, search result). Clips: NBC News "Father pushes for change after Meta's $18 billion settlement" https://youtu.be/HjAcwUa7yPE, 13,411 views, "1mo ago"; WCNC on Rep. Brandon Guffey https://youtu.be/GK1424fewN4, 218 views, "1mo ago". This likely belongs to another lane (kids/privacy).
+- **Teen sextortion. DROPPED per Jeff (no kids stories).** Nothing fresh with strong video in the window. There are September arrests: GBI arrested an Ellijay 19-year-old on 9/22 (https://gbi.georgia.gov/press-releases/2026-09-22/gbi-arrests-ellijay-man-sextortion, search result) and there are Hesperia, CA cases. But none has on-camera family video. The bigger kids peg is **Meta's ~$18B multistate settlement (Aug 26, 2026)**, which includes anti-sextortion protections (https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children, search result). Clips: NBC News "Father pushes for change after Meta's $18 billion settlement" https://youtu.be/HjAcwUa7yPE, 13,411 views, "1mo ago"; WCNC on Rep. Brandon Guffey https://youtu.be/GK1424fewN4, 218 views, "1mo ago". This likely belongs to another lane (kids/privacy).
 - **Social Security three-way call scam.** The SSA OIG "fake call transfer" alert is dated Jul 29, 2026 (https://oig.ssa.gov/scam-alerts/2026-07-29-beware-of-fake-call-transfers-to-social-security-or-oig/, search result). No local victim video found. It could be one line inside Rank 1.
 - **AI deepfake family scams.** No fresh named local victim in the window. The AI voice-clone kidnapping story already aired.
 - **Jury duty warrant scam.** Inside Edition explainer https://youtu.be/uF3aTU4znNg has 67,559 views, "3w ago", and the NewsNation piece is ~1mo old. It overlaps heavily with the aired FBI/marshal imposter story.

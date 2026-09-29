@@ -31,3 +31,12 @@ RULES (non-negotiable):
 RETURN (concise, markdown): 3-6 candidate stories, each with: sexy beat (1 sentence), what happened (facts +
 source URLs), named people on camera, clips found (full record as above), peg/date, time-sensitivity vs 10/7,
 what's new vs aired list, weaknesses/unverified bits. Rank them by clickability.
+
+## PASS 2 (user feedback 9/29): research LARGE, TRENDING scams — do not lean on the Rossen Facebook data
+Find what's big NATIONALLY right now by scale and momentum: FTC Consumer Sentinel / consumer alerts, FBI IC3 PSAs,
+BBB Scam Tracker trends, AARP Fraud Watch, state AGs, FinCEN, DOJ busts, bank/Zelle warnings, Google Trends, Reddit
+r/Scams, viral TikTok/YouTube warnings from the last ~30 days. Audience 55+; no kids; no Flock; no Amazon; no Target.
+Already pitched in pass 1 (don't redo, but you may add new facts/clips): spoofed bank caller ID + Google scam ads,
+home title theft, MyChart fake Medicare kit, brushing QR, parking-meter QR, courier cash pickups.
+For each: scale numbers (losses, complaints, # victims) with source, the victim-register beat, best clips (views/date),
+named victims on camera, why it's trending NOW (dated peg Sep 2026).
