@@ -1,0 +1,5375 @@
+=== p1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DEED FRAUD AND 
+RELATED SCHEMES 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+September 2026 
+
+=== p2
+ 
+ 
+ 
+State of New Jersey 
+COMMISSION OF INVESTIGATION 
+50 WEST STATE STREET 
+PO Box - 045 
+TRENTON, NEW JERSEY 08625-0045 
+ Telephone (609) 292-6767 
+Fax (609) 633-7366 
+ 
+New Jersey Is An Equal Opportunity Employer ~ Printed on Recyclable Paper 
+John P. Lacey 
+Chair 
+Kevin R. Reina 
+A. Todd Mayo 
+Alan J. Markman 
+Commissioners 
+ 
+ 
+Bruce P. Keller 
+Executive Director 
+ 
+ 
+ 
+ 
+September 2026 
+ 
+ 
+Governor Mikie Sherrill 
+The President and Members of the Senate 
+The Speaker and Members of the General Assembly 
+ 
+ 
+The State Commission of Investigation, pursuant to N.J.S.A. 52:9M-1 to -20, submits its report of 
+findings and recommendations in connection with an investigation into deed fraud and related 
+schemes in New Jersey. 
+ 
+ 
+Respectfully, 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+John P. Lacey  
+                             Alan J. Markman  
+ 
+ 
+Chair  
+ 
+ 
+ 
+     Commissioner 
+ 
+ 
+ 
+ 
+ 
+ 
+          
+Kevin R. Reina                                         A. Todd Mayo 
+Commissioner                                           Commissioner 
+ 
+ 
+
+=== p3
+ 
+ 
+1 
+ 
+ 
+Table of Contents 
+I.  
+Executive Summary ........................................................................................ 2  
+II.  
+Background .................................................................................................... 11 
+A. How Deed Fraud Schemes Occur  ............................................................ 11 
+B. Existing Safeguards Have Limits  ............................................................ 13 
+III.  
+Insights On Seller Impersonation And Deed Fraud  ............................. 19 
+A. FBI Data  ................................................................................................... 19 
+B. Information From County Clerk’s And Prosecutor’s Offices ................... 23 
+C. The Real Estate Industry Perspective  .................................................... 27 
+IV.  
+Victim Accounts ………………………………………………………………….31 
+V. 
+Actions To Quiet Title ……………………………………………………………33 
+VI.  
+Few States Are Taking Comprehensive Action ………………………….35 
+VII.  Recommendations ......................................................................................... 39 
+A. Strengthen Identification Requirements………………………..………….40 
+1. Require Seller Identity Verification By Real Estate Licensees……40 
+2. Strengthen Identity Verification Requirements Before Allowing 
+Notarizations………………………………………………………………41 
+ 
+3. Strengthen Identity Verification For All Property Conveyances….44 
+ 
+B. Enhance Recording Safeguards And Property Alert Systems And 
+Expedite Quiet Title Remedies……………………………………………….47 
+VIII. Conclusion ............................................................................................................... 55 
+
+=== p4
+ 
+ 
+2 
+ 
+ 
+I. 
+Executive Summary. 
+Deed fraud is in the news. 
+In May 2024, the Federal Bureau of Investigation (“FBI”) issued a public 
+warning about land being stolen “out from under” New Jersey property owners. It 
+reported that, using a variety of techniques, fraudsters have been impersonating the 
+true owners of real property, wresting away control, transferring title, and recording 
+the deed to those properties in a new name, all before the victim learns of the loss.1 
+This type of seller impersonation is a form of the much broader problem of 
+identity theft. The following, vivid illustration of identity theft underscores how 
+anyone can be victimized. 
+Only months after the 2024 FBI warning focusing on New Jersey, federal law 
+enforcement arrested a woman and charged her with attempting to steal the title to 
+Graceland, Elvis Presley’s nearly 14-acre estate in Memphis, Tennessee.2 According 
+                                                          
+1 Federal Bureau of Investigation, Fraudsters Are Stealing Land Out from Under 
+Owners 
+(May 
+28, 
+2024) 
+(“Fraudsters”), 
+https://www.fbi.gov/contact-us/field-
+offices/newark/news/fraudsters-are-stealing-land-out-from-under-owners.   Although 
+one of the first offices to sound the alarm, the FBI Newark Office is not alone in doing 
+so. See Federal Bureau of Investigation, FBI Boston Warns Quit Claim Deed Fraud 
+is 
+on 
+the 
+Rise 
+(Apr. 
+1, 
+2025), 
+https://www.fbi.gov/contact-us/field-
+offices/boston/news/fbi-boston-warns-quit-claim-deed-fraud-is-on-the-rise-.  
+ 
+2 Alexander Mallin & Meredith Deliso, Missouri Woman Arrested in Alleged Scheme 
+to Defraud Elvis Presley’s Family Through Graceland Sale, ABC NEWS (Aug. 16, 
+2024), 
+https://abcnews.com/US/graceland-elvis-scheme-arrest-federal-
+charges/story?id=112894578; U.S. Dep’t of Justice, Missouri Woman Sentenced in 
+Scheme 
+to 
+Fraudulently 
+Foreclose 
+on 
+Graceland 
+(Sept. 
+24, 
+2025), 
+https://www.justice.gov/usao-wdtn/pr/missouri-woman-sentenced-scheme-
+fraudulently-foreclose-graceland. 
+ 
+
+=== p5
+ 
+ 
+3 
+ 
+ 
+to court filings, the defendant created a fictitious company, then fabricated loan 
+documents purporting to show Lisa Marie Presley, Elvis’ daughter (who passed in 
+early 2023), had borrowed millions using Graceland as collateral. When the fictitious 
+loan repayment deadline passed, the defendant published a foreclosure notice 
+announcing Graceland would be put up for sale at auction.3  
+Eventually, the Presley family was able to enjoin that sale.4 In February 2025, 
+the defendant entered a guilty plea to mail fraud and was sentenced to 57 months’ 
+imprisonment.5  
+The attempted Graceland deed fraud is unique only because of the notoriety of 
+the property and the victims. That enabled them to enjoin the scheme before it could 
+be consummated. Most victims don’t have such resources or landmark homes. Quite 
+the opposite: A New York City press release from earlier this year announced the 
+creation of an office dedicated to combating deed fraud because complaints lodged by 
+ordinary citizens were becoming “rampant,” “with the highest concentration in 
+Brooklyn and Queens,” and disproportionately affecting working class homeowners 
+and communities of color.6  
+                                                          
+3 United States v. Findley, 24-CR-20145 (W.D. Tenn. Aug. 15, 2024). 
+ 
+4 Keough v. Naussany Invs. & Priv. Lending LLC, No. CH-24-0632 (Tenn. Ch. Ct. 
+Shelby Cnty. May 15, 2024). 
+ 
+5 United States v. Findley, No. 2:24-cr-20145-JTF-001 (W.D. Tenn. Sept. 23, 2025) 
+(judgment).  
+ 
+6 Office of the Mayor of the City of New York, Mayor Mamdani Establishes Mayor’s 
+Office of Deed Theft Prevention, Appoints Peter White as Director (Apr. 24, 2026), 
+
+=== p6
+ 
+ 
+4 
+ 
+ 
+Industry sources corroborate the effect deed fraud has on vulnerable victims. 
+One real estate publication estimated that senior citizens “absorb 44 percent of all 
+dollar losses” from such crimes.7 The results of a 2025 National Association of 
+Realtors (“NAR”) survey, designed to measure deed fraud on a national scale, 
+reported results showing the Northeast has the “highest prevalence” of such scams, 
+which are more common in areas with both “central cities and suburban areas” – 
+characteristics that readily describe New Jersey.8 
+To the extent further corroboration of this growing problem is needed, the 
+commercial marketplace provides it. Multiple companies now see an opportunity to 
+profit from the potential risks these schemes pose to property owners. They offer what 
+they claim is a form of insurance, accompanied by not insubstantial premiums, 
+purporting to protect property owners from title fraud. The evolution of this market 
+underscores the extent to which the FBI’s May 2024 warning was prescient.  
+                                                          
+https://www.nyc.gov/mayors-office/news/2026/04/mayor-mamdani-establishes-
+mayor-s-office-of-deed-theft-preventio.   
+ 
+7 Christy Murdock, Over Half of States Have No Laws on the Books to Protect 
+Homeowners 
+from 
+Title 
+Fraud, 
+INMAN 
+(Apr. 
+20, 
+2026), 
+https://www.inman.com/2026/04/20/over-half-of-states-have-no-laws-on-the-books-
+to-protect-homeowners-from-title-fraud/.  
+ 
+8 Nat’l Ass’n of Realtors, 2025 Deed & Title Fraud Survey Report (Sept. 23, 2025) 
+(“NAR Survey”), https://www.nar.realtor/sites/default/files/2025-09/2025-deed-and-
+title-fraud-survey-report-09-23-2025.pdf. The NAR defines the “Northeast” region to 
+include Connecticut, Maine, Massachusetts, New Hampshire, New Jersey, New York, 
+Pennsylvania, Rhode Island, and Vermont. https://www.nar.realtor/research-and-
+statistics/housing-statistics/map-of-existing-home-sales-regions.   
+ 
+
+=== p7
+ 
+ 
+5 
+ 
+ 
+The FBI warning and related developments led the New Jersey State 
+Commission of Investigation (the “SCI”), which investigates allegations of fraud, 
+waste and abuse, to look further into seller impersonation and deed fraud in New 
+Jersey, pursuant to its statutory mandate to examine matters affecting the public 
+peace, public safety, and public justice.9 Starting in the Fall of 2025, its inquiries 
+ultimately involved over 65 interviews and included individuals from all twenty-one 
+county clerk’s offices and prosecutor’s offices across the State. Professionals in the 
+real estate industry and knowledgeable parties from other states and entities that 
+have begun to address what is a nationwide problem also were included. 
+The SCI’s investigation corroborated the FBI warning: New Jersey property 
+owners have been, and in increasing numbers are being, victimized by deed fraud. 
+Although the extent of the problem varies across counties, a growing number of 
+property owners have contacted county clerk and law enforcement offices to report 
+fraudulent transfers.  
+The details of deed-related frauds vary, but, starting with identity theft, 
+generally involve individuals falsely claiming to be the owners of certain real 
+property. Then, through a variety of techniques, including but not limited to: (i) 
+creating a false sense of urgency and other social engineering tricks; (ii) insisting on 
+remote closings and wire transfers of funds; and (iii) relying on fraudulent 
+notarizations or duped notaries, are able to accomplish title transfers to usually, but 
+                                                          
+9 N.J.S.A. 52:9M-2. 
+ 
+
+=== p8
+ 
+ 
+6 
+ 
+ 
+not always, unsuspecting buyers all before the real owner discovers – and is able to 
+stop – the fraud. 
+This type of fraud also can have ripple effects: Even though the genuine 
+property owner is the principal victim, other victims can include an unwitting 
+purchaser, title companies, escrow agents, and downstream lenders.  
+Many attribute the increasing problem to the 2020 pandemic, which led to an 
+uptick in remote real estate closings. The reduction in face-to-face real estate 
+transactions, from the initial stages on, has made it more difficult for many in the 
+process to detect potential frauds, making it easier to impersonate legitimate 
+property owners and submit fraudulent instruments for recording. The concurrent 
+expansion in online access to land records and other personal information also has 
+contributed to the rise in this and other identity frauds.  
+The raw number of seller impersonation frauds may still be relatively low, but 
+are increasing. Worse still, each individual victim generally suffers enormously. 
+Whether the scam involves title to developed or undeveloped land, it often results in 
+the loss of a victim’s most valuable asset.  
+This problem has not escaped the attention of the New Jersey Legislature. Bills 
+have been introduced by several members that would address deed fraud and related 
+harms in various ways: 
+ A2072 would require (i) any deed submitted for recording to be accompanied 
+by an affidavit of title, and (ii) after recordation, county clerks to notify the 
+transferor that a deed has been recorded affecting their property. No action 
+
+=== p9
+ 
+ 
+7 
+ 
+ 
+has been taken on the bill since it was introduced and referred to the 
+Assembly Housing Committee in January 2026; 
+ A1846/S1611 focuses on quitclaim deeds which, by their nature, provide no 
+representation of ownership.10 Instead, the transferor makes no warranties 
+of title, but simply conveys whatever ownership the transferor may have. 
+This bill would authorize a property owner to request notification and a 
+delay in recordation of a quitclaim deed that is submitted for recording on 
+the owner’s property. Both bills were introduced in January 2026, but no 
+action has occurred since;  
+ S848 requires all county recording officers to establish a property alert 
+service (“PAS”) to notify a participating property owner, within seven days 
+of recording, whenever a lien, deed, or any other document that affects the 
+owner’s property has been recorded. The bill has not moved since it was 
+first introduced and referred to the Senate Community and Urban Affairs 
+Committee in January 2026;11  
+ A5289, introduced in June 2026, would authorize any federal, State, or local 
+government entity to obtain a stay of any proceeding to recover possession 
+of, or quiet title to, real property involving a residence, if there is a pending 
+                                                          
+10 N.J.S.A. 46:5-1 et seq. (governing conveyances by quitclaim deeds).  
+ 
+11 Although details may vary, a PAS is designed to notify registered owners of 
+documents recorded under their names or for their properties. As of the date of this 
+report, 19 out of 21 New Jersey counties have implemented a PAS, but they are 
+neither statutorily required, nor are they uniform in their operation. See discussion 
+infra at pp. 13-16. 
+ 
+
+=== p10
+ 
+ 
+8 
+ 
+ 
+good faith investigation into the theft or fraud in the title to, or the 
+financing of, that property; and 
+ A4017/S399 and A4377/S401, require limited liability companies (LLCs) to 
+disclose ownership information of the company when filing a deed for 
+certain residential properties.  
+There are virtues to each of these individual proposals, but the problem of deed 
+fraud, like the broader problem of identity theft, is multi-faceted and requires a 
+coordinated approach. This report offers a more comprehensive view of the seller 
+impersonation and deed fraud problem by examining it in some detail. That provides 
+the basis for a series of recommendations intended to help reduce and thwart the 
+existing risks. 
+A general consensus exists among those aware of the growing problem of seller 
+impersonation and deed fraud that one effective response would be to enhance the 
+voluntary registries on which the PASs are based. They already exist in most counties 
+in New Jersey, and automatically provide participating owners notice of any 
+transactions involving title to their registered property.12 One enhancement would be 
+to provide a property owner who registers with the option of imposing a freeze on any 
+subsequent transfers of title, much like the way consumers voluntarily can register 
+with the three major credit agencies to impose a freeze on their credit records. 
+                                                          
+12 New Jersey counties are not alone in having adopted at least a PAS. Counties in 
+New York, Massachusetts, Illinois, California, Florida, Texas and Arizona have 
+similar systems in place. 
+
+=== p11
+ 
+ 
+9 
+ 
+ 
+Access to one’s credit would appear to be something most people need more 
+frequently than the need to transfer title to property. Properly structured, the ability 
+to impose such a freeze, or “lock,” should not impose an undue burden on either 
+property owners or county clerks, especially if any authorizing legislation accounted 
+for required transfers by operation of law.13 Further protection could be added by 
+prohibiting the freeze from being lifted without the use of a two-factor authentication 
+system that commonly is required in connection with credit freezes and many other 
+banking and retail transactions. 
+A variation on that approach would be to couple the voluntary registration and 
+alert system with, if not a freeze, an extended recordation period. For a designated 
+number of days, a transaction with respect to a property registered in the alert system 
+would have the title queued up for recordation, but not actually recorded, until after 
+notification to the registrant/last owner of record. That would give the owner the 
+opportunity to confirm the validity of the transaction before it is recorded. Yet 
+another variation on that approach would tie that notice to a pre-closing filing of a 
+notice of settlement, which would act as an even earlier trigger for notifying owners 
+through the PAS. 
+Yet another variation would permit recordation of a registered property within 
+two business days, as currently is required pursuant to N.J.S.A. 46:26A-6, but to 
+withhold such recordation from having any legal effect until a designated number of 
+                                                          
+13 Transfers that occur by operation of law may include transfers through probate, 
+foreclosure, tax sale, or court order. See p. 50, infra. 
+
+=== p12
+ 
+ 
+10 
+ 
+ 
+days after the registered property owner had received notice. If the registered owner 
+challenges the purported transaction as fraudulent within the applicable time period, 
+it would remain without legal effect until such time as a court rules on the validity of 
+the transaction in an action to quiet title pursuant to N.J.S.A. 2A:62-1 et seq. This 
+last approach also could be accompanied by other statutory amendments expediting 
+quiet title actions for deed fraud in order to ease the burden on victims to recover 
+their property.14 
+Obviously, any solution along these lines would necessitate a modification of 
+current real estate transaction procedures and affected parties should have an 
+opportunity to express their views. But to do nothing continues to expose some of our 
+most vulnerable citizens to the loss, through fraud, of what often is their most 
+valuable asset.  
+Other steps also can be taken. With identity theft at the core of this problem, 
+requiring enhanced identification techniques, by notaries, real estate agents, and 
+others involved in the title transfer process also would help root out attempts at 
+fraudulent transfers. Although procedures for identity verification by notaries are in 
+place, the extent to which they are consistently enforced is open to question and could 
+be further enhanced.  
+There is another remedial measure, but it would require reconceiving the 
+historical role of county clerks only as accurate documenters and recorders of property 
+                                                          
+14 Efforts to streamline the quiet title process already have been adopted in some 
+states. See e.g., Alabama Property Protection Act, Act No. 2026-536 (2026); Fla. Stat. 
+§ 65.091 (2023). 
+
+=== p13
+ 
+ 
+11 
+ 
+ 
+transactions (a role often characterized as ministerial, but that does not quite capture 
+its importance). As explained below, county clerks are required to record title 
+documents that appear, on their face, to meet certain requirements. They are not 
+equipped to determine the authenticity of what has been submitted for recordation. 
+It is, of course, possible to change that, but putting county clerks in the position of 
+examining real estate documents for possible fraud would require providing their 
+offices with, among other things, training and resources they do not currently have. 
+That said, if properly resourced and trained, enhanced screening at the recordation 
+stage would have significant benefits. 
+These, along with other possible recommendations, are discussed in detail in 
+Section VII of this report. 
+II. 
+Background. 
+A. How Deed Fraud Schemes Occur. 
+A typical deed fraud scheme begins with the perpetrator identifying a property 
+through publicly available records. Properties perceived to present a lower risk of 
+detection until title has been transferred are most attractive. That often is vacant, 
+undeveloped land, but also may include vacation homes, rental properties, and 
+properties owned by elderly, deceased, or out-of-state individuals. 
+After selecting a target property, the perpetrator creates fake identification 
+documents, which can include email accounts and other credentials designed to 
+impersonate the true property owner. Using that identity, the property either may be 
+listed (i) directly on online platforms, as in “for sale by owner,” or (ii) through a local 
+
+=== p14
+ 
+ 
+12 
+ 
+ 
+real estate agent. Sometimes, a “buckshot” approach is employed: Multiple real estate 
+agents are contacted regarding the same property in an effort to find one willing to 
+move forward with a listing more quickly. 
+To both speed the closing and limit scrutiny, the impersonator often markets 
+to all-cash buyers who are willing to close rapidly and remotely, fabricating reasons 
+for being unable to appear in person, such as living out of state, traveling abroad, or 
+otherwise being unavailable. Successful frauds usually minimize opportunities for in-
+person verification by requiring all communications, signatures, and closing 
+procedures to occur remotely, using email and electronic signatures. This makes it 
+easier to fraudulently execute closing documents, including notarizations. In this 
+way, real estate professionals, title companies, attorneys, and escrow agents who 
+participate in remote transactions may unwittingly facilitate the fraud. 
+Once the sale is completed, the proceeds may be routed through one or more 
+domestic “money mule” accounts to conceal the source and destination of the funds. 
+The illicit proceeds are then moved through a series of financial transactions and 
+institutions before ultimately reaching the perpetrator.  
+LLCs, which can be used to obscure the identities of the real actors behind the 
+transaction, may be involved in the transfer process. That occurs often enough that 
+their appearance has become a recognized risk indicator. The misuse of LLCs led the 
+Financial Crimes Enforcement Network (“FinCEN”),15 in 2024, to issue a Final Rule 
+                                                          
+15 FinCEN, a bureau of the U.S. Department of the Treasury created in 1990, supports 
+law enforcement and safeguards the nation’s financial system from a range of illicit 
+
+=== p15
+ 
+ 
+13 
+ 
+ 
+requiring certain disclosures of non-financed residential real estate transactions 
+involving transfers to entities such as LLCs or trusts in an effort to combat money 
+laundering. Earlier this year, however, the court in Flowers Title Cos., LLC v. 
+Bessent16 struck the rule as exceeding FinCEN’s authority under the federal Bank 
+Secrecy Act. Although the rule no longer may be in effect, that FinCEN took such 
+action further underscores the growing risk of deed (and other) fraud in connection 
+with real estate transactions and the ripple effects they can have.  
+Pending legislation in New Jersey also would require the disclosure of 
+ownership information for certain LLCs in residential real estate transactions.17 
+These bills appear to be concerned with the extent to which LLCs can be used to 
+purchase residential properties, then turn them into multi-family rentals without 
+adequately disclosing key information about the LLC involved, including the identity 
+of the registered agent and the company’s ownership. Regardless of the motivation 
+for these proposed disclosure requirements, if enacted, the bills would help deter 
+those deed fraud schemes that rely on the relative anonymity of LLCs. 
+B. Existing Safeguards Have Limits. 
+Nineteen of New Jersey’s twenty-one counties have implemented some form of 
+                                                          
+activity by analyzing information required to be disclosed by the Bank Secrecy Act. 
+https://www.fincen.gov/about-fincen/mission. 
+16 Flowers Title Cos., LLC v. Bessent, No. 6:25-cv-127-JDK, 2026 LX 177006 (E.D. 
+Tex. Mar. 19, 2026).  
+ 
+17 See A4017/S399 and A4377/S401 supra at 8. 
+ 
+
+=== p16
+ 
+ 
+14 
+ 
+ 
+PAS.18 These allow a property owner voluntarily to register recorded properties and 
+receive notification when a deed, lien, or other instrument has been recorded against 
+the registered property.   
+Although most New Jersey counties make property records available online, 
+Hunterdon County does not currently provide online public access to its property 
+records. Moreover, neither it, nor Warren County, uses a PAS. As a result, the level 
+of protection available to property owners varies depending on the county in which 
+their property is located. Regardless of the importance of maintaining and 
+administering county-level property records,19 it isn’t unreasonable to question why 
+a baseline level of statewide protection against deed fraud doesn’t exist. 
+As for counties that have adopted a PAS, they generally operate as follows: 
+                                                          
+18 See Atlantic County Property Alert Service; Bergen County Property Alert Service; 
+Burlington County Property Fraud Alert Service; Camden County Property Alert 
+Service; Cape May County Property Alert Service; Cumberland County 
+FraudSleuth™ System; Essex County Record Alert; Gloucester County Property 
+Fraud Alert; Hudson County Recording Notification Service; Mercer County Property 
+Alert Service; Middlesex County Property Alert Service; Monmouth County Property 
+Fraud Alert Service; Morris County Property Alert Service; Ocean County Property 
+Alert Service; Passaic County Property Fraud Warning System; Salem County 
+Property Alert Service; Somerset County Recording Notification Service; Sussex 
+County Property Alert Service; Union County Property Fraud Alert Service.      
+ 
+Although most property recordings (e.g., deeds, mortgages, liens) are handled by 
+county clerk offices under N.J.S.A. 40A:9-90, counties having a population in excess 
+of 250,000 may establish a Register of Deeds and Mortgages to handle such filings, 
+pursuant to N.J.S.A. 40A:9-81. Currently, only Hudson and Essex counties have a 
+Register of Deeds and Mortgages. 
+ 
+19 See p. 47 infra for a discussion of an alternative to the county-based system.  
+ 
+
+=== p17
+ 
+ 
+15 
+ 
+ 
+Atlantic, Bergen, Camden, Cape May, Mercer, Middlesex, Morris, Ocean, 
+Salem, and Sussex Counties all use the NewVision-Catalis Property Alert Service, 
+which allows users to register a property by entering a lot number, block number, 
+municipality, party name, or a combination of those identifiers. Once a property is 
+successfully entered into the NewVision-Catalis PAS, any recorded documents 
+matching the submitted information generates an email alert.  
+In Burlington, Monmouth, and Union Counties, the Fidlar Technologies 
+Property Fraud Alert System allows users to enter up to 10 personal and/or business 
+names for monitoring recorded documents. Users may then select to be notified of 
+matching documents through email, text message, and/or an automated phone call. 
+Essex and Passaic Counties utilize the Optical Storage Solutions LANDEX 
+Record Alert System. LANDEX permits users to monitor recorded documents for up 
+to 10 block and lot numbers and up to 5 names. Users can opt to receive email and 
+text message notifications. 
+Hudson and Somerset Counties use the Harris Recording Solutions Acclaim 
+Recording Notification Service. In Hudson County, the system provides an automated 
+email alert with recording details anytime a document is recorded using the name, 
+address, lot, block, or municipality name that has been registered. Residents may list 
+up to ten properties and names per registered email address. In Somerset County, 
+residents may enter up to 5 names for monitoring and will receive email notifications 
+when matching documents have been recorded. 
+
+=== p18
+ 
+ 
+16 
+ 
+ 
+In Gloucester County, the Avenu Insights & Analytics Property Fraud Alert 
+System permits users to enter multiple personal and/or business names for 
+monitoring recorded documents. Registered users receive email notifications when a 
+matching document has been recorded. 
+Cumberland County utilizes the FraudSleuth™ System, which allows users to 
+create separate profiles for multiple variations of their name and receive an email 
+alert when a recorded document with a matching name has been filed. 
+These descriptions make clear that, even among the counties that have 
+adopted some form of alert system, there is a lack of uniformity. Some generate alerts 
+based on a property’s lot and block designation; others rely on a name entered by the 
+user. The number of properties that can be registered also varies. Certain systems 
+limit users to a single name, whereas others permit multiple entries or variations of 
+a name. 
+Regardless of the specific design, one benefit of such systems is that they 
+provide affirmative notice to owners regarding any transaction involving their 
+property. This enables the owners to investigate an unexpected transaction sooner 
+than they otherwise might discover it. By design, however, those alerts are provided 
+only after a document has been recorded. Accordingly, they play no preventative role.  
+Private commercial entities have noted the opportunity to capitalize on such 
+systems: They offer similar post-recording alerts for a fee. An August 2024 Federal 
+Trade Commission (“FTC”) consumer alert, however, raised questions about the 
+wisdom of paying for such services and the marketing techniques used to promote the 
+
+=== p19
+ 
+ 
+17 
+ 
+ 
+subscription services they offer.20 The FTC emphasized that terms like “home title 
+lock insurance” are inaccurate because these services do not, in fact, amount to any 
+type of insurance, nor do they “lock” or freeze title. Instead, like the county services 
+described above, these providers simply monitor transactions involving properties 
+registered with the company and provide post-transaction alerts.21  
+The FTC took pains to clarify the important distinction between such 
+subscription services and title insurance: Traditional title insurance policies 
+generally protect only against certain pre-existing title defects. These newer 
+subscription services are better thought of as alert systems that offer no legal or 
+financial protection and, accordingly, may give a false sense of security.22 It further 
+explained that anyone can check a title at no charge with the office where it is 
+registered and noted the existence of the type of free alert systems prevalent among 
+most counties in New Jersey.23 By contrast, the types of commercial services noted by 
+the FTC can run from approximately $9.99 per month to $20 or more per month, 
+depending on the provider and level of bundled services.  
+                                                          
+20 Federal Trade Commission, Home Title Lock Insurance? Not a Lock at All (August 
+26, 
+2024), 
+https://consumer.ftc.gov/consumer-alerts/2024/08/home-title-lock-
+insurance-not-lock-all. 
+ 
+21 Id. Accordingly, to the extent these services claim they will “stop” seller 
+impersonation and deed fraud, that would appear to be an overstatement. 
+https://www.hometitlelock.com/ 
+(last 
+visited 
+August 
+5, 
+2026) 
+(“Protecting 
+homeowners with the expertise and technology to stop house stealing”). 
+ 
+22 Id. 
+ 
+23 Id. 
+ 
+
+=== p20
+ 
+ 
+18 
+ 
+ 
+That said, the commercial marketplace is evolving. A related, but slightly 
+different type of service offers more.24 It monitors real-estate sites on behalf of its 
+subscribers and sends alerts if a registered property appears for sale.25 It also will 
+file a document in the office where the property has been recorded,26 providing notice 
+to third parties that the title has been “locked” and that owner verification is required 
+before any transaction proceeds.27 The recorded notice includes a QR code that may 
+be scanned by any party to determine whether the property is designated by the 
+company as “locked” or “unlocked.” Under the system, a property remains in “locked” 
+status unless and until the subscriber authorizes a change. 
+That notice, however, does not actually itself lock or freeze the property in any 
+legally binding sense: Others in the transaction process need to voluntarily honor it 
+because it has no independent force of law. Still, for a fee, this type of service could 
+help provide protection against fraudulent transactions by warding off those who 
+would otherwise be interested in the property.28   
+Although not as widely advertised or well known, some traditional title 
+insurance companies now offer coverage that, for an additional premium, will insure 
+not only against pre-existing defects in title, but also against the risk of subsequent 
+                                                          
+24 Title Barrier, https://www.titlebarrier.com/ (last visited August 5, 2026).  
+ 
+25 Id. 
+ 
+26 Id. 
+ 
+27 Id. 
+ 
+28 Id. 
+ 
+
+=== p21
+ 
+ 
+19 
+ 
+ 
+deed fraud. This coverage, however, varies for New Jersey residents, depending upon 
+the type of title insurance policy that is purchased and the date of purchase. A 
+standard American Land Title Association (ALTA) Owner’s Policy, available for all 
+types of real estate (including vacant land and commercial properties), does not yet 
+cover post-policy protection against forged deeds. An endorsement covering that is 
+currently under review by the New Jersey Department of Banking and Insurance 
+(DOBI) and not yet approved.29 By contrast, an ALTA Homeowner’s Policy, available 
+to natural persons and for one-to-four family residential properties and offering 
+protection for post-policy forgery or impersonation, has been available to New Jersey 
+residents since at least 2021. 
+III. 
+Insights On Seller Impersonation And Deed Fraud. 
+A. FBI Data.  
+The FBI identifies vacant land as a particularly attractive target for deed 
+fraud.30 Publicly available records easily allow vacant properties to be located.31 They 
+provide most of the information needed for an imposter to credibly pose as a 
+knowledgeable owner of the property.32 That’s especially true when a remote 
+                                                          
+29 https://www.alta.org/news-and-publications/news/20260623-ALTA-Endorsements-
+Expand-Protection-Against-Deed-Fraud-and-Forgery. 
+ 
+30 Fraudsters, supra n. 1. A recent industry survey agrees. NAR Survey, n. 8, supra 
+at 4.  
+  
+31 Fraudsters, supra n. 1. In New Jersey, property records, including deeds recorded 
+with a county clerk’s office, are considered public records. N.J.S.A. 47:1A-1, et seq. As 
+a result, many counties offer online, searchable databases for these documents likely 
+making it easier for bad actors to search for vacant properties. 
+ 
+32 Id. 
+
+=== p22
+ 
+ 
+20 
+ 
+ 
+transaction, quick closing, and a cash buyer also are involved.33 Other types of 
+properties that are not regularly occupied, such as abandoned properties and second 
+or rented homes, also are attractive targets for similar reasons.34    
+Since 2000, the FBI has been tracking crimes committed online by collecting 
+information about them through its Internet Crime Complaint Center (IC3). The IC3 
+contains information about the ever-growing list of Internet-related crimes, of which 
+identity theft is just one. Deed fraud is not a distinct crime category under the FBI’s 
+IC3, falling instead into the larger real estate crime category. As a result, no 
+comprehensive national statistics specifically track deed fraud or title theft. The IC3’s 
+annual reports, however, provide relevant insight into complaints and financial losses 
+associated with cyber-enabled real estate crimes. These reports indicate a notable 
+upward trend: Complaints increased from 9,359 in 2024 to 12,368 in 2025, while 
+reported losses rose from $173,586,820 to $275,110,419 over the same period.35   
+                                                          
+ 
+33 Id. 
+ 
+34 Id. 
+ 
+35 Federal Bureau of Investigation, Internet Crime Complaint Center (IC3) Annual 
+Report 2025 (2025), https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf. 
+In April 2025, the FBI Boston field office issued a statement detailing rising counts 
+of deed fraud nationwide. The FBI reported 58,141 victims and $1.3 billion in losses 
+associated with real estate fraud (generally, including deed fraud) from 2019 to 2023. 
+https://www.fbi.gov/contact-us/field-offices/boston/news/fbi-boston-warns-quit-claim-
+deed-fraud-is-on-the-rise-. 
+ 
+
+=== p23
+ 
+ 
+21 
+ 
+ 
+Moreover, as noted,36 deed fraud can have different victims who may report 
+their victimization in slightly different, overlapping ways. That further renders 
+numbers derived from the IC3 database informative, but not definitive. Still, because 
+the FBI encourages victims to submit complaints that are analyzed and shared with 
+law enforcement and the public, the IC3 database and other sources of referrals to 
+the FBI put it in a premier position to provide empirical data about the growing 
+prevalence of deed fraud and related real estate fraud schemes. 
+In conjunction with the SCI’s investigation, the FBI carefully combed through 
+reported incidents occurring from 2020 through the beginning of March 2026 that 
+had been variously categorized as “Deed Fraud,” “Vacant Land Fraud,” “Seller 
+Impersonation Fraud,” and other real estate-related fraud schemes. In New Jersey 
+alone, the FBI data reflects approximately 135 reported incidents, with 
+concentrations in certain counties, particularly Sussex, Bergen, Cape May, and 
+Ocean Counties.37 
+The FBI cautioned, however, that the approximately 135 reported incidents 
+likely understates the true scope of the problem because many go unreported or are 
+categorized under still broader fraud classifications. Nevertheless, even 135 instances 
+places New Jersey among the top three states nationally in reported incidents during 
+the relevant period.38  
+                                                          
+36 See p. 6, supra. 
+ 
+37 See Appendix A. 
+ 
+38 Florida had 203 reported incidents and California had 121 reported incidents 
+during the same time period. See Appendix A. 
+
+=== p24
+ 
+ 
+22 
+ 
+ 
+Perhaps more importantly, these growing numbers led the FBI to analyze the 
+substance of the complaints they have been receiving and, from them, to derive a list 
+it uses to educate real estate professionals of “red flags.” They include:   
+ sellers who refuse in-person meetings; 
+ reliance on VoIP numbers; 39 
+ inconsistent or suspicious forms of identification; 
+ an inability to confirm basic knowledge about the property; and  
+ requests that proceeds be wired to accounts that do not match the 
+identities provided by the sellers.   
+To further mitigate risk, the FBI has recommended a set of best practices. 
+These include enhanced due diligence measures, the independent verification of a 
+seller’s identity through multiple sources, sending certified mail to the address of 
+record, conducting video verification when remote closings are requested, and directly 
+confirming notarizations. Professionals also are encouraged to preserve all 
+                                                          
+ 
+39 VoIP (“Voice over Internet Protocol”) numbers are telephone numbers that operate 
+through an internet connection rather than traditional landline infrastructure. VoIP 
+numbers can often be obtained quickly and inexpensively, sometimes without 
+requiring extensive identity verification. Although VoIP numbers are widely used for 
+legitimate business and personal communications, law enforcement agencies and 
+regulators have noted that VoIP technology can facilitate caller ID spoofing and fraud 
+because internet-based phone services may make it easier to mask or alter identifying 
+information. Caller ID spoofing is a practice in which a caller deliberately falsifies 
+the telephone number or name displayed on a recipient’s caller ID to disguise the 
+caller’s true identity. See Federal Bureau of Investigation, Investigating Scam Phone 
+Calls, FBI L. Enf’t Bull. (June 10, 2020), https://leb.fbi.gov/articles/featured-
+articles/investigating-scam-phone-calls. The FBI recommends using a reverse phone 
+lookup service to determine if a number is classified as a VoIP number.   
+
+=== p25
+ 
+ 
+23 
+ 
+ 
+communications and documentation: These may be critical for investigation and 
+recovery efforts.  
+The FBI also has urged those who encounter attempted frauds, or those 
+victimized by successful efforts, to report such incidents promptly, whether to local 
+law enforcement or the FBI’s IC3. Early notification may allow financial institutions 
+to freeze or recall wired funds. The agency consistently highlights that timely 
+collaboration between private actors and law enforcement is one of the most effective 
+tools in disrupting these schemes and limiting harm. 
+B. Information From County Clerk’s And Prosecutor’s Offices. 
+Overall, interviews with all twenty-one County Clerk’s and Prosecutor’s 
+Offices reflected a consensus that deed fraud is a growing concern, even if its 
+frequency, visibility, and accuracy of tracking efforts can vary by county. They 
+corroborated the FBI’s view that the most attractive victims were frequently seniors 
+(often owners of mortgage-free properties) or absentee owners. 
+Despite recognition that it is a growing problem, deed fraud in New Jersey is 
+not tracked at the county (or any other) level in a systematic fashion. As with the IC3 
+data, this makes it likely the true extent of the problem may be underreported, with 
+information about occurrences undocumented or anecdotal. Not surprisingly, in those 
+counties where there is greater coordination between the offices of county clerks and 
+prosecutors on deed fraud, instances were more readily identified and reported: 
+Greater interoffice coordination improves both the detection and visibility of deed 
+fraud activity. 
+
+=== p26
+ 
+ 
+24 
+ 
+ 
+Contributing to the relative lack of statistics on this issue is that deed fraud 
+victims do not always report being victimized. That is not uncommon in crimes 
+involving forms of identity theft, where embarrassment or shame creates a reluctance 
+to file a report.40 Even when local law enforcement gets involved, not all instances of 
+deed fraud are reported to the FBI’s IC3 database. Moreover, to the extent some 
+scams are nipped in the bud, they may never be reported.  
+Another factor contributing to underreporting is that property disputes 
+stemming from fraud or attempted fraud may lead to civil lawsuits, as opposed to 
+being handled criminally. The fraud also may not be discovered until years later, 
+further complicating reporting. As a result of these and other factors, one industry 
+report asserts that official statistics may well represent only a fraction of actual cases 
+and that the “true number could be 2-5 times higher than reported figures.”41 
+As noted, all but two New Jersey counties now have adopted some form of 
+PAS.42 County clerks generally viewed these as a helpful, but limited, tool. They allow 
+for earlier detection, but are not designed to prevent a fraud prior to recording. Some 
+                                                          
+40 Federal Bureau of Investigation, FBI Boston Warns Quit Claim Deed Fraud is on 
+the Rise (Apr. 1, 2025), https://www.fbi.gov/contact-us/field-offices/boston/news/fbi-
+boston-warns-quit-claim-deed-fraud-is-on-the-rise-; See also Mo Ayadi, Home Title 
+Theft Statistics 2026: Is It Really Common?, Title Barrier (Mar. 5, 2026) (Ayadi), 
+https://www.titlebarrier.com/blog/home-title-theft-statistics-2025. 
+ 
+41 Ayadi, supra n. 40 at 24. 
+  
+42 See supra n. 18 at 14.   
+ 
+
+=== p27
+ 
+ 
+25 
+ 
+ 
+counties noted that, despite having thousands of registrants, public awareness of and 
+enrollment in the alert systems remains low.  
+In Hunterdon County, property records are not publicly available on the 
+internet, which advocates contend renders it less vulnerable to seller impersonation 
+and deed fraud, and less in need of the notification systems employed in other 
+counties. In Warren County, property records are publicly available online, but there 
+is no designated PAS in place. Instead, the Warren County Clerk’s Office instructs 
+concerned residents to regularly check the property records available on its website 
+to ensure no one has filed a fraudulent deed against their property and recommends 
+doing so on a monthly basis. 
+County clerks also emphasized the limitations on what they currently are 
+allowed to do in cases where they may suspect the bona fides of a transaction: Their 
+offices are not empowered to reject deeds based on a suspicion of fraud when the 
+documents otherwise appear facially complete and properly acknowledged. To the 
+contrary, they are statutorily required to record any document affecting title to real 
+property that appears to comply with the statutory requirements for recording,43 and 
+                                                          
+43 N.J.S.A. 46:26A-6(a) provides a “county recording officer shall record any 
+document . . .  affecting the title to real property located in the county” provided, 
+among other things, it “(1) is in the form required by P.L.2011, c.217 (N.J.S.46:26A-1 
+et al.)” and “(2) appears to comply with requirements for recording specified in 
+P.L.2011, c.217 (N.J.S.46:26A-1 et al.).” 
+ 
+
+=== p28
+ 
+ 
+26 
+ 
+ 
+to do so no later than two business days after receipt.44 Clerks are not charged with 
+investigating the substantive validity of documents presented for recording.  
+Some county clerks also raised questions regarding the longstanding practice 
+of transferring properties using quitclaim deeds. Even though quitclaim deeds are 
+used for legitimate purposes, including intra-family transfers and estate planning, 
+they often show up in connection with fraudulent transactions. Coupled with the 
+obligation to accept deeds that satisfy the statutory formatting and acknowledgement 
+requirements, even suspicious quitclaim deeds (including those between unrelated 
+parties and not being used in an intra-family transfer), won’t be rejected.  
+For prosecutor’s offices, deed fraud cases are often difficult to investigate and 
+prosecute because the perpetrators mask their true identities through the use of 
+Internet Protocol (IP) addresses, phone numbers, and email addresses that are 
+typically traced back to foreign countries. In Sussex County, the prosecutors began 
+working closely with the County Association of Realtors in order to better understand 
+the common fraud schemes they encounter. This partnership has generated increased 
+awareness among all involved parties, with realtors often contacting the Sussex 
+County Prosecutor’s Office directly when they encounter suspicious activity. 
+Overall, the interviews with all twenty-one county clerk’s and prosecutor’s 
+offices reflect a shared concern that deed fraud is underreported, inconsistently 
+tracked and difficult to prevent under existing law. County clerks often serve as the 
+                                                          
+44 N.J.S.A. 46:26A-6(b) provides that “[e]very document . . . shall be recorded and 
+indexed not later than two business days after its receipt.” 
+
+=== p29
+ 
+ 
+27 
+ 
+ 
+first point of contact for affected property owners, but lack the tools to intervene 
+effectively. Widespread PAS adoption demonstrates a recognition of the problem, but 
+clerks emphasized that alerts function as damage-control mechanisms, not 
+preventative solutions.  
+C. The Real Estate Industry Perspective. 
+Professionals from across the real estate industry generally agree that deed 
+fraud has been on the rise in recent years. 
+Real estate agents consistently reported that fraudsters commonly pose as 
+property owners and attempt to list and sell property without authorization, often 
+targeting absentee owners, elderly individuals, or estate properties. They described 
+these schemes as increasingly common since the COVID-19 pandemic, when 
+transactions began to close entirely through phone, email, and electronic signatures. 
+This shift reflects broader structural changes within the real estate industry. Even if 
+“[f]ully digital closings” remain the exception,  hybrid closings – where at least some 
+substantial part of what would have, pre-pandemic, taken place face-to-face, now 
+occur remotely – were, as of 2022, nearly 8% of all closings and growing.45 Although 
+comprehensive nationwide statistics after 2022 remain limited, more and more 
+                                                          
+45 American Land Title Association, Digital Closings Increase, but Barriers Slow 
+Adoption, 
+TitleNews, 
+Feb. 
+2024, 
+at 
+12, 
+https://www.alta.org/news-and-
+publications/titlenews-magazine/2024/february_2024.pdf.  
+ 
+
+=== p30
+ 
+ 
+28 
+ 
+ 
+closings eliminate some, if not all, of what used to be a completely in-person 
+transaction.46 
+Several real estate agents described receiving regular fraudulent listing 
+inquiries. One agent estimated receiving between three and five suspicious seller 
+leads per month. Another representative, from a local real estate association, stated 
+that attempted fraud schemes are reported to the association by agents weekly. 
+Realtors reported that fraudsters often seek to strike quickly by listing a property for 
+sale significantly below market value in an attempt to secure an all-cash buyer or 
+obtain an earnest money deposit before abruptly absconding.   
+Title professionals echoed the view that deed fraud is a growing and 
+increasingly sophisticated problem. They too saw an increase in fraud following the 
+COVID-19 pandemic, when real estate transactions, closings, and access to public 
+records became increasingly digitized and remote. Vacant land, seasonal properties, 
+and homes that are not regularly occupied were identified as especially vulnerable 
+targets because there are fewer opportunities for owners to detect suspicious activity. 
+                                                          
+46 Legal changes have reinforced and accelerated this transition to more remote and 
+hybrid transactions. In 2021, the State enacted a comprehensive overhaul of its 
+notary public laws through Assembly Bill 4250, modernizing a statutory framework 
+that had remained largely unchanged for decades. The legislation was modeled on 
+the Revised Uniform Law on Notarial Acts (RULONA), providing updated definitions, 
+clearer standards of conduct, and greater statewide uniformity. One aspect of the 
+reform was the permanent authorization of remote, online notarizations for electronic 
+and tangible documents, codifying and expanding upon temporary measures adopted 
+during the COVID-19 public health emergency. P.L.2021, c.179. See pp. 38-39, 42 
+infra. The bill was based on a 2014 report of the New Jersey Law Revision 
+Commission which, in turn, was based on the Uniform Law Commission’s 2010 
+version of RULONA, and its 2018 revision.  
+ 
+
+=== p31
+ 
+ 
+29 
+ 
+ 
+Part of the problem may be that professional educational requirements have 
+not been updated. Although title insurance agents in New Jersey are required to hold 
+an insurance producer’s license, there are no ongoing requirements for continuing 
+education specifically tied to title insurance or fraud-related subjects.47 In addition, 
+settlement agents, who routinely handle hundreds of thousands, if not millions, of 
+dollars each month and perform critical functions at real estate closings, are not 
+subject to any licensing requirements at all. Unlike “title insurance agent,” which is 
+defined under New Jersey law, New Jersey statutes do not provide a comprehensive 
+definition of “settlement agent” applicable to all real estate transactions. In practice, 
+a settlement agent is the person or entity that conducts the real estate closing and is 
+responsible for the receipt, handling, and disbursement of closing funds. Despite 
+these significant responsibilities and the substantial sums of money involved, 
+settlement agents are not required to obtain a license or satisfy any minimum 
+educational or training requirements.  
+Just as the FBI sounded a warning in 2024, so too did ALTA. It conducted a 
+nationwide survey that May to gain a better understanding of what it termed seller 
+impersonation fraud (SIF).48 The survey generated 783 responses from members of 
+the title insurance community across the United States and confirmed the extent to 
+                                                          
+47 New Jersey law defines a “title insurance agent” as a person or entity authorized 
+by a title insurance company that, in the regular course of business: examines title to 
+real estate; determines insurability under the insurer’s underwriting standards; and 
+issues title reports, commitments, binders, and title insurance policies. N.J.S.A. 
+17:46B-1. 
+ 
+48 See ALTA Critical Issues Study: Seller Impersonation Fraud (July 2024).  
+ 
+
+=== p32
+ 
+ 
+30 
+ 
+ 
+which title insurance companies also view deed fraud as a growing problem: 28% of 
+title insurance companies experienced at least one SIF attempt in 2023; 19% faced 
+attempts in April 2024 alone.49 Title companies were prone to referring these 
+incidents to law enforcement offices, which, in 2023, typically included the local police 
+department (53%) or the FBI (41%).50 Of the companies that experienced attempted 
+fraud in 2023 (successful or unsuccessful), 16% paid claims on transactions involving 
+SIF.51   
+Title companies also reported notarization issues as a key link in fraud 
+attempts.52 The most common notarization issues were fake notary credentials (43%) 
+and use of real notary credentials without permission (31%).53 Use of nonpublic 
+personal information, such as birth dates, driver’s license numbers, and Social 
+Security numbers also were common.54 
+There was widespread agreement among those within the title insurance 
+community that more needs to be done to combat deed fraud. The majority of 
+respondents (91%) provide or plan to provide education and resources to train 
+employees on fraud.55 Other proactive steps include addressing fraud more broadly: 
+                                                          
+49 Id. 
+ 
+50 Id. 
+ 
+51 Id. 
+ 
+52 Id. 
+ 
+53 Id. 
+ 
+54 Id. 
+ 
+
+=== p33
+ 
+ 
+31 
+ 
+ 
+Wire fraud, issues with heirs’ property, and elder real estate fraud and financial 
+exploitation.  
+ALTA supports the following measures to aid in combating deed fraud: (i) 
+requiring training for notaries both when applying for and renewing notary 
+commissions; (ii) creating an email alert system to notify notaries whenever a 
+document bearing their name is recorded; (iii) giving local officials more authority to 
+refuse to record suspicious documents; and (iv) adding multi-factor authentication 
+settings to existing PASs. 
+IV. 
+Victim Accounts. 
+The consequences of deed fraud are significant and far-reaching. Victims may 
+suffer substantial financial losses, including the costs associated with attempts to 
+unwind the fraudulent transfers, whether or not successful. Those costs may include 
+considerable legal expenses and administrative burdens associated with restoring 
+ownership, a process that can be time-consuming and complex, as well as stressful.  
+Individual victims confirmed the information collected from the FBI, the 
+counties, and real estate professionals. Victims reported fraud involving vacant and 
+abandoned property, forged instruments and deceived notaries, quitclaim deeds, 
+remote closings, phony addresses, and the failure to properly verify identities, 
+sometimes as a result of mistaken assumptions that someone else was doing the 
+verification. A few examples follow. 
+                                                          
+55 Id. 
+
+=== p34
+ 
+ 
+32 
+ 
+ 
+In Gloucester County, the children of a deceased homeowner discovered their 
+late father’s residence had been fraudulently transferred without their knowledge. 
+They only learned of the transfer when the daughter, also executor of the estate, was 
+contacted by the township tax office regarding a fraudulent deed filing. Further 
+inquiry revealed the property had been transferred for one dollar using a false 
+quitclaim deed. A fake notarization established the impersonator as the rightful 
+owner. Using a shell company as the landlord, the property was then leased to 
+unsuspecting tenants. The tenants independently reported the matter to local police 
+after growing suspicious of the arrangement. Ultimately, two individuals were 
+arrested and criminally charged for their roles in the scheme.56 
+In Warren County, a buyer was defrauded into purchasing a parcel of vacant 
+land from an individual impersonating the rightful owner. Even though the 
+transaction appeared routine on the surface and involved an experienced real estate 
+agent, attorneys, and title company, the purported seller, who claimed to be out of 
+state and insisted on using an out-of-state notary and a remote closing, was able to 
+avoid direct verification of his or her identity. 
+Shortly after the closing, the defrauded purchaser visited the property and 
+accidentally encountered the true owner, who disclaimed any knowledge of the sale, 
+and contended the property had been in his family for years and had not been put up 
+for sale. The defrauded buyer, who had already paid the purchase price of $60,000 
+                                                          
+56 The State of New Jersey v. Tony O. Jennings – Complaint Summons Nos. 0811-S-
+2026-000104 and 0811-W-2024-000123; The State of New Jersey v. Mark McGirt – 
+Complaint Summons No. 0811-W-2024-000124. 
+
+=== p35
+ 
+ 
+33 
+ 
+ 
+and incurred additional costs related to the transaction, submitted a claim to his title 
+company.  
+In Middlesex County, a property owner discovered that a vacant parcel he had 
+owned for several years had been fraudulently sold without his knowledge. The 
+scheme came to light only when he attempted to pay property taxes and learned that 
+his account had been closed. Further inquiry revealed that the property had been 
+listed, marketed, and sold by an impersonator using falsified documents, forged 
+signatures and, again, an out-of-state notarization. The victim reported substantial 
+financial harm, including tens of thousands of dollars in legal fees incurred in 
+attempting to remedy the situation. 
+In Hunterdon County, an elderly couple learned that a vacant, wooded lot they 
+owned had been fraudulently listed for sale on Zillow. The scam surfaced only after 
+they received phone calls from two different real estate agents who had been 
+contacted by someone posing as the property owner using a bogus email account. 
+Because the fraud was prevented, the investigation by local law enforcement was 
+ultimately closed and no perpetrators were identified. 
+V. 
+Actions To Quiet Title. 
+It is, of course, possible for victimized individuals to regain their title through 
+civil litigation. An action to quiet title most commonly is brought to resolve what 
+usually are non-fraudulent, but competing claims to real property, as in the case of a 
+dispute among heirs. It can be used, however, to remove any cloud on title, allowing 
+
+=== p36
+ 
+ 
+34 
+ 
+ 
+a party to establish clear, marketable ownership,57 and is a possible remedy to regain 
+ownership in the case of title lost through deed fraud. Quiet title actions, however, 
+can be costly and time-consuming, often dragging on for years before any final 
+resolution is reached. For victims of deed fraud, the lengthy legal process involved in 
+quieting title to and reclaiming rightful ownership of their property can add insult to 
+injury. 
+New Jersey case law illustrates how quiet title actions involving alleged deed 
+fraud can be tied up in court for many years, leaving victims in limbo during that 
+time period. In Wu v. Yin Shan Wu (a/k/a Sam Wu) and Global Champion Capital, 
+LLC, a quiet title action arose from a dispute between two brothers over an alleged 
+fraudulent deed for a Jersey City property. The case was first initiated in August 
+2020 with the filing of a complaint in the Chancery Division, General Equity Part of 
+the Superior Court of New Jersey.58 Almost three years later, in May 2023, the 
+Chancery Division made a final determination in the case,59 which was then 
+appealed. The case continued for an additional three years before the Supreme Court 
+of New Jersey declined to review the case in May 2026, bringing the nearly six-year 
+saga to an end.60 
+                                                          
+57 See N.J.S.A. 2A:62-1 et seq. 
+ 
+58 See Wu v. Yin Shan Wu and Global Champion Capital, LLC, Docket No. HUD-C-
+000157-20 (May 22, 2023). 
+ 
+59 Id. 
+ 
+
+=== p37
+ 
+ 
+35 
+ 
+ 
+Similarly, in Phoenix Pinelands Corp. v. Davidoff, the State itself spent ten 
+years tied up in litigation over the title to seven State-owned Pinelands parcels.61 
+Phoenix Pinelands Corporation – an adjoining sand-and-gravel mine operator with 
+no actual interest in the parcels – spent over $1 million and two decades searching 
+centuries-old deeds, buying up quitclaim interests from obscure heirs of long-dead 
+record owners and secretly having the local tax assessor erase the State’s parcels from 
+the municipal tax map, all in an ultimately unsuccessful effort to establish the 
+“peaceable possession” required to bring a statutory quiet title action against the 
+State under N.J.S.A. 2A:62-1 and 2A:62-2.62 The case, initiated in 2011, did not reach 
+a final conclusion until December 2021, when the Supreme Court of New Jersey 
+denied a petition for certification.63 
+VI. 
+Few States Are Taking Comprehensive Action. 
+To the extent New Jersey decides to take concerted action against the deed 
+fraud problem, it will be at the forefront. Few other states are considering 
+comprehensive steps to combat it. Three exceptions are Virginia, Tennessee and 
+Maine. 
+                                                          
+60 See Richard Wu v. Yin Shan Wu, 2025 N.J. Super. Unpub. LEXIS 865 (N.J. 
+Super. Ct. App. Div. May 27, 2025); Wu v. Yin Shan Wu, 264 N.J. 50 (N.J., May 18, 
+2026). 
+ 
+61 See Phoenix Pinelands Corp. v. Davidoff, Docket No. C-000246-11; Phoenix 
+Pinelands Corp. v. Davidoff, 467 N.J. Super. 532 (Super. App. Div. 2021). 
+ 
+62 Phoenix Pinelands Corp. v. Davidoff, 467 N.J. Super. 532 (App. Div. 2021). 
+ 
+63 Id. 
+ 
+
+=== p38
+ 
+ 
+36 
+ 
+ 
+Virginia now is reviewing a property “title freeze” system, along with a “victim 
+remedies package” that would create expedited court procedures for title restoration 
+and streamlined petition processes with standardized forms.64 Additional 
+recommendations under consideration in Virginia include: (i) requiring real estate 
+agents to verify seller identity before listing or before signing a brokerage agreement; 
+(ii) cross-referencing tax records and mailing a confirmation notice to the owner’s 
+address of record before a sale proceeds; and (iii) requiring whoever presents a deed 
+for recording to sign a certification attesting they verified the owner’s identity, with 
+explicit reference to criminal liability if the deed is fraudulent.65 
+The Tennessee Advisory Commission on Intergovernmental Relations (TACIR) 
+also has been examining the issue of deed fraud.66 Recommendations in a draft 
+TACIR report largely focus on notaries, including (i) requiring notary training at 
+initial commissioning and at renewal; (ii) requiring government-ID verification and 
+mandatory journals for all in-person notarizations, retained for at least 5 years, with 
+specific required fields (date/time, document description, signer info, ID evidence 
+used, fees); (iii) raising notary surety bonds; (iv) requiring criminal background 
+checks for notary applicants; and (v) criminalizing notary impersonation.67 TACIR 
+                                                          
+64 Deed Fraud Study Final Report: Prepared in Response to Virginia Senate Bill 
+1270 and House Bill 2396, Virginia Center for Housing Research (November 2025); 
+Appendix B. 
+ 
+65 Id.  
+ 
+66 Protecting Tennesseans from Real Estate Fraud, Tennessee Advisory Commission 
+on Intergovernmental Relations (September 2025); Appendix B. 
+ 
+
+=== p39
+ 
+ 
+37 
+ 
+ 
+also recommends that counties be authorized to establish processes to refer and 
+review real estate documents that county registers of deeds have reason to suspect 
+are fraudulent.68  
+In Maine, the third state to address deed fraud within recent months, a 
+legislative commission established to study and recommend options for preventing 
+and remedying deed fraud issued a final report in December 2025.69 It too noted the 
+absence of concrete data, but concluded that deed/seller impersonation fraud is a real 
+and growing problem both in Maine and nationwide. 
+It proposed, as a first line of defense, those involved in the property listing and 
+closing process be required to verify the identity of persons selling property in all real 
+estate transactions.70 Additional recommendations included: (i) municipalities 
+ensuring the addresses they maintain for property tax purposes accurately reflect the 
+current addresses of property owners because such records help to verify the identity 
+of those listing property for sale; and (ii) enacting legislation to expedite ways to 
+recapture fraudulently transferred property by nullifying the fraudulent deed as an 
+alternative to the time and expense of obtaining a court judgment.71 
+                                                          
+67 Id.  
+ 
+68 Id. 
+ 
+69 Final Report, Maine Commission to Recommend Methods for Preventing Deed 
+Fraud in the State (December 2025); Appendix B. 
+ 
+70 Id. 
+ 
+71 Id. 
+
+=== p40
+ 
+ 
+38 
+ 
+ 
+The SCI’s investigation did not reveal any other state-specific comprehensive 
+effort to address deed fraud. But, as this report was being finalized, the National 
+Conference of Commissioners on Uniform State Laws (“ULC”) issued a discussion 
+draft for a proposed “Deed Fraud Act” (“ULC Draft”).72 The prefatory note to the ULC 
+Draft echoes the findings in this report: “Title fraud . . . has become an increasingly 
+common and serious problem across the United States” and, although a fraudulently 
+obtained and recorded deed is void and conveys no interest, even a forged deed can 
+cloud title, disrupt marketability and triggers often expensive and time-consuming 
+litigation to resolve.73  
+To address those problems, the ULC Draft proposes legislation that, among 
+other things, combines: (i) what would amount to an expedited quiet title proceeding 
+for deed fraud; (ii) enhanced notarial and other verification procedures; (iii) the type 
+of PASs described in this report; and (iv) a title-freeze mechanism calibrated to deter 
+fraud while still allowing other types of transfers mandated by law. 
+New Jersey previously has adopted legislation proposed by the ULC.74 The SCI 
+is not advocating adoption of all, or any part of, this latest draft, which still is subject 
+                                                          
+ 
+72 See ULC Draft Deed Fraud Act (July 2026); Appendix B. The ULC, established in 
+1892, has provided states with more than 300 proposed model acts ranging from the 
+Uniform Commercial Code (“UCC”) to the Law on Notarial Acts (2021 Revised), which 
+are among several that have been enacted in New Jersey.  It receives proposed topics 
+for legislation from a variety of sources and, if approved, creates a ULC Drafting 
+Committee. 
+ 
+73 Id.  
+ 
+74 Through the New Jersey Law Revision Commission, New Jersey has enacted 
+multiple ULC proposals, including, in addition to RULONA, the Uniform Adult 
+
+=== p41
+ 
+ 
+39 
+ 
+ 
+to review and comment as part of the ULC’s own processes.75 The ULC intends to 
+expedite its normal processes for review and approval of the proposed Deed Fraud 
+Act: It views the issue as a very serious problem.  
+Also notable is the degree to which the ULC Draft corroborates, nationwide, 
+the SCI’s findings regarding the factors contributing to the problem and offers specific 
+legislative language to address them. State legislatures do not have to wait for 
+proposed ULC model bills to be finalized before taking action to incorporate versions 
+of various provisions, especially if there is agreement that a particular issue is, in 
+fact, urgent enough to warrant prompt action. 
+VII. 
+Recommendations.  
+The several bills pending in the Legislature addressing deed fraud reflect 
+growing recognition that New Jersey’s current property recording and verification 
+practices simply were not designed to address the circumstances contributing to 
+                                                          
+Guardianship and Protective Proceedings Jurisdiction Act, the Uniform Anatomical 
+Gift Act, the Uniform Child Custody Jurisdiction and Enforcement Act, the Uniform 
+Electronic Transactions Act, the Uniform Foreign Money Claims Act, the Uniform 
+Interstate Depositions and Discovery Act, the Uniform Interstate Family Support 
+Act, the Revised Uniform Limited Liability Company Act, the Uniform Mediation Act, 
+the Uniform Military and Overseas Voters Act, the Uniform Prudent Management of 
+Institutional Funds Act, the Uniform Electronic Transaction Act, the Uniform Trade 
+Secrets Act, the Uniform Trust Code and the Uniform Voidable Transactions Act. See 
+https://www.njlrc.org/enacted-reports-1. 
+ 
+75 ULC drafts are subject to review, comment and discussion at two annual meetings 
+before submission to a vote by participating states. A majority of voting states, and 
+no fewer than twenty, must approve an act before it is officially adopted.  After final 
+approval, ULC uniform acts are then submitted for consideration by the state 
+legislatures for enactment. 
+ 
+
+=== p42
+ 
+ 
+40 
+ 
+ 
+increased incidences of deed fraud. They represent constructive steps, but this 
+investigation suggests additional measures to address the problem, reflecting a more 
+comprehensive approach, are in order. The following recommendations are intended 
+both to deter, if not prevent, fraudulent conveyances before they occur and to improve 
+the ability of property owners, county officials, and law enforcement to detect and 
+respond to suspicious activity. 
+A. Strengthen Identification Requirements.  
+1. Require Seller Identity Verification By Real Estate 
+Licensees. 
+ 
+Although real estate licensees76 serve as an important first line of defense 
+against deed fraud, New Jersey currently imposes few meaningful requirements for 
+verifying a seller’s identity at the outset of a transaction.77 In the absence of uniform 
+statewide standards, real estate brokers and agents are largely left to rely on their 
+                                                          
+76 The term “real estate licensee” refers to those authorized by the State of New Jersey 
+to assist in the purchase, sale or lease of property. Licenses are issued by the Real 
+Estate Commission (“Commission”), which operates under the auspices of the New 
+Jersey Department of Banking and Insurance (“DOBI”). N.J.S.A. 45:15-1 (prohibits 
+any person from acting as, advertising as, or holding themselves out to be a real estate 
+broker, broker-salesperson, or salesperson without first obtaining a license). Licenses 
+are required by N.J.S.A. 45:15-9. Imposing verification requirements as a condition 
+for obtaining or maintaining a license would implicate the jurisdiction of the 
+Commission and DOBI.  
+ 
+77 Although real estate licensees are subject to the New Jersey Consumer Fraud Act, 
+N.J.S.A. 56:8-1 et seq., the Act provides that a licensee shall not be liable for 
+communicating false, misleading, or deceptive information supplied by another party 
+where the licensee lacked actual knowledge of the falsity and “made a reasonable and 
+diligent inquiry” to determine whether the information was false, misleading, or 
+deceptive. N.J.S.A. 56:8-19.1. 
+ 
+
+=== p43
+ 
+ 
+41 
+ 
+ 
+own judgment, experience, and informal due diligence practices when assessing 
+whether a purported seller is legitimate. 
+To help reduce the increase in attempted frauds in connection with real estate 
+transactions, New Jersey could statutorily require real estate licensees to verify the 
+identity of any individual seeking to list a property for sale before accepting the 
+listing. This would not seem particularly onerous. Insisting on proof of a valid 
+government-issued identification and independently confirming that which is 
+provided is not uncommon. One way to do so would be to send written notice to the 
+property owner at the address on record with the municipal tax assessor, informing 
+the owner that a listing has been requested. The benefit of establishing this as a 
+critical checkpoint in the transaction process, helping to detect impersonation 
+schemes and fraudulent listings before they reach the market, would seem to 
+outweigh the costs of the extra time it would take before a listing is accepted by a 
+legitimate real estate licensee.78 
+2. Strengthen Identity Verification Requirements Before 
+Allowing Notarizations. 
+ 
+Notarizations were frequently identified as another link in the title closing 
+chain that can be taken advantage of to accomplish deed fraud. Witnesses differed, 
+however, on the weakest features of the notarization process. Some believe that 
+permitting remote notarizations, where the notary is in one location and the 
+                                                          
+78 This would not be a proverbial “silver bullet,” because it would not address frauds 
+initiated by “For Sale By Owner” listings on various online platforms.  
+ 
+
+=== p44
+ 
+ 
+42 
+ 
+ 
+signatory being notarized is in another, poses a particular problem for the same 
+reason all remote transactions are at risk: It makes it easier for an imposter to pull 
+off the impersonation. Others maintain that the bigger problem isn’t remote 
+notarization, but the counterfeiting of notarial seals and signatures.79 The lack of 
+more empirical data makes it difficult to quantify whether the bigger risk lies within 
+these two areas, or somewhere else. It is worth noting, however, that the ULC’s 
+RULONA, adopted in New Jersey, permits notaries to verify a remotely located 
+signer’s identity based on personal knowledge, a credible witness’s oath or two-factor 
+identity proofing. The statute treats each of the three alternatives as independently 
+sufficient.80 Moreover, the State Treasurer has discretionary rulemaking authority 
+under this provision, which it has exercised to adopt implementing regulations that 
+became effective in February 2022.81 
+Those regulations require a notary performing a remote act to obtain 
+“satisfactory identification,” defined as (i) viewing and verifying a proof-of-identity 
+document, and (ii) using either personal knowledge, or one of several enumerated 
+identity-proofing methods (dynamic knowledge-based authentication, biometric 
+                                                          
+79 See p. 30, supra. In addition to the ALTA survey, those involved in the ULC Draft 
+also maintained that their research identified fake notarizations as a more 
+prevalent problem than abuse of remote notarizations. 
+ 
+80 N.J.S.A. 52:7-10.10 (identity verification for remotely located individuals: personal 
+knowledge, credible-witness oath, or two types of identity proofing, treated as 
+equivalent options). 
+ 
+81 N.J.A.C. 17:50-1.14, adopted by 54 N.J.R. 268(b), effective Feb. 7, 2022. 
+ 
+
+=== p45
+ 
+ 
+43 
+ 
+ 
+verification or a digital public key certificate) to authenticate identity.82 The 
+regulation folds a documentary check into every remote verification, including one 
+where the notary also relies on personal knowledge.  
+As a result, New Jersey stands in good stead compared to some other states 
+where the identity verification requirements imposed on notaries, including for 
+remote notarizations, are more lax. That said, it appears very little, if anything, is 
+done to ensure notaries are in fact meeting these requirements.  
+Moreover, the increased risk of seller impersonation/deed fraud suggests still 
+other effective anti-fraud measures could be added: In addition to existing verification 
+steps, New Jersey could (by statute or regulation) require the thumbprint of all 
+signers to be obtained.83 In addition, to the extent that forged notary signatures and 
+stamps are a significant factor contributing to deed fraud, the notaries purportedly 
+involved in real estate transactions could be added to the PAS so they receive notice 
+of any unauthorized use of their credentials (admittedly, however, this too would fall 
+into the “after-the-fact” category). 
+New Jersey already requires notaries to maintain a journal of every notarial 
+act, including the identity-verification method used, and retain it for ten years.84 
+                                                          
+82 N.J.A.C. 17:50-1.14(g)(3) (requiring visual verification of a proof-of-identity 
+document under N.J.A.C. 17:50-1.13(b)(2), in addition to personal knowledge or an 
+enumerated identity-proofing method). 
+ 
+83 California Government Code 8206(a)(2)(G) (“[i]f the document to be notarized is a 
+deed, quitclaim deed, deed of trust, or other document affecting real property, or a 
+power of attorney document, the notary public shall require the party signing the 
+document to place his or her right thumbprint in the journal . . . “). 
+ 
+84 N.J.S.A. 52:7-10.18. 
+
+=== p46
+ 
+ 
+44 
+ 
+ 
+Article 6 of the ULC Draft85 would enhance journal record keeping in two respects: 
+(i) it would move from a notary’s private journal to a centralized, regulator-
+maintained online log and (ii) it would generate a verification key – attachable to the 
+notarial certificate itself – that any third party could check against that log without 
+needing to obtain the notary’s personal records.86 This logging requirement does not 
+itself validate or invalidate the underlying act – neither a log entry, nor its absence, 
+creates any presumption and has no effect on enforceability.87 
+Were New Jersey to adopt a comparable centralized, publicly-verifiable log as 
+a supplement to its existing journal requirement, it would have two benefits. First, it 
+would make possible the post-signing identification of the verification methods used 
+for a given notarization. That would make it easier, and faster, to get to the bottom 
+of alleged fraudulent transfers. Second, to the extent existing notarization 
+requirements are in fact being honored in the breach, centralized record keeping 
+would seem an effective way of incentivizing notaries to keep better records. 
+3. Strengthen Identity Verification For All Property 
+Conveyances. 
+ 
+As noted, many interviewed saw a disproportionate use of quitclaim deeds in 
+connection with attempted and/or actual instances of deed fraud.88 In addition, 
+                                                          
+ 
+85 See n. 72 supra. 
+ 
+86 Id. 
+ 
+87 Id. 
+ 
+88 See p. 26, supra.  
+ 
+
+=== p47
+ 
+ 
+45 
+ 
+ 
+pending legislation would implement a form of the advance notice discussed in this 
+report: It would permit a property owner to request notice of an attempt to record a 
+quitclaim deed. Recordation would be delayed for at least ten, but no more than 
+twelve, business days. The bills are silent on what transpires after the notification.89 
+The focus on quitclaim deeds is understandable, but empirical data 
+substantiating that they are used more often than other forms of deeds is difficult to 
+obtain. Moreover, any form of conveyance instrument can be validly executed by an 
+individual acting entirely on their own behalf, with no attorney, title company, or 
+lender involved in the transaction to verify the authenticity of the purported 
+transferor. This creates an exploitable gap whenever warranty deeds, mortgages, or 
+other recordable conveyance instruments are self-prepared and self-executed outside 
+of a transaction where a lender, title company or attorney are involved. In other 
+words, the problem may be less of the nature of the deed (quitclaim vs. other) than of 
+one that exists when any of these documents is self-prepared.  
+One response to this is to broaden the focus beyond quitclaim deeds and, not 
+to prohibit self-prepared transfers, but to tighten identity verification at the point of 
+execution or recording for all types of transfers, self-prepared  or not. Although that 
+would not necessarily thwart all attempted frauds, by imposing more barriers for a 
+fraudster to overcome, it would increase the likelihood of exposing an impersonator 
+and ward off many attempts. 
+                                                          
+89 See p. 7 supra.  
+ 
+
+=== p48
+ 
+ 
+46 
+ 
+ 
+For example, Texas now requires photo identification from anyone presenting 
+a conveyance document for recording, with the clerk retaining a copy of the 
+identification presented.90 Florida has piloted a similar identity verification at 
+recording requirement in Lee County.91 However, county clerks are not necessarily 
+required to shoulder the burden of heightened identification standards for all 
+property conveyances. California requires notaries to take a thumbprint in their 
+journal for any document affecting real property, creating a biometric record tied to 
+the signing.92  
+Consistent with this approach, New Jersey could require enhanced identity 
+verification, such as government-issued identification presented to and retained by 
+an attorney, notary, or recording office. One virtue of this approach, in addition to 
+broadening the focus beyond quitclaims, is that it would not seem to impose any 
+undue burden on even legitimate, self-prepared transfers (especially those among 
+family members or known parties) beyond producing identification already required 
+for most other transactions where a lender, title company or attorney are involved. 
+Unlike a restriction on who may prepare a conveyance instrument, this would verify 
+                                                          
+90 Tex. S.B. 15/S.B. 16 (2025) (amending Tex. Prop. Code § 12.001(b) and Tex. Loc. 
+Gov’t Code § 191.010(b) to require photo identification for recording of conveyance 
+documents). 
+ 
+91 Fla. Stat. § 28.2225 (Lee County pilot program). 
+ 
+92 California Government Code 8206(a)(2)(G) (“[i]f the document to be notarized is a 
+deed, quitclaim deed, deed of trust, or other document affecting real property, or a 
+power of attorney document, the notary public shall require the party signing the 
+document to place his or her right thumbprint in the journal . . .”). 
+
+=== p49
+ 
+ 
+47 
+ 
+ 
+that the person signing as the seller is who they claim to be, regardless of who drafted 
+the document. 
+B. Enhance Recording Safeguards And PASs And Expedite Quiet Title 
+Remedies. 
+ 
+There is a general consensus that bolstering the existing voluntary property 
+alert infrastructure could prove to be the quickest and most effective step toward 
+curbing seller impersonation and deed fraud. Currently, these systems operate to 
+alert owners whenever a document affecting their registered property is filed. That 
+facilitates discovery of unauthorized transactions, but isn’t effective at reducing or 
+precluding them. 
+One possible recommendation is to use the existing county-based PASs to allow 
+participating property owners to place a voluntary “freeze” on their title, similar to a 
+credit freeze. No sale or other transaction affecting the title could proceed until the 
+property owner affirmatively removed the freeze. Any freeze would also include 
+multifactor authentication to verify the identity of the person imposing or removing 
+it.  
+Enhancing PASs with a title freeze option could function as a genuine pre-
+transaction block. Rather than simply notifying an owner after the fact, a transaction 
+would be prevented from taking effect in the first place, unless the owner 
+affirmatively lifted the freeze. It would provide those choosing the freeze option to 
+transform the PAS from a fraud detection tool into a fraud prevention tool. This would 
+in fact deliver what some of the commercial services suggest they provide. 
+
+=== p50
+ 
+ 
+48 
+ 
+ 
+There does not appear to be any state where such a system has been 
+implemented on a statewide basis, but localities such as Leavenworth County, 
+Kansas, and Platte County, Missouri, have introduced this option.93 These counties 
+report not only that their freeze mechanisms have proven administratively feasible, 
+but also that they are successful and can be implemented in ways that take full 
+advantage of current technological security measures. 
+For example, in Leavenworth County, Kansas, homeowners can voluntarily 
+record a “Self-Imposed Biometric Lien” against their own property. The lien identifies 
+the lienholder as “Public,” which, in any title search or bank inquiry, would put title 
+companies, lenders and others on notice that the property cannot be conveyed or 
+mortgaged without the owner’s participation.  
+To establish the lien, all owners of the property are required to appear in 
+person at the Register of Deeds Office and their faces are photographed using a 3D 
+biometric liveness camera, a technology designed to resist spoofing by photographs 
+or artificial intelligence. To later sell or refinance the property, the same owners must 
+return for a new scan that matches the original; a matching death certificate can 
+release the lien for a deceased co-owner while leaving it in place for survivors. Judicial 
+actions, such as foreclosures, and existing instruments like powers of attorney or 
+transfer-on-death deeds, take precedence over the lien and are unaffected by it. The 
+                                                          
+93 
+https://files.leavenworthcounty.gov/government/register_of_deeds_office/biometric_li
+en.php; 
+https://www.co.platte.mo.us/media/Department%20Documents/Recorder/Frozen%20
+Deed--%20Self%20Imposed%20Lien%20INFO.pdf. 
+
+=== p51
+ 
+ 
+49 
+ 
+ 
+county has structured the system so that biometric data and personally identifying 
+information are never held together: The biometric image is transmitted to a third-
+party vendor stripped of any identifying metadata, while the county itself retains the 
+identifying information but never sees or stores the biometric data. Each side of the 
+transaction is linked only by an alphanumeric identifier, so that a breach of either 
+dataset alone would not expose usable information about to whom a given record 
+belongs. 
+Platte County, Missouri, has adopted a comparable model through a service 
+called “Frozen Deed.” A homeowner can enroll through a participating title company, 
+bank, mortgage originator, or directly through the county office, creating a biometric 
+signature via a third-party identity platform. That enrollment generates a special 
+lien, which the homeowner signs, has notarized and records against the property, 
+subject to a document-preparation fee plus standard county recording fees. As with 
+the Kansas model, the lien blocks any transfer or new mortgage until the homeowner 
+appears in person for a new biometric scan matching the one on file; a matching scan 
+satisfies and releases the lien. Court-ordered actions, including foreclosures and 
+transfers following an owner’s death, supersede the lien, and refinancing requires the 
+original lien to be released, typically coordinated by the title company. Platte 
+County’s program uses a similar data-separation approach: the county and the 
+Frozen Deed Service store only property-related data, while the biometric platform 
+holds an anonymized, encrypted biometric key with no attached personal 
+information, so the two categories of data are never combined in one place. 
+
+=== p52
+ 
+ 
+50 
+ 
+ 
+Requiring the lifting of a freeze to be accomplished after satisfying a 
+multifactor authentication component would be essential. If a fraudster could remove 
+a freeze as easily as forging the underlying deed, the freeze would provide no real 
+protection and would risk giving owners a false sense of security. But multifactor 
+verification – for example, a combination of a registered password or PIN, a one-time 
+code sent to a verified phone number or email address, or an answer to a pre-
+established personal verification question – now is a common safeguard. That is how 
+consumer credit freezes are lifted and many online transactions now impose similar 
+requirements. 
+In implementing a voluntary title freeze system, the Legislature must consider 
+acceptable multifactor authentication methods, balancing security against 
+accessibility, especially for the elderly and those less familiar with digital verification 
+tools. The Legislature would also need to address circumstances in which the owner 
+is unavailable to lift the freeze personally, including incapacity, death, extended 
+absence, or other situations where the owner cannot be reached in time. Separately, 
+the freeze process must account for transfers that occur by operation of law rather 
+than voluntary action, such as transfers through probate, foreclosure, tax sale, or 
+court order, where requiring owner authentication may not be feasible or appropriate. 
+The framework would also need to provide for last-minute emergencies, such 
+as a legitimate lender-required transaction (e.g., a refinance the true owner initiated 
+but forgot to unfreeze in advance) or a time-sensitive closing, without allowing these 
+exceptions to become an avenue for fraud. Because most real estate transactions 
+
+=== p53
+ 
+ 
+51 
+ 
+ 
+involve institutional lenders and title insurers, the freeze process would also need 
+clear procedures allowing legitimate closings to proceed efficiently once an owner 
+authenticates and lifts the freeze to avoid introducing delay into ordinary, non-
+fraudulent transactions. 
+Another option for enhancing the existing PASs in most New Jersey counties 
+could be to pair the notification to owners that a document affecting their registered 
+property has been filed with a prompt for them to confirm the transaction was 
+legitimate. One way to do this would be to create a longer period between submission 
+of a title-related document for recording and the actual recordation. In between, those 
+registered with the PAS would receive notice of the submission and have an 
+opportunity to confirm the transaction. Another would be to use a pre-closing notice 
+of settlement as the trigger for notice. Yet another would be, instead of recording a 
+title document within the current 48-hour period, to extend that period during which 
+the filing has only a provisional status: If, after receiving notice of the filing a 
+registered owner disputes the transaction as fraudulent within a set number of days, 
+the filing would carry no force until a quiet title action under N.J.S.A. 2A:62-1 et seq. 
+(or another resolution mechanism) reaches a conclusion. Alongside this, lawmakers 
+could weigh statutory changes to fast-track quiet title litigation specifically in 
+fraudulent-conveyance cases — an approach several states, including Alabama and 
+Florida, have already begun to implement. 
+As noted, New Jersey’s current county-level registries function primarily as 
+early-warning tools: a property owner who registers a name or parcel receives notice 
+
+=== p54
+ 
+ 
+52 
+ 
+ 
+when a document affecting that property is recorded. This notice-only design has a 
+significant limitation: County clerk offices are not required to verify the validity of a 
+deed presented for recording and only review whether the deed qualifies on its face 
+to be recorded.94 As a result, a fraudulent deed can still be accepted, indexed, and 
+treated as presumptively valid the moment it is filed, even though the true owner has 
+been notified. The gap between notice and legal effect is precisely where fraudsters 
+exploit the recording system, since by the time an owner responds to an alert, a 
+fraudulent grantee may already be positioned to mortgage or resell the property to 
+an unsuspecting third party. 
+Converting registry participation from a passive notification service to an 
+active checkpoint would mean a recorded transaction would not become legally final 
+until either the notice period lapses without challenge, or, if challenged, until a quiet 
+title action or other resolution has run its course. This shifts the practical burden in 
+a meaningful way. Under the status quo, an owner who discovers a fraudulent 
+conveyance must affirmatively sue to unwind a transaction that already carries the 
+presumption of validity attached to a recorded instrument. Under the proposed 
+framework, a timely challenge would instead freeze the transaction’s legal effect at 
+the outset, preserving the status quo while the dispute is resolved judicially and 
+reducing the window in which a fraudster can convert a fraudulent filing into a 
+completed sale or encumbrance to an innocent third party. 
+                                                          
+94 See pp. 25-26, supra. 
+
+=== p55
+ 
+ 
+53 
+ 
+ 
+Other jurisdictions have already moved in this direction and their experience 
+is instructive. Florida took a similar incremental approach, requiring county clerks 
+to establish a free recording notification service and coupling that notice mechanism 
+with judicial reforms specifically aimed at fraud victims.95 The Florida law entitles a 
+petitioner bringing a quiet title action based on a title fraud allegation to expedited 
+summary procedure timeframes, and requires the court to restore a prevailing 
+plaintiff to the same title and rights the plaintiff held before the fraud occurred.96 
+Florida also directed clerks to provide a simplified form for filing a quiet title action 
+based on fraudulent conveyance, materially lowering the practical barrier for pro se 
+or unsophisticated victims to initiate suit.97 Notably, Florida’s approach 
+acknowledges the same structural weakness identified above: The recording 
+notification service does not prevent a fraudulent deed from being recorded, but only 
+puts the owner on notice that action may be needed — reinforcing why New Jersey’s 
+reform could go further and attach a legal-effect freeze to a timely challenge, rather 
+than relying on notice alone. 
+Alabama’s recently enacted Property Protection Act98 both establishes an 
+expedited quiet title process for certain fraudulent conveyance cases that may help 
+                                                          
+95 Ch. 2023-238, Fla. Stat. (2023). 
+ 
+96 Id. 
+ 
+97 Id. 
+ 
+98 Alabama Property Protection Act, Act No. 2026-536 (2026). 
+ 
+
+=== p56
+ 
+ 
+54 
+ 
+ 
+owners recover property more quickly and creates preventive measures, including 
+tightened notary standards and identity-verification requirements for remote or 
+unfamiliar sellers, designed to make fraudulent transactions harder to complete and 
+easier to reverse.99 This dual-track approach (prevention plus expedited remedy) 
+suggests that a New Jersey reform effort should not treat the registry enhancement 
+and the quiet title amendments as independent options, but as complementary 
+elements of a single strategy. 
+To implement such a system, the Legislature would need to specify a defined 
+challenge window (e.g., 30 or 60 days from notice) that balances giving owners a 
+realistic opportunity to discover and respond to fraud against the competing interest 
+of title stability for good-faith subsequent parties. Additionally, because New Jersey’s 
+recording act (N.J.S.A. 46:26A-1 et seq.) governs priority among competing claims to 
+real property, the Legislature would need to clarify how a “non-final” or challenged 
+transaction is treated for purposes of constructive notice to later purchasers and 
+lienholders during the pendency of a challenge. 
+Pairing an enhanced, legally consequential registry notice with an expedited 
+quiet title procedure would address both halves of the deed fraud problem: the current 
+gap between when fraud occurs and when it is discovered, and the current gap 
+between when fraud is discovered and when it can be judicially remedied. Alabama 
+and Florida’s recent legislative experience demonstrates that this pairing is both 
+                                                          
+99 Id. 
+
+=== p57
+ 
+ 
+55 
+ 
+ 
+administratively feasible and increasingly viewed as a necessary response to the 
+rising incidence of vacant land and seller impersonation fraud.100 
+VIII. Conclusion. 
+The FBI sounded the alarm on deed fraud as a growing and evolving risk for 
+property owners a little over two years ago.101 The accuracy of that 2024 warning has 
+been confirmed by the real estate industry and other sources, including a general 
+consensus among New Jersey’s county clerks that something should be done to stem 
+the increasing scope of the problem. 
+The increase in deed fraud can be traced to several contributing events. An 
+effective response should be similarly multi-faceted. Over the course of the SCI’s 
+investigation, several strategic recommendations to address existing vulnerabilities 
+in the real estate closing process became apparent. This report lays them out for 
+consideration. 
+ The SCI recognizes that none is cost-free, whether measured by time, money 
+or additional effort. But two things seem safe to say: (1) The failure to act inevitably 
+will lead to more harm for defrauded New Jersey property owners; and (2) the efforts 
+in a small number of other states to combat deed fraud, coupled with those of the 
+                                                          
+100 Of course, were county clerks properly resourced with training and funding, and 
+were their roles expanded beyond accurately recording transactions to examining 
+their bona fides, they could be transformed into an effective deterrent/first line of 
+defense. Interviews with county clerks and others, however, underscored the extent 
+to which that could not be easily accomplished. Accordingly, this report has 
+emphasized alternative remedial measures. 
+ 
+101 See pp. 2, 4-5, and 19-23, supra. 
+ 
+
+=== p58
+ 
+ 
+56 
+ 
+ 
+ULC which, over the next two years, likely will result in a proposal New Jersey, along 
+with other states, will be urged to adopt as a uniform state law, will increase the 
+pressure to take legislative action. 
+This report offers the opportunity for the Legislature to get ahead of the ULC 
+or legislative proposals based on other states’ actions and tailor a response taking 
+New Jersey’s unique concerns into account. It has the opportunity to take the lead on 
+what everyone involved agrees is a serious problem by adopting a comprehensive, 
+forward-looking response. 
+ 
+  
+
+=== p59
+ 
+ 
+Appendix A 
+
+=== p60
+Reporting Source
+City
+State
+Report/Referral
+Fairbanks
+Alaska
+IC3
+Fairhope
+Alabama
+IC3
+Huntsville
+Alabama
+IC3
+Orange Beach
+Alabama
+IC3
+Auburn
+Alabama
+IC3
+Montgomery
+Alabama
+IC3
+Mobile
+Alabama
+IC3
+Elmore County
+Alabama
+IC3
+Anchorage
+Alaska
+IC3
+Wasilla
+Alaska
+IC3
+Anchorage
+Alaska
+IC3
+Anchorage
+Alaska
+IC3
+Fairbanks
+Alaska
+IC3
+Tolleson
+Arizona
+IC3
+Hot Springs
+Arizona
+IC3
+Peoria
+Arizona
+IC3
+Gilbert
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Fountain Hills
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Arizona city
+Arizona
+IC3
+Gilbert
+Arizona
+IC3
+Goodyear
+Arizona
+IC3
+Casa Grande
+Arizona
+IC3
+Cornville
+Arizona
+IC3
+Buckeye
+Arizona
+IC3
+Mesa
+Arizona
+IC3
+Scotsdale
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Queen Creek
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Prescott
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Tucson
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Chino Valley
+Arizona
+IC3
+Glendale
+Arizona
+IC3
+San Tan Valley
+Arizona
+IC3
+Anthem
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+
+=== p61
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Phoenix
+Arizona
+IC3
+Williams
+Arizona
+IC3
+Mesa
+Arizona
+IC3
+Eudora
+Arizona
+IC3
+Sedona
+Arizona
+IC3
+Sierra Vista
+Arizona
+IC3
+Queen Creek
+Arizona
+IC3
+Unknown
+Arizona
+IC3
+Mesa
+Arizona
+IC3
+Mesa
+Arizona
+IC3
+Bullhead City
+Arizona
+Report/Referral
+Scottsdale
+Arizona
+IC3
+Little Rock
+Arkansas
+IC3
+Marion
+Arkansas
+IC3
+San Francisco
+California
+IC3
+Fairfield
+California
+IC3
+San Bernardino
+California
+IC3
+North Hills
+California
+IC3
+Hemet
+California
+IC3
+Los angeles
+California
+IC3
+San Jose
+California
+IC3
+San Jose
+California
+IC3
+Ventura
+California
+IC3
+Chico
+California
+IC3
+Madera
+California
+IC3
+San Francisco
+California
+IC3
+Los Angeles
+California
+IC3
+Folsom
+California
+IC3
+Monterey
+California
+IC3
+San Leandro
+California
+IC3
+Saratoga
+California
+IC3
+Pacifica
+California
+IC3
+Irvine
+California
+IC3
+Irvine
+California
+IC3
+Irvine
+California
+IC3
+Pasadena
+California
+IC3
+Daly City
+California
+IC3
+Fontana
+California
+IC3
+Chino Hills
+California
+
+=== p62
+IC3
+Sonoma
+California
+IC3
+Van Nuys
+California
+IC3
+Durango
+California
+IC3
+San Jose
+California
+IC3
+Morgan Hill 
+California
+IC3
+Vallejo
+California
+IC3
+Long Beach
+California
+IC3
+Fountain Valley
+California
+IC3
+Concord
+California
+IC3
+Los Angeles
+California
+IC3
+Oakland
+California
+IC3
+Rialto
+California
+IC3
+Nevada City
+California
+IC3
+Santa Ana
+California
+IC3
+Concord
+California
+IC3
+Chatsworth
+California
+IC3
+Lake Forest
+California
+IC3
+El Cerrito
+California
+IC3
+San Francisco
+California
+IC3
+Anaheim
+California
+IC3
+Mendocino
+California
+IC3
+Mission Viejo
+California
+IC3
+Hemet
+California
+IC3
+Menifee
+California
+IC3
+Prescott Valley
+California
+IC3
+Riverside
+California
+IC3
+Lancaster
+California
+IC3
+Pinole
+California
+IC3
+Costa Mesa
+California
+IC3
+Pittsburgh
+California
+IC3
+Elk Grove
+California
+IC3
+Lompoc
+California
+IC3
+Lake Tahoe
+California
+IC3
+Salinas
+California
+IC3
+Georgetown
+California
+IC3
+Sacramento
+California
+IC3
+Carlsbad
+California
+IC3
+Sacramento
+California
+IC3
+Campbell
+California
+IC3
+Los Angeles
+California
+IC3
+Murrieta
+California
+IC3
+Hemet
+California
+IC3
+Mountain View
+California
+IC3
+San Pedro
+California
+IC3
+Concord
+California
+IC3
+Fresno
+California
+IC3
+Gualala
+California
+IC3
+Ventura
+California
+IC3
+Antioch
+California
+
+=== p63
+IC3
+Culver City
+California
+IC3
+El Segundo
+California
+IC3
+Pioneertown
+California
+IC3
+Fair Oaks
+California
+IC3
+Del Aire
+California
+IC3
+La Jolla
+California
+IC3
+San Jose
+California
+IC3
+San Jose
+California
+IC3
+Healdsburg
+California
+IC3
+Pilot Hill
+California
+IC3
+Oakland
+California
+IC3
+Campbell
+California
+IC3
+Citrus Heights
+California
+IC3
+Pismo Beach
+California
+IC3
+Not Provided
+California
+IC3
+Westminster
+California
+IC3
+Twentynine Palms
+California
+IC3
+Los Angeles
+California
+IC3
+Van Nuys
+California
+IC3
+Kirkwood
+California
+IC3
+San Diego
+California
+IC3
+Huntington Beach
+California
+IC3
+El Cajon
+California
+IC3
+Bishop
+California
+IC3
+San Francisco
+California
+IC3
+Sacramento
+California
+IC3
+Pomona
+California
+IC3
+Aptos
+California
+IC3
+Sunnyvale
+California
+IC3
+San Diego
+California
+IC3
+Vista
+California
+IC3
+Desert Hot Springs
+California
+IC3
+San Diego
+California
+IC3
+Not Provided
+California
+IC3
+Unknown
+California
+IC3
+Los Angeles
+California
+IC3
+Sunnyvale
+California
+IC3
+Los Angeles
+California
+IC3
+Pacific Palisades
+California
+IC3
+Grass Valley
+California
+IC3
+Ukiah
+California
+IC3
+Sacramento
+California
+IC3
+Beverly Hills
+California
+Report/Referral
+San Bernandino
+California
+Report/Referral
+Ramona
+California
+Report/Referral
+Orinda
+California
+Report/Referral
+Lancaster
+California
+IC3
+Pagosa Springs
+Colorado
+IC3
+Denver
+Colorado
+
+=== p64
+IC3
+Bailey
+Colorado
+IC3
+Peyton
+Colorado
+IC3
+Castle Pines
+Colorado
+IC3
+Colorado Springs
+Colorado
+IC3
+Denver
+Colorado
+IC3
+Colorado Springs
+Colorado
+IC3
+Golden
+Colorado
+IC3
+Bayfield
+Colorado
+IC3
+Pagosa Springs
+Colorado
+IC3
+Denver
+Colorado
+IC3
+Los Angeles
+Colorado
+IC3
+Colorado Springs
+Colorado
+IC3
+Denver
+Colorado
+IC3
+La Veta
+Colorado
+IC3
+Lakewood
+Colorado
+IC3
+Woodland Park
+Colorado
+IC3
+Longmont
+Colorado
+IC3
+Elizabeth
+Colorado
+IC3
+Larkspur
+Colorado
+IC3
+Not Provided
+Colorado
+IC3
+Littleton
+Colorado
+IC3
+Denver
+Colorado
+IC3
+Danbury
+Connecticut
+IC3
+New Britain
+Connecticut
+IC3
+West Hartford
+Connecticut
+IC3
+Bridgeport
+Connecticut
+IC3
+Washington
+Connecticut
+IC3
+Waterbury
+Connecticut
+IC3
+Gales Ferry
+Connecticut
+IC3
+Fairfield
+Connecticut
+IC3
+Stratford
+Connecticut
+IC3
+Rehoboth Beach
+Delaware
+IC3
+Bethany Beach
+Delaware
+IC3
+Washington
+District of Columbia
+IC3
+Washington
+District of Columbia
+IC3
+Stuart
+Florida
+IC3
+Ocala
+Florida
+IC3
+Boynton beach
+Florida
+IC3
+Davie
+Florida
+IC3
+Gulf Breeze
+Florida
+IC3
+Palm City
+Florida
+IC3
+Riviera Beach
+Florida
+IC3
+Jacksonville
+Florida
+IC3
+Ocala
+Florida
+IC3
+Plantation
+Florida
+IC3
+Palm Bay
+Florida
+IC3
+Palatka
+Florida
+IC3
+Kissimmee
+Florida
+IC3
+Wellington
+Florida
+
+=== p65
+IC3
+Port St. Lucie
+Florida
+IC3
+Cape Coral
+Florida
+IC3
+Orlando
+Florida
+IC3
+Punta Gorda
+Florida
+IC3
+Jacksonville
+Florida
+IC3
+Wimauma
+Florida
+IC3
+Orlando
+Florida
+IC3
+Tampa
+Florida
+IC3
+Loxahatchee
+Florida
+IC3
+Longwood
+Florida
+IC3
+Orlando
+Florida
+IC3
+Boca Raton
+Florida
+IC3
+Tampa
+Florida
+IC3
+Key Largo
+Florida
+IC3
+Naples
+Florida
+IC3
+Miami Beach
+Florida
+IC3
+Pensacola
+Florida
+IC3
+Duck Key
+Florida
+IC3
+Palm Bay
+Florida
+IC3
+New Port Richey
+Florida
+IC3
+Mount Dora
+Florida
+IC3
+Venice
+Florida
+IC3
+Venice
+Florida
+IC3
+Cape Coral
+Florida
+IC3
+Miami
+Florida
+IC3
+Miami Gardens
+Florida
+IC3
+Palm Beach Gardens
+Florida
+IC3
+Sarasota
+Florida
+IC3
+Valrico
+Florida
+IC3
+Port Charlotte
+Florida
+IC3
+Orlando
+Florida
+IC3
+Palm Bay
+Florida
+IC3
+Sarasota
+Florida
+IC3
+Coral Gables
+Florida
+IC3
+Navarre
+Florida
+IC3
+Miami Gardens
+Florida
+IC3
+Fort Myers
+Florida
+IC3
+Flagler Beach
+Florida
+IC3
+Clearwater
+Florida
+IC3
+Riverview
+Florida
+IC3
+Miami
+Florida
+IC3
+Saint Petersburg
+Florida
+IC3
+Belleair Bluffs
+Florida
+IC3
+Jacksonville
+Florida
+IC3
+Cape Coral
+Florida
+IC3
+Navarre
+Florida
+IC3
+Dania Beach
+Florida
+IC3
+Orlando
+Florida
+IC3
+Saint Cloud
+Florida
+
+=== p66
+IC3
+Homosassa
+Florida
+IC3
+Miami
+Florida
+IC3
+West Melbourne
+Florida
+IC3
+Sumterville
+Florida
+IC3
+Naples
+Florida
+IC3
+Gulf Breeze
+Florida
+IC3
+Deltona
+Florida
+IC3
+Melbourne
+Florida
+IC3
+Clermont
+Florida
+IC3
+Aventura
+Florida
+IC3
+Aventura
+Florida
+IC3
+Panama City Beach
+Florida
+IC3
+Kissimmee
+Florida
+IC3
+Jenson Beach
+Florida
+IC3
+Flagler Beach
+Florida
+IC3
+Deltona
+Florida
+IC3
+Palm Harbor
+Florida
+IC3
+St. Petersburg
+Florida
+IC3
+Tampa
+Florida
+IC3
+St. Petersburg
+Florida
+IC3
+Miami
+Florida
+IC3
+Riverview
+Florida
+IC3
+Coconut Creek
+Florida
+IC3
+Ocala
+Florida
+IC3
+Cocoa Beach
+Florida
+IC3
+Fort Lauderdale
+Florida
+IC3
+Orlando
+Florida
+IC3
+Naples
+Florida
+IC3
+Jupiter
+Florida
+IC3
+Bradenton
+Florida
+IC3
+North Port
+Florida
+IC3
+Beverly Hills
+Florida
+IC3
+Bradenton
+Florida
+IC3
+Wesley Chapel
+Florida
+IC3
+Gainesville
+Florida
+IC3
+Merritt Island
+Florida
+IC3
+Cape Coral
+Florida
+IC3
+DeLand
+Florida
+IC3
+Miami
+Florida
+IC3
+Naples
+Florida
+IC3
+Tarpon Springs
+Florida
+IC3
+Melbourne
+Florida
+IC3
+Punta Gorda
+Florida
+IC3
+Boca Raton
+Florida
+IC3
+Naples
+Florida
+IC3
+Cape Coral
+Florida
+IC3
+St. Augustine
+Florida
+IC3
+St. Petersburg
+Florida
+IC3
+Orlando
+Florida
+
+=== p67
+IC3
+Bradenton
+Florida
+IC3
+Panama City
+Florida
+IC3
+Miami
+Florida
+IC3
+Winter Park
+Florida
+IC3
+Margate
+Florida
+IC3
+Jupiter
+Florida
+IC3
+Boca Raton
+Florida
+IC3
+Coral Gables
+Florida
+IC3
+Land O'Lakes
+Florida
+IC3
+Ft Myers
+Florida
+IC3
+Orlando
+Florida
+IC3
+Englewood
+Florida
+IC3
+Bradenton
+Florida
+IC3
+Sebastian
+Florida
+IC3
+Palm Bay
+Florida
+IC3
+Cape Coral
+Florida
+IC3
+Boca Raton
+Florida
+IC3
+Delray Beach
+Florida
+IC3
+Sunrise
+Florida
+IC3
+Odessa
+Florida
+IC3
+Pensacola
+Florida
+IC3
+Orlando
+Florida
+IC3
+Miami
+Florida
+IC3
+Fort Walton Beach
+Florida
+IC3
+Tampa
+Florida
+IC3
+Orlando
+Florida
+IC3
+Palm Bay
+Florida
+IC3
+Port St. Lucie
+Florida
+IC3
+Seminole
+Florida
+IC3
+Ocala
+Florida
+IC3
+Jacksonville
+Florida
+IC3
+Port St. Lucie
+Florida
+IC3
+Winter Garden
+Florida
+IC3
+Palmetto
+Florida
+IC3
+Boynton Beach
+Florida
+IC3
+Thonotosassa
+Florida
+IC3
+Kissimmee
+Florida
+IC3
+Sarasota
+Florida
+IC3
+Sarasota
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+
+=== p68
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Miami
+Florida
+IC3
+Sarasota
+Florida
+IC3
+Captiva Island
+Florida
+IC3
+Miami Lakes
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Monroe County
+Florida
+IC3
+Manatee
+Florida
+IC3
+Miami
+Florida
+IC3
+Tampa
+Florida
+IC3
+Naples
+Florida
+IC3
+Winter Haven
+Florida
+IC3
+Boca Raton
+Florida
+IC3
+Punta Gorda
+Florida
+IC3
+Not Provided
+Florida
+IC3
+Tallahassee
+Florida
+IC3
+St. Augustine
+Florida
+IC3
+Pensacola
+Florida
+IC3
+Deltona
+Florida
+IC3
+Fort Myers
+Florida
+IC3
+Collier County
+Florida
+IC3
+Anna Maria
+Florida
+IC3
+Spring Hill
+Florida
+IC3
+Palmetto
+Florida
+Report/Referral
+Fernandina Beach
+Florida
+Report/Referral
+Sebastian
+Florida
+Report/Referral
+Navarre
+Florida
+Report/Referral
+Naples
+Florida
+Report/Referral
+Naples
+Florida
+Report/Referral
+Naples
+Florida
+Report/Referral
+Bradenton
+Florida
+IC3
+Hephzibah
+Georgia
+IC3
+Atlanta
+Georgia
+IC3
+Sugar Hill
+Georgia
+IC3
+Atlanta
+Georgia
+IC3
+Fayetteville
+Georgia
+IC3
+Stockbridge
+Georgia
+IC3
+Johns Creek
+Georgia
+
+=== p69
+IC3
+Snellville
+Georgia
+IC3
+Rome
+Georgia
+IC3
+Union City
+Georgia
+IC3
+Alpharetta
+Georgia
+IC3
+Duluth
+Georgia
+IC3
+Hephzibah
+Georgia
+IC3
+Peachtree City
+Georgia
+IC3
+Dunwoody
+Georgia
+IC3
+Morven
+Georgia
+IC3
+Woodstock
+Georgia
+IC3
+Sugar Hill
+Georgia
+IC3
+Atlanta
+Georgia
+IC3
+Aragon
+Georgia
+IC3
+Woodstock
+Georgia
+IC3
+Dawson
+Georgia
+IC3
+Mountain View
+Hawaii
+IC3
+Kapaa
+Hawaii
+IC3
+Kihei
+Hawaii
+IC3
+Lahaina
+Hawaii
+IC3
+Koloa
+Hawaii
+IC3
+Honolulu
+Hawaii
+IC3
+Kihei
+Hawaii
+IC3
+Kapaa
+Hawaii
+IC3
+Kamuela
+Hawaii
+IC3
+Honolulu
+Hawaii
+IC3
+Honolulu
+Hawaii
+IC3
+Ewa Beach
+Hawaii
+IC3
+Kauai
+Hawaii
+IC3
+Kauai
+Hawaii
+IC3
+Wailuku
+Hawaii
+Report/Referral
+District of Puna
+Hawaii
+IC3
+Hayden
+Idaho
+IC3
+Caldwell
+Idaho
+IC3
+Boise
+Idaho
+IC3
+Hailey
+Idaho
+IC3
+Boise
+Idaho
+IC3
+Belleville
+Illinois
+IC3
+Bolingbrook
+Illinois
+IC3
+Chicago
+Illinois
+IC3
+Naperville
+Illinois
+IC3
+Palatine
+Illinois
+IC3
+Des Plaines
+Illinois
+IC3
+Bannockbum
+Illinois
+IC3
+Country Club Hills
+Illinois
+IC3
+Not Provided
+Illinois
+IC3
+Frankfort
+Illinois
+IC3
+Chicago
+Illinois
+IC3
+Chicago
+Illinois
+IC3
+Brighton
+Illinois
+
+=== p70
+IC3
+Chicago
+Illinois
+IC3
+Camargo
+Illinois
+IC3
+Wheeling
+Illinois
+IC3
+Morton Grove
+Illinois
+IC3
+Chicago
+Illinois
+IC3
+Deerfield
+Illinois
+IC3
+Waukegan
+Illinois
+IC3
+Chicago
+Illinois
+IC3
+Morton Grove
+Illinois
+IC3
+Niles
+Illinois
+IC3
+Not Provided
+Illinois
+IC3
+South Barrington
+Illinois
+IC3
+Rockford
+Illinois
+Report/Referral
+Fox Lane
+Illinois
+IC3
+Gary
+Indiana
+IC3
+Carmel
+Indiana
+IC3
+Patriot
+Indiana
+IC3
+Indianapolis
+Indiana
+IC3
+Fort Wayne
+Indiana
+IC3
+Terre Haute
+Indiana
+IC3
+Dubuque
+Iowa
+IC3
+Olathe
+Kansas
+IC3
+Topeka
+Kansas
+IC3
+Richmond
+Kentucky
+IC3
+Lexington
+Kentucky
+IC3
+Louisville
+Kentucky
+IC3
+Bowling Green
+Kentucky
+IC3
+Louisville
+Kentucky
+IC3
+Harned
+Kentucky
+IC3
+Louisville
+Kentucky
+IC3
+Erlanger
+Kentucky
+IC3
+Owensboro
+Kentucky
+IC3
+Fort Knox
+Kentucky
+IC3
+Slidell
+Louisiana
+IC3
+Lafayette
+Louisiana
+IC3
+New Orleans
+Louisiana
+IC3
+New Orleans
+Louisiana
+IC3
+Shreveport
+Louisiana
+IC3
+New Orleans
+Louisiana
+IC3
+Shreveport
+Louisiana
+IC3
+Shreveport
+Louisiana
+IC3
+Metairie
+Louisiana
+IC3
+Portland
+Maine
+IC3
+Fort Washington
+Maryland
+IC3
+Silver Spring
+Maryland
+IC3
+Oxon Hill
+Maryland
+IC3
+Laurel
+Maryland
+IC3
+Bowie
+Maryland
+IC3
+Baltimore
+Maryland
+
+=== p71
+IC3
+Baltimore
+Maryland
+IC3
+Baltimore
+Maryland
+IC3
+Ellicott City
+Maryland
+IC3
+Halethorpe
+Maryland
+IC3
+Odenton
+Maryland
+IC3
+Potomac
+Maryland
+IC3
+Fort Washington
+Maryland
+IC3
+West Roxbury
+Massachusetts
+IC3
+Westborough
+Massachusetts
+IC3
+East Taunton
+Massachusetts
+IC3
+Pepperell
+Massachusetts
+IC3
+Springfield
+Massachusetts
+IC3
+Boston
+Massachusetts
+IC3
+Boston
+Massachusetts
+IC3
+Spencer
+Massachusetts
+IC3
+Deerfield
+Massachusetts
+IC3
+West Wareham
+Massachusetts
+IC3
+Worcester
+Massachusetts
+IC3
+Nantucket
+Massachusetts
+IC3
+Cambridge
+Massachusetts
+IC3
+Ashburnham
+Massachusetts
+Report/Referral
+Nantucket
+Massachusetts
+IC3
+Greenville
+Michigan
+IC3
+Flint
+Michigan
+IC3
+White Lake Twp
+Michigan
+IC3
+Southgate
+Michigan
+IC3
+Detroit
+Michigan
+IC3
+Inkster
+Michigan
+IC3
+Grand Rapids
+Michigan
+IC3
+Stockbridge
+Michigan
+IC3
+Warren
+Michigan
+IC3
+Warren
+Michigan
+IC3
+Royal Oak
+Michigan
+IC3
+Sterling Heights
+Michigan
+IC3
+Potterville
+Michigan
+IC3
+Grand Rapids
+Michigan
+IC3
+Lake Ann
+Michigan
+IC3
+Lansing
+Michigan
+IC3
+Lansing
+Michigan
+IC3
+Gaylord
+Michigan
+IC3
+Cheboygan
+Michigan
+Report/Referral
+Gogebic County
+Michigan
+IC3
+Brooklyn Center
+Minnesota
+IC3
+Mendota Heights
+Minnesota
+IC3
+Rochester
+Minnesota
+IC3
+Rochester
+Minnesota
+IC3
+Rochester
+Minnesota
+IC3
+Rochester
+Minnesota
+IC3
+Horn Lake
+Mississippi
+
+=== p72
+IC3
+Jackson
+Mississippi
+IC3
+St. Louis
+Missouri
+IC3
+Bozeman
+Montana
+IC3
+Troy
+Montana
+IC3
+Big Arm
+Montana
+IC3
+Whitefish
+Montana
+IC3
+Whitefish
+Montana
+IC3
+Omaha
+Nebraska
+IC3
+Laurel
+Nebraska
+IC3
+Reno
+Nevada
+IC3
+Fallon
+Nevada
+IC3
+Henderson
+Nevada
+IC3
+North Las Vegas
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Reno
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Carson City
+Nevada
+IC3
+North Las Vegas
+Nevada
+IC3
+Reno
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Las Vegas
+Nevada
+IC3
+Incline Village
+Nevada
+IC3
+Not Provided
+Nevada
+IC3
+Trenton
+New Jersey
+IC3
+Brigantine
+New Jersey
+IC3
+Irvington
+New Jersey
+IC3
+North Caldwell
+New Jersey
+IC3
+Kendall Park
+New Jersey
+IC3
+Hoboken
+New Jersey
+IC3
+Cherry Hill
+New Jersey
+IC3
+Short Hills
+New Jersey
+IC3
+Blairstown
+New Jersey
+IC3
+North Bergen
+New Jersey
+IC3
+Haddonfield
+New Jersey
+IC3
+Saddle River
+New Jersey
+IC3
+Belle Mead
+New Jersey
+IC3
+Secaucus
+New Jersey
+IC3
+Stanhope
+New Jersey
+IC3
+Oxford
+New Jersey
+IC3
+Saddle River
+New Jersey
+IC3
+South Amboy
+New Jersey
+IC3
+Cape May Court House New Jersey
+IC3
+Hazlet
+New Jersey
+
+=== p73
+IC3
+Hasbrouck Heights
+New Jersey
+IC3
+Ocean City
+New Jersey
+IC3
+Pitman
+New Jersey
+IC3
+Branchburg
+New Jersey
+IC3
+Cape May
+New Jersey
+IC3
+Logan
+New Jersey
+IC3
+Millville
+New Jersey
+IC3
+Jersey City
+New Jersey
+IC3
+Livingston
+New Jersey
+IC3
+Barnegat
+New Jersey
+IC3
+Jersey City
+New Jersey
+IC3
+Newark
+New Jersey
+IC3
+Nutley
+New Jersey
+IC3
+Clifton
+New Jersey
+IC3
+Beachwood
+New Jersey
+IC3
+Magnolia
+New Jersey
+IC3
+Trenton
+New Jersey
+IC3
+Freehold
+New Jersey
+IC3
+Whitehouse
+New Jersey
+IC3
+Lakewood
+New Jersey
+IC3
+Sparta
+New Jersey
+IC3
+Paramus
+New Jersey
+IC3
+Mount Laurel
+New Jersey
+IC3
+Howell
+New Jersey
+IC3
+Hasbrouck Heights
+New Jersey
+IC3
+Hardyston
+New Jersey
+IC3
+Branchburg
+New Jersey
+IC3
+Pennsauken
+New Jersey
+IC3
+Woodbury
+New Jersey
+IC3
+Flanders
+New Jersey
+IC3
+Brigantine
+New Jersey
+IC3
+Moorestown
+New Jersey
+IC3
+Fair Lawn
+New Jersey
+IC3
+Ocean City
+New Jersey
+IC3
+Ocean City
+New Jersey
+IC3
+Riveredge
+New Jersey
+IC3
+Atco
+New Jersey
+IC3
+Franklin
+New Jersey
+IC3
+Warren
+New Jersey
+IC3
+Shamong
+New Jersey
+IC3
+Westampton
+New Jersey
+IC3
+Princeton
+New Jersey
+IC3
+Succasunna
+New Jersey
+IC3
+Iselin
+New Jersey
+IC3
+Toms River
+New Jersey
+IC3
+Jersey City
+New Jersey
+IC3
+Brevard
+North Carolina
+IC3
+Princeton
+New Jersey
+IC3
+Morristown
+New Jersey
+
+=== p74
+IC3
+Truth or Consquences
+New Mexico
+IC3
+Cape May County
+New Jersey
+IC3
+Not Provided
+New Jersey
+IC3
+Sea Isle City
+New Jersey
+IC3
+Not Provided
+New Jersey
+IC3
+East Hanover
+New Jersey
+IC3
+Livingston
+New Jersey
+IC3
+West Windsor
+New Jersey
+Report/Referral
+Fairview
+New Jersey
+Report/Referral
+Little Egg Harbor
+New Jersey
+Report/Referral
+Little Egg Harbor
+New Jersey
+Report/Referral
+Beachwood
+New Jersey
+Report/Referral
+Wantage 
+New Jersey
+Report/Referral
+Newton 
+New Jersey
+Report/Referral
+Asbury Park
+New Jersey
+Report/Referral
+Toms River
+New Jersey
+Report/Referral
+Newton
+New Jersey
+Report/Referral
+Branchville
+New Jersey
+Report/Referral
+Stillwater
+New Jersey
+Report/Referral
+Parsippany
+New Jersey
+Report/Referral
+Hopatcong Boro
+New Jersey
+Report/Referral
+Sussex
+New Jersey
+Report/Referral
+Hardwick
+New Jersey
+Report/Referral
+Hampton
+New Jersey
+Report/Referral
+Newton
+New Jersey
+Report/Referral
+Sparta
+New Jersey
+Report/Referral
+Mantolooking
+New Jersey
+Report/Referral
+Hopatcong
+New Jersey
+Report/Referral
+Sparta
+New Jersey
+Report/Referral
+Wantage
+New Jersey
+Report/Referral
+Montague
+New Jersey
+Report/Referral
+Sparta
+New Jersey
+Report/Referral
+Randolph
+New Jersey
+Report/Referral
+Hardyston
+New Jersey
+Report/Referral
+Wantage
+New Jersey
+Report/Referral
+Union Twp
+New Jersey
+Report/Referral
+Jersey City
+New Jersey
+Report/Referral
+Franklin Lakes
+New Jersey
+Report/Referral
+Ridgewood
+New Jersey
+Report/Referral
+Camden
+New Jersey
+Report/Referral
+Forked River
+New Jersey
+Report/Referral
+Montague
+New Jersey
+Report/Referral
+Hampton Twp
+New Jersey
+Report/Referral
+Hamburg
+New Jersey
+Report/Referral
+Glenwood
+New Jersey
+Report/Referral
+Wantage
+New Jersey
+Report/Referral
+Hopatcong
+New Jersey
+Report/Referral
+Westampton Twp
+New Jersey
+Report/Referral
+Southampton
+New Jersey
+
+=== p75
+Report/Referral
+Glenwood
+New Jersey
+Report/Referral
+Lafayette
+New Jersey
+Report/Referral
+Montague
+New Jersey
+Report/Referral
+Not Provided
+New Jersey
+Report/Referral
+Not Provided
+New Jersey
+Report/Referral
+Washington
+New Jersey
+Report/Referral
+Southampton
+New Jersey
+Report/Referral
+Magnolia Boro
+New Jersey
+Report/Referral
+Margate City
+New Jersey
+Report/Referral
+Pilesgrove Twp
+New Jersey
+Report/Referral
+Lower Twp
+New Jersey
+Report/Referral
+East Windsor
+New Jersey
+Report/Referral
+Aberdeen Twp
+New Jersey
+Report/Referral
+Sussex
+New Jersey
+Report/Referral
+Mullica Hill
+New Jersey
+Report/Referral
+Franklin
+New Jersey
+Report/Referral
+Villas
+New Jersey
+Report/Referral
+Villas
+New Jersey
+Report/Referral
+Franklin Lakes
+New Jersey
+IC3
+Albuquerque
+New Mexico
+IC3
+Belen
+New Mexico
+IC3
+Santa Fe
+New Mexico
+IC3
+Belen
+New Mexico
+IC3
+Ruidoso
+New Mexico
+IC3
+Rio Rancho
+New Mexico
+IC3
+Albuquerque
+New Mexico
+IC3
+Taos
+New Mexico
+IC3
+New York
+New York
+IC3
+New York
+New York
+IC3
+Cortland
+New York
+IC3
+Auburndale
+New York
+IC3
+Williamstown
+New York
+IC3
+Goshen
+New York
+IC3
+North Babylon
+New York
+IC3
+Port Jefferson
+New York
+IC3
+Riverhead
+New York
+IC3
+New York
+New York
+IC3
+Purchase
+New York
+IC3
+Kissimmee
+New York
+IC3
+Hicksville
+New York
+IC3
+Andes
+New York
+IC3
+West Islip
+New York
+IC3
+Forest Hills
+New York
+IC3
+Ithaca
+New York
+IC3
+Rego Park
+New York
+IC3
+Brooklyn
+New York
+IC3
+Inwood
+New York
+IC3
+Hamburg
+New York
+IC3
+Brooklyn
+New York
+
+=== p76
+IC3
+Queens
+New York
+IC3
+Queens village
+New York
+IC3
+Manorville
+New York
+IC3
+New York
+New York
+IC3
+New York
+New York
+IC3
+Glen Oaks
+New York
+IC3
+Glen Oaks
+New York
+Report/Referral
+Carlton
+New York
+Report/Referral
+Niagara County
+New York
+Report/Referral
+Niagara County
+New York
+Report/Referral
+Cambria
+New York
+Report/Referral
+Brooklyn Heights
+New York
+Report/Referral
+West Sparta
+New York
+Report/Referral
+South Otselic
+New York
+Report/Referral
+Athens
+New York
+Report/Referral
+Hector
+New York
+Report/Referral
+Northampton
+New York
+Report/Referral
+Theresa
+New York
+Report/Referral
+Callicoon
+New York
+Report/Referral
+Morehouse
+New York
+Report/Referral
+Watervliet
+New York
+Report/Referral
+Hadley
+New York
+Report/Referral
+Germantown
+New York
+Report/Referral
+Rainbow Lake
+New York
+IC3
+Pleasant Garden
+North Carolina
+IC3
+Garner
+North Carolina
+IC3
+Aheboro
+North Carolina
+IC3
+Shelby
+North Carolina
+IC3
+Mooresville
+North Carolina
+IC3
+Morehead City
+North Carolina
+IC3
+Durham
+North Carolina
+IC3
+Durham
+North Carolina
+IC3
+Mcleansville
+North Carolina
+IC3
+Cherryville
+North Carolina
+IC3
+Walkertown
+North Carolina
+IC3
+Weddington
+North Carolina
+IC3
+Weaverville
+North Carolina
+IC3
+Leland
+North Carolina
+IC3
+Charlotte
+North Carolina
+IC3
+Weddington
+North Carolina
+IC3
+Kure Beach
+North Carolina
+IC3
+Raleigh
+North Carolina
+IC3
+Charlotte
+North Carolina
+IC3
+Raleigh
+North Carolina
+Report/Referral
+Kitty Hawk
+North Carolina
+Report/Referral
+Southport
+North Carolina
+IC3
+Not Provided
+Not Provided
+IC3
+Not Provided
+Not Provided
+IC3
+Pegram
+Not Provided
+
+=== p77
+IC3
+Columbus
+Ohio
+IC3
+Amelia
+Ohio
+IC3
+Columbus
+Ohio
+IC3
+Cincinnati
+Ohio
+IC3
+Burgoon
+Ohio
+IC3
+Wapakoneta
+Ohio
+IC3
+Cleveland
+Ohio
+IC3
+Mason
+Ohio
+IC3
+Columbus
+Ohio
+Report/Referral
+Columbus
+Ohio
+IC3
+Dewey
+Oklahoma
+IC3
+Del City
+Oklahoma
+IC3
+Muskogee
+Oklahoma
+IC3
+Portland
+Oregon
+IC3
+Beavercreek
+Oregon
+IC3
+Bend
+Oregon
+IC3
+Saint Helens
+Oregon
+IC3
+Salem
+Oregon
+IC3
+Portland
+Oregon
+IC3
+Portland
+Oregon
+IC3
+Portland
+Oregon
+IC3
+Eugene
+Oregon
+IC3
+Newport
+Oregon
+Report/Referral
+Frenchglen
+Oregon
+IC3
+Beaver
+Pennsylvania
+IC3
+Pittsburgh
+Pennsylvania
+IC3
+Glen Lyon
+Pennsylvania
+IC3
+Wallingford
+Pennsylvania
+IC3
+Parkesburg
+Pennsylvania
+IC3
+Meadville
+Pennsylvania
+IC3
+Emmaus
+Pennsylvania
+IC3
+Forty Fort
+Pennsylvania
+IC3
+State College
+Pennsylvania
+IC3
+York
+Pennsylvania
+Report/Referral
+Hawley
+Pennsylvania
+Report/Referral
+Carlisle
+Pennsylvania
+Report/Referral
+Pittsburgh
+Pennsylvania
+Report/Referral
+Harrisburg
+Pennsylvania
+IC3
+Sabana Grande
+Puerto Rico
+IC3
+San Juan
+Puerto Rico
+IC3
+Middletown
+Rhode Island
+IC3
+Summerville
+South Carolina
+IC3
+Greenville
+South Carolina
+IC3
+Columbia
+South Carolina
+IC3
+Spartanburg
+South Carolina
+IC3
+Charleston
+South Carolina
+IC3
+Travelers Rest
+South Carolina
+IC3
+McColl
+South Carolina
+IC3
+Pawleys Island
+South Carolina
+
+=== p78
+IC3
+North Charleston
+South Carolina
+IC3
+Sunset
+South Carolina
+IC3
+Dalzell
+South Carolina
+IC3
+Anderson
+South Carolina
+IC3
+Ridgeland
+South Carolina
+IC3
+Indian Land
+South Carolina
+IC3
+Greenville
+South Carolina
+IC3
+Hilton Head
+South Carolina
+IC3
+Charleston
+South Carolina
+IC3
+Morristown
+Tennessee
+IC3
+Columbia
+Tennessee
+IC3
+Sevierville
+Tennessee
+IC3
+Bristol
+Tennessee
+IC3
+Maynardsville
+Tennessee
+IC3
+Nashville
+Tennessee
+IC3
+Lebenon
+Tennessee
+IC3
+Sharp's Chapel
+Tennessee
+IC3
+Johnson City
+Tennessee
+IC3
+Jonesborough
+Tennessee
+IC3
+Cordova
+Tennessee
+IC3
+Hermitage
+Tennessee
+IC3
+Oak Ridge
+Tennessee
+IC3
+Knoxville
+Tennessee
+IC3
+Sevierville
+Tennessee
+IC3
+Crossville
+Tennessee
+Report/Referral
+ Spencer
+Tennessee
+IC3
+Denton
+Texas
+IC3
+Missouri City
+Texas
+IC3
+Houston
+Texas
+IC3
+Austin
+Texas
+IC3
+Tomball
+Texas
+IC3
+Austin
+Texas
+IC3
+Houston
+Texas
+IC3
+Pearland
+Texas
+IC3
+Houston
+Texas
+IC3
+Austin
+Texas
+IC3
+Houston
+Texas
+IC3
+Houston
+Texas
+IC3
+San Antonio
+Texas
+IC3
+Cypress
+Texas
+IC3
+Richmond
+Texas
+IC3
+Lucas
+Texas
+IC3
+Houston
+Texas
+IC3
+Cypress
+Texas
+IC3
+College Station
+Texas
+IC3
+Houston
+Texas
+IC3
+Round Top
+Texas
+IC3
+Aubrey
+Texas
+IC3
+Tiki Island
+Texas
+
+=== p79
+IC3
+Plano
+Texas
+IC3
+New Braunfels
+Texas
+IC3
+Tool
+Texas
+IC3
+Arlington
+Texas
+IC3
+El Paso
+Texas
+IC3
+Brenham
+Texas
+IC3
+Fort Davis
+Texas
+IC3
+San Antonio
+Texas
+IC3
+Princeton
+Texas
+IC3
+San Antonio
+Texas
+IC3
+San Antonio
+Texas
+IC3
+El Paso
+Texas
+IC3
+Fort Worth
+Texas
+IC3
+Houston
+Texas
+IC3
+Belton
+Texas
+IC3
+Grand Prairie
+Texas
+IC3
+Fort Worth
+Texas
+IC3
+Frisco
+Texas
+IC3
+San Antonio
+Texas
+IC3
+Rosenberg
+Texas
+IC3
+Converse
+Texas
+IC3
+Humble
+Texas
+IC3
+Terrell
+Texas
+IC3
+Houston
+Texas
+IC3
+Humble
+Texas
+IC3
+Keller
+Texas
+IC3
+Austin
+Texas
+IC3
+Austin
+Texas
+IC3
+San Antonio
+Texas
+IC3
+Canyon Lake
+Texas
+IC3
+Not Provided
+Texas
+IC3
+Dallas
+Texas
+IC3
+Houston
+Texas
+IC3
+Lakeway
+Texas
+IC3
+Rockwall
+Texas
+IC3
+Humble
+Texas
+Report/Referral
+ Mico
+Texas
+Report/Referral
+ Lakehill City
+Texas
+IC3
+Salt Lake City
+Utah
+IC3
+Park City
+Utah
+IC3
+Lehi
+Utah
+IC3
+North Salt Lake
+Utah
+IC3
+Lindon
+Utah
+IC3
+Eden
+Utah
+IC3
+Saratoga Springs
+Utah
+IC3
+Provo
+Utah
+IC3
+Fruit Heights
+Utah
+IC3
+American Fork
+Utah
+IC3
+Fairfax
+Virginia
+
+=== p80
+IC3
+Vienna
+Virginia
+IC3
+Williamsburg
+Virginia
+IC3
+Centreville
+Virginia
+IC3
+Poolesville
+Virginia
+IC3
+Covington
+Virginia
+IC3
+Ashburn
+Virginia
+IC3
+Heathsville
+Virginia
+IC3
+Chesapeake
+Virginia
+IC3
+Williamsburg
+Virginia
+IC3
+Virginia Beach
+Virginia
+IC3
+Great Falls
+Virginia
+IC3
+Virginia Beach
+Virginia
+IC3
+Sterling
+Virginia
+IC3
+Fairfax Station
+Virginia
+IC3
+Manassas
+Virginia
+IC3
+Norfolk
+Virginia
+IC3
+Vienna
+Virginia
+IC3
+Stafford County
+Virginia
+IC3
+Sandbridge
+Virginia
+Report/Referral
+ Bumpass
+Virginia
+Report/Referral
+Catharpin
+Virginia
+Report/Referral
+Galax
+Virginia
+Report/Referral
+Not Provided
+Virginia
+IC3
+Kirkland
+Washington
+IC3
+Buckley
+Washington
+IC3
+Bainbridge Island
+Washington
+IC3
+Seattle
+Washington
+IC3
+Bellevue
+Washington
+IC3
+Bellevue
+Washington
+IC3
+Arlington
+Washington
+IC3
+Lynden
+Washington
+IC3
+Bothell
+Washington
+IC3
+Port Orchard
+Washington
+IC3
+Vancouver
+Washington
+IC3
+Pateros
+Washington
+IC3
+Redmond
+Washington
+IC3
+Everson
+Washington
+IC3
+Sammamish
+Washington
+IC3
+Lacey
+Washington
+IC3
+Sammamish
+Washington
+IC3
+Tacoma
+Washington
+IC3
+Seattle
+Washington
+IC3
+Seattle
+Washington
+IC3
+Redmond
+Washington
+IC3
+Olympia
+Washington
+IC3
+Vancouver
+Washington
+IC3
+Spokane
+Washington
+IC3
+Bellingham
+Washington
+IC3
+Ronald
+Washington
+
+=== p81
+IC3
+Marysville
+Washington
+IC3
+Bridgeport
+Washington
+IC3
+Anacortes
+Washington
+IC3
+Grays Harbor County
+Washington
+IC3
+Seattle
+Washington
+IC3
+Woodinville
+Washington
+IC3
+Longview
+Washington
+IC3
+Martinsburg
+West Virginia
+IC3
+Berkeley County
+West Virginia
+IC3
+Madison
+Wisconsin
+IC3
+Green Bay
+Wisconsin
+IC3
+Oconomowoc
+Wisconsin
+IC3
+Milwaukee
+Wisconsin
+IC3
+Eau Claire
+Wisconsin
+IC3
+River Falls
+Wisconsin
+IC3
+Racine
+Wisconsin
+IC3
+Menomonie
+Wisconsin
+IC3
+Kenosha
+Wisconsin
+IC3
+Keshena
+Wisconsin
+IC3
+Chippewa Falls
+Wisconsin
+IC3
+Teton County
+Wyoming
+
+=== p82
+ 
+ 
+Appendix B 
+
+=== p83
+ 
+Page 1 
+Comparison of Deed Fraud Prevention Recommendations 
+Tennessee (TACIR) · Virginia (VHDA Deed Fraud Technical Advisory Group) · Maine (Commission to Recommend Methods for 
+Preventing Deed Fraud) · Uniform Law Commission (Deed Fraud Study Committee) 
+Legend:  ● = formally recommended/adopted by the body    ◐ = discussed or included as a suggested option, but not a core 
+recommendation    (blank) = not addressed 
+Issue 
+Tennessee 
+(TACIR) 
+Virginia (VHDA 
+TAG) 
+Maine (Deed 
+Fraud 
+Commission) 
+ULC (Study 
+Comm.) 
+Identity Verification Steps 
+Limit/strengthen notary reliance on personal 
+knowledge alone for ID 
+● 
+● 
+ 
+ 
+Advanced ID-verification technology 
+(credential analysis, deepfake/liveness 
+detection, biometrics) 
+ 
+● 
+ 
+ 
+Mandatory notary training/exam (initial and 
+renewal) 
+● 
+● 
+ 
+ 
+Require or raise notary surety bond 
+◐ 
+● 
+ 
+ 
+Criminal background check for notary 
+applicants 
+◐ 
+ 
+ 
+ 
+Mandatory notary journal for all in-person 
+acts, with specified fields 
+● 
+● 
+ 
+ 
+Notary impersonation as distinct crime / 
+stolen-credential protocol 
+◐ 
+● 
+ 
+● 
+Strengthen RON-specific safeguards (digital 
+format retention, seal validation, dual 
+authentication) 
+ 
+● 
+ 
+● 
+Require real estate agent to verify seller’s 
+identity 
+ 
+● 
+● 
+ 
+
+=== p84
+ 
+Page 2 
+Issue 
+Tennessee 
+(TACIR) 
+Virginia (VHDA 
+TAG) 
+Maine (Deed 
+Fraud 
+Commission) 
+ULC (Study 
+Comm.) 
+Require settlement/closing agent to verify 
+seller’s identity 
+ 
+● 
+● 
+ 
+Cross-check tax records / mail notice to 
+owner of record before listing 
+ 
+● 
+● 
+ 
+Recording & Land Records 
+Authorize recorder/register to refuse or flag 
+suspicious documents 
+● 
+● 
+ 
+● 
+Require filer ID or “known filer” system for 
+recording 
+ 
+● 
+ 
+● 
+Property title “freeze” option for owners 
+ 
+● 
+ 
+● 
+Redact signatures/notary info or restrict 
+public access to land records 
+ 
+● 
+ 
+ 
+Alerts & Notification Systems 
+Free property-owner alert notification 
+system 
+◐ 
+● 
+ 
+● 
+Notary alert notification system (notifies 
+notary when their name/seal is used) 
+◐ 
+● 
+ 
+● 
+Criminal Enforcement 
+New or enhanced felony specific to deed 
+fraud 
+ 
+● 
+●1 (rejected) 
+ 
+Multi-jurisdictional prosecution authority 
+ 
+● 
+ 
+ 
+Victim Remedies 
+Expedited process to nullify/clear a 
+fraudulent deed short of full civil suit 
+ 
+● 
+● 
+● 
+
+=== p85
+ 
+Page 3 
+Issue 
+Tennessee 
+(TACIR) 
+Virginia (VHDA 
+TAG) 
+Maine (Deed 
+Fraud 
+Commission) 
+ULC (Study 
+Comm.) 
+Statutory minimum damages/mandatory 
+attorney’s fees for victims 
+ 
+● 
+ 
+ 
+Waive recording fees/transfer taxes on 
+corrective deeds 
+ 
+● 
+ 
+ 
+Process, Data & Education 
+Recommend an ongoing monitoring 
+body/legislative follow-up 
+ 
+ 
+● 
+●2 
+Consumer/public education campaign 
+◐ 
+● 
+● 
+ 
+Centralized statewide data collection on 
+deed fraud incidents 
+ 
+ 
+◐ 
+ 
+ 
+1  Maine’s commission specifically considered and rejected creating a new deed-fraud felony, concluding existing forgery/theft-by-
+deception/false-filing statutes were sufficient. 
+2  The ULC itself functions as the ongoing multi-state body; Maine’s Recommendation 4 directs its Judiciary Committee to 
+monitor the ULC’s eventual uniform/model act. 
+ 

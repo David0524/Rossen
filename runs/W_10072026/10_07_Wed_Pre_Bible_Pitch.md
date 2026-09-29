@@ -6,52 +6,57 @@ Airdate: **Wednesday, Oct 7, 2026** · A + B + two Cs · Prepared Tue, Sept 29, 
 
 | # | Story | The sexy beat | Viral | Slot | Confidence |
 |---|---|---|---|---|---|
-| 1 | **YOU HIRED HER TO CARE FOR DAD… SHE TOOK HIS HOUSE FOR $5** | Dad's caregiver got his deed for $5. His daughter found him dead three days, and police cuffed *her*. | 🔥 YouTube 5.7M (WSMV Short) | Wednesday A story | HIGH — caregiver accused, not charged |
+| 1 | **THEY STOLE HER HOUSE WITH A PIECE OF PAPER** | A forged deed, filed at the county, and your paid-off house belongs to someone else. Sometimes it's the caregiver you let in. | 🔥 YouTube 5.7M (WSMV) · 2.1M (Epic Real Estate) | Wednesday A story | HIGH — caregiver accused, not charged |
 | 2 | **A COMPUTER SAID IT WAS HER FACE… SHE SPENT MONTHS IN JAIL** | AI matched a grandmother's face to a bank thief in a state she'd never visited. | 🔥 YouTube 420K (CBS News) | Wednesday B story | HIGH — thin payoff, needs Jeff's fix |
 | 3 | **HE CALLED FOR A GARAGE DOOR REPAIR… THE BILL WAS $12,000** | An 89-year-old called for a garage-door fix. The bill: $12,000. | — (ABC7 LA 215K) | Wednesday C story | HIGH — company response needed |
 | 4 | **YOUR IPHONE CAN NOW SPOT A SCAM IN PROGRESS… BUT IT'S TURNED OFF** | A new iOS 27 setting can warn your apps you're being worked by a scammer. It ships switched off. | — (creator explainer 61K) | Wednesday C story (2nd) | HIGH — no app named yet |
 
-**SLATE FIT:** Fills an A + B + two-C Wednesday. #1 carries the A: a named daughter on camera and the biggest fresh clip found (5.7M). #2 is a full B with its own victim. #3 is a light C with an 89-year-old. #4 is the do-it-now exhale: update the phone, flip one switch. No title matches on the Rossen channel; #3 sits next to a past home-repair live.
+**SLATE FIT:** Fills an A + B + two-C Wednesday. #1 carries the A: two named families, a state report and a county lawsuit from Sept 9, and the biggest fresh clips found (5.7M, 2.1M). #2 is a full B with its own victim. #3 is a light C with an 89-year-old. #4 is the do-it-now exhale: update the phone, flip one switch. #1 follows an April B on deed fraud (per producer) with new 9/9 pegs; #3 sits next to a past home-repair live.
 
-# 1. YOU HIRED HER TO CARE FOR DAD… SHE TOOK HIS HOUSE FOR $5
+# 1. THEY STOLE HER HOUSE WITH A PIECE OF PAPER
 
-**Slot:** Wednesday A story · **Confidence: HIGH** · *Accused, not charged*
+**Slot:** Wednesday A story · **Confidence: HIGH** · *Allegations, not convictions*
 
-**SLOT FIT:** Wednesday A story. It carries it: a named daughter on camera in four outlets, a second fresh case (Florida arrest 9/17), and mechanics deep enough for 7–8 pages.
+**SLOT FIT:** Wednesday A story. It carries it: two named families, a 9/9 state report, a 9/9 county lawsuit, and 5.7M and 2.1M clips.
 
-> 🔥 **VIRAL CLIP** — WSMV 4 Nashville YouTube Short, 5,680,248 views (observed 9/29), uploaded ~Aug 29 (article date)
-> https://www.youtube.com/shorts/3EzgKCWb83Q · appears to show daughter Nora Rowland on the deed (title, article)
+> 🔥 **VIRAL CLIP** — YouTube: WSMV Short 5,680,248 views, uploaded ~Aug 29 (caregiver deed) · Epic Real Estate 2,076,283, uploaded Aug 28 per producer · observed 9/29
+> https://www.youtube.com/shorts/3EzgKCWb83Q · https://www.youtube.com/watch?v=rlxysfWUkmM
 > *Not watched — no timecode, no outcue.*
 
 ### WORKING TEASE
 
-> YOU HIRE SOMEONE TO CARE FOR YOUR DAD… IN HIS OWN HOME.
-> WEEKS LATER SHE HAS HIS POWER OF ATTORNEY. THEN HIS HOUSE… FOR FIVE DOLLARS.
-> HIS DAUGHTER FINDS OUT HE'S BEEN DEAD THREE DAYS… AND POLICE PUT *HER* IN HANDCUFFS.
-> THE FREE ALERT THAT TELLS YOU THE SECOND SOMEONE TOUCHES YOUR PARENT'S DEED.
+> YOU PAID OFF YOUR HOUSE. IT'S YOURS.
+> UNTIL SOMEONE FILES ONE PIECE OF PAPER AT THE COUNTY… AND NOW IT'S THEIRS.
+> THEY'RE SELLING IT. BORROWING AGAINST IT. MOVING IN.
+> ONE MAN'S CAREGIVER ALLEGEDLY GOT HIS DEED FOR FIVE DOLLARS.
+> THE FREE ALERT THAT TELLS YOU THE SECOND SOMEONE TOUCHES YOUR DEED.
 
 ### THE HOOK
 
-Robert Rowland, 75, of Conway, SC, had Parkinson's and a brain injury. In March 2024 an agency sent caregiver Sarah Smalls. By April she was his power of attorney, and on April 17 a quitclaim deed moved his home to her for $5. His daughter Nora drove down from Baltimore when he stopped calling. She learned over a Ring doorbell that he'd died three days earlier, then police handcuffed her; the charges were dismissed. Two years later, Nora says, the caregiver still lives in the $300,000 house. Police are investigating; **Smalls has not been charged.**
+Deed fraud: a scammer forges a deed, records it at the county, then sells or borrows against a home the owner still owns. **Paid-off homes are the target:** no lender lien, no lender checking at closing (Yahoo/Moneywise). On Sept 9, Harris County, TX sued nine people it says took at least 10 homes; Keata Wade's family lost her late grandmother's house to fake deeds. The same day, New Jersey's investigation commission released its deed-fraud report. It opens with the woman charged with trying to steal the title to Graceland. The insider version: in Conway, SC, Robert Rowland's caregiver allegedly got his deed for $5, and his daughter was the one handcuffed. The caregiver has not been charged.
 
 ### HOW IT WORKS
 
-- **Power of attorney first.** Then she can sign at the bank and the courthouse.
-- **Nobody checks the deal.** Register of deeds: "If it contains all the correct information… we record it."
-- Cash follows. Nora alleges about $27,000, including $14,000 in cash.
-- **It's not one case.** Port St. Lucie, FL, Sept 17: police say a caregiver drained an 84-year-old from ~$106K to ~$4,900 and put him on a $616,550 mortgage.
+- **Pick a target:** paid-off, vacant, elderly, deceased or out-of-state owners (NJ report).
+- **Fake the owner:** forged signature, fake ID, a fooled notary.
+- **File it:** "If it contains all the correct information… we record it." (Horry County deeds office)
+- **Cash out:** a quick cash sale, a remote closing or a loan. Industry estimate: seniors absorb **44%** of dollar losses (cited in the NJ report).
+
+### WHAT'S NEW
+
+Ran as a B in April, per the producer. New: the 9/9 NJ report, the 9/9 Harris suit, the caregiver case.
 
 ### FOOTAGE WE NEED
 
-- **The get: WSMV Short, 5.7M** (clearance from WSMV and Gray).
-- Inside Edition, Nora on camera, 272K (-tbGdiOzo80); WMBF 128K (7WXREQ4_5Vo), which may carry Ring and bodycam footage.
-- Jeff screen-share: the county deed-alert sign-up.
+- **The get: WSMV 5.7M** (Nora Rowland), plus Inside Edition 272K.
+- Epic Real Estate 2.1M and Holy Schmidt 858K ("Retirees, once you pay off your mortgage…"): creator explainers, so permission is needed.
+- Harris County: no video found (pull KPRC/KHOU). Jeff screen-share: deed-alert sign-up.
 
 ### THE PAYOFF
 
 - **Sign up for your county's free deed alert.** Horry County emails you when any deed, mortgage or POA is filed in your name. *(verify yours)*
-- Ask the agency: employee, bonded and insured, or independent contractor?
-- Family POA or trust while Mom or Dad can still sign; weekly calls and surprise visits. *(AARP Maryland)*
+- Look up your own deed online now. Watch for a missing tax bill or water bill.
+- Ask your title insurer about forgery coverage. Vet caregivers: employee or contractor?
 
 # 2. A COMPUTER SAID IT WAS HER FACE… SHE SPENT MONTHS IN JAIL
 
@@ -174,9 +179,14 @@ No news package and no victim. The segment is **Jeff on his own iPhone**: update
 
 I cannot watch video. Every clip is described from its title, description or press coverage: no timecodes, no outcues, no confirmation of what's on screen. View counts come from YouTube search results observed Sept 29, 2026. YouTube bot-walled the individual video pages, so **upload dates are inferred from the matching articles**; confirm by hand. Repeat check: all 1,078 @RossenReports titles (videos, lives, shorts) pulled Sept 29, plus the aired bibles in the repo. Live-show captions were blocked, so a topic inside a generically titled live can't be ruled out.
 
-### STORY 1 — CAREGIVER TOOK THE HOUSE
+### STORY 1 — DEED FRAUD (incl. caregiver case)
 
 **Confirmed:**
+
+- NJ State Commission of Investigation, "Deed Fraud and Related Schemes," Sept 9, 2026 (85-page PDF; text saved at research/NJ_SCI_deed_fraud_2026-09-09.txt). Executive summary: after the May 2024 FBI warning, "federal law enforcement arrested a woman and charged her with attempting to steal the title to Graceland." The FBI counts ~135 NJ incidents, "among the top three states nationally." Senior citizens "absorb 44 percent of all dollar losses" (a real-estate publication's estimate). Targets include "vacation homes, rental properties, and properties owned by elderly, deceased, or out-of-state individuals." Proposes an optional title "freeze… much like" a credit freeze. nj.gov/sci/documents/Final%20Deed%20Fraud%20Report%209-9-2026.pdf
+- Hoodline, Sept 2026: Harris County Attorney Abbie Kamin sued nine people Sept 9. At least 10 homes ($100K–$250K each) via forged signatures, fake identities and fraudulent documents, often targeting deceased owners' estates; owners lost access to seven homes. Keata Wade's family lost her late grandmother's Teton Street home (fake deeds recorded July 2023 and March 2025). Kamin: "home theft." hoodline.com/2026/09/harris-county-sues-nine-accused-of-stealing-at-least-10-homes-via-fake-deeds/
+- Yahoo/Moneywise, Sept 10: FBI June 16 alert on criminals impersonating owners. Unencumbered homes "lack a lender's lien that must be cleared at closing." D. Mass. charged three people July 23 (~$1.5M, four states). Advice: county recorder notifications, watch tax and water bills, title insurance post-policy forgery coverage, report to IC3. finance.yahoo.com/real-estate/articles/fbi-issues-warning-us-homeowners-105500748.html
+- Clips (9/29): Epic Real Estate "FBI Issues WARNING About Paid Off Mortgages" 2,076,283 (rlxysfWUkmM); Holy Schmidt "Retirees, Once You Pay Off Your Mortgage, You Have a BIG FRAUD RISK" 858,441 (5QPLImV9PgY).
 
 - WMBF, Aug 27, 2026 (Makayla Evans): Robert Rowland, 75, Conway, SC; Parkinson's and brain injury; "classified as a vulnerable adult." Caregiver Sarah Smalls via Griswold Home Care from March 2024. POA in April. Quitclaim deed April 17 "for five dollars." Nora and her partner handcuffed; her charges dismissed. Conway police investigating. Register of deeds Marion Foxworth III quote. Mentions Ring and police bodycam footage. wmbfnews.com/2026/08/27/this-is-my-dads-house-daughter-claims-nurse-took-deed-fathers-conway-home-before-his-death/
 - WSMV, Aug 29, updated Sept 3: Nora learned via Ring doorbell ("your dad died") that he'd been dead three days, on Father's Day. Griswold statement. wsmv.com/2026/08/29/this-is-my-dads-house-daughter-says-caregiver-took-deed-her-fathers-home-weeks-before-his-death/
@@ -190,6 +200,11 @@ I cannot watch video. Every clip is described from its title, description or pre
 
 **NEEDS VERIFICATION:**
 
+- ⚠️ The producer's note says "55-page report." The PDF is 85 pages; the body runs to about p. 55 before appendices. Say "a new state report."
+- ⚠️ The Graceland case is from 2024 (the NJ report's opener, not a new case). Use it as the hook line, not news.
+- ⚠️ "Touched it as a B story in April": producer's note. Not found in channel titles. Confirm what aired so the page's WHAT'S NEW is exact.
+- ⚠️ Epic Real Estate and Holy Schmidt are creator channels, not news. Upload dates (Aug 28, Aug 9) are from the producer; confirm them, and get permission to use either clip.
+- ⚠️ Harris County: Keata Wade on camera? Not confirmed. No video found. Check KPRC/KHOU/ABC13.
 - 🚨 **The sexiest line is an allegation.** "She took his house for $5" is a recorded deed, but that she *took* it (coercion, abuse, theft) is Nora's claim. **Smalls is not charged.** Say "allegedly," and get Smalls' and Griswold's response. Consider not naming or showing her. Legal reviews the tease before scripting.
 - ⚠️ Timeline conflict. WSMV: dead three days, found out on Father's Day. WMBF: "dead for three days" at his home. CBS: caregiver still there "more than two years after" the death. The year he died (likely 2024) is not stated outright. Also, was Nora *arrested* or only handcuffed? WMBF says handcuffed with charges dismissed; one secondary source says 3 days in custody (not confirmed). Air only "handcuffed."
 - ⚠️ The ~$27,000 figure and "transfers after death" are Nora's allegations via CBS.
@@ -256,12 +271,14 @@ I cannot watch video. Every clip is described from its title, description or pre
 
 All in `runs/W_10072026/research/`:
 
-- Gold-bar courier ring: cut as a repeat. Aired 6/3 and before 7/29; see repeat_check.md.
+- Gold-bar courier ring: held. It aired as a beat on 6/3 (the 7/29 bible never aired); see repeat_check.md.
+- Recovery scams ("we'll get your money back"): FTC alert Aug 3, 2026 and FBI IC3 PSA I-072026-PSA (Jul 20, 2026) loaded. No fresh US victim video found yet; the best clip is CTV W5 "The Suckers List" (522K, Nov 2024, Canadian). Parked for a future B.
 - Spoofed bank caller ID, Bitcoin ATMs, AI property-tax videos, LG TV listening, smart glasses, IDScan, Medicare open enrollment, fake USDA meat, counterfeit airbags, celebrity romance: see the lane files.
 - Runners-up for A: the Buckingham senior-community bankruptcy (NBC, Sept 27, 108K) and the fake Schwab security call (ABC7 SF, 121K). See lane_killer_A_*.md.
 
 ## OPEN QUESTIONS FOR THE MEETING
 
+- **Story 1, shape:** lead with the stranger forging a deed (Harris County, NJ) and turn to the insider (the caregiver)? Or open cold on the caregiver's 5.7M clip?
 - **Story 1, legal:** can the tease say "she took his house" with "allegedly" and no charge? Do we name or show the caregiver? This is the sexiest line and it's an allegation.
 - **Story 1, access:** do we go after Nora Rowland for our own interview, or license WSMV's 5.7M Short plus Inside Edition?
 - **Story 1, peg:** the Rowland case itself is from 2024; the coverage wave is Aug 27–Sept 3. Call Conway PD and the Horry County solicitor this week for any charge update, which would be the freshest possible peg.
