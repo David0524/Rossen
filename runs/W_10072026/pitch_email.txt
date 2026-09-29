@@ -1,44 +1,102 @@
-Subject: Wednesday 10/7 slate: deed fraud leads, three B options, three quick Cs (yes/no?)
-
-Jeff,
-
-Here's the slate for Wednesday, Oct 7. Pitch sheet attached with the full pages and sourcing.
-
-A STORY
 1. THEY STOLE HER HOUSE WITH A PIECE OF PAPER
-Someone files a forged deed at the county and your paid-off house belongs to them. In one case it was allegedly the caregiver the family let in, who got the deed for $5.
-Footage in hand: the caregiver case from WSMV, 5.7M views (https://www.youtube.com/shorts/3EzgKCWb83Q); the daughter on Inside Edition, 272K (https://www.youtube.com/watch?v=-tbGdiOzo80); Epic Real Estate's "FBI warning about paid-off mortgages," 2.1M (https://www.youtube.com/watch?v=rlxysfWUkmM); Holy Schmidt, 858K (https://www.youtube.com/watch?v=5QPLImV9PgY). New pegs: New Jersey's state deed-fraud report (it opens with the Graceland title theft) and a Harris County lawsuit over 10+ stolen homes, both Sept 9.
 
-B STORY OPTIONS (pick one, or run two)
+Deed fraud. Scammers forge a deed, record it at the county, and sell or borrow against a home the owner still lives in, and paid-off homes are the target because there's no lender to catch it. New Jersey's State Commission of Investigation released its deed-fraud report Sept 9 (it opens with the woman charged with trying to steal the title to Graceland), and Harris County sued nine people the same day over a ring that took at least 10 homes. The insider version: a South Carolina man's caregiver allegedly got the deed to his house for $5, and his daughter found out he'd been dead three days. That clip has 5.7M views. We touched deed fraud as a B story in April; nothing since.
+
+Coverage:
+WSMV, Aug 29 (daughter says caregiver took deed to her father's home weeks before his death; Short at 5.7M views): https://www.wsmv.com/2026/08/29/this-is-my-dads-house-daughter-says-caregiver-took-deed-her-fathers-home-weeks-before-his-death/
+CBS Baltimore, Sept 3 ($300,000 home; caregiver still living there two years later; civil complaint filed): https://www.cbsnews.com/baltimore/news/baltimore-woman-caregiver-stole-fathers-home-thousands-hid-death-south-carolina/
+NJ State Commission of Investigation report, Sept 9 (Graceland opener; about 135 NJ cases, top three states nationally): https://www.nj.gov/sci/documents/Final%20Deed%20Fraud%20Report%209-9-2026.pdf
+Hoodline, Sept (Harris County sues nine, 10+ homes, families locked out): https://hoodline.com/2026/09/harris-county-sues-nine-accused-of-stealing-at-least-10-homes-via-fake-deeds/
+Yahoo Finance, Sept 10 (FBI warning to paid-off homeowners): https://finance.yahoo.com/real-estate/articles/fbi-issues-warning-us-homeowners-105500748.html
+Epic Real Estate, Aug 28 (2.1M views): https://www.youtube.com/watch?v=rlxysfWUkmM
+Holy Schmidt, Aug 9 (858K views, "Retirees, once you pay off your mortgage..."): https://www.youtube.com/watch?v=5QPLImV9PgY
+Potential Packaging:
+They Stole Her House With a Piece of PAPER — Check Your Deed Tonight
+Paid Off Your Mortgage? You're Now the TARGET — Do This ASAP
+Dad's Caregiver Got His House for $5 — The Free Alert That Stops It
+
 2. A COMPUTER SAID IT WAS HER FACE… SHE SPENT MONTHS IN JAIL
-AI matched a Tennessee grandmother's face to a bank thief in a state she'd never been to, and she sat in jail for months. She's suing for $10M.
-Footage in hand: CBS News, 420K (https://www.youtube.com/watch?v=6gUOZ7tYfZ8); NBC News, 358K (https://www.youtube.com/watch?v=nwRB9NTx6IU).
+
+A Tennessee grandmother of five was arrested while babysitting after AI facial recognition matched her to a bank-fraud suspect in North Dakota, a state she'd never been to. She sat in jail for months until her bank records proved she was home the whole time. Fargo's former police chief admitted "errors were made," and she filed a $10 million federal lawsuit Sept 16.
+
+Coverage:
+ABC News, Sept 17 (grandmother sues for $10M after alleged AI facial recognition match): https://abcnews.com/US/grandmother-falsely-accused-bank-theft-after-alleged-ai/story?id=136536444
+MPR News, Sept 16 (federal suit filed; chief admitted "errors were made"): https://www.mprnews.org/story/2026/09/16/angela-lipps-sues-fargo-over-ai-aided-arrest
+Valley News Live, Mar 24 (Fargo chief admits errors, issues new facial recognition policy): https://www.valleynewslive.com/2026/03/24/fargo-police-chief-admits-errors-ai-arrest-case-issues-new-facial-recognition-policy/
+CBS News, Sept (420K views): https://www.youtube.com/watch?v=6gUOZ7tYfZ8
+NBC News (358K views): https://www.youtube.com/watch?v=nwRB9NTx6IU
+Potential Packaging:
+AI Said It Was HER — She Spent Months in Jail for a Crime 1,000 Miles Away
+Your Face Is Already in Police Databases — Here's How to Protect Yourself
+A Computer Put This Grandma in JAIL — Could It Happen to You?
 
 3. STRANGERS MOVED INTO HIS HOUSE… AND HE CAN'T GET THEM OUT
-A fake tenant moves in with a stolen identity and a bad check, and it takes years to get her out. A serial squatter just got 20 years in Texas, and Florida makes fake rental papers a felony this week (Oct 1).
-Footage in hand: CBS Texas, 1.6M (https://www.youtube.com/watch?v=pTwLOlaBVVM); ABC7 San Francisco on the $4.4M Sea Cliff mansion takeover (https://abc7news.com/post/alleged-squatters-take-44-million-san-francisco-sea-cliff-property-year-city-attorney-files-lawsuit/19807938/); A&E "Squatters" clips for b-roll.
+
+Serial squatters and fake tenants. A Texas woman rented a home using her father's identity and a bad check, never paid a dime, and cost the owner her house; she just got 20 years after nearly three dozen evictions. In San Francisco, the city attorney sued over a vacant $4.4 million Sea Cliff home whose deed was allegedly forged at least seven times so strangers could move in. Florida's rental-fraud law (HB 1293) makes fake pay stubs and IDs on a rental application a felony starting this Thursday, Oct 1.
+
+Coverage:
+Yahoo Finance, Sept (serial squatter gets 20 years after nearly three dozen evictions): https://finance.yahoo.com/real-estate/articles/serial-squatter-gets-20-years-133000916.html
+ABC7 San Francisco, Sept 12 (city attorney sues over $4.4M Sea Cliff takeover): https://abc7news.com/post/alleged-squatters-take-44-million-san-francisco-sea-cliff-property-year-city-attorney-files-lawsuit/19807938/
+SF Standard, Sept 17 (accused squatters skip court; judge issues restraining order): https://sfstandard.com/2026/09/17/accused-sea-cliff-squatters-skip-court-as-judge-issues-restraining-order/
+CBS12, Sept (Florida's new rental-fraud law takes effect Oct 1): https://cbs12.com/news/local/florida-law-fake-pay-stubs-and-rental-fraud-what-floridas-new-law-means-for-tenants-landlords-false-identity-counterfeit-documents-hb1293-rental-application-fake-id-bank-statement-impersonating-name
+CBS Texas, Sept 1 (1.6M views): https://www.youtube.com/watch?v=pTwLOlaBVVM
+Verdictly, Aug 7 (3M views): https://www.youtube.com/watch?v=e00lOQepcEE
+Detective Andrew Baxter, Sept 1 (2.3M views): https://www.youtube.com/watch?v=l1mvxJAwzbc
+Potential Packaging:
+Strangers Moved Into His House — And Police CAN'T Remove Them
+Renting Out a Home? THIS Fake Tenant Will Cost You Everything
+Fake Pay Stubs Are Now a FELONY in Florida — What Homeowners Need to Know
 
 4. THE FLASHING LIGHTS BEHIND YOU AREN'T POLICE
-The "officer" pulling you over is a fake. Arizona troopers just arrested one on a Phoenix freeway and think he stopped other drivers too.
-Footage in hand: bodycam videos at 1.9M (https://www.youtube.com/watch?v=UqPk-E7EWmc), 1.8M (https://www.youtube.com/watch?v=nn8kp048BgU) and 1.5M (https://www.youtube.com/watch?v=lErYMZLqKu8). Nobody has screened them yet, and rights are unclear.
 
-C STORIES
+Fake cops pulling drivers over. Arizona DPS arrested a man it says pulled over a Tesla on a Phoenix freeway using a pickup with red and blue dash lights, and troopers think he stopped other drivers too. In North Carolina, a Fayetteville man was arrested after a home robbery while wearing police gear stolen from an officer's house. Bodycam channels have 580K to 1.9M views on fake-cop stops in the last six weeks. Never done.
+
+Coverage:
+Arizona DPS, Sept 17 (man arrested for impersonating an officer during I-17 traffic stop): https://www.azdps.gov/news/releases/1138
+Azfamily, Sept 18 (man accused of impersonating officer on I-17 in north Phoenix): https://www.azfamily.com/2026/09/18/man-accused-impersonating-officer-during-i-17-traffic-stop-north-phoenix/
+ABC11, Sept (Fayetteville man arrested after home robbery while impersonating police): https://abc11.com/post/fayetteville-man-arrested-home-robbery-impersonating-police/19881192/
+Sergeant Curtis, Aug 15 (1.9M views): https://www.youtube.com/watch?v=UqPk-E7EWmc
+FirstResponderFiles, Sept 18 (1.8M views): https://www.youtube.com/watch?v=nn8kp048BgU
+Sergeant Steve, Aug 26 (1.5M views): https://www.youtube.com/watch?v=lErYMZLqKu8
+Raw Authority, Aug 26 (581K views): https://www.youtube.com/watch?v=1r4FXHEVWHw
+Potential Packaging:
+The Flashing Lights Behind You AREN'T Police — Do THIS Before You Pull Over
+Fake Cops Are Pulling Drivers Over — How to Spot One in SECONDS
+If THESE Lights Flash Behind You, Call 911 — Here's Why
+
 5. HE CALLED FOR A GARAGE DOOR REPAIR… THE BILL WAS $12,000
-An 89-year-old called a number he found online for a garage-door fix and got a $12,000 bill.
-Footage in hand: ABC7 Los Angeles, both victims on camera, 215K (https://www.youtube.com/watch?v=-IjgIUdBmvs).
+
+An 89-year-old San Clemente man called a number he found online for a garage-door fix, and they replaced nearly every part but the door: $12,000. A Woodland Hills woman answered a $97 tune-up text ad and paid $4,000. Same company name on both invoices.
+
+Coverage:
+ABC7 Los Angeles, Sept 21 (SoCal homeowners seeking garage door repairs fall victim to overcharging; 215K views on YouTube): https://abc7.com/post/socal-homeowners-seeking-garage-door-repairs-fall-victim-overcharging-scam/19855228/
+Potential Packaging:
+The $97 Garage Door Ad That Cost Him $12,000
+Garage Door Repair SCAM — Don't Let Them Touch It Until You Do THIS
+Home Repair Ripoff: How a Cheap Ad Turns Into a 5-Figure Bill
 
 6. YOUR IPHONE CAN NOW SPOT A SCAM IN PROGRESS… BUT IT'S TURNED OFF
-A new iOS 27 setting can warn your apps when you're being worked by a scammer, but Apple shipped it switched off. You update your phone and flip it on live with viewers.
-Footage in hand: your screen-share. Creator explainer for b-roll, 61K (https://www.youtube.com/watch?v=NeEWKhV4aoE).
+
+iOS 27 added Impersonation Risk Detection: when you're about to send money or change account details in a supporting app, your iPhone checks for signs you're being worked by a scammer posing as your bank, the government or a loved one, and the app can warn you. Apple shipped it switched off. Jeff walks viewers through updating the phone and turning it on, live.
+
+Coverage:
+9to5Mac, Sept 16 (iOS 27 adds scam-prevention feature, here's how to enable it): https://9to5mac.com/2026/09/16/ios-27-adds-scam-prevention-feature-to-iphone-heres-how-to-enable-it/
+Help Net Security, Sept 24 (Apple's new iOS 27 feature looks for signs you're being scammed): https://www.helpnetsecurity.com/2026/09/24/apple-ios-27-impersonation-risk-detection/
+Pixel & POD (61K views): https://www.youtube.com/watch?v=NeEWKhV4aoE
+Potential Packaging:
+Your iPhone Can Now Stop a SCAM — But Apple Turned It OFF
+Update Your iPhone NOW and Flip THIS Switch
+The Hidden iOS 27 Setting That Protects Your Bank Account
 
 7. COSTCO GOT $184 MILLION IN TARIFF REFUNDS… AND CUT PRICES ON EVERYDAY ITEMS
-After the Supreme Court struck down the tariffs, Costco got $184M back and says most of it went into lower prices on produce, meat and drinks, with more than $500M still coming.
-Footage in hand: our own Facebook post on it is already at 10.4K likes, 897 comments and 1.4K shares; WFSB business report, 10K (https://www.youtube.com/watch?v=FOHCkv2Y-wg). You can walk the aisles and check which prices actually dropped.
 
-TWO CALLS WE NEED FROM YOU
-1. Which B runs: the face match (2), the squatters (3) or the fake cops (4)? Or two of them? Heads-up: the squatter story overlaps the A, since both involve forged deeds.
-2. The caregiver in the A story has not been charged. Are you OK saying "allegedly" and leaving her name and face out?
+After the Supreme Court struck down the tariffs, Costco got $184 million back ($174 million in refunds plus $10 million in interest) and says most of it went into lower prices on produce, meat, beverages and some home goods. More than $500 million is still coming. Our own Facebook post on it is at 10.4K likes, 897 comments and 1.4K shares.
 
-Yes or no on the slate? If anything's a no, tell me which slot and we'll re-pitch it today.
-
-Thanks,
+Coverage:
+Fox Business, Sept 25 (Costco receives $184M in tariff refunds, says most will go toward lower prices): https://www.foxbusiness.com/markets/costco-receives-184m-tariff-refunds-says-most-go-toward-lower-prices
+Scripps News, Sept (Costco says it used tariff refunds to cut prices on everyday goods): https://www.scrippsnews.com/business/costco-says-it-used-tariff-refunds-to-cut-prices-on-everyday-goods
+WFSB, Sept (10K views): https://www.youtube.com/watch?v=FOHCkv2Y-wg
+Potential Packaging:
+Costco Got $184 MILLION Back — Here's What Just Got Cheaper
+Costco Is Giving Tariff Money BACK to Members — Check THESE Prices
+Where Your Tariff Refund Went: Costco's New Lower Prices
