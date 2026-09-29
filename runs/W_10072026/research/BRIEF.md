@@ -40,3 +40,13 @@ Already pitched in pass 1 (don't redo, but you may add new facts/clips): spoofed
 home title theft, MyChart fake Medicare kit, brushing QR, parking-meter QR, courier cash pickups.
 For each: scale numbers (losses, complaints, # victims) with source, the victim-register beat, best clips (views/date),
 named victims on camera, why it's trending NOW (dated peg Sep 2026).
+
+## PASS 3 (9/29): ONE KILLER A STORY
+B = AI facial-recognition wrongful arrest (Angela Lipps). C = $97 garage-door ad -> $12K. Need the A.
+Must have: scariest beat for a 55+ viewer (body / home / life savings / being watched); a NAMED human victim ON CAMERA;
+multiple clips incl. at least one big (ideally 500K+ or fast-rising) from Aug 15-Sep 29 2026; a dated peg; a protective payoff.
+Must NOT have aired: check runs/W_10072026/research/rossen_channel_titles_0929.txt (all @RossenReports titles) and the aired list.
+Already ruled out as repeats: gold-bar courier scams (aired twice), FBI/marshal imposters, voice-clone kidnapping, fake Zelle,
+PayPal invoice, smart-TV ACR, store tracking, self-checkout. Also out: kids, Flock, Amazon, Target.
+Already weighed and judged not-killer: spoofed bank caller ID (adjacent), Bitcoin ATM (weak fresh clip), home title theft
+(no fresh victim video), LG TV listening (no victim), smart glasses, IDScan, MyChart, Medicare OEP.
