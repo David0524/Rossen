@@ -1,14 +1,14 @@
-# W 10/07/2026 shortlist (pitched in chat 9/29; awaiting picks)
-Filters applied: 55+ audience, no kids, no Flock, no Amazon/Prime/deals, no Target/store tracking.
-See lane_*.md for every source URL and clip record. Upload dates from YouTube relative labels (bot wall); confirm by hand.
-1. Spoofed bank number + Google scam ads (A) — Watford/WSFA; Keira Leann TikTok (4.5M per press)
-2. Home title theft (A/B) — Harris County 9/9, NJ SCI 9/10; WFLA 533K (3y old)
-3. LG TV listening in standby (B) — Gamers Nexus 7.2M; LG denies
-4. Smart glasses filming strangers (B) — Omitowoju, CBS Chicago 717K; Meta Connect 9/23
-5. IDScan 153M licenses leaked (B/C) — Arizona's Family 72K; ITRC James Lee
-6. Counterfeit airbags, 11 deaths (B) — De La Rosa family lawsuit; clips ~1-2K views
-7. Fake USDA stamp, 167K lbs meat (C) — 11Alive 229K
-8. MyChart fake Medicare kit (C) — CBS Philly 169K; no victim
-9. Hidden cameras in rentals, Jeff sweep demo (C) — Nunn couple Madrid Airbnb; CNBC how-to 3.4M (old)
-10. Money back: Apple $250M / CVS $20.5M (C, wallet) — CBS Chicago 205K
-Parked: heated blankets (Amazon-only), courier bust (rides #1), brushing QR, parking-meter QR.
+# W 10/07/2026 shortlist v2 (pass 1 + pass 2 trending; pitched in chat 9/29; awaiting picks)
+Filters: 55+, no kids, no Flock, no Amazon/Prime/deals, no Target. Sources: lane_*.md.
+1 A  Gold-bar couriers / Frisco senior sting / $250M Tarrant ring — FOX4 1.11M, Frisco 641K, News12 408K, ABC7NY 263K
+2 A/B Spoofed bank number + Google scam ads — WSFA Watford 65K; Keira Leann TikTok 4.5M (press)
+3 B  Bitcoin ATMs: Hawaii ban 10/1, Mesa 87yo widow $500K — ABC15 (new), Scammer Payback 1.14M (2y)
+4 B  Caregiver took Dad's house for $5 + title theft — Inside Edition 272K (Nora Rowland)
+5 B  AI fake "senior property-tax freeze" videos — local warnings only (<400 views)
+6 B  LG TV listening in standby — Gamers Nexus 7.2M
+7 B/C AI facial recognition jailed grandmother — CBS 420K
+8 C  Medicare open enrollment (Oct 15) + paid search ads + $703M call center — thin video
+9 C  $97 garage-door ad -> $12,000 — ABC7 LA 215K
+10 C Fake celebrity romance (fake 49ers WR; fake Rhea Ripley, PA man 64 lost $42.7K) — NBC 121K, GMA 179K
+Carry/park: IDScan licenses, smart glasses, fake USDA meat, MyChart (fold into 8), counterfeit airbags, Xinbi (stat line).
+Flag: jury-duty scam may have aired ~4 wks ago (Tom Simon w/ @RossenReports upload).
