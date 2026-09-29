@@ -1,17 +1,17 @@
 # 10/07 WEDNESDAY — STORY OUTLINE
 
-**Airdate:** Wednesday, October 7, 2026 · **Stories:** A + B + C, confirmed by the producer 9/29 (jeff_approval.md) · **Guest:** none · **Sponsor:** OmniWatch (2 breaks) · **Stage:** beats
+**Airdate:** Wednesday, October 7, 2026 · **Stories:** A + B + C, confirmed by the producer 9/29 (jeff_approval.md) · **Guest:** none · **Sponsor:** OmniWatch (2 breaks) · **Stage:** videos
 
 ## RUNNING ORDER
 
 | Slot | What | Weight | Clips |
 |---|---|---|---|
 | Tease | Face-match arrest, the grocery cart watching you, the drive-thru robot backlash | — | — |
-| A | A computer said it was her face… she spent months in jail | ~45% of show | 5 |
+| A | A computer said it was her face… she spent months in jail | ~45% of show | 4/5 |
 | Break | OmniWatch — after A | — | — |
-| B | Your grocery store is watching every step you take | ~30% | 3 |
+| B | Your grocery store is watching every step you take | ~30% | 3/3 |
 | Break | OmniWatch — after B | — | — |
-| C | They replaced the cashier with a robot… now they're bringing the humans back | ~20% | 3 |
+| C | They replaced the cashier with a robot… now they're bringing the humans back | ~20% | 3/3 |
 | End | End of show | — | — |
 
 ### The show in three sentences
@@ -24,10 +24,11 @@ Dread builds through A (arrested at gunpoint, months inside, nobody checked), st
 
 ### Decisions before we write
 
-- A's victim is 50: a grandmother, just under the 55+ line. A's fix is reworked (9/29): Jeff shows the location history already on his phone, the kind of record that freed her. Keeping location history on is a privacy trade-off; say so on air.
-- B, per Jeff: lead with the grocery AI cart and Lowe's cameras, not Target. B beat 2 stays (producer, 9/29): Target shows have done poorly, but this clip went viral. Don't lean on the brand in copy.
-- B beat 1 wants vertical cart b-roll; a horizontal company video would be a crop. B beat 3 has no person, just Lowe's own privacy statement over plate-camera footage.
-- C beat 1 replaces Jeff's drive-thru test (he won't shoot one) with a viral AI drive-thru fail. Frame C as "bringing the humans back," not "ditching the robots": McDonald's is doing both. C beats 2 and 3 stay; if no video turns up, a graphic or a cut.
+- A beat 2 is WEAK (reporter VO; no clip of Lipps speaking) and A beat 5 is THROTTLED (right clip, captions bot-walled). Retry both in a fresh session.
+- 🚨 CBS misnames her "Lipscomb" on air, twice; A beats 4 and 6 avoid both. Outlets also differ on jail time (6 months vs 2 in North Dakota) and on which image was searched. Settle from the complaint.
+- A's fix is Jeff showing the location history already on his phone; say on air that keeping it on is a privacy trade-off. Lipps is 50, just under 55+.
+- B beat 2 stays (viral, but don't lean on Target). B beat 1 is a CROP (horizontal promo). B beat 3 has no person, just Lowe's own privacy statement.
+- C beat 1: two TikToks pulled (McDonald's McNuggets, Taco Bell "one thousand waters"); call later. C beat 2 and C beat 3 are WEAK; graphic fallback per producer. Frame C as "bringing the humans back."
 
 # A. A COMPUTER SAID IT WAS HER FACE… SHE SPENT MONTHS IN JAIL
 
@@ -47,6 +48,18 @@ Dread builds through A (arrested at gunpoint, months inside, nobody checked), st
 | 6 | The lawsuit | Eric Rice, Lipps' attorney | She sues Fargo and the former detective for $10 million in federal court. | FIND · HORIZONTAL — lawsuit coverage, CBS or KSTP |
 | 7 | Could it be you | You (the viewer) | A face match is supposed to be a lead, not an ID, and many searches start from public social-media photos. | JEFF |
 | 8 | Your alibi is in your pocket | You (the viewer) | Jeff opens the location history already on his phone, the kind of record that freed her. | DEMO |
+
+### Videos
+
+| # | Clip | Shows | In–Out | Status |
+|---|---|---|---|---|
+| 2 | [ABC News 4 / WCYB — Tennessee grandma mistakenly sent to North Dakota jail due to AI error](https://www.youtube.com/watch?v=EcWQI5Zrj4Q) | Local package: US Marshals at her Carter County house, 50-year-old grandmother of five, a state she'd never visited. Reporter voiceover. | 0:16–0:31 "a state she'd never even visited" | WEAK |
+| 3 | [ABC News 4 / WCYB — same package](https://www.youtube.com/watch?v=EcWQI5Zrj4Q) | Attorney Eric Rice: an AI program selected her face and an officer reviewed her social media; then the fake military ID bank fraud. | 0:31–0:46 "an arrest warrant to be issued for her" BUTT 0:46–1:00 "between April and May of 2025" | PICK |
+| 4 | [CBS News — Grandmother falsely accused of bank fraud sues Fargo](https://www.youtube.com/watch?v=6gUOZ7tYfZ8) | Correspondent: months behind bars, couldn't make bail, bank records freed her, released Christmas Eve in the clothes she was booked in. | 1:16–1:46 "the same clothes she was booked in in July" | PICK |
+| 5 | [KVRR — Fargo Police Chief admits mistakes were made in Lipps case](https://www.youtube.com/watch?v=SGFrtUVY6nc) | By title, the chief's admission; transcript not reached (bot wall, two attempts). | — | THROTTLED |
+| 6 | [CBS News — same package](https://www.youtube.com/watch?v=6gUOZ7tYfZ8) | Anchor intro: never set foot in North Dakota, suing Fargo; then the civil-rights and malicious-prosecution claims. | 0:00–0:19 "for false arrest" BUTT 0:42–0:57 "what she believes was malicious prosecution" | PICK |
+
+*Row 2: no Lipps soundbite in any transcript reached. Rows 4 and 6: CBS says "Lipscomb" at 0:32 and 1:08, outside both segments.*
 
 ### The fix
 
@@ -77,6 +90,16 @@ Dread builds through A (arrested at gunpoint, months inside, nobody checked), st
 | 3 | The cameras | Lowe's, per its privacy statement | Cameras log which aisles you walk and how long you stay; some parking lots read your plate. | FIND · HORIZONTAL — plate cameras at a home store |
 | 4 | The fix | You (the viewer) | Jeff shuts off location and Bluetooth for store apps on his phone, live. | DEMO |
 
+### Videos
+
+| # | Clip | Shows | In–Out | Status |
+|---|---|---|---|---|
+| 1 | [Instacart — Meet Caper Cart](https://www.youtube.com/watch?v=IO1wx3zBR6s) | The cart in an aisle, items dropped in, computer-vision cameras, then location-based deals and personalized ads. | 0:00–0:43 "them and even add them back" BUTT 0:48–1:08 "your customer's" | PICK · CROP |
+| 2 | [@user60342208753 — Target basket tracker](https://www.tiktok.com/@user60342208753/video/7679448051202657566) | Store worker calls the box on a basket a tracker, per caption and press write-up. Posted Aug 29. | — | MANUAL · UNVERIFIED |
+| 3 | [NBC Connecticut — License plate readers now at Home Depot, Lowe's](https://www.youtube.com/watch?v=jTKvp41lHZc) | Plate cameras at a Lowe's entrance in Newington, CT, then a professor on oversight and data retention. | 0:17–0:51 "now using them to prevent theft. It's an" BUTT 1:22–1:37 "accountability, data retention." | PICK |
+
+*Rows 1 and 3 reused from run LIVE_10072026 and re-verified against captions this run. Row 2: no caption track, and media downloads blocked, so no Whisper.*
+
 ### The fix
 
 - iPhone: Settings → Privacy & Security → Location Services → each store app → Never. Then Settings → the app → Bluetooth off.
@@ -85,7 +108,7 @@ Dread builds through A (arrested at gunpoint, months inside, nobody checked), st
 
 ### Gaps
 
-- ⚠️ Beat 2 is Target's basket. Jeff wants the story off Target: keep the clip without naming the brand in copy, or drop it (see Decisions).
+- ⚠️ Beat 2 is Target's basket. Kept (producer, 9/29): it went viral, but don't lean on the brand in copy.
 - ⚠️ Beat 2: the "tracker" claim is his; Snopes confirmed the beacon tracks the basket and the store app ties it to you. Air it with that caveat.
 - ⚠️ Beat 3: no named person. It's Lowe's own privacy statement plus plate-camera footage.
 - Jeff's Jan 22 "These Stores Are Spying On You" covered store tracking. New here: the AI carts and the basket beacon.
@@ -104,6 +127,16 @@ Dread builds through A (arrested at gunpoint, months inside, nobody checked), st
 | 2 | They drove away | Chakri Somisetti, Burger King VP of brand technology | He says pilot restaurants saw drive-offs because guests didn't want to talk to a bot. | FIND · HORIZONTAL — news on the Burger King drive-offs |
 | 3 | The humans come back | McDonald's worker (unnamed) | McDonald's starts hospitality training for 2 million-plus workers Oct 5, while still rolling out its AI voice. | FIND · HORIZONTAL — McDonald's retraining news |
 | 4 | Get a person | You (the viewer) | Walk in and order at the counter, or ask for a person at the speaker. | JEFF |
+
+### Videos
+
+| # | Clip | Shows | In–Out | Status |
+|---|---|---|---|---|
+| 1 | [@typical_redhead_ — This McDonald's robot is wild](https://www.tiktok.com/@typical_redhead_/video/7192248491853303086) · alt: [@kristinealise — Taco Bell "one thousand waters"](https://www.tiktok.com/@kristinealise/video/7522285144254795038) | McDonald's AI keeps adding McNuggets, 28 orders deep (Jan 2023, per TODAY). Alt: Taco Bell AI hands the car to a human (Jul 2025, per Daily Dot). Call later. | — | MANUAL · UNVERIFIED |
+| 2 | [NBC News — Burger King's new AI chatbot to improve 'friendliness'](https://www.youtube.com/watch?v=lsqR0oxtvOw) | Burger King's AI headset; "hospitality is fundamentally human," then AI drive-thru chatbots "aren't quite there yet" with a customer glitch. | 1:11–1:16 "hospitality is fundamentally human" BUTT 1:24–1:44 "AI, please remove that item" | WEAK |
+| 3 | [Ecomix Simple — McDonald's Is Retraining 2 Million Workers](https://www.youtube.com/watch?v=sXSImjg6CMU) | Narrated explainer: Oct 5, retraining 2 million-plus people "not on the app, on hospitality." Tiny channel, voice may be synthetic. | 0:16–0:29 "Not on the app. On hospitality." | WEAK |
+
+*Row 1: native TikToks; no captions and no Whisper this run. Rows 2–3: graphic fallback per producer if these don't hold up.*
 
 ### The fix
 
