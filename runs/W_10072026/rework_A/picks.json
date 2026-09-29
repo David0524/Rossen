@@ -1,0 +1,253 @@
+[
+ {
+  "beat_id": "10-07-A5",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=CkUJbJCFjN8",
+  "platform": "youtube",
+  "title": "Wrong car, false arrest: How a Flock camera hit put an innocent woman in jail (Atlanta News First / InvestigateTV)",
+  "status": "PICK",
+  "source_mix": {
+   "affiliate": 2,
+   "network": 3
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=CkUJbJCFjN8",
+    "source_type": "affiliate",
+    "score": 86,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:30",
+      "out": "0:54",
+      "outcue": "leaving the scene of a fatal crash"
+     },
+     {
+      "in": "3:36",
+      "out": "3:56",
+      "outcue": "the Flock images of her black Durango"
+     }
+    ],
+    "reasoning": "InvestigateTV package with Isaacs on camera: black Durango on a Flock camera 3 miles west, eight felonies incl. three vehicular homicide; butt to witnesses' maroon Durango and a partial plate that didn't match.",
+    "flags": [
+     "auto captions; music bed under VO"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=Rre8C8boWog",
+    "source_type": "network",
+    "score": 80,
+    "reason": "CNN live interview; strong but anchor-led, 8 min"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=YUs3Zs-8T84",
+    "source_type": "network",
+    "score": 70,
+    "reason": "Inside Edition; less on the Durango mismatch"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=gLgvrnyQblU",
+    "source_type": "affiliate",
+    "score": 66,
+    "reason": "FOX 13; Senate-investigation angle, not the arrest"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=5XviVc8vLHY",
+    "source_type": "network",
+    "score": 60,
+    "reason": "NewsNation; panel talk"
+   }
+  ],
+  "cannot_determine": [],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A6",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=o9S_qn7oaw0",
+  "platform": "youtube",
+  "title": "Woman tells Senate Flock camera influenced wrongful arrest, led to 86 hours in solitary confinement (USA TODAY)",
+  "status": "PICK",
+  "source_mix": {
+   "network": 3,
+   "affiliate": 2
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=o9S_qn7oaw0",
+    "source_type": "network",
+    "score": 88,
+    "tone": 10,
+    "authenticity": 10,
+    "quality": 8,
+    "fit": 10,
+    "segments": [
+     {
+      "in": "3:16",
+      "out": "3:47",
+      "outcue": "opened for approximately 86 hours"
+     },
+     {
+      "in": "5:34",
+      "out": "5:42",
+      "outcue": "I ran into my mother and father's arms"
+     }
+    ],
+    "reasoning": "Isaacs' own Senate testimony: solitary about 3 and a half days, suicide-prevention dress, door not opened for about 86 hours; butt to release after 13 days.",
+    "flags": [
+     "same hearing feed as FOX 35 M-Vfh-Z9I24 (528K), 86-hours line at ~4:17 there"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=M-Vfh-Z9I24",
+    "source_type": "affiliate",
+    "score": 84,
+    "reason": "Same feed, rolling captions; alt"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=2wJJcFsya1U",
+    "source_type": "network",
+    "score": 60,
+    "reason": "NowThis edit"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=1xGCM4HoXT8",
+    "source_type": "network",
+    "score": 0,
+    "reason": "PBS full hearing; captions null"
+   }
+  ],
+  "cannot_determine": [],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A7",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/shorts/NOY0cLrdTxk",
+  "platform": "youtube",
+  "title": "Woman wrongly accused of theft by officer who used Flock cameras (9NEWS, Short)",
+  "status": "PICK",
+  "source_mix": {
+   "affiliate": 4,
+   "network": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/shorts/NOY0cLrdTxk",
+    "source_type": "affiliate",
+    "score": 85,
+    "tone": 9,
+    "authenticity": 10,
+    "quality": 7,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:21",
+      "out": "0:47",
+      "outcue": "you taking that package"
+     },
+     {
+      "in": "1:29",
+      "out": "1:45",
+      "outcue": "extend you any courtesy"
+     }
+    ],
+    "reasoning": "Vertical Short with the doorbell audio: 'You don't know why I'm here', 'I've got that on my phone right now of you taking that package'; butt to 'Can I see this video?' 'If you go to court, you can.'",
+    "flags": [
+     "reporter VO between exchanges; exact line is 'You don't know why I'm here' here, 'Do you know why I'm here?' in CBS Colorado"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=tsFc-IqoNCI",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "CBS Colorado has 'Do you know why I'm here?' at 0:31\u20130:35; horizontal"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=2a4t7QiMjOk",
+    "source_type": "network",
+    "score": 78,
+    "reason": "Fox News; '100% locked in, zero doubt' doorbell line 0:29\u20130:51, horizontal"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kzVfXvTQnEQ",
+    "source_type": "affiliate",
+    "score": 0,
+    "reason": "FOX31; captions null"
+   }
+  ],
+  "cannot_determine": [
+   "whether the doorbell video fills the vertical frame or is inset"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A8",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=tsFc-IqoNCI",
+  "platform": "youtube",
+  "title": "Colorado woman says she had to use technology to prove she wasn't a porch pirate (CBS Colorado)",
+  "status": "PICK",
+  "source_mix": {
+   "affiliate": 4,
+   "network": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=tsFc-IqoNCI",
+    "source_type": "affiliate",
+    "score": 82,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "1:56",
+      "out": "2:22",
+      "outcue": "clearing that summons"
+     }
+    ],
+    "reasoning": "Her truck's built-in cameras 'recording every moment she was on the road'; 'at 9:22 I drove through Bowmar and I went to my tailor'; weeks later the Columbine Valley chief's email clears the summons.",
+    "flags": [
+     "single segment; Fox News 2a4t7QiMjOk reads the email verbatim at 1:56\u20132:08 ('nicely done, by the way, we have voided the summons') \u2014 alt"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=2a4t7QiMjOk",
+    "source_type": "network",
+    "score": 80,
+    "reason": "Fox News reads the chief's email; alt"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=w7N30V2ltyw",
+    "source_type": "affiliate",
+    "score": 60,
+    "reason": "9NEWS 0:37 discipline tag"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=F2DNTr-sH8I",
+    "source_type": "affiliate",
+    "score": 55,
+    "reason": "WHAS11 re-air"
+   }
+  ],
+  "cannot_determine": [],
+  "transcript_rung": 1
+ }
+]
