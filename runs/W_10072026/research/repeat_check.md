@@ -9,3 +9,8 @@
 - Web: no Rossen-branded gold-bar page found (Substack 5/22 "5 Most Dangerous Scams" #1-4 paywalled).
 ## 7B facial recognition — no title match found. ("If You Click HER FACE" is a different topic by title; not verified.)
 ## 9C garage door — adjacent: stream "THESE Home Repair Scams Are EXPLODING in 2026" (KHVDcIdH90Y, 128K). Contents not checked (captions blocked).
+
+## CORRECTION (user, 9/29): the 7/29/2026 bible (runs/F2_07292026) NEVER AIRED.
+- Gold bars: the only AIRED evidence is 6/3 (b03, fake marshals -> gold bars, as a beat). The 7/29 line "same courier playbook we showed you
+  with the gold bar scam" was in an unaired script and probably refers to the 6/3 beat. Net: gold bars aired as one beat, not a full segment.
+- Fake FBI/IC3 recovery scam, AI voice-clone kidnapping, back-to-school scams, courier cash pickup (Brightwell): NOT aired (7/29 content).

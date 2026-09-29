@@ -11,7 +11,7 @@ mechanism ("there's a camera in the room where you slept", not "check-in fraud")
 
 Already aired (avoid exact repeats; adjacent OK only with a clearly NEW angle):
 FBI imposter / fake marshals (6/3), Temu safety (6/3), fake Zelle / FB Marketplace / counterfeit cash (6/17),
-PayPal invoice scam (5/6), AI voice-clone kidnapping, fake FBI/IC3 recovery, back-to-school scams (7/29),
+PayPal invoice scam (5/6), [7/29 bible NEVER AIRED: voice-clone, fake FBI/IC3 recovery, back-to-school are open],
 smart TV ACR screenshots + Texas suit (Dec 19 2025), store tracking (Jan 21 2026), Instacart pricing (Dec 12 2025),
 self-checkout pullback (6/17), register overcharges (Sept 18 2026).
 
