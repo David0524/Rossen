@@ -1,5 +1,7 @@
 # Research brief — Rossen Reports, Wednesday Oct 7, 2026 (today is Tue Sep 29, 2026)
 
+AUDIENCE IS 55+. NOTHING KIDS-FOCUSED (Jeff: wrong demographic).
+
 Jeff Rossen hosts a consumer-protection show (YouTube live, TikTok, Facebook). We need candidate stories
 for Wed 10/7: an A story (scariest, needs a human victim/on-camera person + several clips) plus beefier and
 lighter B/C stories. EXCLUDE: Amazon/Prime Day/deals (saved for Friday), Target basket trackers / store
