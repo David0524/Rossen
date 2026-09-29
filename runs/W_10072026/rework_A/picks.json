@@ -249,5 +249,43 @@
   ],
   "cannot_determine": [],
   "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A9",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=2a4t7QiMjOk",
+  "platform": "youtube",
+  "title": "FALSELY ACCUSED: Woman fights Flock camera catch with OWN evidence (Fox News)",
+  "status": "PICK",
+  "source_mix": {
+   "network": 1,
+   "affiliate": 4
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=2a4t7QiMjOk",
+    "source_type": "network",
+    "score": 82,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "1:58",
+      "out": "2:16",
+      "outcue": "NO, I DID NOT."
+     }
+    ],
+    "reasoning": "Anchor reads the Columbine Valley chief's email ('nicely done, by the way, we have voided the summons'); Elser says she never got an apology from police or Flock. Added by producer 9/29.",
+    "flags": [
+     "clip opens on the tail of a prior story; in-point 1:58 avoids it"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [],
+  "transcript_rung": 1
  }
 ]
