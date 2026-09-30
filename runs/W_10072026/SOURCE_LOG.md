@@ -83,6 +83,10 @@ C1 alternate: [@kristinealise — Taco Bell "one thousand waters"](https://www.t
 - **Company responses**: nothing on file from Fargo police, Clearview AI, Columbine Valley police, Target or Walmart. The bible quotes the companies' own policies and announcements. It does not say "they didn't get back to us," because nobody asked. If the team reaches out, add the response line.
 - **B3 sound or mute**: the outline tags it BROLL, but the room's note ("they're bragging about it") suggests playing it with sound. There's a DECIDE cue in the bible.
 
+## Revisions
+
+- 9/30: Story B re-ordered at the producer's request. The phone demo ("HERE'S HOW TO PROTECT YOURSELF") now follows the Target basket beat, and the Caper Cart segment runs after it, before the Chapter break. This moves outline rows B3 and B4. One line was added to close the cart segment: "SO NOW YOU KNOW EXACTLY WHAT THAT CART IS DOING…"
+
 ## Format notes
 
 - `draft.md` uses the filled cue blocks requested (numbered marker, URL line, IN-OUT with outcue per segment, BUTT between, OUT: with the final outcue; MANUAL and THROTTLED rows keep the URL with OUT: blank). `check_bible.py` enforces the pre-fill pipeline contract (literal XXX, blank OUT: directly under the marker). On `draft.md` it therefore reports 14 errors, all in those two classes, one per clip marker. A copy with the fills stripped out passes with **0 errors**. Its remaining warnings: 7 clips against the 10–12 band, C's title header, and aphorism candidates, all read and kept.
