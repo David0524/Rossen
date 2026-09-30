@@ -26,8 +26,7 @@ The bible is written from the filled outline and never goes back through the pip
 | `references/example_1007_videos.md` | Phase 2. A real Videos table from a real run. |
 | `scripts/check_outline.py` | **Before every build.** `--stage beats` after Phase 1, `--stage videos` after Phase 2. |
 | `scripts/build_outline.py` | Rendering the `.docx`. |
-| `references/producer-kit/amanda-assignment.md` + `references/examples/amanda-assignment-2026-09-20-F1-phone.md` | When the bible goes to Amanda instead of `rossen-script-writer`: the assignment email. |
-| `references/producer-kit/other-formats.md` | The seven-beat bible assignment, meeting recap, guest-prep agenda, deals talking points, call-in producer brief. |
+| `references/producer-kit/other-formats.md` | The seven-beat bible assignment, meeting recap, guest-prep agenda, deals talking points. |
 | `references/examples/rundown-2026-09-18-F2-car-show.md` | A proposed A-to-E rundown with dated links, the shape the team vets. |
 
 ## Inputs
@@ -222,20 +221,6 @@ stories, or it isn't shaped yet — say so in Decisions.
 4. `soffice --headless --convert-to pdf` it, then look at the pages.
 
 Deliver the `.docx`. Revisions land in the file.
-
-## Handing off to Amanda
-
-When the bible is being written by Amanda rather than `rossen-script-writer`,
-the handoff is the assignment email (`references/producer-kit/amanda-assignment.md`;
-model: the Sep 20 phone-scams assignment). Per story: a headline Jeff will
-understand; what happens, in order, in two or three bullets; the frame (the
-callback or why it's ours); **what to find** (the victim with a dollar figure,
-the demo, the company's response on the record); the close (the viewer advice);
-then dated links, freshest clip first. Include our own earlier episodes when
-there's a callback, with the timestamp. One guest ask per show, with a fallback;
-if someone's already booked and may not fit, say so. Two working titles. For a
-live scam show, give the seven beats in Ghost Tapping order
-(`other-formats.md`). Copy Jeff and Ryan.
 
 ## Handoff to the bible
 

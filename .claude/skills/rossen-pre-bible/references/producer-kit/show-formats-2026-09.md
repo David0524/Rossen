@@ -37,6 +37,5 @@ offer language, links and codes.
 
 Who's who, briefly: Jeff Rossen (host, final say), Ryan Chaffee (YouTube
 strategy, titles, thumbnails), Matt Raub (Head of Content; pitches go through
-him, he reviews every script), Amanda Scherker (producer, writes the bibles,
-books guests), Olivia Flynn (sponsorship), Kyle (AP: clips, graphics; pitches
+him, he reviews every script), Olivia Flynn (sponsorship), Kyle (AP: clips, graphics; pitches
 with David).

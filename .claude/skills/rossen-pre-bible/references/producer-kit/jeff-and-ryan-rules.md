@@ -108,7 +108,7 @@ mechanism. The kit sharpens it three ways:
    new. Reports from advocacy groups or vendors are leads, not sources.
 5. **Write the pitch** (`../pitch-email.md`).
 6. **Send four or five options** with a recommended order.
-7. After approval: the assignment to Amanda (rossen-story-outline).
+7. After approval: the outline w/ videos (rossen-story-outline), then the bible.
 8. When the bible comes in: notes and Jeff's brief (rossen-bible-final-reviewer).
 9. After it airs: story board and transcripts get updated.
 

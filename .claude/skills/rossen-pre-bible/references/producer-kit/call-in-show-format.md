@@ -53,7 +53,7 @@ Guests are often taped in a different order than they air. To keep the edit clea
 
 ## Booking callers
 
-- Sourcing: Jeff forwards viewer emails, Matt and Ryan vet, Amanda calls and books. The help line voicemail database is the main pool.
+- Sourcing: Jeff forwards viewer emails, Matt and Ryan vet, a producer calls and books. The help line voicemail database is the main pool.
 - Book five or six to land two or three.
 - Pre-interview every caller before booking. Confirm the story matches the voicemail.
 - Collect the paper: checks, wire receipts, police reports, the letter, screenshots. It's verification and b-roll.

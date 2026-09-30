@@ -24,12 +24,9 @@ Notes:
 - Say in chat which file was pushed and link it.
 
 ## Team (producer note, 9/30/2026)
-- **Amanda Scherker is no longer with Rossen.** The skills and producer-kit references still mention her
-  (rossen-story-outline "Handing off to Amanda", amanda-assignment.md, "Amanda writes the bibles",
-  "Amanda calls and books" on call-in shows, Jeff-brief credit lines). Ignore those: bibles are written
-  with rossen-script-writer, straight from the approved outline w/ videos. Don't draft an Amanda
-  assignment email or address/copy/credit her. If a task needs someone to book callers or guests, ask
-  the producer who owns it now.
+- Amanda Scherker is no longer with Rossen (the 9/30 skills update removed her from the skills). Bibles are
+  written with rossen-script-writer from the approved outline w/ videos. Don't address, copy or credit her.
+- Call-in shows: "a producer calls and books" callers. Ask the producer who that is before assuming.
 
 ## Audience and standing editorial notes
 - Audience is 55+. Nothing kids-focused.

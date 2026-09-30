@@ -1,6 +1,6 @@
 # How a bible is built
 
-Amanda writes the bibles. Matt sends the structure, beats, and sources. A first pass is due the day before the show. Jeff riffs off the page, so treat guest questions as a map, not a script.
+The bible is built from Matt's structure, beats, and sources. A first pass is due the day before the show. Jeff riffs off the page, so treat guest questions as a map, not a script.
 
 The reference is the Ghost Tapping live bible, taped August 28, 2026. It aired September 2 as "CREDIT CARD ALERT — This NEW 'Tap to Pay' Scam Drains EVERYTHING On Your Card" and did 1.2M views. Every bible since has been asked to follow its skeleton.
 

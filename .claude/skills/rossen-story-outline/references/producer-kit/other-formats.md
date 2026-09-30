@@ -55,7 +55,7 @@ Rules: the header carries the math. Verify the "was" price against the live list
 ## Producer brief for a call-in episode
 
 ```
-[Warm open: what's decided, and that she owns it.]
+[Warm open: what's decided, and that they own it.]
 
 What the show is. [Audio-only callers, taped Friday, two stories plus an expert, one spare.]
 

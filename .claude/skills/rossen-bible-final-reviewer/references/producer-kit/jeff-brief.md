@@ -35,4 +35,4 @@ Matt
 - Name every clip by who's in it ("the Massachusetts woman"), not by number.
 - State the viewer advice for each story.
 - The heads-ups section is the most useful part. Look for: guests who aren't booked, names that don't match between pages, links that aren't video, stats without dates.
-- If you polished someone else's bible, credit them. "Amanda's reporting and structure are all there."
+- If you polished someone else's bible, credit them. "[Writer]'s reporting and structure are all there."
