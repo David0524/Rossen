@@ -92,3 +92,40 @@ C1 alternate: [@kristinealise — Taco Bell "one thousand waters"](https://www.t
 - `draft.md` uses the filled cue blocks requested (numbered marker, URL line, IN-OUT with outcue per segment, BUTT between, OUT: with the final outcue; MANUAL and THROTTLED rows keep the URL with OUT: blank). `check_bible.py` enforces the pre-fill pipeline contract (literal XXX, blank OUT: directly under the marker). On `draft.md` it therefore reports 14 errors, all in those two classes, one per clip marker. A copy with the fills stripped out passes with **0 errors**. Its remaining warnings: 7 clips against the 10–12 band, C's title header, and aphorism candidates, all read and kept.
 - `verify_format.py`: 1 defect class, "clip cue has no OUT: line beneath it," on the 4 clips with IN-OUT or trim lines between the marker and OUT:. It follows from the same filled format. Every other check passes: Arial, 23/18pt, red cues, Letter, 1" margins, 1.15 spacing.
 - The doc is 26 pages against an 18–22 page guide. Spoken body is 1,915 words (band 1,700–2,300); the extra pages are the cue blocks and screen-share steps.
+
+## Story C rewrite (9/30): humans are coming back
+
+Rewritten at the producer's request around the workforce angle. McDonald's leads, and Starbucks is added.
+
+### New clip
+
+| Clip | Orientation | Source | Status |
+|---|---|---|---|
+| 8 | HORIZONTAL | [Bloomberg Television — Starbucks CEO Niccol Says Baristas and Customers Are Embracing Changes](https://www.youtube.com/watch?v=dXkWpdNZas0) | Oct 30, 2025, 2:45. THROTTLED: picked from title and description; captions blocked, no timecodes. |
+
+Clips 6 (TikTok) and 7 (Straight Arrow / IBM) carry over. Unused candidates: [CNBC — Kempczinski on Squawk on the Street, Sept 23, 2026](https://www.youtube.com/watch?v=aN5N9wW7fz8) (investor day; can't confirm he discusses hospitality without a transcript) and [CBS Chicago — McDonald's $8.5 billion modernization, Sept 23, 2026](https://www.youtube.com/watch?v=sqh-V70UROM) (0:36; about remodels, not people). No mainstream news package on the Make It Golden training turned up.
+
+### Confirmed
+
+| Claim | Source |
+|---|---|
+| Make It Golden begins on Founder's Day, Oct 5; a multi-year, systemwide hospitality commitment | [McDonald's release, Sept 23, 2026](https://mcdonalds.mediaroom.com/2026-09-23-McDONALDS-ADVANCES-NEXT-STRATEGY-TO-BECOME-FIRST-CHOICE-FOR-MORE-CUSTOMERS,-MORE-OFTEN) |
+| 2 million+ workers worldwide; the largest training exercise in company history | [Nation's Restaurant News](https://www.nrn.com/quick-service/inside-mcdonald-s-massive-next-evolution-strategy); Jonathan Maze (NRN) |
+| Tiffanie Boyd, global chief people officer: "the largest upskilling effort in the company's history" | WSJ reporting, as quoted in search summaries of NRN, The Cooldown and others |
+| Oct 5 is Ray Kroc's birthday | Coverage of the Sept 23 announcement (Kroc born Oct 5, 1902) |
+| Workers asked to check on people in the lobby and before they leave; friendly service becomes a franchise performance metric | WSJ, via [Inc.](https://www.inc.com/jennifer-knowles/mcdonalds-spent-years-pushing-kiosks-now-it-wants-more-humans-in-the-lobby/91409720) and [The Cooldown, Sept 21, 2026](https://www.thecooldown.com/green-business/mcdonalds-retraining-workers-fast-food-chains/) |
+| National Operators Association (a McDonald's franchisee group): "Many guests say their experiences in our restaurants seem rushed, impersonal, sterile and cold." | WSJ, via the same coverage |
+| McDonald's IBM test: 100+ restaurants, switched off by July 26, 2024; some people said it got simple orders wrong | [CBS MoneyWatch](https://www.cbsnews.com/news/mcdonalds-ends-ai-drive-thru-ordering/); [CNBC, June 17, 2024](https://www.cnbc.com/2024/06/17/mcdonalds-to-end-ibm-ai-drive-thru-test.html) |
+| McDonald's still deploying AI (the release names "GenAI enabled ArchIQ at scale") | McDonald's release, Sept 23, 2026 |
+| Taco Bell: Dane Mathews (chief digital and technology officer) told the WSJ busier restaurants may be better with humans; the company says voice AI "continues to be a core part of our future" | [NRN, Sept 2, 2025](https://www.nrn.com/restaurant-technology/taco-bell-is-adjusting-its-voice-ai-plans) |
+| **Taco Bell expanded voice AI to ~900 restaurants (890+ in 38 states), July 2026** | [NRN](https://www.nrn.com/quick-service/taco-bell-s-drive-thru-voice-ai-expands-to-nearly-900-restaurants); [Fox Business](https://www.foxbusiness.com/lifestyle/taco-bell-ramps-up-voice-ai-use-across-drive-thrus) |
+| Starbucks halted the Siren Craft System (introduced 2024, planned for ~10,000 stores) and is hiring more baristas at thousands of stores; Niccol: the equipment "doesn't solve the customer experience", staffing the stores does | [CBS News, May 1, 2025](https://www.cbsnews.com/news/starbucks-jobs-hiring-baristas/) |
+
+### Flags
+
+- **Taco Bell is not getting rid of AI drive-thrus.** It is expanding them (about 900 as of July 2026). The script says so plainly and uses only the WSJ "busiest restaurants" admission. Starbucks is the real example of a chain dropping machines for people.
+- **The Niccol line** is CBS's paraphrase with fragments of his words. The script attributes it to CBS News rather than quoting him directly.
+- **"Removal of mandated app-promotion scripts"** turned up in one search summary only. Left out of the script until confirmed.
+- **Starbucks' "$500 million+ in labor"** comes from secondary sources (Benzinga, a law-firm blog). Left out of the script.
+- **Burger King voice-AI count**: 50–70 pilots per NRN vs about 1,500 locations per Restaurant Business. The script gives no number.
+- **Tiffanie Boyd quote**: confirm the exact wording against the WSJ piece before air.
