@@ -81,15 +81,8 @@ Show-produced (not clips): A10 Google Maps Timeline screen share; B4 store-app l
 2. **DECIDE** — Clip 12: A (McDonald's McNuggets, Jan 2023) or B (Taco Bell "one thousand waters," Jul 2025).
 3. **PRODUCER** — 108 days, or "nearly six months"? Confirm from the complaint before Jeff says a number.
 
-## Checks run
-
-- `check_bible.py --day wednesday` on the draft as written: 26 errors, and all of them come from the cue format you asked for (14 numbered markers, 12 filled `OUT:` lines). The checker still expects `XXX` and a blank `OUT:`.
-- The same check with the markers set back to `XXX` and the `OUT:` lines blanked: **0 errors.**
-  - Runways are 7–10 lines each; bullets average 11.6 words; exclamations are on 13.3% of lines; 3 open decisions.
-  - Warnings:
-    - 14 clips, against the 10–12 band.
-    - 2,755 spoken body words, against 1,700–2,300.
-    - 3 story-title headers flagged as having no verb, from the checker's limited verb list.
-    - "First person" over the cap, but those hits are nearly all "A-I" lines; there is one real first-person line.
-    - Aphorism candidates: reviewed; they are stakes lines and cue-plus-verdict lines.
-- `build_bible.py` → `10_07 LIVE BIBLE.docx`; `verify_format.py`: **0 defects.** The PDF render runs 38 pages, against 18–22, because of length plus the URL and timecode lines.
+## Checks run (length pass, 9/30)
+- Rewritten to the skill's Wednesday budget: 1,782 spoken body words (band 1,700–2,300), tease 230 words, bullets avg 10.5 words; every clip runway 6–8 lines. Same clips, facts, cues and 3 open decisions.
+- Clip blocks compacted: marker, `OUT:` (final outcue), then one red line with link · in–out (outcue) · BUTT · in–out.
+- `check_bible.py`: 0 errors on the XXX/blank-OUT copy; the raw draft only errors on the numbered markers and filled OUT: lines you asked for. Warnings: 14 clips vs 10–12; header-verb and first-person false positives ("A-I" reads as "I").
+- `verify_format.py`: 0 defects. PDF render: 27 pages (skill band 18–22). The remaining gap is the 14 clip blocks and 17 section headers at 23pt; the next lever is clip count (outline rows A9 and C3 are the soft ones).
