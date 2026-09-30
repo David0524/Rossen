@@ -1,0 +1,1274 @@
+# 20260626 This Amazon Loophole Is DANGEROUS — Change THIS Setting Now!
+[00:05] [music]
+[00:13] [music]
+[00:14] Welcome to Rosson Reports. I am Jeff
+[00:16] Rosson. had to get on the air and tell
+[00:18] you about this because we've just
+[00:19] uncovered just coming off of Amazon
+[00:21] Prime Days a major Amazon security
+[00:24] loophole where scammers are able to get
+[00:27] into your Amazon account and go on a
+[00:29] shopping spree with your credit card
+[00:32] points. They have figured out that yes,
+[00:36] if they use your credit card, fraud can
+[00:39] get determined immediately. You'll get
+[00:41] alerts. People check their apps for
+[00:43] their payments. Well, I didn't buy
+[00:44] anything on Amazon, but if they use your
+[00:47] credit card points that are stored
+[00:50] inside Amazon when you link your credit
+[00:52] card, no one notices and they go on
+[00:56] complete shopping sprees and it can be
+[00:58] weeks or even months before you know
+[01:01] they're gone when you go to use your
+[01:02] points. There is a single setting on
+[01:05] your Amazon account right now that will
+[01:07] protect you from this. Block them out,
+[01:10] stop it from happening. I'm gonna walk
+[01:13] you through that step by step and you'll
+[01:15] be able to pause this video on the
+[01:17] replay and play it again so you can
+[01:19] actually do it in real time with me.
+[01:21] Super super important. But this is
+[01:22] exploding right now where these scammers
+[01:24] are using our hard-earned credit card
+[01:26] points. You work years on them and
+[01:27] they're just blowing them like that.
+[01:29] Whoops. And you don't even know about
+[01:30] it. We're going to get to that and I'll
+[01:31] show you how to fix it. Also, we have
+[01:34] the hottest Amazon deals happening right
+[01:36] now. the biggest price drops. Not these
+[01:38] fake sales where the man, you know, the
+[01:41] sellers bring up the price and then drop
+[01:43] them and say, "Oh, it was a 20%
+[01:45] discount." No, we found real deals on
+[01:48] quality products, biggest price drops of
+[01:50] the week happening right now. And our
+[01:52] deal hunters actually found you
+[01:54] exclusive secret promo codes you will
+[01:56] only get here on Rossom Reports. All
+[01:58] right, to save even more money at
+[02:00] checkout, more than all your friends.
+[02:02] Amazon saying 20% off. We got you 50%
+[02:05] off. In fact, I was just looking. Nine
+[02:06] out of the 10 deals we have for you
+[02:08] today are 50% savings or more. 50% off
+[02:13] or more on nine of the 10 of the deals
+[02:15] we're giving you today. Plus, what's
+[02:17] going on from Texas? How you doing from
+[02:19] St. Augustine, Jerry? That brings me to
+[02:21] my next comment. Join the chat right now
+[02:22] live. Let us know where you're watching
+[02:24] from. But also, we have a special deal
+[02:26] for you today. Oh, and Barbara's a new
+[02:29] member. You can join, hit join to become
+[02:30] a Rosom Reports member for tons of extra
+[02:33] perks like the big green. That's kind of
+[02:35] cool. Uh, good morning from Boston,
+[02:37] Barbara. So, here's the deal. Write in
+[02:39] right now. Our deal hunters are standing
+[02:41] by for your requests on Amazon deals. If
+[02:45] you're looking for something and you're
+[02:46] like, I want the maximum money off and I
+[02:48] want the best deal. Our deal hunters in
+[02:50] real time will find it for you. So, join
+[02:53] the chat. Let us know what you want down
+[02:54] to the brand. Not only the type of thing
+[02:57] you want, down to the brand if you want.
+[02:59] And if it's out there, we will go find
+[03:01] it for you and find those exclusive
+[03:03] promo codes. Hit like and subscribe so
+[03:05] you never miss my content. Really,
+[03:06] really helps us out. And let's get right
+[03:08] to it because we got a big show for you
+[03:10] today and this is important. The new
+[03:12] Amazon scam that is exposing your credit
+[03:15] card points to scammers right now. This
+[03:18] is something they are targeting right
+[03:20] now. When you link your credit card to
+[03:22] your Amazon, which all of us do, it's
+[03:24] how we pay for stuff. It automatically
+[03:27] also links your credit card points,
+[03:30] the stuff you can use on travel, the
+[03:32] stuff you can use on gas, anything,
+[03:35] hotels, whatever, or Amazon, you can
+[03:38] actually spend money with it. Um, and
+[03:41] they're they figured out that if they
+[03:42] get into your Amazon account, which they
+[03:44] can pretty easily do right now because a
+[03:47] lot of our information is on the dark
+[03:48] web, they have passwords. We'll get to
+[03:50] that, too. They're in your account.
+[03:52] Boom. instead of now charging your
+[03:55] credit card where you immediately report
+[03:57] the fraud and they don't get the stuff,
+[03:59] they're stealing those points which they
+[04:01] know um you never noticed. And and the
+[04:04] worst part is this isn't a bug in the
+[04:08] Amazon system. This is a full-on
+[04:10] loophole. This is legitimate. People do
+[04:13] use their credit card points to shop on
+[04:15] Amazon. So, that's why it's a feature,
+[04:17] but it comes defaulted on. We're going
+[04:19] to show you how to default it off. Uh,
+[04:21] this points expert just laid out really
+[04:23] well the problem right now and here is
+[04:25] the very latest. Here's what we know.
+[04:27] >> Good morning. I want to alert you guys
+[04:29] to fraud that is taking place in
+[04:32] people's Amazon accounts. And it's not
+[04:34] credit card fraud. It's actually fraud
+[04:37] where somebody's accessing your Amazon
+[04:39] account and they're using your credit
+[04:42] card points to pay for purchases. So,
+[04:44] think about how scary that could be
+[04:46] because unlike credit card fraud, which
+[04:48] hopefully we learn about it within a
+[04:50] couple of days, couple of weeks here, if
+[04:53] you're not somebody who always checks
+[04:55] the balances of your points and miles of
+[04:57] your MX points, of your Capital One
+[04:59] miles, you may not know for months that
+[05:03] somebody used your points via Amazon to
+[05:06] pay for purchases. And I think what's
+[05:08] annoying me the most about this is not
+[05:11] even the fraud, it's Amazon. because I
+[05:14] did a little testing and realized that
+[05:17] when you add a credit card to your
+[05:18] Amazon account as a payment method,
+[05:21] Amazon automatically links those cards
+[05:25] and those points to be available for
+[05:27] payment.
+[05:29] >> Exactly. So, we're going to show you how
+[05:31] to shut that off. We're going to show
+[05:32] you, and the best part of this is as I
+[05:34] walk you through these step by step, so
+[05:36] get ready. Um, there is a way to have
+[05:40] your credit, but you don't want to just
+[05:41] take your credit card off Amazon.
+[05:43] There's a way to keep your credit card
+[05:44] on for payments, but to not give
+[05:46] scammers or anybody else access to the
+[05:49] points. And by the way, pro tip, you
+[05:51] shouldn't be using your credit card
+[05:53] points to pay for purchases on Amazon
+[05:56] anyway. Terrible exchange rate. You're
+[05:59] just not getting good value for your
+[06:00] points. You should use your credit card
+[06:02] points for travel. It's a show for
+[06:04] another day, but don't use it on Amazon.
+[06:06] So, it's actually the best thing to do
+[06:08] is to unlink your points from Amazon
+[06:10] anyway from both you using it, you
+[06:13] shouldn't, and also scammers. So, let's
+[06:14] get right into this. Here is the step by
+[06:17] step on how to unlink your credit card
+[06:19] points. First thing I want you to do, we
+[06:21] did this on a computer is go to
+[06:23] amazon.com, right? Then in the top right
+[06:25] corner, okay, you see your account right
+[06:28] over there. We'll zoom in. There it is.
+[06:30] Hello, Jennifer, my producer. Okay, then
+[06:32] you see your account. You hit your
+[06:33] account. I want you to scroll down,
+[06:36] okay, from here to shopping programs and
+[06:39] rentals, right in the middle. Then I
+[06:41] want you to hit that button right there
+[06:42] where the mouse is. Shop with points.
+[06:45] Hit shop with points. Then you're going
+[06:47] to see any of your credit cards linked.
+[06:49] Hit unlink. Hit unlink right there. Hit
+[06:52] that button. Boom. Yep. Got a nice arrow
+[06:55] to show you. Hit unlink on any credit
+[06:57] card you have. Then you got to hit it
+[06:59] again. You'll hit unlink a second time.
+[07:01] Boom. Your card points are unlin, but
+[07:05] the great news is your credit card stays
+[07:08] there. So, you can keep shopping on
+[07:10] Amazon. No worries. But you've now taken
+[07:13] the power away from scammers just like
+[07:15] that, which I love. The other thing you
+[07:16] should immediately do, and I have some
+[07:18] screenshots to show you to walk you
+[07:20] through this step by step as well, is to
+[07:22] turn on two factor authentication. So,
+[07:24] if any scammer tries to get into your
+[07:26] account, you're immediately notified.
+[07:28] So, I want to take this shot and show
+[07:30] you. You go to the login, this login
+[07:33] screen under your account again. Okay.
+[07:35] Go to login and security right there in
+[07:38] the top middle. Okay. Then we'll hit
+[07:42] that. Yeah. Then you go to the two-step.
+[07:45] You hit that and you get this the
+[07:46] two-step verification page. Just hit
+[07:48] turn on. Turn that on. Put in your email
+[07:52] address or your phone number for text.
+[07:54] And if somebody tries to log in as you,
+[07:58] you are going to get an alert. even if
+[08:00] they have the right password. Hey, did
+[08:02] you just try to log in from, you know,
+[08:04] Deerfield Beach, Florida? Did you just
+[08:06] try to do that? So, those are the things
+[08:08] that you should do on Amazon right now
+[08:10] to keep these scammers out. You know,
+[08:12] I'm always trying to figure out a way to
+[08:14] keep the scammers out. I actually found
+[08:16] another way to do it as well. There's a
+[08:19] way for you to get a free dark web scan
+[08:22] right now, completely free. And then you
+[08:25] can sign up for these other services.
+[08:26] Uh, this is from this company, Omni
+[08:28] Watch, that's sponsoring us today.
+[08:29] They're awesome. Check this out. As you
+[08:32] know, my life's mission is protecting
+[08:34] you from scammers and cyber criminals.
+[08:36] That's why I'm so excited about today's
+[08:38] sponsor, OmniWatch. OmniWatch is a
+[08:40] digital safety service that protects you
+[08:43] against today's biggest digital threats,
+[08:45] including identity theft, scams, account
+[08:47] takeovers, and fishing attacks.
+[08:49] Basically, the worst scams that I
+[08:50] investigate. Omniwatch can protect you.
+[08:52] And this is really cool. Right now,
+[08:54] OmniWatch is offering a free dark web
+[08:57] scan to see if your personal information
+[08:59] has already been leaked. If you sign up
+[09:01] for OmniWatch, you also get advanced
+[09:03] fraud detection, account monitoring,
+[09:06] access to real fraud experts, even up to
+[09:08] $50,000 in scam insurance. So, if you
+[09:12] become a victim, you're covered. Their
+[09:13] specialists help restore your affected
+[09:15] accounts, and guide you right through
+[09:17] recovery. You need this now before
+[09:19] you're hit. Plus, they offer a money
+[09:21] back guarantee, so there's no risk. Just
+[09:23] scan the QR code on the screen right now
+[09:26] or click the link in the description.
+[09:28] And I got you a special deal today. You
+[09:29] know me. Use promo code Rosson to get
+[09:32] 50% off your first month of Omni Watch
+[09:35] protection. Again, just scan the QR code
+[09:37] on the screen or click the link in the
+[09:39] description to check now and get
+[09:41] protected today. We got to catch these
+[09:43] scams before they happen.
+[09:46] Yes, we do. And now, let's go shopping
+[09:48] on Amazon. We have the biggest price
+[09:51] drops happening anywhere on Amazon right
+[09:53] now. Our deal hunters are the best in
+[09:55] the business. And keep your comments
+[09:57] coming and let us know live what you
+[10:01] want a deal on Amazon. And in real time
+[10:03] during this video, our deal hunters are
+[10:06] going to find it for you. But we brought
+[10:07] 10 deals today uh from our friends over
+[10:09] at Dealsek and our partners. Trey
+[10:11] Donovan is joining us, co-founder of
+[10:13] Dealseek, amazing app that finds these
+[10:16] exclusive secret promo codes to bring
+[10:19] the price down at checkout like crazy.
+[10:22] And Trey, you brought some uh sick deals
+[10:24] today. I know you've been busy with
+[10:25] Prime Day. Let's get right to it. All
+[10:26] right. Philips electric toothbrush. You
+[10:29] got a 50% price drop on this one.
+[10:33] >> Yeah, exactly. Guys, this has been a
+[10:35] huge week for deals. Obviously, we're
+[10:37] coming off of the spike from Prime Day.
+[10:39] There are still some really, really good
+[10:40] deals. And again, as Jeff mentioned,
+[10:42] stacking with promo codes is a way you
+[10:43] can make pretty much every day feel like
+[10:45] Prime Day. We wanted to kick it off with
+[10:47] a name brand Philips Sonic Hair
+[10:49] toothbrush. Arguably one of the most
+[10:51] famous and popular toothbrushes on the
+[10:53] market. The only problem, it is it's
+[10:56] expensive, and everybody knows this.
+[10:57] It's originally $1.99, but today there
+[10:59] is a 50% discount. Again, on Amazon, you
+[11:03] can find this originally selling for
+[11:05] $200, but they give you this last minute
+[11:07] Prime Day deal. 50% off. You get it for
+[11:10] less than 100. Now, this is tied for the
+[11:12] lowest price it has ever been, which was
+[11:15] actually last Prime Day, almost a year
+[11:17] ago. So, if you are in the market for a
+[11:18] great electric toothbrush, this is
+[11:20] absolutely one that is worth checking
+[11:22] out today.
+[11:24] >> Sorry, I'm I'm checking because we
+[11:25] already have I'm just typing with our
+[11:27] deal hunters. We already have a million
+[11:28] things coming in. I love it. Keep it
+[11:29] going. All right, the next one. By the
+[11:31] way, to get to get all the deals we're
+[11:33] talking about today, dealseek.com.
+[11:37] You see it on the bottom left of the
+[11:38] screen. Every deal we talk about is
+[11:40] going to be there and it's updated by
+[11:42] the minute. All right, the next one is a
+[11:44] smart food kitchen scale. You guys found
+[11:46] the promo code for this. 62% off on this
+[11:50] one right here. And by the way, if you
+[11:52] don't go to the website, if you're
+[11:54] watching this on TV right now, just pull
+[11:56] out your phone, scan that QR code in the
+[11:58] top right corner of the screen. It'll
+[12:00] also bring you right there. And by the
+[12:02] way, it's completely free to sign up for
+[12:03] deals so you can get these deals. All
+[12:05] right. So, the retail price on this one
+[12:08] um is what? 34.949.
+[12:12] 34.99.
+[12:13] >> Yeah. They're offering like a 24%
+[12:15] discount, but with a promo code, you got
+[12:17] it down to 62% off.
+[12:19] >> Yeah, that's exactly what we do. This is
+[12:21] a great example. This is why we put it
+[12:23] early in the show because we're stacking
+[12:25] a price drop, which everybody has access
+[12:27] to, and a promo code, which only we have
+[12:30] access to, to give you a really, really
+[12:31] good deal. So to show you how that
+[12:33] works, this food kitchen scale again
+[12:35] originally $34.99 is a Prime Day deal,
+[12:39] top 100 deal, Amazon Choice product,
+[12:41] verified low price, high amount sold
+[12:43] last month. It is checking all the
+[12:45] boxes. The way we can save even more
+[12:47] than most is by clicking this green
+[12:49] button that says copy promo code. It's
+[12:52] going to open up that same product on
+[12:54] Amazon where, as you guys saw earlier,
+[12:56] everybody else is paying that full price
+[12:58] of $26. But if you add it to your
+[13:01] shopping cart, and this is the step
+[13:03] everybody can rewind and watch over and
+[13:05] over again. Click proceed to check out,
+[13:08] you're going to find this little button
+[13:09] that says use a gift card, voucher, or
+[13:11] promo code. That is your access key. You
+[13:14] click on that and then you paste that
+[13:16] promo code in this box, which is already
+[13:19] copied to your clipboard automatically
+[13:20] from Dealsee and you click apply. And
+[13:23] that's where the magic happens. You'll
+[13:25] see down here, instead of paying that
+[13:27] full price that everybody else was
+[13:29] paying, $26, you now save an additional
+[13:32] $13. You get it for $1338 even though
+[13:36] everybody else on Amazon for Prime Day
+[13:38] was paying $26.
+[13:41] >> Crazy. All right, next one.
+[13:44] >> Yeah,
+[13:45] >> let me let me point out really quick to
+[13:47] to Jeff, every single deal in today's
+[13:49] show, guys, we are clicking this button
+[13:51] that says track price history natively
+[13:53] on Amazon. This is how we know we are
+[13:55] getting good deals. And if you look at
+[13:57] the one month history right now, a month
+[13:59] ago, it was legitimately being sold for
+[14:01] $35. The price history on Amazon only
+[14:05] mentions the price drop price. $26 is
+[14:08] confirmed the lowest. We're actually
+[14:10] beating that confirmed low price with
+[14:12] the promo code because promo code deals
+[14:14] are not reflected in the price history
+[14:16] on Amazon. So, it's already a verified
+[14:18] deal. We're actually giving you even
+[14:20] more on top of that. Honestly, fantastic
+[14:22] deal.
+[14:23] Yeah. And also guys, you should all be
+[14:26] using that price history tool on Amazon.
+[14:28] It's right next to the price if you're
+[14:30] on a computer. It says price right there
+[14:32] where the the mouse is just to the
+[14:34] right. You get that price history tool
+[14:36] and boom, you can see what is it a
+[14:38] month, 3 months, a year out, and you can
+[14:40] see what the prices were doing so you
+[14:42] know if it's a fake sale or a real sale.
+[14:44] All right, we got premium noiseancelling
+[14:46] headphones from Sony.
+[14:49] Half off. Half off on this one.
+[14:52] Yeah, these are the exact same
+[14:53] headphones I have. I have them in the
+[14:55] blue color. I paid full price at 400
+[14:57] about a year ago. Today they are 198.
+[15:00] Again, 50% off today with the button
+[15:03] down here that says view deal on Amazon.
+[15:04] It will take you from deal to that deal
+[15:07] so you can claim it. And again guys, I
+[15:09] want to point out if you click price
+[15:11] history, you are going to see this is
+[15:13] the lowest price it has ever been. Look
+[15:15] at this. 1 month, 3 months, even 1 year.
+[15:19] It goes up and down, but it has never
+[15:21] been lower than it is right now at 198.
+[15:24] Really, really good deal. Everybody
+[15:26] loves the Sony headphones. Check it out
+[15:28] now before the deal expires.
+[15:30] >> That's crazy. All right, you got an
+[15:32] Instant Pot Duo Plus 9in-1 Multi Cooker.
+[15:36] As somebody who loves cooking, I love
+[15:37] this. So, we got a 50% off deal here
+[15:40] right now. And this is a this is a good
+[15:41] one. And I know we always look at the
+[15:43] reviews as well. This has a lot of
+[15:45] reviews, which is good. No, exactly. 50%
+[15:49] off for Prime Day. All year, this has
+[15:51] been going for $139.99.
+[15:53] Again, if you look back in the price
+[15:55] history, this has less fluctuations than
+[15:57] the last two products, but is still the
+[15:59] lowest it's ever been, which indicates
+[16:01] this rarely goes on sale, but it is on
+[16:04] sale for Prime, but you get it for $69.
+[16:06] We actually found this price comparison
+[16:08] website, which is pretty nifty. I think
+[16:10] it shows how much this goes for on
+[16:12] different websites or on different
+[16:14] stores like Amazon, Walmart, and Target.
+[16:17] The popup I was looking for actually
+[16:18] just disappeared, but it I think it's
+[16:20] under where to buy.
+[16:21] >> Of course,
+[16:21] >> it shows you the price on Amazon, shows
+[16:23] you the price on Best Buy, shows you
+[16:25] Kohl's, shows you Macy's. It is
+[16:28] confirmed the lowest at Amazon, but
+[16:30] that's actually before the Prime Day
+[16:31] deal. With the Prime Day deal, you're
+[16:33] getting it even cheaper for $69.99.
+[16:35] Confirmed an absolutely great deal from
+[16:37] Prime Day if you're in the market for a
+[16:38] multi cooker or rice cooker or pressure
+[16:40] cooker.
+[16:42] >> Yeah. By the way, we're doing all this
+[16:43] work for you, so you don't have to go to
+[16:44] all these different websites. And then
+[16:46] we're getting you the discount on top of
+[16:47] which is cool. All right, we got an
+[16:49] electric wine bottle opener. Perfect for
+[16:51] summer for those of us who like to pop
+[16:53] something in the early afternoon.
+[16:56] >> Absolutely. This one is just a promo
+[16:58] code deal on top of a price drop deal.
+[17:01] Nothing else fancy going on. Again, this
+[17:04] green box down here on Dealsek indicates
+[17:06] it's a promo code and you can click to
+[17:08] copy it. Everybody else pays $15. You're
+[17:10] getting this wine bottle opener to keep
+[17:12] the cork intact, but you're not paying
+[17:15] $11. You're getting that extra 50%
+[17:17] discount by adding it to your cart,
+[17:19] pasting the promo code at checkout, and
+[17:21] then claiming the free money that nobody
+[17:24] else has access to. Really, really good
+[17:25] deal. And again, always check price
+[17:27] history, always check reviews. These are
+[17:28] things we do when we add products to the
+[17:30] Deal Seek collection, to the Rosson
+[17:32] Reports collection. But I know a lot of
+[17:34] people shop on their own for Prime Day
+[17:36] and every day. If you're finding your
+[17:37] own stuff, do the extra little bit of
+[17:39] work. that money stacks and saves over
+[17:41] time and it can really really really
+[17:43] help you in the long term.
+[17:45] >> Yeah. And and look, everyone on Amazon
+[17:47] is getting 23% off this product, you're
+[17:50] getting 54% off with the promo code,
+[17:53] which is unbelievable.
+[17:55] >> And by the way, dealseek.com, if you
+[17:57] want all all the deals we're showing
+[17:58] today, both the ones we brought and when
+[18:00] we get to the live requests, they're all
+[18:01] going in live uh to the Rosson reports
+[18:04] collection on Dealsee. Dealseeek.com.
+[18:07] You see the little Rosson reports
+[18:09] collection right there and you can see
+[18:12] there's some stuff we haven't even shown
+[18:13] yet and it's already there. So you can
+[18:15] get a jump on us by going right there or
+[18:17] if you're watching this on TV, pull out
+[18:19] your camera and hit that QR code in the
+[18:22] top right of your screen. Boom. It'll
+[18:24] bring you right there and it is free to
+[18:25] sign up. All right, let's keep going. Uh
+[18:27] the fourpiece fly repellent fans for
+[18:29] tables. Oh, these are so every
+[18:32] restaurant. I I live in Florida, so down
+[18:34] here right now,
+[18:35] >> you literally need this. It is so
+[18:38] annoying. So, um, this normally goes for
+[18:41] $33.99.
+[18:43] Uh, they're offering 16% off on Amazon,
+[18:45] but you got 58% off because you guys
+[18:48] found the secret promo code.
+[18:50] >> 58% off, guys. I know everybody loves
+[18:52] deals. You do not necessarily have to
+[18:55] pay the price that Amazon wants you to
+[18:57] pay on this button right here. Even if
+[18:59] you see the flashy red button that says
+[19:01] Prime Day deal, lightning deal, awesome
+[19:03] price drop, verified price drop, you
+[19:05] don't always have to pay what it's
+[19:08] listed for. And the workaround is very,
+[19:10] very simple. The Deal Seeek promo code,
+[19:12] which you can add to your clipboard from
+[19:14] Deal Seeek, allows you to add products
+[19:16] to your cart, proceed to checkout, and
+[19:19] then again click use a gift card,
+[19:21] voucher, or promo code. Paste that promo
+[19:24] code into this wonderful little box
+[19:25] here. apply the promo code and if it's
+[19:28] still active, which it should be because
+[19:30] we are always removing old promo codes
+[19:33] and verifying new promo codes, that will
+[19:35] give you that extra bit of discount. As
+[19:36] you can see, it was on sale for $28 on
+[19:40] sale. Jeff, we got an extra 50% off. In
+[19:43] total, it was what, 55% off, 56% off
+[19:46] with the price drop plus promo code. It
+[19:47] is the best way to shop on Amazon, hands
+[19:49] down, with promo codes.
+[19:52] >> We are getting a ton. By the way, I'm
+[19:54] looking off to my computer off to the
+[19:55] side. We are a ton of you are writing in
+[19:57] right now, which I love. And our deal
+[19:59] hunters are finding deals, which we're
+[20:00] going to get to. We're getting to your
+[20:01] live deals in just a second. We got an
+[20:03] Amazon Fire 7 kids tablet. 50% off right
+[20:08] now on Amazon. This is actually a great
+[20:10] deal on this. You don't see these come
+[20:11] down that often.
+[20:13] >> Yeah. 50% on Amazon. 109 down to $55.
+[20:17] What's brilliant about this is obviously
+[20:19] it is an Amazon Fire tablet. So, being
+[20:22] owned by Amazon, Amazon has a little bit
+[20:24] of an extra margin to play with when
+[20:26] they give you discounts, which is why
+[20:27] you'll see some of these bigger
+[20:28] discounts. Originally 109, you get it
+[20:31] for $55 just with the price drop. So, no
+[20:34] coupon or promo code that you have to
+[20:35] opt into. You'll see that 50% discount
+[20:38] on the page here. You'll also notice
+[20:40] only 18 left in stock. So, it might be
+[20:42] selling particularly fast. Uh, but if
+[20:44] you do want to add it to your cart now,
+[20:46] and again, if you are doing the research
+[20:48] like we're doing, we are checking the
+[20:50] price at other retailers. This is the
+[20:52] Target site. It is still $100. Same at
+[20:55] Best Buy and same at Walmart today. But
+[20:57] Amazon, by the nature of Prime Day, by
+[20:59] the nature of owning the product
+[21:01] themselves, we're able to give you that
+[21:03] fantastic 50% discount that nobody else
+[21:05] was claiming today.
+[21:07] >> That's freaking awesome. I love it. Oh,
+[21:09] William, thank you so much for becoming
+[21:10] a Rosson Reports YouTube member.
+[21:13] Exclusive perks coming your way. Early
+[21:14] access to videos, membersonly chats. Hit
+[21:17] join, by the way, to become a Ross
+[21:18] Reports member. You get even more perks.
+[21:20] All right. Oh, we got a few more for
+[21:22] you. A washing machine and dishwasher
+[21:24] cleaner tablets. I love it when we get
+[21:26] these questions all the time is we like
+[21:27] showing you stuff like the headphones
+[21:29] that you want, but there are necessities
+[21:31] that we want to save you guys money on,
+[21:33] too. So, uh, they're only showing 18%
+[21:36] off on Amazon. We got you 43% off today.
+[21:39] Jeeoff, this is a type of deal, and
+[21:41] we've talked a lot about deals over the
+[21:43] past few months. This is the a type of
+[21:44] deal we've actually never shared before
+[21:46] on this show. It is a subscribe and save
+[21:49] plus a promo code deal. So, we've talked
+[21:52] about subscribe and save, how it's one
+[21:53] of the best ways to save a little bit of
+[21:54] extra money, plus a promo code deal.
+[21:56] We've actually never shown this on the
+[21:58] show. So, how this works, guys, there's
+[22:00] two ways to save. Number one, on deal in
+[22:03] the Rosson Reports collection, you can
+[22:04] find these dishwasher cleaning tablets.
+[22:06] Step one is copy the promo code. It's
+[22:09] going to take you right to Amazon like
+[22:10] all the other products. You're going to
+[22:12] see it's $22, which is 18% off. Down
+[22:16] here, you'll see this button that says
+[22:17] subscribe and save. You'll see the price
+[22:19] is $20. So, it saves you about $2.
+[22:22] You'll see the price actually changed up
+[22:24] here to $20. That's us opting into a
+[22:27] subscribe and save purchase, which for
+[22:28] those of you who do not know is
+[22:30] essentially Amazon's extra discount they
+[22:32] give you for opting into recurring
+[22:34] purchases. So you can say, "I want one
+[22:36] of these every week, every two weeks,
+[22:38] every month." They'll ship it
+[22:39] automatically and as a thank you,
+[22:40] they'll give you a little bit off. So
+[22:42] that's the first way we're saving $2
+[22:44] right off the bat. We can add
+[22:46] subscription to our cart. And then if
+[22:49] you remember, we already have the promo
+[22:50] code copied from this last page on deal
+[22:53] down here. So on Amazon, we can now
+[22:56] paste the promo code like we have in the
+[22:58] past. I also did this right before the
+[23:01] show.
+[23:04] Click the apply button. And then if you
+[23:06] use that payment method, you're going to
+[23:07] see the stacked deals right here. Look
+[23:10] at this screenshot, guys. $22
+[23:12] originally. With the subscribe and save,
+[23:14] you save $110. With the promo code, you
+[23:18] save $6.62 and now you get it for $1435.
+[23:21] So, two different ways to save on top of
+[23:24] the already great low price that it is.
+[23:26] Really phenomenal deal, guys. And we're
+[23:27] getting nuanced. We're getting tricky
+[23:28] with this one. But if you guys know
+[23:30] these things and you know how to use
+[23:31] them, you're going to start finding them
+[23:33] on your own. You're going to start
+[23:34] saving money in ways you didn't think
+[23:35] was possible. So, we bring these to you
+[23:38] if you want to buy the the washing
+[23:40] machine tabs, but also so you know how
+[23:42] to do it in the future when you find
+[23:43] your own deals on DeLC.
+[23:45] >> Yeah. And the loophole, the really cool
+[23:47] little sneaky trick on Amazon is
+[23:49] subscribe and save. You can sign and
+[23:51] you're like, I don't want it delivered
+[23:53] every two weeks. That's annoying. I just
+[23:55] You can literally get the subscribe and
+[23:56] save deal. Sign up for that. get the
+[23:59] deal and then immediately cancel it and
+[24:01] they do not claw back the discount. So,
+[24:03] it's a nice little Amazon loophole that
+[24:05] works in your favor for a change, which
+[24:07] is really, really nice. All right, 37
+[24:09] in1. Well, this is pretty cool. 37in-1
+[24:12] small precision screwdriver set. Uh, you
+[24:15] got retail price is $9.99. Amazon's
+[24:19] offering 20%, but you guys got 52% off
+[24:21] of the deal hunt.
+[24:23] >> Yeah, we're getting it down to $479. We
+[24:26] added it to the show today because on
+[24:28] last week's deal show, again, we're
+[24:30] getting to the live deals in a second,
+[24:31] so keep the comments coming. Last week's
+[24:33] deal show, somebody requested one of
+[24:35] these and we made a note. We said the
+[24:37] deal is not good enough. Stay tuned. We
+[24:39] waited. We found one that we liked and
+[24:41] now we are sharing it with you today.
+[24:43] So, this one again, as Jeff mentioned,
+[24:45] price drop plus promo code. We're
+[24:47] getting it for $4.79 even though
+[24:49] everybody else on Amazon is paying $7.99
+[24:52] which is already discounted from $9.99.
+[24:55] But if you're stacking these, if you're
+[24:56] being smart, you're going to be able to
+[24:58] get the discount. Again, this deal and
+[25:00] all of the others are in this Rosson
+[25:02] Reports collection, which is the same
+[25:03] place where we're going to be adding
+[25:05] deals throughout the day, throughout the
+[25:07] week, pretty much 247. So, if you are
+[25:09] commenting deals, this is exactly where
+[25:12] you're going to be able to find them.
+[25:13] Even if we don't get to them on this
+[25:14] live show, they're going to be in here.
+[25:16] So, take a look. Tune back in to
+[25:17] dealseek.com/roton. We put some really,
+[25:20] really good deals in here.
+[25:22] >> Very cool. And then we got a Revlon
+[25:24] OneStep hair dryer and styler.
+[25:27] 59%
+[25:29] off right now. This is sick on Revlon.
+[25:33] >> Yeah, on Revlon, which of of course
+[25:36] people people know the brand. 59%
+[25:38] discount. Number 29 in today's top
+[25:41] deals. Verified low price. And that
+[25:43] badge, guys, just reminds us of what we
+[25:45] showed earlier in the show. When you
+[25:47] track the price history, if you see
+[25:49] something and it's the lowest price ever
+[25:50] on Amazon, our team goes in and we add
+[25:52] that verified low price badge manually.
+[25:55] So, this has been looked at. It's been
+[25:56] verified. 5K sold in the past month. And
+[25:59] it's got that 59% discount on the page
+[26:02] right now. $21 instead of $50. And as
+[26:06] always, guys, we go above and beyond. We
+[26:07] check other retailers. We check similar
+[26:09] products. This one right now is $50 on
+[26:12] Revlon's website, but yesterday on
+[26:14] Revlon's website, it was $60. So, it's
+[26:17] still more expensive on Amazon. What
+[26:19] we're saving 30 bucks on this today. 30
+[26:21] bucks versus their own site over here.
+[26:24] Definitely worth checking out. Again,
+[26:25] this the beauty of Amazon. Sometimes you
+[26:26] find these hidden gems and we always put
+[26:28] them on deal as soon as we do.
+[26:32] >> All right, let's get to your live
+[26:33] requests because they are flying in. I
+[26:35] have Mike. Let me bring my computer over
+[26:36] right in front of me. Uh, they are
+[26:38] flying in your live requests and we have
+[26:40] them for you. Unplug that. All right,
+[26:43] let's get right to it. Uh, Peggy wants
+[26:45] squishies. Oh, these are so popular
+[26:47] right now. Peggy wants squishies.
+[26:50] >> Squishies.
+[26:51] >> And we found a deal on the squishies. I
+[26:53] know everyone loves them.
+[26:55] >> Squishies. This is a This is a cube
+[26:58] squishy stress relief toy. Peggy, not
+[27:00] sure what you were asking for.
+[27:02] >> Not sure what you were asking for, but
+[27:03] this is a a squishy essentially. Promo
+[27:06] code on this one saves you 72%. Don't
+[27:09] pay 79 $17.99. You get it for $5. As a
+[27:13] reminder, guys, the price drop everybody
+[27:15] in the world has access to. They're
+[27:16] great. They're easy. But sometimes you
+[27:19] can do better. There's pros and cons,
+[27:21] though. When there's a great deal that's
+[27:22] a price drop, it's easy. But that also
+[27:24] means everybody has access to it, so it
+[27:26] likely expires quicker. So, when you
+[27:28] find a deal that you want with a very,
+[27:29] very enticing price drop, you usually
+[27:31] have to act a little bit quicker. In
+[27:33] this case, when you add a promo code on
+[27:34] top, Peggy, you can save even more. So,
+[27:36] hopefully this hopefully this crosses
+[27:38] your box, Peggy. We got a good squishy
+[27:39] for you in the Rosson Reports
+[27:40] collection.
+[27:42] >> By the way, we have these at my house.
+[27:44] Obsessed with them. We throw them around
+[27:46] to each other. It It Yeah, it relaxes
+[27:49] stress. We love those things. Those are
+[27:51] cubes. All right. Um,
+[27:53] >> Dancis is asking for a Dyson Air Wrap.
+[27:56] And it looks like we just found you a
+[27:57] great deal. So, every week I feel like
+[28:00] you guys are asking about Dyson. It's
+[28:01] such an expensive brand, so whenever you
+[28:03] can and it's good, but when we can find
+[28:05] deals on it, it's awesome. We found one.
+[28:06] What do we got?
+[28:07] >> Dyson Air Wrap Z Dancis. We found it for
+[28:10] you. This one is a 30% price drop.
+[28:13] Again, no coupon, no promo code
+[28:15] necessary. Sometimes name brands like
+[28:17] Apple, Lego, Dyson, Logitech, they stay
+[28:20] away from promo codes for the most part.
+[28:22] Um, but you do got find good price
+[28:24] drops. And in this case, we found one
+[28:25] 30% off for that Dyson Air Wrap, which
+[28:28] for whatever reason, I know you
+[28:29] mentioned deaf, is one of the most
+[28:31] popular products probably on Amazon.
+[28:33] Dyson is a huge, huge consumer appliance
+[28:35] and electronics brand. And and when they
+[28:37] go on sale like this, they're probably
+[28:38] worth picking up.
+[28:41] >> All right, cool. Sandra is asking for a
+[28:43] UFI vacuum. A UI vacuum. This actually a
+[28:47] good brand. They make security cameras,
+[28:48] too, that people seem to like.
+[28:51] >> So, this is definitely a brand. a Yui
+[28:54] robot vacuum self-mping hands-free
+[28:57] advanced smart mapping. We got it for
+[28:58] you 56% off. Again, originally $479, you
+[29:02] get it for 208 with that Prime Day price
+[29:06] drop. Now, it's important to remember
+[29:07] guys, yes, Prime Day is a is a limited
+[29:09] time uh limited time shopping event, but
+[29:12] post Prime Day, there are some really,
+[29:13] really good there are good price drops
+[29:15] available throughout the year. And when
+[29:17] you're stacking with coupons and promo
+[29:18] codes and outlets and halls, you can
+[29:20] find some fantastic stuff. So, even post
+[29:22] Prime Day, guys, there's some really,
+[29:24] really good deals to claim. You just
+[29:25] have to look a little bit harder. In
+[29:27] this case, 50% off for a Yui vacuum.
+[29:29] Fantastic deal. Again, great brand.
+[29:32] We'll put it in the Rosson Reports
+[29:33] collection.
+[29:35] All right. Darthy McBride is asking for
+[29:37] a Wilton Dessert Decorator Plus. And it
+[29:40] looks like our um I'm seeing a note here
+[29:43] from our deal hunters. They found a low
+[29:45] price alternative with very, very high
+[29:47] reviews. So, while you call that up, by
+[29:49] the way, Debbie Norris, you asked for a
+[29:51] retractable 48 in ceiling fan blades. We
+[29:55] found those for you. They're in the
+[29:56] Rosson Reports collection right now, so
+[29:58] you can go and get it. All right, back
+[29:59] to um back to Dorothy.
+[30:03] >> Dorothy, as Jeff mentioned, you guys
+[30:05] asked for a specific brand. We went a
+[30:08] step further. We found a lower budget
+[30:10] alternative that still had good reviews.
+[30:12] This is a dessert decorating kit like
+[30:14] you suggested. A little bit less. What
+[30:17] is it? 60% lower than the brand you
+[30:19] suggested. Still verified low price.
+[30:21] Great deal on Prime Day. You can check
+[30:22] it out on the page right here. 28% off
+[30:24] today. And again, if you guys are ever
+[30:26] shopping and you know exactly what you
+[30:28] guys want. For example, if you know
+[30:30] exactly what brand you're looking for,
+[30:32] that is what the name brand section on
+[30:34] Deal Seek is built for. So, at the top
+[30:36] of the navbar, you can click on name
+[30:38] brands and you can search for any brand
+[30:40] you want. In this case, we can search
+[30:42] for Apple. And again, if this is for
+[30:44] people who are very brand loyal, they
+[30:45] know exactly what they're looking for.
+[30:47] This is going to show you all of Apple's
+[30:49] best deals currently on Amazon. And
+[30:51] you're going to be able to s sort by
+[30:53] price range. You're going to be able to
+[30:55] sort by minimum discount. You're going
+[30:57] to be able to sort by sale type, like
+[30:59] coupon, promo code, lightning deal,
+[31:01] price drop. And that's how you can find
+[31:02] some really, really good deals. For
+[31:04] example, this just caught my eye. 28%
+[31:06] off on the Apple Watch Series 11. So, if
+[31:08] you know what you're looking for, the
+[31:09] brand deal section is fantastic for
+[31:12] that. So, if you do know you want a
+[31:13] Yuthi, for example, Dorothy, that's how
+[31:16] you can find it on your own.
+[31:18] >> Very cool. By the way, guys, hit like.
+[31:21] It helps to send this out to everybody.
+[31:22] Hit like right now. If you're on TV or
+[31:24] if you're watching on your phone or your
+[31:26] mobile device, hit hit like for us real
+[31:28] quick. Um, all right. We got Oh, Lori
+[31:32] 6332 is asking for a soaker hose for my
+[31:35] garden. And while you call that up, do
+[31:38] you see that Trey on the list? There you
+[31:40] go. You got it.
+[31:41] >> All right. And by the way, while we're
+[31:43] doing that, um Joey M, you asked for a
+[31:45] water drop reverse osmosis. Our deal
+[31:48] hunters found it. It's in the Rosson
+[31:49] Reports collection. Um Darthy, you asked
+[31:53] for an all-in-one desktop computer. We
+[31:55] added that to the Rosson collection. Um
+[31:58] Grown Folk Perspectives,
+[32:00] that's the name of the username. Um
+[32:02] asked for a mini microwave stand with
+[32:03] wheels and an outlet cord attached.
+[32:05] prefer brown, wood, or black? We added
+[32:08] that to the Rosson collection as well.
+[32:09] So, we found all those deals for you.
+[32:11] All right, Lori's your soaker hose. What
+[32:13] do we got?
+[32:14] >> Soaker hose. Lori, I'm going to keep
+[32:16] this one super simple. You asked for a
+[32:18] soaker hose, they found a so soaker
+[32:20] hose. 50% off. You get it for less than
+[32:22] $10, coming in at $7.99. And it is an
+[32:25] Amazon's Choice product. If you guys are
+[32:27] new to deal hunting, you're a new
+[32:29] bargainer or a new deal seeker, Amazon's
+[32:31] Choice is a badge that Amazon throws on
+[32:34] products which indicates in that product
+[32:36] category, in this case it's probably
+[32:38] patio, lawn and garden products, they
+[32:41] think this is a very very high value
+[32:43] deal. Whether it is the price that
+[32:45] they're referencing, the quality, the
+[32:47] reviews, the return rate, they take all
+[32:49] that data and they put it together and
+[32:51] they say this is a product that we as
+[32:52] Amazon recommend. So, if you are looking
+[32:54] for Soaker Hose, take Amazon's word.
+[32:57] Take our word in the DLC collection.
+[32:58] This is a great one for just $8.
+[33:01] >> By the way, keep joining the live chat.
+[33:03] Let us know what deals you want. As you
+[33:04] can see, we find them in real time for
+[33:06] you. All right, let's go to
+[33:09] uh Pat Little John. Pat Little John is
+[33:12] asking for an under cabinet motion
+[33:14] sensor lights. And while you're calling
+[33:17] that up, Trey, let me just say Deanna
+[33:19] Fischer asked for the best iPad deal for
+[33:21] a non-verbal disabled son to be able to
+[33:23] speak and communicate with. We found it
+[33:26] for you. It's in the Rosson Reports
+[33:27] collection. We found the deal happening
+[33:29] right now for your son. Um, we also
+[33:32] found Oh, um, Danes was asking for
+[33:35] quality AA and AAA batteries. We found
+[33:37] those on deep discount with a promo
+[33:39] code, too. They're in the Rosson
+[33:40] collection. All right, back to Pat
+[33:43] Little John. Underc cabinet motion
+[33:44] sensor lights.
+[33:46] >> Under cabinet motion sensor lights, you
+[33:48] get an eight pack. Originally $32. You
+[33:51] get it for $11.87. Now pay attention
+[33:54] guys. If you copy the promo code when it
+[33:56] takes you to Amazon, you don't see that
+[33:58] same price. You see $21.99.
+[34:00] Again, back on Amazon, we were or back
+[34:03] on Deal Seek, we were seeing $12, but on
+[34:06] the pro product page, you see $21.
+[34:08] That's not a mistake. That's not an
+[34:10] incorrect deal. You guys now have the
+[34:12] ball in your court. You have to have the
+[34:14] promo code copied. You have to add the
+[34:16] item that you want to your shopping
+[34:18] cart. And just like we did at the
+[34:20] beginning of the show, you have to click
+[34:21] this button that says use a gift card
+[34:23] voucher or promo code. And then paste
+[34:25] the promo code into this little box
+[34:28] right here. And if the deal is active,
+[34:31] which they will be because we are always
+[34:32] removing the inactive deals, that's when
+[34:35] you can actually get this added discount
+[34:37] that we're talking about. In this case,
+[34:38] you're saving $10.12
+[34:41] on the page. So again, Amazon won't show
+[34:44] you the price we're advertising here on
+[34:46] Dealsek. You have to copy the code and
+[34:48] get that price yourself because it's a
+[34:50] little backdoor shopping trick.
+[34:53] >> All right. I love that. Love backdoor
+[34:55] shopping tricks, baby. All right. Rosie
+[34:57] is asking for a Jansport cool backpack
+[35:00] with a 15in laptop sleeve, large
+[35:04] computer uh rucks sack with two
+[35:06] compartments and ergonomic straps. I
+[35:09] love when you get detailed and put us to
+[35:11] the test. It looks like we found it.
+[35:13] >> We got Check this out.
+[35:15] >> Word for word. Jansport laptop backpack
+[35:18] computer bag with two compartments and
+[35:20] ergonomic shoulder straps. We got it.
+[35:22] Let's go. 50% off on this one. Don't pay
+[35:25] 62. get it for 31. Again, it is a
+[35:28] verified low price. You can check it out
+[35:30] on Amazon. Um, yeah, look, even Amazon
+[35:33] is saying 90day low price. So, before
+[35:36] you check this price history button,
+[35:38] which again, guys, we always recommend
+[35:39] clicking this button here that says
+[35:41] price history because it gives you all
+[35:42] the insights into the 30, 60, 90-day
+[35:45] price history. But sometimes Amazon will
+[35:48] even let you know on the page. You can
+[35:49] see right here, 90-day low price lets
+[35:52] you know it's a good option for what
+[35:53] you're getting today.
+[35:56] Very cool. Uh, Robert Boswell is asking
+[35:59] for induction pots and pans.
+[36:02] >> And by the way, while you look that up,
+[36:04] Trey, you see it right there? You see it
+[36:05] on the list?
+[36:07] >> I do not, but I will get there.
+[36:10] >> Scroll down. It's on the next page.
+[36:13] >> Induction pots and pans. We got
+[36:14] >> While you're doing that, Laura Laura
+[36:16] asked for Apple iPads. They've been
+[36:18] added to the collection. Rosemary asked
+[36:21] for a five court clay cooking clay pot
+[36:24] added to the collection. We found it.
+[36:26] Um, Pasmarie Pazerie Pam Pam Suri Pam
+[36:31] was asking for a dash cam front and back
+[36:33] as we get every week. We found you a
+[36:35] deal that's been added to the Ross
+[36:36] Reports collection. And also, um,
+[36:40] Rashets receipts don't expire is the
+[36:42] username. I love that. I wish they
+[36:43] didn't. Um, asked for a Shark Steam
+[36:46] pickup vacuum mop. Those have been added
+[36:48] to the collection. So, we got a lot
+[36:49] going on in the Rosson collection on
+[36:51] Deal Seeek right now. All right,
+[36:52] induction pots and pans for Robert.
+[36:55] >> We got you guys. 21 piece pots and pans
+[36:57] set. Originally 220. If you guys have
+[37:00] ever moved into a new house or
+[37:01] apartment, you know how expensive a full
+[37:03] set of pots and pans is. This one is 64%
+[37:07] off. Just a price drop. So, usually when
+[37:10] we see deals over 50% off, it's a
+[37:12] combination of one or two of these
+[37:14] shopping tricks. Either it's a coupon
+[37:16] plus subscribe and save or price drop
+[37:18] plus promo code. This is a 64% discount
+[37:21] on a name brand set of pots and pans.
+[37:23] All of it coming from the price drop.
+[37:25] Again, verified low price. Just $79.99
+[37:28] for everything you'll need in your
+[37:29] kitchen.
+[37:31] >> By the way, Amazon sells everything. And
+[37:34] Lorie Smith asked for a privacy pen. A
+[37:37] privacy pen. And we found one for you.
+[37:40] >> And this sounds right up our alley. You
+[37:42] cover scams here a lot and everything.
+[37:44] Yeah. You don't want somebody to see
+[37:46] something you're writing.
+[37:47] >> We found you a deal. Not only a privacy
+[37:49] pen, we found you a deal on a privacy
+[37:50] pen.
+[37:52] >> This is a privacy pen. Hidden camera
+[37:55] detector.
+[37:56] >> Anti-spy bug finder. Not sure if this is
+[37:59] what you were talking about, Jeff. This
+[38:01] seems particularly interesting, too.
+[38:03] There's somebody out here. There's
+[38:04] somebody out here who wants one. 43%
+[38:06] off. What was the privacy pen you were
+[38:08] talking about, Jeff?
+[38:11] >> I don't know. She just wrote a privacy
+[38:12] pen, but that's what we found for you.
+[38:14] >> Hey, give us some more context, Lori.
+[38:16] Let us know in the chat what privacy pen
+[38:18] you're looking for and we'll find one
+[38:19] for you.
+[38:21] >> Yeah, I love that. All right. Um Laura
+[38:23] Thompson asking for a carpet shampooer.
+[38:26] >> Let's take a look.
+[38:30] >> Carpet shampooer.
+[38:31] >> That I know.
+[38:32] >> Yeah.
+[38:33] >> Power Scrub Deluxe Carpet Cleaner deep
+[38:35] cleaning shampooer machine. 45% off.
+[38:39] just $132.99
+[38:41] as opposed to $239. Again, on Amazon,
+[38:44] guys, people are coming here and they
+[38:46] are celebrating this 45% discount. 9,000
+[38:50] sold in the past month, over 58,000
+[38:53] reviews, which again checking the
+[38:55] reviews, both how many stars, in this
+[38:57] case, 4.4 out of five, and more
+[38:59] importantly, the number of reviews is a
+[39:02] fantastic indicator of quality. Yes, you
+[39:04] could have five star reviews, but if
+[39:06] that's out of an average of two reviews,
+[39:08] not enough people have their hands on
+[39:09] this product for you to be able to trust
+[39:10] it. But when they have 50,000 plus
+[39:13] reviews and still average 4.4 stars,
+[39:16] that's how you know it's a quality
+[39:17] product. And again, most of those
+[39:18] people, most of those 50,000 bought it
+[39:21] at the full price of 239. You're coming
+[39:23] in and getting the 45% discount today,
+[39:25] which is why we put it into the DLC
+[39:27] collection right here.
+[39:30] >> All right, we have we I want to get to a
+[39:31] couple more real quick. Um, Ellen, these
+[39:33] keep flying in. I love it, guys. And by
+[39:35] the way, even after we're off, keep them
+[39:36] coming. Our deal hunters are in our
+[39:38] comments and then we're putting stuff
+[39:40] into the collection as you go. So, it
+[39:42] doesn't matter when you're watching
+[39:42] this, if you're watching it live, if
+[39:44] you're watching it on the replay, we are
+[39:46] in the comments. Keep them coming and
+[39:48] let us know what you want. Ellen Corey
+[39:50] asking for a step counter so she can
+[39:52] track steps during her Achilles surgery
+[39:55] recovery. Oh, man. I'm sorry you're
+[39:56] going through that, Ellen. Major
+[39:58] surgery. So, if we can help you out here
+[39:59] a little bit and save you some money, I
+[40:01] love it.
+[40:03] >> Guys, I don't think I have ever found a
+[40:05] lower budget pedometer or step counter.
+[40:08] This is if you really, really, really
+[40:11] want something 350 as opposed to $6.99.
+[40:14] It is a verified low price. If you are
+[40:17] looking for something a little higher
+[40:18] quality like a Fitbit or an Apple Watch
+[40:21] or a Garmin or even a waistbanded step
+[40:24] counter, tons of other options at higher
+[40:26] budgets. But again, as a deal show,
+[40:28] we're going to show you something
+[40:29] really, really, really affordable. 350
+[40:31] for this one. But again, guys, search
+[40:33] bar at your disposal at the top. Look
+[40:35] for anything in the world that you want,
+[40:38] like a step counter. You're going to be
+[40:39] able to find some really, really good
+[40:41] options. Different search and filter
+[40:43] functionality, the whole nine, all at
+[40:45] your disposal.
+[40:47] >> Right on deal there. Yeah. And you can
+[40:49] you can see what kind of um percentage
+[40:51] off you want, then it'll filter
+[40:52] everything for you. All right. Um let's
+[40:55] see here. Hold on. What's another good
+[40:57] one? Oh, Samsung Galaxy Watch 8.
+[41:01] >> Samsung Galaxy.
+[41:02] >> And it looks like on this one, not only
+[41:04] did we find you a deal, our deal Oh,
+[41:07] this is from Miss Melanie.
+[41:09] And not only did we find you a deal,
+[41:11] >> the note is you you're going to get a
+[41:13] $30 gift certificate as well on top of
+[41:16] the deal.
+[41:18] >> Let's check it out. Samsung Galaxy Watch
+[41:22] 8 35% off. So, you asked and we
+[41:25] delivered. Apparently, Deal Hunters made
+[41:27] a note. You get this extra gift card.
+[41:29] Let's see where if we can find that on
+[41:31] the page.
+[41:32] >> Yeah. Where is that?
+[41:35] >> I've seen this before. This is a new
+[41:36] thing Amazon has started to do. Let's
+[41:39] add it to our cart and see what happens.
+[41:42] Again, 35% off for a name brand watch
+[41:44] like this. Definitely a good good
+[41:47] option. Let's see if we can hunt down
+[41:49] this $30 gift card. That might be a
+[41:50] Prime exclusive promo. That might be
+[41:52] something else.
+[41:55] Let's take a look.
+[41:57] Yeah, not seeing gift card. Not seeing
+[41:59] the available gift card. That doesn't
+[42:00] mean it's not here.
+[42:03] Either way, guys,
+[42:05] Samsung Galaxy Watch. I I so badly want
+[42:08] to find this this gift card. I've seen
+[42:10] this when they launched um they launched
+[42:12] like a foldable Samsung phone a couple
+[42:15] months ago and they just rewarded all
+[42:17] the top like first 10,000 people who
+[42:19] bought it with a $50 Amazon gift card.
+[42:21] So, I'm not seeing it on this screen,
+[42:22] guys. Maybe it's for select people. Let
+[42:24] us know in the comments if you're seeing
+[42:26] that extra $30 gift card they give you
+[42:28] because it might be shown to some people
+[42:29] and not others. But nice little bonus if
+[42:31] you guys do see it.
+[42:33] >> Oscar, our director, you just said
+[42:34] something to me. Do you see it, Oscar?
+[42:35] On the screen.
+[42:41] >> Oh, it's in green savings. He's You're
+[42:42] on it right now. Buy one, get a gift
+[42:45] card.
+[42:46] >> $30 Amazon gift card.
+[42:48] >> There you go, guys. Buy one, get a $30
+[42:50] Amazon gift card. Looks like Amazon has
+[42:52] this promotion going for a couple
+[42:53] different models. There you go, guys.
+[42:55] Not only are you getting that awesome
+[42:57] 35% price drop, which we highlighted on
+[43:00] DeSseek, you're getting a little bit
+[43:01] more money back in your pocket, which
+[43:03] you can spend on more deals. So, check
+[43:05] it out. Really, really cool find.
+[43:08] >> Love that. Um, Eric's mom is asking for
+[43:11] a rubber grip jar opener, electric.
+[43:15] >> Eric's mom. Does Eric know you're
+[43:17] commenting right now? Let's see what we
+[43:18] got. I don't know.
+[43:21] >> That's our identity. Eric's mom jar
+[43:23] opener.
+[43:24] >> All right, guys. We found one. This is
+[43:28] 31% off rubber grip jar opener. This is
+[43:31] for people, by the way. I've seen these
+[43:32] before losing uh dexterity or strength
+[43:35] in their hands or just anybody who
+[43:37] struggles to get a get a jar off, which
+[43:39] again, most of us do. 31% off right now.
+[43:41] Nifty little gadget. You're going to use
+[43:43] it more than you'd like, no matter who
+[43:44] you are. And you get it for just $18
+[43:46] instead of 25 today.
+[43:49] Yeah, got it. And then let's do let's do
+[43:52] this one. Let's do Oh, the air fryer.
+[43:56] Everyone wants an air fryer. Irene
+[43:58] Valente, one of our most popular picks
+[44:00] is air fryers. One of the most popular
+[44:02] requests we get and we found you an air
+[44:05] fryer at a deep discount right now.
+[44:07] Irene,
+[44:09] we got you. And by the way, for all
+[44:10] these deals, well, well, Waltrey is
+[44:12] looking for that. um dealseek.com/roson
+[44:15] or scan the QR code in the top right
+[44:17] portion of your screen. Bring you right
+[44:19] there. It is free to sign up. I bring
+[44:21] you free stuff.
+[44:22] >> Plus,
+[44:23] >> absolutely 53% off for an Instant Pot
+[44:26] air fryer. This is a 6 in1 air fryer.
+[44:29] Originally $149.99,
+[44:31] you get it for $69 today. Verified low
+[44:35] price. And again, that 53% discount is
+[44:37] live and active on the page right now.
+[44:39] You can claim this for less than 70
+[44:41] bucks. Guys, we always say this. I want
+[44:43] to point it out one more time because of
+[44:45] how important it is. Look at how big
+[44:47] this number is on the page. 72,180
+[44:52] reviews and a number one bestseller. 4.5
+[44:55] stars. Number one bestseller in air
+[44:57] fryers. You're getting it 53% off. Over
+[45:00] 50% off with Boy Math. That's
+[45:02] practically a buy one get one free for
+[45:04] what it used to cost. You get it for 70
+[45:06] bucks right now. Really, really good
+[45:08] deal.
+[45:09] >> I love it. Awesome. Trey, keep your
+[45:11] comments coming. Like I said, whether
+[45:12] it's on the show or not, we are adding
+[45:14] it into the Rosson Reports collection
+[45:16] and keep your comments coming. No matter
+[45:18] when you're watching this on replay, our
+[45:20] deal hunters are in our comments and we
+[45:22] continue updating this. So, Trey, thanks
+[45:24] so much for the help today. I appreciate
+[45:25] it. And happy end to the Prime Days,
+[45:27] everybody. I think we did it. But we do
+[45:29] this every single week. It's Prime Day
+[45:31] all the time around here. Uh, if you
+[45:32] enjoyed this video, we also, as you
+[45:34] know, we busted a scam in the beginning.
+[45:36] There's another Amazon scam we wanted to
+[45:38] expose uh live that is stealing accounts
+[45:42] and locking up your account. Click on
+[45:44] that video on our YouTube channel and
+[45:45] we'll see you next

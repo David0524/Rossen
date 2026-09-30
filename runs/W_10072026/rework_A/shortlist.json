@@ -1,0 +1,332 @@
+[
+ {
+  "beat_id": "10-07-A5",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 2,
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=Rre8C8boWog",
+    "platform": "youtube",
+    "title": "'I was terrified': Woman wrongly jailed after Flock camera error speaks out",
+    "uploader": "CNN",
+    "duration": 502,
+    "views": 128318,
+    "source_type": "network",
+    "score": 82,
+    "reason": "CNN, 8:22, 128K; title quotes Isaacs herself ('I was terrified')",
+    "cannot_determine": [
+     "whether the Durango color mismatch is explained on air"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=CkUJbJCFjN8",
+    "platform": "youtube",
+    "title": "Wrong car, false arrest: How a Flock camera hit put an innocent woman in jail for killing 3 people",
+    "uploader": "Atlanta News First",
+    "duration": 372,
+    "views": 364232,
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "Atlanta News First/InvestigateTV, 6:12, 364K; 'wrong car' framing is the beat",
+    "cannot_determine": [
+     "whether this is Isaacs' case (title cut off; Atlanta outlet on a Florida case)"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=gLgvrnyQblU",
+    "platform": "youtube",
+    "title": "Florida Flock camera arrest leads to U.S. Senate investigation",
+    "uploader": "FOX 13 Tampa Bay",
+    "duration": 225,
+    "views": 236689,
+    "source_type": "affiliate",
+    "score": 76,
+    "reason": "FOX 13 Tampa Bay, 3:45, 237K; home-market affiliate",
+    "cannot_determine": [
+     "whether Isaacs is on camera"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=YUs3Zs-8T84",
+    "platform": "youtube",
+    "title": "Police Use of Flock Camera Mistakenly Identified Woman Who Was Then Locked Up",
+    "uploader": "Inside Edition",
+    "duration": 175,
+    "views": 266320,
+    "source_type": "network",
+    "score": 74,
+    "reason": "Inside Edition, 2:55, 266K; tight package",
+    "cannot_determine": [
+     "whether Isaacs is interviewed"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=5XviVc8vLHY",
+    "platform": "youtube",
+    "title": "Florida woman wrongfully jailed after police misuse Flock surveillance camera data - YouTube",
+    "uploader": "NewsNation",
+    "duration": 357,
+    "views": null,
+    "source_type": "network",
+    "score": 72,
+    "reason": "NewsNation, 5:57, 331K",
+    "cannot_determine": [
+     "interview vs. panel discussion"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-A6",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "priority": 1,
+  "expected_segments": 2,
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=M-Vfh-Z9I24",
+    "platform": "youtube",
+    "title": "Wrongly arrested woman speaks in Senate Flock hearing",
+    "uploader": "FOX 35 Orlando",
+    "duration": 433,
+    "views": 527936,
+    "source_type": "affiliate",
+    "score": 85,
+    "reason": "FOX 35 Orlando, 7:13, 528K; her testimony itself",
+    "cannot_determine": [
+     "where the 86-hours line falls"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=o9S_qn7oaw0",
+    "platform": "youtube",
+    "title": "Woman tells Senate Flock camera influenced wrongful arrest, led to 86 hours in solitary confinement - YouTube",
+    "uploader": "USA TODAY",
+    "duration": 409,
+    "views": null,
+    "source_type": "network",
+    "score": 80,
+    "reason": "USA TODAY, 6:49; title carries the 86 hours",
+    "cannot_determine": [],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=2wJJcFsya1U",
+    "platform": "youtube",
+    "title": "Woman wrongly jailed because of Flock speaks out",
+    "uploader": "NowThis Impact",
+    "duration": 287,
+    "views": 23428,
+    "source_type": "network",
+    "score": 68,
+    "reason": "NowThis Impact, 4:47; captioned edit, may be tighter",
+    "cannot_determine": [
+     "whether it's hearing audio or a separate interview"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=1xGCM4HoXT8",
+    "platform": "youtube",
+    "title": "WATCH LIVE: Senate Judiciary panel examines use of Flock's AI surveillance network",
+    "uploader": "PBS NewsHour",
+    "duration": 5525,
+    "views": 15543,
+    "source_type": "network",
+    "score": 65,
+    "reason": "PBS NewsHour full hearing, 92 min; title names the 'Senate Judiciary panel'",
+    "cannot_determine": [
+     "timestamp of her testimony in 92 min"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=r0_TJzS1Uzc",
+    "platform": "youtube",
+    "title": "WATCH: US Senate hearing addresses Flock camera oversight",
+    "uploader": "Atlanta News First  and InvestigateTV",
+    "duration": 5253,
+    "views": 57440,
+    "source_type": "affiliate",
+    "score": 60,
+    "reason": "Atlanta News First/InvestigateTV full hearing, 88 min",
+    "cannot_determine": [
+     "timestamp of her testimony"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-A7",
+  "orientation": "vertical",
+  "clip_role": "evidence",
+  "priority": 1,
+  "expected_segments": 1,
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/shorts/NOY0cLrdTxk",
+    "platform": "youtube",
+    "title": "Woman wrongly accused of theft by officer who used Flock cameras - YouTube",
+    "uploader": "9NEWS",
+    "duration": 166,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 84,
+    "reason": "9NEWS Short, 2:46, vertical; likely the doorbell exchange native to orientation",
+    "cannot_determine": [
+     "whether the doorbell audio ('you know why I'm here') is in it"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kzVfXvTQnEQ",
+    "platform": "youtube",
+    "title": "Woman says police used Flock cameras to wrongfully accuse her of theft",
+    "uploader": "FOX31 Denver",
+    "duration": 144,
+    "views": 379300,
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "FOX31 Denver, 2:24, 379K; first report, doorbell likely inset \u2192 CROP",
+    "cannot_determine": [
+     "doorbell framing"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=2a4t7QiMjOk",
+    "platform": "youtube",
+    "title": "FALSELY ACCUSED: Woman fights Flock camera catch with OWN evidence",
+    "uploader": "Fox News",
+    "duration": 225,
+    "views": 1847672,
+    "source_type": "network",
+    "score": 78,
+    "reason": "Fox News, 3:45, 1.8M; national pickup, likely replays doorbell",
+    "cannot_determine": [
+     "doorbell framing"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://youtube.com/watch?v=tsFc-IqoNCI",
+    "platform": "youtube",
+    "title": "Colorado woman says she had to use technology to prove she wasn't a porch pirate - YouTube",
+    "uploader": "CBS Colorado",
+    "duration": 182,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 76,
+    "reason": "CBS Colorado, 3:02, 83K; named in the brief as holding the doorbell exchange",
+    "cannot_determine": [
+     "doorbell framing"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://x.com/9NEWS/status/1988432074831708224",
+    "platform": "x",
+    "title": "Sgt. Jamie Milliman was seen on a doorbell camera ...",
+    "uploader": "X",
+    "duration": null,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 60,
+    "reason": "9NEWS on X: 'Sgt. Jamie Milliman was seen on a doorbell camera'; native post \u2192 manual lane",
+    "cannot_determine": [
+     "whether video is attached"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-A8",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 2,
+  "candidates": [
+   {
+    "url": "https://youtube.com/watch?v=tsFc-IqoNCI",
+    "platform": "youtube",
+    "title": "Colorado woman says she had to use technology to prove she wasn't a porch pirate - YouTube",
+    "uploader": "CBS Colorado",
+    "duration": 182,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 82,
+    "reason": "CBS Colorado, 3:02; 'had to use technology to prove she wasn't a porch pirate' = the Rivian beat",
+    "cannot_determine": [
+     "whether 'nicely done btw' is read on air"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kzVfXvTQnEQ",
+    "platform": "youtube",
+    "title": "Woman says police used Flock cameras to wrongfully accuse her of theft",
+    "uploader": "FOX31 Denver",
+    "duration": 144,
+    "views": 379300,
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "FOX31 Denver, 2:24, 379K; Elser interview",
+    "cannot_determine": [
+     "whether Rivian footage is mentioned"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=2a4t7QiMjOk",
+    "platform": "youtube",
+    "title": "FALSELY ACCUSED: Woman fights Flock camera catch with OWN evidence",
+    "uploader": "Fox News",
+    "duration": 225,
+    "views": 1847672,
+    "source_type": "network",
+    "score": 78,
+    "reason": "Fox News, 3:45, 1.8M; 'fights Flock camera catch with OWN evidence'",
+    "cannot_determine": [],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=w7N30V2ltyw",
+    "platform": "youtube",
+    "title": "Officer who used Flock cameras and accused woman of package theft will be disciplined",
+    "uploader": "9NEWS",
+    "duration": 37,
+    "views": 40490,
+    "source_type": "affiliate",
+    "score": 66,
+    "reason": "9NEWS, 0:37; officer to be disciplined \u2014 butt-cut tag",
+    "cannot_determine": [],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=F2DNTr-sH8I",
+    "platform": "youtube",
+    "title": "Colorado woman cleared after police cite her for alleged package theft",
+    "uploader": "WHAS11",
+    "duration": 174,
+    "views": 10600,
+    "source_type": "affiliate",
+    "score": 62,
+    "reason": "WHAS11 (TEGNA syndication), 2:54; 'cleared after police cite her'",
+    "cannot_determine": [
+     "likely the 9NEWS package re-aired"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ }
+]
