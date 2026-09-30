@@ -23,6 +23,14 @@ Notes:
 - Never overwrite a file a person uploaded (e.g. `10/7 Wed Pre Bible Pitch V7`); add a new doc and say so.
 - Say in chat which file was pushed and link it.
 
+## Bible layout (producer note, 9/30/2026) — overrides rossen-script-writer's build_bible.py / docx-format.md
+Model: Matt's rewrite, `.claude/skills/rossen-script-writer/references/examples/bible-rewrite-nancy-mary.docx`.
+- One paragraph per line, **no blank paragraphs between lines**, 10pt space after each. Single line spacing.
+- **Every section starts on a new page**; its first line is the opener, 18pt bold. Spoken lines 14pt regular.
+- Cues 14pt bold red FF0000. Arial. Letter, 1.25" left/right, 1" top/bottom margins.
+- Build with `python3 tools/build_bible_house.py draft.md "<MM_DD> LIVE BIBLE.docx" --html <out.html>` (the .html is
+  the Drive upload). Still run `check_bible.py` on the draft; skip `verify_format.py` (it checks the old 23/18pt layout).
+
 ## Team (producer note, 9/30/2026)
 - Amanda Scherker is no longer with Rossen (the 9/30 skills update removed her from the skills). Bibles are
   written with rossen-script-writer from the approved outline w/ videos. Don't address, copy or credit her.
