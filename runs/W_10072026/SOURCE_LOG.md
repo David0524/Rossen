@@ -129,3 +129,20 @@ Clips 6 (TikTok) and 7 (Straight Arrow / IBM) carry over. Unused candidates: [CN
 - **Starbucks' "$500 million+ in labor"** comes from secondary sources (Benzinga, a law-firm blog). Left out of the script.
 - **Burger King voice-AI count**: 50–70 pilots per NRN vs about 1,500 locations per Restaurant Business. The script gives no number.
 - **Tiffanie Boyd quote**: confirm the exact wording against the WSJ piece before air.
+
+## Story C rewrite #2 (9/30): "McDonald's is bringing the humans back"
+
+Shorter (about 470 words, down from about 800), built on the post that did well. It uses only facts traced to a source. Clips: 6 (the McNuggets TikTok) and 7 (Bloomberg / Niccol). The IBM clip is dropped.
+
+| Line | Source |
+|---|---|
+| Make It Golden starts Oct 5; hospitality focus | [McDonald's release, Sept 23, 2026](https://mcdonalds.mediaroom.com/2026-09-23-McDONALDS-ADVANCES-NEXT-STRATEGY-TO-BECOME-FIRST-CHOICE-FOR-MORE-CUSTOMERS,-MORE-OFTEN) |
+| 2M+ workers worldwide; largest training in company history | [NRN](https://www.nrn.com/quick-service/inside-mcdonald-s-massive-next-evolution-strategy) / Jonathan Maze; WSJ |
+| "Enjoy your meal!" and "See you soon!" from an internal training document viewed by the WSJ | WSJ, as reported in [CNN, Sept 17, 2026](https://www.cnn.com/2026/09/17/business/technology-retail-food-economy) and [AOL / WSJ syndication](https://www.aol.com/articles/mcdonalds-burger-king-turn-novel-153022000.html) |
+| Franchisee group: guests find visits "rushed, impersonal, sterile and cold" | WSJ, via Inc. and The Cooldown. **Seen in coverage, not the WSJ original; confirm the wording.** |
+| Burger King president Tom Curtis: "We have to lean in to that because that's evaporating in the fast food space." | WSJ, via the AOL syndication |
+| Burger King making it easier to order from a human | [NRN, Sept 24, 2026](https://www.nrn.com/quick-service/burger-king-rethinks-its-drive-thru-ai-strategy); Restaurant Business |
+| Portillo's staff taking drive-thru orders in person, outside | WSJ, via the AOL syndication (VP Mike Roman quoted) |
+| Starbucks halted the Siren Craft System (~10,000 stores planned) and is hiring more baristas; Niccol's staffing line | [CBS News, May 1, 2025](https://www.cbsnews.com/news/starbucks-jobs-hiring-baristas/) |
+
+Cut from the post because I couldn't confirm it: **"make eye contact"** and **"micro-credentials."** McDonald's has run the Archways to Opportunity education program since 2015, but nothing I found ties micro-credentials to the Oct 5 retraining. Also cut: Taco Bell (it's expanding AI), the IBM clip, "Archy," Gartner's 87% and Klarna.
