@@ -23,13 +23,13 @@ Notes:
 - Never overwrite a file a person uploaded (e.g. `10/7 Wed Pre Bible Pitch V7`); add a new doc and say so.
 - Say in chat which file was pushed and link it.
 
-## Bible layout (producer note, 9/30/2026) — overrides rossen-script-writer's build_bible.py / docx-format.md
-Model: Matt's rewrite, `.claude/skills/rossen-script-writer/references/examples/bible-rewrite-nancy-mary.docx`.
-- One paragraph per line, **no blank paragraphs between lines**, 10pt space after each. Single line spacing.
-- **Every section starts on a new page**; its first line is the opener, 18pt bold. Spoken lines 14pt regular.
-- Cues 14pt bold red FF0000. Arial. Letter, 1.25" left/right, 1" top/bottom margins.
-- Build with `python3 tools/build_bible_house.py draft.md "<MM_DD> LIVE BIBLE.docx" --html <out.html>` (the .html is
-  the Drive upload). Still run `check_bible.py` on the draft; skip `verify_format.py` (it checks the old 23/18pt layout).
+## Bible layout (producer, 9/30/2026)
+- House format = rossen-script-writer's `build_bible.py` / `docx-format.md`: Arial, **1.15 line spacing**, a **blank line
+  between every line** (sentence/phrase/cue), 18pt spoken lines, 23pt bold headers, cues bold red. Not 14pt; not tight.
+- The Google Doc must match the .docx. Build the .docx with `build_bible.py`, then
+  `python3 tools/bible_docx_to_html.py "<MM_DD> LIVE BIBLE.docx" out.html` and upload that HTML (it copies every
+  paragraph, blank lines and sizes included). Put `p{margin:0;line-height:1.15}` in a `<style>` block to stay under
+  the connector's size limit. Never hand-write the Drive HTML separately from the .docx.
 
 ## Team (producer note, 9/30/2026)
 - Amanda Scherker is no longer with Rossen (the 9/30 skills update removed her from the skills). Bibles are
