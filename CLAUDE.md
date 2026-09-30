@@ -23,6 +23,14 @@ Notes:
 - Never overwrite a file a person uploaded (e.g. `10/7 Wed Pre Bible Pitch V7`); add a new doc and say so.
 - Say in chat which file was pushed and link it.
 
+## Team (producer note, 9/30/2026)
+- **Amanda Scherker is no longer with Rossen.** The skills and producer-kit references still mention her
+  (rossen-story-outline "Handing off to Amanda", amanda-assignment.md, "Amanda writes the bibles",
+  "Amanda calls and books" on call-in shows, Jeff-brief credit lines). Ignore those: bibles are written
+  with rossen-script-writer, straight from the approved outline w/ videos. Don't draft an Amanda
+  assignment email or address/copy/credit her. If a task needs someone to book callers or guests, ask
+  the producer who owns it now.
+
 ## Audience and standing editorial notes
 - Audience is 55+. Nothing kids-focused.
 - Friday is Amazon/deals; deals guest Trey Donovan unless told otherwise.
