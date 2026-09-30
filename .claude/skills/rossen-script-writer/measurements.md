@@ -33,36 +33,33 @@ Rendered in house format (Arial, 23/18pt, Letter, 1" margins, 1.15 spacing).
 
 ### Wednesday / F2 TOP STORIES
 
-**The whole-document contract is fixed. The story count is not.** Confirm the
-count before laying anything out; it changes only how the fixed budget divides.
-
 | Block | Pages | Words | Bullets | Clips |
 |---|---|---|---|---|
 | Tease block | 3 | 210–340 | 9–21 | 0 |
-| Body | 15–19 | 1,700–2,300 | ~136 | 10–12 |
+| Story 1 (lead) | 7–8 | 690–790 | 41–51 | 5–7 |
+| Story 2 | 2–4 | 240–520 | 20–31 | 1–3 |
+| Story 3 | 2–6 | 230–490 | 17–31 | 1–4 |
+| Story 4 (closer, old format) | 3–5 | 175–300 | 14–25 | 1–2 |
 | **Whole document** | **18–22** | **1,700–2,300** | **~136** | **10–12** |
 
 Tier 1 on the whole-document row: the aired F2 07/10 bible measures 2,007 spoken
-body words, 136 bullets, 11 clip beats. Tier 2 on the division below.
+body words, 136 bullets, 11 clip beats. Tier 2 on the per-block rows.
 
-The tease is always 3 pages. **The A story is 40–55% of the body words and about
-half the clips, in every shape.** Front-loaded far harder than feels natural.
-Every story after A is lighter, and gets lighter as the rundown goes on.
+**These per-block rows were measured on the four-story Wednesday format aired
+through July 2026.** Current F2s are either an A, B, C story show with an expert
+or the call-in show (see `references/producer-kit/bible-format-ghost-tapping.md`
+and `references/producer-kit/call-in-show-format.md`). The whole-document row is still the budget; divide it
+by the confirmed story count, with the A story front-loaded hardest — about 40%
+of the body. The tease is still about 3 pages.
 
-### How the fixed budget divides, by shape
+**Outside clips:** Matt Raub's standard is about two outside clips per segment,
+cleared, and not crowding Jeff off camera. That is lower than the 10–12 aired
+count above. Until David rules, write to the material, count BROLL and demo
+beats separately, and flag in the chat reply when a story wants more than two
+outside clips.
 
-| Shape | Division |
-|---|---|
-| **A+B — the default** | A story 7–8 pages, 690–1,050 words, 41–51 bullets, 5–7 clips. B story 6–9 pages, 700–1,200 words, 4–6 clips. B is shorter than A but it is a full second segment, not a tag. |
-| **3–5 story rundown** | A story keeps its 40–55% share. The rest split what's left, descending. Two-to-four pages and 0–3 clips each is normal; a trailing story with **zero** clip beats is normal and correct. |
-| **Single-topic umbrella** (`TOP 5 FACEBOOK SCAMS`) | One subject, numbered sub-stories across the whole body. The strongest sub-story takes the A-story share and its clips; the rest run short and even, 1–2 clips each, some with none. |
-
-**Never invent a beat, a graphic, or a victim to fill a slot.** If a story carries
-two clips and the band suggests four, write the two and flag the deficit as a
-producer cue. An empty trailing story is a correct extraction, not a gap.
-
-**The A story is a ceiling, not a target.** 41–51 bullets and 5–7 clips. An A
-story reaching ~75 bullets across seven headers is too long, and it almost always
+**Story 1 is a ceiling, not a target.** 41–51 bullets and 5–7 clips. A story 1
+reaching ~75 bullets across seven headers is too long, and it almost always
 means subtopics multiplied where people should have.
 
 ### Friday
@@ -131,15 +128,14 @@ never comes from a constructed sentence, which does not.
 | Story shape | Graphic cards | Evidence |
 |---|---|---|
 | Threat / scam story | **0–1** | Tier 1: seven of eight bibles contain zero |
-| List-shaped story or explainer — what-to-buy, price limits, a named-company run | **3–4 is in register** | Tier 1: the aired 06/22 what-not-to-buy segment has four `CREATE FULL SCREEN GRAPHIC` cards plus four `TAKE FULLSCREEN` logo cards |
+| List-shaped closer or explainer — what-to-buy, price limits, a named-company run | **3–4 is in register** | Tier 1: aired 06/22 story 4 has four `CREATE FULL SCREEN GRAPHIC` cards plus four `TAKE FULLSCREEN` logo cards |
 
 An earlier version of this skill capped the whole document at one or two and
-called four "over-produced." That is right for a threat story and wrong for a
-list-shaped one — 06/22's what-not-to-buy segment is exactly the case that earns
-cards, and it earns them because of what it is, not where it sits. The rule is
-about whether the content **has to be read rather than heard**: a dated list, a
-set of price limits, a click path, a run of company logos. If it can be said, say
-it.
+called four "over-produced." That is right for a threat story and wrong for the
+closer — 06/22's story 4 is a what-not-to-buy list, which is exactly the case
+that earns cards. The rule is about whether the content **has to be read rather
+than heard**: a dated list, a set of price limits, a click path, a run of company
+logos. If it can be said, say it.
 
 ## The negative space
 

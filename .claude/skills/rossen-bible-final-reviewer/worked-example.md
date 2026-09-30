@@ -82,9 +82,9 @@ exposure regardless of what sourcing turns up.
 
 | # | Story / section | Issue |
 |---|---|---|
-| 16 | All clip cues | 8 cues, none carrying a URL. **Legacy bible, written with no outline, so `--stage draft`: NOTE.** From an outline w/ videos this row would be eight BLOCKERs |
+| 16 | All clip cues | 8 cues, none carrying a URL. **Stage-appropriate** — aired bibles carry unsourced cues pre-air and the clip pipeline sources them downstream. Listed so the producer can confirm a manifest exists separately |
 | 17 | All clip cues | None visually confirmed. This review works from titles, descriptions and transcripts only |
-| 18 | All clip cues | All 8 cues numbered, 1 to 8 in order. Correct form — no finding |
+| 18 | All clip cues | All 8 cues numbered rather than `XXX`. Confirm the show has been timed |
 | 19 | Movers / clip 5 | "AGOYU" — confirm spelling and that the app is still live before it goes on screen. A named free app is an implicit endorsement |
 | 20 | Movers / AI section | Stray backslash in "I FOUND A \FREE APP" will render on the prompter |
 

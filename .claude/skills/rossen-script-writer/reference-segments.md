@@ -13,9 +13,7 @@ mistakes, not the format. Normalize every time. `check_bible.py` flags them.
 
 ## The tease block — `F2 TOP STORIES, week of 07/13`
 
-340 words, 3 pages. One separator-delimited block per story, CTA closes it.
-This example runs four blocks because that week's rundown had four stories — the
-block count tracks the show's shape, it is not a fixed four.
+340 words, 3 pages. Four story blocks separated by rules, CTA closes it.
 No PLAY CLIP marker anywhere in here. Ever.
 
 ```
@@ -83,7 +81,7 @@ JOIN THE CHAT
 
 ## Lead story — `F2 TOP STORIES, week of 07/13`
 
-786 words, 51 bullets, 5 clip beats, 7 pages. The shape of an A story. Note
+786 words, 51 bullets, 5 clip beats, 7 pages. The shape of every story 1. Note
 the 6–10 setup lines carrying specifics before each clip, and the protection list
 landing at the end as a flat run of dashes.
 

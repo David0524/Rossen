@@ -32,9 +32,10 @@ A pure money story — prices, fees, coupons, hidden charges — is demoted, not
 can be excellent, it can be the best-sourced thing on the slate, and it still
 should not lead, because a dollar figure is abstract and a camera is not.
 
-Wallet stories earn a later slot — the B story, or a lighter slot in a rundown.
-**They are not a closer slot and there is no closer slot to fill.** A show can end
-on a threat story; a wallet story can also be absent entirely.
+Wallet stories earn a later slot: a B or C story, never the A (Jeff: an A story
+has to be a scam). **Not a wallet story:** a scam that drains something you use
+every day — your debit card, tap to pay, your mailbox. Those are the channel's
+biggest shows (2.5M, 1.2M, 1.0M) and they lead.
 When you demote one, **say why on its page** — a `WHY IT'S DEMOTED, NOT CUT`
 section. It stops the room re-litigating it and it stops a good story reading like
 a weak one.
@@ -51,17 +52,28 @@ Say the beat aloud as a thumbnail. If it needs a clause of explanation before it
 lands, it's still a topic. *"Hidden cameras in the fitting room"* lands.
 *"Retailer surveillance practices in changing areas"* does not.
 
+## Before ranking: the kill list
+
+Drop, or flag as dead on arrival, anything that fails Jeff's bar or sits on the
+story board's dead list: Target-centered, not a scam (for an A), too niche,
+aired inside three months (B and C stories count), a trending topic where our
+viewer is a spectator (Flock cameras), or a calendar collision. Full rules:
+`producer-kit/jeff-and-ryan-rules.md`.
+
 ## Ranking order
 
 Rank the shortlist by clickability first. Then, among candidates that click about
 equally, break ties in this order:
 
-1. **A genuinely viral clip already exists.** Footage solved, beat pre-validated.
+1. **A genuinely viral clip already exists** — and for Ryan, heat on other
+   channels: a local news clip over 200K or a creator video over 500K, upload
+   date confirmed. Footage solved, beat pre-validated.
 2. **Any strong clip exists** — local news package, bust footage, victim interview.
 3. **Time-sensitivity**, scored against the airdate. Matters, but never promotes a
    dull story over a live one.
 4. **Sourcing strength.**
-5. **Distance from what already aired.**
+5. **Distance from what already aired**, and variety against the recent
+   lineup (Ryan liked a car story because the run was heavy on tech and finance).
 
 Original Jeff reporting — a demo, a price walk, a screen-share he owns — is worth a
 promotion at equal clickability, because it's a segment no other outlet has.
@@ -134,9 +146,8 @@ Page one. Columns, in order:
   *"The store watched your searches and raised the price because your baby is
   sick."* Not a topic label.
 - **Viral** — `🔥` plus platform and rounded view count, or `—`.
-- **Slot** — `Wednesday A story`, `Wednesday B story`, `Wednesday rundown #3`,
-  `Umbrella sub-story`, `Friday content block`. Add `TIME-SENSITIVE` and the
-  closing date where it applies.
+- **Slot** — `F2 A`, `F2 B`, `F2 C`, `Call-in caller`, `F1 A`, `F1 B`. Add `TIME-SENSITIVE` and the closing date where it
+  applies.
 - **Confidence** — HIGH / MEDIUM / LOW, plus a short reason where one helps:
   *"HIGH — no victim yet."*
 

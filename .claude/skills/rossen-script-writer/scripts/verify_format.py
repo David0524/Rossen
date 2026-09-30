@@ -101,21 +101,12 @@ def main(path):
     # ---- blank-paragraph rule around clip cues
     for i, par in enumerate(paras[:-2]):
         if re.match(r"^\(\(+PLAY CLIP", par.text.strip()):
-            # cue block: URL / range / BUTT / WHOLE CLIP / SHOW-PRODUCED, then OUT:
-            found_out = False
-            for f in [p.text.strip() for p in paras[i + 1:i + 12]]:
-                if f == "":
-                    defects.append(f"p{i}: blank paragraph inside the clip cue "
-                                   f"block, before its OUT: line — there must be none")
-                    break
-                if f.upper().startswith("OUT:"):
-                    found_out = True
-                    break
-                if not re.match(r"^(https?://\S+|\[URL|\d{1,2}:\d{2}\s*[-–]|BUTT$|"
-                                r"WHOLE CLIP$|SHOW-PRODUCED:)", f, re.I):
-                    break
-            if not found_out:
-                defects.append(f"p{i}: clip cue has no OUT: line closing its cue block")
+            follow = [p.text.strip() for p in paras[i + 1:i + 3]]
+            if follow and follow[0] == "":
+                defects.append(f"p{i}: blank paragraph between the clip cue and "
+                               f"its OUT: line — there must be none")
+            if not any(f.upper().startswith("OUT:") for f in follow):
+                defects.append(f"p{i}: clip cue has no OUT: line beneath it")
 
     print(f"\n{path}")
     print("=" * 68)

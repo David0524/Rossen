@@ -26,6 +26,9 @@ The bible is written from the filled outline and never goes back through the pip
 | `references/example_1007_videos.md` | Phase 2. A real Videos table from a real run. |
 | `scripts/check_outline.py` | **Before every build.** `--stage beats` after Phase 1, `--stage videos` after Phase 2. |
 | `scripts/build_outline.py` | Rendering the `.docx`. |
+| `references/producer-kit/amanda-assignment.md` + `references/examples/amanda-assignment-2026-09-20-F1-phone.md` | When the bible goes to Amanda instead of `rossen-script-writer`: the assignment email. |
+| `references/producer-kit/other-formats.md` | The seven-beat bible assignment, meeting recap, guest-prep agenda, deals talking points, call-in producer brief. |
+| `references/examples/rundown-2026-09-18-F2-car-show.md` | A proposed A-to-E rundown with dated links, the shape the team vets. |
 
 ## Inputs
 
@@ -122,8 +125,8 @@ Never invent a clip to fill a slot. A B story with zero clip beats is normal.
 ## Page one: the show at a glance
 
 - **Running order** table: `| Slot | What | Weight | Clips |` — tease, each story,
-  each OmniWatch break at a story boundary (or a natural in-story bridge), guest
-  entrances, deals, end. After Phase 2, `Clips` reads `found/needed` (`3/4`).
+  each sponsor break (OmniWatch unless the assignment says otherwise) after the
+  victim's story and never on a cliffhanger, guest entrances, deals, end. After Phase 2, `Clips` reads `found/needed` (`3/4`).
 - **The show in three sentences.**
 - **The ride** — one line on where tension builds and where it lets go. Grim is
   allowed when it's the story; unbroken dread is not. No mandatory good-news
@@ -135,6 +138,16 @@ Never invent a clip to fill a slot. A B story with zero clip beats is normal.
 
 Friday: outline the content block fully. The deals half is one row in the running
 order (`Deals — [guest], live requests`) — no deal list here, and no clip beats.
+Name the deals guest (Trey Donovan or Derek Couture) once it's confirmed.
+
+A live scam show's beats follow the Ghost Tapping order: mechanics, victim clip,
+expert, escalation, sponsor, scale beat, practical close; then B, C, and four
+expert questions. A call-in F2 outlines two callers plus the expert; callers by
+caller ID in the outline, first names only on air.
+
+Clips: Matt's standard is about two outside clips per segment, freshest first,
+each with its upload date and length, video links rather than news-site pages.
+When a story wants more, say so in Decisions.
 
 **Header line** carries `**Stage:** beats` until Phase 2 lands, then `**Stage:** videos`.
 
@@ -209,6 +222,20 @@ stories, or it isn't shaped yet — say so in Decisions.
 4. `soffice --headless --convert-to pdf` it, then look at the pages.
 
 Deliver the `.docx`. Revisions land in the file.
+
+## Handing off to Amanda
+
+When the bible is being written by Amanda rather than `rossen-script-writer`,
+the handoff is the assignment email (`references/producer-kit/amanda-assignment.md`;
+model: the Sep 20 phone-scams assignment). Per story: a headline Jeff will
+understand; what happens, in order, in two or three bullets; the frame (the
+callback or why it's ours); **what to find** (the victim with a dollar figure,
+the demo, the company's response on the record); the close (the viewer advice);
+then dated links, freshest clip first. Include our own earlier episodes when
+there's a callback, with the timestamp. One guest ask per show, with a fallback;
+if someone's already booked and may not fit, say so. Two working titles. For a
+live scam show, give the seven beats in Ghost Tapping order
+(`other-formats.md`). Copy Jeff and Ryan.
 
 ## Handoff to the bible
 

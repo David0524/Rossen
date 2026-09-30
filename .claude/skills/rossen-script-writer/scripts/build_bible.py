@@ -13,9 +13,6 @@ semantics, not styling: black is what Jeff says, red is an instruction.
 Line classification:
   (((...)))  or  ((...))     production cue   18pt bold red FF0000
   OUT:                       production cue   18pt bold red, no blank above it
-  URL / 0:17-0:51 (...) /    clip cue block   18pt bold red (URL as blue link),
-  BUTT / WHOLE CLIP /                         no blank lines between the marker
-  SHOW-PRODUCED: ...                          and its OUT:
   **ALL CAPS**  full line    header           23pt bold black
   —-----  or  ______         separator        23pt bold black
   HIT LIKE / JOIN THE CHAT   CTA              18pt regular black
@@ -46,9 +43,6 @@ LINK_BLUE = "1155CC"
 
 CUE_OPEN = re.compile(r"^\(\(+")
 SEPARATOR = re.compile(r"^[\u2014\-_=]{4,}$")
-CUE_URL = re.compile(r"^(\[[^\]]*\]\(https?://\S+\)|https?://\S+|\[URL[^\]]*\])$", re.I)
-CUE_RANGE = re.compile(r"^\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}(\s*\(.*\))?$")
-CUE_OTHER = re.compile(r"^(BUTT|WHOLE CLIP|SHOW-PRODUCED:.*)$", re.I)
 CTA = ("HIT LIKE AND SUBSCRIBE", "JOIN THE CHAT", "BECOME A MEMBER",
        "SEND IN YOUR LIVE REQUESTS")
 CARD_OPENER = re.compile(r"CREATE FULL SCREEN GRAPHIC|TAKE FULLSCREEN")
@@ -145,7 +139,6 @@ def build(src, out):
 
     in_card = False
     prev_was_clip = False
-    in_clip = False
     first = True
 
     for raw in lines:
@@ -157,8 +150,6 @@ def build(src, out):
         is_cue = bool(CUE_OPEN.match(s))
         is_out = upper.startswith("OUT:")
         is_bullet = bool(re.match(r"^-\s*\S", s))
-        cue_line = in_clip and bool(CUE_URL.match(raw.strip()) or CUE_URL.match(s)
-                                    or CUE_RANGE.match(s) or CUE_OTHER.match(s))
 
         # ---- graphic-card state
         if is_cue and CARD_OPENER.search(upper):
@@ -167,18 +158,12 @@ def build(src, out):
             in_card = False
 
         # ---- blank paragraph between elements
-        blank = (not first and not (in_clip and (is_out or cue_line))
-                 and not in_card)
+        blank = not first and not (prev_was_clip and is_out) and not in_card
         if blank:
             emit(doc, "", 18, False, BLACK, inline=False)
 
         # ---- classify and emit
-        if cue_line and (CUE_URL.match(raw.strip()) or CUE_URL.match(s)):
-            url = raw.strip()
-            if url.startswith("http"):
-                url = f"[{url}]({url})"
-            emit(doc, url, 18, True, RED)
-        elif is_cue or is_out or cue_line:
+        if is_cue or is_out:
             emit(doc, s, 18, True, RED)
         elif SEPARATOR.match(s):
             emit(doc, s, 23, True, BLACK, inline=False)
@@ -195,10 +180,6 @@ def build(src, out):
             emit(doc, raw.strip(), 18, False, BLACK)
 
         prev_was_clip = bool(re.search(r"PLAY CLIP", upper)) and is_cue
-        if prev_was_clip:
-            in_clip = True
-        elif is_out or not cue_line:
-            in_clip = False
         first = False
 
     doc.save(out)

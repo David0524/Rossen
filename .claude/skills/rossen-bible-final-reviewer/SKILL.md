@@ -1,11 +1,9 @@
 ---
-name: "rossen-bible-final-reviewer"
-description: Audit a finished Rossen Reports bible before it goes to Jeff to shoot from — fact-check every stat, dollar figure, named-company claim, and quote; verify every clip cue matches its pick in the approved outline w/ videos and check what can and can't be confirmed from metadata/transcript; check structural and voice compliance against the house contract; flag legal and copyright risk; produce a source log table of every checked claim and its confidence. Use whenever a bible draft is done and the user asks to "review," "check," "fact-check," "proof," or "sanity-check" it, asks "is this ready to air," or when a script-writer pass hands off a completed bible in the same session. Do not use for early drafting, brainstorming, or writing bibles from scratch (that's rossen-script-writer), and do not use for clip sourcing or ranking candidates (that happens earlier, in the outline w/ videos stage — rossen-story-outline and rossen-pipeline) — this is a pre-air audit of an already-structured, already-populated draft.
+name: rossen-bible-final-reviewer
+description: Audit a finished Rossen Reports bible before it goes to Jeff to shoot from — fact-check every stat, dollar figure, named-company claim, and quote; verify clip cues have a real source and check what can and can't be confirmed from metadata/transcript; check structural and voice compliance against the house contract; flag legal and copyright risk; produce a source log table of every checked claim and its confidence. Use whenever a bible draft is done and the user asks to "review," "check," "fact-check," "proof," or "sanity-check" it, asks "is this ready to air," or when a script-writer/beat-extractor pass hands off a completed bible in the same session. Do not use for early drafting, brainstorming, or writing bibles from scratch (that's rossen-script-writer), and do not use for clip sourcing or ranking candidates (that's rossen-beat-extractor / rossen-clip-grader) — this is a pre-air audit of an already-structured, already-populated draft.
 ---
 
 # Rossen Bible Final Reviewer
-
-pre-bible → pre-bible email → outline w/ videos → bible → **bible review**
 
 You are the last set of eyes on a Rossen Reports bible before it goes to Jeff to
 shoot from. You do not write or rewrite the bible. You review a finished draft
@@ -26,12 +24,18 @@ is out of scope unless explicitly requested.
 | `scripts/mechanical_pass.py` | **Step 0, every review.** Decidable checks, the claim inventory, and `--emit-log-skeleton` for the source log. |
 | `scripts/check_source_log.py` | **Before delivering.** Enforces the house source-log format and grouping. |
 | `worked-example.md` | Checking output shape — a complete three-artifact audit, including a correctly grouped source log. |
+| `references/producer-kit/facts-to-get-right.md` | **Every review.** Figures and claims the team has already had to correct. Check before searching. |
+| `references/producer-kit/rossen-voice.md` | Voice compliance. Its 12-point review checklist is dimension 3's rubric. |
+| `references/producer-kit/bible-format-ghost-tapping.md` | Structure compliance for a live scam show; the common-errors list. |
+| `references/producer-kit/sponsor-script-rules.md` | A sponsor read is in the bible, or sponsor copy was sent for review. |
+| `references/producer-kit/script-notes.md` + `references/examples/script-notes-kroger-*.md` | When the deliverable is notes for the writer. |
+| `references/producer-kit/jeff-brief.md` + `references/examples/jeff-brief-2026-09-24.md` | When asked for Jeff's 30-second brief. |
 
 ## Step 0 — run the mechanical pass first
 
 ```bash
-python3 scripts/mechanical_pass.py draft.md --outline outline.md  # normal: written from an outline w/ videos
-python3 scripts/mechanical_pass.py draft.md --stage draft         # legacy bible with no outline
+python3 scripts/mechanical_pass.py draft.md               # pre-air draft
+python3 scripts/mechanical_pass.py draft.md --stage final  # clip manifest locked
 ```
 
 It returns two things:
@@ -62,17 +66,16 @@ This skill assumes structure and story selection are already done. It is a
 pre-air audit, not a co-writer. Do not:
 
 - draft new stories, angles, or hooks — that's `rossen-script-writer`
-- source or grade clip candidates — that happened in the outline w/ videos. A bad
-  or missing clip goes back to its outline Videos row, not into a search here
+- source or grade clip candidates — that's `rossen-beat-extractor` /
+  `rossen-clip-grader`
 - rewrite prose or reorder stories on your own initiative
 
 ## Inputs
 
 - The full bible draft (required).
-- **The approved outline w/ videos** (its markdown source, or the `.docx`). Its
-  Videos tables are the clip manifest, and they were locked before the bible was
-  written — so the stage is `final` by default. Only a legacy bible written with no
-  outline is `--stage draft`; ask if it's unclear which this is.
+- **What stage the draft is at** — is the clip manifest locked, or is this
+  pre-sourcing? This changes severity, so ask if it wasn't stated (see
+  "Clip cue verification").
 - Any research notes / source list the writer kept. Use it; don't ignore it and
   re-derive everything from scratch.
 - `aired_examples.md` and `glossary.md` from the project, as the register
@@ -88,7 +91,7 @@ changes how much you can verify versus flag as unverified.
 These are different kinds of authority, and confusing them causes real errors.
 
 **Contract** — the machine-parsed fields. Authority is the written spec in
-`rossen-script-writer` (its "cue contract" section), **not
+`rossen-script-writer` (its "hard contract with the clip pipeline" section), **not
 aired precedent.** The aired bibles contain cues with two, four and five parens,
 pre-filled `OUT:` lines, and B-roll marked three different ways. Those are typos
 in the corpus. The extractor parses on exact paren count, so a malformed cue is a
@@ -99,19 +102,15 @@ format defect on the grounds that the examples do it too.
 the hooks hit, whether a header escalates. Here the aired examples *are* the
 standard, and `measurements.md` gives the numbers behind them.
 
-### Cue numbering convention
+### Cue placeholder convention
 
-In the outline workflow, `rossen-script-writer` numbers clips 1 to N in air order
-and fills each cue block from the outline's Videos row: marker, URL, range lines
-with `BUTT` between segments, `OUT:` with the final outcue. So:
+`rossen-script-writer` leaves the clip number as literal `XXX` until the show is
+timed: `(((PLAY CLIP XXX HORIZONTAL)))`. Numbers get filled in afterwards. So:
 
-- Numbered, filled cues are the correct form. Never flag them for being filled.
-- Numbers out of order, skipped or repeated → WARNING.
-- `XXX` left in a bible written from an outline → WARNING: an unresolved beat that
-  needs a ruling before it can be shot. In a legacy bible with no outline, it's the
-  draft-stage placeholder — NOTE.
-- A `MANUAL` or `UNVERIFIED` pick carries a URL and a blank `OUT:`. Correct, not a
-  defect — but the source log must say the outcue was never verified.
+- Numbered cues on a pre-air draft → confirm the show has been timed. Not a
+  defect in itself.
+- `XXX` still present when the manifest is locked → WARNING, numbers are overdue.
+- **Never flag `XXX` as malformed.** It is the correct draft-stage form.
 
 ## Review dimensions
 
@@ -128,6 +127,16 @@ Mostly covered by Step 0. Read its findings, then check by eye what it cannot:
 
 - Each story follows the arc: hook → mechanics → proof → clip cues →
   protection/takeaways → graphics notes.
+- A live scam show follows the Ghost Tapping skeleton
+  (`references/producer-kit/bible-format-ghost-tapping.md`): cold open with A,
+  B, C headlines and the expert tease; like/subscribe; A story with mechanics,
+  victim clip, expert, escalation, tease + sponsor, scale beat, practical close;
+  B; C; four numbered expert questions; deals on Fridays. A call-in F2 follows
+  `rossen-script-writer`'s call-in rules (no ordinals, no cross-references
+  between callers, `[LEAVE BUFFER FOR EDITING]` between sections, callers by
+  first name, no promise of getting money back).
+- The ending closes; it doesn't dissolve. The how-to arrives without long
+  preamble.
 - The tease block and the body agree — no story teased that isn't in the body,
   none in the body that isn't teased.
 - For Friday shows: content portion fully scripted, deals portion lighter (guest
@@ -138,7 +147,15 @@ Mostly covered by Step 0. Read its findings, then check by eye what it cannot:
 
 ### 3. Voice compliance
 
-Step 0 catches off-register words. You judge the rest:
+Step 0 catches off-register words. You judge the rest, against the 12-point
+checklist in `references/producer-kit/rossen-voice.md`: a command to "you" after
+the slate; stakes in threes and the "big deal" pre-empt; a human victim with a
+dollar figure teased in the open; cue + verdict into every clip and a one-line
+button out; escalators between beats; numbers as figures, killer number
+repeated; tips numbered, each a command plus a reason, URLs and phone numbers
+called to screen; sponsor entered with a tease and a personal bridge, not before
+the lead story is told; no word from the doesn't-say column; no sentence over 25
+words that isn't a list; the company's response; claims hedged by attribution.
 
 - Short lines, one clause or sentence per line. Bullets average ~11.6 words in
   the aired corpus — flag both over-fragmenting and lines written to be read
@@ -152,22 +169,16 @@ Step 0 catches off-register words. You judge the rest:
 
 ### 4. Clip cue verification
 
-**The outline w/ videos is the manifest.** Match every cue against it before
-anything else — `mechanical_pass.py --outline` does the URL half:
+**Severity here depends on the stage of the draft.** Get this right; it is the
+difference between a useful verdict and a useless one.
 
-- **Cue with no source** → **BLOCKER**; it cannot be shot. Exception: a
-  `SHOW-PRODUCED:` cue, which the team records.
-- **Cue URL that isn't an outline pick**, or an outline pick missing from the bible
-  → WARNING. A clip change goes through the outline first.
-- **Ranges or outcue that differ from the Videos row** → WARNING. The writer copies
-  them verbatim; drift here is a transcription error.
-- **Runway promises something the row's *Shows* cell doesn't contain** → WARNING.
-  The setup lines must land the clip that was actually picked.
-- Orientation on the marker must match the outline row; a `· CROP` pick keeps the
-  row's orientation and the crop note goes in the source log.
-
-Legacy bible with no outline (`--stage draft`): a cue with no URL is a **NOTE** —
-its clips still need an outline w/ videos pass.
+- **Pre-air draft (default):** a cue with no URL is a **NOTE**, not a blocker.
+  Aired bibles routinely carry cues with no source at this stage — the F2 07/10
+  bible has eight cues and zero URLs, and it aired. The clip pipeline sources them
+  downstream. List them so the producer can confirm a manifest exists separately,
+  and move on.
+- **Manifest locked** (`--stage final`, or the producer says sourcing is done): a
+  cue with no source is a **BLOCKER** — it cannot be shot.
 
 For every cue that does have a source:
 
@@ -193,6 +204,15 @@ For every cue that does have a source:
 
 ### 6. Legal / compliance / safety risk
 
+- **Overreach** — the team's most common fix. "On purpose" when the evidence
+  says "mistakes"; "told us" when the source told someone else; a national claim
+  built on one state's data; "never fixed" without dates; stale statistics as
+  current; a vendor or advocacy-group statistic stated as settled fact. Jeff
+  hedges by attribution ("employees say," "and I'm quoting here"), not by
+  softening, so the fix is usually an attribution.
+- **The company's response** is in the bible, or the line that they didn't
+  respond. Missing is a fix.
+
 - Any claim that could be defamatory if wrong — naming a specific company,
   person, or product as doing something illegal or dangerous. Flag for extra
   scrutiny and state the strength of the sourcing behind it.
@@ -209,8 +229,29 @@ For every cue that does have a source:
 
 ### 7. Sponsor and business-side checks
 
-- Sponsor block at a story boundary or a takeaway beat, not interrupting a clip
-  run. Step 0 checks position; you confirm the judgment call.
+- Sponsor block after the victim's story, never inside it or on a cliffhanger,
+  entered with a tease of what's next and a personal bridge. Step 0 checks
+  position; you confirm the judgment call.
+- A guest who works for a sponsor, or is related to staff, is disclosed on air.
+- Anything that blurs reporting and advertising is a priority fix: viewers read
+  anything near the show as Jeff's personal endorsement.
+- If sponsor copy is in scope, notes are straight find-and-replace with no
+  explanation, and anything the sponsor marked "read verbatim" is untouchable
+  (`sponsor-script-rules.md`).
+- No contract, compensation or revenue matters in any deliverable.
+
+### 8. Production consistency (the common bible errors)
+
+- A guest carried over from last week's bible.
+- One guest named in the copy and a different one in the cues (the Sep 25 F1
+  named Derek Couture on the deals page and cued "bring Trey in").
+- Caps typos Jeff will read cold ("SENIOR DIRECT," "PRIVACY POLICE"), doubled
+  words, a placeholder left in ("Mary from TK").
+- An image cue placed after the moment it illustrates.
+- Guest credentials inconsistent across pages or not matching the topic.
+- Clip links that aren't video: flag so Kyle pulls them before the taping.
+- Deals: "retail" prices checked against the live listing, not the sheet;
+  Subscribe and Save prices said as such.
 - One sponsor break per document unless the draft says otherwise.
 - No sponsor content drafted in full unless explicitly asked — house rule is that
   sponsor copy is marked, not written.
@@ -232,11 +273,7 @@ Treat every one of the following as a checkable claim:
 
 ### Budget and triage
 
-A full Wednesday bible carries roughly 40 checkable claims, whatever its shape —
-the whole-show budget is fixed at 18–22 pages and 1,700–2,300 body words, so an
-A+B show and a five-story rundown land in the same neighbourhood. Count the claims
-the document actually contains; do not scale an expectation off the story count.
-You cannot
+A full F2 story-show bible carries roughly 40 checkable claims. You cannot
 run a deep search on all of them, and pretending otherwise produces silent
 thinning — checks get shallower as the document goes on and nothing reveals it. So
 work the tiers Step 0 gives you, in order:
@@ -388,17 +425,9 @@ past logs: `FTC DATA AND ALERTS`, `THE FEDERAL CASE — GOEL AND RAHEJA`,
 `ALLIE CONTI / VICE`, `CONSUMERS' CHECKBOOK / LAURA GENTRY`,
 `JEFF BRANCH / HOMEOWNER IMPERSONATION`.
 
-Group by whatever the bible's shape makes legible:
-
-- **A rundown of three or more stories** — one group per story is usually right.
-- **A Wednesday A+B** — two story groups is too coarse. The A story carries
-  40–55% of the body and about half the claims, so **subdivide the A story by
-  evidence cluster** and keep B as one group unless it too runs several distinct
-  bodies of evidence. Two groups of twenty rows is the flat table the grouping
-  exists to prevent.
-- **A single-topic umbrella show** — one group per numbered sub-story.
-- **A single-story Friday** — subdivide by evidence cluster; that bible has one
-  story but five distinct bodies of evidence behind it.
+On a multi-story Wednesday, one group per story is usually right. On a
+single-story Friday, subdivide by evidence cluster — that bible has one story but
+five distinct bodies of evidence behind it.
 
 **Three standing groups always appear, in this order, at the bottom**, empty if
 there is nothing to report:
@@ -450,6 +479,23 @@ name them and strip the `(line N)` prefixes.
 sitting above the first group, a missing standing group, a leftover placeholder, an
 invented confidence label, a figure with no scope, or a URL on an UNVERIFIED row.
 Run it before delivering.
+
+## Optional deliverables the team uses
+
+Produce these when asked, after the audit:
+
+- **Notes for the writer** (`references/producer-kit/script-notes.md`). One line
+  per note: the anchor text from the script, then the replacement in Jeff's
+  words — not a description of what's wrong. Accuracy items are short questions
+  ("Confirm 'layoffs' vs. 'staffing cuts.'"). Lead with what's working, then the
+  two or three must-fixes; anything above the writer's scope goes in a separate
+  note. Models: the Kroger notes, short and long.
+- **Jeff's 30-second brief** (`references/producer-kit/jeff-brief.md`), sent
+  the night before a shoot: each show in 30 seconds, every clip named by who's
+  in it ("the Massachusetts woman"), each story's viewer advice, where the
+  sponsor sits, and **the heads-ups** — unbooked guests, names that don't match
+  between pages, non-video links, stats without dates. Describe what's actually
+  in the bible, not what was assigned; credit the writer if you polished it.
 
 ## What this skill does not do
 

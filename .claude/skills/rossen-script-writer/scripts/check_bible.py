@@ -32,27 +32,28 @@ T = {
     "open_decisions": (2, 3),
     "wed": {"clips": (10, 12), "words": (1700, 2300), "tease_words": (210, 340)},
     "fri": {"clips": (0, 4), "words": (600, 1100), "tease_words": (120, 300)},
+    # call-in F2: no measured corpus yet, so bands are disabled
+    "callin": {"clips": (0, 99), "words": (0, 99999), "tease_words": (0, 9999)},
 }
 
 BANNED = [
     "FOLKS", "CONSUMERS", "HOWEVER", "ALLEGEDLY", "REPORTEDLY", "ALLEGED",
     "UTILIZE", "INDIVIDUALS", "FURTHERMORE", "MOREOVER", "IN CONCLUSION",
     "THE BOTTOM LINE", "HERE'S THE THING", "PURCHASE",
+    # producer kit (Sept 2026): words Jeff doesn't say, per the voice profile
+    "OUTRAGEOUS", "TOTALLY AMAZING", "INCREDIBLE DISCOUNTS", "FUNCTIONALLY",
+    "DISCREPANCIES", "FLUCTUATIONS", "ADDITIONALLY", "UNACCEPTABLE",
+    "WE WILL DEMONSTRATE", "JUST WATCH", "TAKE A LOOK", "HAVE A LOOK",
 ]
+
+# Softer: he rarely says these; usually a "you" or "right now" fix. WARN only.
+SOFT = ["CUSTOMERS", "SHOPPERS", "LISTENERS", "RECENTLY", "CURRENTLY"]
 
 ESCALATORS = ["BUT", "EVEN", "NOW", "WORSE", "THINK THAT", "SHOCKING", "MOST",
               "NEXT", "WAIT", "GUESS", "NEVER", "EXPLODING", "FINALLY"]
 
-CLIP_STRICT = re.compile(r"^\(\(\(PLAY CLIP (XXX|\d+) (HORIZONTAL|VERTICAL)"
+CLIP_STRICT = re.compile(r"^\(\(\(PLAY CLIP XXX (HORIZONTAL|VERTICAL)"
                          r"( BROLL)?\)\)\)$")
-# Lines allowed between a clip marker and its OUT: line (filled from the outline).
-CUE_URL = re.compile(r"^(\[[^\]]*\]\(https?://\S+\)|https?://\S+|\[URL[^\]]*\])$", re.I)
-CUE_RANGE = re.compile(r"^\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}(\s*\(.*\))?$")
-CUE_OTHER = re.compile(r"^(BUTT|WHOLE CLIP|SHOW-PRODUCED:.*)$", re.I)
-
-
-def is_cue_line(s):
-    return bool(CUE_URL.match(s) or CUE_RANGE.match(s) or CUE_OTHER.match(s))
 CLIP_LOOSE = re.compile(r"\(+\s*PLAY CLIP")
 CUE_ANY = re.compile(r"\(\(+[^)]")
 PROTECTION_HEADER = "HERE'S HOW TO PROTECT YOURSELF"
@@ -89,7 +90,7 @@ def check(path, day="wednesday"):
         sys.exit(2)
 
     lines = [l.rstrip() for l in raw.split("\n")]
-    band = T["wed"] if day.startswith("w") else T["fri"]
+    band = T["callin"] if day == "callin" else (T["wed"] if day.startswith("w") else T["fri"])
 
     # ---------------------------------------------------- tease boundary
     boundary = None
@@ -114,53 +115,18 @@ def check(path, day="wednesday"):
             clips.append(i)
             if not CLIP_STRICT.match(s.upper()):
                 r.err(f"line {i+1}: malformed clip marker {s!r} — must be "
-                      f"exactly (((PLAY CLIP 3 HORIZONTAL))) or "
-                      f"(((PLAY CLIP 3 VERTICAL))), three parens each side, "
-                      f"a clip number (XXX only if unresolved), optional ' BROLL'.")
+                      f"exactly (((PLAY CLIP XXX HORIZONTAL))) or "
+                      f"(((PLAY CLIP XXX VERTICAL))), three parens each side, "
+                      f"XXX literal, optional ' BROLL' before the close.")
     r.stats["clip_beats"] = len(clips)
 
-    numbers = []
     for i in clips:
-        m = re.search(r"PLAY CLIP (XXX|\d+)", strip_md(lines[i]).upper())
-        token = m.group(1) if m else "XXX"
-        block, out = [], None
-        for x in lines[i + 1:i + 14]:
-            s = strip_md(x)
-            if not s:
-                continue
-            if is_cue_line(s):
-                block.append(s)
-                continue
-            if s.upper().startswith("OUT:"):
-                out = s[4:].strip()
-            break
-        if out is None:
-            r.err(f"line {i+1}: clip marker has no OUT: line closing its cue block "
-                  f"(only URL, range, BUTT, WHOLE CLIP, SHOW-PRODUCED lines may "
-                  f"sit between them).")
-            continue
-        has_url = any(CUE_URL.match(b) for b in block)
-        has_range = any(CUE_RANGE.match(b) for b in block)
-        produced = any(b.upper().startswith("SHOW-PRODUCED") for b in block)
-        whole = any(b.upper() == "WHOLE CLIP" for b in block)
-        if token == "XXX":
-            r.warn(f"line {i+1}: clip number is XXX — an unresolved beat. The "
-                   f"outline should have ruled on it; keep it as an open decision.")
-            continue
-        numbers.append((i, int(token)))
-        if not has_url and not produced:
-            r.err(f"line {i+1}: clip {token} has no source. Copy the URL from the "
-                  f"outline's Videos row, or mark SHOW-PRODUCED.")
-        if out and not (has_range or whole):
-            r.warn(f"line {i+1}: clip {token} has an outcue but no in–out range. "
-                   f"An outcue must come from the Videos row's transcript range.")
-        if has_range and not out:
-            r.warn(f"line {i+1}: clip {token} has a range but a blank OUT:. "
-                   f"Copy the final segment's outcue from the Videos row.")
-    expected = list(range(1, len(numbers) + 1))
-    if numbers and [n for _, n in numbers] != expected:
-        r.err(f"clip numbers run {[n for _, n in numbers]} — must be 1 to "
-              f"{len(numbers)} in air order, no gaps or repeats.")
+        nxt = [x for x in lines[i + 1:i + 4] if strip_md(x)]
+        if not nxt or not strip_md(nxt[0]).upper().startswith("OUT:"):
+            r.err(f"line {i+1}: clip marker has no OUT: line beneath it.")
+        elif strip_md(nxt[0]).upper().replace(" ", "") != "OUT:":
+            r.err(f"line {i+1}: OUT: line is pre-filled ({strip_md(nxt[0])!r}). "
+                  f"Leave it blank — the pipeline fills it.")
 
     for l in tease:
         if CLIP_LOOSE.search(strip_md(l).upper()):
@@ -252,8 +218,7 @@ def check(path, day="wednesday"):
 
     spoken = [strip_md(l) for l in body if strip_md(l)
               and not CUE_ANY.search(strip_md(l))
-              and not strip_md(l).upper().startswith("OUT:")
-              and not is_cue_line(strip_md(l))]
+              and not strip_md(l).upper().startswith("OUT:")]
     sw = sum(words(s) for s in spoken)
     tw = sum(words(strip_md(l)) for l in tease)
     r.stats["body_spoken_words"] = sw
@@ -297,9 +262,42 @@ def check(path, day="wednesday"):
     for w, n in hits.items():
         r.err(f"banned register: {w!r} x{n}. He essentially never says it; "
               f"see the negative-space table in measurements.md.")
-    if re.search(r"\bWATCH THIS\b", U):
-        r.err("'WATCH THIS' is Jeff's live handoff, spoken the instant before a "
-              "clip rolls. Never write it.")
+    soft = {w: len(re.findall(r"\b" + re.escape(w) + r"\b", U))
+            for w in SOFT if re.search(r"\b" + re.escape(w) + r"\b", U)}
+    for w, n in soft.items():
+        r.warn(f"{w!r} x{n}: Jeff says 'you' / 'viewers' / 'right now'. Check "
+               f"each use.")
+
+    # ---------------------------------------------------- clip in / clip out
+    # Producer kit: every clip goes in on a cue plus a verdict and comes out
+    # on a one-line button. BUTT between segments of one source is exempt.
+    CUE = re.compile(r"\b(WATCH THIS|CHECK THIS OUT|ROLL CLIP|WATCH CLIP|LISTEN|"
+                     r"HERE YOU CAN SEE|WATCH WHAT|WATCH HIM|WATCH HER|"
+                     r"HERE'S HOW IT HAPPENED|THIS IS (CRAZY|NUTS|SICK|INSANE|WILD))")
+    no_cue, no_button = [], []
+    for i in clips:
+        above = [strip_md(x) for x in lines[max(0, i - 3):i] if strip_md(x)]
+        if not any(CUE.search(x.upper()) for x in above):
+            no_cue.append(i + 1)
+        nxt_raw = ""
+        for x in lines[i + 1:i + 8]:
+            t = strip_md(x)
+            if not t or t.upper().startswith("OUT:"):
+                continue
+            nxt_raw = x.strip()
+            break
+        nxt = strip_md(nxt_raw).upper()
+        is_header = nxt_raw.startswith("**") and nxt == nxt.upper() and not nxt.startswith("-")
+        if nxt.startswith("BUTT"):
+            continue
+        if not nxt or CLIP_LOOSE.search(nxt) or (is_header and not nxt.startswith("-")):
+            no_button.append(i + 1)
+    if no_cue:
+        r.warn(f"{len(no_cue)} clip(s) with no cue + verdict in the last lines of "
+               f"the runway ('WATCH THIS. THIS IS CRAZY.'), lines {no_cue[:6]}.")
+    if no_button:
+        r.warn(f"{len(no_button)} clip(s) not followed by a one-line button "
+               f"(clip-to-clip or clip-to-header), lines {no_button[:6]}.")
 
     # ---------------------------------------------------- headers
     heads = []
@@ -307,8 +305,7 @@ def check(path, day="wednesday"):
         if l.strip().startswith("**") and not CUE_ANY.search(l):
             s = strip_md(l)
             if (s and s.upper() == s and not s.startswith("-")
-                    and not s.upper().startswith("OUT:") and not is_cue_line(s)
-                    and words(s) <= 16):
+                    and not s.upper().startswith("OUT:") and words(s) <= 16):
                 heads.append(s)
     mid = [h for h in heads if PROTECTION_HEADER not in h.upper()
            and "ALWAYS LOOKING FOR WAYS" not in h.upper()]
@@ -338,8 +335,8 @@ def check(path, day="wednesday"):
     if g > 2:
         r.warn(f"{g} graphic cards. Threat stories run 0-1; only a list-shaped "
                f"story (what-to-buy, price limits, a click path) earns 3-4, and "
-               f"the aired precedent for that is the 06/22 what-not-to-buy "
-               f"segment. Confirm this is that case.")
+               f"the aired precedent for that is 06/22 story 4. Confirm this is "
+               f"that case.")
 
     # ---------------------------------------------------- first person
     fp = [s for s in spoken
@@ -374,6 +371,12 @@ def check(path, day="wednesday"):
         else:
             body_txt = s
         sents = [x for x in re.split(r"(?<=[.!?])\s+", body_txt) if x]
+        bt = body_txt.upper()
+        # cue + verdict, numbered tips, repeated killer numbers and
+        # on-screen callouts are house patterns, not built aphorisms
+        if (re.match(r"^(WATCH THIS|CHECK THIS OUT|ROLL CLIP|NUMBER (ONE|TWO|THREE|FOUR|FIVE|SIX|SEVEN))", bt)
+                or "THERE IT IS ON THE SCREEN" in bt or "BIG DEAL" in bt):
+            continue
         if len(sents) >= 2 and words(body_txt) <= 16:
             aph.append(body_txt)
     r.stats["aphorism_candidates"] = aph
@@ -389,7 +392,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("path")
     ap.add_argument("--day", default="wednesday",
-                    choices=["wednesday", "friday"])
+                    choices=["wednesday", "friday", "callin"])
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
 

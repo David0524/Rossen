@@ -1,6 +1,6 @@
 ---
-name: "rossen-clip-grader"
-description: Score and rank harvested clip candidates against a Rossen Reports beat, then flag the one to air. Runs in two passes: a cheap metadata triage that narrows thirty candidates to a priority-sized shortlist, then a transcript-informed grade that picks the winner and proposes in and out points. Use this whenever candidates have been harvested for a beat and need ranking, whenever the user asks which clip to use, wants a shortlist, asks "is this clip any good," or is deciding what goes in the outline's Videos table. Also use when auditing why a clip was or was not picked.
+name: rossen-clip-grader
+description: "Score and rank harvested clip candidates against a Rossen Reports beat, then flag the one to air. Runs in two passes: a cheap metadata triage that narrows thirty candidates to a priority-sized shortlist, then a transcript-informed grade that picks the winner and proposes in and out points. Use this whenever candidates have been harvested for a beat and need ranking, whenever the user asks which clip to use, wants a shortlist, asks \"is this clip any good,\" or is deciding what to send to the timecode extractor. Also use when auditing why a clip was or was not picked."
 ---
 
 # Rossen Reports clip grader
@@ -9,16 +9,22 @@ Candidates in, a ranked shortlist and one flagged pick out. You are making the c
 that a producer used to make, so the standard is not "is this relevant" but "will
 this play on air."
 
-pre-bible → pre-bible email → **outline w/ videos** → bible → bible review
-
-**This is the last search stage.** Your pass-two object becomes the outline's Videos
-row for the beat — and from there, the bible's numbered clip marker, URL, in–out and
-`OUT:` line. The bible writer copies it; nothing downstream re-grades it. Validate before handing off:
+**This is the last stage.** Your pass-two object becomes the Bible doc, and nothing
+downstream can correct it. Validate before handing off:
 
 ```bash
 python3 scripts/check_grades.py one shortlist.json
 python3 scripts/check_grades.py two picks.json
 ```
+
+## The producer team's clip rules
+
+Read `references/producer-clip-rules.md` once per run. The ones that change a
+pick: about **two outside clips per segment** (Matt), so grade for the best two
+rather than the most; **local news** is the preferred source and the heat
+signal; confirm upload dates and put the freshest first; a pick that lives only
+on a news-site page gets flagged so Kyle pulls it before the taping; never name
+private individuals from body cam or victim footage in titles or descriptions.
 
 ## Beats that should not reach you
 
@@ -398,8 +404,8 @@ transcript. It is the verification anchor: a correct out point is one where that
 phrase appears in the transcript within about a second of the proposed timestamp.
 Never invent it, never paraphrase it.
 
-**Check `expected_segments` before you finish.** It comes from the outline row (or, in
-script-mode back-fill, from counting `BUTT` markers), so it is the producer's own count of how many slices this beat
+**Check `expected_segments` before you finish.** It comes from counting `BUTT`
+markers in the script, so it is the producer's own count of how many slices this beat
 wants. Propose fewer and you ship the beat at a fraction of its intended length,
 invisibly. Four of 24 aired beats were butt-cuts pulling 2 to 3 slices from one
 source, so this is normal, not an edge case. If the beat expects 2 and you can only

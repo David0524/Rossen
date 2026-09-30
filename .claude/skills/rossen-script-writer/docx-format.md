@@ -42,7 +42,7 @@ must be Node, the classification table below is the spec to port.
 Page: US Letter, 1" margins all sides, line spacing 1.15.
 
 Blank paragraph between distinct bullets and beats. **No** blank paragraph
-anywhere in a clip cue block — marker, URL, range lines, `BUTT`, `OUT:` — or between a graphic-card cue and the
+between a clip cue and its `OUT:` line, or between a graphic-card cue and the
 items on the card.
 
 ## How the builder classifies a line
@@ -67,7 +67,7 @@ underlined hyperlink. Both work inside any body line.
 
 Every run is Arial; headers are 23pt bold black; body is 18pt; every cue is bold
 `FF0000`; page is Letter with 1" margins; spacing is 1.15; no blank paragraph
-sits inside a clip cue block; every clip cue block closes with an `OUT:`.
+sits between a clip cue and its `OUT:`; every clip cue has an `OUT:` beneath it.
 It reports distinct defect classes rather than one line per run, so a systematic
 error reads as one finding.
 

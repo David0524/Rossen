@@ -8,16 +8,15 @@ triage-ordered claim inventory so the fact-check budget is known before the firs
 search.
 
 Usage:
-    python3 scripts/mechanical_pass.py draft.md --outline outline.md   # normal
-    python3 scripts/mechanical_pass.py draft.md --stage draft          # no outline
+    python3 scripts/mechanical_pass.py draft.md                  # pre-air draft
+    python3 scripts/mechanical_pass.py draft.md --stage final    # manifest locked
     python3 scripts/mechanical_pass.py draft.md --json
 
---stage final (default): the bible was written from an approved outline w/ videos,
-so its clip manifest is locked. A cue with no source is a BLOCKER.
---stage draft: a legacy bible written with no outline. Unsourced cues are a NOTE.
---outline: the approved outline's markdown source. Every cue URL is matched against
-its Videos tables; a cue the outline never picked, or an outline pick missing from
-the bible, is a WARNING.
+--stage draft (default): clip cues without a source are a NOTE. Aired bibles
+routinely carry unsourced cues at this stage; the clip pipeline sources them
+downstream.
+--stage final: the producer has said the clip manifest is locked, so a cue with
+no source is a BLOCKER.
 
 If `rossen-script-writer/scripts/check_bible.py` output is already available for
 this draft, import its ERRORs instead of re-deriving the overlap; this script adds
@@ -33,13 +32,13 @@ import sys
 
 BANNED = ["FOLKS", "CONSUMERS", "HOWEVER", "ALLEGEDLY", "REPORTEDLY", "ALLEGED",
           "UTILIZE", "INDIVIDUALS", "FURTHERMORE", "MOREOVER", "IN CONCLUSION",
-          "THE BOTTOM LINE", "HERE'S THE THING", "PURCHASE"]
+          "THE BOTTOM LINE", "HERE'S THE THING", "PURCHASE",
+          # producer kit (Sept 2026): words Jeff doesn't say
+          "OUTRAGEOUS", "TOTALLY AMAZING", "INCREDIBLE DISCOUNTS", "FUNCTIONALLY",
+          "DISCREPANCIES", "FLUCTUATIONS", "ADDITIONALLY", "UNACCEPTABLE",
+          "WE WILL DEMONSTRATE", "JUST WATCH", "TAKE A LOOK", "HAVE A LOOK"]
 
 CLIP = re.compile(r"\(+\s*PLAY CLIP\s+([A-Z0-9]+)([^)]*)\)+", re.I)
-CUE_BLOCK_LINE = re.compile(r"^(\[[^\]]*\]\(https?://\S+\)|https?://\S+|\[URL[^\]]*\]|"
-                            r"\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}.*|BUTT|WHOLE CLIP|"
-                            r"SHOW-PRODUCED:.*)$", re.I)
-URL_RE = re.compile(r"https?://[^\s)\]]+")
 WELL_FORMED = re.compile(r"^\(\(\(PLAY CLIP (XXX|\d+) (HORIZONTAL|VERTICAL)"
                          r"( BROLL)?\)\)\)$", re.I)
 PROTECT = re.compile(r"HOW TO PROTECT YOURSELF|KEY TAKEAWAYS|TAKEAWAYS|\bTIPS FOR\b|BEFORE YOU (THROW|TOSS|BUY|HAND)")
@@ -71,7 +70,7 @@ def strip_md(s):
     return re.sub(r"\*+", "", s).replace("\u2019", "'").strip()
 
 
-def analyze(path, stage="final", outline_urls=None):
+def analyze(path, stage="draft"):
     raw = open(path, encoding="utf-8").read()
     lines = [strip_md(l) for l in raw.split("\n")]
     F = []                                    # findings
@@ -113,76 +112,48 @@ def analyze(path, stage="final", outline_urls=None):
                     f"parses on exact paren count.")
             m = CLIP.search(l)
             token = m.group(1).upper()
-            if token == "XXX":
-                add("WARNING" if stage == "final" else "NOTE", "format",
-                    f"line {i+1}",
-                    "Cue still says XXX — an unresolved clip beat. In the outline "
-                    "workflow the number comes from the Videos row; this beat "
-                    "needs a ruling before it can be shot.")
-            elif token.isdigit():
-                numbered.append(int(token))
+            if stage == "draft" and token.isdigit():
+                numbered.append(i + 1)
+            if stage == "final" and token == "XXX":
+                add("WARNING", "format", f"line {i+1}",
+                    "Cue still says XXX but the manifest is locked — numbers "
+                    "should be filled in by now.")
 
-    if numbered and numbered != list(range(1, len(numbered) + 1)):
-        add("WARNING", "format", f"{len(numbered)} cues",
-            f"Clip numbers run {numbered} — should be 1 to {len(numbered)} in "
-            f"air order, no gaps or repeats.")
+    if numbered:
+        add("NOTE", "format", f"{len(numbered)} cues",
+            f"All {len(numbered)} clip cues are numbered rather than XXX. "
+            f"rossen-script-writer leaves XXX literal until the show is timed, "
+            f"so numbered cues mean either the show is timed or the draft did "
+            f"not follow the placeholder convention. Confirm which — the two "
+            f"skills must agree on this or the extractor gets fed the wrong "
+            f"thing.")
 
-    blocks = {}
     for i, l in enumerate(cues):
         idx = l[0]
-        block, found_out = [], False
-        for x in lines[idx + 1:idx + 14]:
-            if not x:
-                continue
-            if CUE_BLOCK_LINE.match(x):
-                block.append(x)
-                continue
-            found_out = x.upper().startswith("OUT:")
-            break
-        blocks[idx] = block
-        if not found_out:
+        nxt = [x for x in lines[idx + 1:idx + 4] if x]
+        if not nxt or not nxt[0].upper().startswith("OUT:"):
             add("WARNING", "format", f"line {idx+1}",
-                "Clip cue block has no OUT: line closing it (only URL, range, "
-                "BUTT, WHOLE CLIP and SHOW-PRODUCED lines may sit between).")
+                "Clip cue has no OUT: line beneath it.")
 
-    # source pointer inside each cue block (SHOW-PRODUCED cues are exempt)
+    # source pointer near each cue: URL within 3 lines either side
     for idx, l in enumerate([c[0] for c in cues]):
-        window = " ".join(blocks.get(l, []))
-        if any(b.upper().startswith("SHOW-PRODUCED") for b in blocks.get(l, [])):
-            continue
+        window = " ".join(lines[max(0, l - 2):l + 4])
         if not re.search(r"https?://", window):
             sev = "BLOCKER" if stage == "final" else "NOTE"
             add(sev, "clip source", f"line {l+1}",
                 "No URL or source pointer on this cue. "
-                + ("The outline locked the manifest, so this cue cannot be shot. "
-                   "Copy the URL from its Videos row, or send the beat back to "
-                   "the outline."
+                + ("Manifest is locked, so this cue cannot be shot."
                    if stage == "final" else
-                   "Legacy draft with no outline — its clips still have to go "
-                   "through an outline w/ videos pass."))
-
-    if outline_urls is not None:
-        bible_urls = set()
-        for l in [c[0] for c in cues]:
-            for b in blocks.get(l, []):
-                bible_urls.update(u.rstrip(".,") for u in URL_RE.findall(b))
-        for u in sorted(bible_urls - outline_urls):
-            add("WARNING", "clip source", u,
-                "Cue URL is not a pick in the approved outline's Videos tables. "
-                "A clip change goes through the outline first.")
-        for u in sorted(outline_urls - bible_urls):
-            add("WARNING", "clip source", u,
-                "Outline pick is missing from the bible's cues.")
+                   "Normal at draft stage — aired bibles carry unsourced cues "
+                   "and the clip pipeline sources them downstream. Listed so "
+                   "the producer can confirm a manifest exists separately."))
 
     if cues:
         add("NOTE", "clip source", "all cues",
             f"{len(cues)} clip cues total. None can be visually confirmed — "
             f"this review works from titles, descriptions and transcripts only.")
 
-    # a SHOW-PRODUCED demo is often the fix itself; it doesn't end a story early
-    cue_lines = [c[0] for c in cues
-                 if not any(b.upper().startswith("SHOW-PRODUCED")
-                            for b in blocks.get(c[0], []))]
+    cue_lines = [c[0] for c in cues]
 
     # ---------------------------------------------------------- protection beats
     story_heads = [(i, l) for i, l in enumerate(body)
@@ -254,10 +225,8 @@ def analyze(path, stage="final", outline_urls=None):
             add("WARNING", "voice", "whole document",
                 f"Off-register word {w!r} x{n}. Near-absent from the aired "
                 f"spoken corpus; see rossen-script-writer/measurements.md.")
-    if re.search(r"\bWATCH THIS\b", U):
-        add("WARNING", "voice", "whole document",
-            "'WATCH THIS' is Jeff's live ad-lib handoff and is not written into "
-            "bibles.")
+    # Producer kit (Sept 2026): cue + verdict into a clip ("WATCH THIS. THIS IS
+    # CRAZY.") is now written into bibles; "JUST WATCH" / "TAKE A LOOK" are not.
 
     # ---------------------------------------------------------- PII
     for i, l in enumerate(lines):
@@ -380,23 +349,14 @@ def emit_log_skeleton(path, r):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("path")
-    ap.add_argument("--stage", default="final", choices=["draft", "final"])
-    ap.add_argument("--outline", help="approved outline w/ videos, markdown source")
+    ap.add_argument("--stage", default="draft", choices=["draft", "final"])
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--emit-log-skeleton", action="store_true",
                     help="print a pre-grouped SOURCE LOG skeleton and exit")
     a = ap.parse_args()
 
     try:
-        outline_urls = None
-        if a.outline:
-            txt = open(a.outline, encoding="utf-8").read()
-            outline_urls = set()
-            for part in txt.split("### Videos")[1:]:
-                table = part.split("\n#", 1)[0]
-                outline_urls.update(u.rstrip(".,") for u in
-                                    re.findall(r"\]\((https?://[^)\s]+)\)", table))
-        r = analyze(a.path, a.stage, outline_urls)
+        r = analyze(a.path, a.stage)
     except OSError as exc:
         print(f"could not read {a.path}: {exc}", file=sys.stderr)
         sys.exit(2)

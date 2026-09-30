@@ -1,6 +1,6 @@
 # N. <STORY HEADLINE IN CAPS>
 
-**Slot:** <Wednesday A story | Wednesday B story | Wednesday rundown #3+ | Umbrella sub-story | Friday content block> · **Confidence: HIGH|MEDIUM|LOW** · *<short reason, optional>*
+**Slot:** <F2 A | F2 B | F2 C | Call-in caller | F1 A | F1 B> · **Confidence: HIGH|MEDIUM|LOW** · *<short reason, optional>*
 
 **SLOT FIT:** <does it carry this slot, and why or why not — be blunt>
 
