@@ -1,0 +1,378 @@
+[
+ {
+  "beat_id": "10-14-A2",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "shortlist_note": "Only relevant candidate; search returned noise for 'widow'. HAVE row.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=3iz8G25Taxg",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 82,
+    "reason": "First Coast News Ask Anthony, 4:52, Taylor's own story; uploaded 2025-06-05, 47K",
+    "cannot_determine": [
+     "whether Taylor is on camera or only her daughter"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A3",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "shortlist_note": "Found by targeted search; harvest missed it.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=Xh8ZOedc2hM",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "ABC15 Let Joe Know, 4:02, headline is Lettie's own quote; 4K views",
+    "cannot_determine": [
+     "whether Lettie is on camera",
+     "upload date"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A4",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 2
+  },
+  "shortlist_note": "No non-affiliate candidate cleared the filters; floor had nothing to promote.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=6OGQNCnZTfE",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 85,
+    "reason": "CBS LA, 5:03, Chisholm $50K report, 2026-08-27, 338K",
+    "cannot_determine": [
+     "whether Chisholm speaks on camera"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=I_AnpuMDlls",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "CBS LA follow-up 6:15, Sept 23; may carry Chisholm too",
+    "cannot_determine": [
+     "overlap with A5"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A5",
+  "orientation": "horizontal",
+  "clip_role": "news_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "shortlist_note": "HAVE row; single affiliate source.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=I_AnpuMDlls",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 84,
+    "reason": "CBS LA new allegations, 6:15, 2026-09-23, 444K",
+    "cannot_determine": [
+     "whether the 80-year-old woman is on camera"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A6",
+  "orientation": "horizontal",
+  "clip_role": "news_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "shortlist_note": "HAVE row.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=g9e4ElDgYG8",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 82,
+    "reason": "CBS LA closure, 4:04, 2026-10-01, 132K",
+    "cannot_determine": [
+     "whether the attorney statement is read on air"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A7",
+  "orientation": "horizontal",
+  "clip_role": "news_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 3
+  },
+  "shortlist_note": "All KOIN 6; no non-affiliate candidate.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=VaEws6itP08",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "KOIN 6 bank teller saves woman from $50K skin care 'trance', 6:46, 56K",
+    "cannot_determine": [
+     "upload date (late 2024/early 2025 per Columbian)"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=eeB7i2294n8",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 76,
+    "reason": "KOIN 6 'Aggressive' skin care tactics leave Vancouver women out thousands, 10:34, 19K",
+    "cannot_determine": [
+     "length; where the victim moment sits"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=eWZC5yOZUw8",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 68,
+    "reason": "KOIN 6 stores close after investigation, 2:38, 3K",
+    "cannot_determine": [
+     "whether any victim on camera"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-B1",
+  "orientation": "vertical",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 3
+  },
+  "shortlist_note": "Row is VERTICAL; only the WSMV Short is native vertical.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/shorts/3EzgKCWb83Q",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 86,
+    "reason": "WSMV Short 2:23, 5.68M, 2026-08-30 \u2014 vertical, matches row",
+    "cannot_determine": [
+     "Gray clearance (sister-station repost)"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=7WXREQ4_5Vo",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "WMBF original package 4:47, 129K \u2014 horizontal (crosses the row's VERTICAL)",
+    "cannot_determine": [
+     "framing: pillarbox vs punch-in"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=aZkVvpNogw4",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 66,
+    "reason": "WBTV 5:10, 50K, likely the same Rowland story",
+    "cannot_determine": [
+     "whether it's Rowland"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-B2",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 1,
+  "source_mix": {
+   "network": 1,
+   "affiliate": 2
+  },
+  "shortlist_note": "Network + affiliate; no non-affiliate option that cleared filters.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=-tbGdiOzo80",
+    "platform": "youtube",
+    "source_type": "network",
+    "score": 84,
+    "reason": "Inside Edition 2:51, 275K, 2026-08-31, Nora on camera, doorbell detail in description",
+    "cannot_determine": [
+     "whether the doorbell video itself is shown"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=7WXREQ4_5Vo",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 78,
+    "reason": "WMBF original 4:47, 129K",
+    "cannot_determine": [
+     "whether doorbell moment is told"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=aZkVvpNogw4",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 65,
+    "reason": "WBTV 5:10, 50K",
+    "cannot_determine": [
+     "whether it's Rowland"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-B3",
+  "orientation": "horizontal",
+  "clip_role": "news_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 1
+  },
+  "shortlist_note": "HAVE row.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=ikapZ9dVJ5I",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "WMBF arrest follow-up 3:15, 2026-09-30, 4K",
+    "cannot_determine": [
+     "whether booking photo/charges shown"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-C1",
+  "orientation": "horizontal",
+  "clip_role": "evidence",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 2
+  },
+  "shortlist_note": "BROLL beat. Real channels with similar titles (e.g., 'The 1 Form That Cuts Your Property Tax Bill') are NOT treated as the scam video \u2014 no source ties them to it.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=CG3exs1XGiY",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "WSYX ABC 6, 1:23, 2026-08-07 \u2014 likely shows the fake video on screen",
+    "cannot_determine": [
+     "whether the fake video is shown full-frame"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ibgJMgcsihI",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 66,
+    "reason": "Denver7, 1:34, 2026-08-08",
+    "cannot_determine": [
+     "whether the fake video is shown"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-C2",
+  "orientation": "horizontal",
+  "clip_role": "news_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 3
+  },
+  "shortlist_note": "All under 1K views.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=CG3exs1XGiY",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 76,
+    "reason": "WSYX, Franklin County auditor warning, 1:23",
+    "cannot_determine": [
+     "auditor on camera?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ibgJMgcsihI",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 74,
+    "reason": "Denver7, Douglas County assessor warning, 1:34",
+    "cannot_determine": [
+     "assessor on camera?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=DZ_HvZmFZJ4",
+    "platform": "youtube",
+    "source_type": "affiliate",
+    "score": 55,
+    "reason": "WXOW 0:39, Sept 15, Wisconsin warning",
+    "cannot_determine": [
+     "too short for an interview"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ }
+]

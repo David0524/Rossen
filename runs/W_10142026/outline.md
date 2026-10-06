@@ -1,6 +1,6 @@
 # 10/14 WEDNESDAY — STORY OUTLINE
 
-**Airdate:** Wednesday, October 14, 2026 · **Stories:** A + B + C, confirmed by the producer 10/6 (jeff_approval.md) · **Guest:** not booked (Amy Nofziger, AARP, suggested) · **Sponsor:** OmniWatch (2 breaks) · **Stage:** beats
+**Airdate:** Wednesday, October 14, 2026 · **Stories:** A + B + C, confirmed by the producer 10/6 (jeff_approval.md) · **Guest:** none (producer, 10/6) · **Sponsor:** OmniWatch (2 breaks) · **Stage:** beats
 
 ## RUNNING ORDER
 
@@ -25,12 +25,12 @@ A builds through four victims to a store going dark and exhales on the fix. B is
 ### Decisions before we write
 
 - Which story leads: the outline follows the producer's note (skincare A, caregiver B). Kyle and David's note had the caregiver story as the lead.
-- A beat 2: the $26,000 widow is a June 2025 case. Open on her as "last year," or open on a 2026 CBS LA victim and use her as the dollar figure?
-- A runs 6 clip beats against Matt's guide of about two per segment. Beats 5 and 6 are the same outlet (CBS LA) and the softest cut.
+- A beat 2: the $26,000 widow is a June 2025 case. Producer, 10/6: leave as is, decide the framing later.
+- A runs 6 clip beats against Matt's guide of about two per segment. Producer, 10/6: keep all six for now; beats 5 and 6 (both CBS LA) are the first cut if A runs long.
 - B beat 2: the tease line "Your dad died" is a paraphrase. Use the clip's actual words.
 - C: the "file by Oct 15" deadline is unsourced. Drop it unless someone finds it in the video.
-- C has no victim: beat 1 is the fake video itself. Run it as a quick warning, or ask the help line for a caller who saw it.
-- Expert not booked. Without one, A beat 8 and B beat 4 stay with Jeff.
+- C has no victim. Producer, 10/6: beat 1 runs as B-roll of the fake video with Jeff talking over it.
+- No expert this week (producer, 10/6). A beat 8 and B beat 4 stay with Jeff.
 
 # A. THIS FREE SAMPLE COST HER $26,000
 
