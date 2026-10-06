@@ -1,0 +1,180 @@
+[
+ {
+  "beat_id": "10-14-A2",
+  "url": "https://www.youtube.com/watch?v=3iz8G25Taxg",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:42",
+    "out": "0:58",
+    "outcue": "Didn't tell anybody"
+   },
+   {
+    "in": "2:10",
+    "out": "2:21",
+    "outcue": "what was happening"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A3",
+  "url": "https://www.youtube.com/watch?v=Xh8ZOedc2hM",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "1:09",
+    "out": "1:37",
+    "outcue": "times, at least"
+   },
+   {
+    "in": "1:52",
+    "out": "2:09",
+    "outcue": "I'm ashamed"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A4",
+  "url": "https://www.youtube.com/watch?v=6OGQNCnZTfE",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:18",
+    "out": "0:53",
+    "outcue": "in separate transactions"
+   },
+   {
+    "in": "1:03",
+    "out": "1:26",
+    "outcue": "Uh no, I did not"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A5",
+  "url": "https://www.youtube.com/watch?v=I_AnpuMDlls",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "2:04",
+    "out": "2:37",
+    "outcue": "our state attorney general"
+   },
+   {
+    "in": "4:41",
+    "out": "5:09",
+    "outcue": "independently operated tenant"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A6",
+  "url": "https://www.youtube.com/watch?v=g9e4ElDgYG8",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:22",
+    "out": "0:33",
+    "outcue": "the B and Co name remains"
+   },
+   {
+    "in": "3:03",
+    "out": "3:27",
+    "outcue": "making large purchases at multiple stores"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-A7",
+  "url": "https://www.youtube.com/watch?v=VaEws6itP08",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:32",
+    "out": "0:48",
+    "outcue": "bh28 skincare consultants"
+   },
+   {
+    "in": "2:22",
+    "out": "3:11",
+    "outcue": "bank teller called police"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-B1",
+  "url": "https://www.youtube.com/shorts/3EzgKCWb83Q",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:39",
+    "out": "1:11",
+    "outcue": "dead for 3 days"
+   },
+   {
+    "in": "1:43",
+    "out": "2:22",
+    "outcue": "this is my dad's house"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-B2",
+  "url": "https://www.youtube.com/watch?v=7WXREQ4_5Vo",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "3:10",
+    "out": "3:38",
+    "outcue": "even after he died"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-B3",
+  "url": "https://www.youtube.com/watch?v=ikapZ9dVJ5I",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:59",
+    "out": "1:27",
+    "outcue": "I was relieved"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-C1",
+  "url": "https://www.youtube.com/watch?v=ibgJMgcsihI",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:12",
+    "out": "0:27",
+    "outcue": "It's completely AI"
+   }
+  ]
+ },
+ {
+  "beat_id": "10-14-C2",
+  "url": "https://www.youtube.com/watch?v=ibgJMgcsihI",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:28",
+    "out": "0:54",
+    "outcue": "whole new challenge"
+   }
+  ]
+ }
+]

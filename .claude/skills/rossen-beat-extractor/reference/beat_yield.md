@@ -54,3 +54,23 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 **Degraded run:** media bytes blocked all run (no Whisper); YouTube caption path bot-walled mid-run — 5/26 on pass 1, 7 more on one spaced retry (~7 min later), 14 still null. Throttle, not block: the retry path recovered some IDs.
 **Pattern:** a named victim with heavy national coverage (Lipps) still yielded no reachable soundbite — network pieces were correspondent live shots. Trade-press-only corporate announcements (Burger King drive-offs, McDonald's Make It Golden) are near-unsourceable on YouTube within 2 weeks; plan graphics. Sourcability scan got C2/C3 right (commentary_only → WEAK).
 **Process note:** prior-run reuse (Step 7) worked — two picks carried and re-verified on rung 1 in one call, zero search spend.
+
+## Run W_10142026 (A mall skincare pressure sales · B caregiver $5 deed · C fake AI property-tax video)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| 10-14-A2 | victim_interview | H | PICK | First Coast News 3iz8G25Taxg 0:42-0:58 "Didn't tell anybody" BUTT 2:10-2:21 "what was happening" |
+| 10-14-A3 | victim_interview | H | PICK | ABC15 Arizona Xh8ZOedc2hM 1:09-1:37 "times, at least" BUTT 1:52-2:09 "I'm ashamed" |
+| 10-14-A4 | victim_interview | H | PICK | CBS LA 6OGQNCnZTfE 0:18-0:53 "in separate transactions" BUTT 1:03-1:26 "Uh no, I did not" |
+| 10-14-A5 | news_report | H | PICK | CBS LA I_AnpuMDlls 2:04-2:37 "our state attorney general" BUTT 4:41-5:09 "independently operated tenant" |
+| 10-14-A6 | news_report | H | PICK | CBS LA g9e4ElDgYG8 0:22-0:33 "the B and Co name remains" BUTT 3:03-3:27 "making large purchases at multiple stores" |
+| 10-14-A7 | news_report | H | PICK | KOIN 6 VaEws6itP08 0:32-0:48 "bh28 skincare consultants" BUTT 2:22-3:11 "bank teller called police" |
+| 10-14-B1 | victim_interview | V | PICK | WSMV 4 Nashville (Short, repost of WMBF) 3EzgKCWb83Q 0:39-1:11 "dead for 3 days" BUTT 1:43-2:22 "this is my dad's house" |
+| 10-14-B2 | victim_interview | H | PICK | WMBF News 7WXREQ4_5Vo 3:10-3:38 "even after he died" |
+| 10-14-B3 | news_report | H | PICK | WMBF News ikapZ9dVJ5I 0:59-1:27 "I was relieved" |
+| 10-14-C1 | evidence | H | PICK | Denver7 ibgJMgcsihI 0:12-0:27 "It's completely AI" |
+| 10-14-C2 | news_report | H | PICK | Denver7 ibgJMgcsihI 0:28-0:54 "whole new challenge" |
+
+**Yield:** 11 PICK of 11 clip beats (B1/B2 rows swapped at Checkpoint 3 so both match orientation). Source mix: affiliate 10 · network 1 (Inside Edition alternate only).
+**Degraded run:** captions bot-walled 15/16 on the first pass and again on a 7-min spaced retry at concurrency 2; mweb client returned no tracks. A third pass ~30 min later got 11/16, a fourth 13/16. Throttle, not block — it needed time, not workarounds. Media bytes blocked all run (no vertical beats needed Whisper).
+**Pattern:** HAVE rows from the pre-bible carried the run — 8 of 11 picks were the pre-bible's own links. Harvest search missed three exact-match local packages (ABC15, KOIN 6, WMBF original) that a plain targeted yt-dlp search found at rank 1; generic titles ("widow", "bee") drowned the harvest ranking. A news piece that airs the scam video (Denver7) solved an evidence/BROLL beat without naming any real channel as the scam.

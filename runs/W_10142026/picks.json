@@ -277,6 +277,64 @@
  {
   "beat_id": "10-14-B1",
   "pass": 2,
+  "flagged": "https://www.youtube.com/shorts/3EzgKCWb83Q",
+  "platform": "youtube",
+  "title": "WSMV 4 Nashville (Short, repost of WMBF) \u2014 Daughter says caregiver took deed to her father's home",
+  "source_mix": {
+   "network": 1,
+   "affiliate": 2
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/shorts/3EzgKCWb83Q",
+    "source_type": "affiliate",
+    "score": 88,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:39",
+      "out": "1:11",
+      "outcue": "dead for 3 days"
+     },
+     {
+      "in": "1:43",
+      "out": "2:22",
+      "outcue": "this is my dad's house"
+     }
+    ],
+    "reasoning": "Vertical, 5.68M. Ring doorbell, Nora retelling 'your dad died', her own phone video of the confrontation ('I GOT A DEED'), handcuffed.",
+    "flags": [
+     "Gray sister-station repost of WMBF; clear through Gray",
+     "'your dad died' is Nora retelling, not the Ring audio"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=-tbGdiOzo80",
+    "source_type": "network",
+    "score": 82,
+    "reason": "Inside Edition, horizontal; same moments, alternate"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=7WXREQ4_5Vo",
+    "source_type": "affiliate",
+    "score": 78,
+    "reason": "WMBF original, horizontal; used for B2"
+   }
+  ],
+  "cannot_determine": [
+   "on-screen framing and graphics (not watched)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-14-B2",
+  "pass": 2,
   "flagged": "https://www.youtube.com/watch?v=7WXREQ4_5Vo",
   "platform": "youtube",
   "title": "WMBF News \u2014 Daughter claims caregiver took deed to father's Conway home",
@@ -301,80 +359,15 @@
      }
     ],
     "reasoning": "Documents timeline: Griswold Home Care, senior living move, POA in April, $5 quitclaim deed April 17, transfers after death.",
-    "flags": [
-     "Horizontal source on a VERTICAL row \u2014 CROP"
-    ]
+    "flags": []
    }
   ],
   "rejected": [
-   {
-    "url": "https://www.youtube.com/shorts/3EzgKCWb83Q",
-    "source_type": "affiliate",
-    "score": 76,
-    "reason": "runner-up; WSMV Short 2:23, 5.68M, 2026-08-30 \u2014 vertical, matches row"
-   },
-   {
-    "url": "https://www.youtube.com/watch?v=aZkVvpNogw4",
-    "source_type": "affiliate",
-    "score": 56,
-    "reason": "runner-up; WBTV 5:10, 50K, likely the same Rowland story"
-   }
-  ],
-  "cannot_determine": [
-   "on-screen framing and graphics (not watched)"
-  ],
-  "transcript_rung": 1
- },
- {
-  "beat_id": "10-14-B2",
-  "pass": 2,
-  "flagged": "https://www.youtube.com/watch?v=-tbGdiOzo80",
-  "platform": "youtube",
-  "title": "Inside Edition \u2014 Woman says father's caregiver stole his house",
-  "source_mix": {
-   "network": 1,
-   "affiliate": 2
-  },
-  "diversity_floor_applied": false,
-  "ranked": [
-   {
-    "url": "https://www.youtube.com/watch?v=-tbGdiOzo80",
-    "source_type": "network",
-    "score": 82,
-    "tone": 8,
-    "authenticity": 8,
-    "quality": 7,
-    "fit": 8,
-    "segments": [
-     {
-      "in": "0:39",
-      "out": "1:01",
-      "outcue": "I'll be there in a minute"
-     },
-     {
-      "in": "1:09",
-      "out": "1:25",
-      "outcue": "charges were later dropped"
-     }
-    ],
-    "reasoning": "Nora: key didn't work, rang the Ring doorbell, told he died 3 days earlier; confrontation; Nora handcuffed, 3 days in custody, charges dropped.",
-    "flags": [
-     "Inside Edition says Robert was 74; WMBF says 75"
-    ]
-   }
-  ],
-  "rejected": [
-   {
-    "url": "https://www.youtube.com/watch?v=7WXREQ4_5Vo",
-    "source_type": "affiliate",
-    "score": 68,
-    "reason": "runner-up; WMBF original 4:47, 129K"
-   },
    {
     "url": "https://www.youtube.com/watch?v=aZkVvpNogw4",
     "source_type": "affiliate",
     "score": 55,
-    "reason": "runner-up; WBTV 5:10, 50K"
+    "reason": "WBTV, no transcript"
    }
   ],
   "cannot_determine": [

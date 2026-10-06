@@ -232,10 +232,10 @@
   "beat_id": "10-14-B1",
   "episode": "10-14",
   "segment_title": "DON'T SIGN THIS FOR ANYONE: HIS CAREGIVER TOOK HIS HOUSE FOR $5",
-  "script_text": "Robert Rowland, 75, of Conway, South Carolina: his caregiver Sarah Smalls became his power of attorney in April 2024 and a quitclaim deed dated April 17 2024 moved his home to her for $5. His daughter Nora Rowland drove over after not hearing from him around Father's Day and found he had died three days earlier. WMBF original, WSMV Short 5.7M, Aug 30 2026.",
+  "script_text": "Nora Rowland tells Inside Edition the locks were changed; she rang the Ring doorbell camera and the caregiver answered that her father had died three days earlier; police first treated Nora as a trespasser after the caregiver produced the deed. Inside Edition, Aug 31 2026.",
   "orientation": "vertical",
   "clip_role": "victim_interview",
-  "news_anchor": "caregiver took deed father's home $5 Conway",
+  "news_anchor": "Inside Edition father's caregiver stole his house",
   "visual_spec": "Nora Rowland on camera; the house; deed document",
   "platforms": [
    "youtube",
@@ -246,7 +246,7 @@
   "priority": 1,
   "expected_segments": 1,
   "sourcability": "high",
-  "sourcability_note": "HAVE WSMV Short 3EzgKCWb83Q (5.68M, 2026-08-30)",
+  "sourcability_note": "HAVE WSMV Short 3EzgKCWb83Q (5.68M)",
   "source_native": "none",
   "queries": {
    "anchor": [
@@ -268,16 +268,17 @@
    ]
   },
   "lane": "search",
-  "have_url": "https://www.youtube.com/shorts/3EzgKCWb83Q"
+  "have_url": "https://www.youtube.com/shorts/3EzgKCWb83Q",
+  "note_swap": "Rows swapped at Checkpoint 3 (producer, 10/6)"
  },
  {
   "beat_id": "10-14-B2",
   "episode": "10-14",
   "segment_title": "DON'T SIGN THIS FOR ANYONE: HIS CAREGIVER TOOK HIS HOUSE FOR $5",
-  "script_text": "Nora Rowland tells Inside Edition the locks were changed; she rang the Ring doorbell camera and the caregiver answered that her father had died three days earlier; police first treated Nora as a trespasser after the caregiver produced the deed. Inside Edition, Aug 31 2026.",
+  "script_text": "Robert Rowland, 75, of Conway, South Carolina: his caregiver Sarah Smalls became his power of attorney in April 2024 and a quitclaim deed dated April 17 2024 moved his home to her for $5. WMBF original, WSMV Short 5.7M, Aug 30 2026.",
   "orientation": "horizontal",
   "clip_role": "victim_interview",
-  "news_anchor": "Inside Edition father's caregiver stole his house",
+  "news_anchor": "caregiver took deed father's home $5 Conway",
   "visual_spec": "Nora on camera; doorbell; house",
   "platforms": [
    "youtube",
@@ -288,7 +289,7 @@
   "priority": 1,
   "expected_segments": 1,
   "sourcability": "high",
-  "sourcability_note": "HAVE Inside Edition -tbGdiOzo80 (275K, 2026-08-31)",
+  "sourcability_note": "WMBF original 7WXREQ4_5Vo (129K)",
   "source_native": "none",
   "queries": {
    "anchor": [
@@ -306,7 +307,8 @@
    ]
   },
   "lane": "search",
-  "have_url": "https://www.youtube.com/watch?v=-tbGdiOzo80"
+  "have_url": "https://www.youtube.com/watch?v=-tbGdiOzo80",
+  "note_swap": "Rows swapped at Checkpoint 3 (producer, 10/6)"
  },
  {
   "beat_id": "10-14-B3",
