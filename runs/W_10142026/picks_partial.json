@@ -1,0 +1,19 @@
+{
+ "10-14-A2": {
+  "url": "https://www.youtube.com/watch?v=3iz8G25Taxg",
+  "segments": [
+   {
+    "in": "0:42",
+    "out": "0:58",
+    "outcue": "Didn't tell anybody."
+   },
+   {
+    "in": "2:10",
+    "out": "2:21",
+    "outcue": "what was happening"
+   }
+  ],
+  "transcript_rung": 1,
+  "note": "Graded before the caption block; full picks.json pending"
+ }
+}
