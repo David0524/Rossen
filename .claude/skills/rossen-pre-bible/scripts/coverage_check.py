@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Has Rossen Reports already covered this? Searches every transcript for a topic.
+Has Rossen Reports already covered this? Searches every transcript, and every archived bible, for a topic.
 
 Usage:
     python3 scripts/coverage_check.py "gold bar|bullion|courier"
@@ -22,6 +22,7 @@ import os, re, sys, glob, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TX = os.path.join(ROOT, "references", "transcripts")
+BIB = os.path.join(ROOT, "references", "bibles")   # aired bibles (May-Jul 2026), from the producer's Bible Archive
 
 def main():
     args = sys.argv[1:]
@@ -34,13 +35,15 @@ def main():
     cutoff = (datetime.date.today() - datetime.timedelta(days=30.4 * months)).strftime("%Y%m%d")
 
     found = 0
-    for f in sorted(glob.glob(os.path.join(TX, "*.txt")), reverse=True):
+    files = sorted(glob.glob(os.path.join(TX, "*.txt")), reverse=True) + sorted(glob.glob(os.path.join(BIB, "*.txt")), reverse=True)
+    for f in files:
         lines = open(f, encoding="utf-8").read().split("\n")
         head = lines[0].lstrip("# ").strip()
         date = head[:8] if re.match(r"^\d{8}", head) else "????????"
         body = lines[1:]
         text = [re.sub(r"^\[\d\d:\d\d\] ", "", l) for l in body]
-        stamp = [l[:7] for l in body]
+        is_bible = os.path.dirname(f) == BIB
+        stamp = [("line %d" % (i + 2)) if is_bible else l[:7] for i, l in enumerate(body)]
         idx = [i for i, l in enumerate(text) if pat.search(l)]
         if len(idx) < min_hits:
             continue
@@ -50,7 +53,7 @@ def main():
         vid = os.path.basename(f)[:-4]
         print(f"{flag} {head[:90]}")
         print(f"       {len(idx)} hits, {stamp[idx[0]]} to {stamp[idx[-1]]}, matched: {terms}")
-        print(f"       https://www.youtube.com/watch?v={vid}")
+        print(f"       references/bibles/{vid}.txt" if is_bible else f"       https://www.youtube.com/watch?v={vid}")
         if context:
             shown = set(); n = 0
             for i in idx:
@@ -62,7 +65,7 @@ def main():
         print()
     if not found:
         print("No show has", min_hits, "or more matching lines. Looks open.")
-        print("Still check: (1) anything aired after the newest transcript, (2) the story board in references/producer-kit/ (a snapshot; ask for the live one), (3) shows before 2026-03-18, which are not in the kit.")
+        print("Still check: (1) anything aired after the newest transcript, (2) the story board in references/producer-kit/ (a snapshot; ask for the live one), (3) shows before 2026-03-18 and the Mar 20-Apr 15 gap, which are not in the kit (bibles cover May-Jul only).")
 
 if __name__ == "__main__":
     main()
