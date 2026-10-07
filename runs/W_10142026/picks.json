@@ -375,97 +375,67 @@
  {
   "beat_id": "10-14-C1",
   "pass": 2,
-  "flagged": "https://www.youtube.com/watch?v=ibgJMgcsihI",
-  "platform": "youtube",
-  "title": "Denver7 \u2014 Douglas County assessor warns about viral AI property tax scam",
+  "flagged": "https://www.tiktok.com/@amandabainum457/video/7686390447178026253",
+  "platform": "tiktok",
+  "title": "Queen Abomb (@amandabainum457) \u2014 Walmart $1 rollback rings up $1.44",
+  "status": "MANUAL \u00b7 UNVERIFIED",
   "source_mix": {
-   "affiliate": 2
+   "first_person": 1
   },
   "diversity_floor_applied": false,
   "ranked": [
    {
-    "url": "https://www.youtube.com/watch?v=ibgJMgcsihI",
-    "source_type": "affiliate",
-    "score": 70,
-    "tone": 8,
-    "authenticity": 8,
-    "quality": 7,
-    "fit": 8,
-    "segments": [
-     {
-      "in": "0:12",
-      "out": "0:27",
-      "outcue": "It's completely AI"
-     }
-    ],
-    "reasoning": "Plays the fake AI video ('The programs are real. The savings are real...'), then 'the person in the video is not real either. It's completely AI.'",
+    "url": "https://www.tiktok.com/@amandabainum457/video/7686390447178026253",
+    "source_type": "first_person",
+    "score": null,
+    "tone": null,
+    "authenticity": null,
+    "quality": null,
+    "fit": null,
+    "segments": [],
+    "reasoning": "Manual lane: producer-picked native TikTok. Media download blocked, so no Whisper transcript.",
     "flags": [
-     "Played as B-roll with Jeff over it; sound-up optional"
+     "MANUAL"
     ]
    }
   ],
-  "rejected": [
-   {
-    "url": "https://www.youtube.com/watch?v=CG3exs1XGiY",
-    "source_type": "affiliate",
-    "score": 60,
-    "reason": "runner-up; WSYX ABC 6, 1:23, 2026-08-07 \u2014 likely shows the fake video on screen"
-   }
-  ],
+  "rejected": [],
   "cannot_determine": [
-   "on-screen framing and graphics (not watched)"
+   "exact in\u2013out and outcue"
   ],
-  "transcript_rung": 1
+  "transcript_rung": 3
  },
  {
   "beat_id": "10-14-C2",
   "pass": 2,
-  "flagged": "https://www.youtube.com/watch?v=ibgJMgcsihI",
-  "platform": "youtube",
-  "title": "Denver7 \u2014 Douglas County assessor warns about viral AI property tax scam",
+  "flagged": "https://www.tiktok.com/@james_wrigg/video/7691366971971079437",
+  "platform": "tiktok",
+  "title": "Jimmy Wrigg (@james_wrigg) \u2014 Digital price tags and pricing",
+  "status": "MANUAL \u00b7 UNVERIFIED",
   "source_mix": {
-   "affiliate": 3
+   "first_person": 1
   },
   "diversity_floor_applied": false,
   "ranked": [
    {
-    "url": "https://www.youtube.com/watch?v=ibgJMgcsihI",
-    "source_type": "affiliate",
-    "score": 68,
-    "tone": 8,
-    "authenticity": 8,
-    "quality": 7,
-    "fit": 8,
-    "segments": [
-     {
-      "in": "0:28",
-      "out": "0:54",
-      "outcue": "whole new challenge"
-     }
-    ],
-    "reasoning": "Seniors calling assessors asking for a nonexistent 'senior homeowner tax review'; assessor: AI is a whole new challenge.",
+    "url": "https://www.tiktok.com/@james_wrigg/video/7691366971971079437",
+    "source_type": "first_person",
+    "score": null,
+    "tone": null,
+    "authenticity": null,
+    "quality": null,
+    "fit": null,
+    "segments": [],
+    "reasoning": "Manual lane: producer-picked native TikTok. Media download blocked, so no Whisper transcript.",
     "flags": [
-     "Assessor thinks the motive is ad clicks, not data theft; Wisconsin DOR says the numbers reach scammers"
+     "MANUAL"
     ]
    }
   ],
-  "rejected": [
-   {
-    "url": "https://www.youtube.com/watch?v=CG3exs1XGiY",
-    "source_type": "affiliate",
-    "score": 66,
-    "reason": "runner-up; WSYX, Franklin County auditor warning, 1:23"
-   },
-   {
-    "url": "https://www.youtube.com/watch?v=DZ_HvZmFZJ4",
-    "source_type": "affiliate",
-    "score": 45,
-    "reason": "runner-up; WXOW 0:39, Sept 15, Wisconsin warning"
-   }
-  ],
+  "rejected": [],
   "cannot_determine": [
-   "on-screen framing and graphics (not watched)"
+   "exact in\u2013out and outcue"
   ],
-  "transcript_rung": 1
+  "transcript_rung": 3
  }
 ]

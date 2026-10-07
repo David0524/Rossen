@@ -27,3 +27,6 @@
 
 ## Revision 10/7 — A cut to 5 clips
 The three CBS LA pieces repeated the same soundbites (Chisholm's "Uh no, I did not" in all three; Sherman's AG line in two). A5 (CBS Sept 23) dropped; A5/A6 merged into one beat on CBS Oct 1 g9e4ElDgYG8 0:22–1:01 "trying to lure shoppers inside" BUTT 3:03–3:27 "making large purchases at multiple stores" (verified). A3 trimmed to 1:09–1:37 "times, at least". Vancouver renumbered A6. Picks now 10 across 10 clip beats.
+
+## Revision 10/7 — C replaced
+Property-tax video story dropped (producer). New C: Walmart register vs sale sign / digital shelf tags. Two producer-picked native TikToks routed to the manual lane: @amandabainum457 7686390447178026253 and @james_wrigg 7691366971971079437. TikTok page fetch failed in yt-dlp and media download is blocked, so no transcript: both MANUAL · UNVERIFIED, no in–out. Picks now 8 verified (A, B) + 2 manual (C).

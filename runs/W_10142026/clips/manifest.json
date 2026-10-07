@@ -130,28 +130,16 @@
  },
  {
   "beat_id": "10-14-C1",
-  "url": "https://www.youtube.com/watch?v=ibgJMgcsihI",
-  "platform": "youtube",
-  "source_type": "affiliate",
-  "segments": [
-   {
-    "in": "0:12",
-    "out": "0:27",
-    "outcue": "It's completely AI"
-   }
-  ]
+  "url": "https://www.tiktok.com/@amandabainum457/video/7686390447178026253",
+  "platform": "tiktok",
+  "source_type": "first_person",
+  "segments": []
  },
  {
   "beat_id": "10-14-C2",
-  "url": "https://www.youtube.com/watch?v=ibgJMgcsihI",
-  "platform": "youtube",
-  "source_type": "affiliate",
-  "segments": [
-   {
-    "in": "0:28",
-    "out": "0:54",
-    "outcue": "whole new challenge"
-   }
-  ]
+  "url": "https://www.tiktok.com/@james_wrigg/video/7691366971971079437",
+  "platform": "tiktok",
+  "source_type": "first_person",
+  "segments": []
  }
 ]

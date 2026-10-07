@@ -14,3 +14,6 @@ Recorded 10/6/2026 from the producer's messages in this session.
 
 Not on this show: Amazon settlement (suggested for the 10/16 F1), gas-saver plug.
 Open from the pre-bible: Kyle and David's note called B "our pick for the 10/14 lead"; the producer's note leads with A. Outline follows the producer: A leads.
+
+
+**10/7 change (producer):** C replaced. The property-tax video is out. New C: Walmart register rings up more than the sale sign / digital shelf tag, with two producer-picked TikToks (@amandabainum457, @james_wrigg). Gift-card draining was considered and dropped (covered before, per producer).

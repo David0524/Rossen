@@ -6,21 +6,21 @@
 
 | Slot | What | Weight | Clips |
 |---|---|---|---|
-| Tease | The $26,000 free sample, the caregiver who took the house for $5, the fake property-tax video | — | — |
+| Tease | The $26,000 free sample, the caregiver who took the house for $5, the Walmart register that rings up more than the sign | — | — |
 | A | This free sample cost her $26,000 | ~50% of show | 5/5 |
 | Break | OmniWatch — after A beat 7 (the fix) | — | — |
 | B | Don't sign this for anyone: his caregiver took his house for $5 | ~35% | 3/3 |
 | Break | OmniWatch — after B beat 4 (the fix) | — | — |
-| C | If you see this video about your property taxes, it's fake | ~15% | 2/2 |
+| C | The sign said $1. The register said something else. | ~15% | 2/2 |
 | End | End of show | — | — |
 
 ### The show in three sentences
 
-A free sample at the mall turns into a chair, a pitch and a bill in the tens of thousands, and the same playbook is hitting older shoppers from Florida to Washington. A daughter rang her father's doorbell and heard his caregiver say he had died, then learned the caregiver had become his power of attorney and signed his house over to herself for $5. A fake AI "government" video wants your Social Security number for a tax freeze that doesn't exist, and every one of these has a one-line fix.
+A free sample at the mall turns into a chair, a pitch and a bill in the tens of thousands, and the same playbook is hitting older shoppers from Florida to Washington. A daughter rang her father's doorbell and heard his caregiver say he had died, then learned the caregiver had become his power of attorney and signed his house over to herself for $5. And at Walmart, the register is ringing up more than the sign says. Every one of these has a one-line fix.
 
 ### The ride
 
-A builds through four victims to a store going dark and exhales on the fix. B is the darkest stretch (a death, a daughter treated as a trespasser) and lands on the arrest. C is quick and practical. The show exhales on C, not on a good-news closer.
+A builds through four victims to a store going dark and exhales on the fix. B is the darkest stretch (a death, a daughter treated as a trespasser) and lands on the arrest. C is quick, relatable and practical, and the show exhales on it.
 
 ### Decisions before we write
 
@@ -30,10 +30,8 @@ A builds through four victims to a store going dark and exhales on the fix. B is
 - B rows swapped at Checkpoint 3 (producer, 10/6): B now opens on the doorbell (the 5.7M Short), then the $5 deed.
 - B beat 1: "Your dad died" is on tape, as Nora retelling what the caregiver said, not the Ring audio itself.
 - B beat 1: the Short is WSMV's repost of WMBF's story. Clear it through Gray, or use WMBF's original (same audio).
-- C: the "file by Oct 15" deadline is unsourced. Drop it unless someone finds it in the video.
-- C has no victim. Producer, 10/6: beat 1 runs as B-roll of the fake video with Jeff talking over it. Denver7 plays the fake video; no real channel is labelled as the scam.
-- C: the Colorado assessor thinks the videos exist to sell ad clicks; Wisconsin's revenue department says the phone numbers reach scammers. Attribute each.
-- Picks: 11/11, all affiliate or network news (no first-person or creator option cleared the filters). No EMPTY, WEAK or THROTTLED beats.
+- C replaced 10/7 (producer): Walmart shelf-tag vs register pricing, two producer-picked TikToks (MANUAL · UNVERIFIED, no transcript). Note Kroger shelf-vs-register aired Sept 18.
+- Picks: A and B 8/8 verified against transcripts, all affiliate or network news; C 2/2 manual.
 - No expert this week (producer, 10/6). A beat 7 and B beat 4 stay with Jeff.
 
 # A. THIS FREE SAMPLE COST HER $26,000
@@ -112,36 +110,37 @@ A builds through four victims to a store going dark and exhales on the fix. B is
 - ⚠️ Inside Edition says Robert was 74; WMBF and court records say 75.
 - ⚠️ Beat 3: accused, not convicted. Don't name the home-care agency; sources disagree on its name.
 
-# C. IF YOU SEE THIS VIDEO ABOUT YOUR PROPERTY TAXES, IT'S FAKE
+# C. THE SIGN SAID $1. THE REGISTER SAID SOMETHING ELSE.
 
-**In one sentence:** A fake AI video tells seniors Congress froze their property taxes and pushes a form that doesn't exist; Wisconsin officials say the phone number reaches scammers who want your Social Security number.
+**In one sentence:** Shoppers are filming Walmart registers ringing up more than the sale sign or digital shelf tag says, and the fix is watching the screen and asking for the shelf price.
 
-**Peg:** Official warnings from Wisconsin (Sept 3–11), Ohio, California and Colorado, still circulating into October.
+**Peg:** Viral TikToks this fall, a growing pile of complaints about Walmart's new digital shelf labels, and Walmart's $5.6 million California settlement over scanner overcharges (Aug 2025), which put it on a price-accuracy program through 2028.
 
 **Weight:** ~15% of show · 2 clip beats
 
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
-| 1 | The fake video | Unnamed — scammers behind an AI video, no victim found | The video claims a new federal senior tax freeze and a "Senior Homeowner Tax Review Request" form. | FIND · HORIZONTAL BROLL — the scam video or a news grab of it |
-| 2 | The warning | Douglas County, Colorado assessor; Wisconsin revenue secretary David Casey | Seniors call assessors asking for a form that doesn't exist; officials say no such federal program exists. | FIND · HORIZONTAL — local news warning |
-| 3 | The fix | You (the viewer) | Property taxes are local; call the number on your tax bill and never give your SSN to "file." | JEFF |
+| 1 | The $1 sign | Amanda, Kansas shopper (TikTok "Queen Abomb") | A rollback sign says $1, down from $1.34; self-checkout rings the lasagna up at $1.44, and an employee overrides it. | HAVE · VERTICAL — TikTok @amandabainum457 |
+| 2 | The digital tag | Jimmy Wrigg, shopper and creator (TikTok @james_wrigg) | He films Walmart's digital shelf tags and the prices they show against what rings up, per his caption. | HAVE · VERTICAL — TikTok @james_wrigg |
+| 3 | The fix | You (the viewer) | Watch the screen as each item scans, ask for the shelf price, and check the receipt before you leave. | JEFF |
 
 ### Videos
 
 | # | Clip | Shows | In–Out | Status |
 |---|---|---|---|---|
-| 1 | [Denver7 — Assessor warns about viral AI property tax scam](https://www.youtube.com/watch?v=ibgJMgcsihI) | Plays the fake AI video ("The programs are real. The savings are real…"), then "the person in the video is not real either." Aug 8, 2026, 1:34. | 0:12–0:27 "It's completely AI" | PICK |
-| 2 | [Denver7 — Assessor warns about viral AI property tax scam](https://www.youtube.com/watch?v=ibgJMgcsihI) | Seniors calling assessors for a nonexistent "senior homeowner tax review"; the assessor on AI as a new challenge. | 0:28–0:54 "whole new challenge" | PICK |
+| 1 | [Queen Abomb (@amandabainum457) — Walmart rollback rings up higher](https://www.tiktok.com/@amandabainum457/video/7686390447178026253) | Per caption and press write-up: $1 rollback sign, $1.44 at self-checkout, employee override. Captioned #walmartpricegouge. | — | MANUAL · UNVERIFIED |
+| 2 | [Jimmy Wrigg (@james_wrigg) — Digital price tags and pricing](https://www.tiktok.com/@james_wrigg/video/7691366971971079437) | Per caption only: "Digital Price Tags And Pricing." Content not confirmed. | — | MANUAL · UNVERIFIED |
 
 ### The fix
 
-- Property taxes are set by your county and state, never by Congress. There is no federal form.
-- Call your assessor at the number on your tax bill, not one from a video.
-- Never give your Social Security number to "file" for a freeze.
+- Watch the screen as each item scans. Don't bag and look away.
+- Price higher than the sign? Ask for the shelf price before you pay; snap a photo of the sign.
+- Check the receipt before you leave the store, not at home.
 
 ### Gaps
 
-- ⚠️ No victim found. The story is the warning, not a person.
-- ⚠️ The "file by Oct 15" deadline is unsourced.
-- ⚠️ Local warning clips are all under 1,000 views. Both C picks are one Denver7 piece (Aug 8); WXOW (Wisconsin, 39s) is the alternate.
-- ⚠️ WXOW says "Form 1096-SR"; Wisconsin's revenue department says "1098-SR." Use 1098-SR.
+- ⚠️ Kroger shelf-vs-register pricing aired Sept 18 (F1). This is the same complaint at a different chain, four weeks later. The new angle is the digital shelf tags.
+- ⚠️ Amanda scanned one can on camera; the press write-up says it's unclear whether the rest rang up the same. Say "this can," not "the whole display."
+- ⚠️ Both clips are native TikToks: no transcripts reached (media download blocked), so no in–out or outcue. Kyle sets them when he pulls. Clip 2's content is known only from its caption.
+- ⚠️ "Price scam" is the creators' word. Walmart says its digital labels don't use personal data to set prices; attribute any intent claims. Get Walmart's response.
+- ⚠️ Walmart does not have a national "item free if it scans wrong" policy that I found; some states have scanner laws (verify before naming any).

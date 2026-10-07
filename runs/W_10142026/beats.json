@@ -313,77 +313,69 @@
  {
   "beat_id": "10-14-C1",
   "episode": "10-14",
-  "segment_title": "IF YOU SEE THIS VIDEO ABOUT YOUR PROPERTY TAXES, IT'S FAKE",
-  "script_text": "An AI-generated YouTube video claims Congress passed a law letting seniors freeze or reduce property taxes and tells viewers to request a Senior Homeowner Tax Review Request or IRS Form 1098-SR; the phone numbers reach scammers seeking Social Security numbers, bank details or fees. B-roll of the fake video, or a news grab of it.",
-  "orientation": "horizontal",
-  "clip_role": "evidence",
-  "news_anchor": "fake AI video property tax freeze seniors Form 1098-SR",
-  "visual_spec": "The fake 'official' video itself, or news showing it on screen; Jeff talks over (BROLL, mute)",
+  "segment_title": "THE SIGN SAID $1. THE REGISTER SAID SOMETHING ELSE.",
+  "script_text": "Amanda, Kansas, scans a $1 rollback Chef Boyardee lasagna (was $1.34) at Walmart self-checkout; it rings up $1.44; employee overrides.",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "news_anchor": "Walmart register price higher than shelf sign",
+  "visual_spec": "shopper phone video at shelf and register",
   "platforms": [
-   "youtube",
-   "shorts",
-   "news_web"
+   "tiktok"
   ],
   "offsite_likely": false,
-  "priority": 2,
+  "priority": 1,
   "expected_segments": 1,
   "sourcability": "high",
-  "sourcability_note": "Scam video may be removed; local news shows grabs",
-  "source_native": "none",
+  "sourcability_note": "producer-supplied native TikTok",
+  "source_native": "tiktok",
   "queries": {
-   "anchor": [
-    "AI video property tax relief seniors fake"
-   ],
    "news": [
-    "fake AI video property tax freeze seniors",
-    "Senior Homeowner Tax Review Request fake"
+    "Walmart charged more than shelf price"
+   ],
+   "anchor": [
+    "Walmart digital shelf label price register"
    ],
    "platform": [
-    "Congress freezes property taxes seniors"
+    "walmart price gouge"
    ],
    "shorts": [
-    "fake property tax freeze video",
-    "AI video seniors property tax scam"
+    "walmart rang up higher than sign"
    ]
   },
-  "lane": "search"
+  "lane": "manual"
  },
  {
   "beat_id": "10-14-C2",
   "episode": "10-14",
-  "segment_title": "IF YOU SEE THIS VIDEO ABOUT YOUR PROPERTY TAXES, IT'S FAKE",
-  "script_text": "Officials warn there is no federal senior property-tax freeze: Wisconsin Revenue Secretary David Casey ('Property taxes are handled exclusively by local and state governments'), Franklin County Ohio auditor (WSYX, Aug 7), Douglas County Colorado assessor (Denver7, Aug 8), LA, San Diego and Kern assessors.",
-  "orientation": "horizontal",
-  "clip_role": "news_report",
-  "news_anchor": "assessor warns AI property tax scam video seniors",
-  "visual_spec": "Assessor or auditor on camera warning; the fake video on a monitor",
+  "segment_title": "THE SIGN SAID $1. THE REGISTER SAID SOMETHING ELSE.",
+  "script_text": "Creator films Walmart digital shelf tags and pricing (per caption).",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "news_anchor": "Walmart register price higher than shelf sign",
+  "visual_spec": "shopper phone video at shelf and register",
   "platforms": [
-   "youtube",
-   "shorts",
-   "news_web"
+   "tiktok"
   ],
   "offsite_likely": false,
   "priority": 2,
   "expected_segments": 1,
   "sourcability": "high",
-  "sourcability_note": "Local clips exist but all under 1K views",
-  "source_native": "none",
+  "sourcability_note": "producer-supplied native TikTok",
+  "source_native": "tiktok",
   "queries": {
-   "anchor": [
-    "assessor warns seniors AI property tax video"
-   ],
    "news": [
-    "Wisconsin DOR property tax relief scam",
-    "county auditor AI video senior homeowners",
-    "assessor fake property tax form"
+    "Walmart charged more than shelf price"
+   ],
+   "anchor": [
+    "Walmart digital shelf label price register"
    ],
    "platform": [
-    "property tax scam AI video warning"
+    "walmart price gouge"
    ],
    "shorts": [
-    "property tax scam warning seniors"
+    "walmart rang up higher than sign"
    ]
   },
-  "lane": "search"
+  "lane": "manual"
  }
 ]
