@@ -5,6 +5,7 @@
 **Do not push files to Google Drive** (too token-intensive). This replaces the 9/29 auto-push rule.
 Deliver each stage's file in chat (SendUserFile) and commit it to the run folder (`runs/<RUN_ID>/`).
 Only touch Drive if the producer asks for it in that conversation.
+Exception (producer, 10/7/2026): when the producer has converted a deliverable to a native Google Doc (e.g. [10/14 Outline](https://docs.google.com/document/d/1i7bo92FPzVjVRTmipk9x0C3gseEWYinlJbC3ClbnhQ4/edit)) and asks for changes, edit that Doc in place with the Google Docs connector (guarded by revisionId) and keep the local file in sync. The Docs connector can't edit .docx files in Drive.
 
 | Stage | Skill | Deliverable |
 |---|---|---|
