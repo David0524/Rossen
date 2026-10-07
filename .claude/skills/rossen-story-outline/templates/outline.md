@@ -28,6 +28,8 @@
 
 **In one sentence:** <start to end>
 
+**Hold back:** <the payoff the tease must not give away>
+
 **Peg:** <why this show, this week>
 
 **Weight:** <~% of show> · <n> clip beats
@@ -35,8 +37,8 @@
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
 | 1 | <The hook> | You (the viewer) | <one sentence, 25 words max> | JEFF |
-| 2 | <turn> | <named human, by identity> | <one sentence> | HAVE · VERTICAL — <handle or outlet> |
-| 3 | <turn> | <named human, by identity> | <one sentence> | FIND · HORIZONTAL — <what footage> |
+| 2 | <turn> | <named human, by identity (Mon YYYY)> | <one sentence> | HAVE · VERTICAL — <handle or outlet> |
+| 3 | <turn> | <named human, by identity (Mon YYYY)> | <one sentence> | FIND · HORIZONTAL — <what footage> |
 
 <!-- Phase 2 adds, right here:
 ### Videos
@@ -45,11 +47,12 @@
 |---|---|---|---|---|
 | 2 | [Creator — short title](https://...) | what it shows, one line | — | MANUAL · UNVERIFIED |
 | 3 | [Outlet — short title](https://...) | what it shows, one line | 0:17–0:51 "verbatim outcue" | PICK |
+| 4 | [Outlet — short title](https://...) | what it shows; window carries an accusation, tighter cut proposed | 0:22–1:01 "outcue" | PICK · LEGAL |
 -->
 
 ### The fix
 
-- <step, plain>
+- <step, plain> (<source: issuing body's page>)
 
 ### Gaps
 
@@ -58,6 +61,8 @@
 # B. <STORY HEADLINE>
 
 **In one sentence:** <...>
+
+**Hold back:** <...>
 
 **Peg:** <...>
 
@@ -69,7 +74,7 @@
 
 ### The fix
 
-- <...>
+- <...> (<source>)
 
 ### Gaps
 

@@ -80,6 +80,14 @@ It is **written for reading, not for Jeff's mouth.**
 
 **Who** — the human at the center of that beat, by identity: *Massachusetts woman,
 new-phone owner*; *Utah man, never ordered a phone*; *Jim Stickley, ethical hacker*.
+**End it with when it happened or was reported**, in parentheses: *Kathryn
+Taylor, 84, Fernandina Beach FL (June 2025)*. The outline keeps full names,
+towns and dates for the room; the bible drops surnames and towns, so this
+column is where they live. A case more than **six months before the airdate**
+gets a ⚠️ line in Gaps (`⚠️ A2 Taylor is June 2025: date it on air`) so the
+bible says `LAST YEAR` / `LAST FALL` instead of presenting it as new. Three
+2025 cases went out reading as fresh in one week (10/9 and 10/14); this is the
+fix.
 `You (the viewer)` is fine for the hook and the fix. **This column is where the
 people-not-policies rule becomes visible.** A company (*Lowe's*), an institution
 (*Texas Attorney General*), a category (*shoppers*, *people posting online*) or a
@@ -110,12 +118,29 @@ Never invent a clip to fill a slot. A B story with zero clip beats is normal.
 ## Per story, around the table
 
 - **In one sentence** — the whole story, start to end, as you'd tell a friend.
+- **Hold back** — the payoff the tease must not give away, in one line: *the
+  caregiver answers that he's dead*; *the register charges more than the
+  sign*; *which store it is*. The outline is where the story's payoff is
+  decided, so it is decided here, not left to the tease writer. The bible's
+  tease and every `NEXT,` line must stay on the near side of it. (10/14: the
+  producer pulled "YOUR DAD DIED" and "THE REGISTER IS RINGING UP MORE THAN THE
+  SIGN" out of the tease. Both gave away exactly this line.)
 - **Peg** — why it's on *this* show. Old footage is fine; an old peg is not.
 - **Weight** — share of the show, and clip-beat count. The A story takes most of both;
   every story after gets lighter.
 - **Beat table.**
 - **Videos** — Phase 2 fills it. Leave the heading out until then.
-- **The fix** — the protection steps, one line each, plain.
+- **The fix** — the protection steps, one line each, plain, **each ending with
+  its source** in parentheses: the issuing body's page, not memory (*(Medicare.gov)*,
+  *(FTC, ReportFraud.ftc.gov)*, *(Horry County Register of Deeds)*). A step you
+  could not source gets ⚠️ instead. Every phone number and URL is checked against
+  the issuing body's own page. **Run the do-nothing test** on any step involving
+  a deadline, an enrollment, a plan, a dispute window or a default: what happens
+  to the viewer who does nothing, or does only this step? If the step leaves
+  them worse off, add the line that closes it. (10/9: "do nothing and you go
+  back to Original Medicare" was true, and it would have left Advantage members
+  with no drug coverage. The fix is decided here, so this is where that gets
+  caught.)
 - **Gaps** — only what's missing or unconfirmed *that changes the story's shape*:
   an unnamed victim, a clip that may not exist, the sexiest line resting on one
   source. ⚠️ at the point of use. Full sourcing stays in the pre-bible's source block;
@@ -182,6 +207,25 @@ folder (`picks.json`, `report.md`). The outline carries only the pick per beat.
 - **Clip** — `[Outlet or creator — short title](URL)`. Renders as a blue link.
 - **Shows** — what the clip shows, from title, description and transcript. One line.
   Never "confirmed on screen": nobody in this pipeline watched it.
+
+**Read the whole window, not just the outcue.** Before a row becomes `PICK`,
+read every transcript line between its in and out points (each segment of a
+butt cut), plus about 20 seconds past the out. Flag the row `· LEGAL` and
+put it in Decisions when the window contains any of these:
+- an accusation against a named or identifiable person: a crime, harassment,
+  abuse, fraud, "stole";
+- a claim the other side answered, where the answer falls **outside** the cut,
+  so the accusation airs and the rebuttal doesn't;
+- a minor, a medical or disability detail beyond what the story needs, or an
+  address, plate or account number.
+
+The fix is usually a tighter in or out point. Propose one from the transcript in
+the same row. (10/14: clip A5's butt cut, 3:03–3:27, was the reporter reading the
+store's letter claiming the victim "sexually harassed" employees. His
+attorney's "baseless" started at 3:26 and fell outside the cut. The outcue
+matched the transcript perfectly, and nobody read the 24 seconds in between.)
+`check_outline.py --transcripts transcripts.json` scans every window for these
+words and warns.
 - **In–Out** — `0:17–0:51 "now using them to prevent theft"`, outcue verbatim from
   the transcript. Butt cuts: `0:17–0:51 "…" BUTT 1:22–1:37 "…"`. `WHOLE CLIP` when it
   runs start to end. `—` when there's no transcript to read.
@@ -196,6 +240,7 @@ folder (`picks.json`, `report.md`). The outline carries only the pick per beat.
 | `THROTTLED` | Shortlist exists; transcript fetch was blocked. Re-run the pipeline's Step 5. |
 | `EMPTY` | Searched, nothing usable. Give the reason. Goes in Decisions: cut the beat, swap the case, or Jeff on camera. |
 | `· UNVERIFIED` | Suffix, e.g. `MANUAL · UNVERIFIED`: the outcue never reached a transcript. |
+| `· LEGAL` | Suffix, e.g. `PICK · LEGAL`: the window carries an accusation, an unanswered claim, a minor or personal data (above). Always in Decisions, with the proposed tighter cut. |
 
 Add `· CROP` when the pick's orientation crosses the row's, and put it in Decisions.
 
@@ -203,7 +248,9 @@ You cannot watch video. Every timecode and outcue comes from a transcript or it
 isn't written. A missing clip is a finding, not a gap to paper over — a bad pick
 costs more than an honest `EMPTY`, because it's discovered in the edit bay.
 
-Check: `python3 scripts/check_outline.py outline.md --stage videos`.
+Check: `python3 scripts/check_outline.py outline.md --stage videos --transcripts transcripts.json`
+(the pipeline run folder's transcript file; without it the window scan is skipped,
+and the checker says so).
 
 ## Length
 
@@ -228,5 +275,7 @@ Once the room approves the outline w/ videos, `rossen-script-writer` writes from
 it: **same stories, same order, same beats, same clips.** Each beat row becomes a
 bold mid-story header. Each Videos row becomes a numbered clip marker carrying its
 URL, in–out ranges and outcue. `JEFF`, `GUEST` and `DEMO` rows become header plus
-dash lines. A beat or clip the writer wants to add, cut, move or swap is a change
+dash lines. The **Hold back** line is the tease's limit; a ⚠️ "date it on air"
+gap becomes `LAST YEAR` / `LAST FALL` in the copy; each fix step carries over
+with its source going to `SOURCE_LOG.md`, not the prompter. A beat or clip the writer wants to add, cut, move or swap is a change
 to the outline first — say which row.

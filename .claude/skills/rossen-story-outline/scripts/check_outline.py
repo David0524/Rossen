@@ -4,12 +4,17 @@
 Usage:
     python3 check_outline.py outline.md --stage beats     # after Phase 1
     python3 check_outline.py outline.md --stage videos    # after Phase 2
+    python3 check_outline.py outline.md --stage videos --transcripts transcripts.json
+        # also scans every clip window for accusations, a cut-off rebuttal,
+        # minors and personal data (the 10/14 clip A5 lesson)
 
 Stage defaults to whatever the header's **Stage:** says.
 ERROR = fix before building. WARN = read it and decide. Exit 1 on any ERROR.
 """
 
 import argparse
+import datetime as dt
+import json
 import re
 import sys
 
@@ -19,7 +24,7 @@ VIDEO_HEADER = ["#", "clip", "shows", "in–out", "status"]
 FOOTAGE = re.compile(r"^(HAVE|FIND)\s*·\s*(HORIZONTAL|VERTICAL)(\s+BROLL)?\b")
 OTHER_TAGS = ("DEMO", "GUEST", "JEFF", "STILLS")
 STATUSES = ("PICK", "WEAK", "MANUAL", "SWAP", "THROTTLED", "EMPTY")
-STATUS_RE = re.compile(r"^(%s)(\s*·\s*(UNVERIFIED|CROP))*$" % "|".join(STATUSES))
+STATUS_RE = re.compile(r"^(%s)(\s*·\s*(UNVERIFIED|CROP|LEGAL))*$" % "|".join(STATUSES))
 LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
 TIMECODE = re.compile(r"\b\d{1,2}:\d{2}\b(?!\s*(am|pm))", re.I)
 RANGE = re.compile(r"\d{1,2}:\d{2}\s*[–-]\s*\d{1,2}:\d{2}")
@@ -74,6 +79,73 @@ def is_human(who):
                                                      who.strip(), re.I)
 
 
+# --- Dates in Who, and the six-month rule --------------------------------
+MONTHS = {m: i + 1 for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct",
+     "nov", "dec"])}
+WHO_DATE = re.compile(
+    r"\((?:[^()]*?\b)?(?:(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+)?"
+    r"(20\d\d)\)", re.I)
+
+
+def airdate(page_one):
+    m = re.search(r"\*\*Airdate:\*\*\s*[A-Za-z]*,?\s*([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})",
+                  page_one)
+    if not m or m.group(1)[:3].lower() not in MONTHS:
+        return None
+    return dt.date(int(m.group(3)), MONTHS[m.group(1)[:3].lower()], int(m.group(2)))
+
+
+# --- Clip window legal scan ------------------------------------------------
+# Always worth a read: sexual or violent accusations, minors, personal data.
+RISK = re.compile(
+    r"\b(harass\w*|sexual\w*|assault\w*|abus\w*|rap(e|ed|ist)|molest\w*|"
+    r"stole|steal(s|ing)?|lied|liar|"
+    r"minor|child(ren)?|kids?|teen\w*|\d{1,2} years? old|"
+    r"home address|license plate|account number|social security number)\b", re.I)
+# Normal in a scam story; only worth a warning when the answer is cut off.
+SOFT_RISK = re.compile(
+    r"\b(fraud\w*|scam\w*|charged|arrest\w*|crimin\w*|guilty|convict\w*|"
+    r"predator\w*|theft|accus\w*)\b", re.I)
+ANSWER = re.compile(
+    r"\b(baseless|denie[sd]|deny|responded|response|in a statement|declined "
+    r"to comment|did not respond|didn't respond|attorney|lawyer|disputes?)\b", re.I)
+REPLY = re.compile(
+    r"\b(baseless|denie[sd]|deny|responded|in a statement|declined to comment|"
+    r"disputes?)\b", re.I)
+YT_ID = re.compile(r"(?:v=|shorts/|youtu\.be/)([\w-]{11})")
+WINDOW = re.compile(r"(\d{1,2}):(\d{2})\s*[–-]\s*(\d{1,2}):(\d{2})")
+
+
+def window_scan(label, n, clip, inout, status, decisions, tx, story):
+    m = YT_ID.search(clip)
+    if not m or m.group(1) not in tx or not tx[m.group(1)]:
+        return
+    cues = tx[m.group(1)].get("cues") or []
+    for a, b, c, d in WINDOW.findall(inout):
+        t0, t1 = int(a) * 60 + int(b), int(c) * 60 + int(d)
+        inside = " ".join(q["text"] for q in cues if t0 - 1 <= q["start"] <= t1)
+        after = " ".join(q["text"] for q in cues if t1 < q["start"] <= t1 + 20)
+        # "attorney" inside the window is often the accuser's lawyer, so only a
+        # real answer word inside (denied, baseless, responded…) counts.
+        cut_off = ANSWER.search(after) and not REPLY.search(inside)
+        hits = sorted({h.group(0).lower() for h in RISK.finditer(inside)})
+        if cut_off:
+            hits += sorted({h.group(0).lower() for h in SOFT_RISK.finditer(inside)})
+        if not hits:
+            continue
+        msg = (f"{label} Videos row {n}: window {a}:{b}–{c}:{d} contains "
+               f"{', '.join(hits[:5])}")
+        if cut_off:
+            msg += (f"; an answer ('{ANSWER.search(after).group(0)}') starts just "
+                    f"after the out point, so the claim airs without it")
+        if "LEGAL" not in status.upper():
+            warn(msg + ". Read the window; if it is an accusation, an unanswered "
+                 "claim, a minor or personal data, mark it · LEGAL and propose a "
+                 "tighter cut in Decisions. (Words like 'scam' in a scam story are "
+                 "usually fine: read before marking.)")
+
+
 errors, warns = [], []
 err, warn = errors.append, warns.append
 
@@ -92,7 +164,7 @@ def tables(block):
             cur = []
 
 
-def check(md, stage):
+def check(md, stage, tx=None):
     body = re.sub(r"<!--.*?-->", "", md, flags=re.S)
 
     if "(((" in body or re.search(r"\bOUT:", body):
@@ -141,15 +213,29 @@ def check(md, stage):
              "Say it was confirmed in the **Stories:** line.")
 
     decisions = page_one.split("### Decisions before we write", 1)[-1]
+    aired = airdate(page_one)
+    if stage == "videos" and tx is None:
+        warn("No --transcripts file given: clip windows were not scanned for "
+             "accusations, cut-off rebuttals, minors or personal data. Pass the "
+             "pipeline run's transcripts.json.")
 
     for idx, m in enumerate(starts):
         label = f"Story {m.group(1)}"
         end = starts[idx + 1].start() if idx + 1 < len(starts) else len(body)
         block = body[m.start():end]
-        for req in ("**In one sentence:**", "**Peg:**", "**Weight:**",
-                    "### The fix", "### Gaps"):
+        for req in ("**In one sentence:**", "**Hold back:**", "**Peg:**",
+                    "**Weight:**", "### The fix", "### Gaps"):
             if req not in block:
                 err(f"{label}: missing {req}")
+
+        gaps = block.split("### Gaps", 1)[-1]
+        fix = block.split("### The fix", 1)[-1].split("###", 1)[0]
+        for line in fix.splitlines():
+            t = line.strip()
+            if t.startswith("- ") and not re.search(r"\([^)]{3,}\)\s*\.?$|⚠️", t):
+                warn(f"{label} fix step has no source: '{t[2:60]}'. End it with the "
+                     "issuing body's page in parentheses, or ⚠️ if unsourced. Run "
+                     "the do-nothing test on any deadline, enrollment or default.")
 
         found = dict((tuple(h), rs) for h, rs in tables(block))
         beats = found.get(tuple(BEAT_HEADER))
@@ -176,6 +262,20 @@ def check(md, stage):
                      "Name one, or flag it in Decisions.")
             elif is_human(who):
                 humans += 1
+                if FOOTAGE.match(clip):
+                    dm = WHO_DATE.search(who)
+                    if not dm:
+                        warn(f"{label} beat {n}: Who '{who}' has no date. End it "
+                             "with when it happened or aired, e.g. '(June 2025)'.")
+                    elif aired:
+                        mon = MONTHS.get((dm.group(1) or "jan")[:3].lower(), 1)
+                        when = dt.date(int(dm.group(2)), mon, 1)
+                        if (aired - when).days > 183 and not re.search(
+                                rf"{m.group(1)}\s*(beat\s*)?{n}\b.*?date|"
+                                rf"{m.group(1)}{n}\b.*?date", gaps, re.I | re.S):
+                            warn(f"{label} beat {n}: case dated {dm.group(0)} is more "
+                                 "than six months before the airdate. Add a ⚠️ Gaps "
+                                 f"line ('{m.group(1)}{n} … date it on air').")
             if len(what.split()) > 25:
                 err(f"{label} beat {n}: 'What happens' is {len(what.split())} "
                     "words (max 25). Split the beat.")
@@ -249,7 +349,9 @@ def check(md, stage):
                         "No transcript, no timecode.")
             if base == "EMPTY" and len(shows.split()) < 3:
                 err(f"{label} Videos row {n}: EMPTY needs a reason in Shows.")
-            if base in ("EMPTY", "WEAK") or "CROP" in st:
+            if tx is not None and base in ("PICK", "WEAK", "SWAP"):
+                window_scan(label, n, clip, inout, status, decisions, tx, m.group(1))
+            if base in ("EMPTY", "WEAK") or "CROP" in st or "LEGAL" in st:
                 if not re.search(rf"\b{m.group(1)}\s*(beat\s*)?{n}\b|{m.group(1)}{n}\b",
                                  decisions):
                     warn(f"{label} Videos row {n}: {status} should be in Decisions "
@@ -265,8 +367,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("path")
     ap.add_argument("--stage", choices=["beats", "videos"])
+    ap.add_argument("--transcripts", help="pipeline run's transcripts.json")
     a = ap.parse_args()
-    check(open(a.path, encoding="utf-8").read(), a.stage)
+    tx = None
+    if a.transcripts:
+        with open(a.transcripts, encoding="utf-8") as fh:
+            tx = json.load(fh)
+    check(open(a.path, encoding="utf-8").read(), a.stage, tx)
     for e in errors:
         print(f"ERROR  {e}")
     for w in warns:
