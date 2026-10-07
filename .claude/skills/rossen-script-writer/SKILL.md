@@ -23,10 +23,15 @@ description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Rep
 | `scripts/check_bible.py` | **Before delivering. Always.** Mechanical compliance check. |
 | `scripts/build_bible.py` | Rendering the `.docx`. |
 | `scripts/verify_format.py` | Confirming the render matched house format. |
+| `review-loop.md` | **Every new bible or whole-bible rewrite, before building.** The BLOCKER-only reviewer loop: the agent prompt, the fix rules, the two-round stop. |
 
-The workflow is **draft → check → fix → repeat → build → verify**. The checker
-catches the things that reliably slip on a first pass — flat prosody, short
-setup runways, malformed markers — so do not treat it as optional polish.
+The workflow is **draft → check → fix → repeat → review loop → build →
+verify**. The checker catches the things that reliably slip on a first pass —
+flat prosody, short setup runways, malformed markers — so do not treat it as
+optional polish. The review loop (`review-loop.md`) then runs the final
+reviewer on the draft in a background agent and fixes **BLOCKERs only**: wrong
+facts, unsafe advice, legal exposure. It stops after two rounds, and every
+WARNING and NOTE goes to the producer untouched.
 
 ## First, and it governs everything: a bible is not a script
 
@@ -725,9 +730,11 @@ spec, classification table and deliverables list in `docx-format.md`.
 Red versus black is the whole point of the colour: **black is what Jeff says, red
 is a production instruction.**
 
-In the chat reply and not in the document: the clip manifest, then the source
+In the chat reply and not in the document: first the **review loop** summary
+(rounds run, BLOCKERs fixed with before → after, any still blocking, and the
+count of notes left for the producer), then the clip manifest, then the source
 rundown and anything needing a human check, then anything you declined to write
-and why.
+and why. The loop's log is `REVIEW_LOOP.md` in the run folder.
 
 ## Do not over-correct
 
@@ -789,12 +796,16 @@ script cannot see:
 - First person: one or two lines, lived not editorial, and nothing invented about
   Jeff's life.
 - Two or three open decisions left for the team.
+- The review loop ran (or the producer waived it): BLOCKERs fixed or listed as
+  still blocking, no WARNING or NOTE "fixed", any clip change stated and
+  mirrored in the outline, `REVIEW_LOOP.md` written.
 - Graphics count fits the story shape, not a blanket ceiling.
 - No invented quotes, stats, sources, clips, products or prices; unverified items
   flagged inline.
 - Nothing invented that no past bible contains. Follow the formula.
 
-Then build and verify:
+Then run the review loop (`review-loop.md`): reviewer agent, BLOCKER fixes,
+`check_bible.py` again, at most two rounds. Then build and verify:
 
 ```bash
 python3 scripts/build_bible.py draft.md "07_29 F2 BIBLE.docx"
