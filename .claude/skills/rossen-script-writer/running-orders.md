@@ -18,8 +18,7 @@ story count first. There is no required good-news closer.
 ```
 **SHOW TITLE / DATE**
 
--WELCOME TO ROSSEN REPORTS. I AM JEFF ROSSEN.
--[command hook: an order to YOU, tied to story A]
+-[command hook: an order to YOU, tied to story A]   <- first line; Jeff says the slate himself
 **STORY A HEADLINE**              <- cold open, all caps, clipped, urgent
 -4 to 6 dash lines: stakes in threes, victim + dollar figure, proof, fix
 **—------------------------------------------------**
@@ -30,11 +29,10 @@ story count first. There is no required good-news closer.
 **—------------------------------------------------**
 -[expert tease]
 
-HIT LIKE AND SUBSCRIBE            <- with the why; "we're independent"
+HIT LIKE AND SUBSCRIBE            <- bare; Jeff ad-libs the why
 JOIN THE CHAT                     <- pipeline boundary. tease ends here.
--ALL RIGHT, LET'S GET RIGHT TO IT.
 
-**STORY A TITLE**
+**STORY A TITLE**                 <- a new line, not the tease headline
 -hook lines
 -mechanics, in order
 -setup lines carrying specifics, ending in cue + verdict

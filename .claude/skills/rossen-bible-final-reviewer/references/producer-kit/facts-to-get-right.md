@@ -23,7 +23,7 @@ Things we've already had to correct or need to be careful with. Check here befor
 ## Show facts
 
 - **F1** is the Friday live show. **F2** is the show taped the same Friday and posted the following Wednesday. Jeff, September 2026: "the F2 (taped show) is going to be our call-in show." Since then some F2 tapings have been standard story shows. Older documents use "F2" for the Wednesday show in general.
-- **Target** is off-limits as a subject. Every attempt draws boycott demands, and Jeff says it bombs every time.
+- **Target** is not off-limits, but never the title or a main story: Jeff says those didn't perform well (10/7/2026; replaces the old "off-limits" rule). A passing mention inside another story is fine.
 - **Shorts** stopped in June 2026. Settled.
 - The store is spelled **Rossen**, as in "the Rossen collection." Transcription tools write "Rosson."
 - The Ghost Tapping bible is labeled "TAPE 08/28" but it's the live-show template.

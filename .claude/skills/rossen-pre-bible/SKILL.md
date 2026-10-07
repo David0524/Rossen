@@ -113,8 +113,8 @@ gets clicked, and put *that* in the shortlist — not the accurate topic label.
 The mechanism is never the beat. The beat is what it does to a person's body, home,
 children, money they touch every day, or sense of being watched — **as long as
 our viewer is the target.** Surveillance our viewers support (the Flock
-plate-camera show flopped) is a spectator story. Target-centered stories are
-dead ("bombs every time"). See "How this squares with the sexy-beat rule" in
+plate-camera show flopped) is a spectator story. Stories with Target as the
+title or main story are dead ("didn't perform well"); a passing mention is fine. See "How this squares with the sexy-beat rule" in
 `references/producer-kit/jeff-and-ryan-rules.md`. A pure wallet story — prices, fees, coupons —
 can be excellent and still not lead, because money is abstract and a camera is not.
 It goes later in the show, and it says so on its page.

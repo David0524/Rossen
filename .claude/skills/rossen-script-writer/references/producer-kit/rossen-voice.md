@@ -23,7 +23,7 @@ Paste it into a Claude Project or a chat as context and ask for notes "in Jeff's
 
 ## The show template (every episode, same order)
 
-1. **Slate:** "Welcome to Rossen Reports. I am Jeff Rossen."
+1. **Slate:** "Welcome to Rossen Reports. I am Jeff Rossen." (Said, not written: the bible opens on the command hook. Producer, 10/14/2026.)
 2. **The command hook, in the first 15 seconds.** A direct order to the viewer tied to the story: "Do not go fill up your car. Do not use your ATM card until you see this." / "Do not use tap-to-pay wherever you shop until you watch this video." / "If there is a specific sticker on it, I don't want you to open it."
 3. **Stakes stack, three fast blows:** "They will wipe out your life savings. They will wipe out your accounts. They will charge their credit cards. And yes, the police will even come to your door."
 4. **Pre-empt the objection.** He argues with the chat before the chat argues: "And before you're like, 'Big deal.' Oh, it's a big deal." / "It's not just happening to idiots, stupid people. I see the comments. No, it's happening to everyday people, people like you and me."
@@ -31,8 +31,8 @@ Paste it into a Claude Project or a chat as context and ask for notes "in Jeff's
 6. **Victim tease with a dollar figure:** "There's a woman you're going to meet who just lost $40,000 to this."
 7. **Fix promise:** "I'm going to tell you exactly what to look for." "And what you can do about it. You know, here we always give options on that too."
 8. **Rundown of the rest of the show:** "Plus..." "There's also..." "We also have this crazy story I just read about..." Each one gets a hook and a "wait until you see."
-9. **Housekeeping with the why attached:** "The YouTube algorithm loves when you hit like. I don't know why. They send it out to more people and it really helps to support our consumer journalism. We are independent." "We have no corporate overlords." "Join the chat. Let us know where you're watching from. Uncensored. Good, bad, or indifferent."
-10. **Launch line:** "All right, let's get right to it." / "Let's begin and get right to it."
+9. **Housekeeping with the why attached** (said, not written: the bible carries only `HIT LIKE AND SUBSCRIBE` / `JOIN THE CHAT`): "The YouTube algorithm loves when you hit like. I don't know why. They send it out to more people and it really helps to support our consumer journalism. We are independent." "We have no corporate overlords." "Join the chat. Let us know where you're watching from. Uncensored. Good, bad, or indifferent."
+10. **Launch line:** "All right, let's get right to it." / "Let's begin and get right to it." (Also ad-libbed; not written into the bible.)
 
 ## How he builds a story segment
 

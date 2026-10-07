@@ -30,7 +30,9 @@ T = {
     "runway_exceptions": 1,              # aired lead story has one short runway
     "first_person": (1, 3),
     "open_decisions": (2, 3),
-    "wed": {"clips": (10, 12), "words": (1700, 2300), "tease_words": (210, 340)},
+    # 10/7/2026: clips are picked from the outline before the bible, so the
+    # bible no longer carries search terms. Sent 10/14 F2: 1,373 words, 9 clips.
+    "wed": {"clips": (6, 12), "words": (1300, 1800), "tease_words": (210, 340)},
     "fri": {"clips": (0, 4), "words": (600, 1100), "tease_words": (120, 300)},
     # call-in F2: no measured corpus yet, so bands are disabled
     "callin": {"clips": (0, 99), "words": (0, 99999), "tease_words": (0, 9999)},
@@ -52,7 +54,7 @@ SOFT = ["CUSTOMERS", "SHOPPERS", "LISTENERS", "RECENTLY", "CURRENTLY"]
 ESCALATORS = ["BUT", "EVEN", "NOW", "WORSE", "THINK THAT", "SHOCKING", "MOST",
               "NEXT", "WAIT", "GUESS", "NEVER", "EXPLODING", "FINALLY"]
 
-CLIP_STRICT = re.compile(r"^\(\(\(PLAY CLIP XXX (HORIZONTAL|VERTICAL)"
+CLIP_STRICT = re.compile(r"^\(\(\(PLAY CLIP (XXX|\d+) (HORIZONTAL|VERTICAL)"
                          r"( BROLL)?\)\)\)$")
 CLIP_LOOSE = re.compile(r"\(+\s*PLAY CLIP")
 CUE_ANY = re.compile(r"\(\(+[^)]")
@@ -115,18 +117,26 @@ def check(path, day="wednesday"):
             clips.append(i)
             if not CLIP_STRICT.match(s.upper()):
                 r.err(f"line {i+1}: malformed clip marker {s!r} — must be "
-                      f"exactly (((PLAY CLIP XXX HORIZONTAL))) or "
-                      f"(((PLAY CLIP XXX VERTICAL))), three parens each side, "
-                      f"XXX literal, optional ' BROLL' before the close.")
+                      f"exactly (((PLAY CLIP 3 HORIZONTAL))) or "
+                      f"(((PLAY CLIP 3 VERTICAL))), three parens each side, "
+                      f"the clip number (or XXX before clips exist), optional "
+                      f"' BROLL' before the close.")
     r.stats["clip_beats"] = len(clips)
+    xxx = sum(1 for i in clips if "PLAY CLIP XXX" in strip_md(lines[i]).upper())
+    if xxx:
+        r.warn(f"{xxx} clip marker(s) still say XXX. Clips are picked from the "
+               f"outline before the bible now: number them in show order and "
+               f"fill OUT: and the source line from the outline's Videos rows.")
 
     for i in clips:
         nxt = [x for x in lines[i + 1:i + 4] if strip_md(x)]
         if not nxt or not strip_md(nxt[0]).upper().startswith("OUT:"):
-            r.err(f"line {i+1}: clip marker has no OUT: line beneath it.")
-        elif strip_md(nxt[0]).upper().replace(" ", "") != "OUT:":
-            r.err(f"line {i+1}: OUT: line is pre-filled ({strip_md(nxt[0])!r}). "
-                  f"Leave it blank — the pipeline fills it.")
+            r.err(f"line {i+1}: clip marker has no OUT: line directly beneath it.")
+        elif ("PLAY CLIP XXX" in strip_md(lines[i]).upper()
+              and strip_md(nxt[0]).upper().replace(" ", "") != "OUT:"):
+            r.err(f"line {i+1}: OUT: line is filled on an XXX marker "
+                  f"({strip_md(nxt[0])!r}). Either the clip is picked (number "
+                  f"the marker) or it isn't (leave OUT: blank).")
 
     for l in tease:
         if CLIP_LOOSE.search(strip_md(l).upper()):
@@ -168,8 +178,8 @@ def check(path, day="wednesday"):
     if len(short) > T["runway_exceptions"]:
         for ln, n in short:
             r.err(f"line {ln}: runway is {n} lines, needs {T['runway_min']}-10. "
-                  f"The setup lines are the only thing the pipeline reads to "
-                  f"decide what footage to find.")
+                  f"The setup names the person and plants the question the "
+                  f"clip answers.")
     elif short:
         r.warn(f"line {short[0][0]}: short runway ({short[0][1]} lines). One is "
                f"within aired tolerance; a second is not.")
@@ -358,6 +368,42 @@ def check(path, day="wednesday"):
         r.warn(f"{od} open decisions; carry {lo}-{hi}. A draft that answers "
                f"every question quietly makes calls that belong to Jeff or the "
                f"producer.")
+
+    # ---------------------------------------------------- producer cuts (10/14)
+    # Learned from the 10/14 bible as the producer sent it. WARN only: the
+    # producer makes the rare exception.
+    OUTLETS = re.compile(
+        r"\b(CBS|NBC|ABC|FOX|CNN|MSNBC|PBS|NPR|INSIDE EDITION|GOOD MORNING "
+        r"AMERICA|TODAY SHOW|DATELINE|20/20|60 MINUTES|NEW YORK POST|NY POST|"
+        r"USA TODAY|WASHINGTON POST|NEW YORK TIMES|WALL STREET JOURNAL|"
+        r"ASSOCIATED PRESS|REUTERS|INVESTIGATETV|ABC\d+|[KW][A-Z]{2,3} ?(NEWS|\d+)|"
+        r"[KW][A-Z]{2,3}'S (REPORTING|STORY|INVESTIGATION))\b")
+    outlet_hits = [s for s in spoken if OUTLETS.search(s.upper())
+                   and not s.upper().startswith("(")]
+    r.stats["outlet_mentions"] = len(outlet_hits)
+    if outlet_hits:
+        r.warn(f"{len(outlet_hits)} spoken line(s) name a news outlet. No outlet "
+               f"names on air except the rare one the producer chooses: say "
+               f"'THIS REPORTER', 'REPORTERS', 'THE NEWS', or attribute to the "
+               f"police, court or agency. {outlet_hits[:3]}")
+    fam = [s for s in spoken if re.search(
+        r"\b(YOUR (AGING |ELDERLY )?PARENTS?|YOUR MOM AND DAD|A PARENT WITH|"
+        r"YOUR GRANDPARENTS?)\b", s.upper())]
+    if fam:
+        r.warn(f"{len(fam)} line(s) address the viewer as someone's grown child "
+               f"({fam[:2]}). The audience is 55+: say 'YOUR FAMILY' or 'LOVED "
+               f"ONES'.")
+    if any(re.match(r"^-?\s*WELCOME TO ROSSEN REPORTS", strip_md(l).upper())
+           for l in tease):
+        r.warn("the slate is written in. Jeff says it himself: open the "
+               "document on the command hook.")
+    t_heads = {strip_md(l).upper().rstrip("!. ") for l in tease
+               if l.strip().startswith("**") and strip_md(l)
+               and not set(strip_md(l)) <= set("—-")}
+    reused = [h for h in heads if h.upper().rstrip("!. ") in t_heads]
+    if reused:
+        r.warn(f"body header repeats the tease headline: {reused[:2]}. Open "
+               f"each story on a new line that puts the viewer in the moment.")
 
     # ---------------------------------------------------- protection headers
     if PROTECTION_HEADER.replace("'", "") not in U.replace("'", ""):

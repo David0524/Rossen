@@ -45,6 +45,15 @@ Rendered in house format (Arial, 23/18pt, Letter, 1" margins, 1.15 spacing).
 Tier 1 on the whole-document row: the aired F2 07/10 bible measures 2,007 spoken
 body words, 136 bullets, 11 clip beats. Tier 2 on the per-block rows.
 
+**Current band (10/7/2026): 1,300–1,800 spoken body words, 6–12 clips.** Clips
+are now picked from the outline before the bible is written, so the bible no
+longer carries search terms Jeff never says. The 10/14 F2 as sent to Jeff
+(three stories, no expert) measures 1,373 spoken body words, 106 bullets
+averaging 11.4 words, 9 clip beats, tease 215 words (Tier 1, measured with
+`check_bible.py` on `references/examples/bible-sent-10-14.txt`). The draft it
+was cut from ran 1,744 words and 10 clips. The table above is kept as the
+historical record.
+
 **These per-block rows were measured on the four-story Wednesday format aired
 through July 2026.** Current F2s are either an A, B, C story show with an expert
 or the call-in show (see `references/producer-kit/bible-format-ghost-tapping.md`
