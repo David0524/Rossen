@@ -24,3 +24,6 @@
 - **Manual lane:** none.
 - **Degraded run:** yes. Captions bot-walled on two passes (15/16 null) and recovered on later passes (13/16); media bytes blocked (irrelevant: no vertical native beats). Brave key worked.
 - **Nothing was watched, downloaded or cut.** In–out points and outcues come from caption transcripts; `clips/manifest.json` is the pull list for Kyle.
+
+## Revision 10/7 — A cut to 5 clips
+The three CBS LA pieces repeated the same soundbites (Chisholm's "Uh no, I did not" in all three; Sherman's AG line in two). A5 (CBS Sept 23) dropped; A5/A6 merged into one beat on CBS Oct 1 g9e4ElDgYG8 0:22–1:01 "trying to lure shoppers inside" BUTT 3:03–3:27 "making large purchases at multiple stores" (verified). A3 trimmed to 1:09–1:37 "times, at least". Vancouver renumbered A6. Picks now 10 across 10 clip beats.

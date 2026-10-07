@@ -27,11 +27,6 @@
     "in": "1:09",
     "out": "1:37",
     "outcue": "times, at least"
-   },
-   {
-    "in": "1:52",
-    "out": "2:09",
-    "outcue": "I'm ashamed"
    }
   ]
  },
@@ -55,32 +50,14 @@
  },
  {
   "beat_id": "10-14-A5",
-  "url": "https://www.youtube.com/watch?v=I_AnpuMDlls",
-  "platform": "youtube",
-  "source_type": "affiliate",
-  "segments": [
-   {
-    "in": "2:04",
-    "out": "2:37",
-    "outcue": "our state attorney general"
-   },
-   {
-    "in": "4:41",
-    "out": "5:09",
-    "outcue": "independently operated tenant"
-   }
-  ]
- },
- {
-  "beat_id": "10-14-A6",
   "url": "https://www.youtube.com/watch?v=g9e4ElDgYG8",
   "platform": "youtube",
   "source_type": "affiliate",
   "segments": [
    {
     "in": "0:22",
-    "out": "0:33",
-    "outcue": "the B and Co name remains"
+    "out": "1:01",
+    "outcue": "trying to lure shoppers inside"
    },
    {
     "in": "3:03",
@@ -90,7 +67,7 @@
   ]
  },
  {
-  "beat_id": "10-14-A7",
+  "beat_id": "10-14-A6",
   "url": "https://www.youtube.com/watch?v=VaEws6itP08",
   "platform": "youtube",
   "source_type": "affiliate",

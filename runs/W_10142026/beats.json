@@ -119,44 +119,6 @@
   "beat_id": "10-14-A5",
   "episode": "10-14",
   "segment_title": "THIS FREE SAMPLE COST HER $26,000",
-  "script_text": "New allegations against Bee & Co. from older adults and customers with disabilities across Southern California malls, including an 80-year-old woman who says she lost nearly $3,000; Rep. Brad Sherman takes it to Attorney General Rob Bonta. CBS LA, Sept 23 2026.",
-  "orientation": "horizontal",
-  "clip_role": "news_report",
-  "news_anchor": "Bee & Co. new allegations coercive sales customers with disabilities",
-  "visual_spec": "Customers and families on camera; congressman; mall storefronts",
-  "platforms": [
-   "youtube",
-   "shorts",
-   "news_web"
-  ],
-  "offsite_likely": false,
-  "priority": 2,
-  "expected_segments": 1,
-  "sourcability": "high",
-  "sourcability_note": "HAVE CBS LA I_AnpuMDlls (444K, 2026-09-23)",
-  "source_native": "none",
-  "queries": {
-   "anchor": [
-    "Bee & Co. new allegations coercive sales"
-   ],
-   "news": [
-    "Bee & Co. skincare new allegations disabilities",
-    "congressman Sherman skincare store"
-   ],
-   "platform": [
-    "Bee and Co Topanga"
-   ],
-   "shorts": [
-    "mall skincare store elderly pressured"
-   ]
-  },
-  "lane": "search",
-  "have_url": "https://www.youtube.com/watch?v=I_AnpuMDlls"
- },
- {
-  "beat_id": "10-14-A6",
-  "episode": "10-14",
-  "segment_title": "THIS FREE SAMPLE COST HER $26,000",
   "script_text": "The Bee & Co. store at Westfield Topanga closed Sept 24 2026, storefront boarded with a lockbox on the door, after CBS California Investigates reporting; the company's attorney Neville Johnson called coverage one-sided and misleading; LAPD investigating. CBS LA, Oct 1 2026.",
   "orientation": "horizontal",
   "clip_role": "news_report",
@@ -191,7 +153,7 @@
   "have_url": "https://www.youtube.com/watch?v=g9e4ElDgYG8"
  },
  {
-  "beat_id": "10-14-A7",
+  "beat_id": "10-14-A6",
   "episode": "10-14",
   "segment_title": "THIS FREE SAMPLE COST HER $26,000",
   "script_text": "At the Vancouver Mall in Washington, the BH28 Skincare kiosk closed after a KOIN 6 investigation into high-pressure sales; owner Hai Baranetz was arrested for allegedly pushing a 75-year-old woman to withdraw $50,000; a bank teller stopped it; other women spent $300 to $22,000; Brooks Thogerson, 76, was charged $13,000. Late 2024 to Feb 2025.",

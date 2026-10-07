@@ -64,11 +64,6 @@
       "in": "1:09",
       "out": "1:37",
       "outcue": "times, at least"
-     },
-     {
-      "in": "1:52",
-      "out": "2:09",
-      "outcue": "I'm ashamed"
      }
     ],
     "reasoning": "Lettie on camera: free facials as lures, 'pressured, pressured, pressured', said no 50\u201360 times; $25,000 on Social Security.",
@@ -134,49 +129,6 @@
  {
   "beat_id": "10-14-A5",
   "pass": 2,
-  "flagged": "https://www.youtube.com/watch?v=I_AnpuMDlls",
-  "platform": "youtube",
-  "title": "CBS LA \u2014 Bee & Co. faces new allegations of coercive sales",
-  "source_mix": {
-   "affiliate": 1
-  },
-  "diversity_floor_applied": false,
-  "ranked": [
-   {
-    "url": "https://www.youtube.com/watch?v=I_AnpuMDlls",
-    "source_type": "affiliate",
-    "score": 76,
-    "tone": 8,
-    "authenticity": 8,
-    "quality": 7,
-    "fit": 8,
-    "segments": [
-     {
-      "in": "2:04",
-      "out": "2:37",
-      "outcue": "our state attorney general"
-     },
-     {
-      "in": "4:41",
-      "out": "5:09",
-      "outcue": "independently operated tenant"
-     }
-    ],
-    "reasoning": "Rep. Brad Sherman to raise it with AG Bonta; then two women in their 80s pressured at Mazal-affiliated stores at Santa Anita, small-claims settlements.",
-    "flags": [
-     "The 80-year-old/$3,000 claim is a BBB review read in the Aug 27 package, not this one"
-    ]
-   }
-  ],
-  "rejected": [],
-  "cannot_determine": [
-   "on-screen framing and graphics (not watched)"
-  ],
-  "transcript_rung": 1
- },
- {
-  "beat_id": "10-14-A6",
-  "pass": 2,
   "flagged": "https://www.youtube.com/watch?v=g9e4ElDgYG8",
   "platform": "youtube",
   "title": "CBS LA \u2014 Bee & Co. skincare store closes",
@@ -196,8 +148,8 @@
     "segments": [
      {
       "in": "0:22",
-      "out": "0:33",
-      "outcue": "the B and Co name remains"
+      "out": "1:01",
+      "outcue": "trying to lure shoppers inside"
      },
      {
       "in": "3:03",
@@ -205,20 +157,27 @@
       "outcue": "making large purchases at multiple stores"
      }
     ],
-    "reasoning": "Deserted storefront, lockbox; then the company's lawyer letter calling coverage one-sided and blaming Chisholm.",
+    "reasoning": "Store dark, reporter confronts staff, workers seen pushing samples; company's response. Replaces two CBS beats that repeated soundbites.",
     "flags": [
      "Second segment is the company's response \u2014 keep it for fairness"
     ]
    }
   ],
-  "rejected": [],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=I_AnpuMDlls",
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "repeats Chisholm and Sherman soundbites from the other CBS pieces"
+   }
+  ],
   "cannot_determine": [
    "on-screen framing and graphics (not watched)"
   ],
   "transcript_rung": 1
  },
  {
-  "beat_id": "10-14-A7",
+  "beat_id": "10-14-A6",
   "pass": 2,
   "flagged": "https://www.youtube.com/watch?v=VaEws6itP08",
   "platform": "youtube",

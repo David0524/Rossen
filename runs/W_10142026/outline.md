@@ -7,8 +7,8 @@
 | Slot | What | Weight | Clips |
 |---|---|---|---|
 | Tease | The $26,000 free sample, the caregiver who took the house for $5, the fake property-tax video | — | — |
-| A | This free sample cost her $26,000 | ~50% of show | 6/6 |
-| Break | OmniWatch — after A beat 8 (the fix) | — | — |
+| A | This free sample cost her $26,000 | ~50% of show | 5/5 |
+| Break | OmniWatch — after A beat 7 (the fix) | — | — |
 | B | Don't sign this for anyone: his caregiver took his house for $5 | ~35% | 3/3 |
 | Break | OmniWatch — after B beat 4 (the fix) | — | — |
 | C | If you see this video about your property taxes, it's fake | ~15% | 2/2 |
@@ -26,7 +26,7 @@ A builds through four victims to a store going dark and exhales on the fix. B is
 
 - Which story leads: the outline follows the producer's note (skincare A, caregiver B). Kyle and David's note had the caregiver story as the lead.
 - A beat 2: the $26,000 widow is a June 2025 case. Producer, 10/6: leave as is, decide the framing later.
-- A runs 6 clip beats against Matt's guide of about two per segment. Producer, 10/6: keep all six for now; beats 5 and 6 (both CBS LA) are the first cut if A runs long.
+- A cut from 6 clips to 5 (producer, 10/7): the three CBS LA pieces repeated Chisholm's "Uh no, I did not" and Sherman's AG line, so beats 5 and 6 merged into one CBS clip that shows the sample pitch and the closed store. A3 trimmed to one segment so it doesn't repeat A2's shame beat. If A runs long, cut A3 next.
 - B rows swapped at Checkpoint 3 (producer, 10/6): B now opens on the doorbell (the 5.7M Short), then the $5 deed.
 - B beat 1: "Your dad died" is on tape, as Nora retelling what the caregiver said, not the Ring audio itself.
 - B beat 1: the Short is WSMV's repost of WMBF's story. Clear it through Gray, or use WMBF's original (same audio).
@@ -34,7 +34,7 @@ A builds through four victims to a store going dark and exhales on the fix. B is
 - C has no victim. Producer, 10/6: beat 1 runs as B-roll of the fake video with Jeff talking over it. Denver7 plays the fake video; no real channel is labelled as the scam.
 - C: the Colorado assessor thinks the videos exist to sell ad clicks; Wisconsin's revenue department says the phone numbers reach scammers. Attribute each.
 - Picks: 11/11, all affiliate or network news (no first-person or creator option cleared the filters). No EMPTY, WEAK or THROTTLED beats.
-- No expert this week (producer, 10/6). A beat 8 and B beat 4 stay with Jeff.
+- No expert this week (producer, 10/6). A beat 7 and B beat 4 stay with Jeff.
 
 # A. THIS FREE SAMPLE COST HER $26,000
 
@@ -42,7 +42,7 @@ A builds through four victims to a store going dark and exhales on the fix. B is
 
 **Peg:** The Bee & Co. store at Westfield Topanga closed Sept 24 after months of CBS California Investigates reports (latest Oct 1).
 
-**Weight:** ~50% of show · 6 clip beats
+**Weight:** ~50% of show · 5 clip beats
 
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
@@ -50,21 +50,19 @@ A builds through four victims to a store going dark and exhales on the fix. B is
 | 2 | The $25 facial | Kathryn Taylor, 84, Florida widow on Social Security | She goes in for a $25 facial and is charged about $26,000; the store refunds about $4,500 and nothing more. | HAVE · HORIZONTAL — First Coast News |
 | 3 | No, fifty times | Lettie, 79, Arizona, lives on Social Security | She says she said no 50 to 60 times and still spent about $25,000 over a month. | FIND · HORIZONTAL — ABC15 Let Joe Know |
 | 4 | It's not one store | Victor Chisholm, man with an intellectual disability | He spends more than $50,000 at Bee & Co., and his friend Gabe Cota spends thousands more. | HAVE · HORIZONTAL — CBS LA |
-| 5 | It gets worse | Rep. Brad Sherman; two women in their 80s, Arcadia | A congressman takes it to the attorney general, and two women in their 80s say they were pressured at sister stores. | HAVE · HORIZONTAL — CBS LA |
-| 6 | The store goes dark | Rep. Brad Sherman; Bee & Co. attorney Neville Johnson | The Topanga store closes Sept 24; the company calls the coverage one-sided and misleading. | HAVE · HORIZONTAL — CBS LA |
-| 7 | Coast to coast | Vancouver Mall shopper, 75, Washington | A kiosk owner is arrested after allegedly pushing her to withdraw $50,000, and nearby kiosks close. | FIND · HORIZONTAL — KOIN 6 |
-| 8 | The fix | You (the viewer) | Take the sample and keep walking, get the total in writing, and dispute charges the same day. | JEFF |
+| 5 | Caught on camera | CBS LA's Kristine Lazar; Bee & Co.'s lawyer | Cameras catch workers pushing samples at shoppers; the Topanga store goes dark Sept 24, and the company calls the coverage one-sided. | HAVE · HORIZONTAL — CBS LA |
+| 6 | Coast to coast | Vancouver Mall shopper, 75, Washington | A kiosk owner is arrested after allegedly pushing her to withdraw $50,000; two bank tellers stop it. | FIND · HORIZONTAL — KOIN 6 |
+| 7 | The fix | You (the viewer) | Take the sample and keep walking, get the total in writing, and dispute charges the same day. | JEFF |
 
 ### Videos
 
 | # | Clip | Shows | In–Out | Status |
 |---|---|---|---|---|
 | 2 | [First Coast News — $25 facial cost an 84-year-old widow $26,000](https://www.youtube.com/watch?v=3iz8G25Taxg) | Taylor ashamed she told no one; "I was being shifted around." Uploaded June 5, 2025, 4:52. | 0:42–0:58 "Didn't tell anybody" BUTT 2:10–2:21 "what was happening" | PICK |
-| 3 | [ABC15 — Valley senior spends $25,000 on beauty products](https://www.youtube.com/watch?v=Xh8ZOedc2hM) | Lettie, 79: free facials as lures, "pressured, pressured, pressured," said no 50 to 60 times; $25,000 on Social Security. 4:02. | 1:09–1:37 "times, at least" BUTT 1:52–2:09 "I'm ashamed" | PICK |
+| 3 | [ABC15 — Valley senior spends $25,000 on beauty products](https://www.youtube.com/watch?v=Xh8ZOedc2hM) | Lettie, 79: free facials as lures, "pressured, pressured, pressured," said no 50 to 60 times. 4:02. | 1:09–1:37 "times, at least" | PICK |
 | 4 | [CBS LA — Bee & Co. accused of coercive sales after man spends $50K](https://www.youtube.com/watch?v=6OGQNCnZTfE) | Chisholm, 30: account drained from $80,000 to under $500; $40,000+ to Bee & Co. Uploaded Aug 27, 2026, 5:03. | 0:18–0:53 "in separate transactions" BUTT 1:03–1:26 "Uh no, I did not" | PICK |
-| 5 | [CBS LA — Bee & Co. faces new allegations of coercive sales](https://www.youtube.com/watch?v=I_AnpuMDlls) | Rep. Sherman to take it to AG Bonta; two women in their 80s and small-claims settlements. Uploaded Sept 23, 2026, 6:15. | 2:04–2:37 "our state attorney general" BUTT 4:41–5:09 "independently operated tenant" | PICK |
-| 6 | [CBS LA — Bee & Co. skincare store closes](https://www.youtube.com/watch?v=g9e4ElDgYG8) | The deserted storefront and lockbox; then the company lawyer's letter calling coverage one-sided. Uploaded Oct 1, 2026, 4:04. | 0:22–0:33 "the B and Co name remains" BUTT 3:03–3:27 "making large purchases at multiple stores" | PICK |
-| 7 | [KOIN 6 — Bank teller saves woman from $50K skin care "trance"](https://www.youtube.com/watch?v=VaEws6itP08) | Donna, 75, lured by eye cream at a kiosk; the owner drives her to a bank for $50,000; a teller stops it. 6:46. | 0:32–0:48 "bh28 skincare consultants" BUTT 2:22–3:11 "bank teller called police" | PICK |
+| 5 | [CBS LA — Bee & Co. skincare store closes](https://www.youtube.com/watch?v=g9e4ElDgYG8) | The boarded-up store; "Do you feel you're doing anything wrong?"; workers "pushing samples" to lure shoppers; then the company lawyer's letter. Uploaded Oct 1, 2026, 4:04. | 0:22–1:01 "trying to lure shoppers inside" BUTT 3:03–3:27 "making large purchases at multiple stores" | PICK |
+| 6 | [KOIN 6 — Bank teller saves woman from $50K skin care "trance"](https://www.youtube.com/watch?v=VaEws6itP08) | Donna, 75, lured by eye cream at a kiosk; the owner drives her to a bank for $50,000; a teller stops it. 6:46. | 0:32–0:48 "bh28 skincare consultants" BUTT 2:22–3:11 "bank teller called police" | PICK |
 
 ### The fix
 
@@ -75,9 +73,9 @@ A builds through four victims to a store going dark and exhales on the fix. B is
 ### Gaps
 
 - ⚠️ Beat 2 is from June 2025 (purchase about early 2024). Her store's site calls every Bee and Co "independently owned"; don't tie it to Mazal's Bee & Co.
-- ⚠️ Beats 4–7: accused of high-pressure sales, not charged with fraud (the Vancouver arrest is a separate case). Every line gets attribution and the company's response.
+- ⚠️ Beats 4–6: accused of high-pressure sales, not charged with fraud (the Vancouver arrest is a separate case). Every line gets attribution and the company's response.
 - ⚠️ Georgia: a 74-year-old Georgia woman was charged $8,000+ at the Florida store (First Coast News, citing police). A Georgia victim, not a Georgia store.
-- ⚠️ Beat 7: Donna asked not to show her face.
+- ⚠️ Beat 6: Donna asked not to show her face.
 
 # B. DON'T SIGN THIS FOR ANYONE: HIS CAREGIVER TOOK HIS HOUSE FOR $5
 
