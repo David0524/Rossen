@@ -1,5 +1,5 @@
 ---
-name: rossen-bible-final-reviewer
+name: "rossen-bible-final-reviewer"
 description: Audit a finished Rossen Reports bible before it goes to Jeff to shoot from — fact-check every stat, dollar figure, named-company claim, and quote; verify clip cues have a real source and check what can and can't be confirmed from metadata/transcript; check structural and voice compliance against the house contract; flag legal and copyright risk; produce a source log table of every checked claim and its confidence. Use whenever a bible draft is done and the user asks to "review," "check," "fact-check," "proof," or "sanity-check" it, asks "is this ready to air," or when a script-writer/beat-extractor pass hands off a completed bible in the same session. Do not use for early drafting, brainstorming, or writing bibles from scratch (that's rossen-script-writer), and do not use for clip sourcing or ranking candidates (that's rossen-beat-extractor / rossen-clip-grader) — this is a pre-air audit of an already-structured, already-populated draft.
 ---
 
@@ -45,7 +45,8 @@ It returns two things:
    missing `OUT:` lines, missing CTA or `END OF SHOW`, absent protection beats,
    sponsor blocks interrupting a clip run, off-register words, address and
    account-number patterns, over-long verbatim quotes, tease-versus-body figure
-   drift. Drop these straight into your tables. Do not re-derive them by eye;
+   drift, tease promises the body never names, and runs of three clips with no
+   takeaway. Drop these straight into your tables. Do not re-derive them by eye;
    that is where they get missed.
 2. **A claim inventory in triage order** — every phone number, URL, named
    entity, attributed quote, dollar figure, percentage and date in the draft,
@@ -140,6 +141,23 @@ Mostly covered by Step 0. Read its findings, then check by eye what it cannot:
   preamble.
 - The tease block and the body agree — no story teased that isn't in the body,
   none in the body that isn't teased.
+- **Every tease promise is paid off by name.** `THE ONE MOVE` in the open means
+  the body says `THE ONE MOVE` where it lands. Step 0 flags promise phrases the
+  body never repeats; judge any it misses by eye.
+- **A tell after every victim case.** Each case ends with a one-line takeaway
+  before the next case starts, not only the closing list or the guest's tips.
+  Step 0 warns on three sound clips with no takeaway between them.
+- **Cases inside a story lead with the real loss.** A near-miss ahead of a
+  victim whose money is gone is a WARNING, and so is a header built on the
+  near-miss (`ALMOST COST HER`) when the story has a completed loss.
+- **Framing fits every case.** Read the story's header and tease lines against
+  each case: a noun one case doesn't share (`MALL` when one victim walked into a
+  storefront, `FREE SAMPLE` when one came in for a discounted facial) is a
+  WARNING on accuracy, with the broader wording as the fix.
+- Reaction lines (`I LOVE IT WHEN SOMEBODY STEPS IN`) are Jeff's to trim. Flag
+  one only if a fact or a transition depends on it.
+
+These five come from Ryan's notes on the 10/14 bible (Oct 8, 2026).
 - For Friday shows: content portion fully scripted, deals portion lighter (guest
   intro, pre-picked deals with retail vs. deal price, live-request cues). Flag if
   a Friday bible over-scripts the deals block or under-scripts the content block.

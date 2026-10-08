@@ -56,6 +56,27 @@ Scam-baiting and entertainment channels (Scammer Payback, Kitboga, penguinz0)
 are not. Body cam channels validate the body cam lane, not a scam topic. More
 in `competitive-landscape.md`.
 
+## Ryan's bible notes (Oct 8, 2026, on the 10/14 free-sample show)
+
+Left as comments on the draft bible. They govern pitches and outlines too,
+because the working tease and the case order start here.
+
+1. **Frame the scam broadly enough for every case.** "FREE SAMPLE OR EXTREME
+   DISCOUNT (that covers our bases with the variations of the scam)." And on
+   "mall": "Drop the 'mall' here to keep it broad" / "Let's say 'store' since
+   it's broader."
+2. **Real loss leads; a near-miss follows.** "Move the $26k scam first since the
+   victim actually lost money and that sets some real stakes. The 'almost lost
+   $50k' story is a good warning but doesn't have the same impact."
+3. **Useful information throughout, not only at the end.** "After each of the
+   scams, spell out the 'tell' or give a quick tip rather than waiting for the
+   guest for a solution... Our best-performing live shows typically provide
+   useful info throughout."
+4. **Pay off the tease by name.** "Call out the 'one move' from the cold
+   open... the 'one move' promised in the open is never labeled."
+5. **Reaction lines are Jeff's.** "You can leave these, but Jeff may trim. His
+   reactions are often his own riffs."
+
 ## Story rules the data taught us
 
 - **The extended threat.** Every scam needs the beat that puts the viewer in

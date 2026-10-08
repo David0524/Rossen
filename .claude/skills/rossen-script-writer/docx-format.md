@@ -13,8 +13,9 @@ live show he will read it aloud.
 
 ```bash
 python3 scripts/check_bible.py draft.md --day wednesday    # fix errors, repeat
-python3 scripts/build_bible.py draft.md "07_29 F2 BIBLE.docx"
-python3 scripts/verify_format.py "07_29 F2 BIBLE.docx"
+python3 scripts/build_bible.py draft.md "HE SAID HE WAS TOM SELLECK - WED 10_14.docx"
+python3 scripts/build_source_log.py sources.md "HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx"
+python3 scripts/verify_format.py "HE SAID HE WAS TOM SELLECK - WED 10_14.docx"
 ```
 
 `build_bible.py` takes the same markdown draft `check_bible.py` reads, so one
@@ -73,21 +74,40 @@ error reads as one finding.
 
 ## Deliverables
 
-The `.docx` is the deliverable. Two things go **in the chat reply and never in
-the document** — no reference bible contains either:
-
-**1. The clip manifest.**
+Two files, both named for the A-story headline plus the air day and date
+(` - DRAFT` before `.docx` on a draft bible):
 
 ```
-CLIP MANIFEST
-b01  HORIZONTAL  victim interview     retired officer / PayPal invoice / $10,000
-b02  VERTICAL    evidence             garage fire / lithium leaf blower
-b03  HORIZONTAL  confrontation bust   police sting / gold courier / $700,000
+HE SAID HE WAS TOM SELLECK - WED 10_14.docx
+HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx
 ```
 
-**2. The source rundown**, separating what is confirmed from what needs a human
-check, plus anything that could not be found.
+**1. The bible.** No sources section and nothing under any clip marker but
+`OUT:`. Citations may go inline as a hyperlink on the named source, matching how
+aired bibles link a study or a resource URL. Keep any `UNCONFIRMED` flag short
+and inside a red production cue.
 
-Inside the document, citations go inline as hyperlinks on the named source,
-matching how aired bibles link a study or a resource URL. Keep any `unconfirmed`
-or `TBD` flags short and inline right at the relevant cue.
+**2. The companion source log**, built by `scripts/build_source_log.py` from a
+markdown file with two pipe tables. The script errors on an empty source or
+scope cell.
+
+```
+## CLAIMS
+| Claim | Status | Source | Scope |
+|---|---|---|---|
+| Karen Whitaker, 79, Bermuda Dunes | CONFIRMED | https://www.nbcnews.com/... | Age and place per NBC; sheriff via Fox |
+| Sheriff: no evidence scammers directly involved in deaths | CONFIRMED | https://www.foxnews.com/... | Copy never links scam to deaths; tease avoids the deaths |
+
+## CLIPS
+| Beat | Orientation | Role | Candidate URL | Timecode | Known from |
+|---|---|---|---|---|---|
+| b01 | HORIZONTAL | victim / case report | https://www.youtube.com/watch?v=n9agOyCc9Mk | — | title and description only, not watched |
+```
+
+Status is one of CONFIRMED, PARTIALLY CONFIRMED, UNVERIFIED, CONTRADICTED. Every
+caution flag carried in from the pre-bible or outline gets a claims row whose
+scope note says how the copy honours it. In FINAL, the Beat column carries the
+clip number from the bible and Timecode carries in and out.
+
+The chat reply stays short: stage, assumptions, anything declined, open
+decisions, and the rows that need a human before air.

@@ -63,6 +63,12 @@ Short clipped lines, direct address, escalation, and the alarming thing first. I
 should sound like the tease blocks in the aired bibles, because that's what it's
 previewing.
 
+Frame it as broadly as the cases are: every noun has to be true of every case
+(`A FREE SAMPLE OR A CRAZY DISCOUNT`, `STORE` not `MALL` unless every case is in
+a mall). Lead with the victim whose money is actually gone; a near-miss goes
+second. If the tease promises a named payoff (`THE ONE MOVE`), THE PAYOFF below
+says which step it is. Ryan's notes, `producer-kit/jeff-and-ryan-rules.md`.
+
 Do not write a tease the sourcing can't support. This is the exact place the
 flagging rule bites — if the best line in the tease is an inference, it is going in
 the verification block by name.
@@ -81,6 +87,9 @@ starts here, so the outline's Peg and the bible's segment 1 inherit it.
 
 Real, specific, actionable protection steps. Phone numbers, URLs, settings paths,
 the physical thing to do. Anything you couldn't confirm gets `*(verify)*` inline.
+Where a story has more than one victim case, add the one-line tell for each
+(`After Kathryn: no price on anything means walk out`) — the bible places a tell
+after every case.
 Test each step against the people the scam targets: a tell that confirms the
 scammer's story for them ("no letter? don't believe the call," when the letters
 are real) needs the move that works for everyone (hang up, call them yourself).

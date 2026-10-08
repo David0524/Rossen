@@ -31,6 +31,7 @@
 **Hold back:** <the payoff the tease must not give away>
 
 **Peg:** <why this show, this week. If news: news → confusion → the scammer's opening, + the anchor line>
+**Framing:** <how it starts and where — true of every case>
 
 **Climb:** <the axis the beats get worse on>
 
@@ -54,6 +55,7 @@
 
 ### The fix
 
+- After <case>: <the tell, one line>
 - <step, plain> (<source: issuing body's page>)
 
 ### Gaps
@@ -76,6 +78,7 @@
 
 ### The fix
 
+- After <case>: <...>
 - <...> (<source>)
 
 ### Gaps

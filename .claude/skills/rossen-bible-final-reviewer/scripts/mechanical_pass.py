@@ -66,6 +66,66 @@ DATEISH = re.compile(r"\b(19|20)\d{2}\b|\b(JANUARY|FEBRUARY|MARCH|APRIL|MAY|"
                      re.I)
 
 
+# ---------------------------------------------------------------- promises & tells
+# Ryan (producer notes on the 10/14 bible, Oct 8 2026): a promise made in the
+# tease ("THE ONE MOVE", "THE 5-SECOND HABIT") has to be paid off BY NAME in the
+# body, and viewers get a takeaway after each case, not only at the end.
+PROMISE_NOUNS = (r"PIECE OF PAPER|QUESTION|HABIT|MOVE|TRICK|THING|WORD|PHRASE|"
+                 r"SETTING|CALL|STEP|RULE|MISTAKE|SIGN|BUTTON|NUMBER|TELL")
+PROMISE_RE = re.compile(
+    r"\b((?:ONE|\d+|ONE|TWO|THREE|FOUR|FIVE|SIX|SEVEN|EIGHT|NINE|TEN)"
+    r"(?:[- ](?:SECOND|MINUTE|WORD|STEP))?\s+(?:[A-Z']+\s+){0,2}?(?:"
+    + PROMISE_NOUNS + r"))\b")
+NUMWORDS = {"1": "ONE", "2": "TWO", "3": "THREE", "4": "FOUR", "5": "FIVE",
+            "6": "SIX", "7": "SEVEN", "8": "EIGHT", "9": "NINE", "10": "TEN"}
+# a takeaway the viewer can use: a labeled tell, a red flag, or the list itself
+TAKEAWAY_RE = re.compile(r"\bTHE TELL\b|\bTHE RED FLAG\b|HERE'?S HOW TO PROTECT|"
+                         r"^-?\s*NUMBER ONE\b")
+
+
+def norm_phrase(s):
+    s = re.sub(r"\*+", "", s).upper().replace("\u2019", "'")
+    s = re.sub(r"\b(\d+)\b", lambda m: NUMWORDS.get(m.group(1), m.group(1)), s)
+    s = re.sub(r"[^A-Z0-9' ]+", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def tease_promises(tease_lines):
+    """Promise phrases in the tease, e.g. 'ONE MOVE', 'FIVE SECOND HABIT'."""
+    out = []
+    for l in tease_lines:
+        for m in PROMISE_RE.finditer(norm_phrase(l)):
+            p = m.group(1)
+            if p not in out:
+                out.append(p)
+    return out
+
+
+def unpaid_promises(tease_lines, body_lines):
+    body = " " + norm_phrase(" \n ".join(body_lines)) + " "
+    return [p for p in tease_promises(tease_lines) if f" {p} " not in body]
+
+
+def takeaway_gaps(body_lines, clip_re, limit=3):
+    """Runs of `limit`+ sound clips with no takeaway line between them.
+    Expert cue lines do not count: the tell is Jeff's, not the guest's."""
+    gaps, run, start = [], 0, None
+    for i, l in enumerate(body_lines):
+        s = re.sub(r"\*+", "", l).replace("\u2019", "'").strip().upper()
+        if clip_re.search(s):
+            if "BROLL" in s:
+                continue
+            if run == 0:
+                start = i
+            run += 1
+            if run == limit:
+                gaps.append(start)
+        elif (not s.startswith(("(", "OUT:")) and not s.rstrip("!").endswith("?")
+              and TAKEAWAY_RE.search(s)):
+            run = 0
+    return gaps
+
+
 def strip_md(s):
     return re.sub(r"\*+", "", s).replace("\u2019", "'").strip()
 
@@ -269,6 +329,20 @@ def analyze(path, stage="draft"):
         add("NOTE", "consistency", "tease vs body",
             f"{len(shared)} figure(s) appear in both tease and body. Re-check "
             f"after any correction lands — that is when drift gets introduced.")
+
+    # ---------------------------------------------------------- tease promises
+    for p in unpaid_promises(tease, body):
+        add("WARNING", "consistency", "tease vs body",
+            f"The tease promises {p!r} and the body never names it. Ryan's "
+            f"rule (Oct 8, 2026): pay a tease promise off by name where it "
+            f"lands ('HERE'S THE {p} I PROMISED'), or cut it from the tease.")
+
+    # ---------------------------------------------------------- takeaways
+    for g in takeaway_gaps(body, CLIP):
+        add("WARNING", "structure", f"line {boundary + g + 1}",
+            "Three sound clips run with no takeaway between them. Each victim "
+            "case should end with a one-line tell (HERE'S THE TELL: ...), not "
+            "wait for the guest or the closing list.")
 
     # ---------------------------------------------------------- claim inventory
     inv = {"tier1_safety_contact": [], "tier2_entity_and_quote": [],

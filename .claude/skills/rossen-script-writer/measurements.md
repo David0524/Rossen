@@ -45,29 +45,31 @@ Rendered in house format (Arial, 23/18pt, Letter, 1" margins, 1.15 spacing).
 Tier 1 on the whole-document row: the aired F2 07/10 bible measures 2,007 spoken
 body words, 136 bullets, 11 clip beats. Tier 2 on the per-block rows.
 
-**Current band (10/7/2026): 1,300–1,800 spoken body words, 6–12 clips.** Clips
-are now picked from the outline before the bible is written, so the bible no
-longer carries search terms Jeff never says. The 10/14 F2 as sent to Jeff
-(three stories, no expert) measures 1,373 spoken body words, 106 bullets
-averaging 11.4 words, 9 clip beats, tease 215 words (Tier 1, measured with
-`check_bible.py` on `references/examples/bible-sent-10-14.txt`). The draft it
-was cut from ran 1,744 words and 10 clips. The table above is kept as the
-historical record.
+**Reference point (10/7/2026): the 10/14 F2 as sent** (three stories, no
+expert) measures 1,373 spoken body words, 106 bullets averaging 11.4 words, 9
+clip beats, tease 215 words (Tier 1, measured with `check_bible.py` on
+`references/examples/bible-sent-10-14.txt`). The draft it was cut from ran 1,744
+words and 10 clips. Clips are now picked from the outline before the bible, so
+a FINAL no longer carries search terms Jeff never says; write to the per-story
+bands, not up to them.
 
-**These per-block rows were measured on the four-story Wednesday format aired
-through July 2026.** Current F2s are either an A, B, C story show with an expert
-or the call-in show (see `references/producer-kit/bible-format-ghost-tapping.md`
-and `references/producer-kit/call-in-show-format.md`). The whole-document row is still the budget; divide it
-by the confirmed story count, with the A story front-loaded hardest — about 40%
-of the body. The tease is still about 3 pages.
+**These rows were measured on the four-story Wednesday format aired through
+July 2026. They describe what aired; they are not the budget for current
+shows.** The current default is one A story plus a small B (variants: a 3–5
+story rundown, a single-topic umbrella show). Size by the confirmed story count
+using the per-story bands in SKILL.md, which `check_bible.py --stories N`
+applies: A story about 600–850 spoken words, each later story about 230–520,
+tease about 60–80 words a story. Those bands are derived from the per-block rows
+above, not separately measured — provisional until aired A + B bibles are in the
+library.
 
-**Outside clips:** Matt Raub's standard is about two outside clips per segment,
-cleared, and not crowding Jeff off camera. That is lower than the 10–12 aired
-count above. Until David rules, write to the material, count BROLL and demo
-beats separately, and flag in the chat reply when a story wants more than two
-outside clips.
+**Outside clips: the rule is about two per segment** (Matt Raub's standard,
+cleared, not crowding Jeff off camera). The 10–12 per show and 5–7 per lead
+story above are historical counts from the four-story format, not targets.
+Count BROLL and demo beats separately. A trailing story with zero clip beats is
+normal.
 
-**Story 1 is a ceiling, not a target.** 41–51 bullets and 5–7 clips. A story 1
+**Story 1 bullets are a ceiling, not a target.** 41–51 bullets. A story 1
 reaching ~75 bullets across seven headers is too long, and it almost always
 means subtopics multiplied where people should have.
 
@@ -179,17 +181,19 @@ happening *right now*. Write currency into the copy.
 
 Note two of these are **his, not the writer's**: `by the way` (185 occurrences,
 none scripted) and `watch this` (his live handoff, spoken the instant before a
-clip rolls). See the ad-lib rules in SKILL.md.
+clip rolls). The team now writes `WATCH THIS` into the clip-in line on purpose —
+see `references/line-rules.md`.
 
 ## What is ad-lib and stays out of the document
 
-In every transcript, in zero bibles. These are his, not the writer's:
+In every transcript, in zero of the library bibles. Historically the open and
+`WATCH THIS` were in this list too; the team's line-level rules
+(`references/line-rules.md`) now write the slate, the command hook and the
+cue-plus-verdict clip-in line into every bible, and that rule outranks this
+measurement. What still stays out:
 
-- The open — *"Welcome to Rossen Reports. I am Jeff Rossen"* plus an
-  urgency-of-arrival line (*"had to get on the air,"* *"packed show today"*).
+- The urgency-of-arrival line (*"had to get on the air,"* *"packed show today"*).
 - The `by the way` asides. 185 of them, none scripted.
-- `WATCH THIS` — his live handoff, spoken the instant before a clip rolls. Never
-  write it. The setup lines above the marker are your job; that is his.
 - The close — a plug for another video, then *"we'll see you next time."* Every
   show. Never in a bible. The document ends at `-END OF SHOW`.
 

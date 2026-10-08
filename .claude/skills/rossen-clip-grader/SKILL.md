@@ -1,5 +1,5 @@
 ---
-name: rossen-clip-grader
+name: "rossen-clip-grader"
 description: "Score and rank harvested clip candidates against a Rossen Reports beat, then flag the one to air. Runs in two passes: a cheap metadata triage that narrows thirty candidates to a priority-sized shortlist, then a transcript-informed grade that picks the winner and proposes in and out points. Use this whenever candidates have been harvested for a beat and need ranking, whenever the user asks which clip to use, wants a shortlist, asks \"is this clip any good,\" or is deciding what to send to the timecode extractor. Also use when auditing why a clip was or was not picked."
 ---
 

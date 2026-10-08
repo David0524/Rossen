@@ -1,6 +1,6 @@
 ---
-name: rossen-script-writer
-description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Reports) — the shooting outline Jeff runs off the teleprompter, with tease block, story segments, clip beats, graphics cues and sponsor placement. Use this whenever the user asks to write the script, draft this week's show, build a bible or Bible Script, write an F1 (Friday live) or F2 (taped, airs Wednesday) show or a call-in episode, hands over show topics or stories to be turned into a rundown, or asks to revise an existing bible for length, voice, story order or clip beats. Do not use for general writing, articles, blog posts, or scripts for any other show.
+name: "rossen-script-writer"
+description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Reports) — the shooting outline Jeff runs off the teleprompter, with tease block, story segments, clip beats, graphics cues and sponsor placement — plus its companion source log. Use this whenever the user asks to write the script, draft this week's show, build a bible or Bible Script, turn an approved outline (with videos) into the bible, promote a draft bible to final, write an F1 (Friday live) or F2 (taped, airs Wednesday) show or a call-in episode, hands over show topics or stories to be turned into a rundown, or asks to revise an existing bible for length, voice, story order or clip beats. Do not use for general writing, articles, blog posts, or scripts for any other show, for pitching stories (rossen-pre-bible) or for finding and grading clips (rossen-story-outline).
 ---
 
 # Rossen Reports Bible Script writer
@@ -9,200 +9,96 @@ description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Rep
 
 | File | Load when |
 |---|---|
-| `references/producer-kit/rossen-voice.md` | **Every draft and every voice pass.** Jeff's voice from five livestreams: show template, clip handling, tips, sponsor and deals handoffs, says/doesn't-say table, 12-point checklist. From the team; outranks this document where they differ. |
-| `references/producer-kit/bible-format-ghost-tapping.md` | Laying out a live scam show. The Ghost Tapping skeleton every bible now follows, cue notation, common errors. |
-| `references/producer-kit/call-in-show-format.md` | Any call-in F2. Run of show, the open that worked, taping-out-of-order rules. |
-| `references/examples/bible-rewrite-nancy-mary.txt` | Writing or rewriting a call-in bible. Matt's rewrite of episode 2 (`.docx` beside it). |
-| `references/examples/bible-sent-10-14.txt` | **Every story-show draft.** The 10/14 F2 as the producer sent it to Jeff, after her edits. What a finished bible looks like (`.docx` beside it). |
+| `references/line-rules.md` | **Every draft and every voice pass.** The team's line-level rules: open, clip in/out, tips, hedging, first person. |
+| `references/producer-kit/rossen-voice.md` | Every draft. Jeff's voice from five livestreams and the 12-point checklist. |
+| `references/clip-contract.md` | Placing clip beats; any marker error from the checker. DRAFT/FINAL markers, BROLL, orientation, lead-ins. |
+| `running-orders.md` | Laying out a document. Skeletons for every show shape and the Friday walkthrough. |
+| `references/producer-kit/bible-format-ghost-tapping.md` | Background on the skeleton every scam bible follows. |
+| `references/producer-kit/call-in-show-format.md` | Any call-in F2. |
+| `references/examples/bible-rewrite-nancy-mary.txt` | Writing or rewriting a call-in bible. |
+| `references/revising.md` | A marked-up bible coming back; a voice or length pass; promoting DRAFT to FINAL. |
+| `references/examples/bible-sent-10-14.txt` | **Every story-show draft.** The 10/14 F2 as the producer sent it to Jeff, after her edits. What a finished FINAL looks like (`.docx` beside it). |
+| `references/examples/ryan-notes-2026-10-09.md` | **Every draft.** Ryan's 11 structure and retention notes on the 10/09 F1, with before/after pairs. The worked example for "Retention: Ryan's structure rules". |
+| `review-loop.md` | **Every new bible or whole-bible rewrite, before building.** The BLOCKER-only reviewer loop: the agent prompt, the fix rules, the two-round stop. |
 | `references/producer-kit/facts-to-get-right.md` | Before any number goes in. |
+| `reference-segments.md` | Checking line-level layout against aired copy. |
+| `measurements.md` | Sizing a draft, checking voice, or arguing with a target. |
+| `docx-format.md` | Rendering both deliverables. |
 | `references/producer-kit/sponsor-script-rules.md` | Only if asked to write or edit sponsor copy. |
 | `references/producer-kit/youtube-description.md` | Only if asked for the YouTube description. |
-| `reference-segments.md` | Checking format of record. **Verbatim aired segments; they outrank this document.** |
-| `measurements.md` | Sizing a draft, checking voice, or arguing with a target. Every number and its provenance. |
-| `docx-format.md` | Rendering the deliverable. |
-| `scripts/check_bible.py` | **Before delivering. Always.** Mechanical compliance check. |
-| `scripts/build_bible.py` | Rendering the `.docx`. |
-| `scripts/verify_format.py` | Confirming the render matched house format. |
-| `references/examples/ryan-notes-2026-10-09.md` | **Every draft.** Ryan's 11 structure and retention notes on the 10/09 F1, with before/after pairs. The worked example for "Retention: Ryan's structure rules" below. |
-| `review-loop.md` | **Every new bible or whole-bible rewrite, before building.** The BLOCKER-only reviewer loop: the agent prompt, the fix rules, the two-round stop. |
+| `scripts/check_bible.py` | **Before delivering. Always.** |
+| `scripts/build_bible.py`, `scripts/build_source_log.py`, `scripts/verify_format.py` | Rendering and confirming. |
 
 The workflow is **draft → check → fix → repeat → review loop → build →
-verify**. The checker catches the things that reliably slip on a first pass —
-flat prosody, short setup runways, malformed markers — so do not treat it as
-optional polish. The review loop (`review-loop.md`) then runs the final
-reviewer on the draft in a background agent and fixes **BLOCKERs only**: wrong
-facts, unsafe advice, legal exposure. It stops after two rounds, and every
-WARNING and NOTE goes to the producer untouched.
+verify**. The review loop (`review-loop.md`) runs the final reviewer on the
+draft in a background agent and fixes **BLOCKERs only**: wrong facts, unsafe
+advice, legal exposure. It stops after two rounds, and every WARNING and NOTE
+goes to the producer untouched.
 
-## First, and it governs everything: a bible is not a script
+## Precedence — one order, applied everywhere
 
-It is a **talking points outline that runs on Jeff's teleprompter** so he does
-not get lost or off track during a live show. He improvises around it. He almost
-never reads a line as written.
+When two sources disagree, the higher one wins:
 
-So never write a line whose value depends on him delivering it verbatim. No
-crafted triplets, no punchlines, no rhetorical set-pieces that collapse if he
-paraphrases. Write the things he **cannot** improvise:
+1. The user's instruction in this session.
+2. **Standing production rules** (next section) and the rest of this SKILL.md.
+3. `references/line-rules.md` and `references/clip-contract.md`.
+4. `reference-segments.md` — aired copy, the record for line-level layout and
+   register, but not for marker syntax (aired typos are normalized) or for rules
+   the team has since changed.
+5. The producer-kit files and `running-orders.md`.
+6. `measurements.md` — corpus numbers, which describe what aired, not what is
+   required.
 
-- the exact figure, and who published it (an agency, regulator, court or
-  company, never another news outlet)
-- the proper nouns — company, agency, state, platform, product
-- the mechanics of the scam, in the order they happen
-- the turn into each clip
-- the protection steps
+If a lower file contradicts a higher one, follow the higher one and mention the
+conflict in the chat reply so the file can be fixed.
 
-He supplies the performance, the asides, and the outrage. The document supplies
-the spine and the facts.
+## Standing production rules — apply without asking
 
-**Clips come first now (producer, 10/7/2026).** The clip pipeline runs on the
-approved outline, before the bible is written, so the bible is written *from*
-the Outline w/ Videos with its clips already picked, numbered and timed. That
-retires the old corollary that the bible must carry more searchable specifics
-than Jeff will say. The bible carries **what Jeff says, and no more**: product
-model names, towns, timelines, ages and bonds of the accused, parent companies,
-reporters' names and side officials stay in the outline and the run's
-`SOURCE_LOG.md`. See "What the producer cuts before it goes to Jeff" below; the
-sent 10/14 bible (`references/examples/bible-sent-10-14.txt`) is the model.
+- **Sponsor is OmniWatch.** Never ask. Two breaks in one Wednesday is normal.
+  Mark placement and write the tease into each break; write the sponsor copy
+  only if asked. When the outline names a different sponsor for a break (10/14's
+  second break was Chapter), use the outline's.
+- **Wednesday default is one A story plus one small B story.** A 3–5 story
+  rundown and a single-topic umbrella show (`TOP 5 FACEBOOK SCAMS`) are standard
+  variants. Confirm the story count before laying out; if the user hasn't said,
+  ask once, and if you must proceed, use A + B and say so. Each story after A is
+  lighter; a trailing story with zero clip beats is normal. There is no
+  good-news closer.
+- **Friday's deals guest is Trey Donovan** (co-founder of DealSeek). Use another
+  name only if the user gives one, and then make every cue match.
+- **Outside clips: about two per segment** (Matt's standard), counted
+  separately from BROLL, screen shares and demos. Write to the material the
+  outline carries; never invent a clip to fill a slot.
+- **Clip age is not a flag.** Footage back to 2010 is fine; don't annotate age.
+  The only constraint: old footage never sits under a "brand new" or "this week"
+  line, and the news peg must be current.
+- **US cases first.** Canadian cases are acceptable support; a US case leads.
+- **Deals stories belong to Friday**, not Wednesday.
+- **Target is not off-limits, but never the title or the main story** (Jeff,
+  10/7). A passing mention inside a bigger story is fine.
+- **The audience is 55+.** Nothing kids-focused, and never address the viewer
+  as someone's grown child (`YOUR PARENTS`).
 
-### The aphorism trap
+## Input and stage
 
-This rule gets broken by *good* writing, which is why it keeps getting broken.
-These all came out of one draft:
+The bible is written **from the approved Outline w/ Videos** (`rossen-story-outline`):
+the beats, the clip picked for each, its transcript excerpt, orientation and
+timecodes. The pre-bible pitch sheet is upstream of that and is a weaker input —
+it has unwatched candidate clips and stories Jeff hasn't approved.
 
-> A GUARANTEE IS A PROMISE. AN ESTIMATE IS A GUESS. REMEMBER THAT.
-> THAT IS BRILLIANT, AND IT IS EVIL.
-> THIS IS EVERY RETAILER YOU SHOP AT. NOT ONE.
+Decide the stage first and say which one you are writing:
 
-They are well-built lines. That is the problem. Each is a constructed symmetry
-that collapses the moment Jeff paraphrases it, and he will. Nothing survives
-except a half-remembered rhythm.
+| Stage | When | Clip markers | `OUT:` |
+|---|---|---|---|
+| **DRAFT** | Clips not yet locked, or only a pre-bible / topic was supplied | `(((PLAY CLIP XXX HORIZONTAL)))` | blank |
+| **FINAL** | The outline's clips are picked, transcribed and timed | `(((PLAY CLIP 1 HORIZONTAL)))`, numbered in air order | the transcribed outcue, then the red source line |
 
-The aired equivalent is `THIS IS GENIUS AND SCARY!!` — a **reaction cue**. It
-tells Jeff how to feel about the fact above it and leaves the wording to him.
-
-Reaction cues yes, aphorisms no. If a line would sit comfortably in a
-well-edited magazine article, cut it.
-
-#### The paraphrase test — this is the discrimination that matters
-
-A *permitted* mechanism reveal and a *banned* aphorism look almost identical on
-the page. The test that separates them: **say the line in flat plain words. If
-the point survives, the contrast was in the facts — keep it. If the point
-evaporates, the contrast was in the sentence — cut it.**
-
-| Line | Said flatly | Verdict |
-|---|---|---|
-| `EVERY OTHER SCAM TEXT THREATENS YOU. THIS ONE GIVES YOU SOMETHING.` | "unlike the others, this one offers you money instead of threatening you" | **Keep.** Point survives — it is a fact about the scam. |
-| `YOUR GUARD DROPS, BECAUSE NOBODY EXPECTS FREE MONEY TO BE THE TRAP.` | "people don't suspect an offer of free money" | **Keep.** Point survives. |
-| `A GUARANTEE IS A PROMISE. AN ESTIMATE IS A GUESS.` | "a guarantee and an estimate are different things" | **Cut.** Point evaporates. The line *was* the point. |
-| `THIS IS EVERY RETAILER YOU SHOP AT. NOT ONE.` | "this affects all of them" | **Cut.** Point evaporates. |
-
-**Watch for this specifically when adding intensity.** Pushing prosody is the
-condition that manufactures aphorisms — a draft told to add spikes reaches for
-sentence architecture, and produces `NOT TWENTY DOLLARS. NOT FIVE. ZERO.` or
-`THAT IS ONE VAN… IN ONE TRAFFIC STOP.` Both die on paraphrase. **Intensity
-comes from punctuation, caps and bold, which survive paraphrase — never from a
-built sentence, which does not.** `check_bible.py` flags aphorism candidates; run
-the paraphrase test on each one it names.
-
-## Build stories out of people, not policies
-
-The highest-leverage rule in threat stories, and the one most badly missed.
-
-A story is **a sequence of humans, each with a mini-arc** — who they are, what
-happened, the twist, what they did next. It is not a taxonomy of a company's
-rules.
-
-The aired ATM story is four people in a row: the couple at the glued Chase ATM,
-the man who put his card in his own mailbox, the woman who opened her door to a
-"bank employee," the woman at the LAPD detention center. Each gets a turn.
-
-A rejected draft ran: guaranteed delivery policy → phantom delivery → A-to-Z
-guarantee → settlement math → eligibility criteria. Five subtopics, no people;
-victims appeared only as clip fodder, with no name, no situation, no turn.
-
-The test: **Jeff can riff for ninety seconds on a woman who tracked down her own
-stolen debit card. He cannot riff on the A-to-Z Guarantee.**
-
-So when a beat's subject is a policy, a guarantee, a settlement, a regulation or
-a dollar total, find the person it happened to and make them the subject. The
-policy becomes the thing they ran into, not the thing the segment is about.
-
-- Every clip beat has a human subject introduced **before** the clip, by
-  identity: *a retired police officer*, *a 79-year-old widow*, *a famous
-  behavioral researcher who teaches at Harvard*. Never introduce someone as
-  "her" and roll.
-- Policy and settlement mechanics are load-bearing facts, but they belong in the
-  mechanics run and the protection list, not as the spine of the segment.
-
-### Scope: this rule governs threat stories
-
-Threat stories — scams, fraud, hidden fees, dangerous products, anything with a
-victim. That is every A story (Jeff: an A story has to be a scam), most B
-stories, and most Friday content stories.
-
-**It does not govern a non-scam segment** — a consumer B or C story, a
-money-saver, a what-not-to-buy — where there is no victim to identify and no
-mini-arc to build. The aired 06/22 closer proves it:
-its clip setup is `THIS SHOPPER SHOWS YOU WHAT TO KEEP OUT OF YOUR CART`. No
-name, no identity, no arc, and it is in register.
-
-For non-scam segments the clip beats are **demo and walkthrough beats** — a
-creator showing you the aisle, an expert showing you the click path, Jeff on
-location. Write them as: what you are about to be shown, why it will surprise
-you, then the marker. An unidentified subject is fine. The searchable-specifics
-rule still applies in full; it is the *people* rule that does not.
-
-### When a threat story has no findable victim
-
-A segment built on a rule, a fine or a settlement with no findable victim is a
-weak segment. **Say so in the chat reply and propose a different angle rather
-than writing it.** Do not quietly write the policy tour.
-
-The reframe is almost always available: the ruling is not the story, the person
-living under it is. A vacated robocall-consent rule becomes the person getting
-seven spam calls a day — which is exactly the aired FAKE LOAN APPROVAL tease.
-State the swap explicitly, then write the human version.
-
-## Mid-story headers are turns, not labels
-
-A mid-story header is **a spoken line that happens to be bold**, and the run of
-them has to climb. Jeff reads them out loud; they are the escalation.
-
-Aired, in order, from one story:
-
-> BUT THE MOST SURPRISING THING YET WAS ABOUT TO HAPPEN TO THEM!
-> THIEVES ARE STEALING YOUR DEBIT CARD, RIGHT OUT OF YOUR MAIL BOX!
-> BUT THIS NEXT ATM / DEBIT CARD SCAM IS EVEN MORE DANGEROUS
-> NOW, A SCAM SO SHOCKING, YOU NEVER WOULD EXPECT IT!!
-
-Each is worse than the last. `THINK THAT'S BAD? HOW ABOUT THIS GUY` does the same
-job. Rejected, from one draft: `THE GUARANTEED DELIVERY REFUND` /
-`WHEN AMAZON SAYS NO - THE A-TO-Z GUARANTEE` / `NOW - THE SIZE OF THESE CHECKS`.
-Those are article subheads. They file the material instead of escalating it, so
-the story moves sideways to the next subtopic and never gets worse.
-
-- Every mid-story header is sayable. If Jeff cannot read it aloud as a line of
-  copy, it is a label. Rewrite it.
-- The sequence escalates. Reach for `BUT`, `EVEN MORE`, `NOW`, `WORSE`,
-  `THINK THAT'S BAD`, `AND THE SHOCKING DETAIL`.
-- A noun phrase with no verb is almost always a label.
-  `NOW - THE SIZE OF THESE CHECKS` becomes
-  `NOW WAIT UNTIL YOU SEE HOW SMALL THESE CHECKS ACTUALLY ARE!!`
-- Exception: the protection header is fixed and flat on purpose,
-  `HERE'S HOW TO PROTECT YOURSELF`. That one never escalates.
-
-## The hard contract with the clip pipeline
-
-Bibles are still parsed by `rossen-beat-extractor` (script mode back-fills the
-eval set from aired bibles), and the control room cuts from these cues. Break
-these and it fails **silently**, which is worse than failing loudly. This
-section is not stylistic. `check_bible.py` enforces all of it.
-
-**Clips are picked before the bible (10/7/2026).** Take each clip from the
-Outline w/ Videos in story order and write it in the locked form: numbered
-marker, `OUT:` with the final outcue, then the source line with the link and
-in/out points, exactly as the outline's Videos rows give them:
+**Clips come first (producer, 10/7/2026).** The clip pipeline runs on the
+approved outline before the bible is written, so the normal case is a FINAL
+written from the Outline w/ Videos with its clips already picked, numbered and
+timed. A FINAL clip beat is the marker, `OUT:` with the outcue, then one red
+source line exactly as the outline's Videos row gives it (the sent 10/14 bible
+is the model):
 
 ```
 (((PLAY CLIP 3 HORIZONTAL)))
@@ -210,112 +106,161 @@ OUT: (FINAL OUTCUE)
 ((([Outlet](URL) · 0:18 - 0:53 (OUTCUE) · BUTT · 1:03 - 1:26 (OUTCUE))))
 ```
 
-A MANUAL clip (no transcript) keeps a blank `OUT:` and just the link line. Never
-add, cut, move or swap a clip from the outline without saying so. The `XXX` /
-blank-`OUT:` form below is for the rare bible written before its clips exist;
-the checker accepts both and warns if `XXX` is still present.
+A MANUAL clip (no transcript) keeps a blank `OUT:` and just the link line.
+Never add, cut, move or swap a clip from the outline without saying so.
 
-### Clip markers
+If you are handed a pre-bible instead of an outline, write a DRAFT, use only the
+stories the user names (or the sheet's recommended slate, stated as an
+assumption), and say in the reply that the outline stage hasn't run. Carry every
+NEEDS VERIFICATION flag from the sheet forward — those are hard constraints on
+the copy, not background.
 
-Every clip beat, on its own line, exactly three parens:
+Promoting a DRAFT to FINAL is an in-place edit; see `references/revising.md`.
 
-```
-(((PLAY CLIP XXX HORIZONTAL)))
-OUT:
-```
+## First, and it governs everything: a bible is not a script
 
-or
+It is a **talking points outline that runs on Jeff's teleprompter** so he does
+not get lost or off track during a live show. He improvises around it. He almost
+never reads a line as written.
 
-```
-(((PLAY CLIP XXX VERTICAL)))
-OUT:
-```
+So never write a line whose value depends on him delivering it verbatim. Write
+the things he **cannot** improvise:
 
-- `XXX` stays literal. It is the planning placeholder. Numbers get filled in
-  before air, when the show is timed and clips are cropped.
-- The `OUT:` line is always present, directly beneath, left blank.
-- Leave URL and timecode lines blank. The pipeline fills them.
-- Exactly three opening and three closing parens. Aired bibles contain typos
-  with two, four and five parens, a hyphen before the orientation, and one with
-  no orientation at all — those are mistakes. Normalize every time.
+- the exact figure, and who published it
+- the proper nouns — company, agency, state, platform, product
+- the mechanics of the scam, in the order they happen
+- the turn into each clip
+- the protection steps
 
-### Silent B-roll Jeff talks over
+He supplies the performance, the asides, and the outrage. The document supplies
+the spine and the facts. **In a FINAL, the bible carries what Jeff says, and no
+more**: the clips are already chosen, so product model names, towns, timelines,
+the accused's age and bond, parent companies and reporters' names stay in the
+outline and the source log (see "What the producer cuts before it goes to
+Jeff"). **In a DRAFT**, before clips exist, the runway is still the pipeline's
+search query, so it carries more searchable specifics than Jeff will say.
 
-A recurring beat type that is **not** a sound-on clip: footage that runs mute
-while he narrates. It sources differently, so mark it differently. Aired
-documents write it several ways; use this one:
+### The aphorism trap
 
-```
-(((PLAY CLIP XXX VERTICAL BROLL)))
-OUT:
-```
+These all came out of one draft:
 
-The `BROLL` token tells the extractor to treat the beat as picture-only — no
-outcue to find, no transcript to match. Without it a mute beat gets harvested as
-a talking clip and the search comes back wrong. Aired precedents:
-`(((PLAY CLIP 6 BROLL VERTICAL)))` on 06/22 and
-`(PLAY CLIP SHOP WITH POINTS 2 HORIZONTAL - BROLL JEFF WILL TALK OVER)` on
-06/26. Both are the same thing written inconsistently. Add
-`**(JEFF TALK OVER)**` above the marker when it helps the control room.
+> A GUARANTEE IS A PROMISE. AN ESTIMATE IS A GUESS. REMEMBER THAT.
+> THAT IS BRILLIANT, AND IT IS EVIL.
+> THIS IS EVERY RETAILER YOU SHOP AT. NOT ONE.
 
-### Not clip beats
+Well-built lines — that is the problem. Each is a constructed symmetry that
+collapses the moment Jeff paraphrases it. The aired equivalent is `THIS IS
+GENIUS AND SCARY!!` — a **reaction cue**. It tells Jeff how to feel about the
+fact above it and leaves the wording to him. If a line would sit comfortably in
+a well-edited magazine article, cut it.
 
-Stills, art and screen work, all sourced separately. Never counted as clip beats:
+#### The paraphrase test
 
-```
-(((TAKE ... SCREENSHOT)))
-(((TAKE ... STILL)))
-(((TAKE FULLSCREEN)))
-(((CREATE FULL SCREEN GRAPHIC XXX)))
-(((JEFF SCREEN SHARE)))
-(((END SCREENSHARE)))
-```
+A permitted mechanism reveal and a banned aphorism look almost identical. **Say
+the line in flat plain words. If the point survives, the contrast was in the
+facts — keep it. If the point evaporates, the contrast was in the sentence — cut
+it.**
 
-### Butt cuts
-
-When one source will be cut into several segments, `BUTT` on its own line
-between them. Roughly one beat in six.
-
-### Orientation is a hard constraint, not a formatting detail
-
-The pipeline will not search the other kind. Choose deliberately:
-
-| Footage | Orientation | Where it lives |
+| Line | Said flatly | Verdict |
 |---|---|---|
-| Victim telling their story to a reporter | HORIZONTAL | YouTube, network, local affiliate |
-| Someone venting to their phone camera | VERTICAL | TikTok, Reels, Facebook |
-| Doorbell cam, security cam, screen recording of a scam text | VERTICAL | TikTok, Facebook, Reddit |
-| Reporter or creator confronting a scammer | either | pick by where that footage actually lives |
+| `EVERY OTHER SCAM TEXT THREATENS YOU. THIS ONE GIVES YOU SOMETHING.` | "unlike the others, this one offers you money" | **Keep.** A fact about the scam. |
+| `YOUR GUARD DROPS, BECAUSE NOBODY EXPECTS FREE MONEY TO BE THE TRAP.` | "people don't suspect free money" | **Keep.** |
+| `A GUARANTEE IS A PROMISE. AN ESTIMATE IS A GUESS.` | "they're different things" | **Cut.** The line was the point. |
+| `THIS IS EVERY RETAILER YOU SHOP AT. NOT ONE.` | "this affects all of them" | **Cut.** |
 
-### The boundary marker
+**Watch for this when adding intensity.** A draft told to add spikes reaches for
+sentence architecture (`NOT TWENTY DOLLARS. NOT FIVE. ZERO.`). **Intensity comes
+from punctuation, caps and bold, which survive paraphrase — never from a built
+sentence.** `check_bible.py` lists aphorism candidates; run the test on each.
 
-The pipeline drops everything before the first `HIT LIKE AND SUBSCRIBE` or
-`JOIN THE CHAT` line. That marker closes the tease block every time, without
-exception.
+## Build stories out of people, not policies
 
-**Never put a `PLAY CLIP` marker inside the tease block, or inside a
-`TEASE // SPONSOR` block.** The tease restates each story in beat language and
-reads exactly like body copy; a marker in there produces an unresolvable
-duplicate beat.
+A threat story is **a sequence of humans, each with a mini-arc** — who they are,
+what happened, the twist, what they did next. The aired ATM story is four people
+in a row: the couple at the glued Chase ATM, the man who put his card in his own
+mailbox, the woman who opened her door to a "bank employee," the woman at the
+LAPD detention center. A rejected draft ran guaranteed-delivery policy → A-to-Z
+guarantee → settlement math → eligibility. No people.
 
-## The setup lines
+**Jeff can riff for ninety seconds on a woman who tracked down her own stolen
+debit card. He cannot riff on the A-to-Z Guarantee.** When a beat's subject is a
+policy, a settlement or a dollar total, find the person it happened to and make
+them the subject.
 
-The 6 to 10 dash lines immediately above a clip marker set up the person and
-the question the clip answers. (They used to be the pipeline's search query;
-with clips picked from the outline first, they are now written to the clip
-that is already chosen, so read its transcript excerpt in the outline and set
-up what it actually shows.)
+- Every clip beat in a threat story introduces its human **before** the clip,
+  by identity — never "her," then roll.
+- **Identity comes from the source, never from inference.** Use what the
+  reporting says: name, age, place, relationship, job. Do not upgrade it to make
+  the person vivid — no `GRANDMOTHER`, `WIDOW`, `RETIRED`, `LIFE SAVINGS`,
+  `SINGLE MOM` unless a source says so. If all you have is
+  `KAREN WHITAKER, 79, BERMUDA DUNES`, that is the introduction. The same rule
+  covers what happened: no detail about the scam, the loss or the outcome that
+  the source doesn't state.
+- Policy and settlement mechanics belong in the mechanics run and the protection
+  list, not as the spine.
 
-Name the specifics Jeff needs to set it up:
+**Scope.** The rule governs threat stories — scams, fraud, hidden fees,
+dangerous products, anything with a victim. A non-scam segment (a money-saver, a
+what-not-to-buy) uses demo and walkthrough beats instead: what you are about to
+be shown, why it will surprise you, then the marker. An unidentified subject is
+fine there (`THIS SHOPPER SHOWS YOU WHAT TO KEEP OUT OF YOUR CART`).
 
-- the dollar figure, exactly
-- the relationship — *her mother*, *a retired police officer*, *this couple*
-- the platform or company — Facebook Marketplace, PayPal, Zelle, Chase, Temu
-- the agency — FBI, US Marshals, FTC, local police
-- the object — gold bars, a leaf blower, a debit card, an empty white envelope
-- the state or regulator, when a rule or fine is involved
+**No findable victim** in a threat story means a weak segment. Say so in the
+chat reply and propose the human angle rather than writing the policy tour — the
+vacated robocall rule becomes the person getting seven spam calls a day.
 
-Strong — produces a good search:
+## Mid-story headers are turns, not labels
+
+A mid-story header is a spoken line that happens to be bold, and the run of them
+has to climb. Aired, in order, from one story:
+
+> BUT THE MOST SURPRISING THING YET WAS ABOUT TO HAPPEN TO THEM!
+> THIEVES ARE STEALING YOUR DEBIT CARD, RIGHT OUT OF YOUR MAIL BOX!
+> BUT THIS NEXT ATM / DEBIT CARD SCAM IS EVEN MORE DANGEROUS
+> NOW, A SCAM SO SHOCKING, YOU NEVER WOULD EXPECT IT!!
+
+Rejected: `THE GUARANTEED DELIVERY REFUND` / `NOW - THE SIZE OF THESE CHECKS`.
+Those file the material instead of escalating it. Every mid-story header is
+sayable and the sequence escalates (`BUT`, `EVEN MORE`, `NOW`, `WORSE`, `IT GETS
+CRAZIER`, `WAIT UNTIL YOU HEAR THIS`, `YOU AREN'T GOING TO BELIEVE THIS
+VIDEO…`). A noun phrase with no verb is almost always a label. The protection
+header is fixed and flat on purpose: `HERE'S HOW TO PROTECT YOURSELF`.
+
+## The hard contract with the clip pipeline
+
+Scripts are parsed by `rossen-beat-extractor` and the rest of the pipeline.
+Break these and it fails **silently**. `check_bible.py` enforces all of it; full
+detail and variants in `references/clip-contract.md`.
+
+- Every clip beat on its own line, three parens each side, orientation always:
+  `(((PLAY CLIP XXX HORIZONTAL)))` in DRAFT, `(((PLAY CLIP 1 HORIZONTAL)))` in
+  FINAL. `OUT:` directly beneath — blank in DRAFT, the outcue in FINAL.
+- **Under `OUT:` in a FINAL, one red source line and nothing else** —
+  `((([Outlet](URL) · in - out (OUTCUE) · BUTT · …)))`, as in the sent 10/14
+  bible. No clip-context block, no transcript, no description: those go in the
+  companion source log, which also carries every link and timecode. A DRAFT has
+  nothing under the marker.
+- Mute footage Jeff talks over carries `BROLL`:
+  `(((PLAY CLIP XXX VERTICAL BROLL)))`.
+- Stills, graphics and screen shares use their own cues and are never clip beats.
+- Orientation is a hard constraint: the pipeline will not search the other kind.
+- The tease block closes on `HIT LIKE AND SUBSCRIBE` / `JOIN THE CHAT`, every
+  time. **Never a `PLAY CLIP` marker inside the tease or a sponsor tease.**
+
+## The setup lines are the search query (in a DRAFT)
+
+In a FINAL the clip is already chosen: write the 6 to 10 dash lines to it, from
+its transcript excerpt in the outline, setting up the person and the question
+it answers. Six lines of the *story*, not six lines of search terms. The rest of
+this section governs a DRAFT.
+
+In a DRAFT, the 6 to 10 dash lines immediately above a clip marker are the *only* thing the
+pipeline reads to decide what footage to find. Name the searchable specifics
+there, even when Jeff would obviously say them: the dollar figure exactly, the
+relationship, the platform or company, the agency, the object, the state or
+regulator.
+
+Strong:
 
 ```
 -A RETIRED POLICE OFFICER JUST LOST NEARLY $10,000.
@@ -327,69 +272,34 @@ Strong — produces a good search:
 OUT:
 ```
 
-Weak — produces a useless search:
+Weak: `-SCAMS LIKE THIS ARE EVERYWHERE.` / `-TAKE A LOOK.` Do not shorten the
+runway to save space; `check_bible.py` errors on more than one runway under six
+lines. He expands on air — the 06/22 bible wrote `WATCH WHAT HAPPENED TO THIS
+OLYMPIAN!!` and on air he added Walmart, self-checkout and the police. The
+pipeline heard none of it.
 
-```
--SCAMS LIKE THIS ARE EVERYWHERE.
--TAKE A LOOK.
+When a segment exists because something happened this week, put the proper
+nouns in the copy: *Temu fined $232 million by the EU*. Those exact strings are
+the highest-yield search the pipeline can run.
 
-(((PLAY CLIP XXX HORIZONTAL)))
-OUT:
-```
+### Setups plant a question — one the clip actually answers
 
-Do not shorten the runway to save space. `check_bible.py` errors on more than
-one runway under six lines. But six lines of the *story*, not six lines of
-search terms: a town, a product model or a date Jeff will not say does not
-belong in it (see "What the producer cuts before it goes to Jeff").
+The runway opens a loop the clip closes. The tell of a dead setup is
+interchangeability: if it could sit above any other clip in the show, it does no
+work (`HERE'S WHAT WE KNOW RIGHT NOW` four times in one draft). Aired setups fit
+only their clip: `AND GUESS WHAT CHASE DID WHEN THEY COMPLAINED???`
 
-### Setups plant a question, they do not make announcements
-
-The runway carries the specifics *and* opens a loop the clip closes.
-
-The tell of a dead setup is interchangeability. If it could be dropped above any
-other clip in the show without breaking, it is doing no work:
-
-> HERE'S WHAT WE KNOW RIGHT NOW.   (one draft used this four times)
-> LISTEN TO WHAT HAPPENED TO HER.
-
-Aired setups only fit the one clip they sit above, because each asks something
-that clip answers:
-
-> AND GUESS WHAT CHASE DID WHEN THEY COMPLAINED???
-> YOU WON'T BELIEVE WHAT SHE FOUND!!!
-> BUT HE DID GET A "SWEET SURPRISE" INSTEAD
-
-Per clip beat:
-
-- Identify the person by who they are before any pronoun — in threat stories.
-- State what is at stake, then withhold the outcome. The clip is the payoff, so
-  never summarize what happens in it.
-- No role phrase repeats more than twice in a document. `HERE'S WHAT WE KNOW
-  RIGHT NOW` is capped at **two** uses per bible — it is a wire-report signal,
-  not a default lead-in.
-
-### Lead-in phrasing sets the clip role
-
-The last line before the marker tells the extractor what kind of footage this
-is. Past scripts are consistent about this and the consistency is load-bearing.
-Treat the table as the *final* line of a runway whose line above it asks the
-question — a role phrase alone is not a setup.
-
-| Lead-in | Signals |
-|---|---|
-| LISTEN TO WHAT HAPPENED TO HIM / THINK WHAT YOU WOULD DO | victim interview |
-| WATCH WHAT HAPPENS WHEN / HE SET UP A REAL STING / BUSTED HIM IN THE ACT | confrontation or bust |
-| CHECK THIS OUT / HERE YOU CAN SEE | evidence footage |
-| HERE'S WHAT WE KNOW RIGHT NOW | network or wire report |
-| WATCH HIM SHOW YOU HOW / LET ME SHOW YOU | explainer, demo or screen share |
-
-### Dated news beats need their proper nouns
-
-When a segment exists because something happened this week, put the specifics in
-the copy: the company, the dollar amount, the agency, the state, the ruling.
-*Temu fined $232 million by the EU.* *Maryland banning dynamic pricing.* The
-agency, regulator and company get named. **News outlets do not** (next
-section).
+- State what is at stake, then withhold the outcome. Never tell the payoff
+  before the clip rolls — a recovery, an arrest or a death the clip reveals
+  belongs in the button after it, not the runway.
+- **The question must be one the clip answers.** In FINAL, build it from the
+  outline's transcript of that clip. In DRAFT, when nobody has watched the clip,
+  build the question only from facts the source reporting states — never from a
+  guess about what the clip shows, and never from foreshadowing the source
+  doesn't support (`SHE HAD NO IDEA WHERE THIS WAS HEADED` implies a link
+  between events that a pre-bible flag may forbid). If no honest question is
+  available, use a plain role lead-in and move on.
+- No role phrase repeats more than twice in a document.
 
 ## What the producer cuts before it goes to Jeff
 
@@ -487,168 +397,85 @@ answered and removed before it goes out.
 
 ## Length
 
-Full tables, per-block bands and provenance in `measurements.md`. The numbers
-that shape the draft while writing it:
+Size by the confirmed story count (`check_bible.py --stories N` does the same).
+Measured bands and provenance in `measurements.md`.
 
-- **F2 story show (airs Wednesday):** A, B, usually C, plus an expert when
-  booked. **1,300–1,800 spoken body words** (the sent 10/14 bible ran 1,373
-  across three stories and 9 clips; the old 1,700–2,300 band came from
-  drafts that carried search terms Jeff never said). Confirm the story count
-  and divide it, A story front-loaded hardest (about 40% of the body). Tease
-  210–340 words.
-- **Outside clips:** Matt's standard is about two per segment (see
-  `measurements.md`; the older 10–12-per-show band came from the four-story
-  format). Write to the material and flag when a story wants more.
-- **Call-in F2:** two callers plus an expert, audio only. No clip band; follow
-  `references/producer-kit/call-in-show-format.md`.
-- **F1 (Friday live):** 10–12 pages. A lead story (sometimes a B) of F2
-  quality with an expert, 0–4 clip beats, sponsor, then the deals guest.
-- **Bullets average ~11.6 words.** Not five. Over-fragmenting is the most common
-  failure mode.
+- **A story:** front-loaded hardest — roughly 600–850 spoken words, a ceiling of
+  about 50 bullets. A story reaching ~75 bullets means subtopics multiplied where
+  people should have.
+- **Each later story:** roughly 230–520 words, lighter as it goes.
+- **Tease:** the open plus a headline block per story, about 60–80 words a
+  story.
+- **F1 (Friday live):** 10–12 pages; a content story of Wednesday quality with
+  0–4 clip beats, sponsor, then the deals guest.
+- **Call-in F2:** no length bands; follow `call-in-show-format.md`.
+- **Reference point:** the 10/14 F2 as sent (three stories, no expert)
+  measured 1,373 spoken body words and 9 clips; its draft ran 1,744 and the
+  producer cut it down. Write to the per-story bands, not up to them.
+- **Bullets average ~11.6 words.** Over-fragmenting is the most common failure.
+  One idea per line; ellipses as breath marks.
 - **Graphics are story-type conditional** — 0–1 in a threat story, 3–4 in a
-  list-shaped closer. See `measurements.md`; do not apply a blanket ceiling.
+  list-shaped closer.
 
 ## Structure
 
-Full skeletons for both show days, and the Friday screen-share walkthrough
-pattern, are in `running-orders.md`. Load it before laying out a document. What
-governs regardless:
+Skeletons for every show shape are in `running-orders.md`. What governs
+regardless:
 
-- **A live scam show follows the Ghost Tapping skeleton**
-  (`references/producer-kit/bible-format-ghost-tapping.md`; that show did 1.2M):
-  cold open with A, B, C headlines and the expert tease → like/subscribe/chat →
-  A story: mechanics, victim clip, expert, escalation (`BUT IT GETS WORSE`),
-  tease + sponsor, scale beat (`THIS IS NOT A ONE-OFF`), your bank might not have
-  your back, practical close → B story, same shape, shorter, often a screen demo
-  → C story → four numbered expert questions → deals block on Fridays.
-- **Confirm the show type and story count before laying out.** F2 is either
-  that story show or the call-in show. There is no required good-news closer.
+- **The scam-story spine:** mechanics, victim clip, **the tell**, expert,
+  escalation (`BUT IT GETS WORSE`), tease + sponsor, scale beat (`THIS IS NOT A
+  ONE-OFF`), your bank might not have your back, practical close. B is the same
+  shape, shorter, often a screen demo. Lead with the most fear-inducing story,
+  not the biggest dollar figure.
+- **Every victim case ends with a tell — a usable takeaway before the next case
+  starts.** One line, after the case's last clip button: `-HERE'S THE TELL:
+  NOBODY FROM A STORE DRIVES YOU TO THE BANK.` Don't hold all the advice for the
+  guest or the closing list; the best-performing live shows hand the viewer
+  something useful throughout (Ryan, Oct 8, 2026: "four clips run before any
+  protection tip"). The closing `HERE'S HOW TO PROTECT YOURSELF` list still runs,
+  and may repeat a tell as a numbered step. The tell is Jeff's line, not the
+  expert's. The checker warns on three sound clips with no `THE TELL`, `THE RED
+  FLAG` or protection line between them.
+- **Inside a story, lead with the case where the money is actually gone.** A
+  real loss sets the stakes; a near-miss (stopped by a bank teller, caught in
+  time) is a strong warning but lands second. Ryan, on 10/14: "Move the $26k scam
+  first since the victim actually lost money." The header follows the lead case,
+  so `COST HER $26,000` beats `ALMOST COST HER $50,000`. This orders *cases
+  within a story*; the rule above orders *stories within a show*.
+- **Every promise in the tease is paid off by name.** If the tease says `THE ONE
+  MOVE`, `THE 5-SECOND HABIT` or `THE ONE PIECE OF PAPER`, the body says that
+  phrase where it lands: `-HERE'S THE ONE MOVE I PROMISED YOU: DON'T SIT DOWN.`
+  An unlabeled payoff reads as a broken promise to a live viewer. The checker
+  errors on any tease promise the body never repeats.
+- **Frame the scam as broadly as its cases are.** Every noun in a story's header
+  and tease lines has to be true of every case in it. When the cases come in
+  different ways — one through a free sample, one through a cheap facial — name
+  both (`A FREE SAMPLE OR A CRAZY DISCOUNT`) or step up a level (`STORE`, not
+  `MALL`, when not every case is in a mall). Narrow framing shrinks the audience
+  and is inaccurate about the cases it doesn't fit.
+- **Experts are named only when booked.** If the user or the outline hasn't
+  confirmed the guest, write `(EXPERT JOINS THE ROOM)` in the story, keep the
+  tease generic (`A FRAUD EXPERT JOINS ME`), and carry the suggested name as an
+  open decision: `(((PRODUCER - EXPERT NOT BOOKED. SUGGESTED: AMY NOFZIGER, AARP.
+  CONFIRM OR CUT)))`. Never put an unbooked person's name or organization in
+  black copy.
 - **The sponsor goes after the victim's story, never inside it or on a
   cliffhanger.** Tease what's next, then `BUT FIRST, A QUICK WORD FROM OUR
-  SPONSOR`, then a personal bridge into the product. First read usually lands
-  13–20 minutes in, after the lead story is told. Where the product connects to
-  the story just told, bridge thematically. Take the sponsor from the assignment
-  (OmniWatch is the usual; Chapter, Monarch and others also run). Disclose on air
-  any guest who works for a sponsor or is related to staff.
-- **Friday deals.** The deals half is not scripted. The live-request pitch, with
-  specific examples (`YOU WANT A DYSON? TELL US.`), goes **before** the guest
-  intro, then `TREY, WHAT'S GOING ON? LET'S GET RIGHT TO IT.` — never `HEY TREY,
-  SO GREAT TO SEE YOU`. The guest has been Trey Donovan or Derek Couture of
-  DealSeek; ask who's on and make every cue match (one bible named Derek on the
-  deals page and cued Trey). Ask for the deal list and prices if not supplied;
-  **do not invent products or prices.** Quote the current price from the deal
-  link, not the deal sheet, and say when a price is Subscribe and Save. Three of the five Friday bibles in the
-  library are built on a screen-share walkthrough rather than clip beats; that
-  form has its own pattern in `running-orders.md`.
-
-## Voice
-
-Full corpus tables in `measurements.md`. What governs while writing:
-
-**ALL CAPS is prompter ergonomics, not style.** He is scanning, not reading.
-
-**The copy needs spikes, not a plateau.** `!!` and `!!!` on the lines that land,
-throughout and not once per document — aired documents carry an exclamation on
-roughly one spoken line in eight. `???` on a handoff question where it earns it.
-**Inline bold inside a line** marking the words to hit: `PUTTING SUPERGLUE
-INSIDE THE CARD SLOT`, `TAP TO PAY`. Lines that break the dash pattern to stand
-alone, like `THIS IS GENIUS AND SCARY!!`. A draft with near-zero of these is
-flat and needs another pass — not more words, just marked intensity. Re-read the
-paraphrase test above before adding any of it.
-
-**He says `you`, not `consumers`** — 4,587 times, one word in thirty. No anchor
-connective tissue, no hedging, no formal register. `right now` is the single most
-characteristic thing he says; write currency into the copy. The banned-word list
-is in `measurements.md` and the checker errors on all of it.
-
-### Ad-lib and first person
-
-Two short rules with the detail, examples and counts in `measurements.md`:
-
-- **Ad-lib stays out** — the 185 `by the way` asides and the chat
-  shout-outs. **The close is the exception (Ryan, 10/9): write it**, as three
-  short beats before `-END OF SHOW` (see "Write the close" below). **But the team's line-level
-  rules below override this for the open, the clip intros and the post-clip
-  buttons**: Matt writes those into every bible he notes, because Jeff rewrites
-  his lines an hour before the show and a page that already sounds like him
-  saves him work.
-- **First person: one or two lines per document, hard cap.** Lived, not
-  editorial — `I HATE SCAMMERS, BUT I LOVE IT WHEN THEY GET BUSTED`.
-
-**Hard honesty rule: never invent a fact about Jeff's life.** A draft wrote
-`I DO THIS ON MY OWN ACCOUNT... IT TAKES ABOUT 90 SECONDS`. Nothing sourced that.
-His habits, his accounts, his family, what he owns, what he has personally tried
-— none of it goes in the document unless the user supplied it or a producer
-confirmed it. When a first-person line would be good but you do not know it is
-true, write it as an open decision instead:
-
-```
-(((JEFF - DO YOU DO THIS ON YOUR OWN ACCOUNT? IF SO, SAY SO HERE)))
-```
-
-## The team's line-level rules
-
-From Matt Raub's notes on every recent bible and the voice profile
-(`references/producer-kit/rossen-voice.md` — run its 12-point checklist before
-delivering). These are written into the document:
-
-- **The command hook is the first line of the document.** Jeff says the slate
-  (`WELCOME TO ROSSEN REPORTS. I AM JEFF ROSSEN.`) on his own, so it is not
-  written in (producer, 10/14). The document opens on a direct order to the
-  viewer with `YOU` in it, tied to the story: `DO NOT USE TAP-TO-PAY WHEREVER
-  YOU SHOP UNTIL YOU WATCH THIS VIDEO.` / `DON'T ENGAGE UNTIL YOU WATCH THIS
-  VIDEO!!`
-- **The open stacks stakes in threes, pre-empts the objection** (`AND BEFORE
-  YOU'RE LIKE, "BIG DEAL." OH, IT'S A BIG DEAL.`), **promises proof** (`IT'S
-  CAUGHT ON CAMERA`), **teases a human victim with a dollar figure**, and
-  promises the fix.
-- **Like and subscribe: two bare lines**, `HIT LIKE AND SUBSCRIBE` and `JOIN
-  THE CHAT`. Jeff ad-libs the why (the algorithm, independent, no corporate
-  overlords), where-are-you-watching-from and the launch line; the producer
-  cut them from the page (10/14). **On a live show, follow them with one
-  specific on-screen chat question as a red cue** (Ryan, 10/9; see "Seed the
-  chat" below).
-- **Clip in: cue plus verdict**, as the runway's last line: `WATCH THIS. THIS IS
-  CRAZY.` / `CHECK THIS OUT.` / `ROLL CLIP ONE. THIS IS NUTS.` Never `JUST
-  WATCH` or `TAKE A LOOK`. The runway above it still carries the specifics and
-  the question.
-- **Clip out: a one-line button** that reacts and restates what the clip proved:
-  `JUST THAT FAST, AND NOBODY KNOWS.` Never clip-to-clip or clip-to-header
-  without one (a `BUTT` between segments of one source is the exception).
-- **Tips are numbered** (`NUMBER ONE.`), each a command plus a reason. URLs and
-  phone numbers are called to screen and repeated: `REPORTFRAUD.FTC.GOV. THERE IT
-  IS ON THE SCREEN.`
-- **The company's response is in the bible**, or `THEY DIDN'T GET BACK TO US.`
-- **Hedge by attribution, never by softening:** `EMPLOYEES SAY`, `POLICE
-  SAY`, `COURT RECORDS SAY`, `AND I'M QUOTING HERE`. Attribute to the agency,
-  the court or the person, not to the news outlet that reported it. No "on purpose" without evidence, no
-  "told us" when they told someone else, no national claim from one state's
-  data, no "never fixed" without dates, no vendor or advocacy statistic stated
-  as settled fact.
-- **Numbers as he says them:** `FIFTEEN THOUSAND`, `200 THOUSAND DOLLARS`, and
-  the killer number repeated (`ONE IN THREE. ONE IN THREE KROGER STORES.`).
-- **Words he doesn't say** (the checker errors on them): outrageous, totally
-  amazing, functionally, discrepancies, fluctuations, furthermore, additionally,
-  customers, shoppers, consumers, individuals, listeners, recently, currently.
-  Say `viewers`, not `listeners`.
-- **Every scam carries the extended threat** — the beat that puts the viewer in
-  personal danger. **Get to the how-to faster**; viewers have asked for less
-  preamble. **The ending closes**; it doesn't dissolve.
-- **Links in the bible should be video.** Flag any clip that lives only on a
-  news site so it gets pulled ahead of the taping.
-
-Common errors to catch before delivering: a guest carried over from last week;
-one guest named in copy and another in the cues; caps typos Jeff will read cold
-(`SENIOR DIRECT`, `PRIVACY POLICE`); a placeholder left in (`MARY FROM TK`); an
-image cue after the moment it illustrates; inconsistent guest credentials.
-
-The aphorism ban and the paraphrase test still apply to all of it: a cue plus a
-verdict is a reaction cue, not a built sentence.
+  SPONSOR`, then a personal bridge into OmniWatch. First read usually lands 13–20
+  minutes in. A second break is fine at the next real story boundary. Disclose on
+  air any guest who works for a sponsor or is related to staff.
+- **Friday deals are not scripted.** The live-request pitch with specific
+  examples (`YOU WANT A DYSON? TELL US.`) goes **before** the guest intro, then
+  `TREY, WHAT'S GOING ON? LET'S GET RIGHT TO IT.` Ask for the deal list and
+  prices if not supplied; **do not invent products or prices.** Quote the current
+  price from the deal link, and say when a price is Subscribe and Save.
 
 ## Retention: Ryan's structure rules
 
 Ryan's notes on the 10/09 F1 (`references/examples/ryan-notes-2026-10-09.md`,
-read it) are the layer above line voice: **make the logic easy to follow, and
+read it) extend his 10/14 notes in Structure above (a tell after every case,
+the money-lost case first, tease promises paid off by name). They are the layer
+above line voice: **make the logic easy to follow, and
 give every segment a reason to keep watching.** The line-level rules above make
 a page sound like Jeff. These make a viewer stay to the end. The reviewer checks
 every one of them.
@@ -779,18 +606,29 @@ TO A REAL ONE)))`.
   (`OK. NOW LET'S SAVE YOU SOME MONEY!!`), as in Ryan's revision; the deals half
   is unscripted. The ending closes; it doesn't dissolve.
 
+## Voice
+
+Full rules in `references/line-rules.md`; corpus tables in `measurements.md`.
+
+- **ALL CAPS is prompter ergonomics, not style.** He is scanning, not reading.
+- **Spikes, not a plateau.** `!!` and `!!!` on roughly one spoken line in eight
+  (the checker errors below 0.08); `???` on a handoff question where it earns it,
+  0–2 per document; **inline bold** on the words to hit, with a countable target
+  (a name, a figure, the trick); a few lines that break the dash pattern to stand
+  alone. Re-read the paraphrase test before adding any of it.
+- **He says `you`, not `consumers`.** `right now` is the most characteristic thing
+  he says. No anchor connective tissue, no hedging, no formal register.
+- **Tone: not PG, not bleak.** Grim material, deaths included, is allowed when it
+  is genuinely the story — but don't build unbroken dread. He swears
+  occasionally; don't sanitize his voice and don't manufacture profanity.
+- On air, soften the most violent verbs; don't locate victims below the state
+  level unless the place is the story.
+
 ## Leave the document open
 
-A bible is a **working document the team marks up**, not a finished deliverable.
-Aired bibles carry unresolved decisions in them, plus producer margin comments
-asking Jeff whether he wants a graphic or a rapid-fire list.
-
-A draft that answers every question and offers no choices reads finished, which
-is worse for the workflow: it gives the team nothing to push back on and quietly
-makes calls that belong to Jeff or the producer.
-
-Carry **two or three open decisions** in every bible, as red production cues, at
-the places where the call genuinely is not yours:
+A bible is a working document the team marks up. Carry **two or three open
+decisions** as red production cues, at the places where the call genuinely isn't
+yours:
 
 ```
 (((DECIDE CLIP A OR B - A IS THE VICTIM INTERVIEW, B IS THE BUST)))
@@ -798,95 +636,72 @@ the places where the call genuinely is not yours:
 (((PRODUCER - CONFIRM THIS FIGURE BEFORE AIR, SINGLE SOURCED)))
 ```
 
-Open decisions are choices about staging and preference. They are not a licence
-to leave research undone, and not a way to duck a call the material already
-settles.
-
-## Revising an existing bible
-
-A marked-up bible coming back is as common as a new one. Do not regenerate the
-document — **edit in place.** A rewrite loses the producer's accepted lines and
-silently reverses decisions already made.
-
-0. **Rewriting a whole bible** (not a targeted note): keep the formatting, the
-   order, every fact, every cue, every guest line and the guests' timing.
-   Rewrite Jeff's lines only. Truncate interviews so Jeff narrates the setup and
-   the guest speaks at the three or four moments that need their voice. Flag
-   factual problems as notes; never fix them silently.
-1. **Read the whole bible first**, then locate what the note actually targets: a
-   story, a beat, a header run, a length band, or the voice across the document.
-2. **Change only that.** If a note says story 3 is long, cut story 3 — do not
-   re-pitch story 2 or re-order the show.
-3. **Watch the coupled constraints.** Cutting a story changes the clip count and
-   the page total; cutting clips changes story 1's share of them; re-ordering
-   stories moves the sponsor boundary. Re-check the tease block against any story
-   that changed, since the tease restates each one.
-4. **Preserve open decisions** that are still open. Close one only if the note
-   closes it.
-5. **Run `check_bible.py` on the revised file** and report what moved.
-6. **Say what you changed and what you left**, briefly, in the chat reply. If a
-   note cannot be followed without breaking a hard contract — the tease boundary,
-   the marker format, a length band — say that instead of quietly splitting the
-   difference.
-
-For a voice or length pass across the whole document, work story by story and
-re-run the checker after each, so a fix in one story does not push another out of
-band.
+Open decisions are staging and preference calls. They are not a licence to leave
+research undone.
 
 ## Research and honesty
 
-Sometimes the stories arrive with the request; sometimes only a topic does. Be
-ready for either. When researching:
+Sometimes the stories arrive with the request; sometimes only a topic does.
+When researching, go to primary sources — FTC, BBB Scam Tracker, FBI IC3, state
+AG, CFPB, court filings, company statements. Exact figures with source and date.
+Named victim cases and expert quotes, preferring original local reporting.
+Confirm recency.
 
-- Go to primary sources — FTC, BBB Scam Tracker, FBI IC3, state AG, CFPB, court
-  filings, company statements.
-- Exact figures with source and date. Not rounded, not stale.
-- Named victim cases and expert quotes, preferring original local reporting.
-- Confirm recency. A scam trend from 2023 is not a story happening *right now*.
+- **Never invent a quote, statistic, victim, source, identity detail or clip.**
+  If it cannot be found, say so and flag it. Mark anything single-sourced.
+- **A source's caution is a constraint on the copy.** When the pre-bible or
+  outline says "never imply X," "use no figure," "attribute every time," or
+  "keep it alleged," the bible obeys it in the tease, the runways, the buttons
+  and the headers — and the source log records how.
+- **Police department and jurisdiction must be exact** in arrest stories. Never
+  frame a past-tense reversal in the present tense. Stats tied to an expert or a
+  report go to the right source, not a paraphrased one.
+- **You cannot watch video.** You can describe a clip from its transcript or
+  description. You cannot confirm what's on screen or time a moment. Say so.
+- Live numbers (view counts, prices) are pulled on show day; mark them.
 
-**Never invent a quote, statistic, victim, or source.** If it cannot be found,
-say so and flag it. Mark anything single-sourced or inferred.
+## Output — two files, named for the A story
 
-**Never invent a clip to reach a beat count.** If the supplied material carries
-three clips and story 1 wants five to seven, write the three and flag the deficit
-as a producer cue. The count is a target, not a licence.
+1. **The bible** `.docx`, built with `scripts/build_bible.py` and confirmed with
+   `scripts/verify_format.py`. Black is what Jeff says; red is a production
+   instruction. No sources section inside it — a citation may go inline as a
+   hyperlink on the named source, nothing more.
+2. **The companion source log** `.docx`, built with
+   `scripts/build_source_log.py`. One row per added claim, with its status
+   (CONFIRMED / PARTIALLY CONFIRMED / UNVERIFIED / CONTRADICTED), source URL and
+   scope note; plus the clip table — beat id or clip number, orientation, role,
+   candidate URL, timecodes (FINAL), and what the clip is known to show and from
+   what (transcript, title, description). Every caution flag carried from the
+   input gets a row saying how the copy honours it.
 
-**You cannot watch video.** You can find where a clip lives and describe it from
-its transcript or description. You cannot confirm what is on screen or timestamp
-a moment. Say so rather than implying otherwise.
+**File names: the A-story headline plus the air day and date**, never a generic
+show label:
 
-**Do not add a sources or verification section to the document** — no reference
-bible has one. Citations go inline as hyperlinks on the named source. The fuller
-source rundown and verification notes go in the chat reply. See `docx-format.md`.
+```
+HE SAID HE WAS TOM SELLECK - WED 10_14.docx
+HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx
+```
 
-## Output
+Add ` - DRAFT` before `.docx` on a DRAFT bible. Format detail in
+`docx-format.md`.
 
-Deliver the bible as a `.docx` in house format, built with
-`scripts/build_bible.py` and confirmed with `scripts/verify_format.py`. Full
-spec, classification table and deliverables list in `docx-format.md`.
-
-Red versus black is the whole point of the colour: **black is what Jeff says, red
-is a production instruction.**
-
-In the chat reply and not in the document: first the **review loop** summary
-(rounds run, BLOCKERs fixed with before → after, any still blocking, and the
-count of notes left for the producer), then the clip manifest, then the source
-rundown and anything needing a human check, then anything you declined to write
-and why. The loop's log is `REVIEW_LOOP.md` in the run folder.
+The chat reply is short: first the **review loop** summary (rounds run,
+BLOCKERs fixed with before → after, any still blocking, and the count of notes
+left for the producer), then the stage, anything assumed (story count), any clip
+change against the outline, anything declined and why, the open decisions, and
+what in the source log needs a human before air. The loop's log is
+`REVIEW_LOOP.md` in the run folder.
 
 ## Do not over-correct
 
-Recent drafts got real things right. Fixing everything above must not cost these:
-teaser architecture and the separator rules; the like/subscribe close; the
-sponsor tease at a real story boundary in house phrasing; mechanism reveals that
-pass the paraphrase test.
+Recent drafts got real things right; fixing everything above must not cost
+them: teaser architecture and separators; the like/subscribe close; the sponsor
+tease at a real story boundary; mechanism reveals that pass the paraphrase test;
+and the **operational specificity** — exact click paths, the settlement URL, the
+hotline numbers — which lives in the mechanics run, the walkthrough and the
+protection list.
 
-And keep the **operational specificity** — exact click paths, the settlement URL,
-the hotline numbers. The aired bibles are lighter on this and it is genuinely
-useful to Jeff. It lives in the mechanics run, the walkthrough and the protection
-list, where it does not compete with the people.
-
-### Producer one-offs are not rules
+## Producer one-offs are not rules
 
 The producer sometimes keeps a line the reviewer flagged because she likes how it
 sounds. In the sent 10/14 bible she kept `THIS REPORTER CAUGHT ONE STORE IN THE
@@ -897,63 +712,52 @@ the clip) and let the producer choose the louder one.
 
 ## Self-check before delivering
 
-Run `python3 scripts/check_bible.py draft.md --day wednesday   # or friday, callin` first and clear
-every ERROR. It covers marker format, `OUT:` lines, tease-boundary violations,
-runway depth, bullet-length distribution, exclamation rate, banned register,
-lead-in repetition, and flags aphorism candidates. Then read for the things a
-script cannot see:
+Run `python3 scripts/check_bible.py draft.md --day wednesday --stories 2 --stage draft`
+(adjust day, story count and stage) and clear every ERROR. Then read for what a
+script can't see:
 
-- Re-read the user's actual instructions — show day, sponsor, guest name, story
-  constraints — and confirm each was followed. State explicitly anything missed
-  or assumed rather than silently deviating.
-- Every threat story is a sequence of people with mini-arcs, not a tour of
-  policies, and every clip beat introduces its human by identity before the clip.
-- Any non-scam segment is a demo segment, not carrying an invented victim to
-  satisfy the people rule.
-- The voice profile's 12-point checklist passes: command hook, stakes, victim
-  tease with a dollar figure, cue + verdict into every clip and a button out,
-  escalators, numbers as figures, numbered tips with reasons, sponsor entered
-  with a tease and a bridge, no doesn't-say words, the company's response.
-- Guest and deals-guest names match between copy and cues.
-- No news outlet named in a spoken line; victims by first name or `THIS
-  WOMAN`/`THIS MAN`; no `YOUR PARENTS`; towns, model names and timelines Jeff
-  won't say are out (they live in the outline and `SOURCE_LOG.md`).
-- The tease and every `NEXT,` line hold the payoff back, and no story's body
-  opens on its tease headline.
-- Clips match the outline: numbered in show order, `OUT:` and source lines
-  from the Videos rows, nothing added, cut or swapped without saying so.
-- Any threat angle with no findable victim was flagged and re-pitched, not
-  quietly written as a policy tour.
-- Mid-story headers are sayable lines that escalate, not article subheads.
+- The user's instructions — show day, story count, guest, stage — were followed,
+  and anything assumed is stated in the reply.
+- Every caution flag from the input is honoured in the copy, including the
+  tease, and logged.
+- Every person is introduced by identity drawn from the source, with nothing
+  added to make them vivid.
+- No setup spoils its clip; no setup asks a question the clip can't be shown to
+  answer; no setup is interchangeable.
+- Mid-story headers are sayable and climb.
+- The `line-rules.md` checks pass: command hook, cue + verdict in and a button
+  out of every clip, numbered tips with reasons, sponsor entered with a tease and
+  a bridge, the company's response, no doesn't-say words.
+- No unbooked expert named in black copy; guest names match between copy and
+  cues.
+- Every aphorism candidate the checker named has had the paraphrase test.
+- First person: one or two lines, nothing invented about Jeff's life.
+- Two or three open decisions left for the team.
+- Both files exist and are named for the A story and date.
+- FINAL: clips match the outline, numbered in air order, `OUT:` and the red
+  source line from the Videos rows, nothing added, cut or swapped without saying
+  so.
+- The producer's cuts (`What the producer cuts before it goes to Jeff`): no news
+  outlet in a spoken line; victims by first name or `THIS WOMAN`/`THIS MAN`;
+  state, not town; no `YOUR PARENTS`; the tease and every `NEXT,` line hold the
+  payoff back; no story's body opens on its tease headline; no slate or
+  like/subscribe housekeeping copy.
 - Ryan's retention rules (`references/examples/ryan-notes-2026-10-09.md`): the
-  why-now chain is said early; no line hands viewers a reason to leave; every
+  why-now chain said early; no line hands viewers a reason to leave; every
   transition names the connection; segment openers are hooks and each bridge
   says why the next one is worse; every tell works for the people the scam
   targets; every segment ends on what to do before the bridge or sponsor; the
   pre-sponsor tease names specific payoffs; Jeff restates the takeaway after the
   guest; precise claims (issuer, exceptions, QR line, dates that agree); a live
   demo where a tip can be shown; an on-screen chat question; a written close.
-- No setup is interchangeable; each asks something its clip answers.
-- Every aphorism candidate the checker named has been run through the paraphrase
-  test, and the intensity in the draft comes from punctuation and bold rather
-  than built sentences.
-- Silent B-roll beats carry the `BROLL` token; screen-share segments use the
-  screen-share cues, not clip markers.
-- First person: one or two lines, lived not editorial, and nothing invented about
-  Jeff's life.
-- Two or three open decisions left for the team.
 - The review loop ran (or the producer waived it): BLOCKERs fixed or listed as
   still blocking, no WARNING or NOTE "fixed", any clip change stated and
   mirrored in the outline, `REVIEW_LOOP.md` written.
-- Graphics count fits the story shape, not a blanket ceiling.
-- No invented quotes, stats, sources, clips, products or prices; unverified items
-  flagged inline.
-- Nothing invented that no past bible contains. Follow the formula.
 
-Then run the review loop (`review-loop.md`): reviewer agent, BLOCKER fixes,
-`check_bible.py` again, at most two rounds. Then build and verify:
+Then build and verify:
 
 ```bash
-python3 scripts/build_bible.py draft.md "07_29 F2 BIBLE.docx"
-python3 scripts/verify_format.py "07_29 F2 BIBLE.docx"
+python3 scripts/build_bible.py draft.md "HE SAID HE WAS TOM SELLECK - WED 10_14 - DRAFT.docx"
+python3 scripts/build_source_log.py sources.md "HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx"
+python3 scripts/verify_format.py "HE SAID HE WAS TOM SELLECK - WED 10_14 - DRAFT.docx"
 ```

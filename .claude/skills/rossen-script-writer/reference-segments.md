@@ -1,7 +1,9 @@
 # Reference segments — verbatim from aired bibles
 
-Lifted unedited from the library. **These are the format of record. When anything
-in SKILL.md disagrees with these, these win.**
+Lifted unedited from the library. **These are the record for line-level layout and
+register.** They do not override SKILL.md on marker syntax (aired typos are
+normalized) or on rules the team has changed since; see the precedence order in
+SKILL.md.
 
 Note the aired documents carry their own typos — a clip marker with two parens, a
 hyphen between the number and the orientation, an `OUT:` already filled. Those are

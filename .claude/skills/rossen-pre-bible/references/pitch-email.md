@@ -76,6 +76,9 @@ Exactly three titles, in the channel's pattern (`producer-kit/titles.md`): two
 halves joined by an em dash, 2–4 words in caps, `THIS` hiding the reveal, the
 viewer in it. No victim or suspect names. A title can sell hard but cannot state
 a fact the Coverage doesn't support; a dollar figure in a title needs a source.
+Frame it as broadly as the cases (`STORE`, not `MALL`, unless every case was
+in a mall), and build the dollar figure on a loss that happened, not a near-miss
+(`COST HER`, not `ALMOST COST HER`, when you have both).
 
 ## How many stories
 

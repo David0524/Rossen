@@ -10,10 +10,13 @@ walkthrough segment. Not needed for a voice pass or a targeted revision.
 
 ## Wednesday running order
 
-The F2 story show: taped Friday, posted Wednesday. A, B, usually C, plus an
-expert. This is the Ghost Tapping skeleton (aired Sep 2, 2026, 1.2M views);
-detail in `references/producer-kit/bible-format-ghost-tapping.md`. Confirm the
-story count first. There is no required good-news closer.
+The F2 story show: taped Friday, posted Wednesday. **Default is one A story
+plus one small B.** Variants: a 3–5 story rundown, or a single-topic umbrella
+show (`TOP 5 FACEBOOK SCAMS`). Confirm the story count first. The skeleton below
+shows the Ghost Tapping show (aired Sep 2, 2026, 1.2M views), which ran A, B and
+C — drop the C block and the expert-questions block for an A + B show. There is
+no required good-news closer. The sponsor is OmniWatch; a second break at a
+later story boundary is normal.
 
 ```
 **SHOW TITLE / DATE**
@@ -41,7 +44,8 @@ JOIN THE CHAT                     <- pipeline boundary. tease ends here.
 (((PLAY CLIP XXX HORIZONTAL)))    <- victim clip
 OUT:
 -one-line button
--the tell (works for the people it targets) + what to do   <- resolve
+-HERE'S THE TELL: [one usable line] + what to do  <- after every victim case,
+   before the next; it must work for the people the scam targets (Ryan 10/9)
 (JIM JOINS THE ROOM)              <- expert in
 (JIM EXPLAINS MECHANICS)
 **BUT IT GETS WORSE**             <- escalation, sayable, climbing
@@ -54,6 +58,7 @@ OUT:
 **THIS IS NOT A ONE-OFF**         <- scale beat
 -your bank might not have your back
 **HERE'S HOW TO PROTECT YOURSELF**
+-HERE'S THE [TEASE PROMISE] I PROMISED: ...   <- name it, if the tease made one
 -NUMBER ONE. command, because reason.
 -NUMBER TWO. ...
 
@@ -147,8 +152,8 @@ ________________________________________
 -END OF SHOW-
 ```
 
-Ask which deals guest is on — it has been Trey Donovan or Derek Couture of
-DealSeek — and make every cue match. Ask for the deal list and prices if not supplied; **do not invent
+The deals guest is Trey Donovan, co-founder of DealSeek, unless the user names
+someone else — then make every cue match. Ask for the deal list and prices if not supplied; **do not invent
 products or prices.**
 
 ### The screen-share walkthrough

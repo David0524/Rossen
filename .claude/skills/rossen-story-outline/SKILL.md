@@ -115,6 +115,11 @@ or a screen recording is `VERTICAL` (TikTok, Reels, Facebook).
 
 Never invent a clip to fill a slot. A B story with zero clip beats is normal.
 
+**Case order inside a story: the case where the money is actually gone leads.**
+A near-miss — a teller who stopped it, a payment caught in time — is a good
+warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
+2026). The beat order here becomes the bible's order, so get it right now.
+
 ## Per story, around the table
 
 - **In one sentence** — the whole story, start to end, as you'd tell a friend.
@@ -138,29 +143,36 @@ Never invent a clip to fill a slot. A B story with zero clip beats is normal.
   can hang up → it's in your mailbox → you go looking for it → it's already
   happening). Order the beats so the axis climbs. If you can't name an axis, the
   order is arbitrary and the bible will fall back on labels ("scam number two").
+- **Framing** — the one phrase for how the scam starts and where. It has to be
+  true of every case in the story: `a free sample or a crazy discount`, `in a
+  store`, not `at the mall`, when one case is a facial in a storefront. Narrow it
+  only if every case fits.
 - **Weight** — share of the show, and clip-beat count. The A story takes most of both;
   every story after gets lighter.
 - **Beat table.**
 - **Videos** — Phase 2 fills it. Leave the heading out until then.
-- **The fix** — the protection steps, one line each, plain, **each ending with
-  its source** in parentheses: the issuing body's page, not memory (*(Medicare.gov)*,
-  *(FTC, ReportFraud.ftc.gov)*, *(Horry County Register of Deeds)*). A step you
-  could not source gets ⚠️ instead. Every phone number and URL is checked against
-  the issuing body's own page. **Run the do-nothing test** on any step involving
-  a deadline, an enrollment, a plan, a dispute window or a default: what happens
-  to the viewer who does nothing, or does only this step? If the step leaves
-  them worse off, add the line that closes it. (10/9: "do nothing and you go
-  back to Original Medicare" was true, and it would have left Advantage members
-  with no drug coverage. The fix is decided here, so this is where that gets
-  caught.)
+- **The fix** — first the **tells**: one line per victim case, labeled with the
+  case it follows (`After Kathryn: no price on anything means walk out`). The
+  bible puts each one right after that case's last clip, so viewers get
+  something usable throughout instead of only at the end (Ryan, Oct 8, 2026).
+  Then the protection steps, one line each, plain, **each ending with its
+  source** in parentheses: the issuing body's page, not memory
+  (*(Medicare.gov)*, *(FTC, ReportFraud.ftc.gov)*, *(Horry County Register of
+  Deeds)*). A step you could not source gets ⚠️ instead. Every phone number and
+  URL is checked against the issuing body's own page. If the pitch's tease
+  promised a named payoff (`the one move`), say which step it is. **Run the
+  do-nothing test** on any step involving a deadline, an enrollment, a plan, a
+  dispute window or a default: what happens to the viewer who does nothing, or
+  does only this step? If the step leaves them worse off, add the line that
+  closes it. (10/9: "do nothing and you go back to Original Medicare" was true,
+  and it would have left Advantage members with no drug coverage. The fix is
+  decided here, so this is where that gets caught.)
   **Test each tell against the people the scam targets** (Ryan, 10/9): "no
   letter? don't believe the call" confirms the scam for everyone who did get a
   real letter, so add the move that works for everyone (hang up, call them
-  yourself). Mark which fix line resolves which beat: every threat beat gets its
-  tell and one action **in that beat**, not only in the list after the guest,
-  so a viewer who leaves early still leaves protected. A fix step that can be
-  shown live (a search, a setting, a statement) gets a `DEMO` beat, not just a
-  line; Jeff's mirrored phone is the strongest retention device in the hits.
+  yourself). A fix step that can be shown live (a search, a setting, a
+  statement) gets a `DEMO` beat, not just a line; Jeff's mirrored phone is the
+  strongest retention device in the hits.
 - **Gaps** — only what's missing or unconfirmed *that changes the story's shape*:
   an unnamed victim, a clip that may not exist, the sexiest line resting on one
   source. ⚠️ at the point of use. Full sourcing stays in the pre-bible's source block;
@@ -185,7 +197,7 @@ order (`Deals — [guest], live requests`) — no deal list here, and no clip be
 Name the deals guest (Trey Donovan or Derek Couture) once it's confirmed.
 
 A live scam show's beats follow the Ghost Tapping order: mechanics, victim clip,
-expert, escalation, sponsor, scale beat, practical close; then B, C, and four
+the tell, escalation, sponsor, scale beat, practical close; then B, C, and four
 expert questions. A call-in F2 outlines two callers plus the expert; callers by
 caller ID in the outline, first names only on air.
 

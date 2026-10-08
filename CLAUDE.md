@@ -12,7 +12,7 @@ Exception (producer, 10/7/2026): when the producer has converted a deliverable t
 | 1. Pre-bible | rossen-pre-bible | The pitch sheet .docx |
 | 2. Pre-bible email | rossen-pre-bible | In chat, ready to paste |
 | 3. Outline w/ videos | rossen-story-outline + rossen-pipeline | The outline .docx, at Stage: videos |
-| 4. Bible | rossen-script-writer | `<MM_DD> LIVE BIBLE.docx` |
+| 4. Bible | rossen-script-writer | `<A-STORY HEADLINE> - WED MM_DD.docx` (` - DRAFT` before `.docx` on a draft) + `<A-STORY HEADLINE> - WED MM_DD - SOURCE LOG.docx` |
 | 5. Bible review | rossen-bible-final-reviewer | Review, annotated bible, source log (.docx) |
 
 Reference if Drive is requested: `!Shows` folder id `1uwPmH5sTUldGiUkgILvmr2vu6Opavr5H`; show folders are named
@@ -21,7 +21,7 @@ Reference if Drive is requested: `!Shows` folder id `1uwPmH5sTUldGiUkgILvmr2vu6O
 ## Bible layout (producer, 9/30/2026)
 - House format = rossen-script-writer's `build_bible.py` / `docx-format.md`: Arial, **1.15 line spacing**, a **blank line
   between every line** (sentence/phrase/cue), 18pt spoken lines, 23pt bold headers, cues bold red. Not 14pt; not tight.
-- Build the .docx with `build_bible.py`. If a Google Doc is ever requested, generate it from the .docx with
+- Build the .docx with `build_bible.py` and the companion source log with `build_source_log.py`. Name both for the A-story headline and air day/date (producer, 10/8/2026). FINAL clips keep the red source line under `OUT:` (as sent 10/14) and the source log also carries every link and timecode. If a Google Doc is ever requested, generate it from the .docx with
   `tools/bible_docx_to_html.py`; never hand-write it separately.
 
 ## Team (producer note, 9/30/2026)

@@ -234,9 +234,14 @@ def check(md, stage, tx=None):
                  f"(Ryan, 10/9).")
         gaps = block.split("### Gaps", 1)[-1]
         fix = block.split("### The fix", 1)[-1].split("###", 1)[0]
+        if "### The fix" in block and not re.search(r"\bafter\b[^\n]*:", fix, re.I):
+            warn(f"{label}: The fix has no per-case tells ('After <case>: ...'). "
+                 "Each victim case gets a one-line takeaway the bible places "
+                 "right after it.")
         for line in fix.splitlines():
             t = line.strip()
-            if t.startswith("- ") and not re.search(r"\([^)]{3,}\)\s*\.?$|⚠️", t):
+            if t.startswith("- ") and not t.lower().startswith("- after ") \
+                    and not re.search(r"\([^)]{3,}\)\s*\.?$|⚠️", t):
                 warn(f"{label} fix step has no source: '{t[2:60]}'. End it with the "
                      "issuing body's page in parentheses, or ⚠️ if unsourced. Run "
                      "the do-nothing test on any deadline, enrollment or default.")

@@ -5,6 +5,12 @@ Usage:
     python3 scripts/check_bible.py draft.md                # Wednesday (default)
     python3 scripts/check_bible.py draft.md --day friday
     python3 scripts/check_bible.py draft.md --json
+    python3 scripts/check_bible.py draft.md --stories 2 --stage final
+
+--stories N  confirmed story count (default 2: A + small B). Length, clip and
+             tease bands scale with it.
+--stage      draft (XXX markers, blank OUT:) or final (numbered markers,
+             transcribed outcue on OUT:).
 
 Checks the numeric and structural contract stated in SKILL.md and
 measurements.md. ERRORs are pipeline-breaking or hard-contract violations and
@@ -30,16 +36,19 @@ T = {
     "runway_exceptions": 1,              # aired lead story has one short runway
     "first_person": (1, 3),
     "open_decisions": (2, 3),
-    # 10/7/2026: clips are picked from the outline before the bible, so the
-    # bible no longer carries search terms. Sent 10/14 F2: 1,373 words, 9 clips.
-    "wed": {"clips": (6, 12), "words": (1300, 1800), "tease_words": (210, 340)},
+    # Wednesday bands are per story and scale with --stories. Derived from the
+    # four-story per-block rows in measurements.md; provisional until aired
+    # A + B bibles are measured. Clips follow Matt's ~2 outside clips/segment.
+    "wed_story": {"a_words": (600, 850), "later_words": (230, 520),
+                  "tease_base": (50, 100), "tease_per": (60, 80),
+                  "clips_per": 2},
     "fri": {"clips": (0, 4), "words": (600, 1100), "tease_words": (120, 300)},
     # call-in F2: no measured corpus yet, so bands are disabled
     "callin": {"clips": (0, 99), "words": (0, 99999), "tease_words": (0, 9999)},
 }
 
 BANNED = [
-    "FOLKS", "CONSUMERS", "HOWEVER", "ALLEGEDLY", "REPORTEDLY", "ALLEGED",
+    "FOLKS", "CONSUMERS", "HOWEVER", "REPORTEDLY",
     "UTILIZE", "INDIVIDUALS", "FURTHERMORE", "MOREOVER", "IN CONCLUSION",
     "THE BOTTOM LINE", "HERE'S THE THING", "PURCHASE",
     # producer kit (Sept 2026): words Jeff doesn't say, per the voice profile
@@ -51,14 +60,96 @@ BANNED = [
 # Softer: he rarely says these; usually a "you" or "right now" fix. WARN only.
 SOFT = ["CUSTOMERS", "SHOPPERS", "LISTENERS", "RECENTLY", "CURRENTLY"]
 
+# Legal words: off-voice, but sometimes required (arrested-not-convicted, a
+# source that says "alleged"). WARN, never ERROR — the legal note wins.
+LEGAL = ["ALLEGED", "ALLEGEDLY"]
+
+HEADER_VERBS = (r"IS|ARE|WAS|WERE|BE|BEEN|GOT|GET|GETS|DID|DO|DOES|HAS|HAVE|HAD|"
+    r"WILL|WOULD|CAN|COULD|WANT|WANTS|SAYS|SAY|SAID|TOOK|TAKE|TAKES|TAKING|MADE|"
+    r"MAKE|MAKES|WATCH|WAIT|THINK|LOOK|SEE|SAW|COME|COMES|CAME|COMING|HAPPEN|"
+    r"HAPPENS|HAPPENED|HAPPENING|STEAL|STEALS|STOLE|STEALING|DRAIN|DRAINS|FOUND|"
+    r"FIND|FINDS|PAY|PAYS|PAID|KNOW|KNOWS|KNEW|BOUGHT|BUY|BUYING|LOST|LOSE|LOSES|"
+    r"LOSING|CUT|CUTS|CUTTING|DOING|WORK|WORKS|WORKED|GIVE|GIVES|GAVE|PUT|PUTS|GO|"
+    r"GOES|GOING|WENT|TRY|TRIES|TRYING|TELL|TELLS|TOLD|KEEP|KEEPS|MOVE|MOVES|"
+    r"START|STARTS|STARTED|SHOW|SHOWS|SHOWED|HIT|HITS|NEED|NEEDS|BELIEVE|HEAR|"
+    r"LISTEN|SPOT|PROTECT|CALL|CALLS|CALLED|SEND|SENDS|SENT|SELL|SELLS|SOLD|"
+    r"TARGET|TARGETS|EXPLODING|HUG|HUGS|GRAB|GRABS|SPY|SPYING|TRACK|TRACKING|"
+    r"BECOME|BECOMES|LEFT|LEAVE|USE|USES|USING|TRICK|TRICKS|SCAM|SCAMS|SCAMMED|"
+    r"IT'S|HE'S|SHE'S|THEY'RE|YOU'RE|WE'RE|HERE'S|THAT'S|WHAT'S|THERE'S|WHO'S|"
+    r"ISN'T|AREN'T|DON'T|DOESN'T|WON'T|CAN'T")
+
 ESCALATORS = ["BUT", "EVEN", "NOW", "WORSE", "THINK THAT", "SHOCKING", "MOST",
               "NEXT", "WAIT", "GUESS", "NEVER", "EXPLODING", "FINALLY"]
 
-CLIP_STRICT = re.compile(r"^\(\(\(PLAY CLIP (XXX|\d+) (HORIZONTAL|VERTICAL)"
-                         r"( BROLL)?\)\)\)$")
+CLIP_STRICT = {
+    "draft": re.compile(r"^\(\(\(PLAY CLIP XXX (HORIZONTAL|VERTICAL)( BROLL)?\)\)\)$"),
+    "final": re.compile(r"^\(\(\(PLAY CLIP (\d+) (HORIZONTAL|VERTICAL)( BROLL)?\)\)\)$"),
+}
+SOURCE_LINE = re.compile(r"^\(\(\(\[[^\]]+\]\(https?://")
+URLISH = re.compile(r"https?://|www\.|\b\d{1,2}:\d{2}\b|CLIP CONTEXT", re.I)
 CLIP_LOOSE = re.compile(r"\(+\s*PLAY CLIP")
 CUE_ANY = re.compile(r"\(\(+[^)]")
 PROTECTION_HEADER = "HERE'S HOW TO PROTECT YOURSELF"
+
+
+# ---------------------------------------------------------------- promises & tells
+# Ryan (producer notes on the 10/14 bible, Oct 8 2026): a promise made in the
+# tease ("THE ONE MOVE", "THE 5-SECOND HABIT") has to be paid off BY NAME in the
+# body, and viewers get a takeaway after each case, not only at the end.
+PROMISE_NOUNS = (r"PIECE OF PAPER|QUESTION|HABIT|MOVE|TRICK|THING|WORD|PHRASE|"
+                 r"SETTING|CALL|STEP|RULE|MISTAKE|SIGN|BUTTON|NUMBER|TELL")
+PROMISE_RE = re.compile(
+    r"\b((?:ONE|\d+|ONE|TWO|THREE|FOUR|FIVE|SIX|SEVEN|EIGHT|NINE|TEN)"
+    r"(?:[- ](?:SECOND|MINUTE|WORD|STEP))?\s+(?:[A-Z']+\s+){0,2}?(?:"
+    + PROMISE_NOUNS + r"))\b")
+NUMWORDS = {"1": "ONE", "2": "TWO", "3": "THREE", "4": "FOUR", "5": "FIVE",
+            "6": "SIX", "7": "SEVEN", "8": "EIGHT", "9": "NINE", "10": "TEN"}
+# a takeaway the viewer can use: a labeled tell, a red flag, or the list itself
+TAKEAWAY_RE = re.compile(r"\bTHE TELL\b|\bTHE RED FLAG\b|HERE'?S HOW TO PROTECT|"
+                         r"^-?\s*NUMBER ONE\b")
+
+
+def norm_phrase(s):
+    s = re.sub(r"\*+", "", s).upper().replace("\u2019", "'")
+    s = re.sub(r"\b(\d+)\b", lambda m: NUMWORDS.get(m.group(1), m.group(1)), s)
+    s = re.sub(r"[^A-Z0-9' ]+", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def tease_promises(tease_lines):
+    """Promise phrases in the tease, e.g. 'ONE MOVE', 'FIVE SECOND HABIT'."""
+    out = []
+    for l in tease_lines:
+        for m in PROMISE_RE.finditer(norm_phrase(l)):
+            p = m.group(1)
+            if p not in out:
+                out.append(p)
+    return out
+
+
+def unpaid_promises(tease_lines, body_lines):
+    body = " " + norm_phrase(" \n ".join(body_lines)) + " "
+    return [p for p in tease_promises(tease_lines) if f" {p} " not in body]
+
+
+def takeaway_gaps(body_lines, clip_re, limit=3):
+    """Runs of `limit`+ sound clips with no takeaway line between them.
+    Expert cue lines do not count: the tell is Jeff's, not the guest's."""
+    gaps, run, start = [], 0, None
+    for i, l in enumerate(body_lines):
+        s = re.sub(r"\*+", "", l).replace("\u2019", "'").strip().upper()
+        if clip_re.search(s):
+            if "BROLL" in s:
+                continue
+            if run == 0:
+                start = i
+            run += 1
+            if run == limit:
+                gaps.append(start)
+        elif (not s.startswith(("(", "OUT:")) and not s.rstrip("!").endswith("?")
+              and TAKEAWAY_RE.search(s)):
+            run = 0
+    return gaps
 
 
 def strip_md(s):
@@ -82,7 +173,7 @@ class Report:
         self.warns.append(msg)
 
 
-def check(path, day="wednesday"):
+def check(path, day="wednesday", stories=2, stage="draft"):
     r = Report()
     try:
         with open(path, encoding="utf-8") as fh:
@@ -92,7 +183,22 @@ def check(path, day="wednesday"):
         sys.exit(2)
 
     lines = [l.rstrip() for l in raw.split("\n")]
-    band = T["callin"] if day == "callin" else (T["wed"] if day.startswith("w") else T["fri"])
+    if day == "callin":
+        band = T["callin"]
+    elif day.startswith("w"):
+        w = T["wed_story"]
+        n = max(1, stories)
+        band = {
+            "clips": (max(1, n - 1), w["clips_per"] * n + 2),
+            "words": (w["a_words"][0] + w["later_words"][0] * (n - 1),
+                      w["a_words"][1] + w["later_words"][1] * (n - 1)),
+            "tease_words": (w["tease_base"][0] + w["tease_per"][0] * n,
+                            w["tease_base"][1] + w["tease_per"][1] * n),
+        }
+    else:
+        band = T["fri"]
+    r.stats["stage"] = stage
+    r.stats["stories"] = stories
 
     # ---------------------------------------------------- tease boundary
     boundary = None
@@ -115,28 +221,54 @@ def check(path, day="wednesday"):
         s = strip_md(l)
         if CLIP_LOOSE.search(s.upper()):
             clips.append(i)
-            if not CLIP_STRICT.match(s.upper()):
-                r.err(f"line {i+1}: malformed clip marker {s!r} — must be "
-                      f"exactly (((PLAY CLIP 3 HORIZONTAL))) or "
-                      f"(((PLAY CLIP 3 VERTICAL))), three parens each side, "
-                      f"the clip number (or XXX before clips exist), optional "
-                      f"' BROLL' before the close.")
+            if not CLIP_STRICT[stage].match(s.upper()):
+                form = ("(((PLAY CLIP XXX HORIZONTAL)))" if stage == "draft"
+                        else "(((PLAY CLIP 1 HORIZONTAL))), numbered")
+                r.err(f"line {i+1}: malformed {stage.upper()} clip marker {s!r} — "
+                      f"must be exactly {form}, three parens each side, "
+                      f"orientation present, optional ' BROLL' before the close.")
     r.stats["clip_beats"] = len(clips)
-    xxx = sum(1 for i in clips if "PLAY CLIP XXX" in strip_md(lines[i]).upper())
-    if xxx:
-        r.warn(f"{xxx} clip marker(s) still say XXX. Clips are picked from the "
-               f"outline before the bible now: number them in show order and "
-               f"fill OUT: and the source line from the outline's Videos rows.")
+    if stage == "final":
+        nums = []
+        for i in clips:
+            m = CLIP_STRICT["final"].match(strip_md(lines[i]).upper())
+            if m:
+                nums.append(int(m.group(1)))
+        if nums and nums != list(range(1, len(nums) + 1)):
+            r.err(f"FINAL clip numbers run {nums}; must be 1..{len(nums)} in "
+                  f"document order, no gaps or repeats.")
 
     for i in clips:
-        nxt = [x for x in lines[i + 1:i + 4] if strip_md(x)]
+        nxt = [x for x in lines[i + 1:i + 6] if strip_md(x)][:2]
+        is_broll = "BROLL" in strip_md(lines[i]).upper()
         if not nxt or not strip_md(nxt[0]).upper().startswith("OUT:"):
-            r.err(f"line {i+1}: clip marker has no OUT: line directly beneath it.")
-        elif ("PLAY CLIP XXX" in strip_md(lines[i]).upper()
-              and strip_md(nxt[0]).upper().replace(" ", "") != "OUT:"):
-            r.err(f"line {i+1}: OUT: line is filled on an XXX marker "
-                  f"({strip_md(nxt[0])!r}). Either the clip is picked (number "
-                  f"the marker) or it isn't (leave OUT: blank).")
+            r.err(f"line {i+1}: clip marker has no OUT: line beneath it.")
+            continue
+        filled = strip_md(nxt[0]).upper().replace(" ", "") != "OUT:"
+        # FINAL carries one red source line under OUT: (producer, 10/14):
+        # ((([Outlet](URL) · in - out (OUTCUE) · BUTT · ...)))
+        src = (strip_md(nxt[1]) if len(nxt) > 1
+               and SOURCE_LINE.match(strip_md(nxt[1])) else None)
+        if stage == "draft" and filled:
+            r.err(f"line {i+1}: OUT: line is filled ({strip_md(nxt[0])!r}) in a "
+                  f"DRAFT. Leave it blank, or check with --stage final.")
+        if stage == "final" and not filled and not is_broll:
+            if src and not re.search(r"\b\d{1,2}:\d{2}\b", src):
+                r.warn(f"line {i+1}: blank OUT: on a MANUAL clip (link, no "
+                       f"timecodes). Fill it once someone pulls the clip.")
+            else:
+                r.err(f"line {i+1}: FINAL clip has a blank OUT:. Carry the "
+                      f"transcribed outcue from the outline.")
+        if stage == "final" and not src:
+            r.warn(f"line {i+1}: FINAL clip has no red source line under OUT:. "
+                   f"Copy the outline's Videos row: ((([Outlet](URL) · in - out "
+                   f"(OUTCUE))))")
+        if len(nxt) > 1 and URLISH.search(strip_md(nxt[1])) and not (
+                stage == "final" and src):
+            r.err(f"line {i+1}: URL, timecode or clip-context text under the "
+                  f"marker ({strip_md(nxt[1])[:60]!r}). In a DRAFT it belongs in "
+                  f"the source log; in a FINAL only the one red source line "
+                  f"goes here.")
 
     for l in tease:
         if CLIP_LOOSE.search(strip_md(l).upper()):
@@ -266,6 +398,12 @@ def check(path, day="wednesday"):
 
     # ---------------------------------------------------- register
     U = raw.upper()
+    legal = {w: len(re.findall(r"\b" + re.escape(w) + r"\b", U))
+             for w in LEGAL if re.search(r"\b" + re.escape(w) + r"\b", U)}
+    for w, n in legal.items():
+        r.warn(f"{w!r} x{n}: off-voice, but keep it where a legal note requires "
+               f"it (arrested, not convicted; a source that says alleged). "
+               f"Otherwise hedge by attribution: POLICE SAY.")
     hits = {w: len(re.findall(r"\b" + re.escape(w) + r"\b", U))
             for w in BANNED if re.search(r"\b" + re.escape(w) + r"\b", U)}
     r.stats["banned_words"] = hits
@@ -329,11 +467,7 @@ def check(path, day="wednesday"):
                f"escalation marker — check they are sayable turns and not "
                f"article subheads: {flat[:3]}")
     for h in mid:
-        if not re.search(r"\b(IS|ARE|WAS|WERE|GOT|GETS|DID|DOES|HAS|HAVE|WILL|"
-                         r"CAN|WANT|SAYS|SAID|TOOK|TAKES|MADE|MAKES|WATCH|WAIT|"
-                         r"THINK|LOOK|SEE|COMES|CAME|HAPPEN|HAPPENED|STEAL|"
-                         r"STEALING|DRAIN|FOUND|FIND|PAY|PAID|KNOW|BOUGHT|"
-                         r"BUYING|LOST|LOSES|CUT|CUTTING|DOING)\b", h.upper()):
+        if not re.search(r"(?<![A-Z'])(" + HEADER_VERBS + r")(?![A-Z'])", h.upper()):
             r.warn(f"header {h!r} has no verb — a noun phrase is almost always "
                    f"a label. Rewrite it as a line Jeff can say.")
 
@@ -485,6 +619,22 @@ def check(path, day="wednesday"):
     if PROTECTION_HEADER.replace("'", "") not in U.replace("'", ""):
         r.warn("no HERE'S HOW TO PROTECT YOURSELF section found.")
 
+    # ---------------------------------------------------- tease promises
+    promised = tease_promises(tease)
+    r.stats["tease_promises"] = promised
+    for p in unpaid_promises(tease, body):
+        r.err(f"the tease promises {p!r} but the body never names it. Pay it "
+              f"off by name where it lands (-HERE'S THE {p} I PROMISED: ...), "
+              f"or cut it from the tease.")
+
+    # ---------------------------------------------------- takeaways per case
+    gaps = takeaway_gaps(body, CLIP_LOOSE)
+    r.stats["takeaway_gaps"] = len(gaps)
+    for g in gaps:
+        r.warn(f"line {boundary + g + 1}: three sound clips run with no takeaway "
+               f"between them. Each victim case ends with a one-line tell "
+               f"(-HERE'S THE TELL: ...) before the next case starts.")
+
     # ---------------------------------------------------- aphorism candidates
     aph = []
     for s in spoken:
@@ -492,14 +642,16 @@ def check(path, day="wednesday"):
             body_txt = re.sub(r"^-\s*", "", s)
         else:
             body_txt = s
-        sents = [x for x in re.split(r"(?<=[.!?])\s+", body_txt) if x]
+        # ellipses are breath marks, not sentence ends — collapse them first
+        flat_txt = re.sub(r"\.\.\.+|\u2026", " ", body_txt)
+        sents = [x for x in re.split(r"(?<=[.!?])\s+", flat_txt.strip()) if x]
         bt = body_txt.upper()
         # cue + verdict, numbered tips, repeated killer numbers and
         # on-screen callouts are house patterns, not built aphorisms
         if (re.match(r"^(WATCH THIS|CHECK THIS OUT|ROLL CLIP|NUMBER (ONE|TWO|THREE|FOUR|FIVE|SIX|SEVEN))", bt)
                 or "THERE IT IS ON THE SCREEN" in bt or "BIG DEAL" in bt):
             continue
-        if len(sents) >= 2 and words(body_txt) <= 16:
+        if len(sents) >= 2 and words(body_txt) <= 16 and all(words(x) <= 8 for x in sents):
             aph.append(body_txt)
     r.stats["aphorism_candidates"] = aph
     if aph:
@@ -515,10 +667,13 @@ def main():
     ap.add_argument("path")
     ap.add_argument("--day", default="wednesday",
                     choices=["wednesday", "friday", "callin"])
+    ap.add_argument("--stories", type=int, default=2,
+                    help="confirmed story count (Wednesday bands scale with it)")
+    ap.add_argument("--stage", default="draft", choices=["draft", "final"])
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
 
-    r = check(a.path, a.day)
+    r = check(a.path, a.day, a.stories, a.stage)
 
     if a.json:
         print(json.dumps({"errors": r.errors, "warnings": r.warns,

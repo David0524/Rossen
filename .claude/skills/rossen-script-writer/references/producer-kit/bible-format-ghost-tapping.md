@@ -15,6 +15,11 @@ The reference is the Ghost Tapping live bible, taped August 28, 2026. It aired S
 
 ## Cue notation
 
+As written in the aired Ghost Tapping bible. For clip and sponsor cues, write the
+normalized house form in `references/clip-contract.md` instead: the marker is
+`(((PLAY CLIP 3 HORIZONTAL)))` with the outcue on the `OUT:` line beneath, and
+the link and timecodes go in the source log, not under the marker.
+
 | Cue | Meaning |
 |---|---|
 | `(((CLIP 3 HORIZONTAL)))` then the link, then `[00:44 - 01:05] (OUT: FOUR STAR REVIEWS)` | Outside clip, its timecodes, and the last words spoken before we cut back |

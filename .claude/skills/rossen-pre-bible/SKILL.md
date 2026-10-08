@@ -1,5 +1,5 @@
 ---
-name: rossen-pre-bible
+name: "rossen-pre-bible"
 description: Research and pitch candidate stories for an upcoming Jeff Rossen (Rossen Reports) show, then render the approved slate as a Pre-Bible Pitch Sheet .docx — a ranked shortlist plus one page per story with the working tease, the hook, the mechanics, the footage needed, the protection payoff, and a segregated sources-and-verification block. Between the chat shortlist and the .docx, it drafts the plain-text pitch email that goes to Jeff for a yes/no. Use whenever the user asks for story ideas, pitches, a pitch sheet, a pre-bible, a slate, a pitch email, "write up the pitches for Jeff," a rundown of candidates, "what should we cover Wednesday," "find me stories for Friday," "vet these pitches," "have we covered this," "what's hot on other channels," or wants to brainstorm what a show could be before anyone writes it. Also use to re-rank, add to, or revise an existing pitch sheet. Do NOT use to write the bible itself — that is rossen-script-writer, and it runs after this.
 ---
 
@@ -70,6 +70,8 @@ shortlist with no losers isn't a choice. **For A stories, four or five options
 with a recommended order** (Jeff: "Kyle & David need to provide more options
 each week"). Each A must be a scam with a villain, broad enough for the whole
 audience, and big enough to carry the show; state the one-line viewer advice.
+Frame each pitch as broadly as its cases, and lead with a victim who actually
+lost money (Ryan's Oct 8 notes, `producer-kit/jeff-and-ryan-rules.md`).
 Test every scam pitch two ways and say so when either is weak: **audience fit**
 (is a 55+ viewer the target, or only a spectator?) and **the extended threat**
 (the beat that puts the viewer in personal danger). Check the story board's dead
