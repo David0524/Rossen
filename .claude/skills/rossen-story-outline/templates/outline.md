@@ -30,7 +30,9 @@
 
 **Hold back:** <the payoff the tease must not give away>
 
-**Peg:** <why this show, this week>
+**Peg:** <why this show, this week. If news: news → confusion → the scammer's opening, + the anchor line>
+
+**Climb:** <the axis the beats get worse on>
 
 **Weight:** <~% of show> · <n> clip beats
 

@@ -31,19 +31,22 @@ story count first. There is no required good-news closer.
 
 HIT LIKE AND SUBSCRIBE            <- bare; Jeff ad-libs the why
 JOIN THE CHAT                     <- pipeline boundary. tease ends here.
+(((ON SCREEN: [SPECIFIC CHAT QUESTION]?)))   <- live shows; Ryan 10/9
 
 **STORY A TITLE**                 <- a new line, not the tease headline
 -hook lines
+-why now: news -> confusion -> the scammer's opening   <- if news-driven
 -mechanics, in order
 -setup lines carrying specifics, ending in cue + verdict
 (((PLAY CLIP XXX HORIZONTAL)))    <- victim clip
 OUT:
 -one-line button
+-the tell (works for the people it targets) + what to do   <- resolve
 (JIM JOINS THE ROOM)              <- expert in
 (JIM EXPLAINS MECHANICS)
 **BUT IT GETS WORSE**             <- escalation, sayable, climbing
-... clip beats, each with a button ...
--[tease what's next]
+... clip beats, each with a button, each segment resolved ...
+-[tease what's next: name 2-3 specific payoffs]
 -BUT FIRST, A QUICK WORD FROM OUR SPONSOR.
 (((SPONSOR TEASE - KILL BANNERS)))
 -[personal bridge into the sponsor]
@@ -55,11 +58,22 @@ OUT:
 -NUMBER TWO. ...
 
 **STORY B TITLE**  same shape, shorter, often a live screen demo
+-[bridge: why this one is worse / closer to you]
 **STORY C TITLE**
 **[EXPERT] QUESTIONS**            <- four, numbered
+-[Jeff's one-line bottom line after the expert exits]
 
+-SEND THIS TO [SOMEONE IT PROTECTS]...       <- written close, three beats
+-[THE NEXT VIDEO TO WATCH]
+-SEE YOU NEXT TIME.
 -END OF SHOW
 ```
+
+Each segment inside a story runs hook → setup → clip → button → the tell →
+what to do → bridge (Ryan's notes, `references/examples/ryan-notes-2026-10-09.md`).
+The 10/9 Friday content half is the model: why now → the phone → the mailbox →
+your own search (live demo) → the bill (callback to the open) → named-payoff
+tease → sponsor → guest → bottom line → recap matching every segment → close.
 
 The sponsor goes after the A story's victim segment, never inside it or on a
 cliffhanger. First read usually 13–20 minutes in.
@@ -109,6 +123,10 @@ ________________________________________
 (((SPONSOR TEASE - KILL BANNERS)))
 (((PLAY SPONSOR)))
 
+[guest, Jeff's bottom line, recap matching every segment]
+-SEND THIS TO [SOMEONE IT PROTECTS]...       <- written close, Ryan 10/9
+-[THE NEXT VIDEO TO WATCH]
+
 **NOW, ONTO MY FAVORITE PART OF FRIDAYS**
 -LET'S SAVE YOU SOME MONEY ON AMAZON. SECRET PROMO CODES. NO ONE HAS THESE.
 -TELL US WHAT YOU WANT. YOU WANT A DYSON? TELL US. A PET BED? TELL US.
@@ -116,6 +134,7 @@ ________________________________________
 **-BRING IN [GUEST]-**
 -[GUEST], CO-FOUNDER OF THE DEALSEEK APP, OUR PARTNERS OVER AT DEALSEEK.
 -[GUEST], WHAT'S GOING ON? LET'S GET RIGHT TO IT.
+-THIS CODE IS OURS. YOU'RE WATCHING US PUT IT UP.   <- trust line, Ryan 10/9
 ((QR CODE UP))                    <- two parens, not three
 
 - PRODUCT NAME

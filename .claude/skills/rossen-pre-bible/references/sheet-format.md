@@ -43,7 +43,7 @@ Skeleton in `templates/story_page.md`. Section order:
 | `SLOT FIT` | Yes | The day-shape test. See `show-shapes.md`. |
 | `🔥 VIRAL CLIP` callout | When applicable | URL, platform, views + date observed, upload date, what it appears to show, and that you did not watch it. |
 | `WORKING TEASE` | Yes | Blockquote. All caps. Jeff's voice. |
-| `THE HOOK` | Yes | Prose. The story in a paragraph. |
+| `THE HOOK` | Yes | Prose. The story in a paragraph. **If the story hangs on news, it includes the why-now chain** (see below). |
 | `HOW IT WORKS` / `WHAT THEY'RE WATCHING` / `THE NUMBERS` | Yes, pick what fits | Bulleted mechanics or figures. |
 | `WHY IT'S A ROSSEN STORY` | When the case needs making | Short. |
 | `WHY IT'S DEMOTED, NOT CUT` | Wallet stories | Protects a good story from reading weak. |
@@ -67,10 +67,24 @@ Do not write a tease the sourcing can't support. This is the exact place the
 flagging rule bites — if the best line in the tease is an inference, it is going in
 the verification block by name.
 
+### Why now, inside THE HOOK
+
+When a story is pegged to news (plans cut, a law, a recall, a breach), say how
+the news creates the scam: **the news → the confusion it causes → the scammer's
+opening**, ending on one anchor line ("The letter is real. The call isn't.").
+Ryan's first note on the 10/9 F1 was that the plan-cut news and the scams read
+as two separate stories because no document ever wrote this chain
+(`../rossen-script-writer/references/examples/ryan-notes-2026-10-09.md`). It
+starts here, so the outline's Peg and the bible's segment 1 inherit it.
+
 ### THE PAYOFF
 
 Real, specific, actionable protection steps. Phone numbers, URLs, settings paths,
 the physical thing to do. Anything you couldn't confirm gets `*(verify)*` inline.
+Test each step against the people the scam targets: a tell that confirms the
+scammer's story for them ("no letter? don't believe the call," when the letters
+are real) needs the move that works for everyone (hang up, call them yourself).
+A step that can be shown on Jeff's phone gets `*(demo)*`.
 
 ## Rendering
 

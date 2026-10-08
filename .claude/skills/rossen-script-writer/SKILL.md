@@ -23,6 +23,7 @@ description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Rep
 | `scripts/check_bible.py` | **Before delivering. Always.** Mechanical compliance check. |
 | `scripts/build_bible.py` | Rendering the `.docx`. |
 | `scripts/verify_format.py` | Confirming the render matched house format. |
+| `references/examples/ryan-notes-2026-10-09.md` | **Every draft.** Ryan's 11 structure and retention notes on the 10/09 F1, with before/after pairs. The worked example for "Retention: Ryan's structure rules" below. |
 | `review-loop.md` | **Every new bible or whole-bible rewrite, before building.** The BLOCKER-only reviewer loop: the agent prompt, the fix rules, the two-round stop. |
 
 The workflow is **draft → check → fix → repeat → review loop → build →
@@ -564,8 +565,9 @@ is in `measurements.md` and the checker errors on all of it.
 
 Two short rules with the detail, examples and counts in `measurements.md`:
 
-- **Ad-lib stays out** — the 185 `by the way` asides, the close, the chat
-  shout-outs. The document ends at `-END OF SHOW`. **But the team's line-level
+- **Ad-lib stays out** — the 185 `by the way` asides and the chat
+  shout-outs. **The close is the exception (Ryan, 10/9): write it**, as three
+  short beats before `-END OF SHOW` (see "Write the close" below). **But the team's line-level
   rules below override this for the open, the clip intros and the post-clip
   buttons**: Matt writes those into every bible he notes, because Jeff rewrites
   his lines an hour before the show and a page that already sounds like him
@@ -603,7 +605,9 @@ delivering). These are written into the document:
 - **Like and subscribe: two bare lines**, `HIT LIKE AND SUBSCRIBE` and `JOIN
   THE CHAT`. Jeff ad-libs the why (the algorithm, independent, no corporate
   overlords), where-are-you-watching-from and the launch line; the producer
-  cut them from the page (10/14).
+  cut them from the page (10/14). **On a live show, follow them with one
+  specific on-screen chat question as a red cue** (Ryan, 10/9; see "Seed the
+  chat" below).
 - **Clip in: cue plus verdict**, as the runway's last line: `WATCH THIS. THIS IS
   CRAZY.` / `CHECK THIS OUT.` / `ROLL CLIP ONE. THIS IS NUTS.` Never `JUST
   WATCH` or `TAKE A LOOK`. The runway above it still carries the specifics and
@@ -640,6 +644,140 @@ image cue after the moment it illustrates; inconsistent guest credentials.
 
 The aphorism ban and the paraphrase test still apply to all of it: a cue plus a
 verdict is a reaction cue, not a built sentence.
+
+## Retention: Ryan's structure rules
+
+Ryan's notes on the 10/09 F1 (`references/examples/ryan-notes-2026-10-09.md`,
+read it) are the layer above line voice: **make the logic easy to follow, and
+give every segment a reason to keep watching.** The line-level rules above make
+a page sound like Jeff. These make a viewer stay to the end. The reviewer checks
+every one of them.
+
+### 1. Spell out why now, as a chain
+
+When a story hangs on news (plans cut, a law, a recall, a data breach), say how
+the news creates the scam, in plain words, early: **news → confusion → the
+scammer's opening.** "Plans are changing. People are confused. And confusion is
+exactly what scammers wait for." Then one line that anchors it and doubles as a
+hook: `THE LETTER IS REAL. THE CALL ISN'T.` Without the chain, the news and the
+scam read as two separate stories. The outline's `Why now` line is where this
+comes from.
+
+### 2. Never hand the viewer a reason to leave
+
+Early in a video, any line that says "this doesn't apply to you" is permission
+to leave: `IF YOU HAVE ONE… LISTEN UP`, `IF YOU'RE ON ORIGINAL MEDICARE… YOU'RE
+NOT LOSING ANYTHING`. Keep the fact and flip the conclusion: `BUT DON'T GO
+ANYWHERE. THE SCAMMERS DON'T CARE WHICH PLAN YOU'RE ON… THEY'RE CALLING
+EVERYONE.` Widen the audience instead (the debit card episode: these scams
+aren't just attacking seniors, they're attacking everybody). Watch for quiet
+narrowing in tips too: "check your Medicare statement" becomes "…or your plan's
+statement." `check_bible.py` warns on exclusion phrases.
+
+### 3. Every transition names the connection
+
+A jump from one subject to the next (letters → calls) says how they connect, or
+it's a spot where viewers drift. Quote the scammer (`"YOUR PLAN IS ENDING."`),
+tie it back (`SOUND FAMILIAR? IT'S THE SAME THING THE REAL LETTER SAYS.`), then
+the proof number.
+
+### 4. Every segment opens on a hook, not a label
+
+`HERE ARE THE THREE SCAMS`, `SCAM NUMBER TWO…`, `THE SCARIEST OF THEM ALL` are
+labels: they tell viewers where they are, not why to stay. "Scariest" is a
+promise viewers have heard a thousand times; **the specific reason it's
+scariest is the hook.** This extends "Mid-story headers are turns, not labels"
+to segment openers and bridges.
+
+- **Bridges say why the next one is worse.** Find the axis the segments climb
+  on. On 10/9 each scam asked less of the viewer: the phone (you can hang up) →
+  the mailbox (`NEVER ANSWER UNKNOWN NUMBERS? THIS ONE DOESN'T NEED YOU TO.`) →
+  your own search (`THOSE TWO COME TO YOU. THIS ONE, YOU GO LOOKING FOR.`) →
+  your statement (`THOSE THREE NEED YOU TO DO SOMETHING. THIS ONE DOESN'T.`).
+  Order the segments so the axis climbs.
+- **Move buried hooks to the top.** A striking fact mid-segment (`STOLEN
+  MEDICARE IDENTITIES SELL FOR AS LITTLE AS 8 DOLLARS`) opens the segment,
+  against the big number. A curiosity hook (`THE FAKE CARD LOOKS NICER THAN THE
+  REAL ONE. AND THAT'S THE GIVEAWAY.`) leads; the reveal comes inside.
+- **Don't play coy about what the open already revealed.** If the cold open
+  named the catheters, `WAIT UNTIL YOU HEAR WHAT HE WAS BILLED FOR` insults the
+  viewer. Make it a callback: `REMEMBER THE VETERAN FROM THE TOP OF THE SHOW?`
+
+`check_bible.py` warns on label openers.
+
+### 5. A tell has to work for the people the scam targets
+
+Test every tell against the viewer the scam is aimed at. `NO LETTER? DON'T
+BELIEVE THE CALL` fails everyone who did get a real letter, and for them it
+confirms the scammer's story. Add the move that works for everyone: `EVEN IF
+YOUR LETTER IS REAL, YOU DON'T FIX IT WITH THE PERSON WHO CALLED YOU. HANG UP.
+CALL … YOURSELF.` **Safety-critical moves go in the segment, not after the
+guest**: viewers who leave early still leave protected.
+
+### 6. Resolve every segment before the bridge
+
+Each segment runs **hook → setup → clip → button → the tell → what to do →
+bridge**. Never leave a segment on fear with no move, and never cut to a sponsor
+from one: viewers who leave at the ad leave scared and unprotected. One action
+line is enough (`DON'T CALL THE NUMBER ON IT. REPORT IT TO 1-800-MEDICARE.`).
+The protection list or recap may repeat them; **the recap covers every segment,
+one for one**.
+
+### 7. Name the payoffs before the ad
+
+The tease before `BUT FIRST, A QUICK WORD FROM OUR SPONSOR` names two or three
+specific things still ahead, by name: `FACEBOOK. A JOB SCAM. THE MICROSOFT
+SCAM.` (envelope episode). A generic `STICK AROUND` gives no reason to sit
+through a read. `check_bible.py` warns when the lines before the sponsor carry
+no specifics.
+
+### 8. Guests: safe scripted answers, then Jeff's bottom line
+
+A guest's scripted answer gets the same safety check as Jeff's lines (the 10/9
+"do nothing" answer would have cost viewers drug coverage). After `(((GUEST
+EXITS)))`, Jeff restates the takeaway in one or two lines: `SO HERE'S THE
+BOTTOM LINE: NOBODY LEGITIMATE CALLS YOU FIRST. YOU CALL THEM.`
+
+### 9. Say it precisely: the comments fact-check us
+
+Lines that are almost right are exactly what the comments catch.
+- **Who issues what.** `IF YOURS IS PLASTIC, IT'S A FAKE` alarms people holding
+  a real plastic plan card. Say which issuer: `THE ONE FROM MEDICARE ITSELF`.
+- **Rules with exceptions.** `.GOV EVERY TIME` is true for Medicare's own site,
+  but the sponsor isn't a .gov: `ANYTHING ELSE IS A PRIVATE COMPANY. THAT
+  DOESN'T MAKE IT A SCAM. BUT IT ISN'T MEDICARE.`
+- **Don't contradict our own advice.** After telling viewers not to trust codes
+  and links that show up unexpectedly, a QR code needs a line one beat before
+  it: this one is ours, you watched us put it up, you know where it goes.
+  `check_bible.py` warns on a QR cue without it.
+- **Dates agree across the show.** `IT'S OPEN ENROLLMENT` in the open and `OPEN
+  ENROLLMENT HASN'T EVEN STARTED` later can't both be true.
+- **Don't blame the evidence.** The statement isn't "lying to you"; it shows you
+  the fraud.
+
+### 10. Show it, don't just say it
+
+The strongest retention device in our hits is Jeff's own phone or computer,
+mirrored, with "let's do this together." When a tip can be done live (search
+"Medicare" and count the Sponsored results, open the settings menu, check the
+statement), write it as a demo: `LET ME SHOW YOU. PULL UP MY PHONE.` /
+`(((LIVE DEMO: JEFF'S PHONE MIRRORED)))`, plus a red cue to rehearse it. When
+there's a real-versus-fake, put them side by side: `(((POP UP: FAKE CARD NEXT
+TO A REAL ONE)))`.
+
+### 11. Seed the chat and write the close
+
+- **Seed the chat (live shows).** After `JOIN THE CHAT`, one specific on-screen
+  question as a red cue: `(((ON SCREEN: HAVE YOU GOTTEN ONE OF THESE CALLS? WHAT
+  DID THEY SAY?)))`. A second in the first half can feed the guest; write `JEFF:
+  (READS ONE QUESTION FROM THE CHAT)` into the guest block. Where-are-you-watching-
+  from stays Jeff's ad-lib.
+- **Write the close.** Three short beats before `-END OF SHOW`: share it with
+  someone it protects (`SEND THIS TO SOMEONE ON MEDICARE… BEFORE THEIR PHONE
+  RINGS!!`; never "your parents"), the next video to watch, and `SEE YOU NEXT
+  TIME.` On a Friday it closes the content half, right before the deals handoff
+  (`OK. NOW LET'S SAVE YOU SOME MONEY!!`), as in Ryan's revision; the deals half
+  is unscripted. The ending closes; it doesn't dissolve.
 
 ## Leave the document open
 
@@ -787,6 +925,14 @@ script cannot see:
 - Any threat angle with no findable victim was flagged and re-pitched, not
   quietly written as a policy tour.
 - Mid-story headers are sayable lines that escalate, not article subheads.
+- Ryan's retention rules (`references/examples/ryan-notes-2026-10-09.md`): the
+  why-now chain is said early; no line hands viewers a reason to leave; every
+  transition names the connection; segment openers are hooks and each bridge
+  says why the next one is worse; every tell works for the people the scam
+  targets; every segment ends on what to do before the bridge or sponsor; the
+  pre-sponsor tease names specific payoffs; Jeff restates the takeaway after the
+  guest; precise claims (issuer, exceptions, QR line, dates that agree); a live
+  demo where a tip can be shown; an on-screen chat question; a written close.
 - No setup is interchangeable; each asks something its clip answers.
 - Every aphorism candidate the checker named has been run through the paraphrase
   test, and the intensity in the draft comes from punctuation and bold rather

@@ -405,6 +405,82 @@ def check(path, day="wednesday"):
         r.warn(f"body header repeats the tease headline: {reused[:2]}. Open "
                f"each story on a new line that puts the viewer in the moment.")
 
+    # ---------------------------------------------------- Ryan's retention rules (10/9)
+    # references/examples/ryan-notes-2026-10-09.md. WARN only.
+    EXCLUDE = re.compile(
+        r"(YOU'RE NOT LOSING|DOESN'T APPLY TO YOU|DOES NOT APPLY TO YOU|"
+        r"YOU'RE (FINE|SAFE|IN THE CLEAR|OFF THE HOOK)\b|NOTHING TO WORRY ABOUT|"
+        r"YOU CAN RELAX|IF YOU HAVE ONE\b.*LISTEN UP|THIS ISN'T ABOUT YOU|"
+        r"YOU'RE NOT AFFECTED)")
+    excl = [s for s in spoken if EXCLUDE.search(s.upper())]
+    if excl:
+        r.warn(f"{len(excl)} line(s) may hand viewers a reason to leave "
+               f"({excl[:2]}). Keep the fact, flip the conclusion: say why they "
+               f"should stay (Ryan note 2).")
+    LABEL = re.compile(
+        r"^-?\s*(SCAM NUMBER (ONE|TWO|THREE|FOUR|FIVE|\d)\b|HERE ARE THE "
+        r"(TWO|THREE|FOUR|FIVE|\d+) |.*\bSCARIEST (ONE |SCAM )?OF (THEM )?ALL)")
+    labels = [s for s in spoken if LABEL.search(s.upper())]
+    if labels:
+        r.warn(f"{len(labels)} segment opener(s) read as labels ({labels[:2]}). "
+               f"Open on the hook: the moment the viewer meets it and why it's "
+               f"worse than the last one (Ryan note 4).")
+    for i, l in enumerate(lines):
+        if "QR" in l.upper() and l.strip().startswith(("(", "**(")):
+            before = " ".join(strip_md(x).upper() for x in lines[max(0, i - 8):i])
+            if not re.search(r"\b(OURS|OUR CODE|WE PUT|WE'RE PUTTING|THIS ONE IS "
+                             r"OURS|YOU'RE WATCHING US)\b", before):
+                r.warn(f"QR cue at line {i + 1} has no trust line before it. "
+                       f"After telling viewers not to trust codes, say this one "
+                       f"is ours and they watched us put it up (Ryan note 9).")
+            break
+    GENERIC = re.compile(r"\b(STICK AROUND|STAY WITH US|DON'T GO ANYWHERE|"
+                         r"MUCH MORE|COMING UP|STAY TUNED)\b")
+    for i, l in enumerate(lines):
+        if "BUT FIRST, A QUICK WORD" in strip_md(l).upper():
+            prev = [strip_md(x) for x in lines[max(0, i - 8):i]
+                    if strip_md(x) and not strip_md(x).startswith("(")][-3:]
+            txt = " ".join(prev).upper()
+            if not prev or GENERIC.search(txt) or words(txt) < 8:
+                r.warn(f"the tease before the sponsor at line {i + 1} doesn't "
+                       f"name what's ahead. Name two or three specific payoffs "
+                       f"(Ryan note 7): {prev[-1:] }")
+    # an action line is a command: the verb opens a sentence
+    ACTION = re.compile(r"(^-?\s*|[.!?…]\s+)(CALL|REPORT|HANG UP|CHECK|LOOK (AT|FOR|UP)|"
+                        r"DON'T|NEVER|OPEN|ASK|FREEZE|DISPUTE|TYPE|SKIP|DELETE|"
+                        r"BLOCK|SIGN UP|WATCH THE|SNAP|READ|NUMBER (ONE|TWO|THREE))\b")
+    for i, l in enumerate(lines):
+        if "BUT FIRST, A QUICK WORD" not in strip_md(l).upper():
+            continue
+        j = max((k for k in range(i) if strip_md(lines[k]).upper().startswith("OUT:")),
+                default=None)
+        if j is None:
+            continue
+        TEASE_LINE = re.compile(r"(\?$|RIGHT AFTER THIS|WHEN WE COME BACK|"
+                                r"^-?\s*NEXT\b|COMING UP|AFTER THE BREAK|JOINS ME)")
+        seg = [strip_md(x) for x in lines[j + 1:i]
+               if strip_md(x) and not CUE_ANY.search(strip_md(x))
+               and not TEASE_LINE.search(strip_md(x).upper().rstrip("!. "))]
+        if seg and not any(ACTION.search(x.upper()) for x in seg):
+            r.warn(f"the segment before the sponsor at line {i + 1} ends with no "
+                   f"'what to do' line after its last clip. Resolve it before the "
+                   f"bridge: the tell plus one action (Ryan note 6).")
+    end_i = next((i for i, l in enumerate(lines)
+                  if strip_md(l).upper().lstrip("- ").startswith("END OF SHOW")),
+                 len(lines))
+    # Friday: the close ends the content half, before the deals handoff
+    tail = " ".join(strip_md(x).upper() for x in
+                    (body if day.startswith("f") else lines[max(0, end_i - 14):end_i]))
+    if not re.search(r"\b(SEND THIS|SHARE THIS|SEE YOU NEXT TIME)\b", tail):
+        r.warn("no written close before END OF SHOW. Three short beats: send "
+               "this to someone it protects, the next video, see you next time "
+               "(Ryan note 11).")
+    if day.startswith("f"):
+        early = [strip_md(x).upper() for x in body[:max(40, len(body) // 3)]]
+        if not any("ON SCREEN" in x and "?" in x for x in early):
+            r.warn("no on-screen chat question after JOIN THE CHAT. Add one "
+                   "specific question as a red cue (Ryan note 11).")
+
     # ---------------------------------------------------- protection headers
     if PROTECTION_HEADER.replace("'", "") not in U.replace("'", ""):
         r.warn("no HERE'S HOW TO PROTECT YOURSELF section found.")

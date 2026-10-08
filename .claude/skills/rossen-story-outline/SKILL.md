@@ -126,6 +126,18 @@ Never invent a clip to fill a slot. A B story with zero clip beats is normal.
   producer pulled "YOUR DAD DIED" and "THE REGISTER IS RINGING UP MORE THAN THE
   SIGN" out of the tease. Both gave away exactly this line.)
 - **Peg** — why it's on *this* show. Old footage is fine; an old peg is not.
+  **When the peg is news, write the why-now chain** in the same line: the news →
+  the confusion it causes → the scammer's opening, ending on the one line that
+  anchors it (*plans are being cut → mailboxes full of Medicare mail, people
+  confused → a call saying "your plan is ending" sounds like a follow-up. "The
+  letter is real. The call isn't."*). Ryan's first note on the 10/9 F1 was that
+  the news and the scams read as two separate stories because nobody wrote this
+  chain (`../rossen-script-writer/references/examples/ryan-notes-2026-10-09.md`).
+- **Climb** — the axis the beats get worse on, in one line, so every bridge can
+  say why the next one is worse. 10/9: each scam asked less of the viewer (you
+  can hang up → it's in your mailbox → you go looking for it → it's already
+  happening). Order the beats so the axis climbs. If you can't name an axis, the
+  order is arbitrary and the bible will fall back on labels ("scam number two").
 - **Weight** — share of the show, and clip-beat count. The A story takes most of both;
   every story after gets lighter.
 - **Beat table.**
@@ -141,6 +153,14 @@ Never invent a clip to fill a slot. A B story with zero clip beats is normal.
   back to Original Medicare" was true, and it would have left Advantage members
   with no drug coverage. The fix is decided here, so this is where that gets
   caught.)
+  **Test each tell against the people the scam targets** (Ryan, 10/9): "no
+  letter? don't believe the call" confirms the scam for everyone who did get a
+  real letter, so add the move that works for everyone (hang up, call them
+  yourself). Mark which fix line resolves which beat: every threat beat gets its
+  tell and one action **in that beat**, not only in the list after the guest,
+  so a viewer who leaves early still leaves protected. A fix step that can be
+  shown live (a search, a setting, a statement) gets a `DEMO` beat, not just a
+  line; Jeff's mirrored phone is the strongest retention device in the hits.
 - **Gaps** — only what's missing or unconfirmed *that changes the story's shape*:
   an unnamed victim, a clip that may not exist, the sexiest line resting on one
   source. ⚠️ at the point of use. Full sourcing stays in the pre-bible's source block;

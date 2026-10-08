@@ -228,6 +228,10 @@ def check(md, stage, tx=None):
             if req not in block:
                 err(f"{label}: missing {req}")
 
+        if "**Climb:**" not in block and len(re.findall(r"^\|\s*\d+\s*\|", block, re.M)) >= 4:
+            warn(f"{label}: no **Climb:** line. Name the axis the beats get "
+                 f"worse on so every bridge can say why the next one is worse "
+                 f"(Ryan, 10/9).")
         gaps = block.split("### Gaps", 1)[-1]
         fix = block.split("### The fix", 1)[-1].split("###", 1)[0]
         for line in fix.splitlines():

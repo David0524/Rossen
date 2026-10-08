@@ -30,6 +30,7 @@ is out of scope unless explicitly requested.
 | `references/producer-kit/sponsor-script-rules.md` | A sponsor read is in the bible, or sponsor copy was sent for review. |
 | `references/producer-kit/script-notes.md` + `references/examples/script-notes-kroger-*.md` | When the deliverable is notes for the writer. |
 | `references/producer-kit/jeff-brief.md` + `references/examples/jeff-brief-2026-09-24.md` | When asked for Jeff's 30-second brief. |
+| `references/examples/ryan-notes-2026-10-09.md` | **Every review.** Ryan's 11 retention and precision notes on the 10/09 F1, with before/after pairs. Dimension 9's rubric, and the model for how a structural note is written (where, why, direction). |
 
 ## Step 0 — run the mechanical pass first
 
@@ -255,6 +256,57 @@ For every cue that does have a source:
 - One sponsor break per document unless the draft says otherwise.
 - No sponsor content drafted in full unless explicitly asked — house rule is that
   sponsor copy is marked, not written.
+
+### 9. Retention and precision (Ryan's notes, 10/9)
+
+Rubric: `references/examples/ryan-notes-2026-10-09.md`. Our own review of that
+bible caught only his note 8; these checks close the gap. `check_bible.py` (in
+rossen-script-writer) warns mechanically on notes 2, 4, 6, 9 (QR) and 11; read for
+the rest. Write each finding the way Ryan does: **where**, **why** (what our
+best-performing episodes do), and a **direction**, not a rewrite.
+
+- **Why now (note 1).** A news-driven story says how the news creates the scam,
+  early and in plain words (news → confusion → the scammer's opening). If the
+  news and the scam read as two stories, WARNING.
+- **A reason to leave (note 2).** Any early line telling part of the audience it
+  doesn't apply to them ("YOU'RE NOT LOSING ANYTHING") with no "but stay" after
+  it. WARNING. Also tips that quietly narrow ("your Medicare statement" without
+  "or your plan's").
+- **Transitions (note 3).** A subject jump with no stated connection. NOTE.
+- **Hooks, not labels (note 4).** Segment openers like "SCAM NUMBER TWO" or "THE
+  SCARIEST OF THEM ALL"; bridges that don't say why the next one is worse; a hook
+  buried mid-segment; a segment playing coy about something the cold open
+  already revealed (it should be a callback). WARNING for openers, NOTE for the
+  rest.
+- **Tells vs. the target (note 5).** Test every tell against the viewer the scam
+  targets. A tell that confirms the scammer's story for them is a WARNING; if it
+  could lead a viewer to act wrongly, BLOCKER. Safety-critical moves held back
+  until after the guest: WARNING.
+- **Resolution (note 6).** Every segment ends on the tell plus what to do before
+  its bridge, and above all before a sponsor. A segment that ends on fear: WARNING.
+  The recap must cover every segment, one for one; a missing segment is a WARNING.
+- **Pre-sponsor tease (note 7).** Names two or three specific payoffs. Generic:
+  NOTE.
+- **Guest answers (note 8).** Scripted guest answers get dimension 1 and 6 in
+  full; incomplete advice that could cost viewers is a BLOCKER. Jeff restates the
+  takeaway after the guest exits; missing: NOTE.
+- **Precision (note 9), the comments fact-check us.** Each is a WARNING:
+  - a claim about who issues what that's true of one issuer and false of another
+    (Medicare's card is paper; plan cards may be plastic);
+  - a rule stated as absolute that has an exception the show itself contains
+    (".gov every time," then a sponsor that isn't .gov);
+  - advice the show then contradicts (don't trust codes → a QR code with no
+    "this one's ours" line);
+  - dates or facts that disagree between the open and the body ("it's open
+    enrollment" vs. "open enrollment hasn't started"). Diff every date the show
+    says against every other;
+  - blaming the evidence ("your statement could be lying to you").
+- **Show it (note 10).** A tip that could be demonstrated live (a search, a
+  setting, a statement) but is only told: NOTE, with the demo suggested.
+- **Chat and close (note 11).** Live shows: one specific on-screen chat question
+  after `JOIN THE CHAT`. Every show: a written close (send this to someone it
+  protects, the next video, see you next time; never "your parents"). Missing:
+  NOTE.
 
 ## Fact-checking subsystem
 
