@@ -1,0 +1,173 @@
+[
+ {
+  "beat_id": "10-07-A5",
+  "episode": "10-07",
+  "segment_title": "THE CAMERA SAID IT WAS YOU\u2026 AND YOUR PHONE MAY BE DELETING THE PROOF IT WASN'T",
+  "script_text": "Lindsey Isaacs, wrongly accused driver. Witnesses to a triple-fatal hit-and-run on I-4 described a maroon Dodge Durango; a Flock license plate reader caught her black Durango about three miles away and investigators arrested her on three counts of vehicular homicide. Her car had no damage.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Lindsey Isaacs Flock wrongful arrest",
+  "visual_spec": "Isaacs on camera, interview setup; Durango/plate-reader b-roll",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "CNN Rre8C8boWog, 404 Media Xc_6Xap8Yy4, NewsNation 5p42JlphB_M",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Lindsey Isaacs Flock wrongful arrest",
+    "Lindsey Isaacs Durango"
+   ],
+   "news": [
+    "woman wrongly jailed Flock camera error",
+    "Flock camera wrong car arrest vehicular homicide",
+    "I-4 hit and run wrong woman arrested Durango"
+   ],
+   "victim": [
+    "Lindsey Isaacs interview"
+   ],
+   "platform": [
+    "Flock camera arrested wrong woman"
+   ],
+   "shorts": [
+    "jailed because of a license plate camera",
+    "wrong Durango arrested"
+   ]
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-07-A6",
+  "episode": "10-07",
+  "segment_title": "THE CAMERA SAID IT WAS YOU\u2026 AND YOUR PHONE MAY BE DELETING THE PROOF IT WASN'T",
+  "script_text": "Lindsey Isaacs testifies at a U.S. Senate hearing Sept 23, 2026 on Flock; her cell door wasn't opened for about 86 hours; roughly 10 days in maximum security; 13 days in jail per outlets.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Lindsey Isaacs Senate hearing Flock",
+  "visual_spec": "Isaacs at the witness table, Senate hearing room",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "FOX 35 Orlando M-Vfh-Z9I24, USA TODAY o9S_qn7oaw0, The Hill RHya6SHJFiM, KOMO ZvFYuC1CDOg",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Lindsey Isaacs Senate hearing",
+    "Flock Senate hearing wrongful arrest"
+   ],
+   "news": [
+    "woman tells Senate Flock camera wrongful arrest",
+    "86 hours solitary confinement Senate testimony Flock",
+    "Senate hearing Flock license plate cameras privacy"
+   ],
+   "victim": [],
+   "platform": [
+    "Flock Senate hearing"
+   ],
+   "shorts": [
+    "86 hours in solitary Senate",
+    "she told senators Flock jailed her"
+   ]
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-07-A7",
+  "episode": "10-07",
+  "segment_title": "THE CAMERA SAID IT WAS YOU\u2026 AND YOUR PHONE MAY BE DELETING THE PROOF IT WASN'T",
+  "script_text": "Chrisanna Elser, Colorado. Her doorbell camera recorded a police sergeant saying 'You know why I'm here' and accusing her of stealing a package; asked to see his video, he said she could see it in court. Accusation based on a Flock hit.",
+  "orientation": "vertical",
+  "clip_role": "evidence",
+  "news_anchor": "Chrisanna Elser doorbell police package theft",
+  "visual_spec": "Doorbell-camera footage of the sergeant at her door",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web",
+   "tiktok"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "FOX31 kzVfXvTQnEQ, Fox News 2a4t7QiMjOk, CBS Colorado tsFc-IqoNCI (horizontal packages, doorbell inset likely)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Chrisanna Elser doorbell",
+    "Chrisanna Elser Flock"
+   ],
+   "news": [
+    "Colorado woman accused package theft Flock doorbell",
+    "police sergeant doorbell you know why I'm here package"
+   ],
+   "victim": [
+    "Chrisanna Elser"
+   ],
+   "platform": [
+    "cop accuses woman of stealing package doorbell"
+   ],
+   "shorts": [
+    "you know why I'm here doorbell cop",
+    "cop says see the video in court",
+    "Flock accused her of stealing a package"
+   ]
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-07-A8",
+  "episode": "10-07",
+  "segment_title": "THE CAMERA SAID IT WAS YOU\u2026 AND YOUR PHONE MAY BE DELETING THE PROOF IT WASN'T",
+  "script_text": "Chrisanna Elser used her Rivian's cameras to build a timeline of her route; weeks later the police chief emailed 'nicely done btw' and dropped the summons; the town said the officer would be disciplined.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Chrisanna Elser Rivian package theft cleared",
+  "visual_spec": "Elser interview, Rivian camera footage",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "CBS Colorado tsFc-IqoNCI, 9NEWS w7N30V2ltyw, WHAS11 F2DNTr-sH8I",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Chrisanna Elser Rivian",
+    "Colorado woman cleared package theft Flock"
+   ],
+   "news": [
+    "woman used car cameras prove she wasn't porch pirate",
+    "officer disciplined Flock package theft accusation",
+    "Colorado police drop summons package theft Rivian"
+   ],
+   "victim": [
+    "Chrisanna Elser interview"
+   ],
+   "platform": [
+    "Rivian cameras proved innocence"
+   ],
+   "shorts": [
+    "her Rivian proved she was innocent",
+    "nicely done btw police chief"
+   ]
+  },
+  "lane": "search"
+ }
+]

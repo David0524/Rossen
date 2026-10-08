@@ -1,0 +1,90 @@
+<title>Teresa Murray Pre-Interview</title>
+<style>
+:root {
+  --bg: #f6f7f8; --paper: #fff; --ink: #16191d; --muted: #5b636d;
+  --line: #dde1e6; --cue: #c8102e; --cue-soft: #fbe9ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111418; --paper: #1a1e24; --ink: #e8ebef; --muted: #a2abb6;
+    --line: #2c323a; --cue: #ff5a6e; --cue-soft: #3a1c22; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111418; --paper: #1a1e24; --ink: #e8ebef; --muted: #a2abb6;
+  --line: #2c323a; --cue: #ff5a6e; --cue-soft: #3a1c22; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 Arial, Helvetica, sans-serif; }
+.wrap { max-width: 1100px; margin: 0 auto; padding-inline: 16px; padding-block: 18px; display: grid; gap: 12px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; border-bottom: 3px solid var(--ink); padding-bottom: 8px; }
+h1 { margin: 0; font-size: 24px; text-transform: uppercase; letter-spacing: .01em; }
+.meta { color: var(--muted); font-size: 13px; }
+h2 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--cue); }
+.grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 12px; }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+.card { min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; }
+.qs { counter-reset: q; list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.qs li { counter-increment: q; display: grid; grid-template-columns: 26px 1fr; gap: 0 8px; }
+.qs li::before { content: counter(q); grid-row: span 2; font-weight: 700; font-size: 18px; color: var(--cue); }
+.q { font-weight: 700; }
+.want { color: var(--muted); font-size: 13.5px; }
+ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; }
+.rules { background: var(--cue-soft); border-color: var(--cue); }
+.intro { font-style: italic; }
+p { margin: 0 0 6px; }
+.side { display: grid; gap: 12px; align-content: start; }
+</style>
+<div class="wrap">
+  <header>
+    <h1>Teresa Murray: Pre-Interview</h1>
+    <span class="meta">Rossen Reports · 10/14 F2 Wednesday · A story: mall kiosk scams</span>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Jeff's four questions</h2>
+      <ol class="qs">
+        <li><span class="q">How do these mall kiosks pull you in? The sample… the compliment… the chair?</span>
+            <span class="want">Want: the step-by-step playbook, from the free sample to the back room.</span></li>
+        <li><span class="q">Someone steps out with a sample. What do you actually say to walk away?</span>
+            <span class="want">Want: an exact phrase viewers can use. Jeff follows with "take the sample and keep walking."</span></li>
+        <li><span class="q">Say it already happened. You got charged, and the sign says no refunds. How do you get your money back?</span>
+            <span class="want">Want: call the card company the same day, dispute it, then report it at ReportFraud.ftc.gov (graphic on screen).</span></li>
+        <li><span class="q">These victims were too embarrassed to tell anyone. How do you talk to a loved one about this?</span>
+            <span class="want">Want: how to raise it without shaming them. Our audience is 55+, so it's about a spouse, a friend or a sibling, not "your parents."</span></li>
+      </ol>
+    </section>
+
+    <div class="side">
+      <section class="card">
+        <h2>Where she lands</h2>
+        <p>Right after the two A-story cases:</p>
+        <ul>
+          <li><b>Kathryn, 84 (Florida):</b> went in for a $25 facial and was charged $26,000. The store refunded about $4,500.</li>
+          <li><b>Donna, 75 (Washington):</b> got free eye cream at a kiosk, and the owner drove her to her bank for $50K. Two tellers called police.</li>
+        </ul>
+      </section>
+
+      <section class="card rules">
+        <h2>Ground rules</h2>
+        <ul>
+          <li>No comment on <b>BH28</b>, its owner, or anyone in the clips. That case is still open.</li>
+          <li>Talk about tactics, not companies.</li>
+          <li>Keep answers short. It's live, so 20–30 seconds each.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Confirm on the call</h2>
+        <ul>
+          <li class="intro">Jeff's intro: "She runs the Consumer Watchdog office at the U.S. PIRG Education Fund… two decades as a consumer reporter." Is that OK?</li>
+          <li><b>No ties to any sponsor</b> (OmniWatch, Chapter). If there are, Jeff discloses them.</li>
+          <li>Q3: how she'd phrase card refunds. The 60-day credit-card rule covers <i>billing errors</i>, so does a high-pressure charge she agreed to count?</li>
+          <li>Any real case or number she's seen with kiosks or pressure sales?</li>
+          <li>Taping time, connection and setup.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

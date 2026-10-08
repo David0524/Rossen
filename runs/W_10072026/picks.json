@@ -1,0 +1,541 @@
+[
+ {
+  "beat_id": "10-07-A2",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=EcWQI5Zrj4Q",
+  "platform": "youtube",
+  "title": "Tennessee grandma mistakenly sent to North Dakota jail due to AI error (ABC News 4 / WCYB)",
+  "status": "WEAK",
+  "source_mix": {
+   "network": 2,
+   "affiliate": 3
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=EcWQI5Zrj4Q",
+    "source_type": "affiliate",
+    "score": 58,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 7,
+    "fit": 4,
+    "segments": [
+     {
+      "in": "0:16",
+      "out": "0:31",
+      "outcue": "a state she'd never even visited"
+     }
+    ],
+    "reasoning": "Local package: US Marshals at her Carter County house, 50-year-old grandmother of five, a state she'd never visited. Reporter VO, not Lipps herself.",
+    "flags": [
+     "no Lipps soundbite in any fetched transcript",
+     "NBC/WLOS/FOX Nashville captions throttled or null"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+    "source_type": "network",
+    "score": 52,
+    "reason": "CBS live shot, correspondent only; misnames her 'Lipscomb' on air"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=XJ6u1KxM3WY",
+    "source_type": "affiliate",
+    "score": 40,
+    "reason": "FOX Nashville 44s anchor read"
+   }
+  ],
+  "cannot_determine": [
+   "whether NBC nwRB9NTx6IU carries Lipps on camera (captions throttled)",
+   "WDAY interview not located"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A3",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=EcWQI5Zrj4Q",
+  "platform": "youtube",
+  "title": "Tennessee grandma mistakenly sent to North Dakota jail due to AI error (ABC News 4 / WCYB)",
+  "status": "PICK",
+  "source_mix": {
+   "network": 2,
+   "affiliate": 3
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=EcWQI5Zrj4Q",
+    "source_type": "affiliate",
+    "score": 78,
+    "tone": 9,
+    "authenticity": 8,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:31",
+      "out": "0:46",
+      "outcue": "an arrest warrant to be issued for her"
+     },
+     {
+      "in": "0:46",
+      "out": "1:00",
+      "outcue": "between April and May of 2025"
+     }
+    ],
+    "reasoning": "Attorney Eric Rice: her face 'was selected by an AI program and an officer reviewed her social media'; then the fake US military ID bank fraud.",
+    "flags": [
+     "attorney says AI examined surveillance video; outline row says fake-ID photo \u2014 reconcile"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+    "source_type": "network",
+    "score": 60,
+    "reason": "explains reliance on AI, but misnames her"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Va0NVtZYpqE",
+    "source_type": "affiliate",
+    "score": 45,
+    "reason": "commissioners, not the match"
+   }
+  ],
+  "cannot_determine": [
+   "which image was actually submitted (fake ID vs surveillance)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A4",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+  "platform": "youtube",
+  "title": "Grandmother falsely accused of bank fraud sues Fargo, North Dakota, over AI facial recognition (CBS News)",
+  "status": "PICK",
+  "source_mix": {
+   "network": 2,
+   "affiliate": 3
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+    "source_type": "network",
+    "score": 74,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "1:16",
+      "out": "1:46",
+      "outcue": "the same clothes she was booked in in July"
+     }
+    ],
+    "reasoning": "CBS: several months behind bars, couldn't post bail, bank records proved she was in Tennessee, released Christmas Eve in the same clothes she was booked in.",
+    "flags": [
+     "CBS misnames her 'Lipscomb' at 0:32 and 1:08 \u2014 outside this segment"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=EcWQI5Zrj4Q",
+    "source_type": "affiliate",
+    "score": 60,
+    "reason": "says 'two months' in ND jail \u2014 conflicts"
+   }
+  ],
+  "cannot_determine": [
+   "none"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A5",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=SGFrtUVY6nc",
+  "platform": "youtube",
+  "title": "Fargo Police Chief admits mistakes were made in Lipps case (KVRR)",
+  "status": "THROTTLED",
+  "source_mix": {
+   "affiliate": 4,
+   "raw_footage": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=SGFrtUVY6nc",
+    "source_type": "affiliate",
+    "score": null,
+    "tone": null,
+    "authenticity": null,
+    "quality": null,
+    "fit": null,
+    "segments": [],
+    "reasoning": "Best-fit clip by title; caption fetch bot-walled twice.",
+    "flags": [
+     "THROTTLED"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=Va0NVtZYpqE",
+    "source_type": "affiliate",
+    "score": 40,
+    "reason": "captioned, but it's city commissioners, not the chief"
+   }
+  ],
+  "cannot_determine": [
+   "whether the chief is heard on tape"
+  ],
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "10-07-A6",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+  "platform": "youtube",
+  "title": "Grandmother falsely accused of bank fraud sues Fargo, North Dakota, over AI facial recognition (CBS News)",
+  "status": "PICK",
+  "source_mix": {
+   "network": 1,
+   "affiliate": 3,
+   "creator_long": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+    "source_type": "network",
+    "score": 76,
+    "tone": 8,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:19",
+      "outcue": "for false arrest"
+     },
+     {
+      "in": "0:42",
+      "out": "0:57",
+      "outcue": "what she believes was malicious prosecution"
+     }
+    ],
+    "reasoning": "CBS anchor intro (never set foot in ND, nearly 6 months, suing Fargo) butted to the civil-rights / malicious-prosecution claims.",
+    "flags": [
+     "the 0:19\u20130:42 gap contains the 'Lipscomb' misnaming \u2014 keep it out"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=IAiYyMtiLpY",
+    "source_type": "creator_long",
+    "score": 50,
+    "reason": "radio interview with attorney, 13 min, audio-first"
+   }
+  ],
+  "cannot_determine": [
+   "whether attorney appears on camera (no)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-B1",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=IO1wx3zBR6s",
+  "platform": "youtube",
+  "title": "Meet Caper Cart (Instacart)",
+  "status": "PICK \u00b7 CROP",
+  "source_mix": {
+   "creator_short": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=IO1wx3zBR6s",
+    "source_type": "creator_short",
+    "score": 70,
+    "tone": 7,
+    "authenticity": 6,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:43",
+      "outcue": "them and even add them back"
+     },
+     {
+      "in": "0:48",
+      "out": "1:08",
+      "outcue": "your customer's"
+     }
+    ],
+    "reasoning": "Reused from LIVE_10072026; re-verified against captions this run. Company promo: cart in aisle, computer-vision cameras, location-based deals, personalized ads.",
+    "flags": [
+     "horizontal source on a vertical beat \u2014 CROP",
+     "company marketing video"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "crop framing"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-B2",
+  "pass": 2,
+  "flagged": "https://www.tiktok.com/@user60342208753/video/7679448051202657566",
+  "platform": "tiktok",
+  "title": "Target basket tracker (@user60342208753)",
+  "status": "MANUAL \u00b7 UNVERIFIED",
+  "source_mix": {
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@user60342208753/video/7679448051202657566",
+    "source_type": "first_person",
+    "score": null,
+    "tone": null,
+    "authenticity": null,
+    "quality": null,
+    "fit": null,
+    "segments": [],
+    "reasoning": "Manual lane: native TikTok is the pick. No caption track; media blocked, so no Whisper.",
+    "flags": [
+     "MANUAL"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "exact outcue"
+  ],
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "10-07-B3",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=jTKvp41lHZc",
+  "platform": "youtube",
+  "title": "License plate readers now at Home Depot, Lowe's (NBC Connecticut)",
+  "status": "PICK",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=jTKvp41lHZc",
+    "source_type": "affiliate",
+    "score": 80,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:17",
+      "out": "0:51",
+      "outcue": "now using them to prevent theft. It's an"
+     },
+     {
+      "in": "1:22",
+      "out": "1:37",
+      "outcue": "accountability, data retention."
+     }
+    ],
+    "reasoning": "Reused from LIVE_10072026; re-verified this run. Plate cameras at a Lowe's entrance, then a professor on oversight and data retention.",
+    "flags": [
+     "transcript can't say whether cameras are on screen"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "on-screen cameras"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-C1",
+  "pass": 2,
+  "flagged": "https://www.tiktok.com/@typical_redhead_/video/7192248491853303086",
+  "platform": "tiktok",
+  "title": "This McDonald's robot is wild (@typical_redhead_, Cailyn Sykora)",
+  "status": "MANUAL \u00b7 UNVERIFIED",
+  "source_mix": {
+   "first_person": 3,
+   "creator_short": 1,
+   "creator_long": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@typical_redhead_/video/7192248491853303086",
+    "source_type": "first_person",
+    "score": null,
+    "tone": null,
+    "authenticity": null,
+    "quality": null,
+    "fit": null,
+    "segments": [],
+    "reasoning": "Manual lane: the original viral TikTok (Jan 24, 2023), located via TODAY; AI adds 28 orders of McNuggets. Alternates: @resinsbiren 7198528478533258542; Taco Bell 'one thousand waters' @kristinealise 7522285144254795038 (AI hands off to a human).",
+    "flags": [
+     "MANUAL",
+     "2023 footage"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/shorts/BuNi9SWZ6hs",
+    "source_type": "creator_short",
+    "score": 20,
+    "reason": "not an AI order \u2014 a McDonald's human ordering stunt"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=j1i-84ICREA",
+    "source_type": "creator_long",
+    "score": 45,
+    "reason": "Sambucha 27 min horizontal; 15:16\u201315:22 Wendy's AI 'I am not a human'"
+   }
+  ],
+  "cannot_determine": [
+   "exact outcue"
+  ],
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "10-07-C2",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=lsqR0oxtvOw",
+  "platform": "youtube",
+  "title": "Burger King's new AI chatbot to help employees with operations, improve 'friendliness' (NBC News)",
+  "status": "WEAK",
+  "source_mix": {
+   "network": 2,
+   "raw_footage": 1,
+   "affiliate": 1,
+   "creator_long": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=lsqR0oxtvOw",
+    "source_type": "network",
+    "score": 58,
+    "tone": 7,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 5,
+    "segments": [
+     {
+      "in": "1:11",
+      "out": "1:16",
+      "outcue": "hospitality is fundamentally human"
+     },
+     {
+      "in": "1:24",
+      "out": "1:44",
+      "outcue": "AI, please remove that item"
+     }
+    ],
+    "reasoning": "NBC on Burger King's Patty AI headset: 'hospitality is fundamentally human,' then AI drive-thru chatbots 'aren't quite there yet' with a customer glitch clip.",
+    "flags": [
+     "about BK's AI headset (Feb), not the Sept 23 drive-offs quote"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=yvhAOqF_FAc",
+    "source_type": "network",
+    "score": 0,
+    "reason": "captions null"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=OCNwXK-L5ic",
+    "source_type": "raw_footage",
+    "score": 0,
+    "reason": "captions null"
+   }
+  ],
+  "cannot_determine": [
+   "whether a newer drive-off package exists (CBC/others throttled)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-C3",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=sXSImjg6CMU",
+  "platform": "youtube",
+  "title": "McDonald's Is Retraining 2 Million Workers - Here's Why (Ecomix Simple)",
+  "status": "WEAK",
+  "source_mix": {
+   "network": 2,
+   "creator_long": 2
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=sXSImjg6CMU",
+    "source_type": "creator_long",
+    "score": 50,
+    "tone": 6,
+    "authenticity": 4,
+    "quality": 6,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:16",
+      "out": "0:29",
+      "outcue": "Not on the app. On hospitality."
+     }
+    ],
+    "reasoning": "Says it straight: Oct 5, retrain more than 2 million people, 'not on the app, on hospitality.' Tiny channel (47 views), possibly synthetic narration.",
+    "flags": [
+     "possible AI narration / content mill",
+     "clearance unknown"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=wfZdU_bqfYg",
+    "source_type": "network",
+    "score": 0,
+    "reason": "GMA AI drive-thru \u2014 captions throttled"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=el_f82ZXGME",
+    "source_type": "network",
+    "score": 0,
+    "reason": "CBS 2024 \u2014 captions throttled"
+   }
+  ],
+  "cannot_determine": [
+   "whether the voice is synthetic"
+  ],
+  "transcript_rung": 1
+ }
+]

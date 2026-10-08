@@ -1,0 +1,174 @@
+[
+ {
+  "beat_id": "10-07-A2",
+  "url": "https://www.youtube.com/watch?v=EcWQI5Zrj4Q",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:16",
+    "out": "0:31",
+    "outcue": "a state she'd never even visited"
+   }
+  ],
+  "status": "WEAK",
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A3",
+  "url": "https://www.youtube.com/watch?v=EcWQI5Zrj4Q",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:31",
+    "out": "0:46",
+    "outcue": "an arrest warrant to be issued for her"
+   },
+   {
+    "in": "0:46",
+    "out": "1:00",
+    "outcue": "between April and May of 2025"
+   }
+  ],
+  "status": "PICK",
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A4",
+  "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+  "platform": "youtube",
+  "source_type": "network",
+  "segments": [
+   {
+    "in": "1:16",
+    "out": "1:46",
+    "outcue": "the same clothes she was booked in in July"
+   }
+  ],
+  "status": "PICK",
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-A5",
+  "url": "https://www.youtube.com/watch?v=SGFrtUVY6nc",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [],
+  "status": "THROTTLED",
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "10-07-A6",
+  "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+  "platform": "youtube",
+  "source_type": "network",
+  "segments": [
+   {
+    "in": "0:00",
+    "out": "0:19",
+    "outcue": "for false arrest"
+   },
+   {
+    "in": "0:42",
+    "out": "0:57",
+    "outcue": "what she believes was malicious prosecution"
+   }
+  ],
+  "status": "PICK",
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-B1",
+  "url": "https://www.youtube.com/watch?v=IO1wx3zBR6s",
+  "platform": "youtube",
+  "source_type": "creator_short",
+  "segments": [
+   {
+    "in": "0:00",
+    "out": "0:43",
+    "outcue": "them and even add them back"
+   },
+   {
+    "in": "0:48",
+    "out": "1:08",
+    "outcue": "your customer's"
+   }
+  ],
+  "status": "PICK \u00b7 CROP",
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-B2",
+  "url": "https://www.tiktok.com/@user60342208753/video/7679448051202657566",
+  "platform": "tiktok",
+  "source_type": "first_person",
+  "segments": [],
+  "status": "MANUAL \u00b7 UNVERIFIED",
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "10-07-B3",
+  "url": "https://www.youtube.com/watch?v=jTKvp41lHZc",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:17",
+    "out": "0:51",
+    "outcue": "now using them to prevent theft. It's an"
+   },
+   {
+    "in": "1:22",
+    "out": "1:37",
+    "outcue": "accountability, data retention."
+   }
+  ],
+  "status": "PICK",
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-C1",
+  "url": "https://www.tiktok.com/@typical_redhead_/video/7192248491853303086",
+  "platform": "tiktok",
+  "source_type": "first_person",
+  "segments": [],
+  "status": "MANUAL \u00b7 UNVERIFIED",
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "10-07-C2",
+  "url": "https://www.youtube.com/watch?v=lsqR0oxtvOw",
+  "platform": "youtube",
+  "source_type": "network",
+  "segments": [
+   {
+    "in": "1:11",
+    "out": "1:16",
+    "outcue": "hospitality is fundamentally human"
+   },
+   {
+    "in": "1:24",
+    "out": "1:44",
+    "outcue": "AI, please remove that item"
+   }
+  ],
+  "status": "WEAK",
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-07-C3",
+  "url": "https://www.youtube.com/watch?v=sXSImjg6CMU",
+  "platform": "youtube",
+  "source_type": "creator_long",
+  "segments": [
+   {
+    "in": "0:16",
+    "out": "0:29",
+    "outcue": "Not on the app. On hospitality."
+   }
+  ],
+  "status": "WEAK",
+  "transcript_rung": 1
+ }
+]

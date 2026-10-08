@@ -1,0 +1,478 @@
+[
+ {
+  "beat_id": "10-07-A2",
+  "episode": "10-07",
+  "segment_title": "A COMPUTER SAID IT WAS HER FACE\u2026 SHE SPENT MONTHS IN JAIL",
+  "script_text": "Angela Lipps, 50, grandmother of five from Elizabethton, Tennessee, arrested July 2025 while babysitting a neighbor's children, on bank fraud charges in Fargo, North Dakota, a state she had never been to. Her attorney: 'taken away at gunpoint.' Interviewed by WDAY.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Angela Lipps facial recognition wrongful arrest Fargo",
+  "visual_spec": "Tennessee grandmother on camera at home, network or affiliate interview setup",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "CBS News 6gUOZ7tYfZ8 (420K), NBC nwRB9NTx6IU (358K), FOX Nashville XJ6u1KxM3WY, WDAY interview",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Angela Lipps facial recognition wrongful arrest Fargo",
+    "Angela Lipps lawsuit"
+   ],
+   "news": [
+    "grandmother wrongly jailed AI facial recognition",
+    "Tennessee woman jailed North Dakota facial recognition error",
+    "grandmother arrested while babysitting AI match"
+   ],
+   "platform": [
+    "AI arrested wrong grandma",
+    "facial recognition wrong woman jailed"
+   ],
+   "shorts": [
+    "grandma jailed for months AI mistake",
+    "she was babysitting when police came",
+    "AI got the wrong grandma #facialrecognition"
+   ],
+   "victim": []
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-07-A3",
+  "episode": "10-07",
+  "segment_title": "A COMPUTER SAID IT WAS HER FACE\u2026 SHE SPENT MONTHS IN JAIL",
+  "script_text": "West Fargo police ran a photo from the real suspect's fake ID through AI facial recognition; it returned Angela Lipps. Fargo detectives (former Det. Lucas Heck) treated it as an ID and charged her; the suit says she looked nothing like the surveillance footage.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Fargo facial recognition fake ID photo Angela Lipps",
+  "visual_spec": "network explainer, surveillance still vs photo, lower-third",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "CBS/ABC/NBC network coverage",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "West Fargo facial recognition fake ID Lipps",
+    "Fargo police facial recognition Lipps"
+   ],
+   "news": [
+    "how AI facial recognition led to wrongful arrest",
+    "police facial recognition match wrong woman",
+    "facial recognition error jail months"
+   ],
+   "platform": [
+    "facial recognition wrongful arrest explained",
+    "AI face match police mistake"
+   ],
+   "shorts": [
+    "AI matched the wrong face",
+    "police trusted the computer #AI"
+   ],
+   "victim": []
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-07-A4",
+  "episode": "10-07",
+  "segment_title": "A COMPUTER SAID IT WAS HER FACE\u2026 SHE SPENT MONTHS IN JAIL",
+  "script_text": "Angela Lipps sat in jail for months (about six per ABC/MPR, three per WCTI) in Carter County, Tennessee, until her attorney produced bank records proving she was in Tennessee; charges dismissed Christmas Eve 2025. Suit says she lost her home and car.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Angela Lipps released Christmas Eve bank records",
+  "visual_spec": "grandmother describing jail, family photos, affiliate interview",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "same packages as A2; NBC 'Police release Tennessee grandmother'",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Angela Lipps released bank records",
+    "Tennessee grandmother released AI facial recognition"
+   ],
+   "news": [
+    "grandmother released after months in jail AI error",
+    "woman freed bank records proved innocence",
+    "wrongly jailed grandmother lost home and car"
+   ],
+   "platform": [
+    "jailed 6 months AI mistake"
+   ],
+   "shorts": [
+    "6 months in jail for nothing",
+    "she lost her home over an AI mistake"
+   ],
+   "victim": []
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-07-A5",
+  "episode": "10-07",
+  "segment_title": "A COMPUTER SAID IT WAS HER FACE\u2026 SHE SPENT MONTHS IN JAIL",
+  "script_text": "March 24, 2026: then-Fargo Police Chief Dave Zibolski admits 'errors were made' in the Lipps investigation, apologizes to the community and issues a new facial-recognition policy.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Fargo police chief Zibolski errors Lipps",
+  "visual_spec": "police chief at podium, press conference",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "KVRR 'Fargo Police Chief admits mistakes were made in Lipps case' SGFrtUVY6nc; KVRR 'Fargo reviews AI use' Va0NVtZYpqE",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Fargo police chief Zibolski errors Lipps",
+    "Fargo police chief admits mistakes Lipps"
+   ],
+   "news": [
+    "Fargo police chief apologizes facial recognition arrest",
+    "Fargo police new facial recognition policy",
+    "police chief admits errors AI arrest"
+   ],
+   "platform": [
+    "police admit AI mistake"
+   ],
+   "shorts": [
+    "police chief admits they got it wrong"
+   ],
+   "victim": []
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-07-A6",
+  "episode": "10-07",
+  "segment_title": "A COMPUTER SAID IT WAS HER FACE\u2026 SHE SPENT MONTHS IN JAIL",
+  "script_text": "Sept 16, 2026: Angela Lipps files a $10 million federal civil-rights lawsuit against the City of Fargo and former Detective Lucas Heck; attorney Eric Rice: 'Can you imagine being taken away at gunpoint, held in detention, taken from your family?' City: no comment on pending litigation.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Angela Lipps $10 million lawsuit Fargo",
+  "visual_spec": "attorney at press conference or lawsuit graphic, network lower-third",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "CBS 6gUOZ7tYfZ8, KSTP kN2B46HLn2U, WKRN zG6mhba7hfk",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Angela Lipps $10 million lawsuit Fargo",
+    "Lipps sues Fargo Lucas Heck"
+   ],
+   "news": [
+    "grandmother sues for 10 million AI facial recognition",
+    "Tennessee woman sues Fargo police wrongful arrest",
+    "wrongful arrest lawsuit facial recognition 2026"
+   ],
+   "platform": [
+    "grandma sues police AI"
+   ],
+   "shorts": [
+    "she's suing for 10 million"
+   ],
+   "victim": []
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-07-B1",
+  "episode": "10-07",
+  "segment_title": "YOUR GROCERY STORE IS WATCHING EVERY STEP YOU TAKE",
+  "script_text": "Instacart's Caper Cart: cameras pointed into your basket and out at the aisle, a location tracker, and ads based on where you stand. Instacart says it tripled deployments in a year, 100+ cities in 15 states, at Kroger, ShopRite, Schnucks, Sprouts, Wegmans, Weis and Geissler's.",
+  "orientation": "vertical",
+  "clip_role": "explainer_demo/creator_short",
+  "news_anchor": "Instacart Caper Cart cameras",
+  "visual_spec": "smart cart in a grocery aisle, screen on the handle, items dropped in",
+  "platforms": [
+   "shorts",
+   "tiktok",
+   "instagram"
+  ],
+  "offsite_likely": false,
+  "priority": 3,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "prior pick LIVE_10072026: Instacart 'Meet Caper Cart' IO1wx3zBR6s (horizontal)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Instacart Caper Cart"
+   ],
+   "news": [],
+   "platform": [
+    "caper cart grocery",
+    "smart cart cameras"
+   ],
+   "shorts": [
+    "this cart is watching you",
+    "smart cart at kroger"
+   ],
+   "victim": []
+  },
+  "lane": "reuse",
+  "visual_note": "BROLL \u2014 picture only",
+  "role_note": "b-roll of the cart; closest role is creator_short",
+  "prior_pick": {
+   "url": "https://www.youtube.com/watch?v=IO1wx3zBR6s",
+   "status": "PICK \u00b7 CROP",
+   "segments": [
+    {
+     "in": "0:00",
+     "out": "0:43",
+     "outcue": "them and even add them back"
+    },
+    {
+     "in": "0:48",
+     "out": "1:08",
+     "outcue": "your customer's"
+    }
+   ],
+   "source": "rossen-story-outline/references/example_1007_videos.md (from LIVE_10072026 picks.json)"
+  }
+ },
+ {
+  "beat_id": "10-07-B2",
+  "episode": "10-07",
+  "segment_title": "YOUR GROCERY STORE IS WATCHING EVERY STEP YOU TAKE",
+  "script_text": "Target worker Elijah (@user60342208753) films the black box screwed onto a red store basket and calls it a tracker; posted Aug 29, 3.4M views, 392K likes. Snopes: a Bluetooth beacon talking to the LED lights overhead, which pass location to the store's app.",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "news_anchor": "Target basket tracker TikTok",
+  "visual_spec": "store worker handheld vertical, close-up of black box on a red basket",
+  "platforms": [
+   "tiktok",
+   "shorts"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "native TikTok in hand; the post is the pick",
+  "source_native": "tiktok",
+  "queries": {
+   "anchor": [
+    "Target basket tracker"
+   ],
+   "news": [],
+   "platform": [
+    "basket tracker target"
+   ],
+   "shorts": [
+    "the basket is tracking you"
+   ],
+   "victim": []
+  },
+  "lane": "manual",
+  "prior_pick": {
+   "url": "https://www.tiktok.com/@user60342208753/video/7679448051202657566",
+   "status": "MANUAL \u00b7 UNVERIFIED",
+   "source": "example_1007_videos.md (LIVE_10072026)"
+  }
+ },
+ {
+  "beat_id": "10-07-B3",
+  "episode": "10-07",
+  "segment_title": "YOUR GROCERY STORE IS WATCHING EVERY STEP YOU TAKE",
+  "script_text": "Lowe's privacy statement says in-store cameras track which aisles you walk and how long you stay; some store parking lots read your license plate. Home Depot and Lowe's scanning plates as anti-theft tech.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Lowe's Home Depot license plate readers",
+  "visual_spec": "plate camera at a store entrance, local news package",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "prior pick NBC Connecticut jTKvp41lHZc (verified outcues, butt-cut)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Home Depot Lowe's license plate readers"
+   ],
+   "news": [
+    "stores scanning license plates parking lot"
+   ],
+   "platform": [],
+   "shorts": [
+    "the store scanned your plate"
+   ],
+   "victim": []
+  },
+  "lane": "reuse",
+  "prior_pick": {
+   "url": "https://www.youtube.com/watch?v=jTKvp41lHZc",
+   "status": "PICK",
+   "segments": [
+    {
+     "in": "0:17",
+     "out": "0:51",
+     "outcue": "now using them to prevent theft. It's an"
+    },
+    {
+     "in": "1:22",
+     "out": "1:37",
+     "outcue": "accountability, data retention."
+    }
+   ],
+   "source": "example_1007_videos.md (LIVE_10072026)"
+  }
+ },
+ {
+  "beat_id": "10-07-C1",
+  "episode": "10-07",
+  "segment_title": "THEY REPLACED THE CASHIER WITH A ROBOT\u2026 NOW THEY'RE BRINGING THE HUMANS BACK",
+  "script_text": "A drive-thru customer films the AI voice getting the order wrong. Known viral fails: Taco Bell AI drive-thru '18,000 waters' (2025) and McDonald's IBM AI nugget loop (2024; McDonald's ended the test June 2024). Replaces Jeff's own drive-thru test, which he won't record.",
+  "orientation": "vertical",
+  "clip_role": "evidence",
+  "news_anchor": "AI drive-thru order fail",
+  "visual_spec": "handheld vertical from the driver's seat, drive-thru speaker screen",
+  "platforms": [
+   "tiktok",
+   "shorts",
+   "facebook",
+   "reddit"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "viral fails exist: Taco Bell 18,000 waters ylS3xWUdJ3E (Short, 21K), Sambucha 'I Tested AI Drive Thrus' 3.3M (horizontal); originals likely TikTok",
+  "source_native": "tiktok",
+  "queries": {
+   "anchor": [
+    "Taco Bell AI drive thru 18000 waters",
+    "McDonald's AI drive thru nuggets"
+   ],
+   "news": [],
+   "platform": [
+    "AI drive thru fail",
+    "drive thru robot wrong order",
+    "#aidrivethru"
+   ],
+   "shorts": [
+    "AI drive thru fail",
+    "the drive thru robot lost it",
+    "she ordered 1 and got 9"
+   ],
+   "victim": [
+    "the AI kept adding nuggets"
+   ]
+  },
+  "lane": "search+manual"
+ },
+ {
+  "beat_id": "10-07-C2",
+  "episode": "10-07",
+  "segment_title": "THEY REPLACED THE CASHIER WITH A ROBOT\u2026 NOW THEY'RE BRINGING THE HUMANS BACK",
+  "script_text": "Sept 23, 2026: Burger King VP of brand technologies Chakri Somisetti says at FSTEC that pilot restaurants saw drive-offs because guests didn't want to talk to a bot; voice AI still in ~1,500 drive-thrus; building an easier way to reach a human; kiosks moving to the side walls.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Burger King AI drive-thru drive-offs human option",
+  "visual_spec": "news package, Burger King drive-thru exterior, lower-third",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "commentary_only",
+  "sourcability_note": "YouTube: 'Restaurant Chain News' (12 views) only; trade print (Restaurant Business, NRN); Fox Business Varney segment on fox.com per pre-bible",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Burger King AI drive thru drive-offs",
+    "Burger King human option drive thru"
+   ],
+   "news": [
+    "customers drive away from AI drive thru",
+    "fast food chains bring back human workers",
+    "Burger King AI voice ordering customers"
+   ],
+   "platform": [
+    "burger king ai drive thru"
+   ],
+   "shorts": [
+    "people drove off rather than talk to the bot"
+   ],
+   "victim": []
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-07-C3",
+  "episode": "10-07",
+  "segment_title": "THEY REPLACED THE CASHIER WITH A ROBOT\u2026 NOW THEY'RE BRINGING THE HUMANS BACK",
+  "script_text": "McDonald's 'Make It Golden' (announced Sept 23): multi-year hospitality training for 2M+ workers worldwide starting Founder's Day Oct 5, after guests called visits rushed and cold; wants an employee on hand for anyone who prefers a person. Same week: 'Archy' AI drive-thru voice, U.S. rollout through 2027.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "McDonald's Make It Golden hospitality training",
+  "visual_spec": "news package, McDonald's counter and crew, lower-third",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "commentary_only",
+  "sourcability_note": "YouTube: Ecomix Simple 'McDonald's Is Retraining 2 Million Workers' (47 views); no network package found",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "McDonald's Make It Golden",
+    "McDonald's retraining 2 million workers"
+   ],
+   "news": [
+    "McDonald's hospitality training friendlier service",
+    "McDonald's brings back human touch",
+    "McDonald's AI drive thru Archy"
+   ],
+   "platform": [
+    "mcdonalds make it golden"
+   ],
+   "shorts": [
+    "McDonald's wants workers to be nicer"
+   ],
+   "victim": []
+  },
+  "lane": "search"
+ }
+]
