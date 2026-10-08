@@ -23,3 +23,7 @@ Passed to the producer, not fixed (4 WARNINGs, 4 NOTEs):
 Notes: sponsor-ties cue sits after TERESA EXITS (easy to miss); "tracks scams like these" is a slight stretch (her beat is robocalls, junk fees, product safety); Kathryn's was a store, not a kiosk; Graphic 003 still out of order.
 
 All 13 V2 WARNINGs still stand.
+
+## Producer edit, 10/8: phone repair kiosk cut
+
+The producer cut A3. Removed: the tease line ("PLUS THE MALL KIOSK THAT TAKES YOUR CRACKED PHONE…"), the Kentucky/WCPO block and clip 3. Clips 4–9 are now 3–8. Teresa now follows the bank-teller beat. The Google Doc was edited in place to match. check_bible.py: no errors, 1,667 spoken words, 8 clips. This was a producer cut with no new facts, so the review loop didn't run again.
