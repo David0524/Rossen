@@ -376,7 +376,7 @@ def check(path, day="wednesday"):
         r"\b(CBS|NBC|ABC|FOX|CNN|MSNBC|PBS|NPR|INSIDE EDITION|GOOD MORNING "
         r"AMERICA|TODAY SHOW|DATELINE|20/20|60 MINUTES|NEW YORK POST|NY POST|"
         r"USA TODAY|WASHINGTON POST|NEW YORK TIMES|WALL STREET JOURNAL|"
-        r"ASSOCIATED PRESS|REUTERS|INVESTIGATETV|ABC\d+|[KW][A-Z]{2,3} ?(NEWS|\d+)|"
+        r"ASSOCIATED PRESS|REUTERS|INVESTIGATETV|ABC\d+|[KW][A-Z]{2,3} NEWS|[KW][A-Z]{3} ?\d+|"
         r"[KW][A-Z]{2,3}'S (REPORTING|STORY|INVESTIGATION))\b")
     outlet_hits = [s for s in spoken if OUTLETS.search(s.upper())
                    and not s.upper().startswith("(")]
