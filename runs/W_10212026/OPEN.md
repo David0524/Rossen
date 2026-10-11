@@ -1,7 +1,7 @@
 # 10/21 F2 (story show) + 10/16 F1 — open items
 
 Combined pre-bible built 10/11: `10_16_and_10_21_Pre_Bible_Pitch.docx` (source `.md`), 12 stories.
-Google Doc (in the `10/16 --` folder): https://docs.google.com/document/d/1M_wcmTRcnEJ76WLK3wjaKqs5b51FJzFUhLGumcPsuA0/edit
+Google Doc (in the `10/16 --` folder): https://docs.google.com/document/d/1FXRgxUhcz0AoRGrFzyW58TifjtvAgmdJzOf-R0Yaqv4/edit
 
 - [ ] Producer / Jeff picks for each show (rec: F1 TV lead + $2 water/phone B; F2 lottery A + celebrity or hug B + rental damage C)
 - [ ] Pick two "trusted hands" stories at most (lottery, phone, teller, hug)

@@ -1,37 +1,25 @@
 # PRE-BIBLE PITCH SHEET
 
-Shows: **Fri Oct 16, 2026 (F1, live, deals with Trey Donovan)** and **Wed Oct 21, 2026 (F2 story show, tapes Fri Oct 16)** · One slate for both, every story pitched as an A unless marked · Prepared Sun, Oct 11, 2026 · Kyle and David's list plus our own research. Checked against official releases, police and court reporting, and YouTube counts observed Oct 11. Repeats checked against the 62 transcripts, the full 9/29 channel title list (Jan–Sep) and the 10/7, 10/9 and 10/14 bibles. Audience 55+. F1 rule: nothing knocks Amazon.
+**F1 Fri 10/16** (live, deals with Trey Donovan) and **F2 Wed 10/21** (tapes 10/16) · Prepared Oct 11 · Views observed Oct 11 · Repeats checked against transcripts, the Jan–Sep title list and the 10/7–10/14 bibles · F1 rule: nothing knocks Amazon.
 
 ## THE SHORTLIST — RANKED
 
 | # | Story | The sexy beat | Viral | Slot | Confidence |
 |---|---|---|---|---|---|
-| 1 | **THE CASHIER KEPT HIS WINNING TICKET** | You hand your ticket over to be checked, and you never see your winnings. | 🔥 YouTube 252K (WKMG) · 255K (WPLG) | F2 A (recommended) | HIGH — Powerball run is the peg |
-| 2 | **YOUR TV IS LISTENING — EVEN WHEN IT'S OFF** | The TV in your bedroom watches what you watch, and researchers say it may be listening. | 🔥 YouTube 8.1M (Gamers Nexus) · 1.07M (She Prepares) | F1 lead (recommended) | HIGH — our third TV video; listening claim disputed |
-| 3 | **SHE PAID $2 FOR WATER — THEN LOST $2,400** | A stranger gets ten seconds with your phone, and your bank says it's your fault. | 🔥 YouTube 72K in 5 days (11Alive) · 3.1M (phone-store bodycam) | F1 B, or F2 A | MEDIUM — fresh and hot; QR angle aired 5/27 |
-| 4 | **THE BANK TELLER WAS EMPTYING HER ACCOUNT** | The friendly employee at the counter is the one draining your money. | 🔥 YouTube 432K (PNC teller bodycam) | F1 B, or F2 A | MEDIUM — cases span 2023–2026 |
-| 5 | **A CELEBRITY MESSAGED HER — IT COST HER $81,000** | A "star" writes to you on Facebook, and he wants your savings. | 🔥 YouTube 585K (Inside Edition) · 296K (KTLA) | F2 A (alternate) | MEDIUM — best 55+ victim is from May |
-| 6 | **THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO** | Weeks after your trip, a damage bill arrives, and the "proof" photo is fake. | 🔥 YouTube 547K in 5 days (KSL) · 234K (CBS Chicago) | F2 A or B · TIME-SENSITIVE (holiday travel) | MEDIUM — travel lags for us |
-| 7 | **THE STRANGER WHO HUGGED HER STOLE HER GOLD** | A friendly hug, a "gift" necklace, and your real gold is gone. | 🔥 YouTube 1.1M (NDTV, Canada) · 447K (FOX 13 Seattle) | F2 B, A in a pinch | MEDIUM — small US losses |
-| 8 | **WINTER BILLS ARE GOING UP — AND THIS ONE CALL CAN DOUBLE YOURS** | A caller offers to "protect" your rate. Your rate nearly doubles. | 🔥 YouTube 1.83M (60 Minutes) · 730K (Climate Town) | F1 lead or B · TIME-SENSITIVE | MEDIUM — no 55+ victim yet |
-| 9 | **YOUR INSURANCE CARD IS COSTING YOU AT THE PHARMACY** | The pharmacist knows a cheaper price and doesn't have to tell you. | — | F1 B (Jeff at the counter) | MEDIUM — no victim; needs a demo |
-| 10 | **WALMART'S NEW PRICE TAGS CAN CHANGE IN SECONDS** | The shelf price can change in seconds, and their patents describe pricing you, not the product. | 🔥 YouTube 3.3M (She Prepares) · 588K in 2 days (MS NOW) | F1 B | MEDIUM — fourth time near this topic |
-| 11 | **YOUR GRANDSON REALLY WAS ARRESTED — THE CALL IS STILL A SCAM** | The arrest is real, so checking the jail website makes the scam look true. | — | F2 B | MEDIUM — new twist, low heat |
-| 12 | **YOU'RE PAYING FOR THE SAME CELL TOWERS** | Your carrier sells the same network for far less under another name. | — (creator 466K) | F1 C (deals lead-in) | MEDIUM — service story, not a scam |
+| 1 | **LOTTERY CLERK** | You hand over your ticket and never see the winnings. | 🔥 252K · 255K | F2 A (rec.) | HIGH |
+| 2 | **TV LISTENING** | Your TV watches what you watch, and may be listening. | 🔥 8.1M · 1.07M | F1 lead (rec.) | HIGH — 3rd TV video |
+| 3 | **$2 WATER, $2,400 GONE** | Ten seconds with your phone, and the bank says it's your fault. | 🔥 72K in 5 days · 3.1M | F1 B / F2 A | MEDIUM |
+| 4 | **BANK TELLER** | The friendly teller is the one draining you. | 🔥 432K | F1 B / F2 A | MEDIUM |
+| 5 | **FAKE CELEBRITY** | A "star" on Facebook wants your savings. | 🔥 585K · 296K | F2 alt. A | MEDIUM |
+| 6 | **RENTAL DAMAGE** | The damage bill arrives weeks later. The photo is fake. | 🔥 547K in 5 days | F2 A/B · holidays | MEDIUM — travel lags |
+| 7 | **HUG SCAM** | A hug, a "gift" necklace, and your gold is gone. | 🔥 1.1M (Canada) · 447K | F2 B | MEDIUM |
+| 8 | **WINTER BILL CALL** | A caller "protects" your rate, and it nearly doubles. | 🔥 1.83M · 730K | F1 lead/B | MEDIUM |
+| 9 | **PHARMACY PRICE** | The cheaper price exists. Nobody has to tell you. | — | F1 B (demo) | MEDIUM |
+| 10 | **WALMART TAGS** | Their patents describe pricing you, not the product. | 🔥 3.3M · 588K | F1 B | MEDIUM — repeat |
+| 11 | **REAL ARREST, FAKE BAIL** | The arrest is real, so the scam checks out. | — | F2 B | MEDIUM |
+| 12 | **CELL TOWERS** | Same network, cheaper name. | — | F1 C | MEDIUM |
 
-**SLATE FIT:** Fills both shows with options left over.
-
-- **F1 Fri 10/16:**
-  - Lead with **#2** (live TV demo).
-  - B: **#3**, the phone story. It has a villain, a victim, and a bank that says no.
-  - Before Trey's deals block: **#9** or **#12**.
-  - **#10** if the room wants the Walmart heat, or **#8** if it wants the season.
-- **F2 Wed 10/21:**
-  - A: **#1**.
-  - B: **#5** or **#7**.
-  - C: **#6**, holiday travel.
-  - Alternate A: **#5**.
-- ⚠️ **Too many "trusted hands" stories in one week:** #1, #3, #4 and #7 are all "someone you trust takes your money." Pick two across both shows.
+**SLATE FIT:** F1: #2 lead, #3 B, #9 or #12. F2: #1 A, #5 or #7 B, #6 C. ⚠️ #1, #3, #4, #7 share one theme. Pick two.
 
 **Dropped:**
 - Medicare plan letters: aired 10/9, including the no-health-questions Medigap right.
