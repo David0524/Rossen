@@ -32,3 +32,30 @@ Reference if Drive is requested: `!Shows` folder id `1uwPmH5sTUldGiUkgILvmr2vu6O
 ## Audience and standing editorial notes
 - Audience is 55+. Nothing kids-focused.
 - Friday is Amazon/deals; deals guest Trey Donovan unless told otherwise.
+
+## Standing notes (carried from the week of 10/5/2026)
+
+Producer rulings that hold every week:
+- The bible is written from the outline's locked clips (FINAL): numbered markers, `OUT:` with the outcue,
+  the red source line under it, plus the companion source log. DRAFT/`XXX` only when no clips exist yet.
+- The reviewer stays strict. Lines the producer keeps over a reviewer flag are one-offs, not rules.
+- No skill changes until the producer approves. Don't edit the producer's Docs unless asked.
+- Target is fine, but never the title or the main story.
+- Graphic requests: deliver a ChatGPT-ready image prompt in chat. Keep "police say" / accused framing on screen.
+
+Workarounds:
+- Drive, only when asked: .docx → `tools/bible_docx_to_html.py` → upload the HTML as a new Google Doc in the
+  show folder. Edit native Docs in place (Docs connector, guarded by revisionId).
+- YouTube captions and media get bot-walled from this container. Probe once, wait 5+ minutes, retry once
+  through `fetch_many`. Use the run's cached `transcripts.json` before re-fetching. A 30-minute wait has
+  cleared it before.
+- News-site video (WMBF / Arc Publishing) is reachable. Run Whisper on it, but check real length with
+  ffprobe: site metadata has been 10x wrong.
+- TikTok refuses requests from here. TikTok clips are a manual pull; say so instead of retrying.
+
+Skill sync:
+- The account copies of the skills (synced read-only at `/root/.claude/skills/synced/…`) can drift from
+  the repo. Before editing a skill, diff it against the synced copy. If both changed, three-way merge from
+  the last shared commit, ask the producer about real contradictions, then send `.skill` packages to upload.
+
+Each run's open items live in `runs/<RUN_ID>/OPEN.md`, not here.
