@@ -6,18 +6,18 @@
 
 | # | Story | The sexy beat | Viral | Slot | Confidence |
 |---|---|---|---|---|---|
-| 1 | **LOTTERY CLERK** | You hand over your ticket and never see the winnings. | 🔥 252K · 255K | F2 A (rec.) | HIGH |
-| 2 | **TV LISTENING** | Your TV watches what you watch, and may be listening. | 🔥 8.1M · 1.07M | F1 lead (rec.) | HIGH — 3rd TV video |
-| 3 | **$2 WATER, $2,400 GONE** | Ten seconds with your phone, and the bank says it's your fault. | 🔥 72K in 5 days · 3.1M | F1 B / F2 A | MEDIUM |
-| 4 | **BANK TELLER** | The friendly teller is the one draining you. | 🔥 432K | F1 B / F2 A | MEDIUM |
-| 5 | **FAKE CELEBRITY** | A "star" on Facebook wants your savings. | 🔥 585K · 296K | F2 alt. A | MEDIUM |
-| 6 | **RENTAL DAMAGE** | The damage bill arrives weeks later. The photo is fake. | 🔥 547K in 5 days | F2 A/B · holidays | MEDIUM — travel lags |
-| 7 | **HUG SCAM** | A hug, a "gift" necklace, and your gold is gone. | 🔥 1.1M (Canada) · 447K | F2 B | MEDIUM |
-| 8 | **WINTER BILL CALL** | A caller "protects" your rate, and it nearly doubles. | 🔥 1.83M · 730K | F1 lead/B | MEDIUM |
-| 9 | **PHARMACY PRICE** | The cheaper price exists. Nobody has to tell you. | — | F1 B (demo) | MEDIUM |
-| 10 | **WALMART TAGS** | Their patents describe pricing you, not the product. | 🔥 3.3M · 588K | F1 B | MEDIUM — repeat |
-| 11 | **REAL ARREST, FAKE BAIL** | The arrest is real, so the scam checks out. | — | F2 B | MEDIUM |
-| 12 | **CELL TOWERS** | Same network, cheaper name. | — | F1 C | MEDIUM |
+| 1 | **LOTTERY CLERK** | Clerks pocket customers' winning tickets. Police say a Walmart cashier kept an older man's winner; fake "winners" drove an 82-year-old to her bank and took $2,500. | 🔥 [252K](https://youtu.be/k0DjzPRDIsI) · [255K](https://youtu.be/WNDmLCR_1qM) | F2 A (rec.) | HIGH |
+| 2 | **TV LISTENING** | Smart TVs track everything you watch, and a September investigation claims LG sets record audio in standby (LG denies it). Jeff turns the tracking off live. | 🔥 [8.1M](https://youtu.be/6IFVTcM28KA) · [1.07M](https://youtu.be/6WT5fc-LHSc) | F1 lead (rec.) | HIGH, 3rd TV video |
+| 3 | **$2 WATER, $2,400 GONE** | An Atlanta woman scanned a street seller's QR code to pay $2 for water, shared her screen, and lost $2,400. Her bank won't refund it. | 🔥 [72K](https://youtu.be/YdDruBM2fPE) · [3.1M](https://youtu.be/Kg87lB9bkE0) | F1 B / F2 A | MED |
+| 4 | **BANK TELLER** | Tellers draining older customers' accounts: police say one left an 86-year-old with $1.50; a Santander worker got 30 months on Oct 9 for taking $125,000. | 🔥 [432K](https://youtu.be/Gft6YOOjt78) | F1 B / F2 A | MED |
+| 5 | **FAKE CELEBRITY** | Fake and deepfake celebrities message fans on Facebook. One woman lost $81,000 and her condo; the FBI just found 35 more victims of a fake NFL player. | 🔥 [585K](https://youtu.be/n9agOyCc9Mk) · [296K](https://youtu.be/JT24G9I19Cg) | F2 alt. A | MED |
+| 6 | **RENTAL DAMAGE** | Turo hosts and rental companies bill you weeks later for damage you didn't do; one host's "proof" was an old Reddit photo. Plus surprise hotel fees after you prepay. | 🔥 [547K](https://youtu.be/1_wUVS5szfw) · [234K](https://youtu.be/neITiHsagEY) | F2 A/B · holidays | MED, travel lags |
+| 7 | **HUG SCAM** | Strangers hug older people or drape a "gift" necklace on them, then swap their real gold for fakes. NYPD: 11 victims, $90,000; arrests on Long Island Oct 7. | 🔥 [1.1M](https://youtu.be/jHU-jlKV_Wk) · [447K](https://youtu.be/X_pAsqSPpgY) | F2 B | MED |
+| 8 | **WINTER BILL CALL** | Electric bills rise this winter (EIA, Oct 6). Callers claiming to be your utility switch you to a supplier charging nearly double. | 🔥 [1.83M](https://youtu.be/FX1H_rGvoes) · [730K](https://youtu.be/3fDGcZ8qpPM) | F1 lead/B | MED |
+| 9 | **PHARMACY PRICE** | Your insurance copay can cost more than the cash price with a coupon, and pharmacists don't have to tell you. Jeff checks prices at the counter. | — | F1 B (demo) | MED |
+| 10 | **WALMART TAGS** | Walmart's digital shelf tags can change prices in seconds; a new report says its patents describe pricing by what's in your cart. Walmart denies doing it. | 🔥 [3.3M](https://youtu.be/2vEZsLywo00) · [588K](https://youtu.be/eLwYS9ITuu4) | F1 B | MED, repeat |
+| 11 | **REAL ARREST, FAKE BAIL** | Scammers read jail booking lists and call families of people who really were just arrested, demanding bail by Bitcoin ATM or Zelle. | — | F2 B | MED |
+| 12 | **CELL TOWERS** | Verizon, AT&T and T-Mobile each own a cheaper brand on the same network. A family of four can save $1,000+ a year by switching. | [466K](https://youtu.be/qwr3jhdLtpM) (creator) | F1 C | MED |
 
 **SLATE FIT:** F1: #2 lead, #3 B, #9 or #12. F2: #1 A, #5 or #7 B, #6 C. ⚠️ #1, #3, #4, #7 share one theme. Pick two.
 
@@ -403,7 +403,7 @@ In 2018 Congress banned "gag clauses" that kept pharmacists from mentioning a ch
 **SLOT FIT:** The heat is A-level: She Prepares 3.3M this month, MS NOW 588K in two days. ⚠️ We covered Walmart's patents and digital tags 3/23, Maryland's ban 5/6, and Kroger's tags 9/18, and the 10/14 C mentions digital tags. **Run it only as the update:** a new report Oct 5, Walmart's denial Oct 10, and laws that just took effect. Don't re-use the 10/14 TikTok creator.
 
 > 🔥 **VIRAL CLIP** — YouTube, She Prepares "In Case You Don't Believe What Walmart Is Doing," ~3.3M views (observed Oct 11), ~4 weeks · MS NOW, ~588K, 2 days
-> https://www.youtube.com/watch?v=eLwYS9ITuu4
+> https://www.youtube.com/watch?v=2vEZsLywo00 · https://www.youtube.com/watch?v=eLwYS9ITuu4
 > *Not watched — no timecode, no outcue, no confirmation of what's on screen.*
 
 ### PACKAGING

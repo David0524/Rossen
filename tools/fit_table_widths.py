@@ -58,10 +58,12 @@ def main():
     if len(sys.argv) > 2:
         ws = [float(v) for v in sys.argv[2].split(',')]
     elif n == 6:
-        ws = [0.30, 1.25, 2.60, 1.00, 0.85, 0.90]  # measured best for the 10/16+10/21 sheet
+        ws = [0.30, 0.80, 3.50, 0.70, 0.75, 0.85]  # measured best (10/16+10/21 sheet, descriptive beats)
     else:
         ws = [TOTAL / n] * n
-    mins = [0.3] + [0.6] * (n - 1)
+    k = TOTAL / sum(ws)  # always fill exactly the text width
+    ws = [round(w * k, 2) for w in ws]
+    mins = [0.25] + [0.5] * (n - 1)
     tmp = tempfile.mkdtemp()
     try:
         best = height(path, ws, tmp)
@@ -69,7 +71,7 @@ def main():
         while improved:
             improved = False
             for i, j in itertools.permutations(range(1, n), 2):
-                c = ws[:]; c[i] -= 0.1; c[j] += 0.1
+                c = ws[:]; c[i] = round(c[i] - 0.1, 2); c[j] = round(c[j] + 0.1, 2)
                 if c[i] < mins[i]:
                     continue
                 h = height(path, c, tmp)
