@@ -11,3 +11,7 @@ Google Doc (producer asked for Drive): https://docs.google.com/document/d/1J2bDJ
 - [ ] Re-verify TV menu paths on 2026 sets
 - [ ] Expert: Stickley (TV) / Zirkle or Nofziger (#2). Deals: Trey Donovan. Sponsor read TBD.
 - [ ] Pitch email (Stage 2) once the producer picks
+
+**10/11 update:** superseded by the combined F1 + F2 sheet in `runs/W_10212026/10_16_and_10_21_Pre_Bible_Pitch.docx`.
+Google Doc (10/16 folder): https://docs.google.com/document/d/1M_wcmTRcnEJ76WLK3wjaKqs5b51FJzFUhLGumcPsuA0/edit
+The earlier F1-only Doc is still in the folder (not deleted).
