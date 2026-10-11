@@ -10,6 +10,7 @@ description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Rep
 | File | Load when |
 |---|---|
 | `references/line-rules.md` | **Every draft and every voice pass.** The team's line-level rules: open, clip in/out, tips, hedging, first person. |
+| `references/jeff-notes.md` | **Every draft.** What goes in a JEFF PLEASE NOTE comment instead of the copy. |
 | `references/producer-kit/rossen-voice.md` | Every draft. Jeff's voice from five livestreams and the 12-point checklist. |
 | `references/clip-contract.md` | Placing clip beats; any marker error from the checker. DRAFT/FINAL markers, BROLL, orientation, lead-ins. |
 | `running-orders.md` | Laying out a document. Skeletons for every show shape and the Friday walkthrough. |
@@ -83,7 +84,9 @@ conflict in the chat reply so the file can be fixed.
 
 The bible is written **from the approved Outline w/ Videos** (`rossen-story-outline`):
 the beats, the clip picked for each, its transcript excerpt, orientation and
-timecodes. The pre-bible pitch sheet is upstream of that and is a weaker input —
+timecodes. Its **Open package** line sets the tease's first lines, and each
+**Jeff should know** line becomes a `JEFF PLEASE NOTE` comment on the line it
+guards. The pre-bible pitch sheet is upstream of that and is a weaker input —
 it has unwatched candidate clips and stories Jeff hasn't approved.
 
 Decide the stage first and say which one you are writing:
@@ -140,38 +143,35 @@ outline and the source log (see "What the producer cuts before it goes to
 Jeff"). **In a DRAFT**, before clips exist, the runway is still the pipeline's
 search query, so it carries more searchable specifics than Jeff will say.
 
-### The aphorism trap
+### Keep it simple — a reference, not a script
 
-These all came out of one draft:
+David's notes (Oct 2026): condense the longer lines. Jeff glances at the
+prompter mid-sentence; a long line makes him read instead of talk.
 
-> A GUARANTEE IS A PROMISE. AN ESTIMATE IS A GUESS. REMEMBER THAT.
-> THAT IS BRILLIANT, AND IT IS EVIL.
-> THIS IS EVERY RETAILER YOU SHOP AT. NOT ONE.
+- **One short thought per line.** If a line needs a comma and an `AND`, it is
+  two lines — or one line and a cut. The checker warns on any spoken line over
+  16 words.
+- **Data only where something is on screen.** A figure lands when a clip, a
+  graphic or a screenshot carries it. With nothing on screen, give the one
+  number that matters and stop; a run of stats read cold is wordy and hard to
+  follow. The checker warns on three figure lines in a row, or two figures in
+  one line, away from a clip or graphic cue.
+- **Where the extra specifics go.** Searchable specifics stay in the runway
+  above a clip, short lines, because the pipeline reads them. Everything else
+  Jeff should know but not say — the second stat, the backstory, the caveat —
+  goes into a `JEFF PLEASE NOTE` comment (next section), not a new line.
 
-Well-built lines — that is the problem. Each is a constructed symmetry that
-collapses the moment Jeff paraphrases it. The aired equivalent is `THIS IS
-GENIUS AND SCARY!!` — a **reaction cue**. It tells Jeff how to feel about the
-fact above it and leaves the wording to him. If a line would sit comfortably in
-a well-edited magazine article, cut it.
+## JEFF PLEASE NOTE — context Jeff needs that isn't copy
 
-#### The paraphrase test
-
-A permitted mechanism reveal and a banned aphorism look almost identical. **Say
-the line in flat plain words. If the point survives, the contrast was in the
-facts — keep it. If the point evaporates, the contrast was in the sentence — cut
-it.**
-
-| Line | Said flatly | Verdict |
-|---|---|---|
-| `EVERY OTHER SCAM TEXT THREATENS YOU. THIS ONE GIVES YOU SOMETHING.` | "unlike the others, this one offers you money" | **Keep.** A fact about the scam. |
-| `YOUR GUARD DROPS, BECAUSE NOBODY EXPECTS FREE MONEY TO BE THE TRAP.` | "people don't suspect free money" | **Keep.** |
-| `A GUARANTEE IS A PROMISE. AN ESTIMATE IS A GUESS.` | "they're different things" | **Cut.** The line was the point. |
-| `THIS IS EVERY RETAILER YOU SHOP AT. NOT ONE.` | "this affects all of them" | **Cut.** |
-
-**Watch for this when adding intensity.** A draft told to add spikes reaches for
-sentence architecture (`NOT TWENTY DOLLARS. NOT FIVE. ZERO.`). **Intensity comes
-from punctuation, caps and bold, which survive paraphrase — never from a built
-sentence.** `check_bible.py` lists aphorism candidates; run the test on each.
+Jeff often sees the story minutes before he goes on. A fact that would change
+how he says a line or answers a live question — but that shouldn't be said on
+air — goes in a **Word comment anchored on that line**, opening with
+`JEFF PLEASE NOTE:`. In the draft, append it to the line as
+`{{JEFF PLEASE NOTE: ...}}`; `build_bible.py` turns it into a comment. One or
+two sentences, point first; most stories need one to three. Verification
+status stays in the source log; staging calls stay as red open decisions. What
+qualifies, with examples, is in `references/jeff-notes.md` — load it for every
+draft.
 
 ## Build stories out of people, not policies
 
@@ -412,8 +412,10 @@ Measured bands and provenance in `measurements.md`.
 - **Reference point:** the 10/14 F2 as sent (three stories, no expert)
   measured 1,373 spoken body words and 9 clips; its draft ran 1,744 and the
   producer cut it down. Write to the per-story bands, not up to them.
-- **Bullets average ~11.6 words.** Over-fragmenting is the most common failure.
-  One idea per line; ellipses as breath marks.
+- **Keep lines short.** Aired bullets average ~11.6 words; the team now wants
+  them shorter (David, Oct 2026), so aim under that and split anything over 16
+  words. Don't swing into fragments — one idea per line, ellipses as breath
+  marks.
 - **Graphics are story-type conditional** — 0–1 in a threat story, 3–4 in a
   list-shaped closer.
 
@@ -422,20 +424,40 @@ Measured bands and provenance in `measurements.md`.
 Skeletons for every show shape are in `running-orders.md`. What governs
 regardless:
 
-- **The scam-story spine:** mechanics, victim clip, **the tell**, expert,
+- **Every story and every case starts on a new page.** Put a `[[PAGE BREAK]]`
+  line between stories and between the cases inside a story (A1, A2, A3), so
+  Jeff can see where each case starts. The checker warns when a red-flag line
+  is followed by another clip with no page break between them.
+- **Open each story on a hook, not its title.** The first lines under a story
+  header must not restate the header in other words (`YOUR PLAN IS ENDING?` →
+  `-INSURERS ARE ENDING PLANS`). Open on the most alarming fact, a person or a
+  question the header doesn't already ask. The checker warns when an opening
+  line shares most of its words with the header above it.
+- **The first line after every clip is bold 23pt.** It is Jeff's re-entry
+  point coming out of the video; the builder renders it that way
+  automatically, so keep it a real line (the button), never a cue.
+- **Guests leave by full name.** The thank-you line before any exit cue carries
+  the guest's full name — `-COBI BLUMENFELD-GANTZ, THANK YOU.` — in case Jeff
+  blanks on it. Applies to booked guests (experts, the deals guest); call-in
+  callers keep whatever name the producer cleared. The checker warns when the
+  line before an exit cue has only a first name.
+- **The scam-story spine:** mechanics, victim clip, **the red flag**, expert,
   escalation (`BUT IT GETS WORSE`), tease + sponsor, scale beat (`THIS IS NOT A
   ONE-OFF`), your bank might not have your back, practical close. B is the same
   shape, shorter, often a screen demo. Lead with the most fear-inducing story,
   not the biggest dollar figure.
-- **Every victim case ends with a tell — a usable takeaway before the next case
-  starts.** One line, after the case's last clip button: `-HERE'S THE TELL:
-  NOBODY FROM A STORE DRIVES YOU TO THE BANK.` Don't hold all the advice for the
-  guest or the closing list; the best-performing live shows hand the viewer
-  something useful throughout (Ryan, Oct 8, 2026: "four clips run before any
-  protection tip"). The closing `HERE'S HOW TO PROTECT YOURSELF` list still runs,
-  and may repeat a tell as a numbered step. The tell is Jeff's line, not the
-  expert's. The checker warns on three sound clips with no `THE TELL`, `THE RED
-  FLAG` or protection line between them.
+- **Every victim case ends with a red flag — a usable takeaway before the next
+  case starts.** One line, after the case's last clip button: `-HERE'S YOUR RED
+  FLAG: NOBODY FROM A STORE SHOULD EVER DRIVE YOU TO THE BANK.` Don't hold all
+  the advice for the guest or the closing list; the best-performing live shows
+  hand the viewer something useful throughout (Ryan, Oct 8, 2026: "four clips
+  run before any protection tip"). Ryan's word for this is "the tell" — producer
+  shorthand. **Never put "the tell" on air**: it never appears in the aired
+  transcripts, while `RED FLAG` appears about 40 times, in Jeff's own lines
+  (`THAT'S A RED FLAG`, `RED FLAG NUMBER ONE`). The closing `HERE'S HOW TO
+  PROTECT YOURSELF` list still runs, and may repeat a red flag as a numbered
+  step. The red flag is Jeff's line, not the expert's. The checker warns on
+  three sound clips with no `RED FLAG` or protection line between them.
 - **Inside a story, lead with the case where the money is actually gone.** A
   real loss sets the stakes; a near-miss (stopped by a bank teller, caught in
   time) is a strong warning but lands second. Ryan, on 10/14: "Move the $26k scam
@@ -447,6 +469,17 @@ regardless:
   phrase where it lands: `-HERE'S THE ONE MOVE I PROMISED YOU: DON'T SIT DOWN.`
   An unlabeled payoff reads as a broken promise to a live viewer. The checker
   errors on any tease promise the body never repeats.
+- **The super tease sells the story; it doesn't tell it.** Tease the threat and
+  the question, never the answer: no red flags, no protection steps, no
+  outcome a clip reveals, no "the letter is real, the call isn't" payoff. If a
+  viewer could skip the show after the tease, it gave too much away. The
+  checker warns when a tease line repeats a body red flag or protection step.
+- **The super tease's first lines match the packaging.** The top of the tease
+  runs over the opening video package, so its first two or three lines describe
+  what that video shows — the moment, the person, the object on screen — not a
+  general statement about the topic. Build them from the A story's lead clip
+  (the outline names it); if the package isn't known, say so in the reply and
+  write them from the lead clip.
 - **Frame the scam as broadly as its cases are.** Every noun in a story's header
   and tease lines has to be true of every case in it. When the cases come in
   different ways — one through a free sample, one through a cheap facial — name
@@ -473,7 +506,7 @@ regardless:
 ## Retention: Ryan's structure rules
 
 Ryan's notes on the 10/09 F1 (`references/examples/ryan-notes-2026-10-09.md`,
-read it) extend his 10/14 notes in Structure above (a tell after every case,
+read it) extend his 10/14 notes in Structure above (a red flag after every case,
 the money-lost case first, tease promises paid off by name). They are the layer
 above line voice: **make the logic easy to follow, and
 give every segment a reason to keep watching.** The line-level rules above make
@@ -532,9 +565,9 @@ to segment openers and bridges.
 
 `check_bible.py` warns on label openers.
 
-### 5. A tell has to work for the people the scam targets
+### 5. A red flag has to work for the people the scam targets
 
-Test every tell against the viewer the scam is aimed at. `NO LETTER? DON'T
+Test every red flag against the viewer the scam is aimed at. `NO LETTER? DON'T
 BELIEVE THE CALL` fails everyone who did get a real letter, and for them it
 confirms the scammer's story. Add the move that works for everyone: `EVEN IF
 YOUR LETTER IS REAL, YOU DON'T FIX IT WITH THE PERSON WHO CALLED YOU. HANG UP.
@@ -543,7 +576,7 @@ guest**: viewers who leave early still leave protected.
 
 ### 6. Resolve every segment before the bridge
 
-Each segment runs **hook → setup → clip → button → the tell → what to do →
+Each segment runs **hook → setup → clip → button → the red flag → what to do →
 bridge**. Never leave a segment on fear with no move, and never cut to a sponsor
 from one: viewers who leave at the ad leave scared and unprotected. One action
 line is enough (`DON'T CALL THE NUMBER ON IT. REPORT IT TO 1-800-MEDICARE.`).
@@ -733,6 +766,14 @@ script can't see:
 - Every aphorism candidate the checker named has had the paraphrase test.
 - First person: one or two lines, nothing invented about Jeff's life.
 - Two or three open decisions left for the team.
+- Lines are short; no stat runs with nothing on screen; every story opens on a
+  hook, not its title.
+- The super tease's first lines match the opening video, and the tease gives
+  away no red flag, step or outcome.
+- `[[PAGE BREAK]]` between every story and every case; each guest leaves by full
+  name.
+- JEFF PLEASE NOTE comments carry what Jeff must know but not say — short,
+  anchored on their line.
 - Both files exist and are named for the A story and date.
 - FINAL: clips match the outline, numbered in air order, `OUT:` and the red
   source line from the Videos rows, nothing added, cut or swapped without saying
@@ -745,7 +786,7 @@ script can't see:
 - Ryan's retention rules (`references/examples/ryan-notes-2026-10-09.md`): the
   why-now chain said early; no line hands viewers a reason to leave; every
   transition names the connection; segment openers are hooks and each bridge
-  says why the next one is worse; every tell works for the people the scam
+  says why the next one is worse; every red flag works for the people the scam
   targets; every segment ends on what to do before the bridge or sponsor; the
   pre-sponsor tease names specific payoffs; Jeff restates the takeaway after the
   guest; precise claims (issuer, exceptions, QR line, dates that agree); a live

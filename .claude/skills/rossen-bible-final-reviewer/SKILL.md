@@ -45,8 +45,11 @@ It returns two things:
    missing `OUT:` lines, missing CTA or `END OF SHOW`, absent protection beats,
    sponsor blocks interrupting a clip run, off-register words, address and
    account-number patterns, over-long verbatim quotes, tease-versus-body figure
-   drift, tease promises the body never names, and runs of three clips with no
-   takeaway. Drop these straight into your tables. Do not re-derive them by eye;
+   drift, tease promises the body never names, runs of three clips with no
+   takeaway, and the Oct 2026 checks: missing page breaks between cases, a guest
+   exiting without a full name, lines over 16 words, stat runs with nothing on
+   screen, stories that open on their own title, tease lines that give away a
+   red flag or step, and malformed JEFF PLEASE NOTE comments. Drop these straight into your tables. Do not re-derive them by eye;
    that is where they get missed.
 2. **A claim inventory in triage order** — every phone number, URL, named
    entity, attributed quote, dollar figure, percentage and date in the draft,
@@ -144,9 +147,11 @@ Mostly covered by Step 0. Read its findings, then check by eye what it cannot:
 - **Every tease promise is paid off by name.** `THE ONE MOVE` in the open means
   the body says `THE ONE MOVE` where it lands. Step 0 flags promise phrases the
   body never repeats; judge any it misses by eye.
-- **A tell after every victim case.** Each case ends with a one-line takeaway
-  before the next case starts, not only the closing list or the guest's tips.
-  Step 0 warns on three sound clips with no takeaway between them.
+- **A red flag after every victim case.** Each case ends with a one-line
+  takeaway before the next case starts, not only the closing list or the guest's
+  tips. Step 0 warns on three sound clips with no takeaway between them. Flag
+  "the tell" in black copy: it's producer shorthand, never said on air; Jeff
+  says `RED FLAG`.
 - **Cases inside a story lead with the real loss.** A near-miss ahead of a
   victim whose money is gone is a WARNING, and so is a header built on the
   near-miss (`ALMOST COST HER`) when the story has a completed loss.
@@ -158,6 +163,19 @@ Mostly covered by Step 0. Read its findings, then check by eye what it cannot:
   one only if a fact or a transition depends on it.
 
 These five come from Ryan's notes on the 10/14 bible (Oct 8, 2026).
+
+From David's notes (Oct 2026) — Step 0 flags the mechanical half of each:
+
+- **The super tease doesn't give the story away.** No red flag, protection step
+  or clip outcome in the tease; if a viewer could skip the show after it, it's a
+  WARNING. **Its first lines match the opening video package** — what's on
+  screen, not a general line about the topic. Judge this one by eye against the
+  A story's lead clip.
+- **Each story opens on a hook, not a rewrite of its header.**
+- **Page breaks** between every story and every case (A1, A2…); **the first
+  line after every clip is 23pt bold** in the built document (check the .docx or
+  Google Doc, not just the markdown); **each guest leaves by full name** in the
+  thank-you line before the exit cue.
 - For Friday shows: content portion fully scripted, deals portion lighter (guest
   intro, pre-picked deals with retail vs. deal price, live-request cues). Flag if
   a Friday bible over-scripts the deals block or under-scripts the content block.
@@ -176,9 +194,13 @@ called to screen; sponsor entered with a tease and a personal bridge, not before
 the lead story is told; no word from the doesn't-say column; no sentence over 25
 words that isn't a list; the company's response; claims hedged by attribution.
 
-- Short lines, one clause or sentence per line. Bullets average ~11.6 words in
-  the aired corpus — flag both over-fragmenting and lines written to be read
-  rather than said.
+- Short lines, one clause or sentence per line. Aired bullets average ~11.6
+  words and the team now wants them shorter (Oct 2026): flag any spoken line
+  over 16 words and any line written to be read rather than said — the bible is
+  a reference for Jeff, not a script. Still flag over-fragmenting.
+- **No stat runs with nothing on screen.** Figures ride on a clip, graphic or
+  screenshot; away from one, the line keeps one number. Extra numbers move to a
+  graphic or a JEFF PLEASE NOTE comment.
 - Direct address, rhetorical questions, scandalized-but-protective tone.
 - Numbers and specifics doing the work of the hook, not vague language.
 - **Constructed aphorisms.** A well-built symmetry that collapses when Jeff
@@ -296,11 +318,11 @@ best-performing episodes do), and a **direction**, not a rewrite.
   buried mid-segment; a segment playing coy about something the cold open
   already revealed (it should be a callback). WARNING for openers, NOTE for the
   rest.
-- **Tells vs. the target (note 5).** Test every tell against the viewer the scam
-  targets. A tell that confirms the scammer's story for them is a WARNING; if it
+- **Red flags vs. the target (note 5).** Test every red flag against the viewer the scam
+  targets. A red flag that confirms the scammer's story for them is a WARNING; if it
   could lead a viewer to act wrongly, BLOCKER. Safety-critical moves held back
   until after the guest: WARNING.
-- **Resolution (note 6).** Every segment ends on the tell plus what to do before
+- **Resolution (note 6).** Every segment ends on the red flag plus what to do before
   its bridge, and above all before a sponsor. A segment that ends on fear: WARNING.
   The recap must cover every segment, one for one; a missing segment is a WARNING.
 - **Pre-sponsor tease (note 7).** Names two or three specific payoffs. Generic:
@@ -325,6 +347,21 @@ best-performing episodes do), and a **direction**, not a rewrite.
   after `JOIN THE CHAT`. Every show: a written close (send this to someone it
   protects, the next video, see you next time; never "your parents"). Missing:
   NOTE.
+
+### 10. JEFF PLEASE NOTE comments — what Jeff must know but not say
+
+Jeff often sees the story minutes before he goes on. While checking facts you
+will find things he needs in his head but that shouldn't be said: a nuance that
+guards a line (private-plan Medicare cards are plastic and real), the limit of
+a number (one industry analysis, not the government), something left out on
+purpose and why, who a claim belongs to (a sponsor guest's own pitch), a legal
+status or what happened after the clip. **Recommend each as a Google Doc
+comment anchored on the line it guards, opening `JEFF PLEASE NOTE:`** — one or
+two sentences, the point first. In the markdown draft it is
+`{{JEFF PLEASE NOTE: ...}}` at the end of the line. Flag existing notes that
+are long, floating, or really a verification status (that's the source log) or
+a staging question (that's a red open decision). Full guidance:
+`rossen-script-writer/references/jeff-notes.md`.
 
 ## Fact-checking subsystem
 

@@ -7,8 +7,9 @@ Usage:
 Checks what the eye cannot reliably check on a 20-page document: that every run
 is Arial, that headers are 23pt bold black, that spoken body is 18pt black, that
 every production cue is bold FF0000 red, that page setup is Letter with 1"
-margins and 1.15 spacing, and that the blank-paragraph rules hold around clip
-cues. Red-vs-black is production semantics, so a cue rendered black is a real
+margins and 1.15 spacing, that the blank-paragraph rules hold around clip
+cues, that the first line after every clip is 23pt bold, and that every
+comment is a JEFF PLEASE NOTE. Red-vs-black is production semantics, so a cue rendered black is a real
 defect, not a cosmetic one.
 
 Exit codes: 0 = pass, 1 = defects found, 2 = could not read the file.
@@ -108,9 +109,35 @@ def main(path):
             if not any(f.upper().startswith("OUT:") for f in follow):
                 defects.append(f"p{i}: clip cue has no OUT: line beneath it")
 
+    # ---- re-entry line: the first spoken line after every OUT: is 23pt bold
+    texted = [p for p in paras if p.text.strip()]
+    for k, par in enumerate(texted):
+        if not par.text.strip().upper().startswith("OUT:"):
+            continue
+        nxt = next((q for q in texted[k + 1:] if not CUE.match(q.text.strip())),
+                   None)
+        if nxt is None:
+            continue
+        runs = [r for r in nxt.runs if r.text.strip()]
+        if runs and not all(r.font.bold and r.font.size and r.font.size.pt == 23
+                            for r in runs):
+            defects.append(f"first line after a clip is not 23pt bold "
+                           f"({nxt.text.strip()[:40]!r})")
+
+    # ---- comments: every one is a JEFF PLEASE NOTE
+    try:
+        comments = list(doc.comments)
+    except Exception:                              # noqa: BLE001
+        comments = []
+    for c in comments:
+        if not c.text.strip().upper().startswith("JEFF PLEASE NOTE"):
+            defects.append(f"comment does not open with JEFF PLEASE NOTE: "
+                           f"({c.text.strip()[:40]!r})")
+
     print(f"\n{path}")
     print("=" * 68)
     print(f"  paragraphs with text : {checked}")
+    print(f"  JEFF PLEASE NOTEs    : {len(comments)}")
     print(f"  defects              : {len(defects)}\n")
     if defects:
         seen = set()

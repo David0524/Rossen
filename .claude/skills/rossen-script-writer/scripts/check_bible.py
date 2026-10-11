@@ -28,9 +28,15 @@ import sys
 
 # ---------------------------------------------------------------- thresholds
 T = {
-    "bullet_mean": (9.5, 13.5),          # corpus mean 11.6
+    # David, Oct 2026: "condense the longer lines... a reference for Jeff, not
+    # a script." Upper band pulled below the aired 11.6 mean on purpose.
+    "bullet_mean": (8.0, 12.5),
     "pct_le5w_max": 20.0,                # corpus 8-14%
-    "pct_gt20w_max": 12.0,
+    "pct_gt20w_max": 5.0,
+    "long_line_words": 16,               # WARN on any spoken line over this
+    "note_words_max": 45,                # a JEFF PLEASE NOTE is read in a minute
+    "data_run": 3,                       # figure lines in a row with nothing on screen
+    "onscreen_window": 3,                # lines from a clip/graphic cue that count as "on screen"
     "excl_rate": (0.08, 0.20),           # aired documents 0.114-0.150
     "runway_min": 6,                     # 6-10 dash lines above a marker
     "runway_exceptions": 1,              # aired lead story has one short runway
@@ -50,7 +56,7 @@ T = {
 BANNED = [
     "FOLKS", "CONSUMERS", "HOWEVER", "REPORTEDLY",
     "UTILIZE", "INDIVIDUALS", "FURTHERMORE", "MOREOVER", "IN CONCLUSION",
-    "THE BOTTOM LINE", "HERE'S THE THING", "PURCHASE",
+    "THE BOTTOM LINE", "HERE'S THE THING", "PURCHASE", "THE TELL",
     # producer kit (Sept 2026): words Jeff doesn't say, per the voice profile
     "OUTRAGEOUS", "TOTALLY AMAZING", "INCREDIBLE DISCOUNTS", "FUNCTIONALLY",
     "DISCREPANCIES", "FLUCTUATIONS", "ADDITIONALLY", "UNACCEPTABLE",
@@ -92,7 +98,7 @@ CUE_ANY = re.compile(r"\(\(+[^)]")
 PROTECTION_HEADER = "HERE'S HOW TO PROTECT YOURSELF"
 
 
-# ---------------------------------------------------------------- promises & tells
+# ---------------------------------------------------------------- promises & red flags
 # Ryan (producer notes on the 10/14 bible, Oct 8 2026): a promise made in the
 # tease ("THE ONE MOVE", "THE 5-SECOND HABIT") has to be paid off BY NAME in the
 # body, and viewers get a takeaway after each case, not only at the end.
@@ -105,7 +111,7 @@ PROMISE_RE = re.compile(
 NUMWORDS = {"1": "ONE", "2": "TWO", "3": "THREE", "4": "FOUR", "5": "FIVE",
             "6": "SIX", "7": "SEVEN", "8": "EIGHT", "9": "NINE", "10": "TEN"}
 # a takeaway the viewer can use: a labeled tell, a red flag, or the list itself
-TAKEAWAY_RE = re.compile(r"\bTHE TELL\b|\bTHE RED FLAG\b|HERE'?S HOW TO PROTECT|"
+TAKEAWAY_RE = re.compile(r"RED FLAG|\bTHE TELL\b|HERE'?S HOW TO PROTECT|ONE MOVE I PROMISED|"
                          r"^-?\s*NUMBER ONE\b")
 
 
@@ -134,7 +140,7 @@ def unpaid_promises(tease_lines, body_lines):
 
 def takeaway_gaps(body_lines, clip_re, limit=3):
     """Runs of `limit`+ sound clips with no takeaway line between them.
-    Expert cue lines do not count: the tell is Jeff's, not the guest's."""
+    Expert cue lines do not count: the red flag is Jeff's, not the guest's."""
     gaps, run, start = [], 0, None
     for i, l in enumerate(body_lines):
         s = re.sub(r"\*+", "", l).replace("\u2019", "'").strip().upper()
@@ -152,8 +158,32 @@ def takeaway_gaps(body_lines, clip_re, limit=3):
     return gaps
 
 
+NOTE_RE = re.compile(r"\{\{\s*(.*?)\s*\}\}")
+PAGE_BREAK_RE = re.compile(r"^\s*\[\[\s*PAGE BREAK\s*\]\]\s*$", re.I)
+
+
 def strip_md(s):
+    """Plain spoken text: no bold markers, no JEFF PLEASE NOTE spans, and a
+    [[PAGE BREAK]] line reads as empty."""
+    if PAGE_BREAK_RE.match(s):
+        return ""
+    s = NOTE_RE.sub("", s)
     return re.sub(r"\*+", "", s).replace("\u2019", "'").strip()
+
+
+FIGURE_RE = re.compile(r"\$\s?\d|\d+(,\d{3})*(\.\d+)?\s?(%|PERCENT\b)|\b\d[\d,.]*\s*"
+                       r"(THOUSAND|MILLION|BILLION|DOLLARS?)\b|\b\d{2,}[\d,]*\b")
+ONSCREEN_CUE = re.compile(r"PLAY CLIP|GRAPHIC|FULLSCREEN|SCREENSHOT|SCREEN SHARE|"
+                          r"SHOW IMAGE|TAKE .*(IMAGE|PHOTO|SCREEN)")
+STOP = set("A AN THE AND OR BUT TO OF IN ON AT FOR IS ARE WAS IT THIS THAT YOU YOUR "
+           "WITH FROM BY AS BE IT'S THEY THEIR HE SHE HIS HER WE OUR ARE NOW JUST "
+           "SO IF THEN THERE HERE'S WHAT WHO".split())
+NAME_STOP = set("THANK THANKS AND YOU FOR SO THAT'S GREAT".split())
+
+
+def content_words(s):
+    return {w for w in re.findall(r"[A-Z0-9']+", strip_md(s).upper())
+            if w not in STOP and len(w) > 2}
 
 
 def words(s):
@@ -598,7 +628,7 @@ def check(path, day="wednesday", stories=2, stage="draft"):
         if seg and not any(ACTION.search(x.upper()) for x in seg):
             r.warn(f"the segment before the sponsor at line {i + 1} ends with no "
                    f"'what to do' line after its last clip. Resolve it before the "
-                   f"bridge: the tell plus one action (Ryan note 6).")
+                   f"bridge: the red flag plus one action (Ryan note 6).")
     end_i = next((i for i, l in enumerate(lines)
                   if strip_md(l).upper().lstrip("- ").startswith("END OF SHOW")),
                  len(lines))
@@ -633,7 +663,7 @@ def check(path, day="wednesday", stories=2, stage="draft"):
     for g in gaps:
         r.warn(f"line {boundary + g + 1}: three sound clips run with no takeaway "
                f"between them. Each victim case ends with a one-line tell "
-               f"(-HERE'S THE TELL: ...) before the next case starts.")
+               f"(-HERE'S YOUR RED FLAG: ...) before the next case starts.")
 
     # ---------------------------------------------------- aphorism candidates
     aph = []
@@ -658,6 +688,138 @@ def check(path, day="wednesday", stories=2, stage="draft"):
         r.warn(f"{len(aph)} possible constructed aphorism(s) — read each one. "
                f"Would it still do its job if Jeff said it a different way? "
                f"If no, cut it: {aph[:3]}")
+
+    # ======================================================= Oct 2026 notes
+    # ---------------------------------------------------- long lines
+    long_lines = [x for x in spoken
+                  if words(re.sub(r"^-\s*", "", x)) > T["long_line_words"]
+                  and not re.match(r"^(JEFF|[A-Z]+):", x)]
+    r.stats["long_lines"] = len(long_lines)
+    if long_lines:
+        r.warn(f"{len(long_lines)} spoken line(s) over {T['long_line_words']} "
+               f"words. The bible is a reference, not a script — split or cut: "
+               f"{[l[:60] for l in long_lines[:4]]}")
+
+    # ---------------------------------------------------- data with nothing on screen
+    cue_idx = [i for i, l in enumerate(lines) if ONSCREEN_CUE.search(strip_md(l).upper())
+               and CUE_ANY.search(strip_md(l))]
+    def onscreen(i):
+        return any(abs(i - c) <= T["onscreen_window"] for c in cue_idx)
+    run, dense = 0, []
+    for i in range(boundary, len(lines)):
+        t = strip_md(lines[i])
+        if not t:
+            continue
+        if CUE_ANY.search(t) or t.upper().startswith("OUT:"):
+            run = 0
+            continue
+        figs = len(FIGURE_RE.findall(t.upper()))
+        is_numbered_tip = bool(re.match(r"^-?\s*NUMBER (ONE|TWO|THREE|FOUR|FIVE)", t.upper()))
+        if figs and not onscreen(i) and not is_numbered_tip:
+            run += 1
+            if figs >= 2 or run == T["data_run"]:
+                dense.append(i + 1)
+        else:
+            run = 0
+    r.stats["data_dense_lines"] = len(dense)
+    if dense:
+        r.warn(f"stat-heavy copy with nothing on screen at lines {dense[:6]}. Keep "
+               f"the one number that matters; move the rest to a graphic or a "
+               f"JEFF PLEASE NOTE comment.")
+
+    # ---------------------------------------------------- story opens on its title
+    for i, l in enumerate(lines[boundary:], start=boundary):
+        if not l.strip().startswith("**") or CUE_ANY.search(l):
+            continue
+        h = strip_md(l)
+        if not h or h.startswith("-") or h.upper() != h or words(h) > 16:
+            continue
+        if PROTECTION_HEADER in h.upper():
+            continue
+        hw = content_words(h)
+        if len(hw) < 2:
+            continue
+        nxt = [strip_md(x) for x in lines[i + 1:i + 8] if strip_md(x)
+               and not CUE_ANY.search(strip_md(x))][:2]
+        for n in nxt:
+            nw = content_words(n)
+            if nw and len(hw & nw) / len(hw) >= 0.6:
+                r.warn(f"line {i+1}: the story opens by restating its header "
+                       f"({h[:40]!r} -> {n[:40]!r}). Lead with a hook, not a "
+                       f"rewrite of the title.")
+                break
+
+    # ---------------------------------------------------- tease gives the story away
+    payoffs = [strip_md(l) for l in body
+               if PROTECTION_HEADER.replace("'", "") not in
+               strip_md(l).upper().replace("'", "")
+               and TAKEAWAY_RE.search(strip_md(l).upper())
+               or re.match(r"^-?\s*NUMBER (ONE|TWO|THREE|FOUR|FIVE|SIX)\b",
+                           strip_md(l).upper())]
+    spoilers = []
+    for l in tease:
+        tw_ = content_words(l)
+        if len(tw_) < 3:
+            continue
+        for pl in payoffs:
+            pw = content_words(pl)
+            if pw and len(tw_ & pw) / len(tw_) >= 0.6:
+                spoilers.append(strip_md(l)[:60])
+                break
+    r.stats["tease_spoilers"] = len(spoilers)
+    if spoilers:
+        r.warn(f"the tease states a red flag or protection step the body pays "
+               f"off — tease the question, not the answer: {spoilers[:3]}")
+
+    # ---------------------------------------------------- page breaks between cases
+    missing_pb = []
+    pending = None
+    for i, l in enumerate(lines[boundary:], start=boundary):
+        t = strip_md(l).upper()
+        if PAGE_BREAK_RE.match(l):
+            pending = None
+            continue
+        if not t:
+            continue
+        if "RED FLAG" in t and not t.startswith("("):
+            pending = i
+        elif CLIP_LOOSE.search(t) and "BROLL" not in t and pending is not None:
+            missing_pb.append(pending + 1)
+            pending = None
+    r.stats["page_breaks"] = sum(1 for l in lines if PAGE_BREAK_RE.match(l))
+    if missing_pb:
+        r.warn(f"no [[PAGE BREAK]] between cases after the red flag(s) at lines "
+               f"{missing_pb[:6]}. Every story and every case (A1, A2...) starts "
+               f"on a new page.")
+
+    # ---------------------------------------------------- guest leaves by full name
+    for i, l in enumerate(lines):
+        m = re.search(r"\(+\s*([A-Z][A-Z'\-]+)(\s+[A-Z][A-Z'\-]+)*\s+EXITS\s*\)+",
+                      strip_md(l).upper())
+        if not m:
+            continue
+        prev = next((strip_md(x).upper() for x in reversed(lines[:i])
+                     if strip_md(x) and not CUE_ANY.search(strip_md(x))), "")
+        first_name = m.group(1)
+        mm = re.search(r"\b" + re.escape(first_name) + r"\s+([A-Z][A-Z'\-]+)", prev)
+        if not mm or mm.group(1) in NAME_STOP:
+            r.warn(f"line {i+1}: {first_name} exits without a full name in the "
+                   f"line before. Write the full name in the send-off "
+                   f"(-{first_name} LASTNAME, THANK YOU.) in case Jeff blanks.")
+
+    # ---------------------------------------------------- JEFF PLEASE NOTE comments
+    notes = NOTE_RE.findall(raw)
+    r.stats["jeff_notes"] = len(notes)
+    for n in notes:
+        if not n.upper().startswith("JEFF PLEASE NOTE"):
+            r.err(f"comment {n[:40]!r} must open with 'JEFF PLEASE NOTE:'.")
+        if words(n) > T["note_words_max"]:
+            r.warn(f"JEFF PLEASE NOTE runs {words(n)} words; he reads it minutes "
+                   f"before air — one or two sentences: {n[:50]!r}")
+    for i, l in enumerate(lines):
+        if NOTE_RE.search(l) and not strip_md(l):
+            r.err(f"line {i+1}: a JEFF PLEASE NOTE on a line of its own. Anchor "
+                  f"it to the line it guards.")
 
     return r
 

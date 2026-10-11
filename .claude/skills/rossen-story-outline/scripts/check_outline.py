@@ -235,7 +235,7 @@ def check(md, stage, tx=None):
         gaps = block.split("### Gaps", 1)[-1]
         fix = block.split("### The fix", 1)[-1].split("###", 1)[0]
         if "### The fix" in block and not re.search(r"\bafter\b[^\n]*:", fix, re.I):
-            warn(f"{label}: The fix has no per-case tells ('After <case>: ...'). "
+            warn(f"{label}: The fix has no per-case red flags ('After <case>: ...'). "
                  "Each victim case gets a one-line takeaway the bible places "
                  "right after it.")
         for line in fix.splitlines():

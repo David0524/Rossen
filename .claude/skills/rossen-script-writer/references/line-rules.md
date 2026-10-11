@@ -18,6 +18,10 @@ pass. These are written into the document.
   CAMERA`), **teases a human victim with a dollar figure**, and promises the fix.
   Stakes are stacked as separate facts, one per line — not as a built triplet
   sentence, which fails the paraphrase test.
+- **The tease's first lines match the opening video package** — what is on
+  screen as Jeff talks (the moment, the person, the object), not a general line
+  about the topic. Then tease; **never give the story away**: no red flags, no
+  protection steps, no outcome a clip reveals. Promise the fix, don't state it.
 - **Open every tease with a concrete payoff promise**, not only a threat — and
   write down every promise you make. Each one (`THE ONE MOVE`, `THE 5-SECOND
   HABIT`) gets named in the body where it lands. See "Every promise in the tease
@@ -41,9 +45,28 @@ pass. These are written into the document.
   or `TAKE A LOOK`. The runway above it still carries the specifics and the
   question. (Older measurement notes say never write `WATCH THIS`; the team rule
   replaces that.)
+- **The first line after a clip is bold 23pt** — Jeff's re-entry point. The
+  builder does it; keep that line the button, not a cue.
 - **Clip out: a one-line button** that reacts and restates what the clip proved:
   `JUST THAT FAST, AND NOBODY KNOWS.` Never clip-to-clip or clip-to-header without
   one (a `BUTT` between segments of one source is the exception).
+
+## Story openings, line length and data
+
+- **Open each story on a hook, not a rewrite of its title.** If the header is
+  `YOUR PLAN IS "ENDING?"`, the first line is not `-INSURERS ARE ENDING PLANS`.
+- **Short lines.** One thought per line; over 16 words is almost always two
+  lines or a cut. The bible is a reference for Jeff, not a script.
+- **Figures ride on something on screen.** Clips, graphics and screenshots can
+  carry numbers. With nothing on screen, one number, then move on. Background
+  numbers he should know go in a `JEFF PLEASE NOTE` comment
+  (`references/jeff-notes.md`).
+
+## Guests
+
+- **The thank-you line before an exit cue carries the guest's full name:**
+  `-COBI BLUMENFELD-GANTZ, THANK YOU.` Booked guests only; call-in callers keep
+  the name the producer cleared.
 
 ## Tips and facts
 
@@ -86,7 +109,7 @@ pass. These are written into the document.
   can stay, but Jeff trims them — his reactions are his own riffs (Ryan, Oct 8,
   2026). So a reaction line never carries a fact, a figure or a transition the
   next line depends on; if he skips it, nothing is lost. Spend the line budget on
-  specifics and tells instead.
+  specifics and red flags instead.
 - **Never invent a fact about Jeff's life.** His habits, accounts, family,
   possessions, what he has tried — none of it goes in unless the user supplied it
   or a producer confirmed it. Otherwise write it as an open decision:

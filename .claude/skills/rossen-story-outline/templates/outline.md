@@ -12,6 +12,8 @@
 | B | <headline> | <~%> | <n> |
 | End | <End of show, or Deals — guest, live requests> | — | — |
 
+**Open package:** <the video the super tease runs over — A story beat #, or "undecided" (then add it to Decisions)>
+
 ### The show in three sentences
 
 <Plain prose. What the viewer walks away scared of, and what they walk away able to do.>
@@ -55,12 +57,16 @@
 
 ### The fix
 
-- After <case>: <the tell, one line>
+- After <case>: <the red flag, one line>
 - <step, plain> (<source: issuing body's page>)
 
 ### Gaps
 
 - <only what changes the shape, ⚠️ at the point of use — or "None.">
+
+### Jeff should know
+
+- Beat <n>: <what Jeff needs to know but won't say on air, one line — or "None.">
 
 # B. <STORY HEADLINE>
 
@@ -82,5 +88,9 @@
 - <...> (<source>)
 
 ### Gaps
+
+- <...>
+
+### Jeff should know
 
 - <...>

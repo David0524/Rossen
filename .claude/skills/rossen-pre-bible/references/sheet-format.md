@@ -88,9 +88,9 @@ starts here, so the outline's Peg and the bible's segment 1 inherit it.
 Real, specific, actionable protection steps. Phone numbers, URLs, settings paths,
 the physical thing to do. Anything you couldn't confirm gets `*(verify)*` inline.
 Where a story has more than one victim case, add the one-line tell for each
-(`After Kathryn: no price on anything means walk out`) — the bible places a tell
+(`After Kathryn: no price on anything means walk out`) — the bible places a red flag
 after every case.
-Test each step against the people the scam targets: a tell that confirms the
+Test each step against the people the scam targets: a red flag that confirms the
 scammer's story for them ("no letter? don't believe the call," when the letters
 are real) needs the move that works for everyone (hang up, call them yourself).
 A step that can be shown on Jeff's phone gets `*(demo)*`.

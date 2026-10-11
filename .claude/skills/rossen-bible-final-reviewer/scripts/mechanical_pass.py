@@ -32,7 +32,7 @@ import sys
 
 BANNED = ["FOLKS", "CONSUMERS", "HOWEVER", "ALLEGEDLY", "REPORTEDLY", "ALLEGED",
           "UTILIZE", "INDIVIDUALS", "FURTHERMORE", "MOREOVER", "IN CONCLUSION",
-          "THE BOTTOM LINE", "HERE'S THE THING", "PURCHASE",
+          "THE BOTTOM LINE", "HERE'S THE THING", "PURCHASE", "THE TELL",
           # producer kit (Sept 2026): words Jeff doesn't say
           "OUTRAGEOUS", "TOTALLY AMAZING", "INCREDIBLE DISCOUNTS", "FUNCTIONALLY",
           "DISCREPANCIES", "FLUCTUATIONS", "ADDITIONALLY", "UNACCEPTABLE",
@@ -66,7 +66,7 @@ DATEISH = re.compile(r"\b(19|20)\d{2}\b|\b(JANUARY|FEBRUARY|MARCH|APRIL|MAY|"
                      re.I)
 
 
-# ---------------------------------------------------------------- promises & tells
+# ---------------------------------------------------------------- promises & red flags
 # Ryan (producer notes on the 10/14 bible, Oct 8 2026): a promise made in the
 # tease ("THE ONE MOVE", "THE 5-SECOND HABIT") has to be paid off BY NAME in the
 # body, and viewers get a takeaway after each case, not only at the end.
@@ -79,7 +79,7 @@ PROMISE_RE = re.compile(
 NUMWORDS = {"1": "ONE", "2": "TWO", "3": "THREE", "4": "FOUR", "5": "FIVE",
             "6": "SIX", "7": "SEVEN", "8": "EIGHT", "9": "NINE", "10": "TEN"}
 # a takeaway the viewer can use: a labeled tell, a red flag, or the list itself
-TAKEAWAY_RE = re.compile(r"\bTHE TELL\b|\bTHE RED FLAG\b|HERE'?S HOW TO PROTECT|"
+TAKEAWAY_RE = re.compile(r"RED FLAG|\bTHE TELL\b|HERE'?S HOW TO PROTECT|ONE MOVE I PROMISED|"
                          r"^-?\s*NUMBER ONE\b")
 
 
@@ -108,7 +108,7 @@ def unpaid_promises(tease_lines, body_lines):
 
 def takeaway_gaps(body_lines, clip_re, limit=3):
     """Runs of `limit`+ sound clips with no takeaway line between them.
-    Expert cue lines do not count: the tell is Jeff's, not the guest's."""
+    Expert cue lines do not count: the red flag is Jeff's, not the guest's."""
     gaps, run, start = [], 0, None
     for i, l in enumerate(body_lines):
         s = re.sub(r"\*+", "", l).replace("\u2019", "'").strip().upper()
@@ -126,13 +126,166 @@ def takeaway_gaps(body_lines, clip_re, limit=3):
     return gaps
 
 
+NOTE_RE = re.compile(r"\{\{\s*(.*?)\s*\}\}")
+PAGE_BREAK_RE = re.compile(r"^\s*\[\[\s*PAGE BREAK\s*\]\]\s*$", re.I)
+FIGURE_RE = re.compile(r"\$\s?\d|\d+(,\d{3})*(\.\d+)?\s?(%|PERCENT\b)|\b\d[\d,.]*\s*"
+                       r"(THOUSAND|MILLION|BILLION|DOLLARS?)\b|\b\d{2,}[\d,]*\b")
+ONSCREEN_CUE = re.compile(r"PLAY CLIP|GRAPHIC|FULLSCREEN|SCREENSHOT|SCREEN SHARE|"
+                          r"SHOW IMAGE|TAKE .*(IMAGE|PHOTO|SCREEN)")
+STOP = set("A AN THE AND OR BUT TO OF IN ON AT FOR IS ARE WAS IT THIS THAT YOU YOUR "
+           "WITH FROM BY AS BE IT'S THEY THEIR HE SHE HIS HER WE OUR ARE NOW JUST "
+           "SO IF THEN THERE HERE'S WHAT WHO".split())
+NAME_STOP = set("THANK THANKS AND YOU FOR SO THAT'S GREAT".split())
+LONG_LINE_WORDS, NOTE_WORDS_MAX, DATA_RUN, ONSCREEN_WINDOW = 16, 45, 3, 3
+
+
 def strip_md(s):
+    """Spoken text only: JEFF PLEASE NOTE spans removed, [[PAGE BREAK]] empty."""
+    if PAGE_BREAK_RE.match(s):
+        return ""
+    s = NOTE_RE.sub("", s)
     return re.sub(r"\*+", "", s).replace("\u2019", "'").strip()
+
+
+def content_words(s):
+    return {w for w in re.findall(r"[A-Z0-9']+", s.upper())
+            if w not in STOP and len(w) > 2}
+
+
+def oct2026_checks(raw_lines, lines, boundary, add):
+    """David's notes, Oct 2026: page breaks between cases, the guest leaves by
+    full name, short lines, no stat runs with nothing on screen, stories open on
+    a hook rather than their title, the tease doesn't give the story away, and
+    JEFF PLEASE NOTE comments are anchored and short."""
+    cue = re.compile(r"\(\(+[^)]")
+    clip = re.compile(r"\(+\s*PLAY CLIP", re.I)
+    body_idx = range(boundary, len(lines))
+
+    # page break between cases: a red flag followed by another sound clip
+    pending = None
+    for i in body_idx:
+        if PAGE_BREAK_RE.match(raw_lines[i]):
+            pending = None
+            continue
+        t = lines[i].upper()
+        if not t:
+            continue
+        if "RED FLAG" in t and not t.startswith("("):
+            pending = i
+        elif clip.search(t) and "BROLL" not in t and pending is not None:
+            add("WARNING", "format", f"line {pending+1}",
+                "No [[PAGE BREAK]] before the next case. Every story and every "
+                "case inside a story (A1, A2...) starts on a new page.")
+            pending = None
+
+    # guest leaves by full name
+    for i, l in enumerate(lines):
+        m = re.search(r"\(+\s*([A-Z][A-Z'\-]+)(\s+[A-Z][A-Z'\-]+)*\s+EXITS\s*\)+",
+                      l.upper())
+        if not m:
+            continue
+        prev = next((x.upper() for x in reversed(lines[:i]) if x and not cue.search(x)), "")
+        mm = re.search(r"\b" + re.escape(m.group(1)) + r"\s+([A-Z][A-Z'\-]+)", prev)
+        if not mm or mm.group(1) in NAME_STOP:
+            add("WARNING", "production", f"line {i+1}",
+                f"{m.group(1)} exits with no full name in the send-off. Write it "
+                f"(-{m.group(1)} LASTNAME, THANK YOU.) in case Jeff blanks. "
+                f"Call-in callers excepted.")
+
+    # long lines
+    long_ = [i for i in body_idx if lines[i] and not cue.search(lines[i])
+             and not lines[i].upper().startswith("OUT:")
+             and not re.match(r"^[A-Z]+:", lines[i])
+             and len(re.sub(r"^-\s*", "", lines[i]).split()) > LONG_LINE_WORDS]
+    if long_:
+        add("WARNING", "voice", f"lines {[i+1 for i in long_[:6]]}",
+            f"{len(long_)} spoken line(s) over {LONG_LINE_WORDS} words. The "
+            f"bible is a reference for Jeff, not a script — split or cut.")
+
+    # data with nothing on screen
+    cues_on = [i for i, l in enumerate(lines) if cue.search(l) and ONSCREEN_CUE.search(l.upper())]
+    run, dense = 0, []
+    for i in body_idx:
+        t = lines[i]
+        if not t:
+            continue
+        if cue.search(t) or t.upper().startswith("OUT:"):
+            run = 0
+            continue
+        figs = len(FIGURE_RE.findall(t.upper()))
+        near = any(abs(i - c) <= ONSCREEN_WINDOW for c in cues_on)
+        tip = bool(re.match(r"^-?\s*NUMBER (ONE|TWO|THREE|FOUR|FIVE)", t.upper()))
+        if figs and not near and not tip:
+            run += 1
+            if figs >= 2 or run == DATA_RUN:
+                dense.append(i + 1)
+        else:
+            run = 0
+    if dense:
+        add("WARNING", "voice", f"lines {dense[:6]}",
+            "Stat-heavy copy with nothing on screen. Keep the one number that "
+            "matters; move the rest to a graphic or a JEFF PLEASE NOTE comment.")
+
+    # story opens by restating its header
+    for i in body_idx:
+        raw_l = raw_lines[i].strip()
+        h = lines[i]
+        if (not raw_l.startswith("**") or cue.search(h) or not h or h.startswith("-")
+                or h.upper() != h or len(h.split()) > 16
+                or "PROTECT YOURSELF" in h.upper()):
+            continue
+        hw = content_words(h)
+        if len(hw) < 2:
+            continue
+        nxt = [x for x in lines[i + 1:i + 8] if x and not cue.search(x)][:2]
+        for n in nxt:
+            nw = content_words(n)
+            if nw and len(hw & nw) / len(hw) >= 0.6:
+                add("WARNING", "voice", f"line {i+1}",
+                    f"Story opens by restating its header ({h[:40]!r} -> "
+                    f"{n[:40]!r}). Lead with a hook, not a rewrite of the title.")
+                break
+
+    # tease gives the story away
+    payoffs = [l for l in lines[boundary:]
+               if "PROTECT YOURSELF" not in l.upper()
+               and (re.search(r"RED FLAG", l.upper())
+                    or re.match(r"^-?\s*NUMBER (ONE|TWO|THREE|FOUR|FIVE|SIX)\b", l.upper()))]
+    for i in range(boundary):
+        tw = content_words(lines[i])
+        if len(tw) < 3:
+            continue
+        if any(content_words(p) and len(tw & content_words(p)) / len(tw) >= 0.6
+               for p in payoffs):
+            add("WARNING", "structure", f"line {i+1}",
+                "The tease states a red flag or protection step the body pays "
+                "off. Tease the question, not the answer — don't give the story "
+                "away.")
+
+    # JEFF PLEASE NOTE comments
+    notes = [(i, n) for i, l in enumerate(raw_lines) for n in NOTE_RE.findall(l)]
+    for i, n in notes:
+        if not n.upper().startswith("JEFF PLEASE NOTE"):
+            add("WARNING", "format", f"line {i+1}",
+                "Comment must open with 'JEFF PLEASE NOTE:'.")
+        if len(n.split()) > NOTE_WORDS_MAX:
+            add("WARNING", "production", f"line {i+1}",
+                f"JEFF PLEASE NOTE runs {len(n.split())} words; Jeff reads it "
+                f"minutes before air. One or two sentences.")
+        if not lines[i]:
+            add("WARNING", "format", f"line {i+1}",
+                "JEFF PLEASE NOTE sits on a line of its own; anchor it to the "
+                "line it guards.")
+    add("NOTE", "production", "document",
+        f"{len(notes)} JEFF PLEASE NOTE comment(s). Judge whether any fact Jeff "
+        f"must know (a nuance guarding a line, a number's limits, something "
+        f"left out on purpose, who is speaking) is missing one.")
 
 
 def analyze(path, stage="draft"):
     raw = open(path, encoding="utf-8").read()
-    lines = [strip_md(l) for l in raw.split("\n")]
+    raw_lines = raw.split("\n")
+    lines = [strip_md(l) for l in raw_lines]
     F = []                                    # findings
 
     def add(sev, dim, where, msg):
@@ -341,8 +494,11 @@ def analyze(path, stage="draft"):
     for g in takeaway_gaps(body, CLIP):
         add("WARNING", "structure", f"line {boundary + g + 1}",
             "Three sound clips run with no takeaway between them. Each victim "
-            "case should end with a one-line tell (HERE'S THE TELL: ...), not "
+            "case should end with a one-line red flag (HERE'S YOUR RED FLAG: ...), not "
             "wait for the guest or the closing list.")
+
+    # ---------------------------------------------------------- Oct 2026 notes
+    oct2026_checks(raw_lines, lines, boundary, add)
 
     # ---------------------------------------------------------- claim inventory
     inv = {"tier1_safety_contact": [], "tier2_entity_and_quote": [],
