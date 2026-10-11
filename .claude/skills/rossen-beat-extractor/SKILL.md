@@ -1,19 +1,73 @@
 ---
-name: rossen-beat-extractor
-description: Segment a Rossen Reports live show script into clip beats, assign a clip role and visual spec to each, and emit structured beat records for downstream clip search. Use this whenever a Rossen Reports script, rundown, or show doc is provided and the user wants beats extracted, clips sourced, a clip pull list built, or asks anything like "what clips do I need for this script." Also use when back-filling an eval set from past scripts that already contain aired clip URLs and timecodes.
+name: "rossen-beat-extractor"
+description: Turn an approved Rossen Reports story outline into clip beats — one per HAVE/FIND row, carrying the pre-bible's searchable specifics — assign a clip role and visual spec to each, and emit structured beat records for downstream clip search. This is the first step of the videos half of the "outline w/ videos" stage. Use whenever an approved outline needs its clips found, beats extracted, or a clip pull list built, or the user asks anything like "what clips do I need for this outline." Also use in script mode to back-fill an eval set from aired bibles that already contain clip URLs and timecodes.
 ---
 
 # Rossen Reports beat extractor
 
-Turn a finalized show script into a list of clip beats. One beat equals one moment where a clip rolls. Downstream, each beat gets searched on four platforms, so the beat record has to carry enough context that a search engine can find footage the script never names.
+pre-bible → pre-bible email → **outline w/ videos** → bible → bible review
 
-The script is always upstream and finalized. Never infer that a clip existed first.
+Turn an approved outline into a list of clip beats. One beat equals one moment
+where a clip rolls. Downstream, each beat gets searched across **seven surfaces** —
+YouTube long-form, YouTube Shorts, TikTok, Instagram, Facebook, Reddit and
+off-YouTube news video — so the beat record has to carry enough context that a
+search engine can find footage the outline never names.
 
-## Input
+The outline is always upstream and approved. Never infer that a clip existed first.
 
-A `.docx` or plain text script. Convert with `pandoc -t plain --wrap=none`. Scripts are near-entirely uppercase, dash-bulleted, and carry production markers in triple parens.
+**This skill is upstream of everything.** The query generator reads `clip_role`,
+`orientation` and `news_anchor`; the search router reads `sourcability` and
+`source_native`; the transcript stage allocates its budget from `priority`; the
+grader reads `clip_role` and `orientation`. A field defect here propagates to three
+consumers, so validate before handing off:
 
-**`pandoc` is frequently not installed** — this has hit multiple independent runs of this pipeline. Check with `which pandoc` before relying on it. Fallback: unzip the `.docx` and extract `word/document.xml` with Python's `zipfile`, then strip the XML tags:
+```bash
+python3 scripts/check_beats.py beats.json --day wednesday
+```
+
+## Bundled files
+
+| File | Load when |
+|---|---|
+| `reference/aired_examples.md` | **Before extracting.** 24 worked beats from three episodes. |
+| `scripts/check_beats.py` | **Before handing off.** Per-record and set-level contract checks. |
+
+`reference/beat_yield.md` is the other half of the calibration set — see
+[Back-filling](#back-filling-past-scripts). It is written by the pipeline, not
+shipped here; if it is absent, create it with
+`rossen-pipeline/scripts/init_yield_log.py`.
+
+## Input — outline mode (the default)
+
+The approved outline's markdown source **and** the pre-bible it was built from.
+
+| Beat record field | Comes from |
+|---|---|
+| one record per | `HAVE · <ORIENTATION>` or `FIND · <ORIENTATION>` row. `DEMO` rows go to Checkpoint 1 as `SHOW-PRODUCED`; `GUEST`, `JEFF`, `STILLS` are not beats. |
+| `beat_id` | `MM-DD-<story><row>` — `10-07-A5` is story A, beat row 5 |
+| `segment_title` | The story's headline |
+| `orientation` | The Clip tag. Producer-authored; a hard constraint, as below. `BROLL` after it means picture-only. |
+| `script_text` | The row's Who and What happens, **plus that beat's specifics from the pre-bible** — names, handles, dollar figures, places, dates, outlets. |
+| `news_anchor` | The story's Peg and any dated event in the pre-bible, written as a search string |
+| `source_native` | A `HAVE` row whose pre-bible line names a native TikTok/Reels/X post → that platform. It goes to the manual lane. |
+| `expected_segments` | 1, unless the row or pre-bible describes two moments from one source |
+
+**The outline row alone is too thin to search.** A bible's runway used to carry six
+to ten lines of specifics above each clip; in this workflow those specifics live on
+the pre-bible page, so pull them from there. Never add a specific that is in
+neither document — flag the beat thin instead.
+
+## Input — script mode (back-fill only)
+
+A `.docx` or plain text aired bible, for the eval set. Everything from here through
+"Extracting beat text" is script mode. Convert with `pandoc -t plain --wrap=none`.
+Scripts are near-entirely uppercase, dash-bulleted, and carry production markers in
+triple parens.
+
+**`pandoc` is frequently not installed** — this has hit multiple independent runs of
+this pipeline. Check with `which pandoc` before relying on it. Fallback: unzip the
+`.docx` and extract `word/document.xml` with Python's `zipfile`, then strip the XML
+tags:
 
 ```python
 import zipfile, re
@@ -26,7 +80,8 @@ lines = ["".join(n.text or "" for n in p.iter(ns + "t")) for p in tree.iter(ns +
 script_text = "\n".join(lines)
 ```
 
-This loses pandoc's paragraph-style hints (bold, headers) but preserves every line and marker, which is all the extraction below needs.
+This loses pandoc's paragraph-style hints (bold, headers) but preserves every line
+and marker, which is all the extraction below needs.
 
 ## Markers, and what each one means
 
@@ -34,62 +89,120 @@ This loses pandoc's paragraph-style hints (bold, headers) but preserves every li
 |---|---|
 | `(((PLAY CLIP XXX HORIZONTAL)))` | A beat. Landscape source. In every observed case this resolved to YouTube or a news site. |
 | `(((PLAY CLIP XXX VERTICAL)))` | A beat. Portrait source. In every observed case this resolved to TikTok or Facebook video. |
+| `(((PLAY CLIP XXX ... BROLL)))` | A beat, but **picture-only** — Jeff narrates over it. No outcue to find. Set `expected_segments` normally and note it in `visual_spec`. |
 | `(((TAKE ... SCREENSHOT)))` | **Not a beat.** Still image, sourced separately. Skip. |
 | `(((CREATE FULL SCREEN GRAPHIC)))` | **Not a beat.** Art department. Skip. |
+| `(((JEFF SCREEN SHARE)))` | **Not a beat.** Live screen walkthrough. Skip. |
 | `WHOLE CLIP` | Segment runs start to end. |
 | `:38-2:01 (THIS IS WHAT THE SCAMMERS DID)` | In point, out point, and the outcue phrase spoken at the out point. |
 | `BUTT` | Butt-cut. The segments above and below come from the **same source** and are stitched. One clip, many segments. |
 | `TEASE`, `SPONSOR`, `CHAPTER` | Non-beat production blocks. Skip. |
 
-The orientation marker is producer-authored ground truth. **Treat it as a hard constraint on the platform list, not a hint.** Horizontal beats never search TikTok. Vertical beats never search YouTube long-form.
+The orientation marker is producer-authored ground truth. **Treat it as a hard
+constraint on the platform list, not a hint, and in both directions.** Horizontal
+beats never search TikTok, Instagram or Facebook. Vertical beats never search
+YouTube long-form. Shorts is the sole exception and runs on every orientation. This
+held in all 24 calibration beats.
 
 ## Two structural traps
 
-**The cold open.** Every script opens with a rundown block that restates each segment in tease language. It contains no `PLAY CLIP` markers but reads like beat text. Everything before the first `HIT LIKE AND SUBSCRIBE` or `JOIN THE CHAT` line is tease. Drop it. If you extract beats from it you will roughly double the beat count with unresolvable duplicates.
+**The cold open.** Every script opens with a rundown block that restates each
+segment in tease language. It contains no `PLAY CLIP` markers but reads like beat
+text. Everything before the first `HIT LIKE AND SUBSCRIBE` or `JOIN THE CHAT` line
+is tease. Drop it. If you extract beats from it you will roughly double the beat
+count with unresolvable duplicates.
 
-**Mid-show teases.** Blocks headed `TEASE // SPONSOR` or `TEASE//CHAPTER SPONSOR BREAK` restate upcoming segments. Same rule: no clip beat lives inside them.
+**Mid-show teases.** Blocks headed `TEASE // SPONSOR` or `TEASE//CHAPTER SPONSOR
+BREAK` restate upcoming segments. Same rule: no clip beat lives inside them.
+
+## How many beats to expect
+
+Ask which show day. The two are different jobs.
+
+| Show day | Beats | Orientation skew |
+|---|---|---|
+| Wednesday (top stories) | **10–12** | mostly horizontal |
+| Friday (one content story + deals guest) | **0–5** | mostly vertical |
+
+A Friday show with three beats is a correct extraction, not an under-extraction —
+one aired Friday had **zero** clip beats because its content segment was a
+screen-share walkthrough. The deals half of a Friday is never a clip beat. Above
+the band on either day, suspect the cold open or a mid-show tease.
 
 ## Extracting beat text
 
-Walk backward from the `PLAY CLIP` marker, collecting dash-bulleted lines, and stop at whichever comes first: the previous clip block, a section header, or a sponsor or tease block. Six to ten lines is typical.
+Walk backward from the `PLAY CLIP` marker, collecting dash-bulleted lines, and stop
+at whichever comes first: the previous clip block, a section header, or a sponsor or
+tease block. Six to ten lines is typical.
 
-Keep the whole run. The specific dollar figure, the relationship, the object, the location, and the current-events anchor are all in there and all of them are searchable. `THIS COUPLE LOST $850,000` and `A RETIRED POLICE OFFICER JUST LOST NEARLY $10,000` are the two most searchable strings in their respective beats.
+Keep the whole run. The specific dollar figure, the relationship, the object, the
+location, and the current-events anchor are all in there and all of them are
+searchable. `THIS COUPLE LOST $850,000` and `A RETIRED POLICE OFFICER JUST LOST
+NEARLY $10,000` are the two most searchable strings in their respective beats.
 
-**Pull the news anchor separately.** Several beats exist because a dated event happened: a $232 million EU fine against Temu, the Spirit Airlines shutdown, Maryland banning dynamic pricing. When the beat text names a company, a dollar figure, an agency, a state, or a regulatory action, put it in `news_anchor`. The query generator searches that string directly and it is usually the single highest-recall query in the whole set.
+**Pull the news anchor separately.** Several beats exist because a dated event
+happened: a $232 million EU fine against Temu, the Spirit Airlines shutdown,
+Maryland banning dynamic pricing. When the beat text names a company, a dollar
+figure, an agency, a state, or a regulatory action, put it in `news_anchor`. The
+query generator uses that string as its first anchor query verbatim, and it is
+usually the single highest-recall query in the whole set — so write it as a search
+string, not a description.
 
 ## Clip roles
 
-Seven roles. The first four are the show's bread and butter.
+**Eight values across seven families.** The emitted value is what goes in
+`clip_role`, and `explainer_demo` is always emitted split.
 
-**`victim_interview`** — A person describing what was taken from them. Local affiliate package, occasionally national. Horizontal, YouTube or affiliate site. The largest single share of what airs. Lead-in tells: *listen to what happened to him*, *think what you would do if you were her*, *this woman lost*.
+| `clip_role` value | What it is |
+|---|---|
+| `victim_interview` | A person describing what was taken from them. Local affiliate package, occasionally national. Horizontal, YouTube or affiliate site. **The largest single share of what airs.** Tells: *listen to what happened to him*, *think what you would do if you were her*, *this woman lost*. |
+| `confrontation_bust` | Someone catching the scammer live, law enforcement running a sting, a reporter confronting the operator. Rossen loves these and they close segments. Either orientation. Tells: *watch what happens when*, *he set up a real sting*, *busted one of them in the act*. |
+| `evidence` | The artifact itself. Doorbell cam, security cam, fire damage, a screen recording of the scam message. Usually vertical, TikTok or Facebook. Tells: *have a look*, *here you can see*, *this is the family's first reaction*. |
+| `explainer_demo/creator_short` | 15–60 second vertical demo, TikTok or Reels. The pen test, the UV light trick. |
+| `explainer_demo/creator_long` | Multi-minute horizontal walkthrough from a fraud-focused YouTube channel. |
+| `authority_report` | Network news or wire coverage of a development. Not a victim, not an affiliate. Today.com, NBC, CNBC, Reuters. Tell: *here's what we know right now*. These often live on network sites rather than YouTube — set `offsite_likely: true`. |
+| `debunk` | A viral claim being disproven. Inverted search: you want the takedown, not the claim. Snopes, fact-check desks, local news debunks. |
+| `first_person_rant` | Someone venting to camera about what happened to them. Vertical, TikTok. Distinct from `victim_interview` in that nobody is interviewing them. |
 
-**`confrontation_bust`** — Someone catching the scammer live, or law enforcement running a sting, or a reporter confronting the operator. Rossen loves these and they close segments. Either orientation. Lead-in tells: *watch what happens when*, *he set up a real sting*, *busted one of them in the act*, *and confronts the seller*.
-
-**`evidence`** — The artifact itself. Doorbell cam, security cam, fire damage, a screen recording of the scam message, a photo of the destroyed product. Usually vertical, TikTok or Facebook. Lead-in tells: *have a look*, *here you can see*, *this is the family's first reaction*.
-
-**`explainer_demo`** — Someone showing how the scam works or how to defend against it. Splits hard by platform and you must pick one:
-- *creator_short* — 15 to 60 second vertical demo, TikTok or Reels. The pen test, the UV light trick.
-- *creator_long* — multi-minute horizontal walkthrough from a fraud-focused YouTube channel.
-
-**`authority_report`** — Network news or wire coverage of a development. Not a victim, not an affiliate. Today.com, NBC, CNBC, Reuters. Lead-in tell: *here's what we know right now*. Note that these often live on network sites rather than YouTube, so flag `offsite_likely: true` and let the harvester know a plain YouTube search may not reach it.
-
-**`debunk`** — A viral claim being disproven. Inverted search: you want the takedown, not the claim. Snopes, fact-check desks, local news debunk segments.
-
-**`first_person_rant`** — Someone venting to camera about what happened to them. Vertical, TikTok. Distinct from `victim_interview` in that nobody is interviewing them.
-
-If a beat genuinely fits none of these, emit `role: other` with a one-line description rather than forcing a fit. Forced fits corrupt the query generator downstream.
+**These eight values are the contract.** The query generator has a weighting row for
+each and only these. **Never emit `other`, and never emit bare
+`explainer_demo`** — an unknown role has no weighting row, which does exactly the
+downstream damage a fallback would exist to prevent. If a beat genuinely fits none
+of them, assign the closest value and put the mismatch in a `role_note` field, so
+the beat still routes while the mismatch stays visible at Checkpoint 1.
 
 ## Visual spec
 
-One sentence describing what a producer would see in the thumbnail. This is what makes a contact sheet scannable, so write it for the eye, not for the search engine.
+One sentence describing what a producer would see in the thumbnail. This is what
+makes a contact sheet scannable, so write it for the eye, not for the search engine.
 
 Good: `older couple seated at home, local news lower-third, interview setup`
 Good: `handheld vertical, burned garage interior, daylight`
 Bad: `footage related to FBI imposter scams`
 
+## Priority
+
+**Grade by consequence, not by setup length.**
+
+| `priority` | Test |
+|---|---|
+| **1** | The segment's argument breaks without this clip. A named victim whose specific loss *is* the story; the bust the segment builds to. |
+| **2** | Illustrates a point the copy already makes on its own. Swappable for comparable footage without rewriting. |
+| **3** | Texture. The segment reads fine if it never rolls. |
+
+**Expect roughly a third of beats at priority 1** — three or four on a Wednesday.
+`check_beats.py` errors above 55%.
+
+An earlier version of this rule read "a beat that Jeff verbally sets up over three
+or more lines is priority 1." Measured against the calibration set, whose setups run
+2–8 lines with a median of 5, that rule marks **23 of 24 beats priority 1** and the
+field carries no information at all. It looked like signal and was a constant, and
+the transcript stage allocates its Whisper budget from it — so every beat looked
+equally urgent and the allocation was arbitrary. Grade by what breaks.
+
 ## Output
 
-One JSON object per beat.
+One JSON object per beat. All fourteen fields, every beat.
 
 ```json
 {
@@ -101,68 +214,180 @@ One JSON object per beat.
   "clip_role": "victim_interview",
   "news_anchor": "US Marshals impersonation gold bars",
   "visual_spec": "victim on camera at home describing door knock, local affiliate interview setup",
-  "platforms": ["youtube", "news_web"],
+  "platforms": ["youtube", "shorts", "news_web"],
   "offsite_likely": false,
   "priority": 1,
-  "expected_segments": 1
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "ABC7 Chicago affiliate package found with the victim on camera",
+  "source_native": "none"
 }
 ```
 
-`priority` 1 means the segment does not work without this clip. 2 means supporting. 3 means nice to have. A beat that Jeff verbally sets up over three or more lines is priority 1.
-
-`expected_segments` comes from counting `BUTT` markers when back-filling a past script. For a new script, default 1 and let the timecode extractor decide.
+`expected_segments` comes from counting `BUTT` markers when back-filling a past
+script. For an outline row, default 1 and let the grader decide — but a row or
+pre-bible line that names two distinct moments is a butt-cut waiting to happen, so
+raise it.
 
 ## Sourcability scan
 
-Run this immediately after extraction, before handing beats to the query generator. The purpose is to catch dead-end beats early — victims who never did a TV interview, events too recent for YouTube — so the producer can swap or plan instead of discovering the gap at grading time.
+Run this immediately after extraction, before handing beats to the query generator.
+The purpose is to catch dead-end beats early — victims who never did a TV interview,
+events too recent for YouTube — so the producer can swap or plan instead of
+discovering the gap at grading time.
+
+### Pace it, or it will lie to you
+
+**This scan fires ~20 yt-dlp searches on a Wednesday episode, and a rapid burst of
+yt-dlp calls trips YouTube's rate limiter.** Measured elsewhere in this pipeline: a
+dozen calls in a couple of minutes drove a path to 0 of 6 on IDs that had worked
+minutes earlier; twenty minutes later the same path returned 11 of 12 with nothing
+fixed. A throttled search returns zero results, which is indistinguishable from
+"this person has no video presence."
+
+That mistake is unrecoverable here. A false `sourcability: none` leads the producer
+to **swap the victim or drop the beat**, and nothing downstream can undo it. So:
+
+- Space the calls. One search per beat, sequentially, not a parallel burst.
+- **Never downgrade a beat on a single zero-result search.** Wait and retry once
+  before recording anything.
+- If a retry is not possible in this run, record **`sourcability: throttled`** with
+  a note. That is a network condition, not an absence of footage, and the producer
+  must not rule on it. Never launder a throttle into a `none`.
+- If several consecutive beats all come back empty, assume the limiter, not a
+  coincidence. Stop and say so.
 
 ### What to check
 
-For every beat that names a specific person (`victim_interview`, `first_person_rant`, and any beat where the script says "listen to him/her" or "watch what she says"):
+For every beat naming a specific person (`victim_interview`, `first_person_rant`,
+and any beat where the script says "listen to him/her" or "watch what she says"):
 
-1. Run `yt-dlp --print id --print title "ytsearch5:FIRSTNAME LASTNAME scam"` (and a variant without "scam" if the name is distinctive enough).
-2. If zero results mention the person → `sourcability: none`. The person has no video presence. This beat will be empty unless the show produces its own interview.
-3. If results exist but are all creator commentary or narrated readouts (generic channel names, the person is discussed but never appears) → `sourcability: commentary_only`. There is coverage but no on-camera interview. Flag it.
-4. If at least one result is from an affiliate or network and the title suggests an interview package → `sourcability: high`. Proceed normally.
+1. `yt-dlp --print id --print title "ytsearch5:FIRSTNAME LASTNAME scam"` — and a
+   variant without "scam" if the name is distinctive.
+2. Zero results mentioning the person, **after a retry** → `sourcability: none`.
+3. Results exist but are all creator commentary or narrated readouts (generic
+   channel names, the person discussed but never appearing) →
+   `sourcability: commentary_only`.
+4. At least one affiliate or network result whose title suggests an interview
+   package → `sourcability: high`.
 
-For beats that reference an event, company, or regulatory action rather than a named person (`authority_report`, `evidence`, `debunk`):
+For beats referencing an event, company, or regulatory action rather than a named
+person (`authority_report`, `evidence`, `debunk`):
 
-1. Run `yt-dlp --print id --print title "ytsearch5:COMPANY_OR_EVENT scam"`.
-2. These are almost always sourceable. Flag only if the event is very recent (within the last 2 weeks) and nothing surfaces.
+1. `yt-dlp --print id --print title "ytsearch5:COMPANY_OR_EVENT scam"`.
+2. Almost always sourceable. Flag only if the event is very recent (within two
+   weeks) and nothing surfaces.
 
-For vertical beats, also check YouTube Shorts: `yt-dlp --print id --print title --match-filter "duration<60" "ytsearch5:TOPIC #shorts"`.
+For vertical beats, also check Shorts:
+`yt-dlp --print id --print title --match-filter "duration<60" "ytsearch5:TOPIC #shorts"`.
+
+Use **`sourcability: unchecked`** only when there is nothing to query — a beat
+naming no person, no company and no dated event, where any search string would be
+invented. It means "not checkable," never "not checked yet."
 
 ### Self-recorded beats: check the subject's own social first
 
-If the script says the subject filmed themselves (*"he recorded this on his phone,"* *"she posted this to her followers,"* any `first_person_rant` where nobody is interviewing them) — before running any YouTube search, check whether the subject has a public Instagram, X, or TikTok account and whether they posted the clip there. A web search for `"NAME" instagram scam video` or `"NAME" posted video scam` usually surfaces it, often via press coverage that names the platform and date even when the exact permalink isn't indexable.
+If the script says the subject filmed themselves (*"he recorded this on his phone,"*
+*"she posted this to her followers,"* any `first_person_rant` where nobody is
+interviewing them) — before running any YouTube search, check whether the subject
+has a public Instagram, X, or TikTok account and whether they posted the clip there.
+A web search for `"NAME" instagram scam video` or `"NAME" posted video scam` usually
+surfaces it, often via press coverage that names the platform and date even when the
+exact permalink isn't indexable.
 
-Tag this `source_native: instagram | x | tiktok | none`. When a native post exists, that is the pick — not a YouTube repost. Aggregator channels (New York Post, and AI-narrator repost channels) frequently carry the only *findable* copy on YouTube, but they either re-narrate over the subject's own audio or are DRM/bot-walled from download, and neither is a clean, clearable source. Hand the producer the direct link to the original post (or profile + date + caption fragment if the exact permalink can't be pinned) instead of scraping and cropping a repost.
+Tag this `source_native: instagram | x | tiktok | none`. When a native post exists,
+**that is the pick** — not a YouTube repost. Aggregator channels (New York Post,
+AI-narrator repost channels) frequently carry the only *findable* copy on YouTube,
+but they either re-narrate over the subject's own audio or are DRM/bot-walled from
+download, and neither is a clean, clearable source. Hand the producer the direct link
+to the original post (or profile + date + caption fragment if the exact permalink
+can't be pinned) instead of scraping and cropping a repost.
+
+**A populated `source_native` and `sourcability: none` are contradictory.** A native
+post existing is the opposite of un-sourceable. That beat is un-*searchable* — it
+routes to the manual lane, which is a real outcome, not a gap.
 
 ### Output
 
-Add two fields to every beat record:
+Add to every beat record:
 
 ```json
 {
-  "sourcability": "high | commentary_only | none | unchecked",
+  "sourcability": "high | commentary_only | none | throttled | unchecked",
   "sourcability_note": "ABC7 Chicago affiliate package found with Owen on camera"
 }
 ```
 
+`none`, `commentary_only` and `throttled` all require a note saying what was
+searched and what came back. A bare downgrade is not actionable at Checkpoint 1.
+
 ### What happens when sourcability is low
 
-Do not silently proceed. Surface the problem in the Checkpoint 1 beat table with a row color or flag. The producer's options:
+Do not silently proceed. Surface it in the Checkpoint 1 beat table with a flag. The
+producer's options:
 
-- **Swap victim.** The script says "listen to this woman who lost $400k." There are dozens of women who lost comparable amounts and DID do a TV interview. Suggest two or three with confirmed YouTube affiliate coverage. The script writer adjusts the name and dollar figure.
-- **Mark as show-produced.** The show will interview this person themselves. Remove the beat from the clip pipeline entirely — it becomes a production task, not a search task.
-- **Drop the beat.** If neither option works, cut it. An empty beat at Checkpoint 1 costs nothing. An empty beat discovered at Checkpoint 3 wasted every search and download in between.
+- **Route to the manual lane.** `source_native` is populated: hand over the original
+  permalink. Not a gap.
+- **Swap victim.** The outline says "woman who lost $400k." There are dozens of
+  women who lost comparable amounts and DID do a TV interview. Suggest two or three
+  with confirmed affiliate coverage; the approved swap rewrites that outline row's
+  Who and What happens.
+- **Mark as show-produced.** The show will interview this person themselves. Remove
+  the beat from the clip pipeline — it becomes a production task, not a search task.
+- **Drop the beat.** If none of the above works, cut it.
+
+An empty beat at Checkpoint 1 costs nothing. An empty beat discovered at Checkpoint
+3 wasted every search and download in between.
 
 ### Why this matters
 
-In the F2 pipeline run, three beats (b01, b04, b05) reached Checkpoint 3 as `flagged: null` after full search, download, and transcript grading. All three failures were predictable from a five-second YouTube search: the Winnebago County case was 15 days old with no YouTube upload, the Cook couple and Barry Heitin had only print coverage. The sourcability scan would have caught all three at Checkpoint 1 and saved the entire downstream effort.
+In the F2 pipeline run, three beats (b01, b04, b05) reached Checkpoint 3 as
+`flagged: null` after full search, download, and transcript grading. All three
+failures were predictable from a five-second YouTube search: the Winnebago County
+case was 15 days old with no YouTube upload; the Cook couple and Barry Heitin had
+only print coverage. The sourcability scan would have caught all three at Checkpoint
+1 and saved the entire downstream effort.
 
 ## Back-filling past scripts
 
-When the script already contains aired URLs and timecodes, also emit `aired_url`, `aired_platform`, and a `segments` array of in/out/outcue objects. These rows are the eval set. The outcue phrase is the verification anchor for the timecode extractor: a correct out point is one where the outcue text appears in the Whisper transcript within about a second of the proposed timestamp.
+Script mode. When an aired bible already contains aired URLs and timecodes, also emit `aired_url`,
+`aired_platform`, and a `segments` array of in/out/outcue objects. These rows are the
+eval set. The outcue phrase is the verification anchor for the timecode extractor: a
+correct out point is one where the outcue text appears in the transcript within about
+a second of the proposed timestamp.
 
-`reference/aired_examples.md` holds 24 worked beats from three episodes. Read it before extracting.
+### The two calibration files say different things, on purpose
+
+`reference/aired_examples.md` holds 24 worked beats and records **what aired**. Read
+it before extracting; it shows what a good beat looks like.
+
+`reference/beat_yield.md` records **what the search pipeline found**, per beat, per
+run — including the misses and why. It tells you which shapes have historically come
+back empty.
+
+**A shape that appears as a success in one and a failure in the other is a routing
+problem, not a contradiction.** That distinction matters because getting it wrong
+suppresses good beats:
+
+> The yield log's standing finding is that **vertical `evidence` beats came back
+> empty in 4 of 4 search attempts.** But `aired_examples.md` contains two vertical
+> `evidence` beats — 06-03-b07 and b08 — that *aired*, from native TikTok
+> permalinks.
+>
+> Both are true. Those clips exist and are excellent; the search leg simply cannot
+> reach native TikTok posts, which is a documented limitation of the harvester, not
+> a fact about the footage. So the finding means **route vertical `evidence` to the
+> manual lane via `source_native`** — not flag it `sourcability: none` and drop it.
+
+When you are about to emit a vertical `evidence` beat, ask whether the footage
+plausibly exists on somebody's phone. If it does, populate `source_native` and route
+it. Only flag `none` when the footage genuinely does not exist and the show would
+have to produce it.
+
+**If `beat_yield.md` is absent there are no standing findings yet**, and no beat
+shape should be suppressed on their authority. Create the log with
+`rossen-pipeline/scripts/init_yield_log.py` and start recording.
+
+Append at the end of every pipeline run — see `rossen-pipeline` Step 9 for the schema
+and the exact path. Do not append to a bare `reference/beat_yield.md` from a
+different working directory; that ambiguity has already split this log once.

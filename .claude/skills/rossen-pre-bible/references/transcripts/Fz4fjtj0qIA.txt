@@ -1,0 +1,1364 @@
+# 20260515 How to See Your Amazon SECRET FILE (Yes, it's Real!)
+[00:14] Welcome to Ross and reports. I am Jeff
+[00:17] Ross and we have a big big show for you
+[00:19] today.
+[00:21] But I'm hearing myself twice.
+[00:25] Once is enough.
+[00:27] Amazon is tracking every single thing
+[00:30] you do. We're talking about everything
+[00:32] you buy which of course they do, but
+[00:35] dating back decades they're even
+[00:37] tracking every time you call customer
+[00:39] service, every time you talk to Alexa,
+[00:42] every time and this is crazy, your
+[00:44] search history, every time you hover
+[00:46] your mouse right over a product and
+[00:49] you're like, "Should I get it? Should I
+[00:50] not get it?" They're keeping track of
+[00:52] that too. They even have a section
+[00:54] called the abandoned cart, which means
+[00:56] stuff you put in there, but you never
+[00:58] actually purchased. That as well is is
+[01:01] getting you in trouble and they are
+[01:03] keeping it. But good news, Amazon is now
+[01:07] letting you request and see your own
+[01:10] secret file. Amazon has created a way
+[01:13] where you can get it and we have the
+[01:15] step-by-step instructions right during
+[01:17] this show. We're going to walk you
+[01:18] through it, so get ready. How to get
+[01:21] your secret file, your secret profile.
+[01:24] It is fascinating down to like photos of
+[01:27] deliveries from like decades ago. This
+[01:29] goes back decades and you're going to
+[01:31] get to see it and it's how much money
+[01:33] you've spent on Amazon, all the
+[01:35] different places you've lived, the stuff
+[01:37] you were looking at 5 years ago versus
+[01:39] today. They have everything and they're
+[01:42] finally letting us see it and we're
+[01:43] going to show you how to do it. Plus we
+[01:45] have the hottest Amazon deals of the day
+[01:48] with our partners over at DealCatcher.
+[01:50] Our deal hunters are hard at work.
+[01:51] Biggest price drops, quality products,
+[01:53] and hidden the promo codes that we've
+[01:56] gotten from all over the internet to
+[01:58] save you even more money at checkout.
+[02:00] These are discounts that regular Amazon
+[02:02] uh customers do not get, but you will.
+[02:05] And we have a major announcement. We
+[02:07] just launched this week our YouTube
+[02:08] memberships here at Rossman Reports.
+[02:10] We'd love for you to sign up. Just pull
+[02:12] out your phone. If you're watching this
+[02:13] on TV right now, pull out your phone
+[02:16] and just zoom into the uh QR code right
+[02:18] there in the middle, away from my faces.
+[02:20] Those are stickers. We'll get to you in
+[02:21] a second. Zoom in on that QR code and
+[02:24] join our Rossman Reports membership
+[02:25] program. There are different tiers. You
+[02:27] can see which one is best for you. Maybe
+[02:29] none of them are, but you get to choose.
+[02:31] Um all of the tiers give you access to
+[02:33] these emojis and these these loyalty
+[02:35] badges that you can use in your
+[02:37] comments, which people seem to love. And
+[02:39] the more you sign up, and we have people
+[02:41] signing up right now. Thank you very
+[02:42] much, Off the Cuff Craig. Uh the more
+[02:45] you sign up, the more stickers we get to
+[02:46] unlock. Plus, we have early access to
+[02:49] videos, discounted Rossman Reports
+[02:51] merch. We have live chats for members
+[02:55] only, and members-only live streams as
+[02:58] well, so we can talk directly with any
+[03:01] of the questions you have. We're just
+[03:02] going to get our members together in a
+[03:03] small group, smaller group, and we're
+[03:06] going to talk exclusively for members.
+[03:08] We're going to do that uh every month or
+[03:10] even more than that. So, sign up right
+[03:12] now. Scan the QR code. Or if you're
+[03:13] watching on a laptop or if you're
+[03:15] watching on a computer or your phone,
+[03:17] just hit the join button. You should see
+[03:18] join right there. Hit join. It'll give
+[03:21] you the different membership tiers, and
+[03:22] you can figure out which one is best for
+[03:24] you.
+[03:25] I love these. I love those emojis.
+[03:27] Really, really cute. Anyway, let's get I
+[03:29] also hit like and subscribe. Really,
+[03:30] really helps to uh send this out to as
+[03:32] many people as possible, and you get
+[03:34] notified about our our content. Also, um
+[03:37] join us in the chat right now. Join us
+[03:39] in the chat. Let us know where you're
+[03:40] watching from. Let us know what you
+[03:42] think. Plus, we do something really
+[03:44] special here on the Amazon show. We are
+[03:46] taking your live requests. If you guys
+[03:49] are looking for a deal on Amazon, if
+[03:51] you're looking for a deal on anything,
+[03:52] and you can't seem to find it, our deal
+[03:56] in real time. How cool is that? In real
+[04:00] time. So, I want a blender. I want a a
+[04:03] KitchenAid blender. Get specific. Write
+[04:05] it in. Our deal hunters will go find you
+[04:08] on DealSeek
+[04:10] the best deal on Amazon plus the hidden
+[04:11] promo code. So, we we got you we got
+[04:13] your back.
+[04:15] Amazon is tracking everything you do
+[04:18] dating back decades.
+[04:21] Everything you buy, everything you were
+[04:23] thinking of buying. Yes, I'm talking
+[04:25] about your search history. Yes, I'm
+[04:26] talking about those times that you've
+[04:27] kind of just put your mouse over
+[04:29] something and you're like, "Should I get
+[04:30] it? Should I not get it?" They're
+[04:32] tracking that, too. Uh times that you
+[04:34] put stuff into a cart and then didn't
+[04:36] buy it. Yep, all of that as well. It is
+[04:39] all being tracked. Um including, by the
+[04:42] way, when they take those photos outside
+[04:44] of your house with your packages dating
+[04:47] back years and years and years. But now
+[04:49] you can request all of that information.
+[04:52] Your entire secret file. I'm going to
+[04:53] show you how to do it. But first, here's
+[04:55] a little peek at what they're
+[04:56] collecting. Watch this.
+[04:57] >> it makes sense that they track what
+[04:59] you're doing on their website and the
+[05:00] products that you're looking to buy, but
+[05:02] they also track the device that you're
+[05:04] using. Uh maybe the OS, the IP address,
+[05:07] which provides your general location.
+[05:09] They track every record of motion on
+[05:11] your Ring doorbell log. They even track
+[05:13] every scroll and click that you make on
+[05:16] their website.
+[05:17] Now, Amazon has said that they are not
+[05:19] in the business of selling this data to
+[05:21] anybody else. So, hopefully we shouldn't
+[05:23] have to worry about that. But the kind
+[05:25] of profile that they're building on us,
+[05:27] that they're able to build on us is
+[05:29] alarming, and it's one of the many
+[05:30] reasons why regulators are trying to
+[05:32] break up these big tech companies. If
+[05:35] that's not crazy enough, then check this
+[05:37] out. The third type of information
+[05:39] Amazon collects on you is what they
+[05:40] receive from third parties.
+[05:43] I mean, this could be your credit
+[05:44] history from credit bureaus as part of
+[05:45] their fraud prevention. information from
+[05:47] third-party delivery companies about
+[05:49] your change of address, and finally,
+[05:51] listen carefully here, data from their
+[05:53] subsidiaries. Who are Amazon
+[05:55] subsidiaries, you ask? Well, did you
+[05:57] know that Amazon owns diapers.com,
+[05:59] Zappos, Twitch, IMDb, and Whole Foods
+[06:03] Market among about 40 other companies?
+[06:05] So, although the connection between your
+[06:07] interactions with these companies and
+[06:08] your Amazon file might not be direct, it
+[06:11] does exist.
+[06:13] >> Yeah, and and before you're like, "Oh,
+[06:15] Amazon never sells my stuff or gives my
+[06:18] stuff to third parties." I actually want
+[06:19] to dig deep into that because it sounded
+[06:21] a little off to me.
+[06:22] Um here's what it actually says about
+[06:24] your personal data on the Amazon
+[06:27] website. Let me call it up on the
+[06:28] screen. It says, "Purposes of using your
+[06:30] personal information.
+[06:32] Uh your privacy and security of your
+[06:33] data is so important to us. We're not in
+[06:35] the business of selling our customers'
+[06:37] personal information to others. In some
+[06:39] instances, we may share your personal
+[06:42] information with third parties." So,
+[06:45] they don't sell it, but they may share
+[06:48] it, and they reserve the right to do
+[06:49] that with data brokers.
+[06:51] Those are people that get data breaches,
+[06:53] and that's how your stuff ends up on the
+[06:54] dark web. Advertisers, that's how you're
+[06:56] being um targeted. It could be anybody.
+[06:59] Um third-party sellers that advertise on
+[07:02] the platform. What's going on, Charles?
+[07:03] Thanks for signing up and becoming a
+[07:04] YouTube member. Remember, just hit join.
+[07:07] You got a lot of great perks for you. Um
+[07:09] so, and you get these little badges,
+[07:11] too, and you you change colors. So,
+[07:13] Amazon will send your stuff to third
+[07:16] parties. They're not saying you they
+[07:17] won't, but the good news is Amazon is
+[07:20] now letting you see your secret profile,
+[07:23] which is really cool, and it can go back
+[07:25] decades.
+[07:27] It's actually a little shocking how much
+[07:29] money you've spent, the stuff you were
+[07:31] buying at this time last year, at this
+[07:33] time 5 years ago, at this time 10 years
+[07:35] ago. I've been obsessed. I've been
+[07:36] sitting on this thing for like 7 hours.
+[07:38] Like, what? I was ordering that? All
+[07:40] right, so we're going to share my
+[07:41] screen, and we are going to show you how
+[07:43] to do it. Plus, we're going to show you
+[07:45] how to shut off some privacy settings so
+[07:48] you're sharing less privacy private data
+[07:50] with Amazon. We've got your back. If
+[07:53] you're just watching this and these
+[07:54] directions go too fast, you can hit
+[07:57] pause, you can hit back it up a little
+[07:59] bit, hit replay, and go through the
+[08:01] steps with us just one at a time so you
+[08:03] can do this yourself at home. So, let's
+[08:05] take my screen.
+[08:07] This is my Amazon account right now
+[08:09] live. I'm moving my mouse around. Do you
+[08:10] see me? Okay. And here's what I want you
+[08:12] to do to request your file. It's really
+[08:14] easy actually. So, come up here to the
+[08:17] top right. This is my wife's Amazon. She
+[08:20] She rules the roost in the house. I
+[08:21] don't even have my own Amazon account. I
+[08:23] have to use hers. How do you like that?
+[08:25] Um all right, so you see it says hello
+[08:26] Danielle, account and list, right? In
+[08:28] the top right where I'm circling my
+[08:29] mouse. Hit that button, okay?
+[08:32] We'll actually go here. Kind of hover
+[08:34] over it. Now, you're going to see this
+[08:36] thing right here where it says account
+[08:37] at the very top. It's the first thing.
+[08:39] Hit account. You're going to get this
+[08:41] page, your orders, your login security,
+[08:43] Prime, gift cards, business account,
+[08:45] your addresses. By the way, Amazon is
+[08:47] even keeping track every time you talk
+[08:49] to customer service. I believe they
+[08:51] Yeah, customer service. Look at that in
+[08:52] the bottom middle. Customer service.
+[08:54] Every time you talk to customer service,
+[08:56] they're keeping track. Everything you
+[08:57] say to Alexa, it's keeping track. But
+[08:59] we're going to get that report. Scroll
+[09:01] all the way down past all of this. Keep
+[09:03] scrolling down and in the bottom left
+[09:05] here, you see this thing it says manage
+[09:07] your data.
+[09:08] It says manage your data. I'm kind of
+[09:10] moving my mouse around it. The first
+[09:12] thing is request your data. Bring in
+[09:14] Trey Donovan from DLC, our partners at
+[09:16] DLC, and our Amazon expert. Uh Trey, do
+[09:19] you have this up on your computer to
+[09:20] show people what happens after you hit
+[09:21] request your data?
+[09:23] >> Absolutely. Yeah, I'll walk you through
+[09:24] it and after that, we'll show you
+[09:26] exactly what they give you so you can
+[09:28] see exactly the information that
+[09:30] Amazon's storing on you. So, if I take
+[09:31] the screen real quick, you're going to
+[09:33] see this request your data button under
+[09:36] the manage your data section.
+[09:38] Click it. It's going to pull up a new
+[09:40] page and you're going to see all of the
+[09:42] data that Amazon has on you. You're
+[09:44] going to see your recent orders. And
+[09:46] when I say recent, as Jeff mentioned,
+[09:47] that's going back decades from the very,
+[09:49] very beginning of Amazon. You'll also
+[09:51] see your addresses, your payment
+[09:52] options, everything that Amazon has on
+[09:55] you on this one page.
+[09:57] But what's super nice is with the click
+[09:58] of the button, you can submit
+[10:01] a request to actually get this
+[10:03] information. So in this case, you press
+[10:05] the submit button, we just form formally
+[10:07] requested a data
+[10:09] pull essentially from Amazon to see all
+[10:11] of our orders. And you can do this for
+[10:13] everything. Again, your addresses, your
+[10:15] payment options. Some of these down here
+[10:17] you might not care about like Amazon
+[10:18] Alexa or Fire Fire TV, but we went
+[10:21] ahead, we actually pulled all of this.
+[10:23] We pulled so much info. I'm I'm talking
+[10:26] like pages and pages of Excel. And we've
+[10:28] got some pretty cool takeaways, too. So
+[10:30] if we walk through what Amazon actually
+[10:32] sends you when you request this
+[10:34] information, I think there's some really
+[10:35] cool insights. So number one
+[10:37] >> Yeah, show show us what they send you.
+[10:39] Yeah.
+[10:40] >> When you submit this request, it's not
+[10:43] set in stone right away. You're going to
+[10:44] get a follow-up email that looks like
+[10:46] this, which is Amazon just approving and
+[10:49] confirming that you wanted this request,
+[10:51] that it was you making the request. So
+[10:53] after you press that submit button on
+[10:54] the last page, check your inbox and make
+[10:57] sure to press this confirm data request
+[10:59] button.
+[11:00] And then it's a little iffy on how long
+[11:01] it takes. It could take 2 hours to 30
+[11:03] days. But when the info comes, you're
+[11:06] going to see literally everything that
+[11:08] Amazon has on you. So we broke it down,
+[11:11] we looked at everything they send you.
+[11:13] They'll give you your Whole Foods orders
+[11:15] cuz Whole Foods is owned by Amazon. They
+[11:17] give you your Amazon orders, your cart
+[11:19] history, even delivery photos, Jeff,
+[11:22] which is weird to think about because,
+[11:24] you know, some of this is more valuable
+[11:26] and vulnerable info than other stuff.
+[11:28] But having actual pictures of the front
+[11:30] of your house and your and your
+[11:32] previously delivered items blew my mind.
+[11:35] So, you can do a deep dive and go
+[11:36] through here and see exactly what they
+[11:38] give you, but we found this picture from
+[11:41] years ago that Amazon is still storing
+[11:44] of a package they delivered back in
+[11:45] 2010, which is just crazy that they keep
+[11:48] this stuff. They have so much data on
+[11:50] the average person, and again, delivery
+[11:52] photos is just one of the hundreds of
+[11:55] thousands of data points they have on
+[11:57] you.
+[11:58] I acknowledge this spreadsheet
+[12:00] >> it looks like.
+[12:01] >> Yeah.
+[12:02] Yeah.
+[12:02] >> That's what it looks like when you get
+[12:04] it, and it's so confusing, but then you
+[12:05] can go into each thing. It's all your
+[12:06] different orders and stuff.
+[12:08] The names of them.
+[12:09] >> Exactly. I acknowledge this is so, so
+[12:11] difficult to read right now. It is
+[12:13] insanely dense, and we decided to be a
+[12:15] little bit fun to dive into a couple of
+[12:18] these line items cuz these are my orders
+[12:20] on Amazon over the past almost 20 years,
+[12:23] and we looked at a couple of them. Jeff,
+[12:25] we found if you scroll in on one of
+[12:28] these items, these Sharpie markers that
+[12:30] we ordered back in 2016.
+[12:34] Right here you're going to see the date
+[12:35] they were ordered. This item here is the
+[12:37] price, $5.98 for this 12 pack of
+[12:39] Sharpies.
+[12:40] Just for fun because I had all this
+[12:42] data, I went in and I saw how much these
+[12:44] same Sharpies are today, $8.99, and
+[12:47] that's on sale from the original $11
+[12:49] price. Not surprising because of
+[12:51] inflation, but just a cool thing to see.
+[12:53] And again, this is one of thousands of
+[12:56] things we've ordered on Amazon over the
+[12:57] past 20 years. So, it's just surprising
+[12:59] how much they actually have on you.
+[13:02] >> Yeah. Wow, it's crazy. And there's also
+[13:04] a way where you can actually opt out of
+[13:08] certain things, certain private things
+[13:09] in your life that they're collecting
+[13:11] right now that you want to opt out of,
+[13:13] and you don't want them to collect as
+[13:14] much, right?
+[13:16] >> Yeah, no, exactly. There are three big
+[13:18] things, three big tips you guys can use
+[13:20] just to keep your privacy and your your
+[13:23] your personal information in your hands
+[13:25] and not Amazon. So, really quickly,
+[13:27] that's turning off your browsing
+[13:28] history, that's refining your ad
+[13:30] preferences, and that's clearing your
+[13:32] third-party app access. And we're going
+[13:34] to walk you through all three of those,
+[13:36] so you know what Amazon is storing on
+[13:38] you, you know how to proactively manage
+[13:40] it, and make sure it doesn't fall into
+[13:41] the wrong hands.
+[13:44] >> Very cool. Can you show us?
+[13:47] >> Yeah, absolutely. If we go back to
+[13:48] Amazon, this is the page, as I said
+[13:50] earlier, that has literally all of your
+[13:52] information. So, the first step right
+[13:54] here is to turn off your browsing
+[13:56] history. This is just so Amazon stores a
+[13:58] little bit less information on you. So,
+[14:00] if you go up to the account tab here,
+[14:03] then you click on account, this button
+[14:04] right here.
+[14:06] This takes you to the page where you're
+[14:07] >> way that you requested the data, same
+[14:08] thing?
+[14:09] >> Yep.
+[14:10] Same thing. It's all going to be out of
+[14:11] this hub right here.
+[14:13] If you scroll down to the bottom, you're
+[14:15] going to see this section that says your
+[14:17] browsing history.
+[14:19] Now, this is sorted from most recent to
+[14:21] further back in time, and this is
+[14:23] everything you've ever looked at on
+[14:24] Amazon, Jeff. This isn't your purchases,
+[14:26] this isn't stuff on your wish list, this
+[14:28] is tabs you've opened, and they've got
+[14:31] this button that says
+[14:32] >> tracking everything.
+[14:34] They are tracking everything. You just
+[14:36] look at it.
+[14:38] Wow.
+[14:39] >> Yeah, exactly. So, this button right
+[14:41] here is what you guys can click. It's
+[14:43] going to give you a little more info on
+[14:44] your browsing history, and there's a
+[14:46] couple cool things you guys can do just
+[14:48] to take some of that information out of
+[14:50] Amazon's hands. Number one, you can
+[14:52] remove each individual product from your
+[14:55] browsing history view. Essentially, this
+[14:57] is telling Amazon, I don't want you to
+[14:59] know that I was looking at these Beats
+[15:01] headphones. I don't want you to know
+[15:02] that I was buying a drone for my brother
+[15:04] for Christmas. You can just rake some of
+[15:06] that back in,
+[15:07] and it, granted, would take a long time
+[15:09] to do this individually. If you click
+[15:11] the settings icon in the upper right,
+[15:14] this lets you remove all of your
+[15:16] browsing history, take it out of
+[15:18] Amazon's hands, or if you want to keep
+[15:21] it, because some people like going back
+[15:22] and checking their old products, you can
+[15:24] pause your history for 1 day, 3 days, up
+[15:27] to 2 weeks, which we like to do around
+[15:29] holidays. If you're buying your
+[15:31] girlfriend an anniversary present, but
+[15:33] you share an Amazon account, maybe it's
+[15:35] not the best thing for her to see it in
+[15:37] your browsing history. Uh so again, it's
+[15:39] a privacy tip. It's also a relationship
+[15:41] tip, uh and it's something you guys can
+[15:43] do to proactively make sure your Amazon
+[15:45] history is owned by you and not by
+[15:47] Amazon.
+[15:48] >> And that's the gear icon in the top
+[15:50] right corner. Um just hit that in that
+[15:53] top right corner of your screen.
+[15:56] >> Right there, and then you can remove all
+[15:57] the items or pause it.
+[15:59] Yeah, so that's your browsing history.
+[16:00] Again, we're taking some of that
+[16:02] information back from Amazon. The next
+[16:04] tip we have is how to refine your ad
+[16:06] preferences. This is a great one because
+[16:09] ad preferences are what Amazon uses to
+[16:11] feed you ads. And a lot of people like
+[16:13] tailored ads. Like if I'm searching for
+[16:15] a car, I don't mind that I get ads
+[16:17] related to cars, but to some extent, and
+[16:19] we're going to show you how to manage
+[16:20] that. So,
+[16:22] right here, we're going back to the home
+[16:24] that we were at.
+[16:26] Yeah, this account is actually
+[16:27] >> step-by-steps. And by the way, if you
+[16:28] guys are watching this and it's all
+[16:30] going too fast, just stick, you know,
+[16:32] you can replay this, you can pause this
+[16:34] video, and go step-by-step, and you
+[16:36] know, and just follow the instructions.
+[16:38] I'm fascinated. Keep going.
+[16:41] >> Exactly. So again, this is how to refine
+[16:43] your ad preferences. Hover over your
+[16:45] name at the top of your Amazon account.
+[16:47] Scroll down to the account button right
+[16:49] here.
+[16:50] And now on the left-hand side, we're
+[16:52] going to find the communication and
+[16:54] content tab. This stores all of your
+[16:56] information, your communication and
+[16:58] content. The button we're looking for
+[17:00] here is called advertising preferences.
+[17:03] With one click, you're going to open up
+[17:05] this page, and you're going to be able
+[17:07] to either opt in or opt out of Amazon
+[17:10] using your information to send you ads.
+[17:13] Now, interestingly, Jeff, by default,
+[17:16] what do you think it is? Do you think
+[17:17] the default is that they're going to use
+[17:18] your info or not use your info?
+[17:20] >> Yeah, they're going to use your info by
+[17:22] default. That's what these companies
+[17:24] always do. It's set on unless you go in
+[17:27] and shut it off. Yeah, of course. They
+[17:28] want your info, baby. They don't want
+[17:30] you to find this page.
+[17:31] >> using your info using your info for ads
+[17:33] is not something you have to opt into.
+[17:35] It's something you have to proactively
+[17:37] opt out of, and you do it on this page
+[17:39] by switching this click right here to
+[17:41] say, "Do not show me internet-based ads
+[17:44] provided by Amazon." Switch that, click
+[17:47] submit, and then you are no longer going
+[17:49] to let Amazon use your information to
+[17:51] send and sell ads on your behalf. That's
+[17:54] the most important tip on this page.
+[17:56] Down below, you can also delete your
+[17:58] personal information in their ad
+[17:59] systems. So, say you've been using
+[18:01] Amazon for 10 years, and only right now
+[18:03] you wanted to make this switch. They
+[18:05] still have 10 years of data on you. You
+[18:07] can proactively delete all of your past
+[18:10] data here as well with a similar delete
+[18:13] all data button. It takes a couple days.
+[18:15] You'll get a confirmation in your email.
+[18:17] But now, after those two steps, Amazon
+[18:19] has no info on you that they use for
+[18:22] ads, and I know a lot of people like
+[18:23] that.
+[18:25] >> That is absolutely huge. So, guys, we
+[18:28] have taught you the step-by-step
+[18:30] instructions how to request the data
+[18:32] they have on you, and how to keep
+[18:34] yourself more private, which is amazing.
+[18:37] We have the hottest Amazon deals of the
+[18:39] week happening right now with secret
+[18:41] promo codes. Plus, we are taking your
+[18:44] live requests. Keep the chats coming on
+[18:47] the bottom of the screen. We're We're
+[18:49] trying to show a lot of them. Our deal
+[18:50] hunters are looking for these deals in
+[18:52] real time, and we will show you them
+[18:54] during the show. You're looking for a
+[18:56] Dyson vacuum a certain kind. We are
+[18:58] going to find the best deal for you and
+[19:00] tell you about it during this video. So,
+[19:01] join the chat. Let us know. All the
+[19:03] hottest Amazon deals coming up in just a
+[19:05] second. Quick word from our sponsor.
+[19:07] If you're 64 or older, and you're not
+[19:09] sure if your Medicare plan still fits
+[19:11] your life, listen to this. Thousands of
+[19:14] Ross and reports viewers have already
+[19:16] called chapter. Hundreds have found
+[19:18] better fitting plans and saved an
+[19:20] average of $1,100
+[19:22] a year. That's real money. Everyone's
+[19:24] situation is different, but you may as
+[19:26] well just check. It takes one phone
+[19:28] call. That's it. Under 20 minutes and
+[19:30] it's completely free. A real live
+[19:33] chapter advisor compares every plan and
+[19:36] tells you straight if there's something
+[19:37] better out there. And if you're already
+[19:39] on the right plan, they'll tell you
+[19:41] that, too. Call 609 MedHelp. That's 609
+[19:45] medhelp.
+[19:49] Let's get right into it. The hottest
+[19:50] Amazon deals happening right now with
+[19:53] secret promo codes that you can only get
+[19:56] here at Ross and reports and our
+[19:57] partners over at Dealseek. All of these
+[20:00] deals are in the And we'll call it the
+[20:03] first one here, the muscle massage gun.
+[20:05] We'll get to this. But all of these
+[20:06] deals are in the Ross and reports
+[20:07] collection of Dealseek. The way you get
+[20:09] them is to go to dealseek.com/rossen
+[20:13] and I think we'll put that email address
+[20:15] the URL at the bottom of the screen.
+[20:18] dealseek.com/rossen
+[20:20] and you can open up your phone and zoom
+[20:24] in your camera on that QR code on the
+[20:26] top right and it'll bring you right
+[20:27] there if you're watching this on your
+[20:29] television. But we have some great deals
+[20:30] and keep your live requests coming. Um
+[20:33] there's There it is.
+[20:34] dealseek.com/rossen.
+[20:35] That's how you get everything. It's free
+[20:36] to sign up and you get all these
+[20:38] discounts, but keep your comments coming
+[20:40] about what you're looking for and we'll
+[20:41] find it during the show. All right,
+[20:43] Trey.
+[20:44] Um this muscle massage gun, 50% off with
+[20:47] a promo code. And Amazon's really
+[20:49] offering nothing off
+[20:51] by itself.
+[20:51] >> Yeah. Most people are surprised by this.
+[20:53] So if this is your first time hearing
+[20:55] about Amazon promo codes, if you don't
+[20:57] know what they are, if you don't know
+[20:58] where to find them or how to use them,
+[21:00] we're going to give you a full breakdown
+[21:01] on everything you need to know about
+[21:03] Amazon promo codes so you can save more
+[21:05] money than anybody else. And this first
+[21:07] muscle massage gun is a great example.
+[21:09] You're going to notice when you're
+[21:10] shopping deals on Amazon, you're used to
+[21:12] seeing a little little red discount
+[21:14] badge showing the percent off. 20% off,
+[21:17] 30% off. This muscle massage gun, $59 on
+[21:21] the page, no price drop. So, your
+[21:23] immediate instincts are this isn't on
+[21:25] sale, but if you have a promo code, you
+[21:27] can apply the promo code at checkout. In
+[21:29] this case, we get this 50% off. So,
+[21:31] we're not paying 60 bucks, you're
+[21:33] getting it for $29.99
+[21:35] even though most people can't even
+[21:36] comprehend how that's possible.
+[21:39] >> Yeah, so you go to DLC. So, you go to
+[21:41] dealsc.com/rossen
+[21:43] or you do the QR code. Can you show us
+[21:44] on your screen what happens um and how
+[21:46] you get this promo code and how you get
+[21:48] this discount?
+[21:49] Got a lot of questions about that.
+[21:51] >> number two. And again, let's go through
+[21:52] deal
+[21:53] Let's go through deal number two for
+[21:54] this one, the next deal in the lineup,
+[21:56] and we're going to walk you through
+[21:56] exactly how to apply a promo code with
+[21:58] that.
+[21:59] >> Great, it's the uh back brace support.
+[22:02] Um retail price is $29.99. We can get it
+[22:05] for you for $8 with a 73% off promo
+[22:09] code. You see Amazon is only offering
+[22:11] 47%. Also a good deal, but we go further
+[22:14] than that, 73% off.
+[22:17] >> Exactly. So, on that page, you notice
+[22:19] there was a discount. That was a price
+[22:20] drop. What you're getting access to here
+[22:23] is a promo code. So, on the page you see
+[22:25] it's originally $30. We're going to get
+[22:27] it for $8 by clicking this button here
+[22:30] that says copy code and open Amazon.
+[22:33] Click that button.
+[22:34] >> Big green button.
+[22:35] >> It's going to automatically copy the
+[22:36] promo code to your clipboard.
+[22:38] And then instead of paying the $16
+[22:41] reduced price, which is already 47% off,
+[22:44] you can click the yellow button to add
+[22:46] it to your cart.
+[22:47] Once it's in your shopping cart, click
+[22:49] the yellow button to proceed to
+[22:51] checkout. And then the key here is
+[22:53] clicking this button that says use a
+[22:55] gift card, voucher, or promo code.
+[22:58] Click on that button. It's going to pull
+[23:00] up this box where you can just paste the
+[23:02] promo code, which is automatically on
+[23:04] your clipboard because you copied it
+[23:05] from Deal Seek. Press the apply button,
+[23:08] and as long as the deal is still active,
+[23:10] which this one says it is, you will
+[23:12] successfully apply the code, and then
+[23:14] you'll see at checkout you're going to
+[23:16] get that extra discount. So, to recap,
+[23:19] the product was originally $29. It was
+[23:22] on sale for $15.99. Most people stop
+[23:25] there, but we're using Deal Seek promo
+[23:27] codes, adding them at checkout, and we
+[23:28] get it for as low as $8.
+[23:32] >> Crazy. All right. Yeah, and and uh we
+[23:33] get a lot of questions from you guys.
+[23:34] So, go back and watch this video about
+[23:36] how to do it. You add it at the
+[23:37] checkout, and then you get that money
+[23:39] right at the very end. All right. Our
+[23:40] next uh item is a Blink Outdoor 4.
+[23:43] Everybody should have one of these.
+[23:45] These are super important for home
+[23:47] security. Everybody should have a
+[23:48] doorbell camera or an outdoor camera,
+[23:50] and they've become so affordable. Um we
+[23:54] got you 46% off here with a price drop.
+[23:57] These are That's a great brand.
+[23:59] >> 46% 6% off, and again, this is just a
+[24:02] price drop, which is indicated by that
+[24:03] red text on the screen. If you're on
+[24:05] Deal Seek, you can click the button to
+[24:07] open up this product, and that's where
+[24:09] you're going to see the information. So,
+[24:11] similar to the screenshot Jeff had
+[24:12] pulled up, we can now see on Amazon that
+[24:15] this one is 46% off. I think it has over
+[24:19] 10,000 purchased items in the past 30
+[24:21] days. Tons of great reviews. I'm talking
+[24:24] over 25,000 great reviews, and an
+[24:26] all-time low price. So, if you're
+[24:28] looking for a Blink outdoor security
+[24:29] camera, or a nice budget-friendly
+[24:32] beginner security camera for home
+[24:33] security, this is a great option today.
+[24:35] They're rarely 46% off.
+[24:38] >> All right. We got red light therapy for
+[24:40] your face and for your body, and I
+[24:42] should mention all of these items,
+[24:44] everything we talk about today, uh
+[24:46] whether you've requested it, which we'll
+[24:48] get to in a few minutes, or the ones we
+[24:49] came with,
+[24:51] um that we have, they're all in the
+[24:52] Rossen Reports collection on Deal Seek.
+[24:54] You just sign up on the Deal Seek
+[24:55] website using Rossin, so it's
+[24:57] dealseek.com/rossin.
+[24:59] It's that URL. It's the website at the
+[25:01] bottom. It is free to sign up. We're all
+[25:04] about free free free here. Free to you
+[25:06] to sign up. Sign up. It's all good. And
+[25:08] then you get access to all these deals.
+[25:10] Just click into the Look for my face.
+[25:12] It's our the Rossin Reports picks. And
+[25:15] everything we're talking about is there,
+[25:16] including this with 50% off with the
+[25:18] promo code.
+[25:20] Did you find
+[25:20] >> 50% off. Again, doesn't look like it's
+[25:22] on sale, but if I take the screen for a
+[25:24] second, with one click we can get a
+[25:26] promo code. Right here you can see it
+[25:29] was verified 1 minute ago because we are
+[25:31] constantly verifying these codes.
+[25:33] Copy the code to your to your clipboard.
+[25:36] It takes you to Amazon. And instead of
+[25:38] paying $45, again with the code, you can
+[25:41] see it comes down to just $25. It is 50%
+[25:45] off today. So if you're one of those
+[25:47] trendy people who's looking for a red
+[25:48] light therapy device, which honestly
+[25:50] isn't me, but I know people love it.
+[25:52] This is a great one. 50% off with a
+[25:54] promo code.
+[25:56] >> By the way, we are getting a ton of your
+[25:58] requests. I keep looking off to the
+[25:59] side. I have my computer here and I'm
+[26:01] watching our live Google Sheet as our
+[26:03] deal hunters are processing all of your
+[26:05] live requests that you're putting into
+[26:06] the chat and the comments. And we're
+[26:08] getting stuff ready for you. They're
+[26:10] looking for the deals and they found
+[26:11] some really good ones. Um let's get
+[26:12] through these though. The upgraded Oh,
+[26:14] portable saunas for home. Uh this is
+[26:17] actually becoming a really really big
+[26:19] viral hit for the summer of 2026.
+[26:23] And you got a great deal on this. 61%
+[26:25] off.
+[26:26] >> This is one I can stand behind. You'll
+[26:28] notice it is 21% off on the page. That's
+[26:31] a price drop. We're going to stack a
+[26:33] promo code, which gives you an
+[26:35] additional 50% off. So again, price drop
+[26:39] plus promo code, in total we're getting
+[26:41] 61% off. So the final price is $71. So
+[26:45] by copying the promo code,
+[26:47] it pulls up the page on Amazon.
+[26:49] Everybody else today pays $140,
+[26:52] Jeff. We are going around the price. We
+[26:55] don't subscribe to that. We're adding it
+[26:57] to our cart, applying the promo code,
+[26:59] and getting the same product everybody
+[27:01] else is getting for half of the price,
+[27:04] saving money, keeping it in our pocket
+[27:05] so we can use it on more important and
+[27:06] more fun things.
+[27:09] >> Crazy. All right. Uh DenTek Advanced
+[27:11] Clean floss picks.
+[27:14] Floss, baby, floss.
+[27:16] >> Floss, baby, floss. This is a fantastic
+[27:18] option because it uses two of our
+[27:21] price-saving strategies at Deal Seek.
+[27:23] Number one, high discounted price drops.
+[27:26] On your page, you can see that 62% price
+[27:29] drop, which is already phenomenal,
+[27:30] getting this for less than $4.
+[27:33] The second thing we're utilizing is a
+[27:34] subscribe and save deal. Jeff, I think
+[27:36] you're familiar with subscribe and save,
+[27:38] right?
+[27:39] >> I am, but will you explain it one more
+[27:41] time because we get a lot of questions
+[27:42] about it and how you can save money with
+[27:44] that.
+[27:45] >> Sure. If I take the screen, guys, you'll
+[27:47] notice on Amazon, it is 62% off. We're
+[27:50] going to get it in total for 78% off
+[27:53] with a subscribe and save trick.
+[27:56] View the deal on Amazon with one click.
+[27:58] You're going to see that same price
+[28:00] Amazon is trying to get you to pay,
+[28:02] which is less than $4.
+[28:04] But you'll notice if you don't click add
+[28:06] to cart, you scroll down a little
+[28:08] further and click subscribe and save.
+[28:11] With one click, this little coupon
+[28:13] appears on the page.
+[28:15] What this coupon is is a subscribe and
+[28:17] save discount, which is Amazon's way of
+[28:20] rewarding you for opting in for
+[28:22] recurring purchases. So if there's
+[28:24] something like toothpicks, or these are
+[28:26] dental picks, or shampoo, or
+[28:28] conditioner, or deodorant, things you're
+[28:30] going to buy every month for the rest of
+[28:32] your life, you can actually save a
+[28:34] substantial amount of money, in this
+[28:36] case 40%, if you opt in to recurring
+[28:38] purchases. So with one click, you can
+[28:40] subscribe, fulfill the subscription, and
+[28:43] then the best part, we say this all the
+[28:45] time, is you can cancel your
+[28:47] subscription as soon as you order it.
+[28:49] Literally get the 40% discount for free
+[28:52] on top of the 66% discount, and then no
+[28:55] harm, no foul, no punishment. You just
+[28:57] say, "Hey Amazon, I don't want these
+[28:59] recurring purchases." And you get to
+[29:01] keep the discount that you would applied
+[29:02] earlier.
+[29:04] >> Yeah, it's a full Amazon hack that you
+[29:06] get to trick them, and you get their
+[29:07] subscribe-and-save savings, but you
+[29:09] don't actually have to go through with
+[29:11] it, which is really, really cool. You
+[29:12] got a wireless rechargeable mouse from
+[29:14] Acer, which is a a pretty big company.
+[29:16] Um 40% off with a promo code that you
+[29:19] guys just found. Here it is right here.
+[29:21] So, only 20% off on Amazon, but we
+[29:23] double that with the promo code that is
+[29:25] exclusive to the Rossman Reports viewers
+[29:27] today.
+[29:29] >> Yeah, exactly. Acer mouse, this one has
+[29:31] the horizontal scroll wheel, which in my
+[29:33] opinion is them trying to mimic the
+[29:35] Logitech MX Master, which by the way is
+[29:38] the mouse that I use on a daily basis.
+[29:39] That horizontal scroll wheel will change
+[29:42] your life if you guys aren't using it.
+[29:43] That's just my two cents. But, we're
+[29:45] going to save a little bit of money on
+[29:46] it today. Instead of paying $39.99,
+[29:49] which by the way is the price right here
+[29:51] that Best Buy is currently selling it
+[29:53] for. If we go back to Deal Seek, we'll
+[29:56] be able to copy this promo code. On
+[29:59] Amazon, we're going to see it's 20% off,
+[30:01] so we get it for $31.
+[30:03] But, if we add it to our cart,
+[30:05] if we apply the promo code, the same
+[30:06] process as earlier, which happens when
+[30:08] you proceed to check out,
+[30:10] when you click the apply
+[30:12] gift card, voucher, or promo code
+[30:14] button,
+[30:15] and then paste the promo code at
+[30:17] checkout,
+[30:18] and click apply,
+[30:20] you're going to see you get that extra
+[30:21] bit of discount. It was already lower on
+[30:23] Amazon than it was at Best Buy, and then
+[30:25] we save an additional $8 just by pasting
+[30:28] that promo code. Super, super easy.
+[30:31] You're saving more money than anybody
+[30:32] else by getting the same products.
+[30:35] >> I love that. You got a DeWalt 20V MAX
+[30:37] cordless drill driver set. Good for
+[30:40] Father's Day. Father's Day coming up.
+[30:42] Great time to grab this
+[30:44] at a deep discount. You've got 50% off
+[30:46] with the price drop here.
+[30:48] >> Great time to buy it. 50% off with the
+[30:51] price drop. You're going to notice on
+[30:53] Amazon they're trying to sell it for
+[30:54] 179. 50% off so you get it for 89.
+[30:58] Uh rather
+[31:00] 50% off so you get it for 89 and then
+[31:02] with the promo code
+[31:03] >> Yeah.
+[31:04] >> Oh, sorry. My bad. This isn't a promo
+[31:05] code deal. This is a price drop deal.
+[31:07] So, instead of paying the full price
+[31:08] Amazon wants you to pay the Amazon brand
+[31:11] themselves are feeling a little
+[31:12] generous. They added that 50% discount.
+[31:15] And again, it's an Amazon's Choice
+[31:16] product. Everybody knows DeWalt. If
+[31:19] you're a DIYer or a dad for Father's
+[31:21] Day, fantastic pick up at a very, very
+[31:23] low price.
+[31:25] >> We are getting a huge number of your
+[31:27] requests. We're going to get to them in
+[31:28] just a second. And by the way, all of
+[31:29] these deals are at dealseek.com/rossen
+[31:33] and we've been putting it on the screen
+[31:35] uh the URL to go to. There it is right
+[31:37] there. dealseek.com/rossen.
+[31:39] Everything we're talking about today and
+[31:41] all of your live requests end up in the
+[31:43] Rossen Reports collection. So, it's all
+[31:45] right there and we change it all day.
+[31:47] When something expires, we put in
+[31:48] something new. So, stay close to that
+[31:50] and you can always look up uh the stuff
+[31:52] that you want. We have an artificial
+[31:54] 5-ft palm tree.
+[31:56] >> I'm down in Florida so I have the real
+[31:58] stuff. That's kind of cool for indoor.
+[32:00] That's really nice.
+[32:01] >> Now, 69 bucks but
+[32:03] >> you 50% off with the promo code. 69 for
+[32:06] everybody else but not for you.
+[32:08] >> No, exactly. We're shopping smarter.
+[32:10] We're beating the system here, guys.
+[32:12] Don't pay $70. I personally would kill a
+[32:15] plant if I had to water it every day.
+[32:16] So, I opt in for the faux, the
+[32:18] artificial ones. This one is $69.99.
+[32:22] You save 50% with the promo code. Again,
+[32:25] you know the process now.
+[32:26] dealseek.com/rossen.
+[32:28] You find the product. One click to copy
+[32:30] the promo code. Apply it at checkout on
+[32:33] Amazon. Get the discount. Get it for
+[32:35] $34.99 instead of 70 bucks. You don't
+[32:38] pay on DealSeek, you don't put your
+[32:40] information into DealSeek. DealSeek is a
+[32:42] deal discovery platform. They show you
+[32:45] the best deals, and then Amazon handles
+[32:47] it because we know Amazon is the easiest
+[32:49] place to make any purchase, and honestly
+[32:51] where some of the best deals can be
+[32:52] found.
+[32:54] >> I love that. And also, QR code in the
+[32:56] top right corner, if you're watching
+[32:57] this on TV, just pull out your phone and
+[33:00] zoom in to the QR code, it'll take you
+[33:02] right there as well. And then the final
+[33:03] one we brought today before we get into
+[33:05] the live request, which is my favorite
+[33:06] part. I'm always interested in getting
+[33:08] inside of your mind. Scary place to be,
+[33:10] and it changes every week with some
+[33:12] really wild products. Um Dyson purifier
+[33:15] humidity humidifier and cool, which we
+[33:18] got a lot of requests for this. You got
+[33:20] a 42% off uh with a uh with a price drop
+[33:24] here.
+[33:25] That's great from Dyson, which is a
+[33:26] huge premium company.
+[33:29] >> Absolutely. The Dyson Airwrap for the
+[33:31] hair products, the Dyson vacuums for
+[33:33] your kitchen, and the Dyson air
+[33:34] purifiers for your living room, probably
+[33:36] the top-tier products in their
+[33:38] respective categories, but with that
+[33:40] comes a very very high price point. So,
+[33:42] you guys are familiar with the Dyson air
+[33:44] purifier. This one is 42% off today.
+[33:47] It's a product that rarely goes on sale.
+[33:50] Granted, 42% off is still $550,
+[33:54] so it is not for everybody, but if
+[33:55] you've been wanting one, you're in the
+[33:57] market for a Dyson air purifier, we're
+[33:59] looking at price histories, we're
+[34:00] looking at seasonal price fluctuations,
+[34:02] and we've determined that this is a very
+[34:04] very competitive price considering how
+[34:06] expensive they are usually and how
+[34:09] expensive they are now on Walmart, on
+[34:11] Best Buy, and on Target's website. So,
+[34:13] if you're in the market and have 550,
+[34:15] this is a pretty good one to pick up.
+[34:18] >> Let's get to your live request. Charles
+[34:19] asked for a 16-oz Mason jars, we've
+[34:22] added that to the collection, Charles.
+[34:23] Just want to let you know, even if you
+[34:24] don't see it here, we've added it. Uh
+[34:27] Terry Hancock asked for fishing stuff,
+[34:29] and it looks like we found some great
+[34:31] deals on stuff to fish.
+[34:33] Fishing stuff. It's all she said.
+[34:35] >> Fishing stuff is a crazy crazy
+[34:37] suggestion. It's It we could go any
+[34:39] direction. Fishing pole, fishing bait.
+[34:41] On the Ross Report collection, you're
+[34:43] going to find this product. Again,
+[34:44] dealseek.com/ross.
+[34:46] You'll notice it is 20% off right now.
+[34:49] But with the promo code, again the promo
+[34:51] code that you can apply at checkout,
+[34:53] you're going to get a bigger discount.
+[34:54] So, everybody else gets 20% off. In the
+[34:57] Ross Report collection, you'll find a
+[34:58] promo code that saves you even more
+[35:00] money. Hopefully Terry, this is what you
+[35:01] meant by fishing stuff.
+[35:04] >> All right. Um New York here. That's the
+[35:08] New York here one is asking for a
+[35:10] Vitamix blender.
+[35:13] We had a 5% coupon and a brand deal.
+[35:16] Let's see what we got here on this
+[35:18] Vitamix blender.
+[35:20] >> All right. When you guys ask, we
+[35:21] deliver. You asked for Vitamix. You
+[35:23] wanted the specific brand. NutriBullet,
+[35:26] Magic Bullet, Ninja, you did not want
+[35:28] those. You wanted Vitamix. We found a
+[35:29] 30% price
+[35:31] We found a 30% price drop. And in
+[35:33] addition to that, you're going to be
+[35:35] able to actually clip this coupon on the
+[35:37] page to save you about 20 more dollars.
+[35:40] If you guys are new to coupons, they're
+[35:42] another way you can save on Amazon.
+[35:44] They're these clickable buttons that you
+[35:46] have to opt into. Meaning, you could go
+[35:48] ahead and add this to your cart now and
+[35:50] pay $479.
+[35:52] But if you click the coupon on the page,
+[35:54] which a lot of people overlook, you'll
+[35:56] save the additional 20 something dollars
+[35:58] just by opting into it. So, always look
+[36:00] for coupons on the bottom of the page.
+[36:02] It's another way to stack with the price
+[36:03] drop and a promo code.
+[36:06] >> Very cool. Uh we we have a lot coming
+[36:08] in. Defina, we have a copy printer that
+[36:10] we're going to put into the report into
+[36:12] the collection. We have metal solar
+[36:14] lanterns we're putting into the
+[36:15] collection for Barbara. But let's go
+[36:17] straight to show Williams. William
+[36:19] Bridgeforth, he asked for a garden wagon
+[36:22] with a 360° swivel wheels. And it looks
+[36:25] like we found the ideal on that.
+[36:27] >> Let's check it out. A lot of use cases
+[36:29] for this. My favorite is a summer use
+[36:31] case I'll walk you through in a minute,
+[36:32] but originally $49.99.
+[36:34] >> Yeah.
+[36:35] >> You get it for $29.99 with the promo
+[36:37] code. And again, copy the promo code,
+[36:40] which is constantly being verified.
+[36:42] Amazon wants you to pay 50, but you're
+[36:44] going to going to end up getting it 50%
+[36:47] cheaper than anybody else when you apply
+[36:49] the secret code at checkout. And my pro
+[36:51] tip for these, everybody uses it for
+[36:53] storage in their garage. Everybody uses
+[36:55] it to pull toys around. Use it for your
+[36:57] beach trips this summer. Put your
+[36:59] towels, your toys, your snacks in there.
+[37:02] It's got wheels, so you can roll it on
+[37:03] the beach. Easy easy summer upgrade,
+[37:05] especially if you especially if you have
+[37:06] kids. And right now it's 50% off.
+[37:09] All right, we got a lot of requests
+[37:11] coming in. I will fly through a couple
+[37:12] of these. Barbara Miller asked for
+[37:14] probiotics. We've put it into the
+[37:15] collection for you, Barbara. So, just go
+[37:17] to deals seek.com/rawson. It's there. Uh
+[37:20] Laura asked for large storage bags. We
+[37:22] found you a deal on that. It's in the
+[37:23] collection. Um Sarah asked for gazebo
+[37:26] string lights, 2 ft or less. That is in
+[37:28] the collection. We found you a great
+[37:29] deal on that. Um David Love is asking
+[37:32] for chap Japanese chef's knives. So, why
+[37:34] don't we call those up?
+[37:37] We can't get to everything, so I just
+[37:38] want to let you know that our deal
+[37:39] hunters are doing all of this. Um we
+[37:41] have it in the collection on deals seek,
+[37:43] but we can only show some of the stuff.
+[37:45] But these Japanese chef's knives look
+[37:46] kind of cool.
+[37:48] >> Awesome. Yeah, David Love specifically
+[37:50] wanted Japanese chef knives. And we
+[37:53] found one. This one has over 600 ordered
+[37:55] in the last month, which is a good green
+[37:57] flag, a healthy indicator of a
+[37:59] high-quality product. But in addition to
+[38:02] that, this is a deal show. We're showing
+[38:04] you the deals, and we found 50% off with
+[38:06] the promo code. Don't pay $30, which is
+[38:09] what this retail this retailer charges
+[38:11] at other stores. You get it for $15 with
+[38:14] the promo code, which by the way, if you
+[38:16] guys are watching right now, every
+[38:17] single deal that you guys are seeing
+[38:20] from the live requests or at any point
+[38:21] during the show. They're now living in
+[38:23] this Rossen Reports collection. So, the
+[38:25] deals we talked about earlier, the
+[38:27] products you guys are requesting right
+[38:28] now, they are all living in here. So, at
+[38:31] any point during the next days, weeks,
+[38:33] months,
+[38:34] add comments down in the in the comment
+[38:36] section. Let us know what deals you want
+[38:38] and we're going to be adding even more
+[38:39] deals. For example, you can see the air
+[38:41] purifier from earlier, the palm tree,
+[38:43] the sauna. Everything is in here at
+[38:45] dealscout.com/rossen
+[38:46] and it's constantly being updated.
+[38:49] >> All right, Mary Ann Loftman is asking
+[38:51] for a scrub and steam mops, including
+[38:55] turning into hand help.
+[38:58] >> What a tall order. Let's see.
+[39:01] >> Yeah.
+[39:02] >> Very specific.
+[39:02] >> one. Deal Hunters behind the scenes
+[39:04] getting one for $29.25,
+[39:07] less than $30. And this is with a promo
+[39:09] code on the page. So, you're going to
+[39:10] save 67%. Yes, it turns into a handheld.
+[39:14] Yes, it is a doubles as a steam mop. And
+[39:16] in total, it is what, 67% off today just
+[39:19] by copying this promo code. So, don't
+[39:21] pay $87. Save a little bit more money
+[39:24] with the promo code and and hopefully
+[39:26] uh Mary Ann who requested this this this
+[39:28] gets the job done for you.
+[39:31] >> Sorry, Mary Ann. I thought you It says
+[39:32] hand help help here, but I think she
+[39:34] meant handheld.
+[39:36] So.
+[39:37] >> I assume so.
+[39:37] >> we can all use We can all use some hand
+[39:39] help. But she wanted some hand help
+[39:41] handheld help. Yeah, got it. Sorry about
+[39:44] that, Mary Ann. Just noticing that. Um
+[39:46] all right. Um
+[39:48] Uh Jamie was asking for a 90-in TV
+[39:51] console. We found you 12% off on that.
+[39:54] Kathy, you were asking for a handheld
+[39:55] vacuum. That's in the Rossen Reports
+[39:57] collection. We're putting everything
+[39:58] there. We're just getting so many
+[39:59] requests. We're just going to feature
+[40:00] some. Uh continuing on our theme, Lori
+[40:03] Black is asking for a vibration machine.
+[40:06] So, I'm sta- I'd love to see what your
+[40:08] Deal Hunters came up on the vibration
+[40:10] machine request for Lori Black.
+[40:14] >> Yeah, sometimes more detail in the
+[40:16] request is good, guys. We want to know
+[40:18] exactly what you're looking for. We took
+[40:20] a guess. We found this vibration this
+[40:23] vibration plate. It's an exercise
+[40:24] machine. I've seen these on TikTok and
+[40:26] Instagram, Jeff. I don't know how they
+[40:28] took over the world, but these took over
+[40:30] the world. Apparently, it's a workout.
+[40:32] I've never done it, but this one is 59%
+[40:35] off with the price drop on the page and
+[40:37] the promo code you get it for $33
+[40:40] instead of $80, which is a pretty
+[40:41] significant discount.
+[40:44] >> All right. Hopefully, that's the
+[40:45] vibration machine that Lori Black was
+[40:47] looking for, but it's a huge discount if
+[40:48] it is. Um Margaret Shafer is looking for
+[40:51] a dual filtering shower head. And it
+[40:54] looks like we found a great deal on
+[40:55] that, too.
+[40:57] >> Yeah, dual filtering shower head. Again,
+[40:59] this is a promo code deal. If you guys
+[41:01] are ever on the Deal Seek products page,
+[41:03] too, when you first load the page,
+[41:06] you're going to see this take a little
+[41:08] bit to load. It'll take 1 to 3 seconds.
+[41:10] That is it actively being verified. If
+[41:12] the promo code is no longer verified, it
+[41:14] gets removed from Deal Seek. So, you can
+[41:16] see this one has been verified and
+[41:18] instead of paying $26,
+[41:20] you're getting it 50% off for just $13.
+[41:23] And again, as you asked, it is a
+[41:25] filtered shower head, high pressure, and
+[41:28] with the promo code, you're not paying
+[41:29] what your mom, your dad, your sister, or
+[41:31] your brother are paying, which is $25.
+[41:34] You're getting it 50% cheaper because
+[41:36] you're shopping a little smarter.
+[41:38] >> All right. Jennifer Lee is asking for a
+[41:41] thermometer for taking the temperature
+[41:42] of a sick kid. I remember when I was a
+[41:44] kid, they didn't have the stuff that
+[41:45] went in your mouth. They had to put the
+[41:47] Vaseline on and it was
+[41:49] right into the behind. Yep. That's how
+[41:52] it was when I was growing up. 1976 I was
+[41:54] born.
+[41:55] Things got pretty crazy when you got
+[41:57] sick. So, consider yourselves lucky.
+[41:59] What did we find for a thermometer for
+[42:01] taking the temperature now?
+[42:03] You guys remember that?
+[42:04] >> I'm sorry
+[42:04] >> The mercury and all
+[42:05] >> I'm sorry you had to relive that live.
+[42:07] That seems very unfortunate. This is an
+[42:09] oral thermometer.
+[42:10] >> It's from my therapist.
+[42:11] >> six
+[42:12] Don't pay $6, save 50% with the promo
+[42:14] code. Getting an oral thermometer for
+[42:16] 50% off, less than $3, seems to get the
+[42:19] job done. And again, $2.99, this is one
+[42:22] of those things you're going to be happy
+[42:23] you have it when you have a fever. So,
+[42:25] buy it proactively ahead of time. Just
+[42:28] don't overpay for it. Use a promo code,
+[42:30] they're all the same, get one for about
+[42:31] three bucks.
+[42:34] >> All right, Paula, Tatum is asking for a
+[42:36] steam cleaner and it looks like we found
+[42:37] a great one.
+[42:39] We have a deal for you on a steam
+[42:41] cleaner for Paula.
+[42:44] >> Yes, we did.
+[42:46] This is a handheld steam cleaner, which
+[42:48] if you guys are unfamiliar, they are
+[42:50] portable cleaners. They let you clean
+[42:53] your home, your car, your house, your
+[42:54] windows. Steam cleaning is like a deep
+[42:56] cleaning um
+[42:58] tactic, but it's originally $54, you get
+[43:00] it for 27 with the promo code. As you
+[43:02] can see, it was verified just now, so
+[43:04] the promo code does in fact work. Apply
+[43:07] it at checkout. Get it for $28 instead
+[43:09] of 54, and your house will be a little
+[43:11] bit cleaner. So, Paula, it's in the it's
+[43:13] in the Deal Seek Rossen Reports
+[43:14] collection at dealseek.com/rossen.
+[43:17] Uh we might throw a couple other options
+[43:19] in there, too, if you're looking around.
+[43:23] >> All right, let's do a couple more.
+[43:24] Um
+[43:25] K. Adams is asking for a handheld vacuum
+[43:28] sealer. We get a lot of requests for
+[43:29] these. You it lets you keep food around
+[43:32] longer, which is great and helps you
+[43:34] save money. You don't have to keep
+[43:35] running back to the grocery store. And
+[43:36] if you can get a great deal on this, it
+[43:38] can really save you a lot of money as
+[43:40] grocery prices continue to go up. So,
+[43:42] this is an awesome item, actually, uh
+[43:44] for the times.
+[43:46] >> Absolutely, yeah. This one is originally
+[43:48] $60, you get it 62% off. So, anything
+[43:52] over 50% off, we call them super save
+[43:54] opportunities. That's because we're
+[43:55] stacking a price drop and a promo code
+[43:57] with this one. A couple things to be
+[43:58] careful about when you buy a vacuum
+[44:00] sealer for your food. Number one, there
+[44:04] are a lot of listings out there that
+[44:05] just sell the vacuum sealer, but not the
+[44:08] reusable bags. Make sure it's the combo,
+[44:10] so you're ready to use it out of the
+[44:11] box. And vice versa, you can buy a ton
+[44:14] of the vacuum sealable bags without the
+[44:16] vacuum sealer itself. Double check the
+[44:18] listing, double check the description,
+[44:19] make sure you're getting both. In this
+[44:21] case, you get 30 reusable bags and the
+[44:23] vacuum sealer. And by copying the promo
+[44:25] code, going over to Amazon, you're not
+[44:28] paying the full price of $45. You're
+[44:30] saving an extra 50% and really, really
+[44:32] shopping smarter on this deal today.
+[44:35] >> That's awesome. We got a ton of your
+[44:37] requests still coming in, and just
+[44:38] because we don't feature them on the
+[44:39] show, they will end up in the Rossen
+[44:41] Reports collection. Our deal hunters are
+[44:43] working 24/7, so even if you're watching
+[44:46] this on replay, keep your comments
+[44:48] coming in on YouTube and Facebook, and
+[44:50] we will put everything we can into the
+[44:53] Rossen Reports collection, because we
+[44:54] want to find you deals in real time. So,
+[44:56] don't stop commenting. Trey, thank you
+[44:58] so much. We will see you next week. In
+[45:00] the meantime, we have this huge news,
+[45:02] and Trey, I hope you sign up, too, for
+[45:03] the Rossen Reports YouTube membership.
+[45:06] We have multiple tiers that you can do
+[45:08] right now. We have all these really cool
+[45:10] emojis that you can use um just We're
+[45:13] going to show you a QR code on the
+[45:14] screen in just a second, I hope.
+[45:15] Otherwise, if you're watching this on
+[45:17] your phone or on your laptop or on a
+[45:19] computer, just hit the join button. We
+[45:22] have multiple tiers of membership. You
+[45:23] get early access to videos, members-only
+[45:26] live streams where you and I can talk a
+[45:28] little more one-on-one. I can address
+[45:30] some of your exact problems, some of
+[45:32] your exact questions. There are some of
+[45:34] the stickers all the membership tiers
+[45:36] you get access to these emojis, and the
+[45:38] more of you that sign up, we get to
+[45:39] unlock more of these crazy emojis. So,
+[45:41] if you're watching this on a TV set,
+[45:43] just grab out your phone, open the
+[45:44] camera, regular camera, and zoom in on
+[45:46] the QR code, and it'll bring you right
+[45:48] there. Um but if you're watching on your
+[45:50] computer, just hit join. We would really
+[45:51] appreciate it, and you're also helping
+[45:53] to support independent consumer
+[45:55] journalism, which is amazing and helps
+[45:57] fuel all the work we're doing around
+[45:59] here. If If this show, check out this
+[46:01] other show I just did about how Amazon
+[46:05] has a secret invite-only club. They will
+[46:07] send you free products and we show you
+[46:10] exactly how to get invited. We have the
+[46:12] cheat code to get you those free
+[46:14] products. Up to eight free products a
+[46:15] day coming to your house from Amazon
+[46:17] that you choose. Click that video. We'll
+[46:19] see you next time.

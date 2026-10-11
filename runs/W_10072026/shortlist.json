@@ -1,0 +1,668 @@
+[
+ {
+  "beat_id": "10-07-A2",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 2,
+  "source_mix": {
+   "network": 2,
+   "affiliate": 3
+  },
+  "shortlist_note": "Diversity floor checked: shortlist is affiliate+network, but every non-affiliate candidate is reaction/commentary (Anthony Brian Logan, CrimesDigest), AI-narrated (Neural Depth AI, OrbitReports) or a 30-min podcast (Garage Logic, Plain Talk). None cleared the filters, so nothing promoted.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+    "platform": "youtube",
+    "title": "Grandmother falsely accused of bank fraud sues Fargo, North Dakota, over AI facial recognition",
+    "duration": 183,
+    "views": 419847,
+    "source_type": "network",
+    "score": 80,
+    "reason": "CBS News, 3:03, 420K; lawsuit package likely carries Lipps soundbite",
+    "cannot_determine": [
+     "whether Lipps herself is on camera or only described"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=nwRB9NTx6IU",
+    "platform": "youtube",
+    "title": "Police release Tennessee grandmother after AI facial recognition led to her arrest",
+    "duration": 177,
+    "views": 357755,
+    "source_type": "network",
+    "score": 78,
+    "reason": "NBC News, 2:57, 358K; release story, likely her first interview",
+    "cannot_determine": [
+     "date (March release coverage?)",
+     "whether she is interviewed"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=hoxhMfWyC8g",
+    "platform": "youtube",
+    "title": "Tennessee grandmother jailed because of AI error, attorney says",
+    "duration": 154,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 72,
+    "reason": "WLOS News 13 (Asheville, near her home), 2:34, Mar 22",
+    "cannot_determine": [
+     "whether Lipps or only her attorney speaks"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=EcWQI5Zrj4Q",
+    "platform": "youtube",
+    "title": "Tennessee grandma mistakenly sent to North Dakota jail due to AI error",
+    "duration": 154,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 66,
+    "reason": "ABC News 4, 2:34, Mar 21; likely same wire package as WLOS/KATV",
+    "cannot_determine": [
+     "duplicate of WLOS package?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=XJ6u1KxM3WY",
+    "platform": "youtube",
+    "title": "Tennessee woman says she was wrongfully jailed in North Dakota due to AI facial recognition error",
+    "duration": 44,
+    "views": 3621,
+    "source_type": "affiliate",
+    "score": 55,
+    "reason": "FOX Nashville, 44s \u2014 short, probably a headline read",
+    "cannot_determine": [
+     "whether any interview audio"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-A3",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "network": 2,
+   "affiliate": 3
+  },
+  "shortlist_note": "Diversity floor checked: shortlist is affiliate+network, but every non-affiliate candidate is reaction/commentary (Anthony Brian Logan, CrimesDigest), AI-narrated (Neural Depth AI, OrbitReports) or a 30-min podcast (Garage Logic, Plain Talk). None cleared the filters, so nothing promoted.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+    "platform": "youtube",
+    "title": "Grandmother falsely accused of bank fraud sues Fargo\u2026",
+    "duration": 183,
+    "views": 419847,
+    "source_type": "network",
+    "score": 78,
+    "reason": "CBS explains the match in the lawsuit context",
+    "cannot_determine": [
+     "whether the fake-ID photo is described on air"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=nwRB9NTx6IU",
+    "platform": "youtube",
+    "title": "Police release Tennessee grandmother after AI facial recognition led to her arrest",
+    "duration": 177,
+    "views": 357755,
+    "source_type": "network",
+    "score": 76,
+    "reason": "NBC release story",
+    "cannot_determine": [
+     "whether the match mechanism is explained"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kN2B46HLn2U",
+    "platform": "youtube",
+    "title": "A Tennessee woman claims AI led to her wrongful arrest. Now she's suing Fargo police for $10M.",
+    "duration": 111,
+    "views": 6867,
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "KSTP (Twin Cities), 1:51, Sept lawsuit",
+    "cannot_determine": [
+     "whether it explains the West Fargo submission"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Va0NVtZYpqE",
+    "platform": "youtube",
+    "title": "Fargo reviews AI use after Angela Lipps wrongful arrest",
+    "duration": 127,
+    "views": 4132,
+    "source_type": "affiliate",
+    "score": 68,
+    "reason": "KVRR (Fargo), 2:07, 'Fargo reviews AI use'",
+    "cannot_determine": [
+     "on-camera police explanation?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=MP8zbZvy99I",
+    "platform": "youtube",
+    "title": "AI Error Jails Grandmother in North Dakota",
+    "duration": 154,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 58,
+    "reason": "WBFF FOX45, 2:34, Mar 21 wire package",
+    "cannot_determine": [
+     "duplicate of WLOS/ABC News 4 wire"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-A4",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 1,
+  "source_mix": {
+   "network": 2,
+   "affiliate": 3
+  },
+  "shortlist_note": "Diversity floor checked: shortlist is affiliate+network, but every non-affiliate candidate is reaction/commentary (Anthony Brian Logan, CrimesDigest), AI-narrated (Neural Depth AI, OrbitReports) or a 30-min podcast (Garage Logic, Plain Talk). None cleared the filters, so nothing promoted.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=nwRB9NTx6IU",
+    "platform": "youtube",
+    "title": "Police release Tennessee grandmother\u2026",
+    "duration": 177,
+    "views": 357755,
+    "source_type": "network",
+    "score": 78,
+    "reason": "NBC release story: the jail time and the bank records",
+    "cannot_determine": [
+     "whether she describes jail herself"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=hoxhMfWyC8g",
+    "platform": "youtube",
+    "title": "Tennessee grandmother jailed because of AI error, attorney says",
+    "duration": 154,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 72,
+    "reason": "WLOS, closest station to Elizabethton",
+    "cannot_determine": [
+     "whether Lipps speaks"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+    "platform": "youtube",
+    "title": "Grandmother falsely accused of bank fraud sues Fargo\u2026",
+    "duration": 183,
+    "views": 419847,
+    "source_type": "network",
+    "score": 72,
+    "reason": "CBS lawsuit package recaps the months in jail",
+    "cannot_determine": [
+     "how much jail-time detail"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=EcWQI5Zrj4Q",
+    "platform": "youtube",
+    "title": "Tennessee grandma mistakenly sent to North Dakota jail due to AI error",
+    "duration": 154,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 62,
+    "reason": "ABC News 4 wire, Mar 21",
+    "cannot_determine": [
+     "duplicate of WLOS"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://katv.com/news/nation-world/tennessee-grandma-mistakenly-sent-to-north-dakota-jail-due-to-ai-error-attorney-says-carter-county-facial-recognition-software-error-us-marshals-angela-lipps-bank-fraud-mistaken-identity-fake-us-army-military-id-surveillance-video",
+    "platform": "news_web",
+    "title": "Tennessee grandma mistakenly sent to North Dakota jail due to AI error, attorney says",
+    "duration": 153,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 55,
+    "reason": "KATV site video, 2:33, off-YouTube (no caption path)",
+    "cannot_determine": [
+     "no caption track reachable"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-A5",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 4,
+   "raw_footage": 1
+  },
+  "shortlist_note": "",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=SGFrtUVY6nc",
+    "platform": "youtube",
+    "title": "Fargo Police Chief admits mistakes were made in Lipps case",
+    "duration": 135,
+    "views": 607,
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "KVRR, 2:15, exactly the beat: chief admits mistakes",
+    "cannot_determine": [
+     "whether the chief is heard on tape"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://youtube.com/shorts/jgRCzv-_GJM",
+    "platform": "youtube",
+    "title": "Fargo PD admits mistakes in investigation using AI that led to woman's arrest",
+    "duration": 84,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "KARE 11 Short, 1:24, Mar 25 \u2014 crossed orientation (Short on a horizontal beat)",
+    "cannot_determine": [
+     "framing: pillarbox vs punch-in"
+    ],
+    "promoted_by_floor": false,
+    "surfaced_for": "horizontal"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=cv8bpl3qZQQ",
+    "platform": "youtube",
+    "title": "Fargo Police Press Conference",
+    "duration": 2280,
+    "views": 801,
+    "source_type": "raw_footage",
+    "score": 62,
+    "reason": "Valley News Live raw presser, 38 min \u2014 the source of the quote, but long",
+    "cannot_determine": [
+     "where in 38 min the admission lands"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Va0NVtZYpqE",
+    "platform": "youtube",
+    "title": "Fargo reviews AI use after Angela Lipps wrongful arrest",
+    "duration": 127,
+    "views": 4132,
+    "source_type": "affiliate",
+    "score": 60,
+    "reason": "KVRR 'Fargo reviews AI use'",
+    "cannot_determine": [
+     "same presser?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.valleynewslive.com/2026/03/24/fargo-west-fargo-police-dispute-details-facial-recognition-misidentification-case/",
+    "platform": "news_web",
+    "title": "Fargo and West Fargo police dispute details in facial recognition misidentification case",
+    "duration": 152,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 50,
+    "reason": "Valley News Live site video 2:32, Mar 24; off-YouTube",
+    "cannot_determine": [
+     "no caption path"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-A6",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "network": 1,
+   "affiliate": 3,
+   "creator_long": 1
+  },
+  "shortlist_note": "Diversity floor: promoted Midwest Communications (creator_long) over a 5th affiliate/wire.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=6gUOZ7tYfZ8",
+    "platform": "youtube",
+    "title": "Grandmother falsely accused of bank fraud sues Fargo\u2026",
+    "duration": 183,
+    "views": 419847,
+    "source_type": "network",
+    "score": 82,
+    "reason": "CBS lawsuit package, 420K",
+    "cannot_determine": [
+     "whether attorney Rice is on camera"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kN2B46HLn2U",
+    "platform": "youtube",
+    "title": "A Tennessee woman claims AI led to her wrongful arrest. Now she's suing Fargo police for $10M.",
+    "duration": 111,
+    "views": 6867,
+    "source_type": "affiliate",
+    "score": 74,
+    "reason": "KSTP lawsuit story",
+    "cannot_determine": [
+     "attorney soundbite?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=IAiYyMtiLpY",
+    "platform": "youtube",
+    "title": "Angela Lipps files $10 million lawsuit against City of Fargo, attorney Eric Rice\u2026",
+    "duration": 779,
+    "views": 77,
+    "source_type": "creator_long",
+    "score": 62,
+    "reason": "Midwest Communications radio interview with attorney Eric Rice, 13 min; audio-first",
+    "cannot_determine": [
+     "is there any picture?"
+    ],
+    "promoted_by_floor": true
+   },
+   {
+    "url": "https://www.valleynewslive.com/2026/09/15/tennessee-woman-sues-fargo-ex-detective-over-wrongful-arrest-tied-facial-recognition-error/",
+    "platform": "news_web",
+    "title": "Tennessee woman sues Fargo, detective over wrongful arrest tied to facial recognition error",
+    "duration": 101,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 58,
+    "reason": "Valley News Live site video 1:41, Sept 15",
+    "cannot_determine": [
+     "no caption path"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.fox9.com/news/tennessee-grandmother-sues-fargo-after-being-held-jail-6-months-over-ai-mistake",
+    "platform": "news_web",
+    "title": "Tennessee grandmother sues Fargo after being held in jail for 6 months over AI mistake",
+    "duration": null,
+    "views": null,
+    "source_type": "affiliate",
+    "score": 55,
+    "reason": "FOX 9 site, Sept 16",
+    "cannot_determine": [
+     "whether a video is embedded"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-C1",
+  "orientation": "vertical",
+  "clip_role": "evidence",
+  "priority": 1,
+  "expected_segments": 1,
+  "source_mix": {
+   "creator_short": 2,
+   "raw_footage": 1,
+   "first_person": 1,
+   "creator_long": 1
+  },
+  "shortlist_note": "Search leg can't reach native TikTok; the viral originals route to the manual lane via the Business Insider roundup and the Daily Mail re-host.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/shorts/X8mY3CDsZIM",
+    "platform": "youtube",
+    "title": "AI can't handle the drive thru lane",
+    "duration": 29,
+    "views": null,
+    "source_type": "creator_short",
+    "score": 66,
+    "reason": "Morning Brew Short, 29s, Jun 2024: 'AI can't handle the drive thru lane'",
+    "cannot_determine": [
+     "whether it contains real customer footage or is a host read"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.dailymail.com/video/news/video-3214535/Video-Moment-McDonalds-AI-Drive-chatbot-malfunctions-order.html",
+    "platform": "news_web",
+    "title": "Moment McDonald's AI malfunctions during order",
+    "duration": 165,
+    "views": null,
+    "source_type": "raw_footage",
+    "score": 64,
+    "reason": "Daily Mail video (2:45) of the McDonald's AI malfunction \u2014 likely the viral TikTok re-hosted",
+    "cannot_determine": [
+     "original TikTok creator/permalink",
+     "clearance"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/shorts/BuNi9SWZ6hs",
+    "platform": "youtube",
+    "title": "Drive Thru Experiment Gone Wrong",
+    "duration": 53,
+    "views": null,
+    "source_type": "creator_short",
+    "score": 45,
+    "reason": "Hangtime Short, 53s, 'Drive Thru Experiment Gone Wrong' \u2014 may not be AI",
+    "cannot_determine": [
+     "whether it's an AI order at all"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.businessinsider.com/tiktokers-show-failures-with-mcdonalds-drive-thru-ai-robots-2023-2",
+    "platform": "news_web",
+    "title": "TikTokers are roasting McDonald's hilarious drive-thru AI order fails",
+    "duration": null,
+    "views": null,
+    "source_type": "first_person",
+    "score": 60,
+    "reason": "Business Insider roundup of the McDonald's AI fail TikToks (2023) \u2014 route to the original TikToks",
+    "cannot_determine": [
+     "the TikTok permalinks inside"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=j1i-84ICREA",
+    "platform": "youtube",
+    "title": "I Tested AI Drive Thrus",
+    "duration": 1662,
+    "views": 3276673,
+    "source_type": "creator_long",
+    "score": 50,
+    "reason": "Sambucha 'I Tested AI Drive Thrus', 27 min, 3.3M \u2014 horizontal creator, orientation mismatch",
+    "cannot_determine": [
+     "framing; long"
+    ],
+    "promoted_by_floor": true
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-C2",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "network": 2,
+   "raw_footage": 1,
+   "affiliate": 1,
+   "creator_long": 1
+  },
+  "shortlist_note": "",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=lsqR0oxtvOw",
+    "platform": "youtube",
+    "title": "Burger King's new AI chatbot to help employees with operations, improve 'friendliness'",
+    "duration": 185,
+    "views": 53253,
+    "source_type": "network",
+    "score": 72,
+    "reason": "NBC News, 3:05, Burger King 'Patty' AI and friendliness (pre-bible: NBC on BK Patty, Feb 27)",
+    "cannot_determine": [
+     "whether it mentions drive-offs (it predates Sept 23)"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=yvhAOqF_FAc",
+    "platform": "youtube",
+    "title": "AI bots are taking over fast food drive-thrus",
+    "duration": 383,
+    "views": 28778,
+    "source_type": "network",
+    "score": 62,
+    "reason": "CBC The National, 6:23, 'AI bots are taking over fast food drive-thrus'",
+    "cannot_determine": [
+     "Canadian; Burger King mentioned?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=OCNwXK-L5ic",
+    "platform": "youtube",
+    "title": "Are you ready to order? Burger King Drive Thru, AI Associate, El Mirage, Arizona",
+    "duration": 101,
+    "views": 25225,
+    "source_type": "raw_footage",
+    "score": 58,
+    "reason": "Real Burger King AI drive-thru order, El Mirage AZ, 1:41",
+    "cannot_determine": [
+     "who filmed it; clearance"
+    ],
+    "promoted_by_floor": true
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=_V1REgrkmTM",
+    "platform": "youtube",
+    "title": "Burger King Uses AI To Take Orders at Drive Thru in Santa Monica",
+    "duration": 48,
+    "views": 2519,
+    "source_type": "affiliate",
+    "score": 45,
+    "reason": "48s 'Burger King Uses AI To Take Orders at Drive Thru in Santa Monica'",
+    "cannot_determine": [
+     "channel 'GM' unclear"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=QjyPmzV9rRQ",
+    "platform": "youtube",
+    "title": "Burger King Wants an Easier Human Option for AI Drive-Thru Orders",
+    "duration": 548,
+    "views": 12,
+    "source_type": "creator_long",
+    "score": 40,
+    "reason": "'Restaurant Chain News', 9 min, exactly the Sept story but a generic-name channel (possible AI narration)",
+    "cannot_determine": [
+     "AI slop?"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-07-C3",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "network": 2,
+   "creator_long": 2
+  },
+  "shortlist_note": "Only 4: no network package on the retraining itself surfaced (search + Brave). Shipping short rather than padding.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=wfZdU_bqfYg",
+    "platform": "youtube",
+    "title": "McDonald's to debut new AI-powered drive-through",
+    "duration": 129,
+    "views": 54754,
+    "source_type": "network",
+    "score": 66,
+    "reason": "GMA, 2:09, McDonald's AI drive-thru debut (pre-bible: GMA Jun 8)",
+    "cannot_determine": [
+     "the AI side, not the retraining"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=el_f82ZXGME",
+    "platform": "youtube",
+    "title": "McDonald's ends AI drive-thru experiment",
+    "duration": 218,
+    "views": 42501,
+    "source_type": "network",
+    "score": 62,
+    "reason": "CBS News, 3:38, McDonald's ends AI drive-thru experiment (Jun 2024)",
+    "cannot_determine": [
+     "old; context only"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=sXSImjg6CMU",
+    "platform": "youtube",
+    "title": "McDonald's Is Retraining 2 Million Workers - Here's Why",
+    "duration": 531,
+    "views": 47,
+    "source_type": "creator_long",
+    "score": 42,
+    "reason": "'Ecomix Simple', 8:51, the retraining story itself but tiny channel",
+    "cannot_determine": [
+     "AI narration?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=YTBuJSStqSM",
+    "platform": "youtube",
+    "title": "McDonald's New AI Operating System Strategy",
+    "duration": 1501,
+    "views": 8907,
+    "source_type": "creator_long",
+    "score": 35,
+    "reason": "Savorfm, 25 min, 'McDonald's New AI Operating System Strategy'",
+    "cannot_determine": [
+     "long; relevance"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ }
+]

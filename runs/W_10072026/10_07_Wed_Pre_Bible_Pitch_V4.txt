@@ -1,0 +1,252 @@
+PRE-BIBLE PITCH SHEET
+Airdate: Wednesday, Oct 7, 2026 · Top Stories · Prepared Sept 28, 2026 · View counts observed Sept 28
+THE SHOW
+Slot
+Story
+The sexy beat
+Viral
+Timing
+Lead
+YOUR STORE IS WATCHING EVERY STEP YOU TAKE
+Target tracks your basket, Lowe's cameras know which aisles you walked, and the new AI grocery carts have cameras pointed at you.
+🔥 TikTok 3.4M views, 392K likes
+—
+Option 1 (Story B)
+THEY REPLACED THE CASHIER WITH A ROBOT… NOW THEY'RE BRINGING THE HUMANS BACK
+Burger King says people drove away rather than talk to a bot. Now the biggest chains are putting people back at the counter.
+— (Fox Business segment; older AI fails)
+TIME-SENSITIVE — McDonald's retraining launches Oct 5, two days before air
+Option 2 (Story B)
+SAME CART, DIFFERENT PRICE… ARE THEY CHARGING YOU MORE?
+He checked the same Uber ride on his brother's phone. His brother paid $36.94. He paid $52.95.
+🔥 TikTok 6.7M, 1.1M likes
+TIME-SENSITIVE — Maryland ban live Oct 1
+Option 3 (Story B)
+YOUR TV IS TAKING SCREENSHOTS OF EVERYTHING YOU WATCH
+Your TV grabs what's on your screen. Now researchers say some LG TVs keep listening when they look off. LG says that's false.
+🔥 YouTube 7.2M (Gamers Nexus, Sept 6)
+TIME-SENSITIVE — Prime Day TV buying
+Closer
+IS THAT PRIME DAY DEAL REAL?
+Some "was" prices get bumped before the sale. Ten seconds on the product page tells you if the deal is real.
+— (past-sale clips in hand)
+TIME-SENSITIVE — airdate is the last day of the sale
+
+Facebook signal: AI tracking in stores consistently performs super well on Facebook; surveillance-pricing posts have run well above median. Benchmarks: Rossen YouTube live median ~188K (last 40); TikTok median ~25K (2026).
+SLATE FIT: Fills the show. Pick Option 3 for Story B: best track record on the channel, biggest wave in the feed this month, and it hands off to the Prime Day closer. It must lead with the listening allegation, since Jeff did TV screenshots on Dec 19. Option 2 is the backup (huge clip, weak YouTube history). Option 1 is now the fast-food-brings-back-the-humans story: the lighter, non-surveillance choice, pegged to McDonald's Oct 5 retraining launch.
+
+STORY A: YOUR STORE IS WATCHING EVERY STEP YOU TAKE
+Slot: Story A (lead) · Confidence: HIGH · Viral hook, Snopes confirmation, a named Target worker on camera, a payoff viewers do on their phone.
+SLOT FIT: Story A — carries the lead. Viral clip, fact-check payoff, four "watching you" mechanics and a live phone demo. No victim: Elijah is a whistleblower; the Brianna Jones Walmart self-checkout case is the fallback, but no interview video is confirmed. Jeff's Jan 22 "These Stores Are Spying On You" covered store tracking; new here are the basket TikTok and the AI carts.
+🔥 VIRAL CLIP — Target worker Elijah (@user60342208753), posted Aug 29: 3.4M views, 392K likes. Clip downloaded and in hand.
+Alternate headlines: YOU'RE HOLDING THE TRACKER… AND YOUR STORE KNOWS EVERY STEP · THE STORE KNOWS WHERE YOU WALKED, HOW LONG YOU STAYED, AND WHAT CAR YOU DROVE.
+WORKING TEASE
+THAT BLACK BOX ON YOUR TARGET BASKET? IT'S A TRACKER… AND A TARGET WORKER JUST PROVED IT TO 3.4 MILLION PEOPLE. THE FACT-CHECKERS LOOKED INTO IT… HE WAS RIGHT. THE LIGHTS OVER YOUR HEAD ARE IN ON IT. AND IF THE TARGET APP IS ON YOUR PHONE… THAT'S HOW THEY KNOW IT'S YOU. THE CAMERAS KNOW WHICH AISLES YOU WALKED. AT SOME STORES, THE PARKING LOT READS YOUR LICENSE PLATE BEFORE YOU EVEN GET OUT OF THE CAR. AND NOW THE SHOPPING CART HAS CAMERAS POINTED RIGHT AT YOU. I'LL SHOW YOU HOW TO SHUT OFF THE TRACKING YOU CAN CONTROL… RIGHT NOW, ON YOUR PHONE.
+THE HOOK
+Target is tracking your basket. Target worker Elijah films the black box screwed onto a red basket and calls it a tracker. Snopes checks and says Target does track shoppers with it: a Bluetooth beacon that talks to the LED lights over your head, which pass the location to Target's app. Snopes' caveat is the payoff: the beacon only knows where the basket is; the app on your phone is what ties it to you. Lowe's cameras know which aisles you visit. Its privacy statement says the cameras track which aisles you walk and how long you stay, and some lots read your plate. And new AI-powered grocery carts are coming to a store near you. Instacart's Caper Cart has cameras pointed into your basket, cameras pointed out at the aisle, and a location tracker, and it serves you ads based on where you're standing.
+THE NEW AI CARTS: HOW FAST THEY'RE SPREADING
+Instacart says it tripled Caper Cart deployments in a year. Now in 100+ cities across 15 states.
+Already rolling at Kroger, ShopRite, Schnucks, Sprouts, Wegmans, Weis and Geissler's.
+FOOTAGE WE NEED
+Elijah's TikTok — the get. In hand; needs clearance.
+Lot plate cameras and a Caper Cart in an aisle — not pulled yet.
+THE PAYOFF
+iPhone: Settings → Privacy & Security → Location Services → each store app → Never. Then Settings → the app → Bluetooth off.
+Android: Settings → Apps → store app → Permissions → Location → Don't allow. (verify on Jeff's device)
+Turn off the app's location and Bluetooth, and the basket tracks a basket, not you. The cameras and plate readers don't need your phone; those you can't switch off.
+
+OPTION 1 (FOR STORY B): THEY REPLACED THE CASHIER WITH A ROBOT… NOW THEY'RE BRINGING THE HUMANS BACK
+Slot: Story B · Confidence: MEDIUM · Timely and a good-news turn; but no victim, and the tech isn't actually leaving.
+SLOT FIT: Change-of-pace Story B. The peg is live: McDonald's retraining starts Oct 5, two days before air. Frame it as "the humans are coming back," not "the robots are gone." No chain here is pulling its kiosks or drive-thru AI, and McDonald's is doing both at once: retraining crews for hospitality while rolling out its AI drive-thru voice through 2027.
+Alternate headline: FAST FOOD IS DITCHING THE ROBOT… HERE'S HOW TO GET A REAL PERSON
+WORKING TEASE
+THEY TOOK AWAY THE CASHIER… AND GAVE YOU A TOUCHSCREEN. THEY TOOK AWAY THE PERSON AT THE DRIVE-THRU… AND GAVE YOU A ROBOT. AND GUESS WHAT? YOU HATED IT. AT BURGER KING, PEOPLE HEARD THE BOT… AND JUST DROVE AWAY. NOW THE BIGGEST FAST-FOOD CHAINS IN AMERICA ARE BRINGING THE HUMANS BACK. McDONALD'S IS RETRAINING MORE THAN TWO MILLION WORKERS WORLDWIDE… TO BE NICER TO YOU. I'LL SHOW YOU HOW TO SKIP THE ROBOT AND GET A REAL PERSON.
+THE HOOK
+After a decade of kiosks, apps and AI voices, the chains are admitting customers want a person. On Sept 23, Burger King's tech chief said pilot restaurants saw drive-offs because guests didn't want to talk to a bot; the chain is building an easier way to reach a human and moving kiosks to the side walls so a staffed counter is what you see when you walk in. The same day, McDonald's announced Make It Golden: hospitality training for more than 2 million workers worldwide, starting Oct 5, after its own guests described visits as rushed and cold. Starbucks bought about 200,000 Sharpies to bring back handwritten cup notes. The catch: nobody is ripping out the screens.
+THE NUMBERS
+Metrigy: about 80% of consumers prefer a human order taker over AI (Fortune, Jul 30).
+Technomic, presented at FSTEC: 46% find AI drive-thru ordering unappealing, 23% appealing (secondhand; verify).
+WHAT'S NEW
+Self-checkout pullback ran 6/17 (Walmart, Target, Costco); Walmart's South Philly store going back to cashiers is one callback line at most. New: restaurants, the AI drive-thru voice, and chains saying on the record that customers left.
+FOOTAGE — BE HONEST ABOUT THIS
+Jeff at a drive-thru and a counter, bot vs. person — the get, and the segment. Original; nobody else has it.
+News: Fox Business Varney segment (Sept 2026), studio talking heads; NBC News on Burger King's "Patty" (Feb 27); GMA on McDonald's AI drive-thru (Jun 8).
+Missing: a customer who drove off, on camera. None found.
+THE PAYOFF
+Want a person? Walk in and order at the counter. McDonald's says it wants an employee on hand for anyone who prefers one (verify at the store).
+At the speaker, ask for a person (verify what works at each chain — Jeff tests it). Burger King's human option isn't live yet.
+Watch the order screen as you talk or tap and fix it before you pay; check the bag before you leave the lot.
+
+OPTION 2 (FOR STORY B): SAME CART, DIFFERENT PRICE… ARE THEY CHARGING YOU MORE?
+Slot: Story B · Confidence: MEDIUM · The test is already on camera, but this topic has not pulled on YouTube.
+SLOT FIT: Works as Story B, and picks up the lead's "watching you" thread. Built on a viral family test and the Maryland law that took effect Oct 1. No single victim, but the family reacting on camera plays like one. Jeff led with the Instacart shopper study on Dec 12, 2025; new here are Chris's test and the Maryland law.
+🔥 VIRAL CLIP — Chris ("Chris the Producer," @christheproducer21), TikTok, uploaded Jul 30, 2026: 6.7M views, 1.1M likes, 264K shares (observed Sept 28). https://www.tiktok.com/@christheproducer21/video/7668462600778157325 · Appears to show the same Spam, Uber ride and hotel room priced on his phone and his family's phones. Not watched — no timecode, no outcue.
+WORKING TEASE
+HE ASKED HIS BROTHER TO PRICE THE EXACT SAME UBER RIDE… SAME PICKUP, SAME TIME. HIS BROTHER GOT $36.94. HE GOT $52.95. HIS MOM PRICED THE SAME HOTEL ROOM… AND GOT QUOTED $38 MORE. NOW ONE STATE JUST BANNED IT FOR GROCERIES… AS OF THIS MONTH.
+THE HOOK
+Chris, a Minneapolis creator, decided "price tags are dead" and put it to the test with his own family. The same can of Spam on Instacart: $4.99 for his friend, $4.59 for him. The same UberX to the airport: $36.94 for his brother, $52.95 for him. The same La Quinta room in Denver: $122.50 for his mom, $84 for him. As of Oct 1, Maryland bans big grocery stores and delivery apps from using your data to charge you more, with fines up to $10,000 per violation. Consumer Reports says the law has loopholes, starting with loyalty-program prices.
+Fairness line for the bible: Uber says it does not use personalized pricing, and ride prices move with timing and location. Air his result as what he found, with Uber's denial. (verify the source of Uber's statement)
+PAST PERFORMANCE
+Rossen YouTube, weak: Instacart pricing live (Dec 12, 2025) 23K, the same week the TV live did 638K. "Uber SUED For Overcharging" 12K; "Amazon's Biggest PRICING SECRET" 36K. Register-overcharge lives did better: 263K (Sept 18), 146K (Jan 28).
+Rossen TikTok: Delta AI pricing 96K; UberEats sneaky fees 136K; Instacart ending AI pricing 19K.
+Facebook: surveillance-pricing posts have run well above median.
+Read: the audience clicks "you got charged more," not "personalized pricing." Title the family test.
+FOOTAGE WE NEED
+Chris's TikTok — the get. Needs clearance.
+More Perfect Union's clip on the Instacart study (1.2M+ views, Dec 2025) (verify; not found). Backup: WTTW "Chicago Tonight" with MPU's Eric Gardner.
+Maryland full-screen graphic.
+THE PAYOFF
+Before you pay, check the same cart or ride on a family member's phone.
+Compare Uber against Lyft for the same trip, every time.
+Check the price logged out, or in a private browser window. (verify)
+Maryland: report to the AG's Consumer Protection Division. Everywhere else: ReportFraud.ftc.gov.
+
+OPTION 3 (FOR STORY B): YOUR TV IS TAKING SCREENSHOTS OF EVERYTHING YOU WATCH
+Slot: Story B · Confidence: HIGH · Best track record on the channel; the hottest angle is three weeks old.
+SLOT FIT: Works as Story B and sets up the Prime Day closer. Jeff covered TV screenshots, the Texas lawsuit and brand settings on Dec 19, 2025. New: the LG listening investigation and denial, the settlements, Prime Day TV buying. Lead with the listening, or it's a rerun. No victim.
+Alternate headline: IS YOUR TV LISTENING… EVEN WHEN IT'S OFF?
+🔥 VIRAL CLIP — Gamers Nexus, "216,000,000 Spy TVs | The LG Smart TV Problem," YouTube, uploaded Sept 6, 2026: 7.2M views (observed Sept 28). https://www.youtube.com/watch?v=6IFVTcM28KA · Not watched — no timecode, no outcue.
+WORKING TEASE
+YOU'RE WATCHING YOUR TV… AND YOUR TV IS WATCHING YOU BACK. IT'S GRABBING WHAT'S ON YOUR SCREEN… CABLE, NETFLIX, EVEN YOUR GAME CONSOLE. AND NOW RESEARCHERS SAY SOME LG TVs KEEP LISTENING… EVEN WHEN THEY LOOK TURNED OFF. LG SAYS THAT'S NOT TRUE. BUYING A NEW TV ON PRIME DAY? DO THIS BEFORE YOU WATCH A SINGLE SHOW.
+THE HOOK
+Most smart TVs run Automatic Content Recognition, sampling what's on your screen, even cable and consoles, to build an ad profile. Texas sued Samsung, LG, Sony, Hisense and TCL in December; Samsung settled Feb 26 and LG May 11, both agreeing to ask Texans first. Then on Sept 6, Gamers Nexus, working with Level1Techs and security researchers, said LG TVs capture microphone audio in standby, keep voice transcripts in plain text, and scan your home network for other devices. LG says the claims "are not true" and that voice only runs when you press the button or say "Hi LG." Tom's Hardware could not verify either side.
+PAST PERFORMANCE
+Rossen YouTube, strong: "Your TV Is Spying On You" live (Dec 19, 2025) 638K, about 3.4x the recent live median; cutdown 313K.
+Rossen TikTok: LG TV spying (Dec 24) 142K, about 5.6x median. The feed this month: Gamers Nexus 7.2M and 3.5M; RTINGS 4.0M; Linus Tech Tips 1.2M.
+FOOTAGE WE NEED
+Jeff on camera with a remote, walking the menus — the get. Gamers Nexus clips need permission. Texas AG settlement announcements. Missing: a viewer.
+THE PAYOFF
+Samsung: Settings → All Settings → General & Privacy → Terms & Privacy → Viewing Information Services → off. (verify by model year)
+LG: Settings → All Settings → General → System → Additional Settings → Live Plus → off. Turn off voice recognition too. (verify path)
+Vizio: Settings → System → Reset & Admin → Viewing Data → off. Sony: Samba Interactive TV → off. (verify Sony menu)
+Roku TVs (TCL, Hisense and others): Settings → Privacy → Smart TV Experience → uncheck "Use info from TV inputs."
+Most private: keep the TV off Wi-Fi and stream through a separate stick. Recheck after updates.
+
+STORY C: IS THAT PRIME DAY DEAL REAL?
+Slot: Story C (closer) · Confidence: HIGH · Airs today or never.
+SLOT FIT: Story C — this is the exhale. Non-scam, money-saver, screen-share demo, ends on good news. Jeff already showed Amazon's price-history button on the 7/03 Friday; new here is that it now goes back a full year, and the show airs on day two of Prime Big Deal Days (Oct 6–7), the last day of the sale. By Friday, the deals are gone.
+WORKING TEASE
+IT'S THE LAST DAY OF PRIME BIG DEAL DAYS… AND THERE ARE REAL DEALS OUT THERE! BUT SOME OF THOSE "WAS" PRICES GOT BUMPED UP RIGHT BEFORE THE SALE. DO IT WITH ME RIGHT NOW… THE 10-SECOND CHECK BEFORE YOU HIT BUY.
+THE HOOK
+Some items get their "was" price bumped before a sale so the banner discount looks bigger. At a past Prime Day, shopper Katelyn Montalbano screenshotted her cart before the sale and compared it during (confirm what her clip shows). Another shopper, Jaymes, pulled the price history on a charger marked 41% off in July 2024 and showed it had been raised right before the sale. Both are past sales, so they sit under "this happens," not "this week." Then the heart of the segment: Jeff pulls up a real deal and taps Amazon's own price-history link, now a full year, so viewers know in seconds whether today's price is actually the lowest.
+HOW TO TRACK IT (JEFF SCREEN SHARE)
+On the Amazon product page, tap Price history next to the price → switch to 365 days.
+Today's price is the lowest on the chart? Real deal. Cheaper last month? The discount is built on a fake "was" price.
+Want more? CamelCamelCamel.com, Keepa and the Camelizer (all free) show longer charts.
+Set a CamelCamelCamel price alert so you know the moment it really drops.
+FOOTAGE
+Clips in hand: Katelyn Montalbano's cart TikTok and Jaymes' (@semyajnotsemaj) price-history TikTok, both from past sales. The segment is Jeff's screen-share.
+THE PAYOFF
+Check price history before you buy anything on sale.
+Ignore the banner percentage; look at the dollars.
+Walmart Deals (Oct 5–11) and Target Circle Deal Days (Oct 6–7) run the same week, so compare before you buy. (verify Target dates; one report says Oct 6–12)
+Screenshot your cart before any big sale.
+
+RESEARCH SOURCES & VERIFICATION FLAGS
+READ THIS FIRST
+I cannot watch video. Every clip here is described from its title, description, transcript or press coverage. No timecodes, no outcues; those come from whoever watches the footage.
+View counts were observed Sept 28, 2026. Rossen YouTube numbers come from the channel's live, video and shorts tabs; Rossen TikTok numbers from @rossen.reports. Facebook and Instagram numbers were not pullable; the Facebook lines are the team's own signal.
+Rossen episode content was checked against auto-captions of the Dec 12, Dec 19, Jan 28 and Sept 18 lives.
+STORY A — STORE TRACKING
+Sourcing for this story sits in the inline (verify) flags on its page. Performance: "These Stores Are Spying On You" (YouTube live, Jan 21, 2026) 260K; TikToks "These stores are now tracking your car in the parking lot" (May 26, 2026) 221K and "Stores are tracking you through Bluetooth now" (Jan 22, 2026) 138K.
+OPTION 1 — FAST FOOD BRINGS BACK THE HUMANS
+Confirmed:
+Burger King is still testing voice AI in about 1,500 drive-thrus; VP of brand technologies Chakri Somisetti said at FSTEC that pilot restaurants saw drive-offs because guests don't want to talk to a bot, and the chain is developing a way for customers to choose how they order (Restaurant Business, Sept 23, 2026; NRN).
+The Wall Street Journal reported McDonald's, Burger King, Wendy's and Starbucks re-emphasizing human hospitality; Burger King President Tom Curtis said customers want a friendly face. Burger King is redesigning restaurants to put kiosks along the walls instead of in front of the entrance (via NY Post/AOL, Sept 15, 2026; The Independent/Yahoo, Sept 11).
+McDonald's announced Make It Golden on Sept 23: a multi-year, systemwide hospitality commitment beginning Founder's Day, Oct 5 (McDonald's press release; SEC exhibit). NRN: training more than 2 million workers worldwide. NY Post: McDonald's isn't scrapping kiosks but wants an employee always on hand for customers who prefer a person, plus more customer-service evaluations.
+McDonald's ended its IBM voice-ordering test in June 2024 (CBS News). At its Sept 23, 2026 Investor Day it presented ArchIQ and the "Archy" voice assistant, over 90% accurate in early tests per the company, U.S. rollout finishing in 2027 (Restaurant Dive; Semafor, Sept 25).
+Starbucks: $1 billion coffeehouse redesign, about 1,000 locations updated, about 200,000 Sharpies bought to bring back cup messages (NY Post, Sept 15, citing the Financial Times).
+Metrigy: about 80% of consumers prefer a human order taker; 22% prefer AI vs. roughly 40% businesses assume (Fortune, Jul 30, 2026). Metrigy's own release: 84.9% prefer a human agent for customer service (Apr 28, 2026).
+Walmart's South Philadelphia Supercenter removed self-checkout for shoppers in March and returned to staffed lanes; it's the only one of Walmart's five Philadelphia stores to do so, and kiosks remain for Spark drivers. Walmart cited customer and associate feedback (Philadelphia Inquirer via NewsNation and Complex, May 2026).
+Taco Bell voice AI is in 890+ restaurants (Entrepreneur, Jul 9, 2026). Ford, IBM and Commonwealth Bank of Australia reversed AI-driven cuts (CNBC, Jul 1, 2026).
+Performance: drive-thru angle never covered on Rossen. Closest: "5 WORST fast food drive-thrus" TikTok 126K and YouTube short 107K (Oct 2025), about 5x the TikTok median. Self-checkout live (6/17): views not pulled. Elsewhere: Taco Bell AI fail TikTok 7.9M (Nov 2024); Sambucha "I Tested AI Drive Thrus" 3.3M (Jul 2025). Nothing comparable this month.
+Sources: restaurantbusinessonline.com/technology/burger-king-shifts-gears-drive-thru-ai · nrn.com/quick-service/burger-king-rethinks-its-drive-thru-ai-strategy · mcdonalds.mediaroom.com/2026-09-23-McDONALDS-ADVANCES-NEXT-STRATEGY-TO-BECOME-FIRST-CHOICE-FOR-MORE-CUSTOMERS,-MORE-OFTEN · nrn.com/quick-service/inside-mcdonald-s-massive-next-evolution-strategy · aol.com/articles/fast-food-chains-making-major-193653000.html (NY Post) · aol.com/articles/mcdonalds-burger-king-turn-novel-153022000.html · semafor.com/article/09/25/2026/mcdonalds-unveils-ai-enabled-drive-thru-system · fortune.com/2026/07/30/fast-food-ai-agent-customers-prefer-humans · metrigy.com (Apr 28 press release) · newsnationnow.com/business/walmart-ends-self-checkout · fox.com/watch/clip/fmc-x88sknozx7x7j8zl/fast-food-chains-bring-back-human-workers-as-customers-tire-of-kiosks · cbsnews.com/news/mcdonalds-ends-ai-drive-thru-ordering · cnbc.com/2026/07/01/employers-who-laid-off-workers-for-ai-are-reversing-their-decisions.html
+NEEDS VERIFICATION:
+🚨 "McDonald's is hiring more cashiers" — I could not find it. What's confirmed is retraining existing crews and a goal of someone on hand at the counter. McDonald's is also expanding AI at the drive-thru. On air: "McDonald's is retraining its people," not "hiring cashiers." The "375,000 hires" headline in search results appears to be the 2025 summer hiring push, unrelated to kiosks; don't use it.
+🚨 "Burger King's drive-thru tech is going away" is not what Burger King said. Voice AI is still in about 1,500 drive-thrus; it's adding an easier route to a human. Say "Burger King is backing off forcing the bot," not "ditching it."
+⚠️ Technomic 23% / 46%: now traced to Technomic data presented at FSTEC, but only via a newsletter. Pull the original or attribute it as reported.
+⚠️ The "rushed, impersonal, sterile and cold" guest survey and "hospitality becomes a franchisee metric" come from the WSJ via secondary sites. WSJ is paywalled and was not read directly.
+⚠️ Several sites tie Walmart's self-checkout removal to its 650-store remodel. Walmart said it is remodeling about 650 stores, not removing self-checkout from them. The 6/17 bible made that link; don't repeat it.
+⚠️ Fox Business clip not watched; confirm whether it has usable b-roll or is studio only. The 83% vs. 87% accuracy figures remain secondhand; pull InTouch Insight's study or cut.
+⚠️ No confirmed phrase gets a human at any chain. That's what Jeff's test is for. Viral fail clips (Taco Bell 7.9M per Daily Dot; Wendy's 1.8M per BroBible) need clearance.
+OPTION 2 — SAME CART, DIFFERENT PRICE
+Confirmed:
+Chris's TikTok: 6.7M views, 1.1M likes, 18K comments, 264K shares; uploaded Jul 30, 2026 (pulled from TikTok Sept 28).
+Maryland's Protection From Predatory Pricing Act (HB 895), signed Apr 28, 2026, effective Oct 1, 2026. Covers food retailers of 15,000+ sq ft and third-party delivery services. Enforced by the AG's Consumer Protection Division; no private right of action; up to $10,000 per violation, $25,000 for repeats. Carve-outs include loyalty-program benefits and promotions (Skadden, May 2026; National Law Review, May 7, 2026).
+Consumer Reports said the final law has loopholes (couponsinthenews.com, Apr 29, 2026).
+Rossen YouTube: VlWjNnoNVtc (Dec 12, 2025) 23,024; tvYR1wRT9Vo (Feb 25, 2026) 11,557; z-tF9E8Mk1U (May 1, 2026) 36,357; tjo5f-cTH4M (Sept 18, 2026) 263,188; jWXaR93Zg2I (Jan 28, 2026) 146,479. The Dec 12 live led with the Instacart/Consumer Reports shopper test (checked against captions).
+Sources: tiktok.com/@christheproducer21/video/7668462600778157325 · skadden.com/insights/publications/2026/05/maryland-becomes-the-first-state-to-restrict-surveillance-pricing · natlawreview.com/article/maryland-enacts-first-its-kind-ban-surveillance-pricing-grocery-sales · youtube.com/watch?v=VlWjNnoNVtc
+NEEDS VERIFICATION:
+⚠️ The dollar figures in the tease and hook have not been confirmed against the clip itself. Confirm on the clip before scripting.
+🚨 Uber's denial needs a named source before his Uber result airs.
+⚠️ More Perfect Union clip (1.2M+, Dec 2025): not found.
+⚠️ "Private browser window" tip: unverified as effective.
+OPTION 3 — TV SCREENSHOTS AND LISTENING
+Confirmed:
+Texas AG sued Samsung, LG, Sony, Hisense and TCL on Dec 15, 2025. Samsung settled Feb 26, 2026 (express consent for Texans); LG settled May 11, 2026 (Agreed Final Judgment). Sony, Hisense and TCL still litigating as of mid-2026 (stateofsurveillance.org; LegalClarity, Jun 24, 2026; National Law Review via cipaworld.com).
+Gamers Nexus published "216,000,000 Spy TVs | The LG Smart TV Problem" Sept 6, 2026, with Level1Techs and independent researchers; alleges standby microphone capture, plain-text voice transcripts stored on the TV, and home-network scanning (Cyber Kendra, Sept 9; Startup Fortune).
+LG told Tom's Hardware Sept 9: "The claims made in the recently published video are not true." Its later statement says voice processing only follows a button press or "Hi LG," and confirmed network scanning as a standard smart TV function. Tom's Hardware could not independently verify either side (Cyber Kendra; Startup Fortune).
+Rossen: X-Lw0lcfVs8 (Dec 19, 2025) 638,474 views, 27.8K likes, 2.9K comments; covered ACR, the Texas suit and brand-by-brand settings (checked against captions). VtliBJ7lfMc (Dec 27) 313,441. TikTok 7587542089856978190 (Dec 24) 142,100.
+Gamers Nexus 6IFVTcM28KA 7,205,651 (Sept 6); ToP9xfLDSME 3,518,584 (Sept 12). RTINGS IvFu343KNek 4,025,676 (Sept 4). Linus Tech Tips oeqUHEp4sYM 1,240,007 (Aug 26).
+Sources: youtube.com/watch?v=6IFVTcM28KA · cyberkendra.com/2026/09/lg-denies-smart-tv-spying-claims.html · startupfortune.com/gamers-nexus-says-216-million-lg-smart-tvs-are-secretly-listening-in-standby · stateofsurveillance.org/news/smart-tv-acr-lawsuits-samsung-settlement-roundup-2026 · legalclarity.org/current-television-lawsuit-texas-ag-sues-5-tv-makers · malwarebytes.com/blog/news/2026/03/samsung-tvs-stop-spying-on-viewers-in-texas-heres-how-to-disable-acr-anywhere
+NEEDS VERIFICATION:
+🚨 The sexy line is an allegation. "Some LG TVs keep listening when they look off" is Gamers Nexus's finding, disputed by LG and not independently verified. It must air as "researchers say," with LG's denial in the same breath. Get LG's full statement before scripting.
+⚠️ "Twice a second" is the Texas complaint's claim. Keep it attributed to Texas.
+⚠️ Hisense restraining order: reported, not confirmed still in force.
+⚠️ Samsung and Sony menu paths vary by model year; the Samsung path shown matches 2026 guides. LG voice-recognition off path not confirmed. Jeff should walk them on real sets.
+⚠️ Gamers Nexus reports a second microphone on some models may not follow the main mic toggle. Don't promise viewers a setting shuts the mic off completely.
+STORY C — PRIME DAY DEALS
+Confirmed: Prime Big Deal Days runs Oct 6–7, 2026 (Amazon, aboutamazon.com; NBC News Select). The airdate is day two.
+Other sourcing sits in the inline (verify) flags on its page. Performance: "SECRET Amazon Prime Day Deals" live (Jun 19, 2026) 136K; "We Found FAKE DEALS on Amazon's Spring Sale" live (Mar 27, 2026) 30K; TikTok "This Amazon Prime Day Hack EXPOSES FAKE DEALS!" 28K.
+OPEN QUESTIONS FOR THE MEETING
+Which option takes Story B? Recommendation: Option 3. If the room wants less "watching you" in one show (Story A is also surveillance), Option 1 is the change of pace.
+Option 3: lead with the listening allegation? It's what makes this new versus Dec 19. It needs "researchers say" framing and LG's denial on air, and a ruling on how hard the tease can push it.
+Option 3: can we get Gamers Nexus footage? Without it the listening beat is stills and headlines.
+Option 2: does the Facebook signal outweigh the YouTube history? The Instacart pricing live did 23K. If it runs, title it as the family test, not the term.
+Option 1: does "the humans are coming back" carry a Story B? No victim and no fresh viral clip, so it rests on Jeff's drive-thru and counter test. And McDonald's has to air as retraining, not hiring cashiers, since it's expanding AI at the drive-thru at the same time.
+Story C: did the price-history check already run on the Oct 2 Amazon Deal Days special? If so, the closer needs a different demo.
+1. THE STORE THAT TRACKS EVERY STEP YOU TAKE
+A Target worker's TikTok calling the black box on store baskets a tracker went viral, Target tracks shopper locations with that Bluetooth beacon (your phone's Target app is what ties it to you), and Instacart's camera-equipped Caper Carts, tripled year over year, are now in 100-plus cities across 15 states. Lowes tracks customers in store too.
+
+Coverage:
+
+* Snopes fact-check, Sept: https://www.snopes.com/fact-check/target-basket-trackers/
+* BroBible, Sept (Target's privacy policy on in-store Bluetooth and LED-light tracking): https://brobible.com/culture/article/target-shopping-baskets-tracker/
+* Instacart/Weis Markets press release, June 4 (Caper Carts tripled year over year, 100+ cities in 15 states): https://www.marketscreener.com/news/instacart-and-weis-markets-launch-ai-powered-caper-carts-at-select-weis-locations-in-pennsylvania-ce7f5dddd889f726
+* Modern Retail, Nov 25, 2025 (cart cameras feed retailer marketing data): https://www.modernretail.co/technology/instacart-tripled-its-smart-cart-store-count-this-year/
+
+Potential Packaging:
+
+* That Black Box on Your Target Basket Is a TRACKER — Here's What It Knows
+* Your Store Knows EVERY Aisle You Walked — Shut It Off Right Now
+* The New Grocery Cart Has CAMERAS Pointed at You
+
+2. FAST FOOD IS BRINGING BACK THE HUMANS
+Burger King admitted Sept 23 that customers drove off rather than talk to its drive-thru bot and is building an easier way to reach a person, McDonald's starts hospitality training for more than 2 million workers on Oct 5, and about 80% of consumers say they'd rather order from a human.
+Coverage:
+
+* Restaurant Business, Sept 23 (Burger King drive-offs, voice AI still in ~1,500 drive-thrus): https://www.restaurantbusinessonline.com/technology/burger-king-shifts-gears-drive-thru-ai
+* McDonald's press release, Sept 23 (Make It Golden starts Oct 5): https://mcdonalds.mediaroom.com/2026-09-23-McDONALDS-ADVANCES-NEXT-STRATEGY-TO-BECOME-FIRST-CHOICE-FOR-MORE-CUSTOMERS,-MORE-OFTEN
+* NRN, Sept 23 (2M+ workers trained worldwide): https://www.nrn.com/quick-service/inside-mcdonald-s-massive-next-evolution-strategy
+* NY Post via AOL, Sept 15 (Burger King moving kiosks to the walls; Starbucks' 200,000 Sharpies): https://www.aol.com/articles/fast-food-chains-making-major-193653000.html
+* Fortune, Jul 30 (Metrigy: about 80% prefer a human order taker): https://fortune.com/2026/07/30/fast-food-ai-agent-customers-prefer-humans/
+
+Potential Packaging:
+
+* They Replaced the Cashier With a ROBOT — Now They're Bringing Humans Back
+* Burger King Customers Are DRIVING AWAY From the AI
+* How to Skip the Robot and Get a REAL Person at the Drive-Thru
+
+3. IS THAT PRIME DAY DEAL REAL?
+We're doing this one because 10/7 is Prime Day (the last day of Prime Big Deal Days, Oct 6–7), and Amazon's own price-history button now goes back a full 365 days, so Jeff can show viewers in seconds whether today's "deal" is really the lowest price of the year.
+Coverage:
+
+* Amazon, June (price history now shows 30, 90 and 365 days): https://aboutamazon.com/news/retail/how-to-check-amazon-price-history
+* HotHardware, Sept 15 (48-hour sale, Oct 6–7): https://hothardware.com/news/amazon-prime-big-deal-days-october-6-7-millions-deals
+* NBC News Select, Sept (sale dates and start times): https://nbcnews.com/select/shopping/october-prime-day-dates-2026-rcna597737
+
+Potential Packaging:
+
+* Is That Prime Day Deal REAL? The 10-Second Check
+* Amazon's Own Button EXPOSES Fake Prime Day Deals
+* Last Day of Prime Day — DON'T Buy Until You Check This

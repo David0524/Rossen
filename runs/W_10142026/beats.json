@@ -1,0 +1,381 @@
+[
+ {
+  "beat_id": "10-14-A2",
+  "episode": "10-14",
+  "segment_title": "THIS FREE SAMPLE COST HER $26,000",
+  "script_text": "Kathryn Taylor, 84, a widow on Social Security in Fernandina Beach, Florida, went into a Bee and Co skincare store for a $25 facial and was charged about $26,000 (Genesis Z $9,000, Sapphire X $5,500, Phyto Thermal $10,000). The store refunded about $4,500 and refused the rest. First Coast News Ask Anthony, June 2025.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Fernandina Beach widow $25 facial $26,000",
+  "visual_spec": "Taylor and her daughter on camera, the receipt, the store",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE First Coast News 3iz8G25Taxg (47K, 2025-06-05)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Fernandina Beach widow $25 facial $26,000"
+   ],
+   "news": [
+    "84 year old widow charged $26,000 skincare store",
+    "$25 facial cost $26,000"
+   ],
+   "platform": [
+    "skincare store charged grandma thousands"
+   ],
+   "shorts": [
+    "$25 facial turned into $26,000",
+    "widow pressured skincare store"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=3iz8G25Taxg"
+ },
+ {
+  "beat_id": "10-14-A3",
+  "episode": "10-14",
+  "segment_title": "THIS FREE SAMPLE COST HER $26,000",
+  "script_text": "Lettie, 79, a Phoenix-area woman on Social Security, was approached at a mall kiosk and later lured with free facials to Forever Flawless and Royal Bee Old Town in Scottsdale; she says she said no 50 to 60 times and spent about $25,000. ABC15 Let Joe Know, Joe Ducey.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Valley senior spends $25,000 on beauty products ABC15",
+  "visual_spec": "Lettie on camera with reporter Joe Ducey; products, the Scottsdale store",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "ABC15 article exists; video likely on ABC15 YouTube",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Valley senior spends $25,000 on beauty products"
+   ],
+   "news": [
+    "Let Joe Know senior $25,000 beauty products",
+    "Scottsdale skincare store senior pressured"
+   ],
+   "platform": [
+    "Royal Bee Scottsdale skincare"
+   ],
+   "shorts": [
+    "senior spent $25,000 on skin cream",
+    "said no 50 times skincare"
+   ]
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-14-A4",
+  "episode": "10-14",
+  "segment_title": "THIS FREE SAMPLE COST HER $26,000",
+  "script_text": "Victor Chisholm, a 30-year-old man with an intellectual disability, spent more than $50,000 across visits to Bee & Co. at Westfield Topanga; with his friend Gabe Cota their purchases topped $60,000, including tips to employees. CBS California Investigates, Kristine Lazar, Aug 27 2026.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Bee & Co. skincare store coercive sales man spends $50K",
+  "visual_spec": "Chisholm and Cota on camera; Bee & Co. storefront; receipts",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE CBS LA 6OGQNCnZTfE (338K, 2026-08-27)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Bee & Co. skincare coercive sales $50K"
+   ],
+   "news": [
+    "skincare store man with disability spent $50,000",
+    "Westfield Topanga skincare store allegations"
+   ],
+   "platform": [
+    "Bee and Co skincare scam"
+   ],
+   "shorts": [
+    "skincare store took $50,000",
+    "Bee and Co mall scam"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=6OGQNCnZTfE"
+ },
+ {
+  "beat_id": "10-14-A5",
+  "episode": "10-14",
+  "segment_title": "THIS FREE SAMPLE COST HER $26,000",
+  "script_text": "The Bee & Co. store at Westfield Topanga closed Sept 24 2026, storefront boarded with a lockbox on the door, after CBS California Investigates reporting; the company's attorney Neville Johnson called coverage one-sided and misleading; LAPD investigating. CBS LA, Oct 1 2026.",
+  "orientation": "horizontal",
+  "clip_role": "news_report",
+  "news_anchor": "Bee & Co. skincare store Westfield Topanga closes",
+  "visual_spec": "Boarded storefront, lockbox, reporter standup",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE CBS LA g9e4ElDgYG8 (132K, 2026-10-01)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Bee & Co. skincare store closes Topanga"
+   ],
+   "news": [
+    "skincare store closes after coercive sales allegations"
+   ],
+   "platform": [
+    "Bee and Co closed"
+   ],
+   "shorts": [
+    "skincare store shut down mall"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=g9e4ElDgYG8"
+ },
+ {
+  "beat_id": "10-14-A6",
+  "episode": "10-14",
+  "segment_title": "THIS FREE SAMPLE COST HER $26,000",
+  "script_text": "At the Vancouver Mall in Washington, the BH28 Skincare kiosk closed after a KOIN 6 investigation into high-pressure sales; owner Hai Baranetz was arrested for allegedly pushing a 75-year-old woman to withdraw $50,000; a bank teller stopped it; other women spent $300 to $22,000; Brooks Thogerson, 76, was charged $13,000. Late 2024 to Feb 2025.",
+  "orientation": "horizontal",
+  "clip_role": "news_report",
+  "news_anchor": "Vancouver Mall skincare kiosk KOIN 6 investigation",
+  "visual_spec": "Women on camera with KOIN 6; empty kiosk; bank teller",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "KOIN 6 web articles; YouTube copies likely",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Vancouver Mall skincare kiosk KOIN 6"
+   ],
+   "news": [
+    "skincare kiosk owner arrested 75-year-old $50,000",
+    "bank teller saves woman skin care"
+   ],
+   "platform": [
+    "mall kiosk skincare scam women"
+   ],
+   "shorts": [
+    "skin care kiosk took thousands",
+    "bank teller stopped skincare scam"
+   ]
+  },
+  "lane": "search"
+ },
+ {
+  "beat_id": "10-14-B1",
+  "episode": "10-14",
+  "segment_title": "DON'T SIGN THIS FOR ANYONE: HIS CAREGIVER TOOK HIS HOUSE FOR $5",
+  "script_text": "Nora Rowland tells Inside Edition the locks were changed; she rang the Ring doorbell camera and the caregiver answered that her father had died three days earlier; police first treated Nora as a trespasser after the caregiver produced the deed. Inside Edition, Aug 31 2026.",
+  "orientation": "vertical",
+  "clip_role": "victim_interview",
+  "news_anchor": "Inside Edition father's caregiver stole his house",
+  "visual_spec": "Nora Rowland on camera; the house; deed document",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE WSMV Short 3EzgKCWb83Q (5.68M)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "caregiver took deed to father's home weeks before his death"
+   ],
+   "news": [
+    "daughter says caregiver took deed $5",
+    "Conway caregiver quitclaim deed $5"
+   ],
+   "victim": [
+    "this is my dad's house"
+   ],
+   "platform": [
+    "caregiver stole house for $5"
+   ],
+   "shorts": [
+    "caregiver took dad's house for $5",
+    "daughter finds caregiver in dad's house"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/shorts/3EzgKCWb83Q",
+  "note_swap": "Rows swapped at Checkpoint 3 (producer, 10/6)"
+ },
+ {
+  "beat_id": "10-14-B2",
+  "episode": "10-14",
+  "segment_title": "DON'T SIGN THIS FOR ANYONE: HIS CAREGIVER TOOK HIS HOUSE FOR $5",
+  "script_text": "Robert Rowland, 75, of Conway, South Carolina: his caregiver Sarah Smalls became his power of attorney in April 2024 and a quitclaim deed dated April 17 2024 moved his home to her for $5. WMBF original, WSMV Short 5.7M, Aug 30 2026.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "caregiver took deed father's home $5 Conway",
+  "visual_spec": "Nora on camera; doorbell; house",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "WMBF original 7WXREQ4_5Vo (129K)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Inside Edition caregiver stole his house"
+   ],
+   "news": [
+    "daughter rang doorbell caregiver said dad died",
+    "caregiver changed locks father's house"
+   ],
+   "platform": [
+    "caregiver took father's house"
+   ],
+   "shorts": [
+    "caregiver answered the doorbell dad died"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=-tbGdiOzo80",
+  "note_swap": "Rows swapped at Checkpoint 3 (producer, 10/6)"
+ },
+ {
+  "beat_id": "10-14-B3",
+  "episode": "10-14",
+  "segment_title": "DON'T SIGN THIS FOR ANYONE: HIS CAREGIVER TOOK HIS HOUSE FOR $5",
+  "script_text": "Sarah Weaver Smalls, 58, was arrested Sept 28 2026 and booked at J. Reuben Long Detention Center; charges include exploitation of a vulnerable adult, perjury, and obtaining property by false pretenses; warrants allege $17,000+ in withdrawals; $45,000 bond; next court date Dec 11. Daughter Nora reacts. WMBF, Sept 29-30 2026. Accused, not convicted.",
+  "orientation": "horizontal",
+  "clip_role": "news_report",
+  "news_anchor": "WMBF caregiver arrested Conway deed",
+  "visual_spec": "Nora reacting; booking photo; courthouse",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE WMBF ikapZ9dVJ5I (4K, 2026-09-30)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "caregiver accused of stealing late father's home arrested"
+   ],
+   "news": [
+    "Conway caregiver arrested exploitation vulnerable adult",
+    "WMBF caregiver arrest daughter reacts"
+   ],
+   "platform": [
+    "caregiver arrested $5 deed"
+   ],
+   "shorts": [
+    "caregiver arrested after taking house"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=ikapZ9dVJ5I"
+ },
+ {
+  "beat_id": "10-14-C1",
+  "episode": "10-14",
+  "segment_title": "THE SIGN SAID $1. THE REGISTER SAID SOMETHING ELSE.",
+  "script_text": "Amanda, Kansas, scans a $1 rollback Chef Boyardee lasagna (was $1.34) at Walmart self-checkout; it rings up $1.44; employee overrides.",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "news_anchor": "Walmart register price higher than shelf sign",
+  "visual_spec": "shopper phone video at shelf and register",
+  "platforms": [
+   "tiktok"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "producer-supplied native TikTok",
+  "source_native": "tiktok",
+  "queries": {
+   "news": [
+    "Walmart charged more than shelf price"
+   ],
+   "anchor": [
+    "Walmart digital shelf label price register"
+   ],
+   "platform": [
+    "walmart price gouge"
+   ],
+   "shorts": [
+    "walmart rang up higher than sign"
+   ]
+  },
+  "lane": "manual"
+ },
+ {
+  "beat_id": "10-14-C2",
+  "episode": "10-14",
+  "segment_title": "THE SIGN SAID $1. THE REGISTER SAID SOMETHING ELSE.",
+  "script_text": "Creator films Walmart digital shelf tags and pricing (per caption).",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "news_anchor": "Walmart register price higher than shelf sign",
+  "visual_spec": "shopper phone video at shelf and register",
+  "platforms": [
+   "tiktok"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "producer-supplied native TikTok",
+  "source_native": "tiktok",
+  "queries": {
+   "news": [
+    "Walmart charged more than shelf price"
+   ],
+   "anchor": [
+    "Walmart digital shelf label price register"
+   ],
+   "platform": [
+    "walmart price gouge"
+   ],
+   "shorts": [
+    "walmart rang up higher than sign"
+   ]
+  },
+  "lane": "manual"
+ }
+]

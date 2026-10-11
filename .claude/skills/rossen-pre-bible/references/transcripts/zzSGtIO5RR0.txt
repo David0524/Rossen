@@ -1,0 +1,1337 @@
+# 20260513 THIS Gmail Scam Is DEVASTATING — Google Won't Save You!
+[00:13] [music]
+[00:14] >> Welcome to Rawson Reports. I am Jeff
+[00:16] Rawson. We have multiple threats to tell
+[00:19] you about today including a huge new
+[00:22] Gmail scam that is infecting and
+[00:25] targeting close to 2 billion Gmail
+[00:29] users. So good news for you guys. That's
+[00:31] all of us and you don't even have to
+[00:33] just use Gmail. It's Google wide scam.
+[00:36] So even if you just use Google, these
+[00:38] scammers have figured out a way to trick
+[00:41] Google, trick Google's AI that's meant
+[00:44] to catch scams, catch scams, and take
+[00:47] over your account, drain your account,
+[00:49] and put spyware on your devices. So
+[00:52] whether you use Gmail or not, whether
+[00:53] you use different aspects of Google or
+[00:55] not, they can still get in. In fact, the
+[00:58] scammers would love it if you don't use
+[01:00] the Google calendar. If you don't use
+[01:02] Google Meets for for like Zoom-like
+[01:05] meetings. They would love it if you
+[01:06] don't because they can still get into
+[01:08] your account that way because every
+[01:09] Google account comes with it. So we're
+[01:11] going to get into all of that and there
+[01:12] is a setting that you need to change
+[01:15] right now going to walk you through that
+[01:17] step by step. So when you're watching
+[01:19] this video, you can pause it right when
+[01:20] I do it. I'm going to share my screen. I
+[01:22] have my own personal computer out and
+[01:25] I'm going to walk you through this step
+[01:26] by step and we're going to share my
+[01:27] screen with my personal Gmail account
+[01:30] right here so I can walk you through it
+[01:32] because you need to change the setting
+[01:33] before the show is over today and before
+[01:35] you do anything. Um AI voice cloning,
+[01:38] we've talked about it here on the show a
+[01:39] lot. Um the technology just this month
+[01:43] got a major upgrade and now the danger
+[01:45] of it is it's available widely. These
+[01:48] scammers don't even have to be on the
+[01:50] dark web. They can clone your voice
+[01:54] just taking something off social media,
+[01:55] a quick little clip, and the quality has
+[01:59] just jumped up. I don't know what just
+[02:00] happened, but it's insane. You are going
+[02:03] to hear my AI voice cloned. We decided
+[02:06] to just randomly pull a couple of my
+[02:08] social media videos,
+[02:09] fed it into the algorithm, and again,
+[02:11] this was a regular website. I'm not
+[02:13] going to tell you which one it was, but
+[02:14] it's out there for anybody to get, but
+[02:16] why should I make it easier?
+[02:18] Um so, these scammers don't have to go
+[02:19] digging anymore. Just plopped in my
+[02:21] voice uh from so- social media posts in
+[02:23] the public, and popped out me saying the
+[02:26] craziest things that I've never said in
+[02:28] my life. And we're going to do a live
+[02:30] experiment here on the show. I'm going
+[02:32] to call my wife live,
+[02:34] and I recorded something into this to
+[02:36] kind of have a conversation with her and
+[02:38] to tell her something, and I want to see
+[02:39] how she reacts. I want to The The main
+[02:41] thing I want to know after she calls me
+[02:43] a is does she actually believe
+[02:46] it's me? That's the real test. She
+[02:49] usually watches the show, but you can't
+[02:50] watch today, but she's doing work. So,
+[02:53] I'm going to call her, but I said if I
+[02:54] call you during the show, answer the
+[02:55] phone. She's like, "Okay." So, we'll see
+[02:57] what happens with that. Also,
+[02:59] self-checkout, major update on
+[03:01] self-checkout lines. We've been
+[03:02] reporting on it here on the show, how
+[03:04] when you go through there, they accuse
+[03:07] you of theft. A lot of people do, you
+[03:09] know,
+[03:09] skipping scanning, where like, you know,
+[03:11] you you put one uh item across the
+[03:13] barcode, then the other one is free, and
+[03:15] you accidentally miss the barcode, uh
+[03:17] and how they uh bust you for that. Theft
+[03:20] is getting worse, and we have major news
+[03:22] from Costco, from Walmart, and from
+[03:25] Target. They're all making big changes
+[03:27] to the self-checkout line that you need
+[03:28] to know about. And uh we have another
+[03:30] threat, too, this party invite scam that
+[03:32] I got to tell you about, which is
+[03:33] absolutely insane. So, don't open an
+[03:35] evite or something from Paperless Post
+[03:37] until you watch this, because the
+[03:39] scammers are out. The scammers are out,
+[03:41] and it's getting crazy. Before we get to
+[03:43] all that, I have some major, exciting
+[03:46] news here at Rossen Reports. We are
+[03:48] today, right now, launching YouTube
+[03:51] memberships. You can become a Ross Young
+[03:53] Reports Insider. Yes.
+[03:56] Every and we have multiple tiers.
+[03:58] And everybody gets access to these cool
+[04:00] emojis during the live chats, but we're
+[04:02] giving you some real serious perks. I'm
+[04:04] going to give you early access to
+[04:06] videos. We're going to do members only
+[04:09] live stream. So, if you sign up as a
+[04:10] member, those are the only people that
+[04:13] will have access to this. So, here's
+[04:15] what I We have other stuff, too. We have
+[04:17] member shout-outs, priority reply to
+[04:19] comments.
+[04:21] Um again, the live streams where I
+[04:22] answer your questions. And every member
+[04:24] in every tier, um and I urge you to
+[04:26] check it out, gets access to these cool
+[04:28] stickers. And Oh, we already have people
+[04:29] signing up for it. Um Bobby, thank you
+[04:32] so much for becoming a YouTube member.
+[04:34] KK1S8G
+[04:36] weird name, kidding. Uh you become
+[04:38] Thanks for becoming a member as well.
+[04:40] Scan that QR code. L Hilton, what's up?
+[04:43] Scan that QR code right on your screen.
+[04:45] Just pull out your phone's camera and
+[04:47] just zoom in, scan that QR code, see
+[04:49] which membership is best for you. Um
+[04:52] we made them nice and nice and
+[04:54] inexpensive, so you can enjoy all the
+[04:55] perks and you can figure out which one
+[04:57] you like. And if you're on And that's if
+[04:58] you're watching on TV, you can click on
+[05:00] the QR code on your phone with the
+[05:02] camera. If you're watching this on a
+[05:03] computer or a laptop or your phone,
+[05:06] click join. You're going to see join
+[05:08] right below the video with all the
+[05:09] stuff. Hit join and it'll give you the
+[05:12] membership tiers and you can choose. But
+[05:14] we're I'm really excited about this. We
+[05:15] got a lot of people signing up right
+[05:16] now. I'm so psyched. And see your your
+[05:19] whole thing turns green. We got you got
+[05:21] loyalty badges. We know how you are, how
+[05:23] long you've been with us. I know they
+[05:25] are cute stickers, aren't they, Bear
+[05:26] Pause? So, do that right now. Click that
+[05:28] QR code.
+[05:29] Wow.
+[05:31] Oh my god. Anyway, I love those. Really
+[05:33] cute.
+[05:34] Also,
+[05:35] uh after you hit join, hit like and
+[05:37] subscribe on this video as well. Well,
+[05:38] really helps us out. And I love that
+[05:40] everyone's becoming a member. This is so
+[05:41] cool. And by the way, really helps to
+[05:43] support our independent consumer
+[05:45] journalism. We don't have a big
+[05:46] corporate machine behind us. I'm in a
+[05:48] back corner of my house. It takes
+[05:50] resources to bring you these
+[05:51] investigations and to help you out. So,
+[05:53] this really helps. Thank you so much. Uh
+[05:55] let's get right to it. Google scams are
+[05:58] exploding right now. And there are a few
+[06:00] of them I want to get to, but one in
+[06:02] particular is this Gmail scam where the
+[06:05] scammers no longer need to just send you
+[06:09] a phishing email. Now, they have figured
+[06:11] out a way to trick Google and infiltrate
+[06:15] your account and hijack your Google
+[06:18] account and drain your bank accounts and
+[06:21] wreak havoc. Because once they're in and
+[06:23] they put spyware on your computer, they
+[06:25] have access to everything you do on that
+[06:27] computer. And Google's own defenses
+[06:30] can't seem to stop it. And we are going
+[06:32] to show you step-by-step the setting you
+[06:35] need to change right now to keep these
+[06:38] scammers out. And I'm going to walk
+[06:39] through that with you. But first, here's
+[06:40] exactly a look of what's going on and
+[06:42] how they're doing it.
+[06:44] It's the most popular search platform
+[06:46] which also offers email, calendar
+[06:48] invites, and video calls. Now, the IT
+[06:51] team is finding that scammers are taking
+[06:53] advantage of Google's popularity. We see
+[06:56] a triple threats targeting Google users
+[06:58] specifically through Google Meets
+[07:00] invites and Google itself. Kagwanja
+[07:04] with Nord Security says cybersecurity
+[07:07] experts have spotted the threats. Users
+[07:09] receive fake calendar invites and those
+[07:12] invites get automatically accepted with
+[07:14] the link in that. And then users prompt
+[07:16] to click on that link for the calendar
+[07:18] invite specifically outline the
+[07:19] information to the cybercriminals. There
+[07:21] are also spoofed Google Meet invites.
+[07:24] And that's going to have an actually
+[07:26] fake injected link in that. Link when
+[07:29] you click in, you're going to download
+[07:30] malware that exposes your personal
+[07:32] information. And the last is actually
+[07:33] Google scams itself. And where actually
+[07:36] cybercriminals pretend to be Google
+[07:39] support engineers that you get a prompt
+[07:41] to reset your Google account. You should
+[07:43] never trust emails or links asking you
+[07:46] to reset your account. As for the other
+[07:48] two scams, Google says users should
+[07:50] enable the known sender setting in
+[07:52] Google Calendar, which limits or blocks
+[07:55] invites from random people from
+[07:57] populating in your calendar.
+[08:00] Yeah, I'm going to show you exactly how
+[08:01] to do this because even if you don't use
+[08:03] the Google Calendar, it doesn't matter.
+[08:07] You have to do this anyway, so they
+[08:09] can't even get into your system. So,
+[08:10] let's do this together. Um we're going
+[08:12] to take my screen live. This is my Gmail
+[08:14] account. I've cleaned out some of my
+[08:17] some of my emails so you can't see me
+[08:19] getting yelled at by some people in my
+[08:20] family. You know who you are. Um all
+[08:23] right, so here's what I want you to do.
+[08:25] Come right over here. You see in the top
+[08:26] right corner, I'm moving my mouse
+[08:28] around. The top right corner of my
+[08:29] screen. You see all those little buttons
+[08:31] that's right next to my big J there.
+[08:33] This thing right here. I want you to
+[08:34] click on that. And by the way, when
+[08:36] you're watching this video, you can hit
+[08:38] pause, you can back this up and replay
+[08:40] this a little bit so you get these
+[08:41] instructions if they're too fast. You
+[08:43] can just watch it back. So then, I want
+[08:46] you to scroll over to Google Calendar,
+[08:48] right? So you see I'm circling it right
+[08:49] there. There's Google Calendar. I
+[08:51] personally don't use really Google
+[08:52] Calendar that much, but it doesn't
+[08:54] matter. I have to do this. So I want you
+[08:55] to click Google Calendar.
+[08:57] Then we have that. Got it. See right
+[09:00] over here. Okay, I'm going to
+[09:01] show notifications block. Okay, right
+[09:04] over here sort of toward the middle of
+[09:05] the screen, you see my mouse on the top
+[09:07] is you hit that little settings button.
+[09:10] Hit settings after you hit the gear,
+[09:12] okay?
+[09:14] Oh by the way, some of my calendar
+[09:15] invites came up. You can see exactly
+[09:16] what I'm up to. Oh boy.
+[09:18] Um all right, so then you come over here
+[09:20] and I want you to scroll down over here
+[09:23] on the left side of the screen, you see
+[09:24] it says event settings. I have it
+[09:26] highlighted here with my mouse. Event
+[09:28] settings.
+[09:29] Hit event settings.
+[09:31] Good. Then right over here in the
+[09:33] middle, you see it says add invitations
+[09:36] to my calendar and it says from everyone
+[09:39] right there.
+[09:40] It comes the fault like that and I'm so
+[09:42] angry at Google about this. There's no
+[09:44] reason you should be able to get Google
+[09:46] Meet invites from anybody in the whole
+[09:48] world because that's how the scammers
+[09:50] get in. You don't know who they are but
+[09:51] they have access to send you an invite
+[09:54] and that's all they really need to do
+[09:55] because then it appears on your on your
+[09:58] you get a notification and you're like,
+[09:59] I have a meeting and you click on it and
+[10:01] they're in. So, we're going to change
+[10:02] this right now. See how it says from
+[10:04] everyone? Hit that and you get these
+[10:06] choices. Only if the sender is known and
+[10:09] this other one when I respond to the
+[10:11] invitation in email. The middle one's
+[10:13] the best one.
+[10:14] Only if the sender is known. So, switch
+[10:16] from from everyone to only if the sender
+[10:19] is known. It's it's giving me a warning,
+[10:21] change how invitations are added. I'm
+[10:23] saying okay and boom, now it's set, only
+[10:26] if the sender is known. I want you to do
+[10:29] that right now um as a way to protect
+[10:32] yourself because there are a lot of
+[10:34] scams going on. That's one of them that
+[10:36] you can easily protect yourself from
+[10:38] whether you use Google Calendar or not.
+[10:40] There is another major Gmail scam going
+[10:42] on as well
+[10:44] and this one actually uses Google's own
+[10:48] AI called Gemini against it.
+[10:51] So, AI is basically reading your emails.
+[10:54] It's looking for threats, it's saying,
+[10:57] should I deliver this or not? It's
+[10:59] looking for like little pixels that you
+[11:00] can't see and it's understanding what's
+[11:03] going on. That's how it's summarizing
+[11:04] your emails for you. Well, the scammers
+[11:06] have figured out a way to use Google's
+[11:09] system that protects your email
+[11:12] and turns it against you. So, it turns
+[11:15] out attacking you. Let me explain what
+[11:16] it means and how it works and how we can
+[11:19] fix this. Roll clip three. So, experts
+[11:21] are now issuing this new warning for 1.8
+[11:24] billion different Gmail users right now
+[11:26] over a new type of attack that literally
+[11:28] fools the AI. They're saying that with
+[11:30] the rapid growth of AI right now, a new
+[11:32] wave of threats is emerging across the
+[11:34] industry with the aim of manipulating
+[11:36] the AI systems themselves. So, not just
+[11:39] you. They're saying that ultimately
+[11:41] these hackers are using Google Gemini,
+[11:42] the built-in AI tool in Gmail and
+[11:45] Workplace, against users, tricking the
+[11:47] AI into helping them extract information
+[11:49] from users. So, these hackers are
+[11:51] sending emails with hidden instructions
+[11:53] to prompt the AI Gemini to generate fake
+[11:56] warnings to you. So, the AI is falling
+[11:58] for the scam and it's telling you to
+[12:00] fall for it, too. So, a visual for
+[12:02] what's happening is right behind me.
+[12:03] You'll get a regular email and then
+[12:05] Google Gemini will pop up and it'll
+[12:06] basically give you an all caps warning
+[12:08] telling you to click links and to call
+[12:10] phone numbers immediately because your
+[12:12] account is compromised. The hackers are
+[12:14] hiding text in the email that you cannot
+[12:16] see. They're blended into the background
+[12:18] and then the AI is actually reading
+[12:19] those words and picking them up where
+[12:21] you can't see them. In Google's
+[12:23] statement, they're telling everybody
+[12:24] that they will never contact you this
+[12:26] way and the AI will never be the one to
+[12:28] contact you, too. So, make sure you just
+[12:29] ignore all of these AI prompts.
+[12:32] Yeah, ignore all of them and don't open
+[12:36] emails from people you don't know.
+[12:38] That's what we've come to because once
+[12:39] you open it, the AI knows
+[12:43] and the scammers have already gotten in
+[12:44] because it's already tricked the system.
+[12:46] Um, the scammers are also now doing
+[12:49] something else to get into your Gmail.
+[12:51] They're not just going through the
+[12:53] computer. Now, they're calling you as
+[12:54] well, posing as Google and they are
+[12:57] taking extraordinary steps. It looks
+[13:01] real, it sounds real. They even
+[13:04] manipulate the codes, the verification
+[13:06] codes that Google sends you. Uh, this
+[13:08] one woman tells a story she almost fell
+[13:10] for it and in fact, I think a lot of
+[13:12] people would have fallen for it. But,
+[13:14] they are, as I said, going to amazing
+[13:17] lengths to trick you. Listen to the
+[13:18] story, it's absolutely incredible. A
+[13:20] clip four. They said, "Hello, is this
+[13:21] Natalie Cardona?" Um, "just trying to
+[13:24] verify that this is you." I said, "Who
+[13:26] is this?" They said, "Alex uh from
+[13:28] Google. Uh am I speaking to Natalie
+[13:31] Cardona?" I said, "What is this about?"
+[13:33] And they said, "Someone um has logged
+[13:37] into the help desk and submitted a
+[13:39] ticket earlier that they're trying to
+[13:43] reset the credentials on your account. I
+[13:45] just need to confirm your identity, make
+[13:46] sure that it's you."
+[13:48] Just so you can see, this is the email
+[13:51] that was sent to me. Like, this is like
+[13:53] very high resolution. It is Google
+[13:56] branding. We have assigned a
+[13:57] representative to your case. This person
+[14:00] um Then he said, "I'm about to text you
+[14:02] a Google verification code. Um this is
+[14:05] just to verify that it's you, that no
+[14:06] one
+[14:07] uh so I can start rejecting these
+[14:10] requests that are coming in." And I was
+[14:12] like, "Mm, I don't know if I could
+[14:13] really do that, Alex, because it says
+[14:15] literally after the code, don't share
+[14:18] your code with anyone. I am hesitant to
+[14:21] do that. So, what else you got for me?"
+[14:25] Kind of like, honestly playing into it,
+[14:27] but also low-key like concerned because
+[14:29] like this looks good.
+[14:32] And so I said, "How else could you do
+[14:35] this like online through my email
+[14:37] address, through Google, so I know that
+[14:40] it's Google?" And he said, "Got you."
+[14:43] He said, "Type in that case reference
+[14:45] number and then google.com
+[14:49] and you can do the verification process
+[14:51] like that."
+[14:52] And I did, and it took me to literally
+[14:55] Google's login screen. And it looked
+[14:58] identical to Google's login screen. The
+[15:01] only difference was when I went to go
+[15:03] put in my password, it didn't
+[15:04] pre-populate. And so I said, "Alex,
+[15:08] buddy, I'm not going to type in my
+[15:09] password here."
+[15:12] Yeah, so many of us would though, right?
+[15:14] Because they kept going on, they had the
+[15:16] verification codes, it looked just like
+[15:19] it was from Google, and that's how
+[15:20] they're getting you. So, never share
+[15:21] your personal information with anybody
+[15:24] who gets in touch with you unsolicited.
+[15:26] I get calls all the time from my bank,
+[15:28] from American Express,
+[15:30] um from my insurance company saying,
+[15:32] "Hey, they'll call me. They'll say
+[15:34] they're on a recorded line." And by the
+[15:35] way, I've confirmed eventually it's
+[15:37] them, but they call me and they're like,
+[15:38] "Can you confirm your street address for
+[15:40] me?" And I'm like, "You called me."
+[15:42] You called me. If you need me, you
+[15:44] obviously called me. You don't need to
+[15:46] give them anything. Go online, get the
+[15:48] actual phone number, and call them and
+[15:50] say, "Did you call me?" So, never ever
+[15:52] give information out to anybody who
+[15:54] calls you unsolicited. By the way, um
+[15:56] what's going on, Dustin from Louisiana?
+[15:58] I just saw one of your comments, um and
+[16:00] I think it was a woman who said, "I
+[16:01] don't use Google Calendar, so I'm okay."
+[16:03] No, it doesn't matter if you use Google
+[16:06] Calendar or not, any of these things.
+[16:08] They're using it to get to you and into
+[16:09] all of your accounts, even if you don't
+[16:11] use it. In fact, if you don't use it a
+[16:13] lot, it's even easier for them to get in
+[16:15] because you're not paying attention. Um
+[16:16] there's also another scam with Google
+[16:18] that's exploding right now that we
+[16:20] actually just heard about today, so I
+[16:21] slipped it into the show. It's about
+[16:23] Google Meet, and just like Google
+[16:25] Calendar, it doesn't matter if you use
+[16:28] it or not. Google Meet is, you know,
+[16:30] it's the same thing as Zoom. It's like
+[16:31] Google Zoom thing. Um even if you don't
+[16:34] use it, they are sending links for
+[16:37] meetings that are actually spyware and
+[16:40] malware. Um
+[16:42] in fact, there was a realtor who posted
+[16:45] a new listing, and all of a sudden he
+[16:47] got somebody who was interested in
+[16:48] seeing the listing, and they wanted to
+[16:49] set up a Google meeting about it. And
+[16:51] that's how they were going to get him.
+[16:52] Watch this. Now, I replied, "Thank you.
+[16:55] Love to show it to you. I'm available.
+[16:57] Are you available today? What's your
+[16:59] schedule like?" And they respond with,
+[17:01] >> [music]
+[17:01] >> "We're not in town right now. We want to
+[17:04] do a Google Meet with you."
+[17:06] >> [music]
+[17:06] >> Okay? Like I'm born yesterday, okay? So,
+[17:09] I'm going to click on this link that
+[17:10] you're going to send me, and we don't
+[17:12] know each other yet, okay? That's where
+[17:14] the whole web thing is. You get caught
+[17:15] in a web.
+[17:17] So, I respond [music] to him and I knew
+[17:18] where this was going. I said, "I don't
+[17:20] do
+[17:21] Google Meet, okay? How about we just
+[17:23] like FaceTime? I'll go there and I'll
+[17:25] FaceTime it with you." And I knew that
+[17:28] it was going to die right there.
+[17:30] Just ended right there. That's how I
+[17:31] responded and then they knew, "Hey,
+[17:33] we're not going to get this guy, okay?"
+[17:35] I've been doing this a long time. So,
+[17:37] I've seen all these things happen over
+[17:39] time. But, that's what happens. These
+[17:41] Google Meet scams and links that people
+[17:43] send you to click on is where they get
+[17:46] you. So, I'm hoping that this message
+[17:48] here will save someone the frustration
+[17:50] of actually clicking on that link right
+[17:51] there.
+[17:53] And there's a way to clean this up and
+[17:55] protect yourself from the scammers right
+[17:56] now. Once again, let's share my screen.
+[17:59] There is a setting that I want you to
+[18:01] change right now, okay? So, let's do
+[18:04] this together. Once again, share my
+[18:05] screen. Here the again, this is my
+[18:07] personal Gmail.
+[18:09] Um again, you're going to go to those
+[18:11] same buttons right over here to the top
+[18:13] right. And again, if these directions
+[18:15] are too fast,
+[18:17] hit replay, pause the video, go
+[18:19] step-by-step. That's the great thing
+[18:21] about YouTube and Facebook. All right,
+[18:23] so you're going to hit these buttons
+[18:24] right here in the top right of your
+[18:25] screen, right? This time, instead of
+[18:27] going to Google Calendar, we're going to
+[18:29] go to Google Meet, which is just right
+[18:31] below it, right over here. I'm circling
+[18:32] it. Google Meet right there. Okay. So,
+[18:34] we're going to hit Google Meet. From
+[18:36] there, uh this other window is going to
+[18:37] pop up, okay?
+[18:39] You're once again going to go to the
+[18:40] gear icon. What's going on, Martha?
+[18:42] Thank you for becoming a YouTube member.
+[18:44] If you're watching on your computer or
+[18:45] your laptop, hit join, hit the different
+[18:46] membership tiers. And uh if you're
+[18:49] watching on a TV, hit the little QR code
+[18:51] that we'll put up in a few minutes.
+[18:52] Okay. So, you hit the little
+[18:54] hit the little gear icon.
+[18:57] Jennifer, thanks for becoming a YouTube
+[18:58] member. Okay, then come over here to
+[19:00] general on the left. You see it says
+[19:02] general right here. I'm circling it with
+[19:04] my mouse.
+[19:05] General.
+[19:06] Now, right over here,
+[19:08] now it says, "Only contacts can call
+[19:11] me," right? Only contacts. Now, look how
+[19:14] it comes, defaulted off. So, Google
+[19:17] sends this to you, so everybody in the
+[19:19] world can send you a Google meeting
+[19:21] invitation. And again, this is what pops
+[19:23] up on your screen and you're like, I
+[19:24] don't use Google Meet, what is this? And
+[19:26] you hit it like, what meeting am I
+[19:27] invited to? You hit it
+[19:29] and boom, they're in your phone.
+[19:31] Draining your account, hijacking your
+[19:33] account, draining your everything. So, I
+[19:36] want you to toggle this on. So, only
+[19:39] contacts can call me. That's what you
+[19:41] want. Just like that. And then get out
+[19:43] of it and you're good. I'm going to go
+[19:44] back in the settings to make sure it's
+[19:45] saved.
+[19:46] So, we can do this together. Yep, it's
+[19:47] saved. See, right there. It's toggled on
+[19:49] that only contacts can call me. That is
+[19:52] what I need you to do. But, these Google
+[19:54] scams are exploding right now and Google
+[19:56] itself doesn't seem to have the
+[19:58] technology yet to be able to protect
+[20:00] you. So, that's why we're here. We're
+[20:02] going to do this manually and I got your
+[20:04] back. We have a triple threat uh to tell
+[20:07] you about here. Brand new AI clone
+[20:09] technology and I'm going to do a live
+[20:10] experiment to see how it replicates my
+[20:13] own voice and I'm going to call my wife
+[20:16] live to see if she believes in AI Jeff
+[20:19] saying ridiculous things, things I've
+[20:21] never said. I will going to get her
+[20:23] reaction live. I'm going to hold the
+[20:24] phone up and she'll kill me later, but
+[20:26] I'm doing it for you. Major change to um
+[20:28] self-checkout lines at retailers. Brand
+[20:31] new news as of today. And there's a
+[20:33] brand new party invite scam that is
+[20:35] draining accounts as well. Triple
+[20:38] threat, all coming up. Quick words from
+[20:40] our sponsor.
+[20:41] This episode is brought to you by Good
+[20:43] Ranchers. If you know me, you know I
+[20:44] take food very seriously. And when it
+[20:46] comes to meat, I refuse to settle.
+[20:48] That's why I keep going back to Good
+[20:50] Ranchers. They deliver restaurant
+[20:52] quality meat right to your door, all
+[20:54] from American farms and fisheries.
+[20:56] Vacuum sealed at peak freshness, so it's
+[20:59] ready whenever you are. This time, I
+[21:01] just stocked up on a ton of steak. I'm
+[21:03] making it for myself, for my family, for
+[21:05] my friends. My kids are absolutely
+[21:07] obsessed, and the quality, it blows away
+[21:10] anything I have found at the grocery
+[21:11] store, even the fancy ones. What I also
+[21:14] love is the flexibility. You build your
+[21:16] own box from over 100 options. Grass-fed
+[21:20] beef, wild-caught seafood, organic
+[21:22] chicken, farm-raised pork, and of course
+[21:24] steaks, whatever you're into. And it's
+[21:26] all backed by a 100% money-back
+[21:28] guarantee. If you're tired of overpaying
+[21:31] for disappointing meat at the store, do
+[21:33] yourself a favor and try Good Chop. Go
+[21:36] to goodchop.com/youtube
+[21:39] and use code 50 Rossen to get $50 off
+[21:43] plus free shipping on your first order.
+[21:45] Again, that's goodchop.com/youtube
+[21:49] code 50 Rossen for $50 off plus free
+[21:53] shipping, or click the link in the
+[21:55] description.
+[21:58] AI voice cloning just got a whole lot
+[22:01] worse this month. It's happening right
+[22:03] now.
+[22:04] Two things have happened. There's been a
+[22:06] huge noticeable jump in quality.
+[22:09] So, scammers are able to take your voice
+[22:11] right off the internet. If you do social
+[22:13] media, they have your voice, and they
+[22:15] don't need much. The quality has gone
+[22:17] insane.
+[22:19] That's number one. The second thing
+[22:21] that's happening is that these are now
+[22:22] available on regular websites. I signed
+[22:25] up for one, and we are going to do a
+[22:27] live experiment with my own family to
+[22:30] see if I can trick them with AI Jeff,
+[22:33] okay? I'm 100 years old. I just put on
+[22:35] my phone. I just pick up my phone, and
+[22:37] you know the flashlight goes on, and now
+[22:38] I'll spend 20 minutes trying to get this
+[22:39] thing off. Okay, there we go.
+[22:40] I'm 100. Okay, so
+[22:43] it's especially scary because they can
+[22:45] call you up pretending to be your kid,
+[22:46] pretending to be anybody. Then they
+[22:49] spoof your phone number, and it comes up
+[22:51] as you on their phone, and it sounds
+[22:53] like you. And now these regular websites
+[22:55] are doing it. As I mentioned, I signed
+[22:56] up for 11 bucks. We fed it some of my
+[22:58] social media stuff. We're going to see
+[23:00] if my wife can actually believe that
+[23:02] it's me. We'll see. Maybe we can trick
+[23:03] her. Maybe we can't. Um but
+[23:06] cybersecurity experts are issuing a
+[23:08] brand new warning because not only can
+[23:10] they clone your voice, they can now
+[23:12] clone your video in crazy ways. So much
+[23:15] so that scammers, criminals, anybody can
+[23:19] pass background checks, official digital
+[23:21] background checks, just using this
+[23:23] technology. Watch this. Easily scammers
+[23:26] can utilize AI technology to become
+[23:28] whomever they want to be. In this case,
+[23:31] they used an app they downloaded from
+[23:33] the App Store. Matt then went to Google,
+[23:35] captured an image of Miss Swift, and
+[23:38] poof, she is me or I am her. I'm Taylor
+[23:42] Swift.
+[23:43] >> [laughter]
+[23:44] >> Matt used the same software to morph
+[23:47] into Elon Musk. And so, I can then
+[23:49] actually use Real Deep to join a meeting
+[23:52] or, you know, let's just say an
+[23:53] interview or, let's just say I'm going
+[23:57] through a bank verification flow.
+[23:58] >> And if a scammer needs to verify their
+[24:00] identity with, say, a passport, AI can
+[24:03] help with that, too. Matt showed us an
+[24:05] open-source website, not on the dark
+[24:07] web, that anyone can use. This is a
+[24:10] really, really fast-growing website
+[24:12] that's used to basically create fake
+[24:14] digital identity documents.
+[24:16] >> Like this German passport they made for
+[24:18] me. You can see I can use any name I
+[24:20] want. I can use any image I want. It
+[24:22] doesn't matter what it is. I'll use, you
+[24:23] know, one of your professional
+[24:24] headshots. They were even able to find
+[24:26] and input my real date of birth despite
+[24:29] steps I took to keep that private.
+[24:31] >> You And if your passport or driver's
+[24:33] license number were compromised in a
+[24:35] data breach, Matt says scammers can
+[24:37] create an ID that would likely pass most
+[24:40] background checks. And so, this is
+[24:42] something people would use for like
+[24:43] identity verification to
+[24:46] apply for a job or to open an account or
+[24:50] something to that effect.
+[24:51] >> right. Or, you know, work for a delivery
+[24:53] company or, you know, driving companies
+[24:55] or anytime where you need to pass
+[24:57] through a digital verification,
+[24:58] including like online banking, like you
+[25:00] said.
+[25:01] Uh this will work. If the scammer needed
+[25:03] to do a video chat to confirm identity,
+[25:06] AI can help with that, too. This is Matt
+[25:08] posing as me using my headshot that he
+[25:11] scraped from the internet.
+[25:12] >> Let's just say that I have a fraudulent
+[25:14] website and I create a fraudulent
+[25:15] product. I can actually make a story of
+[25:18] you selling my product or recommending
+[25:20] it on air and post that on social media.
+[25:23] I mean, that that part's insane.
+[25:26] Uh that part Sorry for my little dog
+[25:27] appearance. Little nugget, the best
+[25:29] little cockapoo that ever lived. Hey,
+[25:31] buddy. He's just back from the groomer,
+[25:32] so he wanted to say hi.
+[25:34] He doesn't know we're live on the air,
+[25:35] but I want you guys to say hi to him. Um
+[25:37] that is really, really scary. Um
+[25:39] especially that stuff at the end where
+[25:41] he just had a still photo and he was
+[25:43] doing that stuff and it looked just like
+[25:44] her. But the biggest AI threat remains
+[25:47] the voice cloning. Because that's
+[25:49] something scammers can do and get right
+[25:51] into your phone because we've already
+[25:53] talked on the show, they didn't know how
+[25:54] to spoof phone numbers, so they can make
+[25:55] it look like it's coming from a
+[25:57] relative. So, what comes up on your
+[25:58] phone is you, and then if it sounds like
+[26:00] you, too, the trust is already built in.
+[26:03] We are about to do a live experiment, uh
+[26:05] but I wanted to show you just how easy
+[26:06] this is. Roll clip, uh what is it,
+[26:08] seven? Do you have to be an AI expert to
+[26:11] clone a voice? No.
+[26:12] Super simple. All you need to do is get
+[26:14] a a 10-second recording of your voice,
+[26:16] and that's all I need to create. This
+[26:18] clean bathroom scammers can easily get
+[26:21] our voices from social media posts. So,
+[26:24] we put it to the test. I asked Mutale to
+[26:26] clone my voice. All he needed was about
+[26:30] 10 seconds of audio of me talking. Could
+[26:32] you tell if someone's voice is real or
+[26:35] AI? It's harder than you think. NBC 7
+[26:39] responds. He can there either type out a
+[26:41] phrase he wants the AI model to say or
+[26:44] use his own voice to generate it. In
+[26:46] just seconds. Hey, Dave. I'm here at the
+[26:48] bank and for some reason the ATM is not
+[26:51] working. I think I may the wrong uh PIN
+[26:53] number. Can you give it to me again,
+[26:55] please?
+[26:56] With the ahs and the ums and the Super
+[26:58] dangerous. Yeah.
+[27:00] I mean, that is in it sounded just like
+[27:02] her. So, we wondered how this would go.
+[27:04] I signed up on one of these websites
+[27:06] publicly available. That's what makes
+[27:08] this so scary. Now, these scammers don't
+[27:10] have to go onto the dark web. It's
+[27:11] available for anybody to do this. I
+[27:14] signed up for 11 bucks. And we just fed
+[27:16] it a couple of my social media posts.
+[27:19] Boom. I wanted to just see some
+[27:21] gibberish, something I would never say.
+[27:23] So, I typed in this old uh poem. It's
+[27:25] called Ladies and Jelly Spoons. It's
+[27:27] from like the 1920s, I think. And it
+[27:30] makes zero sense, but I just wanted to
+[27:31] type something in to have it to see if
+[27:33] it sounded like me. This is what it spit
+[27:35] out in about 3 seconds. Ladies and Jelly
+[27:38] Spoons, I come before you to stand
+[27:40] behind you to tell you something I know
+[27:42] nothing about. Next Thursday, the day
+[27:45] after Friday, there will be a ladies
+[27:46] meeting for men only. Admission is free.
+[27:50] You can pay at the door. There are
+[27:51] plenty of seats. You can sit on the
+[27:53] floor. Wear your best clothes if you
+[27:55] haven't any. And if you can come, please
+[27:58] stay home.
+[28:00] It sounds I mean, it makes no sense, of
+[28:02] course, but that was kind of the point.
+[28:04] I To me you guys tell me in the
+[28:06] comments, did that sound like me? You're
+[28:08] here listening That sound To me that
+[28:09] sounded like me.
+[28:11] Really absolutely terrifying. So, I've
+[28:13] recorded something else, and I'm going
+[28:15] to play it for you right now. Just so
+[28:17] you can kind of I'm going to bring my
+[28:18] computer over, and I'm going to call my
+[28:20] wife right now.
+[28:22] She doesn't know we're doing this.
+[28:23] Purposely didn't tell her.
+[28:25] And we want to see if she believes this
+[28:27] is me. So, this is what I did.
+[28:32] Okay, so I'm going to rewind this. And
+[28:34] I'm going to call her up on the phone
+[28:35] right now, hopefully. I told her I may
+[28:36] call you during the show, answer your
+[28:38] phone. She's like, okay. So, let's see
+[28:40] if she falls for this being me. That's
+[28:42] what I want to know. So, let me call
+[28:43] her.
+[28:44] You guys are Hopefully, she doesn't
+[28:45] curse. So, here it is. Here's the phone.
+[28:49] Hello.
+[28:52] Hello. Jeff?
+[28:55] be until next year. But, I think we
+[28:57] should book one of those 60-day long
+[28:59] cruises where you sail all over the
+[29:01] world. We can take the kids out of
+[29:02] school for 2 months.
+[29:04] >> What?
+[29:04] >> I'm so excited about this. I know you're
+[29:06] going to say it's crazy, but this could
+[29:08] could be good for us. You say I work too
+[29:10] much, and I know I do. And we can take
+[29:12] the kids out of school and
+[29:13] >> Hello. We're not taking the kids out of
+[29:14] school. school and set it up like home
+[29:16] school. What do you think?
+[29:18] What do you
+[29:18] >> Are you crazy? Who's going to home
+[29:20] school them? Me? I'm not there. You're
+[29:22] never home.
+[29:23] >> Yes, I'm totally serious. I know it's
+[29:25] out of the blue and sounds crazy, but
+[29:27] this would be a life changer.
+[29:29] No, Jeff, we're not doing this. This is
+[29:30] absolutely insane. Stop. I know you're
+[29:32] kidding. Come on. You don't want to do
+[29:34] that. I really do.
+[29:37] No, you don't. I do.
+[29:38] >> But, really?
+[29:40] Come on. Hey.
+[29:41] >> This must be a joke. That
+[29:43] >> want to do this. Okay, listen.
+[29:45] That was AI
+[29:47] Did that sound Okay, it's really me now.
+[29:48] Did that sound like me?
+[29:50] Well, how do What?
+[29:52] Okay, so
+[29:54] do you want to take the cruise or not?
+[29:56] Uh not for 2 months. Okay, you're going
+[29:59] to home school them?
+[30:00] No, not I don't want to home school
+[30:02] them. All right, we'll talk about it
+[30:03] afterwards. Thank you.
+[30:06] That was it.
+[30:08] >> [laughter]
+[30:10] >> Okay, so
+[30:11] let me plug myself back in. That tricked
+[30:13] her.
+[30:14] That's my own wife who unfortunately has
+[30:16] to listen to my voice
+[30:18] all day and night, and that tricked her.
+[30:20] She thinks I'm a bigger idiot than
+[30:21] usual, but can you guys believe that?
+[30:24] Did that sound It sounded like me,
+[30:25] right? Yeah, you think so, too.
+[30:27] Absolutely insane. I can't believe I
+[30:28] tricked her.
+[30:30] Should we tell Should we tell her it was
+[30:31] a joke? Hold on, let me just tell her
+[30:32] real quick.
+[30:33] Let's just tell her it was a joke.
+[30:35] I actually want to see what her reaction
+[30:37] is to this being AI.
+[30:40] Hey, you're you're live on the air. That
+[30:42] was AI. That wasn't even me. I wanted to
+[30:44] see if you would fall for it. We're on
+[30:45] the air here.
+[30:46] What?
+[30:48] That we're doing a whole thing about how
+[30:49] AI is becoming more and more dangerous.
+[30:51] I spent 11 bucks. I had it spit all that
+[30:53] out. I was just playing AI Jeff just to
+[30:55] see if you would recognize and think it
+[30:57] was my voice.
+[30:58] Did you record So you recorded that?
+[31:00] >> I recorded that.
+[31:02] Did it sound like me?
+[31:03] >> god.
+[31:04] It sounded exactly like you. Well, if
+[31:06] you recorded it No, no, no, I didn't
+[31:08] record it. I It just took some of my
+[31:10] social media stuff and then I just typed
+[31:12] in something to write something and it
+[31:14] actually spit that out. I didn't record
+[31:15] that.
+[31:16] Oh my god. That It sounded exactly like
+[31:18] you. I thought you were going crazy.
+[31:19] Like I I thought you were playing a joke
+[31:21] on me, but I thought it was definitely
+[31:22] you. I did play a joke on you when I
+[31:24] asked you to marry me. And the joke's on
+[31:26] you.
+[31:26] >> The joke is on me. Yeah, all right. All
+[31:28] right, love you. I'll see you after the
+[31:29] show. Bye.
+[31:31] Okay. So So that
+[31:33] It's director. Absolutely insane. And
+[31:35] And by the way, the danger here, all
+[31:37] kidding aside, scammers have access to
+[31:39] this and now common criminals have
+[31:41] access to this. So the best advice right
+[31:43] now for you is your family needs to have
+[31:46] a code word. When something sounds a
+[31:48] little off, even if you get a call like
+[31:50] that, that it's like, "What are you
+[31:52] talking about? This doesn't This sounds
+[31:53] like you, but it sounds like you're
+[31:55] saying something crazy you wouldn't
+[31:56] normally say or proposing something or
+[31:58] you're asking me to bail you out or send
+[32:00] you money." If it's one of your
+[32:01] grandkids, right now I want you to have
+[32:04] a family code word. Talk to each other
+[32:07] about it in person. Don't put it on any
+[32:08] of your devices that can be hacked. Just
+[32:10] so you know and you can say,
+[32:13] "Is this really you? Give me the code
+[32:14] word." And AI is not going to know what
+[32:16] it is. So that's what I want every
+[32:18] family to do. My family has a code word.
+[32:20] Me, my kids, my wife, my mom, we all
+[32:22] have my brother and his family, we all
+[32:23] have a secret family code word. I want
+[32:25] you to have one, too. That is how you
+[32:27] don't get scammed. That's how you don't
+[32:29] send money to random people when it
+[32:31] sounds like your grandson or your
+[32:33] grandchild or your husband or your wife
+[32:35] or whoever asking for money.
+[32:38] We have major news at the self-checkout
+[32:41] line. We have been talking about
+[32:44] self-checkout here at Ross and reports
+[32:46] and the dangers of it because it accuses
+[32:48] you of theft. Now, some of you are
+[32:50] stealing, right? Some people are and the
+[32:52] numbers are crazy. We'll get to that in
+[32:53] a second. Skip scanning. So you like,
+[32:55] you know, you scan you scan the Snapple,
+[32:57] this is my favorite they have zero sugar
+[32:59] half and half. You scan it, you scan
+[33:01] this one, maybe you don't scan the next
+[33:03] one, you purposely have the barcode
+[33:04] upside down. They know what you're
+[33:06] doing. They know you're stealing and now
+[33:09] they are making major changes to stop
+[33:12] the steal at self-checkouts. In fact,
+[33:15] Target, Costco and Walmart just
+[33:18] announced major changes to their
+[33:20] self-checkout lines to fight theft. Roll
+[33:22] clip eight, here's what's going on.
+[33:24] >> it's supposed to be a cost saver, for
+[33:26] customers a time saver, but we may have
+[33:28] hit a crossroads where suddenly
+[33:30] retailers aren't saving as much money
+[33:33] and shoppers like Martha say there are
+[33:35] constant errors.
+[33:36] >> The experience is just
+[33:39] Now some big retailers are scaling back.
+[33:42] Target told me, quote, we're rolling out
+[33:44] express self-checkout with limits at 10
+[33:47] items and opening more traditional
+[33:49] lanes. Walmart saying it will improve
+[33:52] the in-store experience and give our
+[33:54] associates the chance to provide more
+[33:56] personalized and efficient service.
+[33:59] I shopped at both stores over the past
+[34:00] several days. At Target's express
+[34:03] checkout there was a long line. All
+[34:05] these people all waiting for
+[34:07] self-checkout. With just one or two
+[34:09] traditional lanes, same thing at
+[34:12] Walmart. Two
+[34:13] checkout lanes that have people working
+[34:16] and then this is the line for
+[34:18] self-checkout. One of the big motivators
+[34:20] for tweaking things is theft. Stores are
+[34:23] losing a lot of money as shoppers scan
+[34:26] one item and then skip another. And
+[34:29] people aren't shy about admitting
+[34:31] they'll help themselves at
+[34:32] self-checkout. 15% of consumers admitted
+[34:35] they purposely steal when ringing up
+[34:38] their own items. And 44% of those people
+[34:41] say they'll do it again.
+[34:44] And by the way, those are just the
+[34:46] people admitting to it. So, here's
+[34:47] what's going on. He he alluded to that
+[34:50] to it in this report. Walmart is
+[34:51] removing the self-checkouts in select
+[34:54] markets. It's part of a 650 store
+[34:57] overhaul. Target is capping
+[34:58] self-checkout at just 10 items or less.
+[35:01] And Costco is rolling back self-checkout
+[35:04] in a major way, all to avoid theft.
+[35:07] Because what ends up happening is you're
+[35:09] stealing, but you think you're getting
+[35:12] away with it, but you're actually not.
+[35:14] One of the deepest, darkest secrets of
+[35:16] the retail industry
+[35:18] is that many of these retailers know
+[35:20] you're stealing, but let you get away
+[35:22] with it until you hit the felony
+[35:25] threshold, which depending on your
+[35:27] state, is you steal $500 worth of stuff
+[35:30] or $1,000 worth of stuff. They don't
+[35:32] want to waste their time and money on on
+[35:34] prosecuting a misdemeanor. So, they let
+[35:36] you get away with it for a while, but
+[35:37] they are tallying everything. The
+[35:39] computers and the AI are watching. They
+[35:41] know everything you've stolen. When you
+[35:42] get into felony territory, all of a
+[35:44] sudden the cops show up. That's what
+[35:46] happened to this nurse who was caught
+[35:49] stealing at a Target. Roll that clip.
+[35:50] So, I'm going to talk you through it a
+[35:51] little bit. Clip number nine. So, this
+[35:53] woman thinks she's getting away with it.
+[35:56] You're going to see her in a lab coat on
+[35:57] the left there walking out of the store.
+[35:59] Whoops. The cops are they're waiting for
+[36:01] her right there
+[36:03] because she's hit that threshold. They
+[36:04] walk her back. And this is kind of a
+[36:06] view This is from a police body cam
+[36:08] camera of what happens if you're busted
+[36:10] stealing from one of these retailers.
+[36:12] They escort you. That's like the
+[36:14] customer service area at Target. Ever
+[36:16] wondered what happens in those back
+[36:17] rooms? It's right here. They're about to
+[36:19] interrogate her. I'll let you listen in.
+[36:21] This is what happens if you're caught.
+[36:22] Okay, so um she has in her purse around
+[36:24] $300 worth of unpaid merchandise. So,
+[36:26] just take everything out, okay? I'll pay
+[36:27] for it. Yeah, take it out. All right.
+[36:31] No, I was going to give it to my
+[36:32] somebody.
+[36:34] Okay? I'll pay for it, promise.
+[36:37] Well, right now it's too late, right, to
+[36:38] pay for it? You already tried stealing
+[36:39] it.
+[36:41] No, but I can always pay, right, sir?
+[36:43] No, you cannot. You already crossed the
+[36:44] point of no return. Huh? You already
+[36:46] crossed the point of no return.
+[36:48] But I'll pay for it. It's It's Have a
+[36:50] seat, please. Have a seat. Do you have
+[36:52] any idea on you?
+[36:55] No, I don't have one. You don't have any
+[36:56] identification? It's in my car. It's in
+[36:59] your car?
+[37:00] Okay.
+[37:01] What kind of car do you have?
+[37:04] A silver. What kind of car do you have?
+[37:06] >> Just don't ruin my name.
+[37:07] >> Huh? Just don't ruin my name. Don't ruin
+[37:09] your name? Yeah.
+[37:12] Okay.
+[37:13] >> I promise. I promise. You ruined your
+[37:14] own name.
+[37:15] So, I'm going to need your name.
+[37:19] By the way, this video continues. I
+[37:20] believe she was driving a BMW. So, do
+[37:22] you can't judge the people that steal?
+[37:25] Um it's the poor, it's the rich, it's
+[37:28] people Some people are doing it because
+[37:30] they can't afford groceries, other
+[37:32] people are doing it just for the thrill.
+[37:34] Um she obviously has a job. Yeah, she's
+[37:36] a nurse. Uh truth 31386, she's a nurse.
+[37:39] Um busted because she came over that
+[37:41] line into a felony. That's when they
+[37:43] call the cops. So, if you think you're
+[37:45] getting away with it, you may be, but
+[37:48] you also may not be.
+[37:50] And uh they're getting rid of a lot of
+[37:51] the um the self-checkouts. But, they're
+[37:53] doing even more extreme things now,
+[37:55] these retailers, that we've just caught
+[37:58] um and found that I've never seen any of
+[37:59] this stuff to try to catch the
+[38:00] shoplifters. I think they're going a
+[38:02] little farther, locking the craziest
+[38:04] things up. Now, some stores are actually
+[38:06] putting barricades at the ends of
+[38:09] aisles. Look what happened inside of a
+[38:11] Kroger uh recently. This is crazy. I've
+[38:13] never seen this before. I think in
+[38:15] Kroger, and that is a barricade on that
+[38:17] end.
+[38:18] And when you turn this way, that is also
+[38:20] a barricade.
+[38:22] And so like
+[38:24] Wow, this is crazy.
+[38:26] So you come in, there's a door there to
+[38:29] enter and this entire health
+[38:32] wellness section
+[38:34] is like barricaded off within the store.
+[38:38] That is so wild to me.
+[38:40] Abso- it's completely wild to me, too.
+[38:42] And by the way, it's not just that, it
+[38:44] gets even more extreme. You've seen the
+[38:45] things they lock up. I have a few more
+[38:47] examples.
+[38:48] Watch this Walmart locking up food. I've
+[38:52] really never This is insane. Uh roll
+[38:54] clip 11.
+[38:56] It's pretty sad Walmart's got to lock up
+[38:57] their meat now.
+[39:00] All this locked up.
+[39:04] That's crazy.
+[39:07] I mean, why you you want a New York
+[39:08] strip steak that badly?
+[39:10] Never seen anything like that. And now
+[39:12] retailers are going to even more
+[39:14] extremes. You know what Costco, you
+[39:16] leave or at Sam's Club, they check your
+[39:17] receipt and you stand in line and they
+[39:19] kind of look. And imagine that on
+[39:21] steroids. How would you like this to
+[39:23] happen at your store where they're in
+[39:26] they're now installing security gates
+[39:29] and unless you scan your receipt, they
+[39:31] won't let you out of the store. Here,
+[39:33] roll this. Take a look. How would you
+[39:34] like if this were happening where you
+[39:37] shop? I can't get out of this store
+[39:39] unless you show your receipt.
+[39:42] You try to get out. Try to get out.
+[39:44] Alarm.
+[39:45] You have to show your receipt.
+[39:47] Got to scan the receipt, pal. He's a
+[39:49] robot.
+[39:51] Wow, never seen that before.
+[39:52] >> Scan the receipt, it turns green. Can I
+[39:53] get out of the store?
+[39:55] Oh, watch this keeps happening. They
+[39:56] don't let you out.
+[39:58] You can take them.
+[40:00] Can I get out of the store? No, you
+[40:01] can't.
+[40:02] Unless you show your receipt. This is
+[40:04] new. Like an extra barrier to get out.
+[40:08] Each person has to
+[40:10] scan their receipt or they're locked in
+[40:11] the store.
+[40:12] See? Red light.
+[40:14] >> This is what's happening out there. This
+[40:15] is what the retailers are doing.
+[40:18] Uh but it gets even crazier now to
+[40:20] reduce theft, they're even locking up
+[40:23] you saw they're locking up the meats. At
+[40:24] least that, you know, meat can cost like
+[40:26] 30, 40, 50 bucks for those steaks
+[40:29] because everything's inflation, it's
+[40:30] crazy. As we know they lock up high-end
+[40:32] electronics, but what happens when they
+[40:34] start locking up stuff like toothpaste?
+[40:36] Stuff that costs less than $2. This guy
+[40:39] made this video.
+[40:41] Look what they locked up at his local
+[40:43] store. This is crazy. This is a Walmart.
+[40:45] Got it. Bro, Walmart has to lock up
+[40:47] dollar 68 emery boards.
+[40:53] What? has been requested to the Lego.
+[41:03] You can't even make this up.
+[41:09] Oh my god, this is where we've gone
+[41:11] America. You got the emery board. Dollar
+[41:13] 68 has to be locked. Dollar 68, lock it
+[41:17] up, baby. He got the emery board. He'll
+[41:18] have nice nails. My
+[41:21] the best thing ever that not enough of
+[41:22] you use is curbside pick up at these
+[41:26] stores. It is absolutely free. They do
+[41:28] the shopping for you. They bring it out
+[41:30] to your car. You tip them.
+[41:33] But you don't have to deal with the self
+[41:34] checkout lines and being accused of
+[41:35] theft. You don't have to deal with the
+[41:36] barricades. So my number one piece of
+[41:38] advice, been a game-changer in my
+[41:40] family, is use the self checkout. I'm
+[41:43] sorry, via not the self checkout, the
+[41:44] curbside pickup. That's what I would do.
+[41:46] Before we go, I got to tell you about
+[41:47] this party invite scam.
+[41:50] Just saw this cross my desk today, so I
+[41:51] wanted to jam it into the show. So we
+[41:54] told you earlier about these Google
+[41:55] scams. Now scammers and hackers are
+[41:57] sending fake party invites to weddings,
+[42:00] birthday parties, anniversary parties,
+[42:02] dinners, functions on Evite, on
+[42:04] Paperless Post, on Punchbowl. And as
+[42:07] soon as you open the invite with a
+[42:09] little envelope to see who it's from
+[42:11] because who doesn't do that when you get
+[42:13] one.
+[42:14] They're in your system, they start
+[42:15] draining your account. Here's the
+[42:16] warning. You should know the latest
+[42:18] phishing scam is a fake party
+[42:19] invitation, which is so rude. Here's
+[42:22] what's going on. Scammers are sending
+[42:23] out phishing emails that look like
+[42:25] digital party invitations, often
+[42:27] spoofing legitimate sites like Evite,
+[42:29] Paperless Post. These are some examples
+[42:31] that Punchbowl shared. Basically, the
+[42:33] scammers are preying on your FOMO. And
+[42:35] these emails contain malicious links
+[42:37] that could ultimately either one,
+[42:39] download malware onto your computer, or
+[42:41] two, try to get you to fork over more
+[42:43] personal information. Here's an example
+[42:45] that Paperless Post shared. In this one,
+[42:47] this is a spoof page, by the way. You
+[42:49] can see that the scammers were trying to
+[42:50] harvest your email credentials. So,
+[42:52] here's what I want you to do if you get
+[42:53] an email like this, hover over the link
+[42:56] so you can preview the URL. This is a
+[42:58] legitimate example that Paperless Post
+[43:01] shared. You can see it's linking to
+[43:02] paperlesspost.com.
+[43:04] So, if it's not linking to something
+[43:05] like that, evite.com, punchbowl.com, if
+[43:09] it's just a random domain, it's a scam.
+[43:13] Yeah, and this is the advice that I give
+[43:14] you guys. Hover your mouse over it to
+[43:17] make but still sometimes spell Paperless
+[43:18] Post with like two P's or multiple S's
+[43:21] or whatever. You want to make sure that
+[43:23] it's the actual legit site before you
+[43:25] actually open it up. That's the world
+[43:26] we're living in. So, before you get and
+[43:28] when you get an invite or a Paperless
+[43:30] Post or a Punchbowl or any of these
+[43:31] invitations, hover over the email URL to
+[43:35] make sure it's actually from that
+[43:37] carrier. Because right now the scammers
+[43:38] are kind of faking it. They haven't
+[43:40] actually figured out how to how to pose
+[43:42] as them yet from their actual URL. So,
+[43:44] hover that mouse. Because they can drain
+[43:45] everything once they're in your phone.
+[43:47] Before we go, again, very exciting
+[43:49] YouTube launch today of our YouTube
+[43:51] memberships. You can become a Ross Young
+[43:53] Reports Insider. Um, go if you're
+[43:56] watching this on television right now,
+[43:58] pull out your phone, it's under all my
+[43:59] papers here. Pull out your phone and
+[44:00] scan that QR code right in the middle of
+[44:02] the screen. Just kind of zoom in. It'll
+[44:04] take you right there. And
+[44:06] figure out which membership is right for
+[44:08] you. We try to keep it pretty
+[44:09] inexpensive for you guys. After all, we
+[44:10] are about saving you money, but you get
+[44:13] amazing perks with it, too. You get
+[44:15] these stickers, so we know in the chat
+[44:17] and in the comments that you are a
+[44:19] member, you're one of us, you're part of
+[44:21] the family, you're mishpucha, as we say
+[44:24] in Yiddish.
+[44:25] And then you get priority response to
+[44:27] comments, you get early access to
+[44:29] videos. We are going to do
+[44:32] a members-only live streams where I
+[44:34] answer your questions because there's so
+[44:36] many times I get so many emails and
+[44:37] stuff and I can't get to everything.
+[44:39] We're going to just We're going to sit
+[44:40] and hang out and do it live and talk
+[44:42] about what's going on and I'm going to
+[44:44] answer your questions directly only for
+[44:46] members.
+[44:47] And every membership tier on YouTube
+[44:50] gets access to these stickers. And by
+[44:51] the way, the more of you that sign up,
+[44:53] it unlocks more of these silly stickers
+[44:55] and you can give us requests on the ones
+[44:57] that you want. So, if you're watching
+[44:58] this on a TV, just scan the QR code on
+[45:01] your screen with your camera, it'll
+[45:03] bring you right there. And if you're on
+[45:04] a computer or a
+[45:06] phone or a laptop,
+[45:08] just hit join. It's right there under
+[45:10] the video section, just hit the join
+[45:11] button and you can see which membership
+[45:13] tier fits you. And if you don't want to
+[45:15] sign up for membership, I love you
+[45:17] anyway. I'm just so happy you're here.
+[45:19] It really helps to support our
+[45:20] independent consumer journalism. We
+[45:22] don't have any corporate overlords,
+[45:24] which is awesome because no one censors
+[45:25] us, but on the other hand, we need to
+[45:27] raise funds so we can continue doing
+[45:29] this for you and investigating everybody
+[45:31] who's trying to get you and protect you.
+[45:33] So, thank you so much. Exciting day
+[45:35] around here. We hope we helped and we'll
+[45:36] see you next time.

@@ -1,0 +1,88 @@
+
+MECHANICAL PASS — draft.md  (stage: final)
+========================================================================
+  clip cues 9   protection beats 4   decidable findings 9B / 1W / 2N
+
+  [BLOCKER] clip source — line 75
+      No URL or source pointer on this cue. Manifest is locked, so this cue cannot be shot.
+
+  [BLOCKER] clip source — line 99
+      No URL or source pointer on this cue. Manifest is locked, so this cue cannot be shot.
+
+  [BLOCKER] clip source — line 121
+      No URL or source pointer on this cue. Manifest is locked, so this cue cannot be shot.
+
+  [BLOCKER] clip source — line 151
+      No URL or source pointer on this cue. Manifest is locked, so this cue cannot be shot.
+
+  [BLOCKER] clip source — line 209
+      No URL or source pointer on this cue. Manifest is locked, so this cue cannot be shot.
+
+  [BLOCKER] clip source — line 229
+      No URL or source pointer on this cue. Manifest is locked, so this cue cannot be shot.
+
+  [BLOCKER] clip source — line 255
+      No URL or source pointer on this cue. Manifest is locked, so this cue cannot be shot.
+
+  [BLOCKER] clip source — line 305
+      No URL or source pointer on this cue. Manifest is locked, so this cue cannot be shot.
+
+  [BLOCKER] clip source — line 329
+      No URL or source pointer on this cue. Manifest is locked, so this cue cannot be shot.
+
+  [WARNING] sponsor — whole document
+      2 separate sponsor blocks at lines [185, 283]. Aired bibles carry one sponsor break.
+
+  [NOTE] clip source — all cues
+      9 clip cues total. None can be visually confirmed — this review works from titles, descriptions and transcripts only.
+
+  [NOTE] consistency — tease vs body
+      1 figure(s) appear in both tease and body. Re-check after any correction lands — that is when drift gets introduced.
+
+========================================================================
+CLAIM INVENTORY — 29 checkable items, in triage order
+========================================================================
+
+TIER 1  phone numbers, URLs, agency contacts — check every one, a wrong digit sends a victim nowhere
+  (11 items)
+       line 79  youtube.com/watch?v=3iz8G25Taxg)
+      line 103  youtube.com/watch?v=Xh8ZOedc2hM)
+      line 125  youtube.com/watch?v=g9e4ElDgYG8)
+      line 155  youtube.com/watch?v=VaEws6itP08)
+      line 177  FTC.GOV
+      line 213  youtube.com/shorts/3EzgKCWb83Q)
+      line 233  youtube.com/watch?v=7WXREQ4_5Vo)
+      line 259  youtube.com/watch?v=ikapZ9dVJ5I)
+      line 277  1-800-677-1116
+      line 309  tiktok.com/@amandabainum457/video/7686390447178026253))))
+      line 333  tiktok.com/@james_wrigg/video/7691366971971079437))))
+
+TIER 2  named entities and attributed quotes — check every one, this is where defamation and fabrication live
+  (3 items)
+       line 13  -AND BEFORE YOU'RE LIKE, "I'D NEVER FALL FOR THAT"… ONE WOMAN SAYS SHE SAID NO 50 OR 60 
+       line 61  -KATHRYN TAYLOR IS 84, LIVING ON SOCIAL SECURITY.
+      line 177  -THEN REPORT IT AT REPORTFRAUD.FTC.GOV. THERE IT IS ON THE SCREEN.
+
+TIER 3  dollar figures and percentages — check every one, and pin each benchmark's scope and period before calling anything CONTRADICTED
+  (13 items)
+        line 1  $26,000
+        line 9  $26,000
+       line 11  26 THOUSAND DOLLARS
+       line 21  $5
+       line 31  $1
+       line 59  $25
+       line 59  $26,000
+       line 71  $26,000
+       line 93  25 THOUSAND DOLLARS
+      line 115  50 THOUSAND DOLLARS
+      line 143  50 THOUSAND DOLLARS
+      line 245  17 THOUSAND DOLLARS
+      line 321  5.6 MILLION DOLLARS
+
+TIER 4  dates and background framing — check if budget remains, else log as UNVERIFIED and say so
+  (2 items)
+      line 129  -AND ON SEPTEMBER 24… THAT BEE & CO. CLOSED. WINDOWS COVERED. A LOCKBOX ON THE DOOR!!
+      line 241  -ON SEPTEMBER 28TH, CONWAY POLICE ARRESTED SARAH SMALLS.
+
+Any Tier 3 or 4 item you did not fully search must appear in the source log as UNVERIFIED with a note saying the budget ran out — never as a silent omission.
+

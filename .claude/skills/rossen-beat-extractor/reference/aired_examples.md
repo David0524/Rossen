@@ -1,14 +1,28 @@
 # Aired beats, three episodes
 
 Ground truth. Beat text, the role assigned, and the clip that actually aired against it.
-Orientation is producer-authored and predicted platform correctly in 26 of 26 cases.
+
+> **Data-quality note.** URL scheme and host have been safely lowercased. Twelve
+> case-sensitive video IDs were whole-string uppercased at some point and their
+> original case is **unrecoverable** — re-source those by title before using this
+> file for a recall eval, and never score a corrupted row as an eval miss. Run
+> `rossen-query-generator/scripts/normalize_urls.py` to list them.
+>
+> **Read this alongside `beat_yield.md`.** This file records what *aired*. That
+> one records what the *search pipeline* found. A shape appearing as a success
+> here and a failure there is a routing problem, not a contradiction — see the
+> vertical `evidence` note in `SKILL.md`.
+
+Orientation is producer-authored and predicted platform correctly in 24 of 24 cases — one per beat. (An earlier
+header said 26 of 26; that counted the two `also aired:` multi-source rows on
+06-17-b04 as separate beats. There are 24 beats and 26 URLs.)
 
 
 ## 06-03-b01  ·  victim_interview
 **orientation** horizontal → **platform** web/news
 **visual_spec** older couple at home, affiliate interview setup, lower-third
 **script_text** PEOPLE ON THE OTHER END OF THE PHONE ARE NOT PRETENDING TO BE SOME RANDOM COMPANY… / FAKE FBI PHONE NUMBERS… FORGED DOCUMENTS… PRISON THREATS TO SCARE YOU / AND IT WORKS…THIS COUPLE LOST $850,000 TO THE SCAMMERS!!! / THEY EVEN SPOOFED VIDEO CALLS WITH THE COUPLE, POSING IN FAKE FBI UNIFORMS INSIDE INTERROGATION ROOMS!!
-**aired** `HTTPS://WWW.EVERYTHINGLUBBOCK.COM/NEWS/NATIONAL/SOUTHERN-CALIFORNIA-ELDERLY-COUPLE-LOSES-LIFE-SAVINGS-IN-FBI-IMPOSTER-SCAM/`
+**aired** `https://www.everythinglubbock.com/NEWS/NATIONAL/SOUTHERN-CALIFORNIA-ELDERLY-COUPLE-LOSES-LIFE-SAVINGS-IN-FBI-IMPOSTER-SCAM/`
 **segments** 0:59-2:51 outcue: "THIS DEVASTATING SCAM"
 
 ## 06-03-b02  ·  victim_interview
@@ -22,14 +36,14 @@ Orientation is producer-authored and predicted platform correctly in 26 of 26 ca
 **orientation** horizontal → **platform** youtube
 **visual_spec** victim describing door knock and gold bar handoff, news setup
 **script_text** / FAKE US MARSHALLS KNOCK ON YOUR DOOR… / THEY SAY THERE’S A WARRANT FOR YOUR ARREST / BUT IF YOU COOPERATE AND SAY YOU’LL BE PART OF SOME STING OPERATION, THEN YOU’LL BE FINE / THEY SAY YOU NEED TO COME UP WITH SOME MONEY TO HELP THE STING / THEN THEY TURN YOUR MONEY INTO GOLD BARS SO IT’S NOT TRACEABLE…AND DISAPPEAR.
-**aired** `HTTPS://WWW.YOUTUBE.COM/WATCH?V=G2Z4AOB--EI`
+**aired** `https://www.youtube.com/WATCH?V=G2Z4AOB--EI`
 **segments** 29-2:09 outcue: "STEAL THIS COUNTRY BLIND"
 
 ## 06-03-b04  ·  confrontation_bust
 **orientation** horizontal → **platform** youtube
 **visual_spec** police bodycam or mugshot, arrest of fake officer, news package
 **script_text** NOT JUST MARSHALS…POSERS DRESSING UP IN UNIFORM PRETENDING THEY ARE REAL COPS. / TURNS OUT, IT’S EASY…AND GETTING EVEN EASIER. / THIS GUY WAS SO BELIEVABLE, HE EVEN HAD REAL COPS BELIEVING HE WAS ONE OF THEM / AND HE WAS ARMED WITH A LOADED GUN LIKE A REAL COP TOO!! / WHAT WOULD YOU DO IF HE SHOWED UP AT YOUR DOOR?
-**aired** `HTTPS://WWW.YOUTUBE.COM/WATCH?V=ARP-IUV-CVW`
+**aired** `https://www.youtube.com/WATCH?V=ARP-IUV-CVW`
 **segments** 12-1:44 outcue: "IN SCALETTA’S VEHICLE"
 
 ## 06-03-b05  ·  confrontation_bust
@@ -50,28 +64,28 @@ Orientation is producer-authored and predicted platform correctly in 26 of 26 ca
 **orientation** vertical → **platform** tiktok
 **visual_spec** handheld vertical, burned garage interior, family reacting, daylight
 **script_text** WAY / THEY BOUGHT A LITHIUM POWERED BLOWER FROM TEMU AND KEPT IT CHARGING WHILE THEY LEFT THE HOUSE / WHEN THEY CAME HOME, THEY DISCOVERED THE DANGEROUS CONSEQUENCES OF BUYING A CHEAPLY MADE PRODUCT / A HEADS UP THERE IS A LOT OF LANGUAGE IN HERE, BUT THIS IS THE FAMILY’S FIRST REACTION SEEING THE DAMAGE. / HAVE A LOOK
-**aired** `HTTPS://WWW.TIKTOK.COM/@541FREDDY/VIDEO/7621243521546145037`
+**aired** `https://www.tiktok.com/@541FREDDY/VIDEO/7621243521546145037`
 **segments** 00-:10; 19-:46; 1:05-END OF CLIP
 
 ## 06-03-b08  ·  evidence
 **orientation** vertical → **platform** tiktok
 **visual_spec** vertical, close on charred lithium blower, follow-up post
 **script_text** ABOUT 6 WEEKS LATER THEY POSTED A FOLLOW UP WITH THE PRODUCT ITSELF / THANKFULLY IT LOOKS LIKE THEY WERE ABLE TO CLEAN UP AND START THE REBUILD, BUT HERE YOU CAN SEE THE ITEM PURCHASED THAT EXPLODED
-**aired** `HTTPS://WWW.TIKTOK.COM/@541FREDDY/VIDEO/7501721411686272302`
+**aired** `https://www.tiktok.com/@541FREDDY/VIDEO/7501721411686272302`
 **segments** start-end
 
 ## 06-03-b09  ·  authority_report
 **orientation** horizontal → **platform** youtube
 **visual_spec** news anchor over gas pump b-roll, screw at the nozzle
 **script_text**  YOUR CHILD USES OR THAT PLUGS INTO YOUR WALL... THINK TWICE. / YOU’RE GETTING “SCREWED” BY THE NEWEST GAS STATION SCAM - BUT… IT’S A HOAX! / THE LATEST GAS STATION SCAM MAKING HEADLINES EVERYWHERE / SCAMMERS ARE USING A SCREW TO KEEP THE PUMP FROM CLOSING THE TRANSACTION / THIS CONTINUES TO MAKE HEADLINES EVERYWHERE!!
-**aired** `HTTPS://WWW.YOUTUBE.COM/WATCH?V=NG5GTRKYQTW`
+**aired** `https://www.youtube.com/WATCH?V=NG5GTRKYQTW`
 **segments** 31-:57 outcue: "TO YOUR CREDIT CARD"
 
 ## 06-03-b10  ·  debunk
 **orientation** horizontal → **platform** youtube
 **visual_spec** reporter or expert explaining screws are a pump repair, not a scam
 **script_text** AT ROSSEN REPORTS, WE KEEP YOU SAFE FROM THE FAKE SCAMS TOO! / WE DISCOVERED THAT AFTER SNOPES.COM DECIDED TO TAKE A DEEP DIVE… THEY FOUND SOMETHING ELSE WAS GOING ON. / IT’S NOT A SCAM…TURNS OUT IT’S NOT SCAMMERS…. / GAS STATION OWNERS USE SCREWS AS A CHEAP FIX WHEN THE PUMPS AREN’T WORKING RIGHT. / TAKE A LOOK
-**aired** `HTTPS://WWW.YOUTUBE.COM/WATCH?V=1DTLAEUHXAA`
+**aired** `https://www.youtube.com/WATCH?V=1DTLAEUHXAA`
 **segments** 48-1:23 outcue: "GOING ON FOR MANY YEARS"
 
 ## 06-17-b01  ·  confrontation_bust
@@ -136,40 +150,40 @@ Orientation is producer-authored and predicted platform correctly in 26 of 26 ca
 **orientation** vertical → **platform** tiktok
 **visual_spec** vertical, screen recording of real PayPal email and deposit
 **script_text** ISN’T JUST ABOUT FAKE EMAILS ANYMORE. / WE’RE NOW SEEING A NEW VERSION OF THIS SCAM… WHERE PART OF IT IS ACTUALLY REAL / IT INVOLVES A LEGITAMATE DEPOSIT… FROM THE SCAMMER… INTO YOUR REAL ACCOUNT / THAT’S HOW THEY GET YOUR ATTENTION / YOU SEE A FAKE CHARGE PENDING… FREAK OUT… THEY TELL YOU TO CALL… AND THEY’VE GOT YOU.
-**aired** `HTTPS://WWW.TIKTOK.COM/@HAKEHARDWARE/VIDEO/7634673749496827166?Q=PAYPAL%20SCAM%20LOOKS%20REAL&T=1777933461214`
+**aired** `https://www.tiktok.com/@HAKEHARDWARE/VIDEO/7634673749496827166?Q=PAYPAL%20SCAM%20LOOKS%20REAL&T=1777933461214`
 **segments** 00-1:33 outcue: "OR BOTH"
 
 ## 05-06-b02  ·  explainer_demo/creator_long
 **orientation** horizontal → **platform** youtube
 **visual_spec** horizontal, walkthrough of a real PayPal invoice on screen
 **script_text** AND HERE’S ANOTHER TACTIC THEY USE… / THEY SEND YOU A REAL PAYPAL INVOICE THAT YOU OWE MONEY TO A COMPANY. / REMEMBER, IT'S A REAL PAYPAL INVOICE THAT COMES FROM PAYPAL. / BUT YOU PAYING THAT MONEY ISN'T THE ULTIMATE GOAL. / THEY DON'T REALLY CARE IF YOU PAY OR NOT...HERE'S WHAT THEY REALLY WANT!
-**aired** `HTTPS://WWW.YOUTUBE.COM/WATCH?V=5NWYEB0ZZQS`
+**aired** `https://www.youtube.com/WATCH?V=5NWYEB0ZZQS`
 **segments** 38-2:01 outcue: "THIS IS WHAT THE SCAMMERS DID"
 
 ## 05-06-b03  ·  victim_interview
 **orientation** horizontal → **platform** youtube
 **visual_spec** retired officer on camera, home interior, affiliate setup
 **script_text** AND YOU WON’T BELIEVE WHO JUST FELL FOR IT!! / A RETIRED POLICE OFFICER JUST LOST NEARLY $10,000!! / IT WAS HIS JOB TO BUST CRIMINALS… AND HE WAS JUST SCAMMED BY ONE! / WITH ONE PHONE CALL, YOU COULD LOSE EVERYTHING. / LISTEN TO WHAT HAPPENED TO HIM….CRAZY!!!
-**aired** `HTTPS://WWW.YOUTUBE.COM/WATCH?V=I3667LQ1L2O`
+**aired** `https://www.youtube.com/WATCH?V=I3667LQ1L2O`
 **segments** 21-1:20 outcue: ""WHEN I SENT THE MONEY OUT""
 
 ## 05-06-b04  ·  victim_interview
 **orientation** horizontal → **platform** youtube
 **visual_spec** woman with disappointing bouquet, affiliate consumer package
 **script_text** ND THE CORNER… ORDERS ARE EXPLORING / SO YOU GO ONLINE, DO YOUR SEARCH AND YOU THINK YOU’RE ORDERING FROM A LOCAL FLOWER SHOP… / YOU’VE DONE EVERYTHING RIGHT… READ ALL THE REVIEWS TO MAKE SURE YOU’RE GETTING WHAT YOU’RE PAYING FOR / THEN WHAT SHOWS UP IS HARDLY WHAT YOU ORDERED / THIS SHADY SCAM IS EXPLODING RIGHT NOW!
-**aired** `HTTPS://WWW.YOUTUBE.COM/WATCH?V=SFZTORDKBWM`
+**aired** `https://www.youtube.com/WATCH?V=SFZTORDKBWM`
 **segments** 04-:36 outcue: "HERE'S A $10 CREDIT"; 56-2:10 outcue: "FULL VALUE"
 
 ## 05-06-b05  ·  confrontation_bust
 **orientation** horizontal → **platform** youtube
 **visual_spec** Dallas reporter confronting florist middleman on camera
 **script_text** ALING WITH A MIDDLEMAN WEBSITE THAT PRETENDS TO BE LOCAL, BUT THEY’RE NOT! / THEY TAKE YOUR ORDER… SKIM MONEY OFF THE TOP… AND THEN ORDER A SMALLER, CHEAPER VERSION TO A REAL LOCAL FLORIST…SHADY / THE PATHETIC SCAMMERS STEAL YOUR MONEY AND SEND CRAPPY FLOWERS / A LOCAL REPORTER IN DALLAS BUSTED ONE OF THEM IN THE ACT!!
-**aired** `HTTPS://WWW.YOUTUBE.COM/WATCH?V=FTMUNN_LLGA`
+**aired** `https://www.youtube.com/WATCH?V=FTMUNN_LLGA`
 **segments** 48-2:58 outcue: "CUT OF THE MONEY"
 
 ## 05-06-b06  ·  victim_interview
 **orientation** horizontal → **platform** youtube
 **visual_spec** homeowner on camera describing inflated lawn bill, driveway
 **script_text**  EVERYWHERE! / A CREW SHOWS UP UNINVITED SAYING “WE’RE ALREADY WORKING NEARBY” / THEY OFFER A CHEAP SERVICE (LAWN, TREE TRIMMING, MULCHING) / THEY START WORK QUICKLY SOMETIMES WITHOUT CLEAR CONSENT / THEN ALL OF A SUDDEN THE PRICE INFLATES… THEY DEMAND IMMEDIATE PAYMENT… SOMETIMES USE INTIMIDATION TACTICS / HAVE A LOOK
-**aired** `HTTPS://WWW.YOUTUBE.COM/WATCH?V=XFF3IARH-CO`
+**aired** `https://www.youtube.com/WATCH?V=XFF3IARH-CO`
 **segments** 40-1:48 outcue: "PAY THEM"
