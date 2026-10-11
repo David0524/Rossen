@@ -151,7 +151,7 @@ warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
   every story after gets lighter.
 - **Beat table.**
 - **Videos** — Phase 2 fills it. Leave the heading out until then.
-- **The fix** — first the **tells**: one line per victim case, labeled with the
+- **The fix** — first the **red flags** (Ryan calls them tells): one line per victim case, labeled with the
   case it follows (`After Kathryn: no price on anything means walk out`). The
   bible puts each one right after that case's last clip, so viewers get
   something usable throughout instead of only at the end (Ryan, Oct 8, 2026).
@@ -167,7 +167,7 @@ warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
   closes it. (10/9: "do nothing and you go back to Original Medicare" was true,
   and it would have left Advantage members with no drug coverage. The fix is
   decided here, so this is where that gets caught.)
-  **Test each tell against the people the scam targets** (Ryan, 10/9): "no
+  **Test each red flag against the people the scam targets** (Ryan, 10/9): "no
   letter? don't believe the call" confirms the scam for everyone who did get a
   real letter, so add the move that works for everyone (hang up, call them
   yourself). A fix step that can be shown live (a search, a setting, a
@@ -177,12 +177,23 @@ warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
   an unnamed victim, a clip that may not exist, the sexiest line resting on one
   source. ⚠️ at the point of use. Full sourcing stays in the pre-bible's source block;
   don't recopy it.
+- **Jeff should know** — facts Jeff needs in his head but that won't be said on
+  air: a nuance that guards a line (private-plan Medicare cards are plastic and
+  real), the limit of a number (one analysis, not the government), something
+  left out on purpose and why, who a claim belongs to (a sponsor guest's pitch),
+  what happened after the clip. Jeff often sees the story minutes before he
+  shoots, so capture these as you research — they're easy to lose. One line
+  each, tied to the beat it guards (`Beat 4: ...`), or "None." The bible turns
+  each into a `JEFF PLEASE NOTE` comment on that line.
 
 ## Page one: the show at a glance
 
 - **Running order** table: `| Slot | What | Weight | Clips |` — tease, each story,
   each sponsor break (OmniWatch unless the assignment says otherwise) after the
   victim's story and never on a cliffhanger, guest entrances, deals, end. After Phase 2, `Clips` reads `found/needed` (`3/4`).
+- **Open package** — the video the super tease runs over (usually the A story's
+  lead clip, by beat number). The bible writes the tease's first lines to match
+  what's on screen in it. If it isn't decided, put it in Decisions.
 - **The show in three sentences.**
 - **The ride** — one line on where tension builds and where it lets go. Grim is
   allowed when it's the story; unbroken dread is not. No mandatory good-news
@@ -197,7 +208,7 @@ order (`Deals — [guest], live requests`) — no deal list here, and no clip be
 Name the deals guest (Trey Donovan or Derek Couture) once it's confirmed.
 
 A live scam show's beats follow the Ghost Tapping order: mechanics, victim clip,
-the tell, escalation, sponsor, scale beat, practical close; then B, C, and four
+the red flag, escalation, sponsor, scale beat, practical close; then B, C, and four
 expert questions. A call-in F2 outlines two callers plus the expert; callers by
 caller ID in the outline, first names only on air.
 
@@ -309,5 +320,7 @@ bold mid-story header. Each Videos row becomes a numbered clip marker carrying i
 URL, in–out ranges and outcue. `JEFF`, `GUEST` and `DEMO` rows become header plus
 dash lines. The **Hold back** line is the tease's limit; a ⚠️ "date it on air"
 gap becomes `LAST YEAR` / `LAST FALL` in the copy; each fix step carries over
-with its source going to `SOURCE_LOG.md`, not the prompter. A beat or clip the writer wants to add, cut, move or swap is a change
+with its source going to the source log, not the prompter. Each **Jeff should
+know** line becomes a `JEFF PLEASE NOTE` comment anchored on the bible line it
+guards. The **Open package** sets the tease's first lines. A beat or clip the writer wants to add, cut, move or swap is a change
 to the outline first — say which row.

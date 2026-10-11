@@ -38,6 +38,9 @@ must be Node, the classification table below is the spec to port.
 | Graphic card list items | 18pt regular red |
 | CTA lines | 18pt regular black |
 | `END OF SHOW` | 18pt bold black |
+| First line after every clip (after `OUT:`) | 23pt bold black — Jeff's re-entry point |
+| `[[PAGE BREAK]]` | hard page break — between every story and every case (A1, A2…) |
+| `{{JEFF PLEASE NOTE: …}}` at the end of a line | Word comment anchored on that line; never printed in the copy |
 | Hyperlinks | blue 1155CC, underlined, 18pt |
 
 Page: US Letter, 1" margins all sides, line spacing 1.15.
@@ -59,6 +62,9 @@ Written down so a draft can be authored to render correctly the first time.
 | `HIT LIKE AND SUBSCRIBE`, `JOIN THE CHAT`, `BECOME A MEMBER` | CTA |
 | `END OF SHOW` | 18pt bold black |
 | all-caps line following a `CREATE FULL SCREEN GRAPHIC` or `TAKE FULLSCREEN` cue, until the next cue or dash bullet | graphic card item, red |
+| first non-cue line after an `OUT:` | 23pt bold black, inline links kept |
+| `[[PAGE BREAK]]` alone on a line | page break, no blank paragraph around it |
+| `{{JEFF PLEASE NOTE: ...}}` inside a line | stripped from the text, attached as a comment |
 | anything else | spoken body |
 
 Inline `**bold**` becomes a bold run in place. `[text](url)` becomes a blue
@@ -68,7 +74,8 @@ underlined hyperlink. Both work inside any body line.
 
 Every run is Arial; headers are 23pt bold black; body is 18pt; every cue is bold
 `FF0000`; page is Letter with 1" margins; spacing is 1.15; no blank paragraph
-sits between a clip cue and its `OUT:`; every clip cue has an `OUT:` beneath it.
+sits between a clip cue and its `OUT:`; every clip cue has an `OUT:` beneath it; the first line after every `OUT:` is
+23pt bold; every comment opens with `JEFF PLEASE NOTE:`.
 It reports distinct defect classes rather than one line per run, so a systematic
 error reads as one finding.
 

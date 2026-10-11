@@ -18,7 +18,12 @@ Line classification:
   HIT LIKE / JOIN THE CHAT   CTA              18pt regular black
   END OF SHOW                                 18pt bold black
   all-caps lines inside a graphic card         18pt regular red
+  first line after an OUT:   re-entry line    23pt bold black
+  [[PAGE BREAK]]             hard page break  between stories and cases
   everything else            spoken body      18pt regular black
+
+A {{JEFF PLEASE NOTE: ...}} span anywhere in a line is removed from the text
+and attached to that paragraph as a Word comment.
 
 Inline **bold** becomes a bold run. [text](url) becomes a blue underlined link.
 """
@@ -47,6 +52,9 @@ CTA = ("HIT LIKE AND SUBSCRIBE", "JOIN THE CHAT", "BECOME A MEMBER",
        "SEND IN YOUR LIVE REQUESTS")
 CARD_OPENER = re.compile(r"CREATE FULL SCREEN GRAPHIC|TAKE FULLSCREEN")
 LINK = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+NOTE = re.compile(r"\{\{\s*(.*?)\s*\}\}")
+PAGE_BREAK = re.compile(r"^\[\[\s*PAGE BREAK\s*\]\]$", re.I)
+COMMENT_AUTHOR, COMMENT_INITIALS = "Claude", "C"
 
 
 def strip_md(s):
@@ -97,6 +105,22 @@ def add_hyperlink(par, text, url):
     par._p.append(link)
 
 
+def page_break(doc):
+    from docx.enum.text import WD_BREAK
+    par = doc.add_paragraph()
+    par.add_run().add_break(WD_BREAK.PAGE)
+    return par
+
+
+def attach_notes(doc, par, notes):
+    for note in notes:
+        if not note.upper().startswith("JEFF PLEASE NOTE"):
+            note = "JEFF PLEASE NOTE: " + note
+        runs = [r for r in par.runs if r.text.strip()] or [par.add_run(" ")]
+        doc.add_comment(runs, text=note, author=COMMENT_AUTHOR,
+                        initials=COMMENT_INITIALS)
+
+
 def emit(doc, text, size, bold, color, inline=True):
     """One paragraph. `inline` parses **bold** and [text](url) inside it."""
     par = doc.add_paragraph()
@@ -139,10 +163,19 @@ def build(src, out):
 
     in_card = False
     prev_was_clip = False
+    after_out = False
     first = True
+    page_top = False
 
     for raw in lines:
+        notes = NOTE.findall(raw)
+        raw = NOTE.sub("", raw).rstrip()
         s = strip_md(raw)
+        if PAGE_BREAK.match(s):
+            if not first:
+                page_break(doc)
+                page_top = True
+            continue
         if not s:
             continue
 
@@ -158,26 +191,37 @@ def build(src, out):
             in_card = False
 
         # ---- blank paragraph between elements
-        blank = not first and not (prev_was_clip and is_out) and not in_card
+        blank = (not first and not page_top and not (prev_was_clip and is_out)
+                 and not in_card)
         if blank:
             emit(doc, "", 18, False, BLACK, inline=False)
+        page_top = False
 
         # ---- classify and emit
         if is_cue or is_out:
-            emit(doc, s, 18, True, RED)
+            par = emit(doc, s, 18, True, RED)
+        elif after_out:
+            # first line out of a clip: Jeff's re-entry point
+            par = emit(doc, raw.strip(), 23, True, BLACK)
         elif SEPARATOR.match(s):
-            emit(doc, s, 23, True, BLACK, inline=False)
+            par = emit(doc, s, 23, True, BLACK, inline=False)
         elif upper.replace("-", "").strip().startswith("END OF SHOW"):
-            emit(doc, s, 18, True, BLACK, inline=False)
+            par = emit(doc, s, 18, True, BLACK, inline=False)
         elif any(upper.lstrip("- ").startswith(c) for c in CTA):
-            emit(doc, s, 18, False, BLACK)
+            par = emit(doc, s, 18, False, BLACK)
         elif in_card and not is_bullet:
-            emit(doc, s, 18, False, RED)
+            par = emit(doc, s, 18, False, RED)
         elif (raw.strip().startswith("**") and not is_bullet
               and s == upper and len(s.split()) <= 20):
-            emit(doc, s, 23, True, BLACK)
+            par = emit(doc, s, 23, True, BLACK)
         else:
-            emit(doc, raw.strip(), 18, False, BLACK)
+            par = emit(doc, raw.strip(), 18, False, BLACK)
+
+        attach_notes(doc, par, notes)
+        if is_out:
+            after_out = True
+        elif not is_cue:
+            after_out = False
 
         prev_was_clip = bool(re.search(r"PLAY CLIP", upper)) and is_cue
         first = False

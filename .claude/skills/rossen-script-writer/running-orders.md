@@ -44,7 +44,7 @@ JOIN THE CHAT                     <- pipeline boundary. tease ends here.
 (((PLAY CLIP XXX HORIZONTAL)))    <- victim clip
 OUT:
 -one-line button
--HERE'S THE TELL: [one usable line] + what to do  <- after every victim case,
+-HERE'S YOUR RED FLAG: [one line] + what to do  <- after every victim case,
    before the next; it must work for the people the scam targets (Ryan 10/9)
 (JIM JOINS THE ROOM)              <- expert in
 (JIM EXPLAINS MECHANICS)
@@ -74,7 +74,7 @@ OUT:
 -END OF SHOW
 ```
 
-Each segment inside a story runs hook → setup → clip → button → the tell →
+Each segment inside a story runs hook → setup → clip → button → the red flag →
 what to do → bridge (Ryan's notes, `references/examples/ryan-notes-2026-10-09.md`).
 The 10/9 Friday content half is the model: why now → the phone → the mailbox →
 your own search (live demo) → the bill (callback to the open) → named-payoff
