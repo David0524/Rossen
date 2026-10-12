@@ -49,7 +49,7 @@ const children = [
   p("Prepared for the team, October 12, 2026. One-time pull, then a lighter weekly refresh.", { run: { color: MUTED } }),
 
   h1("Why we want this"),
-  p("Today the scripts are tuned by notes and instinct: what Jeff, Ryan and Matt flag after the fact. This data lets us tune them to what our own audience actually does. Specifically:"),
+  p("Today the scripts are tuned by notes and instinct: what Jeff, Ryan and TJ flag after the fact. This data lets us tune them to what our own audience actually does. Specifically:"),
   bullet([b("Titles and thumbnails: "), r("which wording and images earn clicks from our 55+ audience.")]),
   bullet([b("The first 60 seconds: "), r("where viewers leave the open, and which openings hold.")]),
   bullet([b("Story order and pacing: "), r("where viewers drop during a show (first clip, guest, sponsor read, deals), lined up against the bible.")]),
@@ -165,8 +165,8 @@ const children = [
   p("The platform numbers only become useful when each video is matched to what we made. We'll do most of this matching ourselves."),
   table([
     ["Corrections to our draft episode map (air date, F1/F2/call-in, YouTube URL, stories, guest, sponsor), plus the Facebook URL for each show", "We'll send the draft", "Edits in the sheet", "MUST"],
-    ["Matt's August 2026 back-catalog teardown (the source sheet behind the channel facts)", "Matt", "Sheet / link", "HIGH"],
-    ["Notes after each show from Jeff, Ryan, Matt (emails or docs)", "Inbox / Drive", "Forward or link", "HIGH"],
+    ["The August 2026 back-catalog teardown sheet (the YouTube Studio analysis behind our channel facts), if it's still on file", "Content team files / Drive", "Sheet / link", "HIGH"],
+    ["Notes after each show from Jeff, Ryan, TJ (emails or docs)", "Inbox / Drive", "Forward or link", "HIGH"],
     ["Thumbnail and title options that were considered but not used", "Design / producer files", "Images / sheet", "NICE"],
     ["Newsletter or other promotion per episode, if any", "Marketing", "Sheet", "NICE"],
   ]),

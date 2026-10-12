@@ -25,7 +25,7 @@ The skills catch mistakes one specialist at a time, late. This week's misses, by
   the producer learns to skim. What actually caught problems was specific evidence (Ryan's notes,
   the producer's edits, transcripts, the checker).
 - **Proposed instead (not yet approved, not yet built):**
-  1. **Misses log.** One line per correction from the producer, Ryan, Matt or Jeff: what, which stage
+  1. **Misses log.** One line per correction from the producer, Ryan, TJ or Jeff: what, which stage
      should have caught it, and whether a rule or the checker could. Once a miss type appears twice it
      becomes a check. Open question for the producer: they say "log this", or Claude logs every
      correction it sees.
@@ -38,7 +38,7 @@ The skills catch mistakes one specialist at a time, late. This week's misses, by
      a check that the first 30–60 seconds pay off the click, and a Facebook angle if Facebook turns
      out to carry its own cut. Whether that's a new skill or a reference file plus checks in the
      existing skills is decided after the findings. **No "Shorts moment"**: Shorts stopped in June
-     2026 and Matt treats that as settled (`producer-kit/channel-facts.md`).
+     2026 (Matt's call, `producer-kit/channel-facts.md`; the producer agreed to drop it, 10/12).
   5. **Read the show's state first:** every session reads `runs/<RUN_ID>/OPEN.md` and the latest
      outline/bible before touching anything.
 - **Sequencing:** 1, 2, 3 and 5 don't need platform data. Put them to the producer for approval now
@@ -51,7 +51,7 @@ The skills catch mistakes one specialist at a time, late. This week's misses, by
 | **Timestamped transcripts of every live show, Mar 18 – Sep 29** (55 lives, ~39 min average) | `rossen-pre-bible/references/transcripts/<video id>.txt` | What was actually said, at the second, on the same timeline as the YouTube retention curve. **This is the segment map.** |
 | Upload list: date, type, video id, length, current title | `rossen-pre-bible/references/channel-uploads.txt` | Every upload Mar 18 – Sep 29 |
 | Current thumbnails | `https://i.ytimg.com/vi/<id>/maxresdefault.jpg` (reachable from here, checked 10/12) | The thumbnail running now, not earlier versions |
-| Matt's back-catalog teardown (Aug 27, 501 videos) | Summary in `producer-kit/channel-facts.md` and `titles.md`; the source sheet is Matt's | Baselines: CTR by year, new vs returning CTR (4.26% vs 6.05%), traffic mix, runtime bands, day-of-week medians, topic medians |
+| Back-catalog teardown (Aug 27, 501 videos, built by Matt Raub, who has left) | Summary in `producer-kit/channel-facts.md` and `titles.md`; ask TJ Cooney whether the source sheet is still on file | Baselines: CTR by year, new vs returning CTR (4.26% vs 6.05%), traffic mix, runtime bands, day-of-week medians, topic medians |
 | Bibles | 26 in `rossen-pre-bible/references/bibles/` (May 1 – Jul 24); 7/29, 10/7, 10/9, 10/14 in `runs/` | Aug 5 – Sep 25 (16 lives) are only in Drive |
 | Ryan's retention rules | `rossen-script-writer/SKILL.md` "Retention: Ryan's structure rules"; `references/examples/ryan-notes-2026-10-09.md` | Untested claims the data can confirm or retire |
 
@@ -118,7 +118,7 @@ Test the rules we already follow before adding new ones. Each gets confirmed, re
 
 1. **Ingest.** Raw files go in `data/platform/<YYYY-MM-DD>/` (YouTube/, Facebook/, records/). Keep
    them raw, with two exceptions before anything is committed: **drop revenue columns** (estimated
-   revenue, RPM, CPM; the kit leaves revenue out on purpose, "ask Matt") and **drop commenter and
+   revenue, RPM, CPM; the kit leaves revenue out on purpose) and **drop commenter and
    chat usernames** (keep the text). Read each retention screenshot once and digitize it to a CSV;
    work from the CSV after that. Do the analysis in scripts, not by reading CSVs into the chat.
 2. **Build one table per episode** from our draft episode map: metrics, the transcript segment
@@ -148,7 +148,7 @@ Test the rules we already follow before adding new ones. Each gets confirmed, re
    period** (Mar–Jun and Jul–Oct) with at least ~8 episodes on each side; everything else is
    provisional. Views vary 10x between shows, so five episodes prove little.
 7. **Turn stable findings into rules** with the producer's approval, in a new dated reference (e.g.
-   `references/audience-findings.md`), not in Matt's producer-kit files, which stay his words.
+   `references/audience-findings.md`), not in the producer-kit files, which record the team's own rulings (now TJ's call to change).
 8. **Then design the packaging pass** from those findings.
 
 ## Close the loop (weekly, after the one-time pull)
