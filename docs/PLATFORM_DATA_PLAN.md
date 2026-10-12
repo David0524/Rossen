@@ -2,7 +2,7 @@
 
 Status: **waiting on data.** The data request (`docs/Rossen Audience Data Request.docx`) has **not been
 sent yet** (producer, 10/12), so it can still be trimmed per this plan before it goes out. Nothing below is built yet. No skill changes until the
-producer approves (standing rule). Open questions for the producer are at the end.
+producer approves (standing rule). Producer answers (10/12) are near the end.
 
 ## The problem we're solving
 
@@ -198,23 +198,3 @@ A browser on public pages (Chrome extension / Cowork):
   label it that way.
 - Public comments on the strongest and weakest shows.
 - The Facebook page: what goes there (full live, crosspost, clips) and public view counts.
-
-## Open questions for the producer
-
-1. Approve proposals 1, 2, 3 and 5 now, or hold them for the data?
-2. Misses log: Claude logs every correction it sees (recommended; cheap, and the producer can strike
-   lines), or only when told "log this"?
-3. Will the channel owner grant read-only YouTube Analytics API access? It replaces most screenshots.
-4. Okay to drop the "Shorts moment" from the packaging pass, given Matt's ruling?
-5. Okay to pull the Aug 5 – Sep 25 bibles from Drive (16 files, read-only), or work from transcripts
-   only for those shows?
-6. Send the team the short follow-up below, so they skip what we can get ourselves?
-
-Draft follow-up to the team:
-
-> Quick update on the audience data request: you can skip the segment timestamps, titles and
-> thumbnails (we can build those from our transcripts and the channel), but do tell us about any title
-> or thumbnail changed after publish, with the date. We'll send you a draft
-> episode map to correct instead; please add the Facebook URL for each show. If the channel owner
-> can authorize read-only YouTube Analytics API access, that replaces the retention screenshots. Please
-> leave revenue columns out of any export.
