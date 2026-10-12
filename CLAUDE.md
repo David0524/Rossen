@@ -27,9 +27,9 @@ Reference if Drive is requested: `!Shows` folder id `1uwPmH5sTUldGiUkgILvmr2vu6O
 ## Team (producer note, 9/30/2026)
 - Amanda Scherker is no longer with Rossen (the 9/30 skills update removed her from the skills). Bibles are
   written with rossen-script-writer from the approved outline w/ videos. Don't address, copy or credit her.
-- Matt Raub is no longer with Rossen; TJ Cooney replaced him (producer, 10/12/2026). Don't address or copy
-  Matt. Producer-kit rulings attributed to Matt stand until TJ or the producer changes them. The skills still
-  name Matt in places; updating them waits for the producer's approval.
+- Matt Raub is no longer with Rossen; TJ Cooney replaced him as Head of Content (producer, 10/12/2026). Don't
+  address or copy Matt. Producer-kit rulings attributed to Matt stand until TJ or the producer changes them.
+  The skills still name Matt (71 mentions, 32 files); that update is on the back burner (producer, 10/12).
 - Call-in shows: "a producer calls and books" callers. Ask the producer who that is before assuming.
 
 ## Audience and standing editorial notes
