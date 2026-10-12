@@ -59,3 +59,6 @@ Skill sync:
   the last shared commit, ask the producer about real contradictions, then send `.skill` packages to upload.
 
 Each run's open items live in `runs/<RUN_ID>/OPEN.md`, not here.
+
+Project in progress: audience data and a packaging skill — read `docs/PLATFORM_DATA_PLAN.md` when the
+YouTube/Facebook data arrives or the producer asks about titles, thumbnails, retention or the misses log.
