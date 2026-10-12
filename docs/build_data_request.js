@@ -61,9 +61,11 @@ const children = [
   bullet([b("Where: "), r("a shared Drive folder named \"Audience Data – Oct 2026\". Raw exports, not summaries.")]),
   bullet([b("Format: "), r("CSV or Google Sheets for numbers; PNG screenshots for graphs; image files for thumbnails.")]),
   bullet([b("Names: "), r("start each file with the platform and what it is, e.g. \"YT – per-video export – 12mo.csv\", \"FB – retention – 10-07 show.png\".")]),
-  bullet([b("Date range: "), r("the last 12 months for exports. If that's too much, the last 30 episodes.")]),
-  bullet([b("Separate "), r("live streams, premieres/uploads, and Shorts/Reels. Their numbers aren't comparable.")]),
+  bullet([b("Date range: "), r("the last 12 months for exports. If that's too much, every live show since March 18, 2026.")]),
+  bullet([b("Separate "), r("live streams and regular uploads. Their numbers aren't comparable.")]),
+  bullet([b("Leave out revenue. "), r("Remove estimated revenue, RPM and CPM columns before sending. We only need audience numbers.")]),
   bullet([b("Don't send logins. "), r("If you'd rather grant access than export, see \"Ongoing access\" at the end.")]),
+  p([b("What we already have, so please skip it: "), r("final titles, current thumbnails, show transcripts, and the bibles. We'll build the segment timestamps from the transcripts and send you a draft episode map to correct (section 3).")]),
   p([b("Priority key: "), r("MUST = we can't do the work without it. HIGH = big improvement. NICE = if it's easy.")]),
 
   new Paragraph({ children: [new PageBreak()] }),
@@ -80,18 +82,17 @@ const children = [
 
   h2("1B. Audience retention (the most valuable piece)"),
   table([
-    ["Audience retention graph for each of the last 30 long-form episodes", "Open a video → Analytics → Engagement → Audience retention. Screenshot the full graph with the time axis visible", "PNG per video", "MUST"],
-    ["\"Key moments\" panel for the same videos (intro, top moments, spikes, dips)", "Same screen, below the graph", "Screenshot", "MUST"],
+    ["Audience retention graph for every live show since March 18. Not needed if we get API access (section 4). If screenshots are the only option, 20 shows spread across Wednesday, Friday, F2 and call-in, and across high and low views (not just the best and worst)", "Open a video → Analytics → Engagement → Audience retention. Screenshot the full graph with the time axis visible", "PNG per video", "MUST"],
+    ["\"Key moments\" panel for the same videos (intro, top moments, spikes, dips). Needed even with API access: it gives the exact share still watching at 0:30", "Same screen, below the graph", "Screenshot", "MUST"],
+    ["For 3 live shows: the retention graph twice, once filtered to \"On demand\" and once to \"Live & on demand\" (tells us whether the graph counts live viewers)", "Same screen → the view-type filter at the top", "Screenshot", "HIGH"],
     ["Relative retention (vs similar-length videos), if shown", "Same screen", "Screenshot", "HIGH"],
-    ["The final edited timestamps per episode: when each story, clip, guest, sponsor read and deals segment starts", "From the editor's timeline, the YouTube chapters, or the rundown", "Sheet: episode, segment, start time", "MUST"],
   ]),
-  p([b("Why the timestamps matter: "), r("they let us line each retention dip up against the exact bible line. Without them the graph shows where people leave but not what made them leave.")]),
+  p([b("How we'll use it: "), r("we line each retention dip up against our timestamped transcript of the show, so we can see what was on screen when viewers left.")]),
 
-  h2("1C. Packaging: titles, thumbnails, descriptions"),
+  h2("1C. Packaging: titles and thumbnails"),
+  p("We already have the current titles and thumbnails. What we can't see is what changed."),
   table([
-    ["Final title, description and chapters for each episode", "Studio → Content → each video (or the per-video export if it includes titles)", "Sheet", "MUST"],
-    ["The thumbnail image each episode ran with", "Studio → Content → each video → download thumbnail", "Image files named by date", "MUST"],
-    ["Any title or thumbnail changes after publish, with dates", "Team memory / change log", "Sheet", "HIGH"],
+    ["Any title or thumbnail changes after publish, with dates and the earlier version", "Team memory / change log / design files", "Sheet + image files", "MUST"],
     ["Thumbnail and title test results (\"Test & compare\"), if used", "Video → Analytics → Test results", "Screenshot", "HIGH"],
   ]),
 
@@ -121,15 +122,8 @@ const children = [
     ["Chat export or a sample of chat (to see what questions viewers ask)", "Live chat replay, or a chat-export tool the team already uses", "Text / CSV", "NICE"],
   ]),
 
-  h2("1G. Shorts"),
+  h2("1G. Community"),
   table([
-    ["Per Short: views, engaged views, \"viewed vs swiped away\" (stayed to watch), average percentage viewed, subscribers gained", "Content → Shorts → each Short → Analytics, or Advanced mode filtered to Shorts", "CSV / Sheet", "HIGH"],
-    ["Which long-form episode each Short came from", "Team knowledge", "Sheet column", "HIGH"],
-  ]),
-
-  h2("1H. Comments and community"),
-  table([
-    ["Top comments on the 10 best and 10 worst episodes (what viewers praise, complain about, correct us on)", "Studio → Comments, or a comment-export tool", "CSV / text", "HIGH"],
     ["Community tab post performance, if used", "Analytics → Content → Posts", "Screenshot", "NICE"],
     ["End screen and card click-through rates", "Advanced mode → End screen elements / Cards", "CSV / Sheet", "NICE"],
   ]),
@@ -142,12 +136,12 @@ const children = [
   table([
     ["One row per video, last 12 months, with: reach, views (impressions), 3-second views, 1-minute views, ThruPlays (15-second views), average watch time, reactions, comments, shares, link clicks, follows gained", "Business Suite → Insights → Content → choose date range → Export", "CSV", "MUST"],
     ["Split organic vs paid/boosted (and which posts were boosted)", "Same export, organic/paid columns or filter", "CSV", "MUST"],
-    ["Whether each post was native upload, crosspost, live, or a link to YouTube", "Team knowledge / post type column", "Sheet column", "HIGH"],
+    ["What each post is: the full live show, a crosspost of the YouTube video, a different edit, or a clip", "Team knowledge / post type column", "Sheet column", "MUST"],
   ]),
 
   h2("2B. Retention"),
   table([
-    ["Audience retention graph for the last 30 videos (or top and bottom 10)", "Click a video in Insights → Video retention / \"Audience retention\" graph", "PNG per video", "MUST"],
+    ["Audience retention graph for the last 30 videos (or 20 spread across high and low views)", "Click a video in Insights → Video retention / \"Audience retention\" graph", "PNG per video", "MUST"],
     ["Retention by audience (followers vs non-followers), if shown", "Same screen", "Screenshot", "HIGH"],
     ["Average watch time and the share watched to 15 seconds and 1 minute", "Same screen / export", "CSV / screenshot", "HIGH"],
   ]),
@@ -164,34 +158,32 @@ const children = [
     ["Audience age, gender, location", "Insights → Audience", "Screenshot / CSV", "HIGH"],
     ["Live videos: peak concurrent viewers, live vs replay views, comments during live", "Each live video → Insights", "Screenshot / CSV", "HIGH"],
     ["Reels: plays, average watch time, replays, follows", "Insights → Content → Reels", "CSV", "NICE"],
-    ["Top comments on best and worst videos", "Each post", "Text", "NICE"],
   ]),
 
   new Paragraph({ children: [new PageBreak()] }),
   h1("3. Our own records (to connect the data to the scripts)"),
-  p("The platform numbers only become useful when each video is matched to what we made. Most of this already exists somewhere; it just needs to be in one sheet."),
+  p("The platform numbers only become useful when each video is matched to what we made. We'll do most of this matching ourselves."),
   table([
-    ["Episode map: air date, F1/F2/call-in, YouTube URL, Facebook URL, bible file, A/B/C story topics, guest, sponsor(s)", "Release calendar + Topic Assignments sheet + bibles", "One sheet", "MUST"],
-    ["Segment timestamps per episode (see 1B)", "Editor / chapters / rundown", "Sheet", "MUST"],
-    ["The final bible as aired (or as sent to Jeff) for each of the 30 episodes", "Show folders in Drive", "Drive links", "HIGH"],
+    ["Corrections to our draft episode map (air date, F1/F2/call-in, YouTube URL, stories, guest, sponsor), plus the Facebook URL for each show", "We'll send the draft", "Edits in the sheet", "MUST"],
+    ["Matt's August 2026 back-catalog teardown (the source sheet behind the channel facts)", "Matt", "Sheet / link", "HIGH"],
     ["Notes after each show from Jeff, Ryan, Matt (emails or docs)", "Inbox / Drive", "Forward or link", "HIGH"],
     ["Thumbnail and title options that were considered but not used", "Design / producer files", "Images / sheet", "NICE"],
     ["Newsletter or other promotion per episode, if any", "Marketing", "Sheet", "NICE"],
   ]),
 
-  h1("4. Ongoing access (instead of exports, if easier)"),
-  p("A one-time pull is enough to start. If we want this every week without anyone exporting by hand, read-only access is cleaner:"),
+  h1("4. Read-only access (saves the most work)"),
+  p("This saves the most work. With read-only access, nobody has to take retention screenshots (1B), now or each week:"),
   bullet([b("YouTube: "), r("add our account to the channel with a read-only role that can see analytics (Studio → Settings → Permissions). For full retention curves on every video, the channel owner can authorize the YouTube Analytics API once; it returns the retention curve for any video, which Studio can't bulk-export.")]),
   bullet([b("Facebook: "), r("grant analytics / insights access to the Page in Business Suite → Settings → People. The Meta Graph API can then pull per-video insights.")]),
   p("Either way: read-only, no ability to publish or change anything."),
 
   h1("5. Minimum version (if time is short)"),
   p("If the full list is too much this week, these five give most of the value:"),
-  bullet("YouTube per-video export (1A), last 30 episodes."),
-  bullet("YouTube retention screenshots for the 10 best and 10 worst episodes (1B)."),
-  bullet("Segment timestamps for those same 20 episodes (1B)."),
-  bullet("Titles and thumbnails for those 20 (1C)."),
-  bullet("Facebook per-video export (2A), last 30 videos."),
+  bullet("YouTube per-video export (1A), live shows and uploads separated, last 12 months."),
+  bullet("Retention: API access (section 4), or screenshots for 20 shows spread across show types (1B), plus the Key moments panel."),
+  bullet("Title and thumbnail changes after publish (1C)."),
+  bullet("Facebook per-video export (2A), with what each post is (full show, crosspost, edit or clip)."),
+  bullet("Corrections to our draft episode map, with Facebook URLs (section 3)."),
 ];
 
 const doc = new Document({
