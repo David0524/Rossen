@@ -1,7 +1,7 @@
 # Platform data plan (handoff, 10/12/2026; revised after review the same day)
 
-Status: **waiting on data.** The producer sent the team `docs/Rossen Audience Data Request.docx`
-(YouTube + Facebook + our own records). Nothing below is built yet. No skill changes until the
+Status: **waiting on data.** The data request (`docs/Rossen Audience Data Request.docx`) has **not been
+sent yet** (producer, 10/12), so it can still be trimmed per this plan before it goes out. Nothing below is built yet. No skill changes until the
 producer approves (standing rule). Open questions for the producer are at the end.
 
 ## The problem we're solving
@@ -169,6 +169,35 @@ about 180K. Target "bombs" with the audience. The Flock camera show flopped (vie
 cameras). Wednesday is the best day; Friday medians are far lower. Suggested traffic watches longest;
 search is ~3%; external is 1.4% despite ~1.1M followers elsewhere. The gender split conflicts between
 two sources; check Studio before citing either.
+
+## Producer answers (10/12)
+
+1. Proposals 1, 2, 3, 5: **wait for now.**
+2. Misses log, when built: **Claude logs every correction it sees.**
+3. API access: **pending tomorrow's meeting (10/13).**
+4. **Drop the Shorts moment.**
+5. **Yes, pull the Aug 5 – Sep 25 bibles from Drive** (read-only).
+6. Follow-up note: not needed; the request hasn't gone out, so revise the request itself.
+
+## What we can do before any internal access
+
+This container: YouTube watch pages and yt-dlp are bot-walled (checked 10/12); thumbnails
+(`i.ytimg.com`) and oEmbed work.
+- Revise the request .docx before it's sent.
+- Draft the episode map and transcript segment map (55 lives).
+- Pull and convert the Aug 5 – Sep 25 bibles.
+- Download current thumbnails and tag them (face, object, words on screen); tag every title with the
+  `titles.md` patterns and a topic category.
+- Code each transcript for the hypotheses (open type, tips per segment, reason-to-leave lines, tease
+  payoffs, sponsor and deals positions), so the data only needs joining.
+- Write the ingest and analysis scripts against the expected export columns.
+
+A browser on public pages (Chrome extension / Cowork):
+- Public views, likes and comment counts for every live: a provisional outcome measure.
+- The public "Most replayed" graph on each watch page. It shows replay intensity, not retention;
+  label it that way.
+- Public comments on the strongest and weakest shows.
+- The Facebook page: what goes there (full live, crosspost, clips) and public view counts.
 
 ## Open questions for the producer
 
