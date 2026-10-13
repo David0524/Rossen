@@ -221,50 +221,6 @@
   "beat_id": "10-21-C2",
   "episode": "10-21",
   "segment_title": "WINTER BILLS ARE GOING UP, AND THIS ONE CALL CAN DOUBLE YOURS",
-  "script_text": "Manassas, Virginia homeowner, unnamed (Jan 2026, Consumer Reports March 2026): January bill jumped from about $100 to $281. Residential electricity prices rose 7.1% in 2025.",
-  "orientation": "horizontal",
-  "clip_role": "victim_interview",
-  "news_anchor": "electric bill tripled winter homeowner",
-  "visual_spec": "homeowner holding a bill at the kitchen table, local news interview",
-  "platforms": [
-   "youtube",
-   "shorts",
-   "news_web"
-  ],
-  "offsite_likely": false,
-  "priority": 2,
-  "expected_segments": 1,
-  "sourcability": "commentary_only",
-  "sourcability_note": "No video of the Manassas homeowner (print, Consumer Reports). Swap candidate with a person on camera: WHAS11 'Man claims his utility bill tripled in cost; LG&E provides reason' (rLDFq1TTVIM, 105s).",
-  "source_native": "none",
-  "queries": {
-   "news": [
-    "electric bill tripled homeowner",
-    "winter electric bill shock",
-    "utility bill doubled family"
-   ],
-   "victim": [],
-   "platform": [
-    "my electric bill tripled",
-    "electric bill spike explained"
-   ],
-   "anchor": [
-    "electric bill tripled winter homeowner"
-   ],
-   "shorts": [
-    "my electric bill is insane",
-    "electric bill tripled this month",
-    "utility bill shock #electricbill"
-   ]
-  },
-  "queries_note": {
-   "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
-  }
- },
- {
-  "beat_id": "10-21-C3",
-  "episode": "10-21",
-  "segment_title": "WINTER BILLS ARE GOING UP, AND THIS ONE CALL CAN DOUBLE YOURS",
   "script_text": "Illinois AG settled with Rushmore Energy (June 4, 2026), alleging it enrolled people without consent at rates 'nearly double' the utility's while claiming ties to the utility or a government 'price protection program.'",
   "orientation": "horizontal",
   "clip_role": "authority_report",
@@ -303,6 +259,7 @@
   },
   "queries_note": {
    "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
-  }
+  },
+  "original_beat_id": "10-21-C3"
  }
 ]
