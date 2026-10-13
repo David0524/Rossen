@@ -44,6 +44,8 @@ Producer rulings that hold every week:
 - The reviewer stays strict. Lines the producer keeps over a reviewer flag are one-offs, not rules.
 - No skill changes until the producer approves. Don't edit the producer's Docs unless asked.
 - Target is fine, but never the title or the main story.
+- F1: never pitch a story that knocks Amazon (settlements, refunds, Amazon traps). The deals block sends viewers to buy there (producer, 10/11/2026).
+- Pitch bar (producer, 10/11): would a 55+ middle-America viewer stop scrolling, and why does it matter to them? A small payout or a narrow niche fails it.
 - Graphic requests: deliver a ChatGPT-ready image prompt in chat. Keep "police say" / accused framing on screen.
 
 Workarounds:
