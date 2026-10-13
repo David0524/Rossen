@@ -10,11 +10,11 @@
 | A | Your TV is watching what you watch: turn this off tonight | ~55% of show | 4 |
 | Break | OmniWatch — after A beat 8 (Lon's bottom line) | — | — |
 | B | They're billing you for damage you didn't do | ~25% | 2 |
-| Break | OmniWatch — after B beat 4 (the walkaround) | — | — |
+| Break | OmniWatch — after B beat 4 (your phone is your alibi) | — | — |
 | C | Winter bills are going up, and this one call can double yours | ~20% | 2 |
 | End | End of show | — | — |
 
-**Open package:** undecided (see Decisions). Recommended: the team's own footage of a TV menu with the tracking setting switched on (A beat 7), not the disputed LG audio clip.
+**Open package:** A beat 4, She Prepares on Walmart and LG TVs.
 
 ### The show in three sentences
 
@@ -22,21 +22,19 @@ Your smart TV checks what's on its screen every few seconds and sells the patter
 
 ### The ride
 
-A climbs from your screen to the ad companies to the claim about your living room, then exhales on a fix any viewer can do with the remote. B is a quick outrage with a satisfying catch: she proved the photo was fake. C starts with a bill everyone dreads and ends on one line to check tonight, so the show exhales twice.
+A climbs from your screen to the ad companies to the claim about your living room, then exhales on a fix any viewer can do with the remote, walked through by Lon. B is a quick outrage with a satisfying catch: she proved the photo was fake. C starts with a bill everyone dreads and ends on one line to check tonight, so the show exhales twice.
 
 ### Decisions before we write
 
-- 10/16 F1 collision: the pre-bible recommended the TV story as the 10/16 F1 lead, with winter bills as an F1 option. Confirm neither is running on 10/16.
-- Third TV-tracking video (January ~654K, spring ~316K; Ryan says the devices video was a hit). The new angles are the Texas consent deals and the LG claim; the title has to sell one of them.
-- Open package: the Gamers Nexus clip is the most dramatic footage but carries the disputed claim. Recommend opening on the team's menu footage (beat 7) and keeping LG to beat 6.
-- A beat 7 depends on the team filming real 2026 sets. Which brands can we get? Samsung, LG, Vizio, Roku and Sony cover most homes.
-- Fire TV: the Amazon rule is for F1. On this F2, include Fire TV's setting or keep it out?
-- A is thin on people: beat 3 has no person yet, and beats 4 to 6 are a creator, a state and a company. Beat 3 (someone finding the setting on their own TV) is the human beat; it needs a name.
+- Slate is final as approved (producer, 10/13). Third TV-tracking video (January ~654K, spring ~316K; Ryan says the devices video was a hit); the title has to sell a new angle (the Texas deals or the LG claim).
+- No demos this show (producer, 10/13). Lon walks through each brand's menu path (A7) over a full-screen graphic of the paths; B and C fixes are Jeff on camera.
+- Open package: She Prepares (A4), the undisputed tracking story. Not the Gamers Nexus clip, which carries the disputed LG claim.
+- A is thin on people: A3 has no person yet, and A4 to A6 are a creator, a state and a company. A3 is the human beat; it needs a name.
 - Lon Seidman: confirm booked, and check for sponsor or affiliate ties to TV brands or Roku before he gives settings advice.
 - B: no 55+ victim, and both renters were refunded, so there's no real-loss case to lead with. It plays as a warning with a fix.
-- B: hotel fees in or out? Recommend out (one Jeff line at most) to keep B to four beats.
-- C has no 55+ victim and no clip of the call yet; beat 3 has no person. Without a find, C is Jeff, one news clip and a bill on screen.
-- C savings guide: how much? Recommend three lines (check your supply rate, budget billing, LIHEAP), all sourced.
+- B: hotel fees left out (one Jeff line at most, in Jeff should know).
+- C has no 55+ victim and no clip of the call yet; C3 has no person. Without a find, C is Jeff plus one news clip.
+- C savings guide: three sourced lines (check your supply rate, budget billing, LIHEAP) (producer, 10/13).
 
 # A. YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT
 
@@ -60,7 +58,7 @@ A climbs from your screen to the ad companies to the claim about your living roo
 | 4 | Who's buying | She Prepares, older-audience creator (Oct 2026) | Her video on Walmart and LG TVs and the ad business behind the screen. | HAVE · HORIZONTAL — She Prepares 6WT5fc-LHSc |
 | 5 | Only Texas got asked | Texas Attorney General's office (Dec 2025 – May 2026) | Texas sued TV makers; Samsung and LG agreed to ask Texans first, and nobody else. | FIND · HORIZONTAL — Texas TV news on the AG suits or settlements |
 | 6 | The claim LG denies | Steve Burke, Gamers Nexus (Sept 2026) | His investigation alleges LG sets recorded room audio in standby; LG says the claims are not true. | HAVE · HORIZONTAL — Gamers Nexus 6IFVTcM28KA |
-| 7 | Turn it off, brand by brand | You (the viewer) | The team films the menus on real sets; Jeff narrates the path for Samsung, LG, Vizio, Roku and Sony. | DEMO |
+| 7 | Turn it off, brand by brand | Lon Seidman | Lon walks through the setting's name and menu path for Samsung, LG, Vizio, Roku and Sony, over a graphic. | GUEST |
 | 8 | Lon's bottom line | Lon Seidman | The TV keeps working with it off, ads just get less targeted, plus the microphone setting worth checking. | GUEST |
 
 ### The fix
@@ -91,7 +89,7 @@ A climbs from your screen to the ad companies to the claim about your living roo
 - Beat 5: the Texas deals cover Texans only. Viewers elsewhere have to switch the setting off themselves.
 - Beat 4: the 49 million US LG TVs figure is LG Ad Solutions' own number.
 - Beat 2: the every-15-seconds figure is one 2024 study of LG sets, not every brand.
-- Beat 7: Fire TV is out unless the room says otherwise (see Decisions).
+- Beat 7: Fire TV left out of the brand list (it's an Amazon device); add it only if the room asks.
 
 # B. THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO
 
@@ -112,7 +110,7 @@ A climbs from your screen to the ad companies to the claim about your living roo
 | 1 | The bill | Hope Orr, Draper, Utah (Oct 2026) | After returning a Turo rental she's billed $165 for smoking, and Turo warns a $500 tire charge is coming. | HAVE · HORIZONTAL — KSL Get Gephardt 1_wUVS5szfw |
 | 2 | The photo was fake | Hope Orr (Oct 2026) | A reverse image search finds the tire photo on Reddit, years old, a different car; Turo bans the host and refunds her. | HAVE · HORIZONTAL — KSL, same clip (second segment) |
 | 3 | It's not just one host | Georgina Montalvan, Birmingham (July 2026) | She's billed $2,338 for damage her own pickup photos show was already there, and refunded after a columnist steps in. | JEFF |
-| 4 | Your phone is your alibi | You (the viewer) | Jeff films a slow walkaround of a rental, tires and interior, and runs a damage photo through a reverse image search. | DEMO |
+| 4 | Your phone is your alibi | You (the viewer) | Before you drive off, film a slow walkaround, tires and interior; if they send a damage photo, reverse-image-search it. | JEFF |
 
 ### The fix
 
@@ -153,7 +151,7 @@ A climbs from your screen to the ad companies to the claim about your living roo
 | 1 | The bill goes up | You (the viewer) | Electric-heat homes will pay about 4% more this winter and heating-oil homes about 21% more (EIA, Oct 6). | JEFF |
 | 2 | Her bill nearly tripled | Manassas, Virginia homeowner, unnamed (Jan 2026) | Her January bill jumps from about $100 to $281. | FIND · HORIZONTAL — local news on a Manassas or Virginia bill spike |
 | 3 | The call | Unnamed — need a name (Illinois customer, 2026) | A caller claims a utility "price protection program," and the customer is enrolled with Rushmore Energy at nearly double the rate. | FIND · HORIZONTAL — Illinois news on the AG's Rushmore settlement or a switched customer |
-| 4 | Check this line tonight | You (the viewer) | A real bill on screen: find "supply" or "price to compare," and call your utility if you don't recognize the company. | DEMO |
+| 4 | Check this line tonight | You (the viewer) | Find "supply" or "price to compare" on your bill, and call your utility if you don't recognize the company. | JEFF |
 
 ### The fix
 

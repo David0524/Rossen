@@ -1,0 +1,515 @@
+[
+ {
+  "beat_id": "10-21-A3",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "creator_short": 3,
+   "affiliate": 1,
+   "creator_long": 1
+  },
+  "shortlist_note": "",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=-KDSaizvZYk",
+    "source_type": "creator_short",
+    "score": 66,
+    "reason": "Kurt Knutsson (CyberGuy, Fox tech contributor), 69s Short on stopping smart TV tracking; a person on camera, but a creator, not an owner",
+    "cannot_determine": [
+     "whether he shows the menu on screen",
+     "whether it's portrait"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=OBS-201KURw",
+    "source_type": "affiliate",
+    "score": 60,
+    "reason": "10 Tampa Bay News Short, 45s, 'how to turn off the snooping settings'; reporter explainer",
+    "cannot_determine": [
+     "whether a person finds it on their own TV"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=6KlUfJz4t1w",
+    "source_type": "creator_short",
+    "score": 52,
+    "reason": "Computer Geeks Short, 75s, tracking viewing data and how to turn it off; small channel",
+    "cannot_determine": [
+     "channel history",
+     "voiceover or on camera"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=lqvYba_HGMo",
+    "source_type": "creator_short",
+    "score": 48,
+    "reason": "Proton (VPN company) Short, 43s, 'STOP your TV spying on you'; brand channel, clearance and promo concerns",
+    "cannot_determine": [
+     "whether it pitches a product"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=PtTTFMj01U8",
+    "source_type": "creator_long",
+    "score": 40,
+    "reason": "Ricardo Gardener, 5:12, turn off ACR on Samsung; horizontal menu walkthrough, crosses orientation",
+    "cannot_determine": [
+     "horizontal; framing"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-21-A4",
+  "orientation": "horizontal",
+  "clip_role": "explainer_demo/creator_long",
+  "priority": 1,
+  "expected_segments": 2,
+  "source_mix": {
+   "creator_long": 5
+  },
+  "shortlist_note": "",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=6WT5fc-LHSc",
+    "source_type": "creator_long",
+    "score": 86,
+    "reason": "She Prepares (the HAVE), 12:46, older-audience creator on Walmart and LG TVs; the open package",
+    "cannot_determine": [
+     "what she says about Walmart/Vizio vs LG",
+     "clean 60s slice"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=IvFu343KNek",
+    "source_type": "creator_long",
+    "score": 74,
+    "reason": "RTINGS, 9:14, 'LG isn't the only TV company spying'; credible testing lab",
+    "cannot_determine": [
+     "whether it's on camera or VO"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=0q8h4_FPNyI",
+    "source_type": "creator_long",
+    "score": 66,
+    "reason": "Lindey Glenn, 12:31, Walmart bought Vizio and the privacy concerns",
+    "cannot_determine": [
+     "channel history"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Zod3C7A2My8",
+    "source_type": "creator_long",
+    "score": 64,
+    "reason": "Shannon Morse, 18:45, 'Are smart TVs spying on you? LG responds'; privacy creator, has LG's response",
+    "cannot_determine": [
+     "where LG's response sits"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Gpm0Y4W6OKw",
+    "source_type": "creator_long",
+    "score": 50,
+    "reason": "Jay Reed, 19:23, 'Walmart just got CAUGHT doing this to their TVs' (Oct 3); engagement-farming title",
+    "cannot_determine": [
+     "original reporting or reaction"
+    ],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-21-A5",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 3,
+   "network": 1,
+   "creator_long": 1
+  },
+  "shortlist_note": "",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=0ZWvqw17HIQ",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "KVUE Austin, 78s, Texas reaches settlement with LG in smart TV privacy lawsuit",
+    "cannot_determine": [
+     "anchor read or package"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=p_v3Y-ZpDBI",
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "KVUE, 47s, Texas sues five TV companies over privacy (Dec 2025)",
+    "cannot_determine": [
+     "headline read only?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=p4-F76Tn8Ow",
+    "source_type": "affiliate",
+    "score": 66,
+    "reason": "KENS 5 San Antonio, 39s, Paxton suing smart TV makers",
+    "cannot_determine": [
+     "headline read only?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=429MZPbq21Q",
+    "source_type": "network",
+    "score": 58,
+    "reason": "NTD, 53s, Paxton sues 5 TV companies; NTD's editorial slant is a concern",
+    "cannot_determine": [
+     "clearance"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=dehzLA4kFqM",
+    "source_type": "creator_long",
+    "score": 62,
+    "reason": "Lon.TV, 10:44, Texas sues LG, Sony, Samsung, TCL and Hisense over ACR; our guest's own channel (promoted by diversity floor)",
+    "cannot_determine": [
+     "whether to use the guest's own clip"
+    ],
+    "promoted_by_floor": true
+   }
+  ]
+ },
+ {
+  "beat_id": "10-21-A6",
+  "orientation": "horizontal",
+  "clip_role": "explainer_demo/creator_long",
+  "priority": 1,
+  "expected_segments": 2,
+  "source_mix": {
+   "creator_long": 4,
+   "creator_short": 1
+  },
+  "shortlist_note": "",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
+    "source_type": "creator_long",
+    "score": 84,
+    "reason": "Gamers Nexus (the HAVE), 2:15:52, the investigation itself; long, moment must be found",
+    "cannot_determine": [
+     "where the standby-audio claim is stated cleanly"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ToP9xfLDSME",
+    "source_type": "creator_long",
+    "score": 72,
+    "reason": "Gamers Nexus, 47:30, 'LG Says We're Fake News'; carries LG's denial and GN's reply",
+    "cannot_determine": [
+     "where LG's statement is read"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=4QcFfgETj9A",
+    "source_type": "creator_short",
+    "score": 68,
+    "reason": "Cybernews Short, 35s, 'Are 200 million LG TVs listening in \u2013 even when switched off?' (9/9)",
+    "cannot_determine": [
+     "whether it states LG's denial"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Sg9tUEk1c7A",
+    "source_type": "creator_long",
+    "score": 64,
+    "reason": "The Homeboy Workshop, 13:56, 'I tapped one to find out'; an independent test of the claim",
+    "cannot_determine": [
+     "what he found"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Q9uefFYe6bM",
+    "source_type": "creator_long",
+    "score": 58,
+    "reason": "Gamers Nexus, 29:58, 'DO NOT BUY'; recommendation framing, weaker for a disputed claim",
+    "cannot_determine": [],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-21-B1",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 1,
+  "expected_segments": 2,
+  "source_mix": {
+   "affiliate": 3,
+   "network": 1,
+   "first_person": 1
+  },
+  "shortlist_note": "",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=1_wUVS5szfw",
+    "source_type": "affiliate",
+    "score": 88,
+    "reason": "KSL Get Gephardt (the HAVE), 4:35, 'Car rental service attempts to scam Utah woman out of hundreds'",
+    "cannot_determine": [
+     "where she describes the charges"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=zzVzgKAs8w8",
+    "source_type": "affiliate",
+    "score": 66,
+    "reason": "Arizona's Family, 3:40, man billed for rental damage he didn't cause; second case",
+    "cannot_determine": [
+     "date"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=uvM2pOxiF18",
+    "source_type": "affiliate",
+    "score": 62,
+    "reason": "WCPO 9, 1:52, 'Beware bills for rental car damage you didn't cause' (Aug 2025)",
+    "cannot_determine": [
+     "victim on camera?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=TOKgroMzhXs",
+    "source_type": "network",
+    "score": 54,
+    "reason": "CBS Chicago, 2:26, how to guard against excessive damage fees; tips",
+    "cannot_determine": [
+     "age"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=degY4pRd6Sg",
+    "source_type": "first_person",
+    "score": 48,
+    "reason": "FunnyGuy, 8:38, 'How I fought a $1,000 bill a month later'; first-person, generic channel name (promoted by diversity floor)",
+    "cannot_determine": [
+     "channel credibility"
+    ],
+    "promoted_by_floor": true
+   }
+  ]
+ },
+ {
+  "beat_id": "10-21-B2",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 1,
+   "first_person": 1,
+   "creator_long": 3
+  },
+  "shortlist_note": "",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=1_wUVS5szfw",
+    "source_type": "affiliate",
+    "score": 88,
+    "reason": "KSL (same clip as B1), the reverse-image reveal and Turo's ban",
+    "cannot_determine": [
+     "whether the Reddit reveal is in the package"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=QUujYfh1Fyg",
+    "source_type": "first_person",
+    "score": 50,
+    "reason": "J.Noonie, 14:47, 'How I got scammed on Turo for 500 dollars'; first-person, different case",
+    "cannot_determine": [
+     "what happened"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ZbGCvYWWREA",
+    "source_type": "creator_long",
+    "score": 46,
+    "reason": "Aubrey Janik, 14:34, 'Turo scam, be careful, Turo host reacts'",
+    "cannot_determine": [
+     "which case"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=H7IF5Su9DZI",
+    "source_type": "creator_long",
+    "score": 40,
+    "reason": "Insider Tech, 3:13, how to reverse image search (Google); a how-to for the fix",
+    "cannot_determine": [],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=DdFPWE70bSc",
+    "source_type": "creator_long",
+    "score": 38,
+    "reason": "superspeedersRob, 11:18, how to avoid fake damage bills",
+    "cannot_determine": [],
+    "promoted_by_floor": false
+   }
+  ]
+ },
+ {
+  "beat_id": "10-21-C2",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 4,
+   "first_person": 1
+  },
+  "shortlist_note": "Diversity floor: promoted The Fixit Shed (first_person) over CBS News; it scores 30+ below the top affiliate.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=rLDFq1TTVIM",
+    "source_type": "affiliate",
+    "score": 78,
+    "reason": "WHAS11 Louisville, 1:45, man says his utility bill tripled; LG&E responds (swap for the unfilmed Manassas homeowner)",
+    "cannot_determine": [
+     "his age",
+     "date"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=WJNBBKlWIyM",
+    "source_type": "affiliate",
+    "score": 74,
+    "reason": "FOX 35 Orlando, 2:01, 'It's insane': Leesburg residents' $700 and $800 electric bills",
+    "cannot_determine": [
+     "date"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=iYvr3a2Vols",
+    "source_type": "affiliate",
+    "score": 68,
+    "reason": "WPXI Pittsburgh, 2:23, shockingly high electric bills surprise homeowners",
+    "cannot_determine": [
+     "date"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=QTFx6LE3p2Y",
+    "source_type": "affiliate",
+    "score": 56,
+    "reason": "KTLA, 3:02, SoCal residents' skyrocketing bills (Aug 2024; summer, old)",
+    "cannot_determine": [],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=0yiLtWl4W6g",
+    "source_type": "first_person",
+    "score": 44,
+    "reason": "The Fixit Shed, 4:55, 'My electric bill skyrocketed! Let's find out why'",
+    "cannot_determine": [
+     "channel credibility"
+    ],
+    "promoted_by_floor": true
+   }
+  ]
+ },
+ {
+  "beat_id": "10-21-C3",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "priority": 2,
+  "expected_segments": 1,
+  "source_mix": {
+   "affiliate": 3,
+   "network": 1,
+   "creator_long": 1
+  },
+  "shortlist_note": "Diversity floor: promoted Life In General (creator_long) over WCPO's Direct Energy piece; 30+ below the top.",
+  "candidates": [
+   {
+    "url": "https://www.youtube.com/watch?v=9WgOQaSNEI8",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "WPXI Target 11, 3:20, investigates unauthorized switching of electricity providers",
+    "cannot_determine": [
+     "named customer on camera?",
+     "date"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kXnLrmP-Wm8",
+    "source_type": "affiliate",
+    "score": 76,
+    "reason": "FOX43, 4:41, energy slamming: signed up for an energy service without approval",
+    "cannot_determine": [
+     "date"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=HAWuJfZUr6w",
+    "source_type": "network",
+    "score": 66,
+    "reason": "CBS Chicago, 2:52, summer expected to bring electric supplier rate scams (Illinois)",
+    "cannot_determine": [
+     "date; mentions price-protection pitch?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=o4VEMJlsqGM",
+    "source_type": "affiliate",
+    "score": 58,
+    "reason": "WTVG Toledo, 2:00, scam alert: electric company scammers",
+    "cannot_determine": [
+     "supplier switch or shutoff threat?"
+    ],
+    "promoted_by_floor": false
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=vtH3veI5tXw",
+    "source_type": "creator_long",
+    "score": 42,
+    "reason": "Life In General, 12:24, 'How they scam you on your energy bill'",
+    "cannot_determine": [
+     "channel credibility"
+    ],
+    "promoted_by_floor": true
+   }
+  ]
+ }
+]

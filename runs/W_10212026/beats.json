@@ -1,0 +1,349 @@
+[
+ {
+  "beat_id": "10-21-A3",
+  "episode": "10-21",
+  "segment_title": "YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT",
+  "script_text": "Unnamed TV owner (2026) opens her smart TV settings on camera and finds the tracking (ACR / viewing information) switched on. Brands: Samsung Viewing Information Services, LG Live Plus, Vizio Viewing Data, Roku Use Info from TV Inputs.",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "news_anchor": "smart TV ACR viewing data tracking turned on by default",
+  "visual_spec": "handheld vertical, TV settings menu on screen, person reacting to camera",
+  "platforms": [
+   "tiktok",
+   "instagram",
+   "shorts"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "commentary_only",
+  "sourcability_note": "Shorts scan found 10 Tampa Bay News 'How to turn off the snooping settings' (45s, a reporter explainer, no owner on camera); no first-person find yet. TikTok/Reels unreachable from here.",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "smart TV tracking setting turned on"
+   ],
+   "victim": [
+    "I just found this setting on my TV",
+    "my TV has been tracking everything I watch"
+   ],
+   "platform": [
+    "#smarttv privacy setting",
+    "turn off ACR samsung",
+    "LG live plus turn off"
+   ],
+   "anchor": [
+    "smart TV ACR viewing data tracking turned on by default"
+   ],
+   "shorts": [
+    "#smarttv tracking setting",
+    "check this setting on your TV right now",
+    "your TV is spying on you turn this off",
+    "turn off viewing information samsung"
+   ]
+  }
+ },
+ {
+  "beat_id": "10-21-A4",
+  "episode": "10-21",
+  "segment_title": "YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT",
+  "script_text": "She Prepares, older-audience creator (Oct 2026): 'What Walmart TVs and LG Are Really Doing When Inside Your Home...' (~1.07M, ~12:46). Walmart-owned Vizio and LG TVs, the ad business behind the screen; LG Ad Solutions says 49M US LG TVs.",
+  "orientation": "horizontal",
+  "clip_role": "explainer_demo/creator_long",
+  "news_anchor": "Walmart Vizio LG TV tracking ad data",
+  "visual_spec": "woman creator talking to camera, home setting, TV references",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "HAVE: 6WT5fc-LHSc found (She Prepares, 12:46); a repost exists on 'A Cooked Generation' (YG-E9pm2zrQ) \u2014 use the original.",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "Walmart TV LG tracking viewers",
+    "Vizio Walmart viewing data ads"
+   ],
+   "victim": [],
+   "platform": [
+    "She Prepares Walmart TVs LG",
+    "what your smart TV is really doing"
+   ],
+   "anchor": [
+    "Walmart Vizio LG TV tracking ad data"
+   ],
+   "shorts": [
+    "walmart tv spying #smarttv",
+    "LG tv watching you",
+    "your walmart tv is tracking you"
+   ]
+  },
+  "queries_note": {
+   "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
+  }
+ },
+ {
+  "beat_id": "10-21-A5",
+  "episode": "10-21",
+  "segment_title": "YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT",
+  "script_text": "Texas Attorney General sued Samsung, LG, Sony, Hisense and TCL (Dec 15, 2025) over ACR tracking; Samsung agreed Feb 26, 2026 and LG May 11, 2026 to ask Texans' permission first. Only in Texas.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Texas settlement LG Samsung smart TV privacy ACR",
+  "visual_spec": "local TV news package, Texas AG graphic or TV store b-roll",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "KVUE 'Texas reaches settlement with LG in smart TV privacy lawsuit' (0ZWvqw17HIQ, 78s). Also Lon.TV covered the suit (dehzLA4kFqM) \u2014 our guest's own channel.",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "Texas settlement LG smart TV privacy",
+    "Texas sues TV makers automatic content recognition",
+    "Samsung Texas agreement viewing data"
+   ],
+   "victim": [],
+   "platform": [
+    "Texas AG smart TV lawsuit",
+    "Paxton TV spying lawsuit"
+   ],
+   "anchor": [
+    "Texas settlement LG Samsung smart TV privacy ACR"
+   ],
+   "shorts": [
+    "texas sues tv companies spying",
+    "your tv takes screenshots texas lawsuit",
+    "smart tv lawsuit texas"
+   ]
+  },
+  "queries_note": {
+   "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
+  }
+ },
+ {
+  "beat_id": "10-21-A6",
+  "episode": "10-21",
+  "segment_title": "YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT",
+  "script_text": "Steve Burke, Gamers Nexus (Sept 7, 2026): '216,000,000 Spy TVs | The LG Smart TV Problem' (~8.1M). Alleges LG TVs recorded room audio in standby and sent location data to LG's ad company. LG: 'The claims made in the recently published video are not true.' Follow-up 'LG Says We're Fake News' (~3.9M).",
+  "orientation": "horizontal",
+  "clip_role": "explainer_demo/creator_long",
+  "news_anchor": "Gamers Nexus LG TV standby audio investigation LG denies",
+  "visual_spec": "tech YouTuber at desk, LG TV teardown or network capture on screen",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "HAVE: 6IFVTcM28KA found (2h16m long). Also Gamers Nexus 'DO NOT BUY' (Q9uefFYe6bM), an independent test 'I Tapped One to Find Out' (Sg9tUEk1c7A), and a news item on LG's denial (ithql0q2J1g).",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "LG denies TV spying allegations",
+    "LG smart TV audio standby investigation"
+   ],
+   "victim": [],
+   "platform": [
+    "Gamers Nexus LG spy TVs",
+    "LG says we're fake news"
+   ],
+   "anchor": [
+    "Gamers Nexus LG TV standby audio investigation LG denies"
+   ],
+   "shorts": [
+    "LG tv spying gamers nexus",
+    "LG tv listening when off",
+    "216 million spy tvs"
+   ]
+  },
+  "queries_note": {
+   "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
+  }
+ },
+ {
+  "beat_id": "10-21-B1",
+  "episode": "10-21",
+  "segment_title": "THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO",
+  "script_text": "Hope Orr, Draper, Utah (Oct 5, 2026, KSL Get Gephardt): after returning a Turo rental the host billed $165 for smoking and Turo said a $500 tire charge was coming.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Turo host fake tire damage photo Reddit KSL",
+  "visual_spec": "woman interviewed at home, local news lower-third, phone with Turo app",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "HAVE: KSL 1_wUVS5szfw (~547K, 5 days, per pre-bible 10/11). Name search returned noise; the pre-bible link stands.",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "Turo renter charged fake damage",
+    "Turo host fake tire photo",
+    "rental car damage charge she didn't cause"
+   ],
+   "victim": [],
+   "platform": [
+    "KSL Get Gephardt Turo",
+    "Turo damage claim scam"
+   ],
+   "anchor": [
+    "Turo host fake tire damage photo Reddit KSL"
+   ],
+   "shorts": [
+    "turo host scam fake damage",
+    "rental car damage bill weeks later",
+    "she reverse image searched the damage photo"
+   ]
+  },
+  "queries_note": {
+   "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
+  }
+ },
+ {
+  "beat_id": "10-21-B2",
+  "episode": "10-21",
+  "segment_title": "THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO",
+  "script_text": "Hope Orr ran a reverse image search: the tire photo was a years-old Reddit picture of a different car. Host told KSL he filed 'more than 5,000 tire claims in the last nine years.' Turo banned him and refunded her.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Turo host fake tire damage photo Reddit KSL",
+  "visual_spec": "woman showing phone screen with image search, reporter voiceover",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "Same KSL clip as B1 (second segment).",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "Turo host banned fake photo",
+    "reverse image search damage photo Reddit"
+   ],
+   "victim": [],
+   "platform": [
+    "Turo fake tire claim reddit photo"
+   ],
+   "anchor": [
+    "Turo host fake tire damage photo Reddit KSL"
+   ],
+   "shorts": [
+    "fake damage photo found on reddit",
+    "turo host banned"
+   ]
+  },
+  "queries_note": {
+   "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
+  }
+ },
+ {
+  "beat_id": "10-21-C2",
+  "episode": "10-21",
+  "segment_title": "WINTER BILLS ARE GOING UP, AND THIS ONE CALL CAN DOUBLE YOURS",
+  "script_text": "Manassas, Virginia homeowner, unnamed (Jan 2026, Consumer Reports March 2026): January bill jumped from about $100 to $281. Residential electricity prices rose 7.1% in 2025.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "electric bill tripled winter homeowner",
+  "visual_spec": "homeowner holding a bill at the kitchen table, local news interview",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "commentary_only",
+  "sourcability_note": "No video of the Manassas homeowner (print, Consumer Reports). Swap candidate with a person on camera: WHAS11 'Man claims his utility bill tripled in cost; LG&E provides reason' (rLDFq1TTVIM, 105s).",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "electric bill tripled homeowner",
+    "winter electric bill shock",
+    "utility bill doubled family"
+   ],
+   "victim": [],
+   "platform": [
+    "my electric bill tripled",
+    "electric bill spike explained"
+   ],
+   "anchor": [
+    "electric bill tripled winter homeowner"
+   ],
+   "shorts": [
+    "my electric bill is insane",
+    "electric bill tripled this month",
+    "utility bill shock #electricbill"
+   ]
+  },
+  "queries_note": {
+   "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
+  }
+ },
+ {
+  "beat_id": "10-21-C3",
+  "episode": "10-21",
+  "segment_title": "WINTER BILLS ARE GOING UP, AND THIS ONE CALL CAN DOUBLE YOURS",
+  "script_text": "Illinois AG settled with Rushmore Energy (June 4, 2026), alleging it enrolled people without consent at rates 'nearly double' the utility's while claiming ties to the utility or a government 'price protection program.'",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "electric supplier price protection program scam switched without consent",
+  "visual_spec": "local news consumer report, utility bill close-up, phone call graphic",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "commentary_only",
+  "sourcability_note": "No Rushmore video found. Generic supplier-scam reports exist: CBS Chicago 'Summer Expected To Bring Electric Supplier Rate Scams' (HAWuJfZUr6w), WTVG 'Scam alert: electric company scammers' (o4VEMJlsqGM). No named customer.",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "electric supplier switched without consent",
+    "alternative energy supplier scam door to door",
+    "utility price protection program scam call"
+   ],
+   "victim": [],
+   "platform": [
+    "electric supplier scam call",
+    "energy supplier slamming"
+   ],
+   "anchor": [
+    "electric supplier price protection program scam switched without consent"
+   ],
+   "shorts": [
+    "electric company scam call",
+    "they switched my electric supplier",
+    "utility scam call #scamalert"
+   ]
+  },
+  "queries_note": {
+   "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
+  }
+ }
+]
