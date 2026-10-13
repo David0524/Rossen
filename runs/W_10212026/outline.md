@@ -1,95 +1,106 @@
 # 10/21 WEDNESDAY — STORY OUTLINE
 
-**Airdate:** Wednesday, October 21, 2026 (F2, taped) · **Stories:** A + B + C, approved by the producer 10/13 (jeff_approval.md) · **Guest:** Lon Seidman, tech reviewer, Lon.TV (A story) · **Sponsor:** OmniWatch (2 breaks) · **Stage:** beats
+**Airdate:** Wednesday, October 21, 2026 (F2, taped) · **Stories:** A + B + C, approved by the producer 10/13 (jeff_approval.md) · **Guest:** Lon Seidman, tech reviewer, Lon.TV (A story) · **Sponsor:** OmniWatch (2 breaks) · **Stage:** videos
 
 ## RUNNING ORDER
 
 | Slot | What | Weight | Clips |
 |---|---|---|---|
-| Tease | The TV that watches what you watch, the rental bill with a fake photo, the call that doubles your electric rate | — | — |
-| A | Your TV is watching what you watch: turn this off tonight | ~55% of show | 4 |
-| Break | OmniWatch — after A beat 8 (Lon's bottom line) | — | — |
-| B | They're billing you for damage you didn't do | ~25% | 2 |
+| Tease | The TV that watches what you watch, the rental bill with a fake photo, the energy company you never signed up for | — | — |
+| A | Your TV is watching what you watch: turn this off tonight | ~55% of show | 3/3 |
+| Break | OmniWatch — after A beat 7 (Lon's bottom line) | — | — |
+| B | They're billing you for damage you didn't do | ~25% | 2/2 |
 | Break | OmniWatch — after B beat 4 (your phone is your alibi) | — | — |
-| C | Winter bills are going up, and this one call can double yours | ~20% | 2 |
+| C | Winter bills are going up, and you may have been switched to a supplier you never chose | ~20% | 1/1 |
 | End | End of show | — | — |
 
-**Open package:** A beat 4, She Prepares on Walmart and LG TVs.
+**Open package:** A beat 3, She Prepares on Walmart and LG TVs.
 
 ### The show in three sentences
 
-Your smart TV checks what's on its screen every few seconds and sells the pattern to advertisers, it's on by default, and only people in Texas were ever asked. A separate investigation says LG sets may record audio in standby, which LG denies, so we keep that claim separate and show you the setting that's proven on every brand. Then a rental host bills a renter for a tire with a photo of a different car, and callers ride this winter's higher bills to switch you to a supplier charging nearly double.
+Your smart TV checks what's on its screen and sells the pattern to advertisers, it's on by default, and only people in Texas were ever asked. A separate investigation says LG sets can record audio in standby, which LG denies, so we keep that claim separate and lean on what's proven: the tracking, and how to turn it off where your TV lets you. Then a rental host bills a renter for a tire with a photo of a different car, and as winter bills rise, a Pennsylvania woman finds she's been signed up with an electric supplier she never heard of.
 
 ### The ride
 
-A climbs from your screen to the ad companies to the claim about your living room, then exhales on a fix any viewer can do with the remote, walked through by Lon. B is a quick outrage with a satisfying catch: she proved the photo was fake. C starts with a bill everyone dreads and ends on one line to check tonight, so the show exhales twice.
+A climbs from your screen to the ad companies to the claim about your living room, then exhales on a fix walked through by Lon. B is a quick outrage with a satisfying catch: she proved the photo was fake. C starts with a bill everyone dreads and ends on one line to check tonight, so the show exhales twice.
 
 ### Decisions before we write
 
 - Slate is final as approved (producer, 10/13). Third TV-tracking video (January ~654K, spring ~316K; Ryan says the devices video was a hit); the title has to sell a new angle (the Texas deals or the LG claim).
-- No demos this show (producer, 10/13). Lon walks through each brand's menu path (A7) over a full-screen graphic of the paths; B and C fixes are Jeff on camera.
-- Open package: She Prepares (A4), the undisputed tracking story. Not the Gamers Nexus clip, which carries the disputed LG claim.
-- A is thin on people: A3 has no person yet, and A4 to A6 are a creator, a state and a company. A3 is the human beat; it needs a name.
-- Lon Seidman: confirm booked, and check for sponsor or affiliate ties to TV brands or Roku before he gives settings advice.
-- B: no 55+ victim, and both renters were refunded, so there's no real-loss case to lead with. It plays as a warning with a fix.
+- No demos this show (producer, 10/13). Lon walks through where the setting usually lives (A6), and what to do when a TV doesn't have one; B and C fixes are Jeff on camera.
+- A: menu paths vary by model and some TVs have no off switch (producer, 10/13). Don't promise "the one setting" works on every TV; the fix leads with "check," then the brand names, then the no-setting fallback.
+- A cut from 4 clips to 3 at Checkpoint 2 (producer, 10/13): no TV owner on camera, so the old A3 is gone and A is renumbered.
+- A5 · LEGAL: the Gamers Nexus cut carries the claim and not LG's denial. Jeff reads LG's statement right after it ("The claims made in the recently published video are not true").
+- A is thin on people: A3 to A5 are a creator, a state and a researcher. Lon is the human in A.
+- Lon Seidman: confirm booked, and check for sponsor or affiliate ties to TV brands or Roku before he gives settings advice. On his own channel he argued Texas's LG settlement "let them off the hook."
+- B: no 55+ victim, and Hope was refunded, so there's no real-loss case to lead with. It plays as a warning with a fix.
 - B: hotel fees left out (one Jeff line at most, in Jeff should know).
-- C has no 55+ victim and no clip of the call yet; C3 has no person. Without a find, C is Jeff plus one news clip.
+- C rewritten at Checkpoint 3 (producer, 10/13): the York County supplier-switch ("slamming") case is the story. The Rushmore "price protection" call stays as a Jeff line. The old C2 (a bill that tripled) is cut: the only finds were a 2022 summer bill and a 2023 package with no customer on camera.
 - C savings guide: three sourced lines (check your supply rate, budget billing, LIHEAP) (producer, 10/13).
+- Picks: 6/6 verified against YouTube captions (rung 1). Source mix: affiliate 3 · creator_long 3.
 
 # A. YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT
 
-**In one sentence:** Smart TVs check what's on screen every few seconds and sell that data to advertisers, it's on by default, only Texans got asked, and one setting turns it off.
+**In one sentence:** Smart TVs check what's on screen and sell that data to advertisers, it's on by default, only Texans got asked, and on most sets you can switch it off.
 
 **Hold back:** the setting's name on each brand and where it hides in the menu.
 
-**Peg:** Texas forced Samsung (Feb 2026) and LG (May 2026) to ask before tracking → but only in Texas → everyone else is still opted in and was never asked. "Texas got asked. You didn't." Plus the Gamers Nexus investigation (Sept 7) that put TV spying back in the news.
+**Peg:** Texas forced Samsung (Feb 2026) and LG (May 2026) to ask before tracking → but only in Texas → everyone else is still opted in and was never asked. "Texas got asked. You didn't." Plus the Gamers Nexus investigation (Sept 6) that put TV spying back in the news.
 
 **Framing:** your smart TV, whatever the brand, on by default.
 
 **Climb:** closer and closer to you: what's on your screen → who buys it → what the TV might hear in the room (disputed) → you take it back.
 
-**Weight:** ~55% of show · 4 clip beats
+**Weight:** ~55% of show · 3 clip beats
 
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
 | 1 | The hook | You (the viewer) | Every show you watch, even a DVD or a cable box, your smart TV checks what's on the screen. | JEFF |
 | 2 | It's watching | Lon Seidman, tech reviewer, Lon.TV | The feature is called ACR: snapshots of the screen matched to a database, on by default; one 2024 study clocked LG about every 15 seconds. | GUEST |
-| 3 | She finds it on | Unnamed — need a name (TV owner, 2026) | A TV owner opens her settings on camera and finds the tracking switched on. | FIND · VERTICAL — TikTok/Reels of an owner finding ACR on |
-| 4 | Who's buying | She Prepares, older-audience creator (Oct 2026) | Her video on Walmart and LG TVs and the ad business behind the screen. | HAVE · HORIZONTAL — She Prepares 6WT5fc-LHSc |
-| 5 | Only Texas got asked | Texas Attorney General's office (Dec 2025 – May 2026) | Texas sued TV makers; Samsung and LG agreed to ask Texans first, and nobody else. | FIND · HORIZONTAL — Texas TV news on the AG suits or settlements |
-| 6 | The claim LG denies | Steve Burke, Gamers Nexus (Sept 2026) | His investigation alleges LG sets recorded room audio in standby; LG says the claims are not true. | HAVE · HORIZONTAL — Gamers Nexus 6IFVTcM28KA |
-| 7 | Turn it off, brand by brand | Lon Seidman | Lon walks through the setting's name and menu path for Samsung, LG, Vizio, Roku and Sony, over a graphic. | GUEST |
-| 8 | Lon's bottom line | Lon Seidman | The TV keeps working with it off, ads just get less targeted, plus the microphone setting worth checking. | GUEST |
+| 3 | Who's buying | She Prepares, older-audience creator (Oct 2026) | Vizio's own policy: what you watch is licensed to partners and tied to your age, location and purchases; Walmart bought Vizio for the ads. | HAVE · HORIZONTAL — She Prepares 6WT5fc-LHSc |
+| 4 | Only Texas got asked | Texas Attorney General's office (Dec 2025 – May 2026) | Texas sued TV makers; Samsung and LG agreed to ask Texans first, and nobody else. | FIND · HORIZONTAL — Texas TV news on the AG suits or settlements |
+| 5 | The claim LG denies | Steve Burke, Gamers Nexus (Sept 2026) | His team captured microphone audio from an LG TV that looked off and was unplugged from the network; LG says the claims are not true. | HAVE · HORIZONTAL — Gamers Nexus 6IFVTcM28KA |
+| 6 | Turn it off, if you can | Lon Seidman | Where the setting usually lives on Samsung, LG, Vizio, Roku and Sony, over a graphic, and what to do when your TV has none. | GUEST |
+| 7 | Lon's bottom line | Lon Seidman | The TV keeps working with it off, ads just get less targeted, plus the microphone setting worth checking. | GUEST |
+
+### Videos
+
+| # | Clip | Shows | In–Out | Status |
+|---|---|---|---|---|
+| 3 | [She Prepares — What Walmart TVs and LG Are Really Doing When Inside Your Home...](https://www.youtube.com/watch?v=6WT5fc-LHSc) | She reads Vizio's privacy policy in plain words (viewing data licensed to partners, combined with age, location and purchases), then why Walmart bought Vizio: the ad business. Uploaded Oct 3, 2026, 12:46, 1.23M views. | 8:13–9:13 "what you buy" BUTT 10:02–10:33 "gives them to you" | PICK |
+| 4 | [KVUE — Texas reaches settlement with LG in smart TV privacy lawsuit](https://www.youtube.com/watch?v=0ZWvqw17HIQ) | Paxton's LG settlement requires a pop-up and an opt-out; LG admits no wrongdoing; Samsung also settled; Sony, Hisense and TCL cases ongoing. Uploaded May 11, 2026, 1:18. | 0:00–0:49 "under this agreement" BUTT 1:08–1:16 "are still ongoing" | PICK |
+| 5 | [Gamers Nexus — 216,000,000 Spy TVs: The LG Smart TV Problem](https://www.youtube.com/watch?v=6IFVTcM28KA) | Steve Burke: microphone audio captured while the TV appeared off and unplugged, stored and pulled out "by someone with remote access" through vulnerabilities. LG's denial is not in this window. Uploaded Sept 6, 2026, 2:15:52, 8.2M views. | 0:26–0:52 "user reconnected the network" | PICK · LEGAL |
 
 ### The fix
 
-- After Lon (beat 2): an ad for something you just watched on another channel is ACR at work.
-- After She Prepares (beat 4): if your TV asked you to "agree" to anything at setup, assume the tracking is on.
-- After Gamers Nexus (beat 6): don't wait for the listening claim to be settled; turn off what's proven.
-- Samsung: Viewing Information Services, off (Consumer Reports, how to turn off smart TV snooping, updated 10/19/2025). ⚠️ verify on a 2026 set.
-- LG: Viewing Information (Live Plus), off (Consumer Reports). ⚠️ verify on a 2026 set.
-- Vizio: Viewing Data, off (Consumer Reports). ⚠️ verify on a 2026 set.
-- Roku TVs: Use Info from TV Inputs, off (Consumer Reports). ⚠️ verify on a 2026 set.
-- Sony: Samba Interactive TV, off (Consumer Reports). ⚠️ verify on a 2026 set.
-- Microphone: Roku, Microphone Access to Never Allow; Samsung's physical mic switch. ⚠️ unsourced, verify on the sets.
-- Do-nothing test: do nothing and the tracking stays on; turning it off doesn't break the TV (Consumer Reports). ⚠️ Check whether a software update or factory reset turns it back on; if so, add "check again after updates."
+- After She Prepares (beat 3): if your TV asked you to "agree" to anything at setup, assume the tracking is on.
+- After Texas (beat 4): you're not in Texas, so nobody is going to ask you. Check it yourself.
+- After Gamers Nexus (beat 5): don't wait for the listening claim to be settled; turn off what's proven.
+- Look in privacy or viewing settings first; the names below are where it usually lives, and they vary by model. ⚠️ verify on 2026 sets
+- Samsung: Viewing Information Services, off (Consumer Reports, how to turn off smart TV snooping, updated 10/19/2025).
+- LG: Viewing Information (Live Plus), off (Consumer Reports).
+- Vizio: Viewing Data, off (Consumer Reports). Vizio says turning it off won't affect how the TV works (Vizio privacy policy, per She Prepares, 9:14).
+- Roku TVs: Use Info from TV Inputs, off (Consumer Reports).
+- Sony: Samba Interactive TV, off (Consumer Reports).
+- No setting on your TV? ⚠️ Lon to confirm the fallback (e.g. take the TV off Wi-Fi and use a streaming device); unsourced.
+- Microphone: Roku, Microphone Access to Never Allow; Samsung's physical mic switch. ⚠️ unsourced, Lon to confirm.
+- Do-nothing test: do nothing and the tracking stays on. Opting out did stop data going to the tracking servers in one study's tests (cited by She Prepares, 6:27). ⚠️ Check whether a software update or factory reset turns it back on.
 - The one setting the tease promises is ACR, under each brand's name above (Consumer Reports).
 
 ### Gaps
 
-- ⚠️ Beat 3: no person yet. If the search comes back empty, beat 3 folds into Jeff and the demo.
-- ⚠️ Beat 5: the Texas suits are Dec 2025 and Samsung's deal Feb 2026, more than six months before airdate. Date them on air ("last December," "in February").
+- ⚠️ Beat 4: the Texas suits are Dec 2025 and Samsung's deal Feb 2026, more than six months before airdate. Date them on air ("last December," "in February").
 - ⚠️ Beat 2: the IMC study is 2024. Date it on air.
-- ⚠️ Beat 4: She Prepares' content is known from its title only; what it says about Walmart and LG is unconfirmed until the transcript.
-- ⚠️ Beats 4 and 6 are creator videos, so they need clearance. No local news clip on this story is over 200K.
+- ⚠️ Beats 3 and 5 are creator videos and need clearance.
 
 ### Jeff should know
 
-- Beat 6: LG says the claims "are not true," and nothing independent has confirmed them. Never say "LG is listening"; say "the investigation alleges." Gamers Nexus also posted a follow-up, "LG Says We're Fake News" (~3.9M).
-- Beat 5: the Texas deals cover Texans only. Viewers elsewhere have to switch the setting off themselves.
-- Beat 4: the 49 million US LG TVs figure is LG Ad Solutions' own number.
+- Beat 5: LG says the claims "are not true," and nothing independent has confirmed them. Never say "LG is listening"; say "the investigation found" or "alleges." In Gamers Nexus's demo, the recording was retrieved "by someone with remote access" through vulnerabilities; it does not show LG collecting audio.
+- Beat 5: LG told She Prepares' source that in standby the TV only listens for a wake word if far-field voice is turned on, and that audio is deleted and never sent (She Prepares, 4:31).
+- Beat 4: the Texas deals cover Texans only. The KVUE window includes a line about transfers to the Chinese Communist Party (0:36–0:42).
+- Beat 3: Vizio says some "activity data" is still collected even with viewing data off, unless you turn it off at setup or reset the TV (She Prepares, 9:29).
 - Beat 2: the every-15-seconds figure is one 2024 study of LG sets, not every brand.
-- Beat 7: Fire TV left out of the brand list (it's an Amazon device); add it only if the room asks.
+- Beat 6: Fire TV left out of the brand list (it's an Amazon device); add it only if the room asks.
 
 # B. THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO
 
@@ -112,6 +123,13 @@ A climbs from your screen to the ad companies to the claim about your living roo
 | 3 | It's not just one host | Georgina Montalvan, Birmingham (July 2026) | She's billed $2,338 for damage her own pickup photos show was already there, and refunded after a columnist steps in. | JEFF |
 | 4 | Your phone is your alibi | You (the viewer) | Before you drive off, film a slow walkaround, tires and interior; if they send a damage photo, reverse-image-search it. | JEFF |
 
+### Videos
+
+| # | Clip | Shows | In–Out | Status |
+|---|---|---|---|---|
+| 1 | [KSL Get Gephardt — Car rental service attempts to scam Utah woman out of hundreds](https://www.youtube.com/watch?v=1_wUVS5szfw) | Hope Orr: a claim for a nail in the tire and smoking ("I don't smoke"), the host's evidence photos, Turo posts a $500 charge. Uploaded Oct 6, 2026, 4:35, 609K views. | 0:49–1:38 "actually going to cost me" | PICK |
+| 2 | [KSL Get Gephardt — same clip](https://www.youtube.com/watch?v=1_wUVS5szfw) | The host's "I've done more than 5,000 tire claims," the mismatched tread, Turo sides with the host, then the reverse image search finds the photo in a Reddit post "from 4 years ago" and Turo drops the claims. | 1:40–2:51 "removed the bogus claims" | PICK |
+
 ### The fix
 
 - After Hope: a damage photo you can't match to your car. Run it through a reverse image search (Google Lens) before you pay. ⚠️ source
@@ -124,53 +142,62 @@ A climbs from your screen to the ad companies to the claim about your living roo
 
 - ⚠️ Both renters were refunded and neither is confirmed 55+. No real-loss case.
 - ⚠️ Beat 3 is print only (Elliott Report / Boston Globe); no video expected.
-- ⚠️ The KSL article doesn't say "4-year-old" photo; say "years-old."
+- The KSL article doesn't give the photo's age, but the KSL video says "a Reddit post from 4 years ago" (B2, 2:42).
 
 ### Jeff should know
 
-- Beat 2: "more than 5,000 tire claims in the last nine years" is the host's own claim to KSL. Don't name the host.
+- Beat 2: "more than 5,000 tire claims" is the host's own boast, in a message to Hope (KSL). Don't name the host. Turo's policy: hosts who submit false claims face up to a $2,000 fee and removal (KSL, 3:10).
+- Beat 1: the KSL reporter calls the host "a liar" at 0:45; the cut starts after it.
+- Beat 1: she rented the car in Miami (KSL, 0:41).
 - Beat 3: Montalvan's rental company isn't confirmed as Turo; keep it "a renter in Birmingham."
 - Hotel fees: the FTC rule since May 2025 says mandatory resort fees must be in the total price, if the room keeps a line on it.
 
-# C. WINTER BILLS ARE GOING UP, AND THIS ONE CALL CAN DOUBLE YOURS
+# C. WINTER BILLS ARE GOING UP, AND YOU MAY HAVE BEEN SWITCHED TO A SUPPLIER YOU NEVER CHOSE
 
-**In one sentence:** Winter heating bills are rising, and callers claiming to be from your utility's "price protection program" switch you to a supplier charging nearly double.
+**In one sentence:** As winter bills rise, people are being signed up with electric suppliers they never chose, by a forged signature at the door or a "price protection" call, and one line on the bill shows it.
 
-**Hold back:** the "price protection" offer is the trap: saying yes is what doubles your rate.
+**Hold back:** she never signed anything; someone forged her name.
 
-**Peg:** EIA's winter outlook (Oct 6) says electric-heat homes pay about 4% more and heating-oil homes about 21% more → people are already worried about the bill → a call offering to "lock in" a rate sounds like help. "The bill is real. The program isn't."
+**Peg:** EIA's winter outlook (Oct 6) says electric-heat homes pay about 4% more and heating-oil homes about 21% more → people are already worried about the bill → an offer to "lock in" a rate, at the door or on the phone, sounds like help. "The bill is real. The program isn't."
 
-**Framing:** a phone call about your electric bill from someone who says they're with your utility.
+**Framing:** someone switches your electric supplier without your OK, at your door or on the phone.
 
-**Climb:** your bill goes up → someone offers to protect you → the protection nearly doubles it.
+**Climb:** your bill goes up → a stranger offers to help with it → you find out you've been switched without saying yes.
 
-**Weight:** ~20% of show · 2 clip beats
+**Weight:** ~20% of show · 1 clip beat
 
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
-| 1 | The bill goes up | You (the viewer) | Electric-heat homes will pay about 4% more this winter and heating-oil homes about 21% more (EIA, Oct 6). | JEFF |
-| 2 | Her bill nearly tripled | Manassas, Virginia homeowner, unnamed (Jan 2026) | Her January bill jumps from about $100 to $281. | FIND · HORIZONTAL — local news on a Manassas or Virginia bill spike |
-| 3 | The call | Unnamed — need a name (Illinois customer, 2026) | A caller claims a utility "price protection program," and the customer is enrolled with Rushmore Energy at nearly double the rate. | FIND · HORIZONTAL — Illinois news on the AG's Rushmore settlement or a switched customer |
-| 4 | Check this line tonight | You (the viewer) | Find "supply" or "price to compare" on your bill, and call your utility if you don't recognize the company. | JEFF |
+| 1 | The bill goes up | You (the viewer) | Electric-heat homes pay about 4% more this winter, heating-oil homes about 21% (EIA, Oct 6); Illinois callers pitched "price protection." | JEFF |
+| 2 | She never signed | York County, Pennsylvania woman (Sept 2024) | A letter says she's enrolled with an energy supplier she's never heard of; a door-to-door agent forged her signature. | FIND · HORIZONTAL — FOX43 kXnLrmP-Wm8 |
+| 3 | Check this line tonight | You (the viewer) | Find "supply" or "price to compare" on your bill, and call your utility if you don't recognize the company. | JEFF |
+
+### Videos
+
+| # | Clip | Shows | In–Out | Status |
+|---|---|---|---|---|
+| 2 | [FOX43 — Energy slamming: How you could be signed up for an energy service without approval](https://www.youtube.com/watch?v=kXnLrmP-Wm8) | The letter she almost threw out, "I've never even heard of them," the forged signature, "slamming" is illegal, and the company says its third-party marketer was fired. Uploaded Sept 10, 2024, 4:41. | 0:48–1:29 "never even heard of them" BUTT 1:56–2:04 "and it's illegal" BUTT 3:13–3:29 "has been terminated" | PICK |
 
 ### The fix
 
-- After the homeowner: a bill that jumps with no change in use. Check who your supplier is before anything else.
-- After the call: your utility won't call to "lock" your rate. Hang up and call the number on your bill.
+- After the woman in York County: a letter from an energy company you don't know isn't junk. Open it.
+- Your utility won't call or knock to "lock" your rate. Close the door or hang up, and call the number on your bill. ⚠️ source (your utility's scam page)
 - Find the supplier and "price to compare" lines on your bill. ⚠️ source (state utility commission page; the term varies by state)
-- Never give your account number to a caller (Illinois Attorney General, Rushmore Energy settlement, 6/4/2026). ⚠️ confirm the AG's page says it
+- Switched without your OK? File a complaint with your state utility commission (Pennsylvania PUC, per WPXI and FOX43). ⚠️ confirm on the PUC page
+- Never give your account number to a caller or a door-to-door agent (Illinois Attorney General, Rushmore Energy settlement, 6/4/2026). ⚠️ confirm the AG's page says it
 - Budget billing to spread winter costs (your utility). ⚠️ source
 - LIHEAP for help paying heating bills, through your state. ⚠️ verify 2026–27 funding (acf.hhs.gov)
-- Do-nothing test: if you were already switched, doing nothing keeps you on the higher rate. Call your utility to switch back, and ask about cancellation fees. ⚠️ source
+- Do-nothing test: if you were already switched, doing nothing keeps you on their rate. Call your utility to switch back, and ask about cancellation fees. ⚠️ source
 
 ### Gaps
 
-- ⚠️ No 55+ victim and no clip of the call. Beat 3 may end up a news clip about the settlement, not a person.
-- ⚠️ C2 Manassas bill is January 2026 (Consumer Reports, March): date it on air ("last January").
+- ⚠️ C2 York County woman is Sept 2024: date it on air ("a couple of years ago").
+- ⚠️ Her name is garbled in the auto-captions; get it from FOX43's article before the bible.
 - ⚠️ Supplier switching only exists in states with retail choice. The tell has to work for viewers everywhere.
 
 ### Jeff should know
 
-- Beat 3: the Rushmore matter is a settlement of the Illinois AG's allegations; "nearly double" is the AG's wording. ⚠️ Check whether Rushmore admitted anything.
+- Beat 2: the supplier in the FOX43 story is Indra Energy (licensed under Palmco); Indra said it couldn't tell how its door-to-door marketer got her information and fired the marketer. Pennsylvania's PUC was investigating. Don't name the company on air unless the room wants to.
+- Beat 1: the Rushmore matter is a settlement of the Illinois AG's allegations; "nearly double" is the AG's wording. ⚠️ Check whether Rushmore admitted anything.
 - Beat 1: don't say data centers doubled bills. Leave data centers out.
-- Beat 4: in states without supplier choice there's no supply company to switch, and a call like this is a scam outright.
+- Beat 3: in states without supplier choice there's no supply company to switch, and a call like this is a scam outright.
