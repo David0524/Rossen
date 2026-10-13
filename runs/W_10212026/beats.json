@@ -3,50 +3,6 @@
   "beat_id": "10-21-A3",
   "episode": "10-21",
   "segment_title": "YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT",
-  "script_text": "Unnamed TV owner (2026) opens her smart TV settings on camera and finds the tracking (ACR / viewing information) switched on. Brands: Samsung Viewing Information Services, LG Live Plus, Vizio Viewing Data, Roku Use Info from TV Inputs.",
-  "orientation": "vertical",
-  "clip_role": "first_person_rant",
-  "news_anchor": "smart TV ACR viewing data tracking turned on by default",
-  "visual_spec": "handheld vertical, TV settings menu on screen, person reacting to camera",
-  "platforms": [
-   "tiktok",
-   "instagram",
-   "shorts"
-  ],
-  "offsite_likely": false,
-  "priority": 2,
-  "expected_segments": 1,
-  "sourcability": "commentary_only",
-  "sourcability_note": "Shorts scan found 10 Tampa Bay News 'How to turn off the snooping settings' (45s, a reporter explainer, no owner on camera); no first-person find yet. TikTok/Reels unreachable from here.",
-  "source_native": "none",
-  "queries": {
-   "news": [
-    "smart TV tracking setting turned on"
-   ],
-   "victim": [
-    "I just found this setting on my TV",
-    "my TV has been tracking everything I watch"
-   ],
-   "platform": [
-    "#smarttv privacy setting",
-    "turn off ACR samsung",
-    "LG live plus turn off"
-   ],
-   "anchor": [
-    "smart TV ACR viewing data tracking turned on by default"
-   ],
-   "shorts": [
-    "#smarttv tracking setting",
-    "check this setting on your TV right now",
-    "your TV is spying on you turn this off",
-    "turn off viewing information samsung"
-   ]
-  }
- },
- {
-  "beat_id": "10-21-A4",
-  "episode": "10-21",
-  "segment_title": "YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT",
   "script_text": "She Prepares, older-audience creator (Oct 2026): 'What Walmart TVs and LG Are Really Doing When Inside Your Home...' (~1.07M, ~12:46). Walmart-owned Vizio and LG TVs, the ad business behind the screen; LG Ad Solutions says 49M US LG TVs.",
   "orientation": "horizontal",
   "clip_role": "explainer_demo/creator_long",
@@ -84,10 +40,11 @@
   },
   "queries_note": {
    "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
-  }
+  },
+  "original_beat_id": "10-21-A4"
  },
  {
-  "beat_id": "10-21-A5",
+  "beat_id": "10-21-A4",
   "episode": "10-21",
   "segment_title": "YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT",
   "script_text": "Texas Attorney General sued Samsung, LG, Sony, Hisense and TCL (Dec 15, 2025) over ACR tracking; Samsung agreed Feb 26, 2026 and LG May 11, 2026 to ask Texans' permission first. Only in Texas.",
@@ -128,10 +85,11 @@
   },
   "queries_note": {
    "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
-  }
+  },
+  "original_beat_id": "10-21-A5"
  },
  {
-  "beat_id": "10-21-A6",
+  "beat_id": "10-21-A5",
   "episode": "10-21",
   "segment_title": "YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT",
   "script_text": "Steve Burke, Gamers Nexus (Sept 7, 2026): '216,000,000 Spy TVs | The LG Smart TV Problem' (~8.1M). Alleges LG TVs recorded room audio in standby and sent location data to LG's ad company. LG: 'The claims made in the recently published video are not true.' Follow-up 'LG Says We're Fake News' (~3.9M).",
@@ -171,7 +129,8 @@
   },
   "queries_note": {
    "victim": "empty by rule \u2014 measured 0 on horizontal/YouTube"
-  }
+  },
+  "original_beat_id": "10-21-A6"
  },
  {
   "beat_id": "10-21-B1",
