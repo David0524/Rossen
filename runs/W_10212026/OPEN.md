@@ -1,7 +1,7 @@
 # 10/21 F2 — open items (as of 10/13)
 
 Approved slate (producer, 10/13): A smart TV tracking (guest Lon Seidman), B Turo fake damage, C electric supplier slamming. See `jeff_approval.md`.
-Outline w/ videos done: `10_21_OUTLINE_WED.docx` (Stage: videos, 6/6 picks verified against captions). Pipeline: `picks.json`, `report.md`, `clips/manifest.json`.
+Outline w/ videos done: `10_21_OUTLINE_WED.docx`, also a Google Doc in the `10/21 --` folder (producer asked, 10/13): https://docs.google.com/document/d/1TYHMUm5dFdyy93SN6VTzuc-j2QSv3wzbKuWH-IFdF5g/edit . Edit the Doc in place from now on and keep `outline.md` in sync. (Stage: videos, 6/6 picks verified against captions). Pipeline: `picks.json`, `report.md`, `clips/manifest.json`.
 The combined 10/16 + 10/21 pre-bible is the source (`10_16_and_10_21_Pre_Bible_Pitch.md`).
 
 - [ ] Lon Seidman: confirm booked; check sponsor/affiliate ties to TV brands or Roku; ask him to confirm the no-setting fallback and the mic settings
