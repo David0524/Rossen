@@ -1,12 +1,13 @@
-# 10/21 F2 (story show) + 10/16 F1 — open items
+# 10/21 F2 — open items (as of 10/13)
 
-Combined pre-bible built 10/11: `10_16_and_10_21_Pre_Bible_Pitch.docx` (source `.md`), 12 stories.
-Google Doc (in the `10/16 --` folder): https://docs.google.com/document/d/1rld-4HVizZszz0vBeq_wt9g-U6I9LrbndXEYBzCfTZ8/edit
+Approved slate (producer, 10/13): A smart TV tracking (guest Lon Seidman), B Turo fake damage, C electric supplier slamming. See `jeff_approval.md`.
+Outline w/ videos done: `10_21_OUTLINE_WED.docx` (Stage: videos, 6/6 picks verified against captions). Pipeline: `picks.json`, `report.md`, `clips/manifest.json`.
+The combined 10/16 + 10/21 pre-bible is the source (`10_16_and_10_21_Pre_Bible_Pitch.md`).
 
-- [ ] Producer / Jeff picks for each show (rec: F1 TV lead + $2 water/phone B; F2 lottery A + celebrity or hug B + rental damage C)
-- [ ] Pick two "trusted hands" stories at most (lottery, phone, teller, hug)
-- [ ] Monday pulls: 11Alive article; Houston PD release (phone-store bodycam); Hilton $75 resort-fee clip (TikTok?); Nassau PD release (hug)
-- [ ] Re-check Powerball jackpot on taping day 10/16
-- [ ] Pharmacy: does Jeff do a counter price check? If not, it's a C
-- [ ] Experts: Stickley (TV/phone), Nofziger (lottery/celebrity/hug). Deals: Trey Donovan
-- [ ] Pitch email (Stage 2) once the room picks
+- [ ] Lon Seidman: confirm booked; check sponsor/affiliate ties to TV brands or Roku; ask him to confirm the no-setting fallback and the mic settings
+- [ ] Verify the brand menu paths on 2026 sets (Consumer Reports list is from 10/2025)
+- [ ] A5 · LEGAL: Jeff reads LG's denial right after the Gamers Nexus clip
+- [ ] C2: get the York County woman's name from FOX43's article (captions garble it); date it ("a couple of years ago")
+- [ ] C fix sources: state PUC complaint page, Illinois AG Rushmore page, budget billing, LIHEAP 2026–27
+- [ ] Clearance: She Prepares and Gamers Nexus are creator videos
+- [ ] Bible next (rossen-script-writer), from the outline
