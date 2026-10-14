@@ -9,7 +9,7 @@
 | Tease | The TV that watches what you watch, the rental bill with a fake photo, the energy company you never signed up for | — | — |
 | A | Your TV is watching what you watch: turn this off tonight | ~55% of show | 3/3 |
 | Break | OmniWatch — after A beat 7 (Lon's bottom line) | — | — |
-| B | They're billing you for damage you didn't do | ~25% | 2/2 |
+| B | They're billing you for damage you didn't do | ~25% | 3/3 |
 | Break | OmniWatch — after B beat 4 (your phone is your alibi) | — | — |
 | C | Winter bills are going up, and you may have been switched to a supplier you never chose | ~20% | 1/1 |
 | End | End of show | — | — |
@@ -18,11 +18,11 @@
 
 ### The show in three sentences
 
-Your smart TV checks what's on its screen and sells the pattern to advertisers, it's on by default, and only people in Texas were ever asked. A separate investigation says LG sets can record audio in standby, which LG denies, so we keep that claim separate and lean on what's proven: the tracking, and how to turn it off where your TV lets you. Then a rental host bills a renter for a tire with a photo of a different car, and as winter bills rise, a Pennsylvania woman finds she's been signed up with an electric supplier she never heard of.
+Your smart TV checks what's on its screen and sells the pattern to advertisers, it's on by default, and only people in Texas were ever asked. A separate investigation says LG sets can record audio in standby, which LG denies, so we keep that claim separate and lean on what's proven: the tracking, and how to turn it off where your TV lets you. Then rental car customers get damage bills after they return the car, from Hertz's AI scanner to an owner who faked a tire photo, and as winter bills rise, a Pennsylvania woman finds she's been signed up with an electric supplier she never heard of.
 
 ### The ride
 
-A climbs from your screen to the ad companies to the claim about your living room, then exhales on a fix walked through by Lon. B is a quick outrage with a satisfying catch: she proved the photo was fake. C starts with a bill everyone dreads and ends on one line to check tonight, so the show exhales twice.
+A climbs from your screen to the ad companies to the claim about your living room, then exhales on a fix walked through by Lon. B climbs from a machine billing for dents you can't see to a faked photo, with a satisfying catch: she proved it was fake. C starts with a bill everyone dreads and ends on one line to check tonight, so the show exhales twice.
 
 ### Decisions before we write
 
@@ -33,11 +33,11 @@ A climbs from your screen to the ad companies to the claim about your living roo
 - A5 · LEGAL: the Gamers Nexus cut carries the claim and not LG's denial. Jeff reads LG's statement right after it ("The claims made in the recently published video are not true").
 - A is thin on people: A3 to A5 are a creator, a state and a researcher. Lon is the human in A.
 - Lon Seidman: confirm booked, and check for sponsor or affiliate ties to TV brands or Roku before he gives settings advice. On his own channel he argued Texas's LG settlement "let them off the hook."
-- B: no 55+ victim, and Hope was refunded, so there's no real-loss case to lead with. It plays as a warning with a fix.
+- B reworked (producer, 10/14): rental cars in general, not Turo; Hertz's AI scanner (CBS) leads as the legacy company, then Hope's fake tire photo; the payoff is a video walkaround before you return the car (reverse image search dropped); the Birmingham Turo case is cut. No 55+ victim, and both renters got their money back, so it plays as a warning with a fix.
 - B: hotel fees left out (one Jeff line at most, in Jeff should know).
 - C rewritten at Checkpoint 3 (producer, 10/13): the York County supplier-switch ("slamming") case is the story. The Rushmore "price protection" call stays as a Jeff line. The old C2 (a bill that tripled) is cut: the only finds were a 2022 summer bill and a 2023 package with no customer on camera.
 - C savings guide: three sourced lines (check your supply rate, budget billing, LIHEAP) (producer, 10/13).
-- Picks: 6/6 verified against YouTube captions (rung 1). Source mix: affiliate 3 · creator_long 3.
+- Picks: 7/7 verified against YouTube captions (rung 1). Source mix: affiliate 3 · creator_long 3 · network 1.
 
 # A. YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT
 
@@ -104,52 +104,54 @@ A climbs from your screen to the ad companies to the claim about your living roo
 
 # B. THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO
 
-**In one sentence:** A Turo host billed a Utah renter for smoking and a ruined tire, she proved his tire photo was an old picture of a different car, and it's not the only case.
+**In one sentence:** Rental car customers are getting damage bills after they return the car, from an AI scanner at Hertz to an owner who faked a tire photo, and a video walkaround is your proof.
 
 **Hold back:** the tire in the "proof" photo wasn't her car; it was a years-old picture from Reddit.
 
-**Peg:** KSL's report (Oct 5) is doing 547K in five days, and holiday travel is weeks out (AAA: 81.8M Thanksgiving travelers in 2025). "Your phone is your alibi."
+**Peg:** KSL's report (Oct 5) is doing 600K in a week, and holiday travel is weeks out (AAA: 81.8M Thanksgiving travelers in 2025). "Your phone is your alibi."
 
-**Framing:** a damage bill that shows up after you've returned the car.
+**Framing:** a damage bill that shows up after you've returned the rental car.
 
-**Climb:** a charge you can't argue with → the proof is fake → the host says he's filed thousands of tire claims, and it's happening elsewhere.
+**Climb:** a machine bills you for dents you can't even see → someone fakes the damage outright → you prove it with your own video.
 
-**Weight:** ~25% of show · 2 clip beats
+**Weight:** ~25% of show · 3 clip beats
 
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
-| 1 | The bill | Hope Orr, Draper, Utah (Oct 2026) | After returning a Turo rental she's billed $165 for smoking, and Turo warns a $500 tire charge is coming. | HAVE · HORIZONTAL — KSL Get Gephardt 1_wUVS5szfw |
-| 2 | The photo was fake | Hope Orr (Oct 2026) | A reverse image search finds the tire photo on Reddit, years old, a different car; Turo bans the host and refunds her. | HAVE · HORIZONTAL — KSL, same clip (second segment) |
-| 3 | It's not just one host | Georgina Montalvan, Birmingham (July 2026) | She's billed $2,338 for damage her own pickup photos show was already there, and refunded after a columnist steps in. | JEFF |
-| 4 | Your phone is your alibi | You (the viewer) | Before you drive off, film a slow walkaround, tires and interior; if they send a damage photo, reverse-image-search it. | JEFF |
+| 1 | The scanner | Adam Foley, San Antonio, Texas (Aug 2025) | Hertz's AI scanner bills him $350 for two small dents he never noticed; Hertz waives it after CBS asks. | HAVE · HORIZONTAL — CBS Evening News 0ANywiehCCA |
+| 2 | The bill | Hope Orr, Draper, Utah (Oct 2026) | After she returns a rental car, the owner bills $165 for smoking and a $500 tire charge is coming. | HAVE · HORIZONTAL — KSL Get Gephardt 1_wUVS5szfw |
+| 3 | The photo was fake | Hope Orr (Oct 2026) | Her own photos show a different tire tread, and the "proof" turns out to be a years-old Reddit picture; the charges are dropped. | HAVE · HORIZONTAL — KSL, same clip (second segment) |
+| 4 | Your phone is your alibi | You (the viewer) | Before you hand back the keys, film a slow walkaround of the car, tires and interior. | JEFF |
 
 ### Videos
 
 | # | Clip | Shows | In–Out | Status |
 |---|---|---|---|---|
-| 1 | [KSL Get Gephardt — Car rental service attempts to scam Utah woman out of hundreds](https://www.youtube.com/watch?v=1_wUVS5szfw) | Hope Orr: a claim for a nail in the tire and smoking ("I don't smoke"), the host's evidence photos, Turo posts a $500 charge. Uploaded Oct 6, 2026, 4:35, 609K views. | 0:49–1:38 "actually going to cost me" | PICK |
-| 2 | [KSL Get Gephardt — same clip](https://www.youtube.com/watch?v=1_wUVS5szfw) | The host's "I've done more than 5,000 tire claims," the mismatched tread, Turo sides with the host, then the reverse image search finds the photo in a Reddit post "from 4 years ago" and Turo drops the claims. | 1:40–2:51 "removed the bogus claims" | PICK |
+| 1 | [CBS Evening News — Behind the controversial AI tech used to inspect rental vehicles for damages](https://www.youtube.com/watch?v=0ANywiehCCA) | AI photo booths scan returned cars; Adam Foley billed $80 for two small dents plus a $190 processing fee, $350 total; Hertz's statement (97% showed no billable damage); Hertz waives his fees after CBS asks. Uploaded Aug 27, 2025, 2:54, 275K views. | 0:19–1:03 "that I didn't even detect" BUTT 1:35–1:50 "showed no billable damage" BUTT 2:23–2:28 "waved the $350" | PICK |
+| 2 | [KSL Get Gephardt — Car rental service attempts to scam Utah woman out of hundreds](https://www.youtube.com/watch?v=1_wUVS5szfw) | Hope Orr: a claim for a nail in the tire and smoking ("I don't smoke"), the owner's evidence photos, a $500 charge posted. Uploaded Oct 6, 2026, 4:35, 609K views. | 0:49–1:38 "actually going to cost me" | PICK |
+| 3 | [KSL Get Gephardt — same clip](https://www.youtube.com/watch?v=1_wUVS5szfw) | The owner's "I've done more than 5,000 tire claims," the mismatched tread, the claim upheld, then the photo found in a Reddit post "from 4 years ago" and the claims removed. | 1:40–2:51 "removed the bogus claims" | PICK |
 
 ### The fix
 
-- After Hope: a damage photo you can't match to your car. Run it through a reverse image search (Google Lens) before you pay. ⚠️ source
-- After Georgina: a bill that arrives days later with no itemized estimate. Ask for one in writing.
-- Video walkaround of the car, tires and interior at pickup and at drop-off, with the timestamp on. ⚠️ source (Turo trip-photo policy, turo.com)
-- Dispute through the platform, never "settle direct" with a host. ⚠️ source (Turo help pages)
-- Still charged? Dispute it with your card company. ⚠️ source (CFPB)
+- After Adam: a damage bill by text after you've left, for something you never saw. Ask for the before-and-after photos and an itemized estimate before you pay. ⚠ source
+- After Hope: a damage photo that doesn't match your own. Your video is the proof; send it.
+- The payoff: a slow video walkaround of the car, tires and interior before you return it, and at pickup too. Spend the five to ten minutes (KSL Get Gephardt, 4:01).
+- Still charged? Dispute it with your card company. ⚠ source (CFPB)
 
 ### Gaps
 
-- ⚠️ Both renters were refunded and neither is confirmed 55+. No real-loss case.
-- ⚠️ Beat 3 is print only (Elliott Report / Boston Globe); no video expected.
-- The KSL article doesn't give the photo's age, but the KSL video says "a Reddit post from 4 years ago" (B2, 2:42).
+- ⚠ B1 Adam Foley is Aug 2025: date it on air ("last summer"). ⚠ Check where Hertz's AI scanners stand now (it was at 10 US airports and "still refining"; Sen. Blumenthal was writing to Hertz's CEO).
+- ⚠ Hope was refunded and neither renter is confirmed 55+. No real-loss case.
+- The KSL article doesn't give the photo's age, but the KSL video says "a Reddit post from 4 years ago" (B3, 2:42).
 
 ### Jeff should know
 
-- Beat 2: "more than 5,000 tire claims" is the host's own boast, in a message to Hope (KSL). Don't name the host. Turo's policy: hosts who submit false claims face up to a $2,000 fee and removal (KSL, 3:10).
-- Beat 1: the KSL reporter calls the host "a liar" at 0:45; the cut starts after it.
-- Beat 1: she rented the car in Miami (KSL, 0:41).
-- Beat 3: Montalvan's rental company isn't confirmed as Turo; keep it "a renter in Birmingham."
+- Rental cars in general, not Turo (producer, 10/14): our audience doesn't use the Turo app. Hope rented through Turo, a peer-to-peer app, from a private owner, so say "she rented a car" and "the owner," not "a rental company." The KSL clip still names Turo on screen.
+- Beat 1: "more than 97% showed no billable damage" is Hertz's own figure. Hertz declined CBS's interview and said the system offers "precision and objectivity."
+- Beat 3: "more than 5,000 tire claims" is the owner's own boast, in a message to Hope (KSL). Don't name him. Turo's policy: hosts who submit false claims face up to a $2,000 fee and removal (KSL, 3:10).
+- Beat 2: the KSL reporter calls the owner "a liar" at 0:45; the cut starts after it. She rented the car in Miami (KSL, 0:41).
+- Reverse image search is out as viewer advice (producer, 10/14): it stays only as how Hope caught him.
+- The Birmingham Turo renter (Georgina Montalvan, $2,338, July 2026) is cut: a Turo case, print only.
 - Hotel fees: the FTC rule since May 2025 says mandatory resort fees must be in the total price, if the room keeps a line on it.
 
 # C. WINTER BILLS ARE GOING UP, AND YOU MAY HAVE BEEN SWITCHED TO A SUPPLIER YOU NEVER CHOSE

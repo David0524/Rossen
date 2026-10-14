@@ -10,4 +10,5 @@ The combined 10/16 + 10/21 pre-bible is the source (`10_16_and_10_21_Pre_Bible_P
 - [ ] C2: get the York County woman's name from FOX43's article (captions garble it); date it ("a couple of years ago")
 - [ ] C fix sources: state PUC complaint page, Illinois AG Rushmore page, budget billing, LIHEAP 2026–27
 - [ ] Clearance: She Prepares and Gamers Nexus are creator videos
+- [ ] B (reworked 10/14): check where Hertz's AI scanners stand in 2026; date Adam Foley's case (Aug 2025)
 - [ ] Bible next (rossen-script-writer), from the outline

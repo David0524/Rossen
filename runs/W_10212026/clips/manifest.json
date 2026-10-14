@@ -59,6 +59,32 @@
  },
  {
   "beat_id": "10-21-B1",
+  "url": "https://www.youtube.com/watch?v=0ANywiehCCA",
+  "platform": "youtube",
+  "title": "Behind the controversial AI tech used to inspect rental vehicles for damages",
+  "source_type": "network",
+  "segments": [
+   {
+    "in": "0:19",
+    "out": "1:03",
+    "outcue": "that I didn't even detect"
+   },
+   {
+    "in": "1:35",
+    "out": "1:50",
+    "outcue": "showed no billable damage"
+   },
+   {
+    "in": "2:23",
+    "out": "2:28",
+    "outcue": "waved the $350"
+   }
+  ],
+  "transcript_rung": 1,
+  "note": "Located and verified against captions only. Not downloaded or cut."
+ },
+ {
+  "beat_id": "10-21-B2",
   "url": "https://www.youtube.com/watch?v=1_wUVS5szfw",
   "platform": "youtube",
   "title": "Car rental service attempts to scam Utah woman out of hundreds",
@@ -74,7 +100,7 @@
   "note": "Located and verified against captions only. Not downloaded or cut."
  },
  {
-  "beat_id": "10-21-B2",
+  "beat_id": "10-21-B3",
   "url": "https://www.youtube.com/watch?v=1_wUVS5szfw",
   "platform": "youtube",
   "title": "Car rental service attempts to scam Utah woman out of hundreds",

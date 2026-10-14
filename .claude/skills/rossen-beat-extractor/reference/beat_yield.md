@@ -97,3 +97,5 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 **Sourcability calibration:** scan called A3, C2 and C3 commentary_only; A3 and C2 were dropped and C3 needed a case swap, so all three calls held.
 **Process note:** captions bot-walled at preflight and after a 4-minute retry; recovered about 13 minutes after the first probe, with search, beats and triage done in between. Run Steps 1–4 while waiting rather than idling.
 
+
+**Revision 10/14 (producer):** B reworked to rental cars in general. Added 10-21-B1 (authority_report/victim, H) PICK, producer-supplied link: CBS Evening News 0ANywiehCCA 0:19–1:03 "that I didn't even detect" BUTT 1:35–1:50 "showed no billable damage" BUTT 2:23–2:28 "waved the $350" (Hertz AI scanner, Aug 2025). KSL picks renumbered B2/B3. Lesson: a peer-to-peer app (Turo) reads as niche for a 55+ audience; lead a rental story with a legacy company.

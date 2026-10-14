@@ -220,6 +220,55 @@
  },
  {
   "beat_id": "10-21-B1",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=0ANywiehCCA",
+  "platform": "youtube",
+  "title": "Behind the controversial AI tech used to inspect rental vehicles for damages",
+  "source_mix": {
+   "network": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=0ANywiehCCA",
+    "source_type": "network",
+    "score": 80,
+    "tone": 7,
+    "authenticity": 8,
+    "quality": 9,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:19",
+      "out": "1:03",
+      "outcue": "that I didn't even detect"
+     },
+     {
+      "in": "1:35",
+      "out": "1:50",
+      "outcue": "showed no billable damage"
+     },
+     {
+      "in": "2:23",
+      "out": "2:28",
+      "outcue": "waved the $350"
+     }
+    ],
+    "reasoning": "Producer-supplied (10/14). CBS Evening News: Hertz AI photo booths; Adam Foley billed $350 for two small dents; Hertz's statement; fees waived after CBS asked. Aug 27, 2025.",
+    "flags": [
+     "OLD: Aug 2025"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "whether the 2:23 segment needs the line before it for context"
+  ],
+  "transcript_rung": 1,
+  "source": "producer link, no search"
+ },
+ {
+  "beat_id": "10-21-B2",
   "original_beat_id": "10-21-B1",
   "pass": 2,
   "flagged": "https://www.youtube.com/watch?v=1_wUVS5szfw",
@@ -287,7 +336,7 @@
   "transcript_rung": 1
  },
  {
-  "beat_id": "10-21-B2",
+  "beat_id": "10-21-B3",
   "original_beat_id": "10-21-B2",
   "pass": 2,
   "flagged": "https://www.youtube.com/watch?v=1_wUVS5szfw",
