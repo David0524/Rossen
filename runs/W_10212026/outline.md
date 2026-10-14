@@ -31,8 +31,7 @@ A climbs from your screen to the ad companies to the claim about your living roo
 - A: menu paths vary by model and some TVs have no off switch (producer, 10/13). Don't promise "the one setting" works on every TV; the fix leads with "check," then the brand names, then the no-setting fallback.
 - A cut from 4 clips to 3 at Checkpoint 2 (producer, 10/13): no TV owner on camera, so the old A3 is gone and A is renumbered (again 10/14, when Lon moved after the clips).
 - A4 · LEGAL: the Gamers Nexus cut carries the claim and not LG's denial. Jeff reads LG's statement right after it ("The claims made in the recently published video are not true").
-- A is thin on people: A2 to A4 are a creator, a state and a researcher. Lon is the human in A.
-- Lon comes in after all three A clips (producer, 10/14), with a full expert block: mechanics, his read of the Texas deal (he argued on Lon.TV that it let LG off the hook), the listening claim, the settings, and four numbered questions.
+- A is thin on people: A2 to A4 are a creator, a state and a researcher. Lon is the human in A. Lon comes in after all three A clips (producer, 10/14), with a full expert block: mechanics, his read of the Texas deal (he argued on Lon.TV that it let LG off the hook), the listening claim, the settings, and four numbered questions.
 - Lon Seidman: confirm booked, and check for sponsor or affiliate ties to TV brands or Roku before he gives settings advice. On his own channel he argued Texas's LG settlement "let them off the hook."
 - B reworked (producer, 10/14): rental cars in general, not Turo; Hertz's AI scanner (CBS) leads as the legacy company, then Hope's fake tire photo; the payoff is a video walkaround before you return the car (reverse image search dropped); the Birmingham Turo case is cut. No 55+ victim, and both renters got their money back, so it plays as a warning with a fix.
 - B: hotel fees left out (one Jeff line at most, in Jeff should know).
@@ -56,7 +55,7 @@ A climbs from your screen to the ad companies to the claim about your living roo
 
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
-| 1 | The hook | You (the viewer) | Every show you watch, even a DVD or a cable box, your smart TV checks what's on the screen and matches it (ACR). | JEFF |
+| 1 | The hook | You (the viewer) | Every show you watch, even a DVD or a cable box, your smart TV checks what's on the screen. | JEFF |
 | 2 | Who's buying | She Prepares, older-audience creator (Oct 2026) | Vizio's own policy: what you watch is licensed to partners and tied to your age, location and purchases; Walmart bought Vizio for the ads. | HAVE · HORIZONTAL — She Prepares 6WT5fc-LHSc |
 | 3 | Only Texas got asked | Texas Attorney General's office (Dec 2025 – May 2026) | Texas sued TV makers; Samsung and LG agreed to ask Texans first, and nobody else. | FIND · HORIZONTAL — Texas TV news on the AG suits or settlements |
 | 4 | The claim LG denies | Steve Burke, Gamers Nexus (Sept 2026) | His team captured microphone audio from an LG TV that looked off and was unplugged from the network; LG says the claims are not true. | HAVE · HORIZONTAL — Gamers Nexus 6IFVTcM28KA |

@@ -1,6 +1,6 @@
-# F2 Wed 10/21 -- Your TV Is Watching What You Watch -- SOURCE LOG
+# F2 Wed 10/21 -- YOUR TV IS WATCHING YOU -- SOURCE LOG
 
-Companion to `draft.md` / `F2 Wed 10_21 -- Your TV Is Watching What You Watch.docx`. Built 10/14/2026 from `outline.md` (Stage: videos; same as the 10/21 outline Google Doc), the pre-bible (`10_16_and_10_21_Pre_Bible_Pitch.md`) and the caption transcripts in `transcripts.json`. Nothing was watched, downloaded or cut. Every in–out point and outcue comes from a YouTube caption transcript (rung 1). F2 story show, A + B + C, guest Lon Seidman (A only), OmniWatch at two breaks, marked only.
+Companion to `draft.md` / `F2 Wed 10_21 -- YOUR TV IS WATCHING YOU.docx`. Built 10/14/2026 from `outline.md` (Stage: videos; same as the 10/21 outline Google Doc), the pre-bible (`10_16_and_10_21_Pre_Bible_Pitch.md`) and the caption transcripts in `transcripts.json`. Nothing was watched, downloaded or cut. Every in–out point and outcue comes from a YouTube caption transcript (rung 1). F2 story show, A + B + C, guest Lon Seidman (A only), OmniWatch at two breaks, marked only.
 
 ## CLAIMS
 
