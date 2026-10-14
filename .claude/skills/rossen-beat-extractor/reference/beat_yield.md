@@ -78,3 +78,20 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 **Verify pass 10/8 (V3 bible, no search):** captions bot-walled + media blocked again; one 5-min spaced retry did not recover Inside Edition. 4 of 6 cached-caption segments needed in-point fixes: the 10/7 picks started on caption-cue boundaries, which land mid-sentence or on a dangling word. Snap to the sentence start, not the cue start.
 **Process bug — Arc Publishing duration lies:** wmbfnews.com (ArcPublishing extractor) reported 338 s / 64 s / 148 s; the actual media (progressive and HLS) was 34 s / 6 s / 15 s. The 9/30 "arrest package" is a 34 s anchor reader with no bodycam. Check real media length (ffprobe) before assuming a news-site video holds a planned segment.
 **Pattern:** a beat planned as "bodycam may be inside the arrest package" (10-14 B2) is a structural dead end until someone watches it; don't write runway for it.
+
+## Run F_10162026 (A only: AI could move into your smart home; guest Lon Seidman)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| 10-16-A2 | authority_report | H | PICK | ABC News 2yvhtqQ7bBk 0:00-0:19 "at least slow down that process" BUTT 0:53-1:30 "that's the real concern that Anthropic's raising" (CBS 9Swcki8Bhx8 bot-walled) |
+| 10-16-A3 | evidence | H | MANUAL | Anthropic cdn mp4: 13 s silent animated diagram, not camera footage of the boxes; permission needed. No outlet video of the real boxes found |
+| 10-16-A4 | debunk | H | THROTTLED | CBS RU6LGzvxrs4 (Jonas Guan) captions bot-walled on first try and on the 8-min retry; fallback ABC 2yvhtqQ7bBk 0:26-0:36 |
+| 10-16-A5 | authority_report | H | PICK | FOX 29 BNjvqT2BBxI 0:00-0:16 "labeled as spam and never investigated" BUTT 0:46-0:54 "no matter how specifically you set them" (rolling captions, ±2 s) |
+| 10-16-A6 | authority_report | H | PICK | ABC News kczEi3dM0Ow 0:00-0:33 "This situation is obviously unacceptable." (alt BBC AUq2twt8mgM 0:00-0:20) |
+| 10-16-A7 | authority_report | H | PICK | CNN tj1dFIUAs7A 0:06-0:25 "a false tip about a homicide to Philadelphia police" BUTT 3:49-5:10 "a lot of negative surprises"; cross-checked with Whisper on the cnn.com cut |
+| 10-16-A8 | victim_interview | H | PICK | France 24 J5tv0twx2Es 0:00-0:24 "it was like opening an oven" BUTT 1:09-1:20 "no longer receive software or security updates" (alt ABC pFGhR5kWNO0) |
+
+**Yield:** 5 PICK / 1 MANUAL / 1 THROTTLED of 7. Captions 5 of 15 on the first pass, 3 more on one retry about 8 min later; media bytes blocked, but cnn.com's site video downloaded and Whisper ran on it.
+**Pattern:** a news-peg Friday with HAVE links from the pre-bible: every pick was a pre-bible link; harvest search returned mostly articles (news_web), and its YouTube leg found almost nothing new for a 2-day-old story.
+**Sourcability calibration:** a pre-bible "video" from a company research page can be an animation. Check a frame and ffprobe before planning it as the open package or b-roll of the real thing.
+**Process bug:** `check_outline.py` reads Who dates only as "(Mon YYYY)"; "(Oct. 12, 2026)" parses as January and raises a false six-month warning. It also wants transcript cues as {start,end,text} dicts, not lists.

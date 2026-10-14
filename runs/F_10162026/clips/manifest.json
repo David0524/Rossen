@@ -1,0 +1,121 @@
+[
+ {
+  "beat_id": "10-16-A2",
+  "url": "https://www.youtube.com/watch?v=2yvhtqQ7bBk",
+  "platform": "youtube",
+  "source_type": "network",
+  "segments": [
+   {
+    "in": "0:00",
+    "out": "0:19",
+    "outcue": "at least slow down that process"
+   },
+   {
+    "in": "0:53",
+    "out": "1:30",
+    "outcue": "that's the real concern that Anthropic's raising"
+   }
+  ],
+  "transcript_rung": 1,
+  "note": "located and verified against transcript; not downloaded or cut"
+ },
+ {
+  "beat_id": "10-16-A3",
+  "url": "https://cdn.sanity.io/files/4zrzovbb/website/04cb53c1d91c7dc7493e2d40cf4a40d865ba97b7.mp4",
+  "platform": "direct",
+  "source_type": "raw_footage",
+  "segments": [
+   {
+    "in": "0:00",
+    "out": "0:13",
+    "outcue": "WHOLE CLIP, no audio track"
+   }
+  ],
+  "transcript_rung": 3,
+  "note": "located and verified against transcript; not downloaded or cut"
+ },
+ {
+  "beat_id": "10-16-A4",
+  "url": null,
+  "platform": "youtube",
+  "source_type": null,
+  "segments": [],
+  "transcript_rung": 3,
+  "note": "no pick (THROTTLED)"
+ },
+ {
+  "beat_id": "10-16-A5",
+  "url": "https://www.youtube.com/watch?v=BNjvqT2BBxI",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:00",
+    "out": "0:16",
+    "outcue": "labeled as spam and never investigated"
+   },
+   {
+    "in": "0:46",
+    "out": "0:54",
+    "outcue": "no matter how specifically you set them"
+   }
+  ],
+  "transcript_rung": 1,
+  "note": "located and verified against transcript; not downloaded or cut"
+ },
+ {
+  "beat_id": "10-16-A6",
+  "url": "https://www.youtube.com/watch?v=kczEi3dM0Ow",
+  "platform": "youtube",
+  "source_type": "network",
+  "segments": [
+   {
+    "in": "0:00",
+    "out": "0:33",
+    "outcue": "This situation is obviously unacceptable."
+   }
+  ],
+  "transcript_rung": 1,
+  "note": "located and verified against transcript; not downloaded or cut"
+ },
+ {
+  "beat_id": "10-16-A7",
+  "url": "https://www.youtube.com/watch?v=tj1dFIUAs7A",
+  "platform": "youtube",
+  "source_type": "network",
+  "segments": [
+   {
+    "in": "0:06",
+    "out": "0:25",
+    "outcue": "a false tip about a homicide to Philadelphia police"
+   },
+   {
+    "in": "3:49",
+    "out": "5:10",
+    "outcue": "a lot of negative surprises"
+   }
+  ],
+  "transcript_rung": 1,
+  "note": "located and verified against transcript; not downloaded or cut"
+ },
+ {
+  "beat_id": "10-16-A8",
+  "url": "https://www.youtube.com/watch?v=J5tv0twx2Es",
+  "platform": "youtube",
+  "source_type": "network",
+  "segments": [
+   {
+    "in": "0:00",
+    "out": "0:24",
+    "outcue": "it was like opening an oven"
+   },
+   {
+    "in": "1:09",
+    "out": "1:20",
+    "outcue": "no longer receive software or security updates"
+   }
+  ],
+  "transcript_rung": 1,
+  "note": "located and verified against transcript; not downloaded or cut"
+ }
+]

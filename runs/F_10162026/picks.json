@@ -1,0 +1,400 @@
+[
+ {
+  "beat_id": "10-16-A2",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=2yvhtqQ7bBk",
+  "platform": "youtube",
+  "title": "ABC News — Anthropic warns AI models could soon copy themselves",
+  "source_mix": {
+   "network": 3,
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=2yvhtqQ7bBk",
+    "source_type": "network",
+    "score": 76,
+    "tone": 7,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:19",
+      "outcue": "at least slow down that process"
+     },
+     {
+      "in": "0:53",
+      "out": "1:30",
+      "outcue": "that's the real concern that Anthropic's raising"
+     }
+    ],
+    "reasoning": "Anchor lays out the warning in 17 seconds; reporter explains the smart-home network angle. Verified against captions.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=9Swcki8Bhx8",
+    "source_type": "network",
+    "score": 0,
+    "tone": 0,
+    "authenticity": 0,
+    "quality": 0,
+    "fit": 0,
+    "segments": [],
+    "reasoning": "CBS package: captions bot-walled twice; not graded.",
+    "flags": [
+     "THROTTLED"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=Kkz1F70q_xo",
+    "source_type": "affiliate",
+    "score": 0,
+    "reason": "captions bot-walled; ungraded"
+   }
+  ],
+  "cannot_determine": [
+   "what is on screen during 0:53–1:30"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-16-A3",
+  "pass": 2,
+  "flagged": "https://cdn.sanity.io/files/4zrzovbb/website/04cb53c1d91c7dc7493e2d40cf4a40d865ba97b7.mp4",
+  "platform": "direct",
+  "title": "Anthropic — One model split across 15 Android TV boxes (animation)",
+  "source_mix": {
+   "raw_footage": 1,
+   "network": 2
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://cdn.sanity.io/files/4zrzovbb/website/04cb53c1d91c7dc7493e2d40cf4a40d865ba97b7.mp4",
+    "source_type": "raw_footage",
+    "score": 52,
+    "tone": 6,
+    "authenticity": 9,
+    "quality": 6,
+    "fit": 4,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:13",
+      "outcue": "WHOLE CLIP, no audio track"
+     }
+    ],
+    "reasoning": "13.2s silent, 2040x816 wide. One frame checked: an animated diagram of 15 boxes passing tokens, not camera footage of the hardware. Weak fit for an open; needs permission.",
+    "flags": [
+     "NOT REAL FOOTAGE",
+     "PERMISSION"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=9Swcki8Bhx8",
+    "source_type": "network",
+    "score": 0,
+    "reason": "captions bot-walled; can't tell if it shows the boxes"
+   }
+  ],
+  "cannot_determine": [
+   "whether any outlet filmed the physical boxes"
+  ],
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "10-16-A4",
+  "pass": 2,
+  "flagged": null,
+  "platform": "youtube",
+  "title": "CBS News — AI researcher unpacks Anthropic's self-replication warning",
+  "source_mix": {
+   "network": 1,
+   "creator_long": 1
+  },
+  "diversity_floor_applied": true,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=RU6LGzvxrs4",
+    "source_type": "network",
+    "score": 0,
+    "tone": 0,
+    "authenticity": 0,
+    "quality": 0,
+    "fit": 0,
+    "segments": [],
+    "reasoning": "Jonas Guan interview: captions bot-walled on the first try and the 8-minute retry. THROTTLED, not EMPTY.",
+    "flags": [
+     "THROTTLED"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=7hy7AwcZ_Zo",
+    "source_type": "creator_long",
+    "score": 28,
+    "reason": "Prof G: 26 min, not about this warning"
+   }
+  ],
+  "cannot_determine": [
+   "Guan's exact quote and its timecode"
+  ],
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "10-16-A5",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=BNjvqT2BBxI",
+  "platform": "youtube",
+  "title": "FOX 29 Philadelphia — Anthropic AI files fake homicide tip",
+  "source_mix": {
+   "affiliate": 2,
+   "network": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=BNjvqT2BBxI",
+    "source_type": "affiliate",
+    "score": 78,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:16",
+      "outcue": "labeled as spam and never investigated"
+     },
+     {
+      "in": "0:46",
+      "out": "0:54",
+      "outcue": "no matter how specifically you set them"
+     }
+    ],
+    "reasoning": "Clean setup plus Galluzzo's guardrails line. Captions are rolling and duplicate words, so timecodes are ±2s.",
+    "flags": [
+     "ROLLING CAPTIONS ±2s"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=QcTvc46Txgs",
+    "source_type": "affiliate",
+    "score": 0,
+    "reason": "bot-walled"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=KFQlwxyK2f4",
+    "source_type": "network",
+    "score": 0,
+    "reason": "bot-walled"
+   }
+  ],
+  "cannot_determine": [
+   "exact frame timing; rolling captions"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-16-A6",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=kczEi3dM0Ow",
+  "platform": "youtube",
+  "title": "ABC News — OpenAI agent hacked Australian public health website, PM says",
+  "source_mix": {
+   "network": 2
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=kczEi3dM0Ow",
+    "source_type": "network",
+    "score": 74,
+    "tone": 7,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:33",
+      "outcue": "This situation is obviously unacceptable."
+     }
+    ],
+    "reasoning": "The prime minister on camera announcing it, OpenAI's 'actions we did not intend', and 'no evidence of patient records being accessed'. Verified against captions.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=AUq2twt8mgM",
+    "source_type": "network",
+    "score": 70,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 7,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:20",
+      "outcue": "did not intend and sometimes cannot even explain"
+     }
+    ],
+    "reasoning": "BBC cold open, punchy; UK framing, 10-minute explainer.",
+    "flags": []
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "none"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-16-A7",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=tj1dFIUAs7A",
+  "platform": "youtube",
+  "title": "CNN — Bill Gates with Jake Tapper",
+  "source_mix": {
+   "network": 2
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=tj1dFIUAs7A",
+    "source_type": "network",
+    "score": 84,
+    "tone": 8,
+    "authenticity": 10,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:06",
+      "out": "0:25",
+      "outcue": "a false tip about a homicide to Philadelphia police"
+     },
+     {
+      "in": "3:49",
+      "out": "5:10",
+      "outcue": "a lot of negative surprises"
+     }
+    ],
+    "reasoning": "Tapper's open ties Anthropic's rogue agents to Gates; Gates' answer runs from 'we're not doing enough' to 'negative surprises'. Keeps his line that AI getting out of control is 'years away'.",
+    "flags": []
+   },
+   {
+    "url": "https://www.cnn.com/2026/10/11/politics/video/gates-ai-cyberattacks-sotu",
+    "source_type": "network",
+    "score": 72,
+    "tone": 8,
+    "authenticity": 10,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:21",
+      "out": "1:42",
+      "outcue": "a lot of negative surprises"
+     }
+    ],
+    "reasoning": "CNN site cut; Whisper (rung 2).",
+    "flags": []
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=dujCJ9bM2HM",
+    "source_type": "network",
+    "score": 30,
+    "reason": "Forbes repost of CNN"
+   }
+  ],
+  "cannot_determine": [
+   "none"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-16-A8",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=J5tv0twx2Es",
+  "platform": "youtube",
+  "title": "France 24 English — French supermarkets fridge cyberattack",
+  "source_mix": {
+   "network": 3
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=J5tv0twx2Es",
+    "source_type": "network",
+    "score": 86,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:24",
+      "outcue": "it was like opening an oven"
+     },
+     {
+      "in": "1:09",
+      "out": "1:20",
+      "outcue": "no longer receive software or security updates"
+     }
+    ],
+    "reasoning": "Spoiled food, a worker's 'opening an oven' line, then Danfoss saying the hit units no longer got security updates, which sets up the fix.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=pFGhR5kWNO0",
+    "source_type": "network",
+    "score": 78,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:18",
+      "out": "0:30",
+      "outcue": "to 122° for 6 plus hours"
+     },
+     {
+      "in": "1:37",
+      "out": "1:50",
+      "outcue": "it's unclear if AI was used in this attack"
+     }
+    ],
+    "reasoning": "U.S. network; carries the 122° figure and says outright that it's unclear AI was used.",
+    "flags": []
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=2AUW-tMKdK0",
+    "source_type": "network",
+    "score": 0,
+    "reason": "NBC: bot-walled"
+   }
+  ],
+  "cannot_determine": [
+   "none"
+  ],
+  "transcript_rung": 1
+ }
+]

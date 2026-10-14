@@ -1,0 +1,246 @@
+[
+ {
+  "beat_id": "10-16-A2",
+  "orientation": "horizontal",
+  "priority": 1,
+  "expected_segments": 1,
+  "shortlist": [
+   {
+    "url": "https://www.youtube.com/watch?v=9Swcki8Bhx8",
+    "source_type": "network",
+    "title": "CBS News — AI 'worms' could infest your home devices",
+    "score": 78,
+    "reason": "HAVE; network package, FTI expert on camera, Oct 13",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=2yvhtqQ7bBk",
+    "source_type": "network",
+    "title": "ABC News — Anthropic warns AI models could soon copy themselves",
+    "score": 74,
+    "reason": "HAVE; network, reporter reality check, Oct 13",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Kkz1F70q_xo",
+    "source_type": "affiliate",
+    "title": "ABC15 Arizona — Rogue AI: smart home devices could be at risk",
+    "score": 66,
+    "reason": "HAVE; local affiliate, easier clearance, low views",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.cbsnews.com/video/ai-worms-could-infest-your-home-devices-months-anthropic/",
+    "source_type": "network",
+    "title": "CBS News (site) — same package, 4:43",
+    "score": 55,
+    "reason": "site copy of the CBS package; fallback if the YouTube upload fails",
+    "platform": "news_web"
+   }
+  ],
+  "shortlist_note": "Diversity floor found nothing to promote: no credible non-network video on this news peg; article results only.",
+  "cannot_determine": [
+   "what is on screen; metadata only"
+  ]
+ },
+ {
+  "beat_id": "10-16-A3",
+  "orientation": "horizontal",
+  "priority": 1,
+  "expected_segments": 1,
+  "shortlist": [
+   {
+    "url": "https://cdn.sanity.io/files/4zrzovbb/website/04cb53c1d91c7dc7493e2d40cf4a40d865ba97b7.mp4",
+    "source_type": "raw_footage",
+    "title": "Anthropic — 15 TV boxes running one AI model",
+    "score": 80,
+    "reason": "HAVE; the only footage of the experiment; needs permission",
+    "platform": "direct"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=9Swcki8Bhx8",
+    "source_type": "network",
+    "title": "CBS News — AI 'worms' package (may carry the TV-box footage)",
+    "score": 60,
+    "reason": "fallback if the package re-uses the boxes",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=2yvhtqQ7bBk",
+    "source_type": "network",
+    "title": "ABC News — Anthropic warns AI models could soon copy themselves",
+    "score": 55,
+    "reason": "fallback; same check",
+    "platform": "youtube"
+   }
+  ],
+  "shortlist_note": "Shipped 3: search returned only articles for the boxes themselves.",
+  "cannot_determine": [
+   "what is on screen; metadata only"
+  ]
+ },
+ {
+  "beat_id": "10-16-A4",
+  "orientation": "horizontal",
+  "priority": 2,
+  "expected_segments": 1,
+  "shortlist": [
+   {
+    "url": "https://www.youtube.com/watch?v=RU6LGzvxrs4",
+    "source_type": "network",
+    "title": "CBS News — AI researcher unpacks Anthropic's self-replication warning",
+    "score": 80,
+    "reason": "HAVE; Jonas Guan, the skeptic, Oct 14",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=7hy7AwcZ_Zo",
+    "source_type": "creator_long",
+    "title": "Prof G Markets — AI Expert: Doomsday Predictions Are Overblown",
+    "score": 35,
+    "reason": "diversity promotion; not about this warning, 26 min; 45 below the CBS pick",
+    "platform": "youtube"
+   }
+  ],
+  "shortlist_note": "Shipped 2: no other video of a named skeptic on this research.",
+  "cannot_determine": [
+   "what is on screen; metadata only"
+  ]
+ },
+ {
+  "beat_id": "10-16-A5",
+  "orientation": "horizontal",
+  "priority": 2,
+  "expected_segments": 1,
+  "shortlist": [
+   {
+    "url": "https://www.youtube.com/watch?v=BNjvqT2BBxI",
+    "source_type": "affiliate",
+    "title": "FOX 29 Philadelphia — Anthropic AI files fake homicide tip",
+    "score": 82,
+    "reason": "HAVE; 291K; local expert quote",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=QcTvc46Txgs",
+    "source_type": "affiliate",
+    "title": "NBC10 Philadelphia — AI model submits false tip for unsolved Philly homicide",
+    "score": 62,
+    "reason": "53s; police on record",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=KFQlwxyK2f4",
+    "source_type": "network",
+    "title": "NewsNation — Anthropic's Claude submits false police tip",
+    "score": 58,
+    "reason": "national morning show segment, 3:22",
+    "platform": "youtube"
+   }
+  ],
+  "shortlist_note": "CBS Philadelphia t1LHD97D_BE (44s) held back as a 4th.",
+  "cannot_determine": [
+   "what is on screen; metadata only"
+  ]
+ },
+ {
+  "beat_id": "10-16-A6",
+  "orientation": "horizontal",
+  "priority": 3,
+  "expected_segments": 1,
+  "shortlist": [
+   {
+    "url": "https://www.youtube.com/watch?v=AUq2twt8mgM",
+    "source_type": "network",
+    "title": "BBC News — AI just hacked a government",
+    "score": 78,
+    "reason": "HAVE; 645K",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kczEi3dM0Ow",
+    "source_type": "network",
+    "title": "ABC News — OpenAI agent hacked Australian public health website, PM says",
+    "score": 70,
+    "reason": "U.S. network, 2:26",
+    "platform": "youtube"
+   }
+  ],
+  "shortlist_note": "Priority 3: two.",
+  "cannot_determine": [
+   "what is on screen; metadata only"
+  ]
+ },
+ {
+  "beat_id": "10-16-A7",
+  "orientation": "horizontal",
+  "priority": 2,
+  "expected_segments": 1,
+  "shortlist": [
+   {
+    "url": "https://www.youtube.com/watch?v=tj1dFIUAs7A",
+    "source_type": "network",
+    "title": "CNN — Gates with Jake Tapper",
+    "score": 85,
+    "reason": "HAVE; 694K; the source interview",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.cnn.com/2026/10/11/politics/video/gates-ai-cyberattacks-sotu",
+    "source_type": "network",
+    "title": "CNN (site) — Gates warns of AI-driven cyberattacks, 1:42",
+    "score": 60,
+    "reason": "site cut of the same interview",
+    "platform": "news_web"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=dujCJ9bM2HM",
+    "source_type": "network",
+    "title": "Forbes Breaking News — Gates speaks with CNN",
+    "score": 30,
+    "reason": "repost of CNN's interview; clearance worse, keep only as transcript cross-check",
+    "platform": "youtube"
+   }
+  ],
+  "shortlist_note": "Monoculture network: only one interview exists.",
+  "cannot_determine": [
+   "what is on screen; metadata only"
+  ]
+ },
+ {
+  "beat_id": "10-16-A8",
+  "orientation": "horizontal",
+  "priority": 2,
+  "expected_segments": 1,
+  "shortlist": [
+   {
+    "url": "https://www.youtube.com/watch?v=J5tv0twx2Es",
+    "source_type": "network",
+    "title": "France 24 English — French supermarkets fridge cyberattack",
+    "score": 80,
+    "reason": "HAVE; 203K; worker quote",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=2AUW-tMKdK0",
+    "source_type": "network",
+    "title": "NBC Nightly News — fridge cyberattack, U.S. expert",
+    "score": 76,
+    "reason": "HAVE; U.S. angle",
+    "platform": "youtube"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=pFGhR5kWNO0",
+    "source_type": "network",
+    "title": "ABC News — Cyberattack targets supermarket storage units",
+    "score": 62,
+    "reason": "1:50 U.S. network",
+    "platform": "youtube"
+   }
+  ],
+  "shortlist_note": "TF1 (French, 503K) held as manual alternate: needs translation.",
+  "cannot_determine": [
+   "what is on screen; metadata only"
+  ]
+ }
+]
