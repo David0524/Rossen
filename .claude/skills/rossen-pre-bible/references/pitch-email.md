@@ -2,7 +2,7 @@
 
 The email that goes to Jeff and Ryan for a yes/no. Plain text, pasted straight
 into a mail client. No markdown bold, no headers, no tables. This is the team's
-house format (Matt Raub's template, producer kit, Sept 2026); Jeff reads the
+house format (template by Matt Raub, then Head of Content, Sept 2026); Jeff reads the
 headline and the titles first. A real one is in
 `examples/pitch-email-2026-09-28-F2-A-options.md`. Read it before drafting.
 

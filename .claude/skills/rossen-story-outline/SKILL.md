@@ -212,7 +212,7 @@ the red flag, escalation, sponsor, scale beat, practical close; then B, C, and f
 expert questions. A call-in F2 outlines two callers plus the expert; callers by
 caller ID in the outline, first names only on air.
 
-Clips: Matt's standard is about two outside clips per segment, freshest first,
+Clips: the house standard (set by former Head of Content Matt Raub) is about two outside clips per segment, freshest first,
 each with its upload date and length, video links rather than news-site pages.
 When a story wants more, say so in Decisions.
 
@@ -307,7 +307,10 @@ stories, or it isn't shaped yet — say so in Decisions.
 1. Fill `templates/outline.md` → `outline.md`.
 2. `python3 scripts/check_outline.py outline.md --stage beats|videos` — fix every
    ERROR, read every WARN.
-3. `python3 scripts/build_outline.py outline.md -o "MM_DD_OUTLINE_<SHOW>.docx"`
+3. `python3 scripts/build_outline.py outline.md -o "Outline F1 10_16.docx"`: the standard title
+   `Outline <SHOW> <M/DD>` (producer, 10/14/2026), `/` written as `_` in the
+   file name; a Google Doc copy is named `Outline F1 10/16`. `<SHOW>` is `F1`
+   (Friday live) or `F2` (Wednesday).
 4. `soffice --headless --convert-to pdf` it, then look at the pages.
 
 Deliver the `.docx`. Revisions land in the file.

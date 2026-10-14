@@ -67,7 +67,7 @@ conflict in the chat reply so the file can be fixed.
   good-news closer.
 - **Friday's deals guest is Trey Donovan** (co-founder of DealSeek). Use another
   name only if the user gives one, and then make every cue match.
-- **Outside clips: about two per segment** (Matt's standard), counted
+- **Outside clips: about two per segment** (the house standard, set by former Head of Content Matt Raub), counted
   separately from BROLL, screen shares and demos. Write to the material the
   outline carries; never invent a clip to fill a slot.
 - **Clip age is not a flag.** Footage back to 2010 is fine; don't annotate age.
@@ -693,7 +693,7 @@ Confirm recency.
   description. You cannot confirm what's on screen or time a moment. Say so.
 - Live numbers (view counts, prices) are pulled on show day; mark them.
 
-## Output — two files, named for the A story
+## Output — two files, under the standard bible title
 
 1. **The bible** `.docx`, built with `scripts/build_bible.py` and confirmed with
    `scripts/verify_format.py`. Black is what Jeff says; red is a production
@@ -707,16 +707,22 @@ Confirm recency.
    what (transcript, title, description). Every caution flag carried from the
    input gets a row saying how the copy honours it.
 
-**File names: the A-story headline plus the air day and date**, never a generic
-show label:
+**Document titles (producer, 10/14/2026).** Every deliverable's Google Doc / Drive name and file name uses the standard title. A local file name writes `/` as `_`, because a file name can't hold a slash.
+
+| Stage | Title | Example (Drive) | Example (local file) |
+|---|---|---|---|
+| Pre-bible | `Prebible <SHOW> <M/DD>` | `Prebible F1 10/16` | `Prebible F1 10_16.docx` |
+| Outline w/ videos | `Outline <SHOW> <M/DD>` | `Outline F1 10/16` | `Outline F1 10_16.docx` |
+| Bible | `<SHOW> <Day> <M/DD> -- <Working Title>` | `F1 Fri 10/16 -- Your TV Is Watching You` | `F1 Fri 10_16 -- Your TV Is Watching You.docx` |
+
+`<SHOW>` is `F1` (Friday live) or `F2` (the Wednesday show); `<Day>` is `Fri` or `Wed`; `<Working Title>` is the A story's working title. The bible's source log adds ` -- SOURCE LOG`; a draft bible adds ` -- DRAFT`. One pre-bible covering two shows: `Prebible F1 10/16 + F2 10/21`.
 
 ```
-HE SAID HE WAS TOM SELLECK - WED 10_14.docx
-HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx
+F2 Wed 10_14 -- He Said He Was Tom Selleck.docx
+F2 Wed 10_14 -- He Said He Was Tom Selleck -- SOURCE LOG.docx
 ```
 
-Add ` - DRAFT` before `.docx` on a DRAFT bible. Format detail in
-`docx-format.md`.
+Format detail in `docx-format.md`.
 
 The chat reply is short: first the **review loop** summary (rounds run,
 BLOCKERs fixed with before → after, any still blocking, and the count of notes
@@ -774,7 +780,7 @@ script can't see:
   name.
 - JEFF PLEASE NOTE comments carry what Jeff must know but not say — short,
   anchored on their line.
-- Both files exist and are named for the A story and date.
+- Both files exist under the standard bible title (`F2 Wed 10_14 -- <Working Title>`).
 - FINAL: clips match the outline, numbered in air order, `OUT:` and the red
   source line from the Videos rows, nothing added, cut or swapped without saying
   so.
@@ -798,7 +804,7 @@ script can't see:
 Then build and verify:
 
 ```bash
-python3 scripts/build_bible.py draft.md "HE SAID HE WAS TOM SELLECK - WED 10_14 - DRAFT.docx"
-python3 scripts/build_source_log.py sources.md "HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx"
-python3 scripts/verify_format.py "HE SAID HE WAS TOM SELLECK - WED 10_14 - DRAFT.docx"
+python3 scripts/build_bible.py draft.md "F2 Wed 10_14 -- He Said He Was Tom Selleck -- DRAFT.docx"
+python3 scripts/build_source_log.py sources.md "F2 Wed 10_14 -- He Said He Was Tom Selleck -- SOURCE LOG.docx"
+python3 scripts/verify_format.py "F2 Wed 10_14 -- He Said He Was Tom Selleck -- DRAFT.docx"
 ```

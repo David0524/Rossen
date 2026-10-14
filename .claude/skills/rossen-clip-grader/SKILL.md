@@ -20,7 +20,7 @@ python3 scripts/check_grades.py two picks.json
 ## The producer team's clip rules
 
 Read `references/producer-clip-rules.md` once per run. The ones that change a
-pick: about **two outside clips per segment** (Matt), so grade for the best two
+pick: about **two outside clips per segment** (house standard), so grade for the best two
 rather than the most; **local news** is the preferred source and the heat
 signal; confirm upload dates and put the freshest first; a pick that lives only
 on a news-site page gets flagged so Kyle pulls it before the taping; never name

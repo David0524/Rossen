@@ -44,7 +44,7 @@ T = {
     "open_decisions": (2, 3),
     # Wednesday bands are per story and scale with --stories. Derived from the
     # four-story per-block rows in measurements.md; provisional until aired
-    # A + B bibles are measured. Clips follow Matt's ~2 outside clips/segment.
+    # A + B bibles are measured. Clips follow the house ~2 outside clips/segment.
     "wed_story": {"a_words": (600, 850), "later_words": (230, 520),
                   "tease_base": (50, 100), "tease_per": (60, 80),
                   "clips_per": 2},

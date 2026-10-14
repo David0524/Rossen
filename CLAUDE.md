@@ -9,11 +9,13 @@ Exception (producer, 10/7/2026): when the producer has converted a deliverable t
 
 | Stage | Skill | Deliverable |
 |---|---|---|
-| 1. Pre-bible | rossen-pre-bible | The pitch sheet .docx |
+| 1. Pre-bible | rossen-pre-bible | The pitch sheet .docx: `Prebible F1 10/16` |
 | 2. Pre-bible email | rossen-pre-bible | In chat, ready to paste |
-| 3. Outline w/ videos | rossen-story-outline + rossen-pipeline | The outline .docx, at Stage: videos |
-| 4. Bible | rossen-script-writer | `<A-STORY HEADLINE> - WED MM_DD.docx` (` - DRAFT` before `.docx` on a draft) + `<A-STORY HEADLINE> - WED MM_DD - SOURCE LOG.docx` |
+| 3. Outline w/ videos | rossen-story-outline + rossen-pipeline | The outline .docx, at Stage: videos: `Outline F1 10/16` |
+| 4. Bible | rossen-script-writer | `F1 Fri 10/16 -- <Working Title>` (+ ` -- DRAFT` on a draft) and `F1 Fri 10/16 -- <Working Title> -- SOURCE LOG` |
 | 5. Bible review | rossen-bible-final-reviewer | Review, annotated bible, source log (.docx) |
+
+**Standard titles (producer, 10/14/2026):** `Prebible F1 10/16`, `Outline F1 10/16`, `F1 Fri 10/16 -- <Working Title>` (F2 = the Wednesday show: `F2 Wed 10/21 -- …`). Drive/Doc names keep the slash; local file names write it as `_` (`Outline F1 10_16.docx`). A pre-bible covering two shows: `Prebible F1 10/16 + F2 10/21`.
 
 Reference if Drive is requested: `!Shows` folder id `1uwPmH5sTUldGiUkgILvmr2vu6Opavr5H`; show folders are named
 `M/D -- <SHOW TITLE IN CAPS>`; never overwrite a file a person uploaded.
@@ -21,7 +23,7 @@ Reference if Drive is requested: `!Shows` folder id `1uwPmH5sTUldGiUkgILvmr2vu6O
 ## Bible layout (producer, 9/30/2026)
 - House format = rossen-script-writer's `build_bible.py` / `docx-format.md`: Arial, **1.15 line spacing**, a **blank line
   between every line** (sentence/phrase/cue), 18pt spoken lines, 23pt bold headers, cues bold red. Not 14pt; not tight.
-- Build the .docx with `build_bible.py` and the companion source log with `build_source_log.py`. Name both for the A-story headline and air day/date (producer, 10/8/2026). FINAL clips keep the red source line under `OUT:` (as sent 10/14) and the source log also carries every link and timecode. If a Google Doc is ever requested, generate it from the .docx with
+- Build the .docx with `build_bible.py` and the companion source log with `build_source_log.py`. Name both with the standard bible title (producer, 10/14/2026; replaces the 10/8 headline-first naming). FINAL clips keep the red source line under `OUT:` (as sent 10/14) and the source log also carries every link and timecode. If a Google Doc is ever requested, generate it from the .docx with
   `tools/bible_docx_to_html.py`; never hand-write it separately.
 
 ## Team (producer note, 9/30/2026)
@@ -29,7 +31,8 @@ Reference if Drive is requested: `!Shows` folder id `1uwPmH5sTUldGiUkgILvmr2vu6O
   written with rossen-script-writer from the approved outline w/ videos. Don't address, copy or credit her.
 - Matt Raub is no longer with Rossen; TJ Cooney replaced him as Head of Content (producer, 10/12/2026). Don't
   address or copy Matt. Producer-kit rulings attributed to Matt stand until TJ or the producer changes them.
-  The skills still name Matt (71 mentions, 32 files); that update is on the back burner (producer, 10/12).
+  Skills updated 10/14 (producer): current-role references say TJ; Matt stays only where the skills record what he
+  did (his teardown, the two-clips standard, past meetings, aired transcripts, sent examples).
 - Call-in shows: "a producer calls and books" callers. Ask the producer who that is before assuming.
 
 ## Audience and standing editorial notes

@@ -341,7 +341,7 @@ running order's `found/needed`, then:
 
 ```bash
 python3 <skills-dir>/rossen-story-outline/scripts/check_outline.py outline.md --stage videos
-python3 <skills-dir>/rossen-story-outline/scripts/build_outline.py outline.md -o "MM_DD_OUTLINE_<SHOW>.docx"
+python3 <skills-dir>/rossen-story-outline/scripts/build_outline.py outline.md -o "Outline <SHOW> <M_DD>.docx"   # standard title, e.g. "Outline F2 10_21.docx"
 ```
 
 The producer reads the outline, not a terminal table.

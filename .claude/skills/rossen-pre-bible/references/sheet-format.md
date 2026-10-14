@@ -101,16 +101,26 @@ A step that can be shown on Jeff's phone gets `*(demo)*`.
 handles US Letter sizing, the shortlist table, hard page breaks between stories,
 and the caps/bold conventions.
 
+**Document titles (producer, 10/14/2026).** The pitch sheet's Google Doc / Drive name and file name uses the standard title. A local file name writes `/` as `_`, because a file name can't hold a slash.
+
+| Stage | Title | Example (Drive) | Example (local file) |
+|---|---|---|---|
+| Pre-bible | `Prebible <SHOW> <M/DD>` | `Prebible F1 10/16` | `Prebible F1 10_16.docx` |
+| Outline w/ videos | `Outline <SHOW> <M/DD>` | `Outline F1 10/16` | `Outline F1 10_16.docx` |
+| Bible | `<SHOW> <Day> <M/DD> -- <Working Title>` | `F1 Fri 10/16 -- Your TV Is Watching You` | `F1 Fri 10_16 -- Your TV Is Watching You.docx` |
+
+`<SHOW>` is `F1` (Friday live) or `F2` (the Wednesday show); `<Day>` is `Fri` or `Wed`; `<Working Title>` is the A story's working title. The bible's source log adds ` -- SOURCE LOG`; a draft bible adds ` -- DRAFT`. One pre-bible covering two shows: `Prebible F1 10/16 + F2 10/21`.
+
 ```bash
-python3 scripts/build_sheet.py sheet.md -o "Pre_Bible_Pitch_Sheet.docx"
+python3 scripts/build_sheet.py sheet.md -o "Prebible F1 10_16.docx"
 python3 scripts/check_sheet.py sheet.md
 ```
 
 Then **look at the pages**:
 
 ```bash
-soffice --headless --convert-to pdf "Pre_Bible_Pitch_Sheet.docx"
-pdftoppm -jpeg -r 80 "Pre_Bible_Pitch_Sheet.pdf" page
+soffice --headless --convert-to pdf "Prebible F1 10_16.docx"
+pdftoppm -jpeg -r 80 "Prebible F1 10_16.pdf" page
 ls page-*.jpg
 ```
 

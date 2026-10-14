@@ -2,7 +2,7 @@
 """Render a Pre-Bible Pitch Sheet markdown source into a .docx.
 
 Usage:
-    python3 build_sheet.py sheet.md -o "Pre_Bible_Pitch_Sheet.docx"
+    python3 build_sheet.py sheet.md -o "Prebible F1 10_16.docx"
 
 Source conventions this expects:
     # TITLE                      -> document title (first H1 only)
@@ -211,7 +211,7 @@ def render(md, out):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("source")
-    ap.add_argument("-o", "--output", default="Pre_Bible_Pitch_Sheet.docx")
+    ap.add_argument("-o", "--output", default="Prebible.docx")
     args = ap.parse_args()
 
     with open(args.source, encoding="utf-8") as fh:

@@ -1,6 +1,6 @@
 # The team's line-level rules
 
-From Matt Raub's notes on every recent bible and the voice profile
+From former Head of Content Matt Raub's notes on every recent bible (they stand until TJ Cooney or the producer changes them) and the voice profile
 (`references/producer-kit/rossen-voice.md`). Load for every draft and every voice
 pass. These are written into the document.
 

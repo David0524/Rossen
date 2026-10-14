@@ -1,6 +1,6 @@
 # What Jeff and Ryan want, and what the data taught us
 
-From the Rossen Reports producer kit (Matt Raub, Head of Content, updated
+From the Rossen Reports producer kit (built by Matt Raub, then Head of Content, updated
 2026-09-29). These are Jeff's and Ryan's own words where quoted, with dates.
 **They outrank anything in this skill that disagrees.** Load every pitch run.
 

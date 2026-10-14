@@ -1,6 +1,6 @@
 # How a bible is built
 
-The bible is built from Matt's structure, beats, and sources. A first pass is due the day before the show. Jeff riffs off the page, so treat guest questions as a map, not a script.
+The bible is built from the Head of Content's structure, beats, and sources (Matt Raub's format; TJ Cooney since 10/12/2026). A first pass is due the day before the show. Jeff riffs off the page, so treat guest questions as a map, not a script.
 
 The reference is the Ghost Tapping live bible, taped August 28, 2026. It aired September 2 as "CREDIT CARD ALERT — This NEW 'Tap to Pay' Scam Drains EVERYTHING On Your Card" and did 1.2M views. Every bible since has been asked to follow its skeleton.
 
@@ -57,7 +57,7 @@ the link and timecodes go in the source log, not under the marker.
 - **The sponsor break goes after the victim's story, not in the middle of it.** Never cut a cliffhanger for an ad. Tease what's coming, then break.
 - **Every scam needs the beat that puts the viewer in personal danger.** A wrong-number text scam became "one wrong reply puts you on the dark web forever." A hidden-camera story worked when the angle was the photos being sold, not just the spying.
 - **Get to the how-to faster.** Viewers have asked for less preamble.
-- **Outside clips are cleared** and shouldn't crowd out Jeff on camera. Matt's standard is about two per segment.
+- **Outside clips are cleared** and shouldn't crowd out Jeff on camera. The house standard (set by Matt Raub) is about two per segment.
 - **Every number has a source,** and the wording matches the source.
 - **Guest credentials are consistent** across the bible and match the segment's topic.
 - **The ending has to close.** It shouldn't dissolve.

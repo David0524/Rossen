@@ -2,7 +2,7 @@
 """Render a Rossen Story Outline markdown source into a .docx.
 
 Usage:
-    python3 build_outline.py outline.md -o "MM_DD_OUTLINE_SHOW.docx"
+    python3 build_outline.py outline.md -o "Outline F2 10_21.docx"
 
 Source conventions this expects:
     # TITLE                      -> document title (first H1 only)

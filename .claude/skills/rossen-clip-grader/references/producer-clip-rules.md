@@ -1,8 +1,8 @@
 # Clip rules from the producer team (kit, Sept 2026)
 
-Apply when grading or picking clips. These come from Matt Raub and Ryan Chaffee.
+Apply when grading or picking clips. These come from Matt Raub (former Head of Content) and Ryan Chaffee; they stand until TJ Cooney or the producer changes them.
 
-- **About two outside clips per segment** is Matt's standard. Outside clips must
+- **About two outside clips per segment** is the house standard (Matt Raub's). Outside clips must
   be cleared and shouldn't crowd Jeff off camera. Grade for the best two, not
   the most.
 - **Local news is the best clip source** and the heat signal. A local news clip

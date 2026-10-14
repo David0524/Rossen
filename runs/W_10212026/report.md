@@ -1,6 +1,6 @@
 # 10/21 F2 pipeline report (run W_10212026, 10/13/2026)
 
-Outline: `outline.md` / `10_21_OUTLINE_WED.docx`, Stage: videos. Picks: `picks.json`; manifest: `clips/manifest.json`.
+Outline: `outline.md` / `Outline F2 10_21.docx`, Stage: videos. Picks: `picks.json`; manifest: `clips/manifest.json`.
 Nothing was downloaded or cut. Picks were located, checked against YouTube captions, and logged with timecodes for someone else to pull.
 
 Source mix, 6 picks:  affiliate 3 · creator_long 3

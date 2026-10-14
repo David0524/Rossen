@@ -1,6 +1,6 @@
 # The competitive field
 
-Source: Matt's competitive research, August 27 to 28, 2026, revised with Ryan's notes. Subscriber and view figures came from public trackers (Social Blade, SPEAKRJ, HypeAuditor). Treat per-video numbers as directional.
+Source: competitive research by Matt Raub (former Head of Content), August 27 to 28, 2026, revised with Ryan's notes. Subscriber and view figures came from public trackers (Social Blade, SPEAKRJ, HypeAuditor). Treat per-video numbers as directional.
 
 ## The channels
 

@@ -26,7 +26,7 @@ F2 — [Show frame] (tape, with [guest])
 Heads-ups
 - [Anything that could trip him live: a guest name mismatch, a clip that isn't pulled, a fact that needs confirming.]
 
-Matt
+[Sender's first name]
 ```
 
 ## Rules
