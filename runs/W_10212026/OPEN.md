@@ -11,4 +11,6 @@ The combined 10/16 + 10/21 pre-bible is the source (`10_16_and_10_21_Pre_Bible_P
 - [ ] C fix sources: state PUC complaint page, Illinois AG Rushmore page, budget billing, LIHEAP 2026–27
 - [ ] Clearance: She Prepares and Gamers Nexus are creator videos
 - [ ] B (reworked 10/14): check where Hertz's AI scanners stand in 2026; date Adam Foley's case (Aug 2025)
-- [ ] Bible next (rossen-script-writer), from the outline
+- [x] Bible written 10/14: `YOUR TV IS WATCHING WHAT YOU WATCH - WED 10_21.docx` + SOURCE LOG (FINAL, 7 clips, review loop clean after 3 BLOCKER fixes; `REVIEW_LOOP.md`)
+- [ ] Bible open decisions: Lon's no-setting fallback; name Indra Energy or not; LIHEAP 2026-27
+- [ ] Review-loop WARNINGs for the producer (13, in `REVIEW_LOOP.md`), incl. pad clip outs ~1s in the edit
