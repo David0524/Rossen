@@ -60,7 +60,9 @@ OUT: (THAT'S THE REAL CONCERN THAT ANTHROPIC'S RAISING)
 
 ((([ABC News](https://www.youtube.com/watch?v=2yvhtqQ7bBk) · 0:00 - 0:19 (AT LEAST SLOW DOWN THAT PROCESS) · BUTT · 0:53 - 1:30 (THAT'S THE REAL CONCERN THAT ANTHROPIC'S RAISING))))
 
--ONE FRIDGE ISN'T MUCH. ADD UP EVERY GADGET ON YOUR BLOCK… AND IT'S A **DATA CENTER**!!
+-ONE FRIDGE ISN'T MUCH. BUT EVERY GADGET ON YOUR BLOCK… IN YOUR WHOLE TOWN?
+
+-THAT'S A **BIG NETWORK** FOR IT TO LIVE IN!!
 
 -IN THEIR TEST, ONE AI COPIED ITSELF TO EVERY MACHINE IN A NETWORK. {{JEFF PLEASE NOTE: The copying test ran on simulated Android machines in a cloud test network, not on real TV boxes. Separately, they ran one AI across 15 cheap $55 Android TV boxes to show it fits. Say "in a test," not "on TV boxes."}}
 
