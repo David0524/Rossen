@@ -8,13 +8,13 @@
 |---|---|---|---|
 | Tease | The TV that watches what you watch, the rental bill with a fake photo, the energy company you never signed up for | — | — |
 | A | Your TV is watching what you watch: turn this off tonight | ~55% of show | 3/3 |
-| Break | OmniWatch — after A beat 7 (Lon's bottom line) | — | — |
+| Break | OmniWatch — after A beat 7 (Lon's questions and Jeff's recap) | — | — |
 | B | They're billing you for damage you didn't do | ~25% | 3/3 |
 | Break | OmniWatch — after B beat 4 (your phone is your alibi) | — | — |
 | C | Winter bills are going up, and you may have been switched to a supplier you never chose | ~20% | 1/1 |
 | End | End of show | — | — |
 
-**Open package:** A beat 3, She Prepares on Walmart and LG TVs.
+**Open package:** A beat 2, She Prepares on Walmart and LG TVs.
 
 ### The show in three sentences
 
@@ -29,9 +29,10 @@ A climbs from your screen to the ad companies to the claim about your living roo
 - Slate is final as approved (producer, 10/13). Third TV-tracking video (January ~654K, spring ~316K; Ryan says the devices video was a hit); the title has to sell a new angle (the Texas deals or the LG claim).
 - No demos this show (producer, 10/13). Lon walks through where the setting usually lives (A6), and what to do when a TV doesn't have one; B and C fixes are Jeff on camera.
 - A: menu paths vary by model and some TVs have no off switch (producer, 10/13). Don't promise "the one setting" works on every TV; the fix leads with "check," then the brand names, then the no-setting fallback.
-- A cut from 4 clips to 3 at Checkpoint 2 (producer, 10/13): no TV owner on camera, so the old A3 is gone and A is renumbered.
-- A5 · LEGAL: the Gamers Nexus cut carries the claim and not LG's denial. Jeff reads LG's statement right after it ("The claims made in the recently published video are not true").
-- A is thin on people: A3 to A5 are a creator, a state and a researcher. Lon is the human in A.
+- A cut from 4 clips to 3 at Checkpoint 2 (producer, 10/13): no TV owner on camera, so the old A3 is gone and A is renumbered (again 10/14, when Lon moved after the clips).
+- A4 · LEGAL: the Gamers Nexus cut carries the claim and not LG's denial. Jeff reads LG's statement right after it ("The claims made in the recently published video are not true").
+- A is thin on people: A2 to A4 are a creator, a state and a researcher. Lon is the human in A.
+- Lon comes in after all three A clips (producer, 10/14), with a full expert block: mechanics, his read of the Texas deal (he argued on Lon.TV that it let LG off the hook), the listening claim, the settings, and four numbered questions.
 - Lon Seidman: confirm booked, and check for sponsor or affiliate ties to TV brands or Roku before he gives settings advice. On his own channel he argued Texas's LG settlement "let them off the hook."
 - B reworked (producer, 10/14): rental cars in general, not Turo; Hertz's AI scanner (CBS) leads as the legacy company, then Hope's fake tire photo; the payoff is a video walkaround before you return the car (reverse image search dropped); the Birmingham Turo case is cut. No 55+ victim, and both renters got their money back, so it plays as a warning with a fix.
 - B: hotel fees left out (one Jeff line at most, in Jeff should know).
@@ -55,27 +56,27 @@ A climbs from your screen to the ad companies to the claim about your living roo
 
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
-| 1 | The hook | You (the viewer) | Every show you watch, even a DVD or a cable box, your smart TV checks what's on the screen. | JEFF |
-| 2 | It's watching | Lon Seidman, tech reviewer, Lon.TV | The feature is called ACR: snapshots of the screen matched to a database, on by default; one 2024 study clocked LG about every 15 seconds. | GUEST |
-| 3 | Who's buying | She Prepares, older-audience creator (Oct 2026) | Vizio's own policy: what you watch is licensed to partners and tied to your age, location and purchases; Walmart bought Vizio for the ads. | HAVE · HORIZONTAL — She Prepares 6WT5fc-LHSc |
-| 4 | Only Texas got asked | Texas Attorney General's office (Dec 2025 – May 2026) | Texas sued TV makers; Samsung and LG agreed to ask Texans first, and nobody else. | FIND · HORIZONTAL — Texas TV news on the AG suits or settlements |
-| 5 | The claim LG denies | Steve Burke, Gamers Nexus (Sept 2026) | His team captured microphone audio from an LG TV that looked off and was unplugged from the network; LG says the claims are not true. | HAVE · HORIZONTAL — Gamers Nexus 6IFVTcM28KA |
-| 6 | Turn it off, if you can | Lon Seidman | Where the setting usually lives on Samsung, LG, Vizio, Roku and Sony, over a graphic, and what to do when your TV has none. | GUEST |
-| 7 | Lon's bottom line | Lon Seidman | The TV keeps working with it off, ads just get less targeted, plus the microphone setting worth checking. | GUEST |
+| 1 | The hook | You (the viewer) | Every show you watch, even a DVD or a cable box, your smart TV checks what's on the screen and matches it (ACR). | JEFF |
+| 2 | Who's buying | She Prepares, older-audience creator (Oct 2026) | Vizio's own policy: what you watch is licensed to partners and tied to your age, location and purchases; Walmart bought Vizio for the ads. | HAVE · HORIZONTAL — She Prepares 6WT5fc-LHSc |
+| 3 | Only Texas got asked | Texas Attorney General's office (Dec 2025 – May 2026) | Texas sued TV makers; Samsung and LG agreed to ask Texans first, and nobody else. | FIND · HORIZONTAL — Texas TV news on the AG suits or settlements |
+| 4 | The claim LG denies | Steve Burke, Gamers Nexus (Sept 2026) | His team captured microphone audio from an LG TV that looked off and was unplugged from the network; LG says the claims are not true. | HAVE · HORIZONTAL — Gamers Nexus 6IFVTcM28KA |
+| 5 | How worried should you be | Lon Seidman, tech reviewer, Lon.TV | After all three clips: what ACR does, his own read of the Texas deal, and the listening claim. | GUEST |
+| 6 | Turn it off, if you can | Lon Seidman | Where the setting usually lives on each brand, over a graphic; what to do with no setting; what stops working. | GUEST |
+| 7 | Lon's questions | Lon Seidman | Four numbered questions: streaming sticks, buying a new TV, other smart devices, one thing tonight. | GUEST |
 
 ### Videos
 
 | # | Clip | Shows | In–Out | Status |
 |---|---|---|---|---|
-| 3 | [She Prepares — What Walmart TVs and LG Are Really Doing When Inside Your Home...](https://www.youtube.com/watch?v=6WT5fc-LHSc) | She reads Vizio's privacy policy in plain words (viewing data licensed to partners, combined with age, location and purchases), then why Walmart bought Vizio: the ad business. Uploaded Oct 3, 2026, 12:46, 1.23M views. | 8:13–9:13 "what you buy" BUTT 10:02–10:33 "gives them to you" | PICK |
-| 4 | [KVUE — Texas reaches settlement with LG in smart TV privacy lawsuit](https://www.youtube.com/watch?v=0ZWvqw17HIQ) | Paxton's LG settlement requires a pop-up and an opt-out; LG admits no wrongdoing; Samsung also settled; Sony, Hisense and TCL cases ongoing. Uploaded May 11, 2026, 1:18. | 0:00–0:49 "under this agreement" BUTT 1:08–1:16 "are still ongoing" | PICK |
-| 5 | [Gamers Nexus — 216,000,000 Spy TVs: The LG Smart TV Problem](https://www.youtube.com/watch?v=6IFVTcM28KA) | Steve Burke: microphone audio captured while the TV appeared off and unplugged, stored and pulled out "by someone with remote access" through vulnerabilities. LG's denial is not in this window. Uploaded Sept 6, 2026, 2:15:52, 8.2M views. | 0:26–0:52 "user reconnected the network" | PICK · LEGAL |
+| 2 | [She Prepares — What Walmart TVs and LG Are Really Doing When Inside Your Home...](https://www.youtube.com/watch?v=6WT5fc-LHSc) | She reads Vizio's privacy policy in plain words (viewing data licensed to partners, combined with age, location and purchases), then why Walmart bought Vizio: the ad business. Uploaded Oct 3, 2026, 12:46, 1.23M views. | 8:13–9:13 "what you buy" BUTT 10:02–10:33 "gives them to you" | PICK |
+| 3 | [KVUE — Texas reaches settlement with LG in smart TV privacy lawsuit](https://www.youtube.com/watch?v=0ZWvqw17HIQ) | Paxton's LG settlement requires a pop-up and an opt-out; LG admits no wrongdoing; Samsung also settled; Sony, Hisense and TCL cases ongoing. Uploaded May 11, 2026, 1:18. | 0:00–0:49 "under this agreement" BUTT 1:08–1:16 "are still ongoing" | PICK |
+| 4 | [Gamers Nexus — 216,000,000 Spy TVs: The LG Smart TV Problem](https://www.youtube.com/watch?v=6IFVTcM28KA) | Steve Burke: microphone audio captured while the TV appeared off and unplugged, stored and pulled out "by someone with remote access" through vulnerabilities. LG's denial is not in this window. Uploaded Sept 6, 2026, 2:15:52, 8.2M views. | 0:26–0:52 "user reconnected the network" | PICK · LEGAL |
 
 ### The fix
 
-- After She Prepares (beat 3): if your TV asked you to "agree" to anything at setup, assume the tracking is on.
-- After Texas (beat 4): you're not in Texas, so nobody is going to ask you. Check it yourself.
-- After Gamers Nexus (beat 5): don't wait for the listening claim to be settled; turn off what's proven.
+- After She Prepares (beat 2): if your TV asked you to "agree" to anything at setup, assume the tracking is on.
+- After Texas (beat 3): you're not in Texas, so nobody is going to ask you. Check it yourself.
+- After Gamers Nexus (beat 4): don't wait for the listening claim to be settled; turn off what's proven.
 - Look in privacy or viewing settings first; the names below are where it usually lives, and they vary by model. ⚠️ verify on 2026 sets
 - Samsung: Viewing Information Services, off (Consumer Reports, how to turn off smart TV snooping, updated 10/19/2025).
 - LG: Viewing Information (Live Plus), off (Consumer Reports).
@@ -84,22 +85,22 @@ A climbs from your screen to the ad companies to the claim about your living roo
 - Sony: Samba Interactive TV, off (Consumer Reports).
 - No setting on your TV? ⚠️ Lon to confirm the fallback (e.g. take the TV off Wi-Fi and use a streaming device); unsourced.
 - Microphone: Roku, Microphone Access to Never Allow; Samsung's physical mic switch. ⚠️ unsourced, Lon to confirm.
-- Do-nothing test: do nothing and the tracking stays on. Opting out did stop data going to the tracking servers in one study's tests (cited by She Prepares, 6:27). ⚠️ Check whether a software update or factory reset turns it back on.
+- Do-nothing test: do nothing and the tracking stays on. Turn off the viewing setting, not the whole user agreement: on Lon's LG, declining the agreement locked him out of apps (Lon.TV, zrstLgcrx8c, 3:26). Opting out did stop data going to the tracking servers in one study's tests (cited by She Prepares, 6:27). ⚠️ Check whether a software update or factory reset turns it back on.
 - The one setting the tease promises is ACR, under each brand's name above (Consumer Reports).
 
 ### Gaps
 
-- ⚠️ Beat 4: the Texas suits are Dec 2025 and Samsung's deal Feb 2026, more than six months before airdate. Date them on air ("last December," "in February").
-- ⚠️ Beat 2: the IMC study is 2024. Date it on air.
-- ⚠️ Beats 3 and 5 are creator videos and need clearance.
+- ⚠️ Beat 3: the Texas suits are Dec 2025 and Samsung's deal Feb 2026, more than six months before airdate. Date them on air ("last December," "in February").
+- ⚠️ Beat 5: the IMC study is 2024. Date it on air.
+- ⚠️ Beats 2 and 4 are creator videos and need clearance.
 
 ### Jeff should know
 
-- Beat 5: LG says the claims "are not true," and nothing independent has confirmed them. Never say "LG is listening"; say "the investigation found" or "alleges." In Gamers Nexus's demo, the recording was retrieved "by someone with remote access" through vulnerabilities; it does not show LG collecting audio.
-- Beat 5: LG told She Prepares' source that in standby the TV only listens for a wake word if far-field voice is turned on, and that audio is deleted and never sent (She Prepares, 4:31).
-- Beat 4: the Texas deals cover Texans only. The KVUE window includes a line about transfers to the Chinese Communist Party (0:36–0:42).
-- Beat 3: Vizio says some "activity data" is still collected even with viewing data off, unless you turn it off at setup or reset the TV (She Prepares, 9:29).
-- Beat 2: the every-15-seconds figure is one 2024 study of LG sets, not every brand.
+- Beat 4: LG says the claims "are not true," and nothing independent has confirmed them. Never say "LG is listening"; say "the investigation found" or "alleges." In Gamers Nexus's demo, the recording was retrieved "by someone with remote access" through vulnerabilities; it does not show LG collecting audio.
+- Beat 4: LG told She Prepares' source that in standby the TV only listens for a wake word if far-field voice is turned on, and that audio is deleted and never sent (She Prepares, 4:31).
+- Beat 3: the Texas deals cover Texans only. The KVUE window includes a line about transfers to the Chinese Communist Party (0:36–0:42).
+- Beat 2: Vizio says some "activity data" is still collected even with viewing data off, unless you turn it off at setup or reset the TV (She Prepares, 9:29).
+- Beat 5: the every-15-seconds figure is one 2024 study of LG sets, not every brand.
 - Beat 6: Fire TV left out of the brand list (it's an Amazon device); add it only if the room asks.
 
 # B. THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO
