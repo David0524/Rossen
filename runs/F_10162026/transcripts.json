@@ -7809,5 +7809,530 @@
 "text": "the next year, primarily in the cyber area, we are going to have a lot of negative surprises."
 }
 ]
+},
+"RU6LGzvxrs4": {
+"source": "captions",
+"cues": [
+{
+"start": 0.44,
+"end": 5.0,
+"text": "Anthropic is warning that small AI"
+},
+{
+"start": 2.88,
+"end": 6.76,
+"text": "models could soon spread themselves from"
+},
+{
+"start": 5.0,
+"end": 9.04,
+"text": "one internet-connected device to"
+},
+{
+"start": 6.76,
+"end": 11.08,
+"text": "another. That could include smart TVs,"
+},
+{
+"start": 9.04,
+"end": 13.36,
+"text": "security cameras, and other smart home"
+},
+{
+"start": 11.08,
+"end": 16.4,
+"text": "devices. The company says this could"
+},
+{
+"start": 13.36,
+"end": 19.08,
+"text": "create AI botnets, networks of infected"
+},
+{
+"start": 16.4,
+"end": 21.48,
+"text": "devices that are difficult to shut down."
+},
+{
+"start": 19.08,
+"end": 24.16,
+"text": "Anthropic says that if AI models keep"
+},
+{
+"start": 21.48,
+"end": 26.28,
+"text": "improving at their current pace, they"
+},
+{
+"start": 24.16,
+"end": 28.08,
+"text": "could be capable of doing this on their"
+},
+{
+"start": 26.28,
+"end": 30.04,
+"text": "own by the end of the year. But the"
+},
+{
+"start": 28.08,
+"end": 32.48,
+"text": "company has not demonstrated this kind"
+},
+{
+"start": 30.04,
+"end": 34.48,
+"text": "of self-replication through commercial"
+},
+{
+"start": 32.48,
+"end": 36.32,
+"text": "data centers. So I want to bring in"
+},
+{
+"start": 34.48,
+"end": 38.48,
+"text": "Jonas Gwan, AI researcher at the"
+},
+{
+"start": 36.32,
+"end": 40.8,
+"text": "University of Toronto and Vector"
+},
+{
+"start": 38.48,
+"end": 43.08,
+"text": "Institute. Thanks for being here. Let's"
+},
+{
+"start": 40.8,
+"end": 46.44,
+"text": "talk about Anthropic. It says small AI"
+},
+{
+"start": 43.08,
+"end": 49.16,
+"text": "models could soon copy themselves across"
+},
+{
+"start": 46.44,
+"end": 52.08,
+"text": "these internet-connected devices. How"
+},
+{
+"start": 49.16,
+"end": 54.72,
+"text": "realistic is this threat?"
+},
+{
+"start": 52.08,
+"end": 57.2,
+"text": ">> Good to be here. So I would say that"
+},
+{
+"start": 54.72,
+"end": 58.8,
+"text": "AI-driven worms, this kind of attack,"
+},
+{
+"start": 57.2,
+"end": 61.2,
+"text": "has been a known threat in the AI"
+},
+{
+"start": 58.8,
+"end": 62.64,
+"text": "security community and is an active area"
+},
+{
+"start": 61.2,
+"end": 64.76,
+"text": "of research. In fact, it's one of my"
+},
+{
+"start": 62.64,
+"end": 67.6,
+"text": "primary areas of research. What"
+},
+{
+"start": 64.76,
+"end": 69.16,
+"text": "Anthropic is looking at is a nefarious"
+},
+{
+"start": 67.6,
+"end": 72.96,
+"text": "variant that targets, like you said,"
+},
+{
+"start": 69.16,
+"end": 75.36,
+"text": "home devices. And they have the"
+},
+{
+"start": 72.96,
+"end": 77.32,
+"text": "potential to proliferate around these"
+},
+{
+"start": 75.36,
+"end": 79.28,
+"text": "devices and cause a real threat."
+},
+{
+"start": 77.32,
+"end": 82.08,
+"text": "However, their research currently still"
+},
+{
+"start": 79.28,
+"end": 84.2,
+"text": "involves several steps of conjecture."
+},
+{
+"start": 82.08,
+"end": 86.64,
+"text": "Um one main thing is that in their"
+},
+{
+"start": 84.2,
+"end": 89.2,
+"text": "experiments, the models were simply"
+},
+{
+"start": 86.64,
+"end": 91.68,
+"text": "given access to the devices. There's no"
+},
+{
+"start": 89.2,
+"end": 93.56,
+"text": "hacking involved. They were given direct"
+},
+{
+"start": 91.68,
+"end": 95.56,
+"text": "access, and what they demonstrated was"
+},
+{
+"start": 93.56,
+"end": 98.0,
+"text": "the self-replication part. The other"
+},
+{
+"start": 95.56,
+"end": 99.92,
+"text": "part was that involves conjecture was"
+},
+{
+"start": 98.0,
+"end": 102.28,
+"text": "that they actually used a larger, more"
+},
+{
+"start": 99.92,
+"end": 104.32,
+"text": "capable model that does not fit on these"
+},
+{
+"start": 102.28,
+"end": 107.12,
+"text": "home devices, and they had the"
+},
+{
+"start": 104.32,
+"end": 110.0,
+"text": "hypotheses that as these models become"
+},
+{
+"start": 107.12,
+"end": 112.56,
+"text": "more capable over time, even the smaller"
+},
+{
+"start": 110.0,
+"end": 114.72,
+"text": "ones that can fit on your home devices"
+},
+{
+"start": 112.56,
+"end": 116.84,
+"text": "would possess similar capabilities to"
+},
+{
+"start": 114.72,
+"end": 119.92,
+"text": "self-replicate. What I would say is"
+},
+{
+"start": 116.84,
+"end": 122.6,
+"text": "this, does Anthropic's variant of the AI"
+},
+{
+"start": 119.92,
+"end": 125.12,
+"text": "worm pose an immediate threat to society"
+},
+{
+"start": 122.6,
+"end": 127.8,
+"text": "today or perhaps in a few months? I"
+},
+{
+"start": 125.12,
+"end": 131.16,
+"text": "don't believe so at this time, but I"
+},
+{
+"start": 127.8,
+"end": 133.2,
+"text": "would also say, is this research and AI"
+},
+{
+"start": 131.16,
+"end": 135.12,
+"text": "driven worm research in general"
+},
+{
+"start": 133.2,
+"end": 138.04,
+"text": "sufficient to warrant the security"
+},
+{
+"start": 135.12,
+"end": 140.72,
+"text": "community to be very concerned and start"
+},
+{
+"start": 138.04,
+"end": 142.68,
+"text": "preemptively addressing the situation,"
+},
+{
+"start": 140.72,
+"end": 145.08,
+"text": "coming up with defenses before it"
+},
+{
+"start": 142.68,
+"end": 147.48,
+"text": "impacts society? Absolutely, yes."
+},
+{
+"start": 145.08,
+"end": 150.04,
+"text": ">> Yeah, the warnings obviously are good."
+},
+{
+"start": 147.48,
+"end": 152.16,
+"text": "Um so Anthropic does warn that these AI"
+},
+{
+"start": 150.04,
+"end": 154.24,
+"text": "botnets could be pretty difficult to"
+},
+{
+"start": 152.16,
+"end": 156.76,
+"text": "shut down. So what can we all do? What"
+},
+{
+"start": 154.24,
+"end": 158.76,
+"text": "can consumers do to protect our"
+},
+{
+"start": 156.76,
+"end": 160.88,
+"text": "connected devices?"
+},
+{
+"start": 158.76,
+"end": 163.6,
+"text": ">> It's a very valid question. So I would"
+},
+{
+"start": 160.88,
+"end": 165.88,
+"text": "say that even though the manifestation"
+},
+{
+"start": 163.6,
+"end": 167.68,
+"text": "of the threat is new, the attack"
+},
+{
+"start": 165.88,
+"end": 170.12,
+"text": "vectors, how they take over your"
+},
+{
+"start": 167.68,
+"end": 172.8,
+"text": "devices, are by and large the same"
+},
+{
+"start": 170.12,
+"end": 174.92,
+"text": "categories of cybersecurity attacks that"
+},
+{
+"start": 172.8,
+"end": 176.959,
+"text": "experts have been giving advice on"
+},
+{
+"start": 174.92,
+"end": 179.48,
+"text": "preventing for many years, right? So"
+},
+{
+"start": 176.959,
+"end": 182.08,
+"text": "this involves updating your device on a"
+},
+{
+"start": 179.48,
+"end": 184.36,
+"text": "regular basis to fix any known"
+},
+{
+"start": 182.08,
+"end": 186.519,
+"text": "vulnerabilities. This is a primary"
+},
+{
+"start": 184.36,
+"end": 188.959,
+"text": "factor through which these models attack"
+},
+{
+"start": 186.519,
+"end": 191.48,
+"text": "your devices, much like in the past a"
+},
+{
+"start": 188.959,
+"end": 193.8,
+"text": "human attacker would. They would find"
+},
+{
+"start": 191.48,
+"end": 195.92,
+"text": "known vulnerabilities online and exploit"
+},
+{
+"start": 193.8,
+"end": 197.6,
+"text": "those vulnerabilities to take advantage"
+},
+{
+"start": 195.92,
+"end": 200.2,
+"text": "of those vulnerabilities to exploit your"
+},
+{
+"start": 197.6,
+"end": 202.28,
+"text": "devices. Another common vector is"
+},
+{
+"start": 200.2,
+"end": 203.88,
+"text": "through weak credentials or default"
+},
+{
+"start": 202.28,
+"end": 206.6,
+"text": "credentials. Especially with home"
+},
+{
+"start": 203.88,
+"end": 208.64,
+"text": "devices, if you have a printer, a smart"
+},
+{
+"start": 206.6,
+"end": 210.959,
+"text": "fridge, they often come with a default"
+},
+{
+"start": 208.64,
+"end": 212.36,
+"text": "set of credentials. If an attacker or a"
+},
+{
+"start": 210.959,
+"end": 214.239,
+"text": "model"
+},
+{
+"start": 212.36,
+"end": 215.84,
+"text": "looks at those credentials and uses it"
+},
+{
+"start": 214.239,
+"end": 217.959,
+"text": "to gain access to your device, they can"
+},
+{
+"start": 215.84,
+"end": 219.92,
+"text": "take over. Or phishing attacks, right?"
+},
+{
+"start": 217.959,
+"end": 222.08,
+"text": "Clicking on links in your email from an"
+},
+{
+"start": 219.92,
+"end": 223.8,
+"text": "unknown sender. These are still the same"
+},
+{
+"start": 222.08,
+"end": 225.44,
+"text": "attack vectors that these models will"
+},
+{
+"start": 223.8,
+"end": 227.64,
+"text": "likely use to gain access to your"
+},
+{
+"start": 225.44,
+"end": 229.08,
+"text": "device. So maintaining good security"
+},
+{
+"start": 227.64,
+"end": 232.0,
+"text": "hygiene in these traditional"
+},
+{
+"start": 229.08,
+"end": 233.84,
+"text": "cybersecurity recommendations is the"
+},
+{
+"start": 232.0,
+"end": 234.52,
+"text": "best way to secure yourself against this"
+},
+{
+"start": 233.84,
+"end": 238.56,
+"text": "threat."
+},
+{
+"start": 234.52,
+"end": 238.56,
+"text": ">> All right, Jonas Gwan. Jonas, thank you."
+}
+]
 }
 }

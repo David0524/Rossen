@@ -85,7 +85,7 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 |---|---|---|---|---|
 | 10-16-A2 | authority_report | H | PICK | ABC News 2yvhtqQ7bBk 0:00-0:19 "at least slow down that process" BUTT 0:53-1:30 "that's the real concern that Anthropic's raising" (CBS 9Swcki8Bhx8 bot-walled) |
 | 10-16-A3 | evidence | H | MANUAL | Anthropic cdn mp4: 13 s silent animated diagram, not camera footage of the boxes; permission needed. No outlet video of the real boxes found |
-| 10-16-A4 | debunk | H | THROTTLED | CBS RU6LGzvxrs4 (Jonas Guan) captions bot-walled on first try and on the 8-min retry; fallback ABC 2yvhtqQ7bBk 0:26-0:36 |
+| 10-16-A4 | debunk | H | PICK (late) | CBS RU6LGzvxrs4 (Jonas Guan) bot-walled twice, captioned on a third spaced try (~35 min after first): 1:55-2:24 "Absolutely, yes." + 2:40-3:35 "they can take over." |
 | 10-16-A5 | authority_report | H | PICK | FOX 29 BNjvqT2BBxI 0:00-0:16 "labeled as spam and never investigated" BUTT 0:46-0:54 "no matter how specifically you set them" (rolling captions, ±2 s) |
 | 10-16-A6 | authority_report | H | PICK | ABC News kczEi3dM0Ow 0:00-0:33 "This situation is obviously unacceptable." (alt BBC AUq2twt8mgM 0:00-0:20) |
 | 10-16-A7 | authority_report | H | PICK | CNN tj1dFIUAs7A 0:06-0:25 "a false tip about a homicide to Philadelphia police" BUTT 3:49-5:10 "a lot of negative surprises"; cross-checked with Whisper on the cnn.com cut |
@@ -95,3 +95,4 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 **Pattern:** a news-peg Friday with HAVE links from the pre-bible: every pick was a pre-bible link; harvest search returned mostly articles (news_web), and its YouTube leg found almost nothing new for a 2-day-old story.
 **Sourcability calibration:** a pre-bible "video" from a company research page can be an animation. Check a frame and ffprobe before planning it as the open package or b-roll of the real thing.
 **Process bug:** `check_outline.py` reads Who dates only as "(Mon YYYY)"; "(Oct. 12, 2026)" parses as January and raises a false six-month warning. It also wants transcript cues as {start,end,text} dicts, not lists.
+**Throttle note (F_10162026):** the caption bot wall cleared for one ID about 35 min after the first failure, matching the "30-minute wait" note in CLAUDE.md. Worth a third spaced try on a priority beat.

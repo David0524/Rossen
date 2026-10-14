@@ -60,7 +60,8 @@
   "cannot_determine": [
    "what is on screen during 0:53–1:30"
   ],
-  "transcript_rung": 1
+  "transcript_rung": 1,
+  "outline_row": 2
  },
  {
   "beat_id": "10-16-A3",
@@ -107,12 +108,13 @@
   "cannot_determine": [
    "whether any outlet filmed the physical boxes"
   ],
-  "transcript_rung": 3
+  "transcript_rung": 3,
+  "outline_row": 3
  },
  {
   "beat_id": "10-16-A4",
   "pass": 2,
-  "flagged": null,
+  "flagged": "https://www.youtube.com/watch?v=RU6LGzvxrs4",
   "platform": "youtube",
   "title": "CBS News — AI researcher unpacks Anthropic's self-replication warning",
   "source_mix": {
@@ -124,16 +126,25 @@
    {
     "url": "https://www.youtube.com/watch?v=RU6LGzvxrs4",
     "source_type": "network",
-    "score": 0,
-    "tone": 0,
-    "authenticity": 0,
-    "quality": 0,
-    "fit": 0,
-    "segments": [],
-    "reasoning": "Jonas Guan interview: captions bot-walled on the first try and the 8-minute retry. THROTTLED, not EMPTY.",
-    "flags": [
-     "THROTTLED"
-    ]
+    "score": 88,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 10,
+    "segments": [
+     {
+      "in": "1:55",
+      "out": "2:24",
+      "outcue": "Absolutely, yes."
+     },
+     {
+      "in": "2:40",
+      "out": "3:35",
+      "outcue": "they can take over."
+     }
+    ],
+    "reasoning": "Retry 10/14 22:17 UTC got captions. Guan answers both producer questions: not a threat today or in a few months; gets in through missed updates and default passwords. Split across outline rows 4 and 5.",
+    "flags": []
    }
   ],
   "rejected": [
@@ -145,9 +156,10 @@
    }
   ],
   "cannot_determine": [
-   "Guan's exact quote and its timecode"
+   "on-screen framing"
   ],
-  "transcript_rung": 3
+  "transcript_rung": 1,
+  "outline_row": "4 and 5"
  },
  {
   "beat_id": "10-16-A5",
@@ -204,7 +216,8 @@
   "cannot_determine": [
    "exact frame timing; rolling captions"
   ],
-  "transcript_rung": 1
+  "transcript_rung": 1,
+  "outline_row": 7
  },
  {
   "beat_id": "10-16-A6",
@@ -258,7 +271,8 @@
   "cannot_determine": [
    "none"
   ],
-  "transcript_rung": 1
+  "transcript_rung": 1,
+  "outline_row": "cut 10/14"
  },
  {
   "beat_id": "10-16-A7",
@@ -324,7 +338,8 @@
   "cannot_determine": [
    "none"
   ],
-  "transcript_rung": 1
+  "transcript_rung": 1,
+  "outline_row": "cut 10/14"
  },
  {
   "beat_id": "10-16-A8",
@@ -395,6 +410,7 @@
   "cannot_determine": [
    "none"
   ],
-  "transcript_rung": 1
+  "transcript_rung": 1,
+  "outline_row": 8
  }
 ]

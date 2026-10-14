@@ -12,6 +12,10 @@ Guest: Lon Seidman (tech reviewer, Lon.TV).
 Moved off this date: "$2 WATER, $2,400 GONE" now airs 10/23 (Drive folder `10/16A`).
 Drive: deliverables go to the `10/16B` show folder (id `12pY-TQWLQcQWv_KM6_5-f3Ob2tK_h_C7`), as Google Docs, at the producer's request.
 
+Producer rulings, 10/14:
+- Deals block runs, with Trey Donovan.
+- Lon talks; no demo.
+- The story must be simple enough for our audience and answer two questions the right way: will this happen to you, and how? And what harm can a duplicated agent cause? Outline v2 is rebuilt around them; Medicare and Gates beats cut for simplicity.
+
 Open:
-- Is there still a deals block this Friday, or does Lon replace it?
 - The pre-bible's verification flags carry over: never tie the French fridge attack to AI; "within months" is Anthropic's "may be"; source Medicare and Hugging Face from primary reporting.

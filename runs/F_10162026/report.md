@@ -23,3 +23,7 @@ Source mix, 6 picks:  network 5 · affiliate 1 (+ 1 raw_footage manual)
 - **Editorial findings:** Gates says AI getting out of control is "years away"; his warning is bad people using AI. Danfoss says the French units hit no longer got security updates (supports the fix). ABC says it's unclear whether AI was used in France.
 
 Nothing in this pipeline watched a video; one still frame of A3 was checked. No clip was downloaded or cut.
+
+## Update 10/14, 22:17 UTC: outline v2
+- A4 (Jonas Guan, CBS RU6LGzvxrs4) captions came through on a retry about 15 minutes after the last one: PICK, rung 1. Split into outline rows 4 ("not today or in a few months", 1:55–2:24) and 5 (updates and default passwords, 2:40–3:35).
+- The producer asked for a simpler story built on two questions. Outline rows are renumbered (see `outline_row` in picks.json). A6 (Medicare) and A7 (Gates) were cut from the outline; their picks stay here.
