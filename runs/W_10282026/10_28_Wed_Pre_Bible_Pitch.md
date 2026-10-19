@@ -1,18 +1,23 @@
 # PRE-BIBLE PITCH SHEET
 
-Airdate: **Wednesday, Oct 28, 2026** (F2 story show, tapes Fri Oct 23) · A + B + C, no guest · Prepared Mon, Oct 19, 2026 · Built from the story finder's Wednesday picks, cut to five after checking sources on Oct 19. Coverage checked against 62 aired transcripts (Mar 18 to Sep 29) and the October uploads. Audience 55+.
+Airdate: **Wednesday, Oct 28, 2026** (F2 story show, tapes Fri Oct 23) · A + B + C, no guest · Prepared Mon, Oct 19, 2026 · Ten pitches, sources checked Oct 19 · Coverage checked through the Oct 16 upload · Audience 55+.
 
 ## THE SHORTLIST — RANKED
 
 | # | Story | The sexy beat | Viral | Slot | Confidence |
 |---|---|---|---|---|---|
-| 1 | **HE "ACCIDENTALLY" REFUNDED YOU THOUSANDS — AND NOW HE WANTS IT BACK** | A fake Geek Squad agent makes your bank account look overpaid, and an 81-year-old hands a stranger $20,000. | 🔥 TikTok 2.1M (seed figure, unverified) | F2 A (recommended) | HIGH — needs a local TV clip |
-| 2 | **THE CALL SAYS YOUR SON IS IN JAIL. HE IS. THE CALLER IS STILL A SCAMMER** | Scammers read the jail's booking list, call the family, know the charges, and take the "bail." | — (local TV, views unconfirmed) | F2 A option, or B | HIGH — audience fit is the question |
-| 3 | **IF YOU GET THIS EMAIL FROM YOUR DOCTOR, DON'T CLICK IT** | An email that looks like your own patient portal offers a free "Medicare kit," then takes your card. | CBS Philadelphia 170K (observed 10/19) | F2 B, or A option · TIME-SENSITIVE (enrollment ends Dec 7) | MEDIUM — 19 days after the Medicare show |
-| 4 | **THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO — FILM THIS BEFORE YOU DRIVE OFF** | Weeks after you return a rental car, you get a damage bill, and the "proof" photo came off Reddit. | KSL 539K (seed figure, unverified) | F2 B | MEDIUM — no one ended up out of pocket |
-| 5 | **YOUR PASTOR IS TEXTING YOU FOR GIFT CARDS? IT'S NOT HIM** | Someone who looks like your pastor asks for gift cards "for women with cancer," and one churchgoer lost $23,000. | — | F2 C | MEDIUM — clips need dating |
+| 1 | **HE "ACCIDENTALLY" REFUNDED YOU — NOW HE WANTS IT BACK** | Fake Geek Squad "overpays" you; an 81-year-old hands over $20,000. | 🔥 TikTok 2.1M (seed, unverified) | F2 A (recommended) | HIGH — needs a TV clip |
+| 2 | **YOUR SON IS IN JAIL. THE CALLER IS STILL A SCAMMER** | They read the jail list, know the charges, take the "bail." | — | F2 A option, or B | HIGH — audience fit |
+| 3 | **YOUR DAUGHTER'S VOICE, SCREAMING** | A mom stays on the line 5.5 hours and wires $5,400. | — | F2 A option | MEDIUM — voice cloning aired May 13 |
+| 4 | **"YOUR CARD DECLINED." IT DIDN'T. THEY CHARGED BOTH** | A $600 purchase ends as $44,280 on two cards. | NPR film (TikTok 1.7M, unverified) | F2 B | MEDIUM — follow-up to 10/14 |
+| 5 | **THIS EMAIL FROM YOUR DOCTOR: DON'T CLICK** | A fake portal "Medicare kit" takes your card. | CBS Phila. 170K (10/19) | F2 B · TIME-SENSITIVE (Dec 7) | MEDIUM — 19 days after Medicare show |
+| 6 | **BILLED FOR DAMAGE YOU DIDN'T DO** | The rental-car "proof" photo came off Reddit. | KSL 539K (seed, unverified) | F2 B | MEDIUM — no one out of pocket |
+| 7 | **$2 FOR WATER. THE QR CODE TOOK $2,400** | One scan at a street stand; the bank won't pay. | — | F2 C | MEDIUM — QR codes done before |
+| 8 | **YOUR PASTOR WANTS GIFT CARDS? IT'S NOT HIM** | A fake pastor's email cost one woman $23,000. | — | F2 C | MEDIUM — clips need dating |
+| 9 | **THIS POST CAN STEAL YOUR VA CHECK** | A fake "grant" post reroutes VA benefits. | — | F2 C | LOW — no named victim |
+| 10 | **REAL AMAZON REFUNDS — AND FAKE ONES** | Real money arrives on its own; the fake asks for a fee. | — | F2 C | LOW — may have aired 10/16 |
 
-**SLATE FIT:** Fills A + B + C with one to spare. My pick: **A #1, B #2, C #5.** #3 is the stronger B if Jeff is fine with Medicare again; #4 holds for Thanksgiving travel. No guest: Jeff gives the tip after each case. ⚠️ 10/21 not checked. ⚠️ YouTube blocked upload dates on Oct 19; confirm every clip before the outline.
+**SLATE FIT:** Fills A + B + C several times over. My pick: **A #1, B #2, C #8**; alternates #3 (A) and #4 (B). No guest. ⚠️ 10/21 not checked; clip dates unconfirmed (YouTube blocked).
 
 # 1. HE "ACCIDENTALLY" REFUNDED YOU THOUSANDS — AND NOW HE WANTS IT BACK
 
@@ -97,7 +102,86 @@ Mar 25 covered fake arrest-warrant calls (Martha, $12,000), and Sep 4 had a gran
 - A caller who knows the name and the charges proves nothing (Clallam County Sheriff).
 - After Woodson: "pretrial services" doesn't call families to collect.
 
-# 3. IF YOU GET THIS EMAIL FROM YOUR DOCTOR, DON'T CLICK IT
+# 3. YOUR DAUGHTER'S VOICE, SCREAMING. FIVE HOURS ON THE PHONE
+
+**Slot:** F2 A option · **Confidence: MEDIUM** · *Strong victim and fresh coverage; voice cloning is on the dead list*
+
+**SLOT FIT:** It could carry an A: a parent is the target, the villain is clear, and she lost real money. The problem is the dead list: Jeff cloned his own voice on May 13. It only works pitched as what's new since then: hours on the line, the caller ID, and the errands to wire the money.
+
+### WORKING TEASE
+
+> THE PHONE RINGS. IT'S YOUR DAUGHTER. SHE'S SCREAMING.
+> THEN A MAN GETS ON. HE HAS HER. DON'T HANG UP. DON'T TELL ANYONE.
+> THIS MOM STAYED ON THAT CALL FOR FIVE AND A HALF HOURS. SHE WIRED 54 HUNDRED DOLLARS.
+> HER DAUGHTER WAS FINE THE WHOLE TIME.
+> THE ONE QUESTION THAT ENDS THIS CALL IN SECONDS.
+
+### THE HOOK
+
+Deborah Del Mastro of Martinez, California, a Navy veteran, heard what sounded like her daughter Sarah, then a man claiming to be with a cartel. He demanded $20,000. Fox News says he kept her on the line for about five and a half hours, told her to keep her phone charged, gave her a cover story, and yelled when she muted the call to talk to her husband. She sent $5,400 in four wire transfers, starting at a Walmart (ABC7, May 24; Fox News, Oct 7). In Livingston, Montana, Victoria Bond lost more than $2,000 by Western Union at an Albertsons during a call of about an hour (MontanaRightNow, Aug 4).
+
+### HOW IT WORKS
+
+- A cloned voice of your child, built from clips online, then a "kidnapper" takes over.
+- **They never let you hang up**: the call is the trap. You can't check on your daughter while you're on the line.
+- They send you on errands to wire money or buy prepaid cards.
+- The FBI warns some now send altered "proof of life" photos or video (IC3, Dec 5, 2025).
+
+### WHAT'S NEW
+
+May 13 was voice cloning itself (Jeff cloned his own voice). New: the hours-long call, the errands to Walmart and Albertsons, and the FBI's warning about faked photos and videos.
+
+### FOOTAGE WE NEED
+
+- **The get: ABC7 Bay Area's Del Mastro package** (about 5.5K views; observed 10/19). Fox's CyberGuy clip, "This scam call cost me $5,400."
+- MontanaRightNow (Bond). WGAL's "fake kidnapping videos" (content unverified).
+
+### THE PAYOFF
+
+- **Hang up and call your loved one yourself.** No real kidnapper needs you to stay on the line.
+- Set a family code word, in person.
+- Text another family member to check while you stay calm.
+- No ransom is ever paid by wire or prepaid card at a store.
+
+# 4. "YOUR CARD DECLINED." IT DIDN'T. THEY CHARGED BOTH
+
+**Slot:** F2 B · **Confidence: MEDIUM** · *Big new numbers from NPR; 14 days after our mall story*
+
+**SLOT FIT:** A strong B, and an A on numbers alone. But the 10/14 A was mall skincare (Bee & Co), so this has to be pitched as the follow-up: one family company behind thousands of stores, and the fake decline.
+
+> **CLIP** — NPR documentary on NPR's own site (not YouTube); NPR TikTok 1.7M (the story finder's figure; TikTok blocks requests from here)
+> https://www.npr.org/2026/10/14/nx-s1-6000621/mazal-group-investigation-documentary · https://www.tiktok.com/@npr/video/7696632021921074446
+> Appears to show: NPR's investigation of the stores, from the title and article.
+> *Not watched — no timecode, no outcue, no confirmation of what's on screen.*
+
+### WORKING TEASE
+
+> SHE AGREED TO SPEND 600 DOLLARS ON SKIN CREAM.
+> THEN THE CLERK SAID: "YOUR CARD DECLINED. GOT ANOTHER ONE?"
+> IT HADN'T DECLINED. HER STATEMENT SHOWED TWO CHARGES. 44 THOUSAND DOLLARS.
+> AFTER OUR SHOW TWO WEEKS AGO, NPR FOUND WHO'S BEHIND THOUSANDS OF THESE STORES.
+> THE ONE THING TO DO THE SECOND A CLERK SAYS "DECLINED."
+
+### THE HOOK
+
+NPR traced dozens of skincare brands, sold in what a former employee estimates are at least 2,000 stores, to one family company, Mazal Group of Chatsworth, California (Oct 14). In police reports, shoppers say a clerk told them their card declined when it hadn't and charged a second card too. In Santa Fe, a 67-year-old agreed to spend $600 and found two charges totaling $44,280. NPR lists Mary Ellen Eckhert, 82, at $53,500 across four cards. Mazal says it "does not own or operate any retail locations."
+
+### WHAT'S NEW
+
+The 10/14 show covered Bee & Co. NPR doesn't connect Bee & Co to Mazal. New: one company behind many store names, the fake decline, a federal case a decade ago, and a lab test that found markups of up to 130 times.
+
+### FOOTAGE WE NEED
+
+- **The get: NPR's film**, which needs NPR's permission.
+- Our own 10/14 clips for the callback.
+
+### THE PAYOFF
+
+- **"Declined"? Stop. Open your bank app before you hand over another card.**
+- Ask for the total in writing before you pay.
+- Already charged? Dispute it with your card company right away.
+
+# 5. IF YOU GET THIS EMAIL FROM YOUR DOCTOR, DON'T CLICK IT
 
 **Slot:** F2 B, or A option · **Confidence: MEDIUM** · *Strong viewer tip; lands 19 days after the Oct 9 Medicare show*
 
@@ -137,7 +221,7 @@ Oct 9 ("They're Mailing THIS Card to Seniors") covered fake Medicare cards, spoo
 - Already paid the shipping? Call your card company and get a new card.
 - Report it to your doctor's office, and in Pennsylvania to scams@attorneygeneral.gov.
 
-# 4. THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO — FILM THIS BEFORE YOU DRIVE OFF
+# 6. THEY'RE BILLING YOU FOR DAMAGE YOU DIDN'T DO — FILM THIS BEFORE YOU DRIVE OFF
 
 **Slot:** F2 B · **Confidence: MEDIUM** · *Never done; the dispute cases all ended in refunds*
 
@@ -173,7 +257,35 @@ Hope Orr of Draper, Utah, rented a car on Turo. The host charged $165 for smokin
 - Before paying, ask for before-and-after photos and the repair invoice. Dispute it in writing.
 - Check your own car insurance and credit card coverage before you buy theirs.
 
-# 5. YOUR PASTOR IS TEXTING YOU FOR GIFT CARDS? IT'S NOT HIM
+# 7. SHE PAID $2 FOR WATER. THE QR CODE TOOK $2,400
+
+**Slot:** F2 C · **Confidence: MEDIUM** · *Fresh case; Jeff has said we've done QR codes*
+
+**SLOT FIT:** A C. The victim is young, but anyone paying a street vendor or a parking meter is the target. QR codes are banked "only with new material"; this case is new: the bank calls it authorized.
+
+### WORKING TEASE
+
+> TWO DOLLARS. A BOTTLE OF WATER ON A HOT DAY.
+> SHE SCANNED HIS QR CODE TO PAY.
+> MINUTES LATER: 12 HUNDRED GONE ON ZELLE. ANOTHER 12 HUNDRED ON APPLE PAY.
+> HER BANK? WON'T PAY HER BACK.
+
+### THE HOOK
+
+Monet Swann bought a $2 bottle of water from a vendor in Midtown Atlanta on Oct 1. She scanned his QR code and says she shared her screen to pay. "I screenshared and authorized a two-dollar purchase from Zelle, and unfortunately, he took $1,200 from me." Another $1,200 went out on Apple Pay. Atlanta police are investigating, and her bank hasn't refunded her (FOX 5 Atlanta, Oct 9).
+
+### FOOTAGE WE NEED
+
+- **The get: 11Alive's package** (YouTube; views and date unconfirmed) and FOX 5 Atlanta.
+- The FTC's Sept 3 alert on fake QR stickers on parking meters, for the bigger picture.
+
+### THE PAYOFF
+
+- **Never let a stranger's QR code open your payment app.** Pay cash or tap your own card.
+- Never share your screen with anyone to pay.
+- Check the web address a QR code opens before you go further (FTC).
+
+# 8. YOUR PASTOR IS TEXTING YOU FOR GIFT CARDS? IT'S NOT HIM
 
 **Slot:** F2 C · **Confidence: MEDIUM** · *Real 2026 losses; video not yet dated*
 
@@ -201,6 +313,61 @@ Kathy Adamo of Grimes County, Texas, got an email that looked like it came from 
 - **Your pastor will never ask you for gift cards** (FTC).
 - Call the church office at the number you already have.
 - Already bought them? Call the company on the back of the card right away and ask for a refund.
+
+# 9. VETERANS: THIS POST CAN STEAL YOUR VA CHECK
+
+**Slot:** F2 C · **Confidence: LOW** · *Fresh VA warning; no named victim, no news clip*
+
+**SLOT FIT:** A C. Our audience includes many veterans, and the warning came out Oct 14. But it rests on one VA blog post: no count of victims, no named veteran, no local news.
+
+### WORKING TEASE
+
+> VETERANS, LISTEN UP.
+> A "GRANT" FOR VETERANS AND RETIREES. IT LOOKS LIKE A GOVERNMENT OFFICIAL IS BACKING IT.
+> ALL THEY NEED IS YOUR DIRECT DEPOSIT INFO.
+> THE VA SAYS VETERANS HAVE LOST THOUSANDS. THEIR BENEFITS WENT STRAIGHT TO SCAMMERS.
+
+### THE HOOK
+
+On Oct 14 the VA warned about a fake "Veterans & Retired Seniors Grant Program" on Facebook, made to look like a government official was behind it. Veterans who answered gave up their direct-deposit details, and the VA says "a number of Veterans" lost "thousands of dollars." The VA says it's "working quickly to make each affected Veteran whole" (VA News). VA calls it "deepfake phishing," but describes a fake post, not a video.
+
+### FOOTAGE — BE HONEST ABOUT THIS
+
+- No local news clip. The VA's own "Fraud Prevention Video - Payment Redirect" (about 15K views; observed 10/19) is the only video.
+- Otherwise it's Jeff and a screen-share of the VA warning.
+
+### THE PAYOFF
+
+- **The VA never asks for your direct-deposit details through a Facebook post or a "grant."**
+- Odd activity on your payments? Call the VA at 1-800-827-1000.
+- Report it to VSAFE: 1-833-38V-SAFE (vsafe.gov).
+
+# 10. AMAZON IS SENDING REAL REFUNDS. SCAMMERS ARE SENDING FAKE ONES
+
+**Slot:** F2 C · **Confidence: LOW** · *Good service; possible repeat of 10/16*
+
+**SLOT FIT:** A C, and good news to end on. But the 10/14 pitch sent the settlement to the 10/16 F1. The 10/16 description doesn't mention it, but I couldn't check the transcript. If it aired, this is dead.
+
+### WORKING TEASE
+
+> IF YOU HAVE PRIME, AMAZON MAY OWE YOU UP TO 200 DOLLARS. IT'S REAL.
+> BUT SCAMMERS ARE SENDING FAKE ONES TOO.
+> THE REAL ONE SHOWS UP ON ITS OWN. THE FAKE ONE WANTS SOMETHING FROM YOU.
+
+### THE HOOK
+
+The FTC says payments from Amazon's Prime settlement go out automatically from Oct 1, up to $200, by PayPal, Venmo or check, with no claim form (FTC, Sept 17). Payments expire 60 days after they're sent. KSL warns scammers may send "click here for your refund" links that install malware, and anyone asking you to do something to "release" the money is a red flag (Sept 30). No victims found.
+
+### FOOTAGE — BE HONEST ABOUT THIS
+
+- KSL "Amazon Prime refunds are coming. Scammers may be, too" (about 5K views; observed 10/19). KSDK VERIFY (under 1K).
+- Mostly Jeff and the FTC refund page.
+
+### THE PAYOFF
+
+- **A real refund never asks for a fee, a password or a form.**
+- Cash your check or accept the PayPal or Venmo payment within 60 days.
+- Questions: ftc.gov/enforcement/refunds/amazon-refunds.
 
 # RESEARCH SOURCES & VERIFICATION FLAGS
 
@@ -247,7 +414,39 @@ Kathy Adamo of Grimes County, Texas, got an email that looked like it came from 
 - ⚠️ FOX 5 Atlanta's Cassandra Moore ($650) and the Florida Keys couple ($6,500, "fake arrest") may not involve a real arrest. Leave them out unless confirmed.
 - ⚠️ The Instagram seed (Calcasieu) was blocked. All the YouTube clip dates and views are unconfirmed.
 
-### STORY 3 — MYCHART "MEDICARE KIT"
+### STORY 3 — FAKE KIDNAPPING CALLS
+
+**Confirmed:**
+- Deborah Del Mastro, Martinez, CA, Navy veteran: a cloned voice of daughter Sarah; she followed orders for about 5 hours and wired $5,400 to Mexico (ABC7, May 24, 2026). Fox News CyberGuy (Oct 7, 2026): about 5.5 hours, a $20K demand, $5,400 in four MoneyGram/Western Union transfers starting at a Walmart; told to keep the phone charged; yelled at when she muted the call.
+- Victoria Bond, Livingston, MT: lost more than $2,000 by Western Union at an Albertsons during a call of about an hour; FBI agent Jason Grende: "try to get off the line" (MontanaRightNow, Aug 4, 2026).
+- FBI IC3 PSA, Dec 5, 2025: altered "proof of life" photos and videos in virtual kidnappings.
+
+**Sources:** abc7news.com/post/bay-area-mom-thousands-scammers-use-ai-mimic-daughters-voice-fake-kidnapping-part-growing-trend/19154381/ · foxnews.com/tech/ai-voice-scam-traps-mom-5-hour-kidnapping-nightmare · montanarightnow.com/bozeman/help-me-ben-livingston-woman-warns-others-after-losing-2-000-in-virtual-kidnapping-scam/ · ic3.gov/PSA/2025/PSA251205
+
+**NEEDS VERIFICATION:**
+- 🚨 **"Her daughter's voice, screaming" is the beat, and it's voice cloning: on the dead list since May 13.** Only pitch it on what's new (the hours on the line, the errands). Needs Jeff's ruling.
+- 🚨 **Faked photo/video proof of life is only an FBI warning.** No 2026 victim we found received one. Don't say it happened to anyone.
+- ⚠️ Del Mastro's age isn't stated anywhere. ABC News/GMA says "San Francisco" and names the daughter "Sarah Donalds," which conflicts with ABC7. Fox mentions Senate testimony I couldn't confirm.
+- ⚠️ Caller ID showing the daughter's real number comes from the Missouri "Rachel" case (WDAM, Mar 5, 2026; KPTV, Jan 23, 2026), a 2025 incident re-reported this year. Date it if used.
+
+### STORY 4 — "CARD DECLINED" DOUBLE CHARGE
+
+**Confirmed:**
+- NPR, Oct 14, 2026 (Caley Fox Shannon, Monika Evstatieva): Mazal Group of Chatsworth, CA, behind dozens of brands (Voupre, Lionesse, Orogold, Vine Vera) in what a former employee estimates are at least 2,000 stores. Verbatim: "In police reports, others allege a store employee told them their card declined when it had not and charged a second card as well."
+- Santa Fe, unnamed woman, 67: agreed to $600; "The salesperson said her credit card was declined, so she provided another"; "two charges totaling $44,280."
+- Mary Ellen Eckhert, 82, $53,500 across four cards; an unnamed Michigan man with dementia, $42,000; Mary Lee, 65, nearly $19,000.
+- Mazal, through its lawyer: "does not own or operate any retail locations."
+
+**Sources:** npr.org/2026/10/14/nx-s1-5550974/skincare-scheme-mazal-group-investigation · npr.org/2026/10/14/nx-s1-6000621/mazal-group-investigation-documentary · kpbs.org/news/economy/2026/10/14/the-skincare-scheme-that-led-to-consumer-complaints-lawsuits-and-a-federal-investigation
+
+**NEEDS VERIFICATION:**
+- 🚨 **"They charged both" is an allegation in police reports, quoted by NPR.** Say "shoppers allege" or "police reports say." Mazal denies running the stores.
+- 🚨 **Collision:** the 10/14 A was mall skincare. It only works as a follow-up. NPR doesn't tie Bee & Co to Mazal, so don't link them on air.
+- ⚠️ "Thousands of stores" is a former employee's estimate. NPR's wording: "dozens of brands sold in thousands of stores."
+- ⚠️ The story finder's "fake online stores then call for your card" variant has no 2026 source. Left out.
+- ⚠️ NPR's film is on NPR's site, not YouTube; using it needs NPR's permission. The 1.7M TikTok is unverified.
+
+### STORY 5 — MYCHART "MEDICARE KIT"
 
 **Confirmed:**
 - How it works, and what to do if you paid (Denver Health, Oct 9, 2026).
@@ -266,7 +465,7 @@ Kathy Adamo of Grimes County, Texas, got an email that looked like it came from 
 - ⚠️ It's unclear whether the CBS Philadelphia clip covers the kit or the "test results" version.
 - ⚠️ Collision: the Oct 9 Medicare show is 19 days earlier. Jeff has called Medicare "maybe too niche for an A."
 
-### STORY 4 — RENTAL CAR DAMAGE BILLS
+### STORY 6 — RENTAL CAR DAMAGE BILLS
 
 **Confirmed:**
 - Hope Orr, Draper, UT: $165 smoking charge and a planned $500 tire charge. A reverse image search found the photo in a Reddit post "from years ago," showing a different car model. The host texted "I've done more than 5,000 tire claims in the last nine years." Turo refunded her in full and banned the host (KSL, Oct 5, 2026).
@@ -281,7 +480,22 @@ Kathy Adamo of Grimes County, Texas, got an email that looked like it came from 
 - ⚠️ Ryan's rule: no one here ended up out of pocket. Lead with the Reddit photo, not a loss.
 - ⚠️ The KSL clip's 539K views and its upload date are unconfirmed. The resort-fee item (Hilton $75) is unsourced and stays out.
 
-### STORY 5 — PASTOR GIFT-CARD TEXTS
+### STORY 7 — $2 WATER QR CODE
+
+**Confirmed:**
+- Monet Swann, Howard graduate, Oct 1, 2026, 10th St. and Techwood Dr., Midtown Atlanta: $1,200 by Zelle and $1,200 on Apple Pay; her bank hasn't refunded her; Atlanta police investigating (FOX 5 Atlanta, Oct 9, updated Oct 15).
+- Quote via Daily Hodl, credited to 11Alive: "So, I screenshared and authorized a two-dollar purchase from Zelle and unfortunately, he took $1,200 from me."
+- FTC consumer alert, Sept 3, 2026: fake QR stickers on parking meters.
+
+**Sources:** fox5atlanta.com/news/howard-graduate-scammed-out-2-4k-during-midtown-water-purchase · dailyhodl.com/2026/10/09/2400-abruptly-drained-from-georgia-womans-bank-account-after-she-purchases-2-bottle-of-water-from-street-vendor-report/ · consumer.ftc.gov/consumer-alerts/2026/09/see-qr-code-parked-somewhere-dont-scan-ityet
+
+**NEEDS VERIFICATION:**
+- 🚨 **"The QR code took $2,400" is the headline, but the sourced mechanism is a screen share.** No source says the QR led to a fake page. How the Apple Pay charge happened is unexplained. Get 11Alive's story before the title is locked.
+- ⚠️ Totals conflict: 11Alive's reporter posted $2,000; FOX 5's lede says "nearly $2,500." The itemized total is $2,400.
+- ⚠️ QR codes are banked "only with new material" (Jeff, Sep 4: "we also did fake QR code"). The bank refusing a "screen-shared" payment is the new part.
+- ⚠️ The 11Alive article and the YouTube clip's date and views couldn't be loaded.
+
+### STORY 8 — PASTOR GIFT-CARD TEXTS
 
 **Confirmed:**
 - Kathy Adamo, Grimes County, TX, lost $23,000; Sheriff Don Sowell: "Wish she'd have called me or somebody" (KXXV; page date blank).
@@ -295,19 +509,47 @@ Kathy Adamo of Grimes County, Texas, got an email that looked like it came from 
 - ⚠️ Adamo's was an email, not a text, and "for women with cancer" is the Tavares case. The tease keeps them separate. Don't merge them in the bible.
 - ⚠️ No YouTube clip has been dated. The producer's 10/7 note said gift-card draining was covered before; this is a different story, but confirm.
 
+### STORY 9 — VA BENEFITS REDIRECTED
+
+**Confirmed:**
+- VA News, Oct 14, 2026, "Deepfake phishing: Don't be fooled": a fake "Veterans & Retired Seniors Grant Program" on Facebook, made to look sponsored by a government official; "a number of Veterans" lost "thousands of dollars"; VA is "working quickly to make each affected Veteran whole."
+- VBA newsletter, Oct 1, 2026: suspicious direct-deposit activity, call 1-800-827-1000.
+- VSAFE: 1-833-38V-SAFE, vsafe.gov (va.gov/vsafe).
+
+**Sources:** news.va.gov/149747/deepfake-phishing-dont-be-fooled/ · content.govdelivery.com/accounts/USVAVBA/bulletins/42c780e · va.gov/vsafe/
+
+**NEEDS VERIFICATION:**
+- 🚨 **The Samuel Marcus case (the story finder's seed) has nothing to do with veterans.** He laundered money for romance, tax and business-email scams (PhillyVoice, Feb 9; Inquirer, Oct 16). Don't use him.
+- 🚨 **"Deepfake" is the VA's word for a fake post, not a video.** Don't promise a deepfake video.
+- ⚠️ No count of veterans, no total, no named victim, no news coverage of the Oct 14 warning.
+
+### STORY 10 — AMAZON REAL VS. FAKE REFUNDS
+
+**Confirmed:**
+- FTC, Sept 17, 2026: the cap rises from $51 to $200; automatic payments by PayPal, Venmo or check from Oct 1, no claim; "no one from Amazon will ever ask you for money to get a refund."
+- FTC Amazon refunds page: payments expire 60 days after they're issued; "The FTC will never ask you to pay to get a refund."
+- KSL (Matt Gephardt), Sept 30, 2026: fake refund links may install malware; anyone asking you to "release" the money is a red flag.
+
+**Sources:** ftc.gov/news-events/news/press-releases/2026/09/ftc-announces-additional-payments-consumers-stemming-ftcs-amazon-prime-settlement · ftc.gov/enforcement/refunds/amazon-refunds · ksl.com/article/51630330/amazon-prime-refunds-are-coming-scammers-may-be-too
+
+**NEEDS VERIFICATION:**
+- 🚨 **May already have aired.** The 10/14 approval note sent the settlement to the 10/16 F1 ("If THIS Is Your Password — Change It Immediately!"). The description doesn't mention it; the transcript couldn't be checked. Ask before pitching.
+- ⚠️ No victim found, and no BBB, state AG or FTC alert specifically about fake settlement refunds.
+
 ### STORIES CUT — SOURCING PRESERVED
 
-- **A grandkid's face faked on a video call:** no real case found. Every family case was a cloned voice (e.g. NBC Philadelphia, Aug 27, 2025, $6,000). The FBI ties live deepfake video to officials and executives (ic3.gov/PSA/2024/PSA241203) and fake-kidnapping photos and videos sent to families (ic3.gov/PSA/2025/PSA251205). Voice cloning is on the dead list (May 13).
-- **Fake property tax bills:** the seed lacounty.gov page doesn't describe a scam. 2026 warnings are about the AI-video "Form 1098-SR" scam (Wisconsin DOR, Sept 3, 2026), which was dropped as the 10/14 C. No mailed-notice video newer than a year, and no victims.
-- **Amazon real-vs-fake refunds:** FTC release Sept 17, 2026; KSL clip only 5.2K views; no victims. The settlement may have been covered 10/16 (unconfirmed).
+- **A grandkid's face faked on a video call:** no real case found. Every family case was a cloned voice. The FBI ties live deepfake video to officials and executives (ic3.gov/PSA/2024/PSA241203). Its fake-kidnapping angle is now story 3.
+- **Fake property tax bills:** the seed lacounty.gov page doesn't describe a scam. 2026 warnings are about the AI-video "Form 1098-SR" scam (Wisconsin DOR, Sept 3, 2026), dropped as the 10/14 C. No recent mailed-notice video, no victims.
 - **Unclaimed money and Walmart refunds:** FTC release Oct 15, 2026 ($9.8M, 65,022 people); unclaimed.org says searching is free. No victims, no TV clip.
-- **Pharmacy cash price vs. copay:** the 2018 gag-clause laws are confirmed (govinfo.gov, Public Laws 115-262 and 115-263). No current TV clip, and the TikTok seed is unverified.
+- **Pharmacy cash price vs. copay:** the 2018 gag-clause laws are confirmed (govinfo.gov, Public Laws 115-262 and 115-263). No current TV clip; the TikTok seed is unverified.
 
 ## OPEN QUESTIONS FOR THE MEETING
 
-1. **Which A?** My pick is Geek Squad: the broadest target, the most impersonated company, and a $20,000 loss. Bail has the better clips and the fresher warnings, but a narrower audience. Ryan's call on packaging.
+1. **Which A?** My pick is Geek Squad: the broadest target, the most impersonated company, and a $20,000 loss. Bail has better clips and fresher warnings but a narrower audience. Fake kidnapping is the most frightening, but needs Jeff's ruling on voice cloning.
 2. **Geek Squad footage:** is the scambaiter TikTok usable and clearable? If not, the A runs on Jeff, a screen-share and print sources. Do we chase Breaking AC News or Kaye Allen for a victim on camera?
-3. **MyChart now or later?** It's 19 days after the Medicare show. Run it as the B (enrollment ends Dec 7), or hold it? And who reaches the viewer for permission?
-4. **Rental cars: bank for a Thanksgiving travel Wednesday?**
-5. **Expert:** none assumed. If we book one, AARP's Amy Nofziger fits #1, #2 and #5.
-6. **What aired 10/21?** Confirm nothing collides.
+3. **A 10/14 follow-up?** NPR's "card declined" numbers are huge, but we did mall skincare two weeks ago. Yes as a B, or hold it?
+4. **MyChart now or later?** It's 19 days after the Medicare show. Run it as a B (enrollment ends Dec 7), or hold it? Who reaches the viewer for permission?
+5. **Did the Amazon settlement air on 10/16?** If yes, #10 is dead.
+6. **Rental cars: bank for a Thanksgiving travel Wednesday?**
+7. **Expert:** none assumed. If we book one, AARP's Amy Nofziger fits #1, #2, #3 and #8.
+8. **What aired 10/21?** Confirm nothing collides.
