@@ -12,3 +12,4 @@ Chat handoff kept as `HANDOFF_from_chat.md` / `CHAT_LOG_from_chat.md`; the beats
 - [ ] Sam's Club Plus standalone price before Jeff gives a savings number
 - [ ] Morning of taping: new Dollar General filings or a fuller statement
 - [ ] Bible (rossen-script-writer) after the room approves: `F2 Wed 11_04 -- <Working Title>`
+- [ ] B supercut of the 10/14 register segment: local Claude Code session, see SUPERCUT_HANDOFF.md
