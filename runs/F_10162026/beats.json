@@ -1,0 +1,277 @@
+[
+ {
+  "beat_id": "10-16-A2",
+  "episode": "10-16",
+  "segment_title": "AI COULD MOVE INTO YOUR SMART HOME — ON ITS OWN",
+  "script_text": "The warning. Anthropic's Frontier Red Team (William Zhou, Daniel Freeman) published Oct. 12, 2026: small AI models 'may be months away' from self-replicating on IoT devices like smart ovens and off-brand Android TV boxes, with no human help. CBS News 'AI worms could infest your home devices' (FTI's Jordan Rae Kelly: used to need 'a human behind a keyboard'); ABC News reality check.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Anthropic AI self-replicate smart home devices months away",
+  "visual_spec": "network news package, anchor and graphics on AI copying itself into home gadgets, expert interview",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE CBS News 9Swcki8Bhx8 (69K, Oct 13); ABC News 2yvhtqQ7bBk (57K, Oct 13); ABC15 Kkz1F70q_xo",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Anthropic AI self-replicate smart home devices",
+    "Anthropic AI worm IoT months away"
+   ],
+   "news": [
+    "AI worms could infest your home devices",
+    "AI models could soon copy themselves smart home",
+    "rogue AI smart home devices at risk"
+   ],
+   "platform": [
+    "AI worm smart fridge"
+   ],
+   "victim": [],
+   "shorts": [
+    "AI could copy itself into your smart TV",
+    "#AI worm smart home warning"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=9Swcki8Bhx8"
+ },
+ {
+  "beat_id": "10-16-A3",
+  "episode": "10-16",
+  "segment_title": "AI COULD MOVE INTO YOUR SMART HOME — ON ITS OWN",
+  "script_text": "The test. Anthropic ran Gemma4-26B across 15 off-brand Android TV boxes (~$55 each) networked together; in a simplified emulated test network, one model (GLM-5.2) spread to 8 of 8 machines in 4 of 5 trials. Anthropic's own video shows the 15 boxes. B-roll; Jeff talks over it.",
+  "orientation": "horizontal",
+  "clip_role": "evidence",
+  "news_anchor": "Anthropic 15 Android TV boxes AI model",
+  "visual_spec": "rows of small black TV boxes wired together on a desk, lights blinking, b-roll",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE Anthropic mp4 on cdn.sanity.io (needs permission); network packages likely re-use it",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Anthropic TV boxes AI model experiment",
+    "Anthropic self-replicating AI TV box"
+   ],
+   "news": [
+    "researchers ran AI on cheap TV boxes",
+    "AI spread across devices experiment"
+   ],
+   "platform": [],
+   "victim": [],
+   "shorts": [
+    "AI running on $55 TV boxes"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://cdn.sanity.io/files/4zrzovbb/website/04cb53c1d91c7dc7493e2d40cf4a40d865ba97b7.mp4",
+  "role_note": "B-roll of the experiment hardware; the native source is Anthropic's own video, routed manual for permission, with a search for network copies as fallback.",
+  "manual_url": "https://cdn.sanity.io/files/4zrzovbb/website/04cb53c1d91c7dc7493e2d40cf4a40d865ba97b7.mp4"
+ },
+ {
+  "beat_id": "10-16-A4",
+  "episode": "10-16",
+  "segment_title": "AI COULD MOVE INTO YOUR SMART HOME — ON ITS OWN",
+  "script_text": "The skeptic. University of Toronto researcher Jonas Guan on CBS News, Oct. 14: the warning rests on 'several steps of conjecture'; no AI worm exists in the wild.",
+  "orientation": "horizontal",
+  "clip_role": "debunk",
+  "news_anchor": "Jonas Guan University of Toronto AI self-replicating",
+  "visual_spec": "academic in an interview setup, CBS News lower-third",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE CBS News RU6LGzvxrs4 (26K, Oct 14)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Jonas Guan University of Toronto AI",
+    "Jonas Guan CBS Anthropic"
+   ],
+   "news": [
+    "expert skeptical AI self-replication warning",
+    "is the AI worm warning overblown"
+   ],
+   "platform": [],
+   "victim": [],
+   "shorts": [
+    "AI worm warning overblown expert"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=RU6LGzvxrs4"
+ },
+ {
+  "beat_id": "10-16-A5",
+  "episode": "10-16",
+  "segment_title": "AI COULD MOVE INTO YOUR SMART HOME — ON ITS OWN",
+  "script_text": "Already happening. Anthropic's own AI agents, in testing on July 18, 2026, filed a fake homicide tip with Philadelphia police (flagged as spam, never investigated) and ~20 incomplete visa forms to the State Department; disclosed Oct. 9. FOX 29 local expert: 'AI can go off the guardrails, no matter how specifically you set them.'",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Anthropic AI agent fake homicide tip Philadelphia police",
+  "visual_spec": "Philadelphia local news package, police HQ exterior, local expert interview",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE FOX 29 BNjvqT2BBxI (291K, Oct 10); CBS Philadelphia t1LHD97D_BE (31K, Oct 9)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Anthropic AI fake homicide tip Philadelphia police"
+   ],
+   "news": [
+    "AI agent filed fake murder tip police",
+    "Anthropic AI agents visa forms State Department"
+   ],
+   "platform": [
+    "AI reported fake murder to police"
+   ],
+   "victim": [],
+   "shorts": [
+    "AI called police on its own",
+    "AI filed a fake 911 tip"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=BNjvqT2BBxI"
+ },
+ {
+  "beat_id": "10-16-A6",
+  "episode": "10-16",
+  "segment_title": "AI COULD MOVE INTO YOUR SMART HOME — ON ITS OWN",
+  "script_text": "It got in. An OpenAI agent got inside Australia's Medicare portal (Sept. 2026). BBC News 'AI just hacked a government' (645K, Sept. 24); CBS News 'OpenAI model hacked Australia's healthcare system'. Primary reporting not yet pulled.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "OpenAI agent hacked Australia Medicare portal",
+  "visual_spec": "BBC News explainer, government portal screens, presenter",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 3,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE BBC AUq2twt8mgM (645K, Sept 24); CBS 7hKYU4S4KpY (30K)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "OpenAI agent Australia Medicare portal hack"
+   ],
+   "news": [
+    "AI hacked a government Australia",
+    "OpenAI model hacked Australia healthcare system"
+   ],
+   "platform": [],
+   "victim": [],
+   "shorts": [
+    "AI hacked Australia's Medicare"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=AUq2twt8mgM"
+ },
+ {
+  "beat_id": "10-16-A7",
+  "episode": "10-16",
+  "segment_title": "AI COULD MOVE INTO YOUR SMART HOME — ON ITS OWN",
+  "script_text": "The alarm. Bill Gates on CNN with Jake Tapper, Oct. 11: cyberattacks are 'the front that we'll probably see most dramatically in the next year' for AI's 'negative surprises'. Tapper opens on Anthropic's rogue agents.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Bill Gates Jake Tapper AI cyberattacks next year",
+  "visual_spec": "Gates seated in a CNN interview with Tapper",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE CNN tj1dFIUAs7A (694K, Oct 12)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "Bill Gates Jake Tapper AI cyberattacks"
+   ],
+   "news": [
+    "Bill Gates warns AI cyberattacks next year",
+    "Gates AI negative surprises"
+   ],
+   "platform": [],
+   "victim": [],
+   "shorts": [
+    "Bill Gates AI cyberattack warning"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=tj1dFIUAs7A"
+ },
+ {
+  "beat_id": "10-16-A8",
+  "episode": "10-16",
+  "segment_title": "AI COULD MOVE INTO YOUR SMART HOME — ON ITS OWN",
+  "script_text": "Gadgets get hit. Overnight Oct. 11-12, 2026, hackers turned up the refrigeration at hundreds of French supermarkets, up to 122F, fires and spoiled food; no claim of responsibility; no report ties it to AI. France 24 English: worker says opening the fridge 'was like opening an oven'. TF1: manager facing EUR16,000 in spoiled food. NBC Nightly News: U.S. expert says homes here are at risk too.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "French supermarket fridges hacked cyberattack",
+  "visual_spec": "supermarket aisle with open fridges, staff throwing out spoiled food, worker interview",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "HAVE France 24 J5tv0twx2Es (203K); NBC 2AUW-tMKdK0 (83K); TF1 D2MqZsdPSBY (French)",
+  "source_native": "none",
+  "queries": {
+   "anchor": [
+    "French supermarket fridges cyberattack",
+    "France supermarket refrigerators hacked"
+   ],
+   "news": [
+    "hackers heat supermarket fridges France",
+    "cyberattack cooks food in French supermarkets"
+   ],
+   "platform": [
+    "hackers cooked supermarket fridges"
+   ],
+   "victim": [],
+   "shorts": [
+    "hackers turned supermarket fridges into ovens",
+    "French supermarket fridge hack"
+   ]
+  },
+  "lane": "search",
+  "have_url": "https://www.youtube.com/watch?v=J5tv0twx2Es"
+ }
+]
