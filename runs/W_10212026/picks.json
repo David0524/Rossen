@@ -1,0 +1,488 @@
+[
+ {
+  "beat_id": "10-21-A2",
+  "original_beat_id": "10-21-A4",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=6WT5fc-LHSc",
+  "platform": "youtube",
+  "title": "What Walmart TVs and LG Are Really Doing When Inside Your Home...",
+  "source_mix": {
+   "creator_long": 5
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=6WT5fc-LHSc",
+    "source_type": "creator_long",
+    "score": 80,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "8:13",
+      "out": "9:13",
+      "outcue": "what you buy"
+     },
+     {
+      "in": "10:02",
+      "out": "10:33",
+      "outcue": "gives them to you"
+     }
+    ],
+    "reasoning": "Older-audience creator reads Vizio's privacy policy in plain words: viewing data sold to partners and combined with age, location and purchases; then why Walmart bought Vizio (the ad business). Uploaded Oct 3, 2026, 12:46, 1.23M views.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=IvFu343KNek",
+    "source_type": "creator_long",
+    "score": 62,
+    "tone": 6,
+    "authenticity": 7,
+    "quality": 8,
+    "fit": 6,
+    "segments": [],
+    "reasoning": "RTINGS lab framing, less plain-spoken for a 55+ audience; not cut.",
+    "flags": []
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=0q8h4_FPNyI",
+    "source_type": "creator_long",
+    "score": 66,
+    "reason": "lost pass two: Lindey Glenn, 12:31, Walmart bought Vizio and the privacy concerns"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Zod3C7A2My8",
+    "source_type": "creator_long",
+    "score": 64,
+    "reason": "lost pass two: Shannon Morse, 18:45, 'Are smart TVs spying on you? LG responds'; privacy creato"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Gpm0Y4W6OKw",
+    "source_type": "creator_long",
+    "score": 50,
+    "reason": "lost pass two: Jay Reed, 19:23, 'Walmart just got CAUGHT doing this to their TVs' (Oct 3); enga"
+   }
+  ],
+  "cannot_determine": [
+   "whether She Prepares is on camera or voice-over during 8:13\u201310:33"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-21-A3",
+  "original_beat_id": "10-21-A5",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=0ZWvqw17HIQ",
+  "platform": "youtube",
+  "title": "Texas reaches settlement with LG in smart TV privacy lawsuit",
+  "source_mix": {
+   "affiliate": 3,
+   "network": 1,
+   "creator_long": 1
+  },
+  "diversity_floor_applied": true,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=0ZWvqw17HIQ",
+    "source_type": "affiliate",
+    "score": 74,
+    "tone": 6,
+    "authenticity": 7,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:49",
+      "outcue": "under this agreement"
+     },
+     {
+      "in": "1:08",
+      "out": "1:16",
+      "outcue": "are still ongoing"
+     }
+    ],
+    "reasoning": "KVUE anchor package: Paxton's LG settlement requires a pop-up and an opt-out; LG admits no wrongdoing; Samsung also settled; Sony, Hisense, TCL ongoing. Uploaded May 11, 2026, 1:18. Window includes the 'Chinese Communist Party' transfer line (0:36\u20130:42).",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=p4-F76Tn8Ow",
+    "source_type": "affiliate",
+    "score": 60,
+    "tone": 5,
+    "authenticity": 7,
+    "quality": 7,
+    "fit": 6,
+    "segments": [],
+    "reasoning": "KENS 5, the Dec 2025 suit, headline read; backup.",
+    "flags": []
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=p_v3Y-ZpDBI",
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "lost pass two: KVUE, 47s, Texas sues five TV companies over privacy (Dec 2025)"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=429MZPbq21Q",
+    "source_type": "network",
+    "score": 58,
+    "reason": "lost pass two: NTD, 53s, Paxton sues 5 TV companies; NTD's editorial slant is a concern"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=dehzLA4kFqM",
+    "source_type": "creator_long",
+    "score": 62,
+    "reason": "lost pass two: Lon.TV, 10:44, Texas sues LG, Sony, Samsung, TCL and Hisense over ACR; our guest"
+   }
+  ],
+  "cannot_determine": [
+   "whether there's b-roll or an anchor on camera"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-21-A4",
+  "original_beat_id": "10-21-A6",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=6IFVTcM28KA",
+  "platform": "youtube",
+  "title": "216,000,000 Spy TVs | The LG Smart TV Problem",
+  "source_mix": {
+   "creator_long": 4,
+   "creator_short": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
+    "source_type": "creator_long",
+    "score": 76,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:26",
+      "out": "0:52",
+      "outcue": "user reconnected the network"
+     }
+    ],
+    "reasoning": "Steve Burke's cold open: they captured microphone audio while the TV appeared off and unplugged from the network, stored and pulled out 'by someone with remote access' via vulnerabilities. LG's denial is not in this window.",
+    "flags": [
+     "LEGAL: claim LG answered; denial outside the cut"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ToP9xfLDSME",
+    "source_type": "creator_long",
+    "score": 60,
+    "tone": 7,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 6,
+    "segments": [],
+    "reasoning": "Follow-up with LG's quote at 0:07\u20130:13, but the window around it says 'we think they're lying' and attacks an LG executive; use only the quote, if at all.",
+    "flags": []
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=4QcFfgETj9A",
+    "source_type": "creator_short",
+    "score": 68,
+    "reason": "lost pass two: Cybernews Short, 35s, 'Are 200 million LG TVs listening in \u2013 even when switched "
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Sg9tUEk1c7A",
+    "source_type": "creator_long",
+    "score": 64,
+    "reason": "lost pass two: The Homeboy Workshop, 13:56, 'I tapped one to find out'; an independent test of "
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Q9uefFYe6bM",
+    "source_type": "creator_long",
+    "score": 58,
+    "reason": "lost pass two: Gamers Nexus, 29:58, 'DO NOT BUY'; recommendation framing, weaker for a disputed"
+   }
+  ],
+  "cannot_determine": [
+   "whether the 'appeared to be off' TV is on screen in 0:26\u20130:52"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-21-B1",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=0ANywiehCCA",
+  "platform": "youtube",
+  "title": "Behind the controversial AI tech used to inspect rental vehicles for damages",
+  "source_mix": {
+   "network": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=0ANywiehCCA",
+    "source_type": "network",
+    "score": 80,
+    "tone": 7,
+    "authenticity": 8,
+    "quality": 9,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:19",
+      "out": "1:03",
+      "outcue": "that I didn't even detect"
+     },
+     {
+      "in": "1:35",
+      "out": "1:50",
+      "outcue": "showed no billable damage"
+     },
+     {
+      "in": "2:23",
+      "out": "2:28",
+      "outcue": "waved the $350"
+     }
+    ],
+    "reasoning": "Producer-supplied (10/14). CBS Evening News: Hertz AI photo booths; Adam Foley billed $350 for two small dents; Hertz's statement; fees waived after CBS asked. Aug 27, 2025.",
+    "flags": [
+     "OLD: Aug 2025"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "whether the 2:23 segment needs the line before it for context"
+  ],
+  "transcript_rung": 1,
+  "source": "producer link, no search"
+ },
+ {
+  "beat_id": "10-21-B2",
+  "original_beat_id": "10-21-B1",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=1_wUVS5szfw",
+  "platform": "youtube",
+  "title": "Car rental service attempts to scam Utah woman out of hundreds",
+  "source_mix": {
+   "affiliate": 3,
+   "network": 1,
+   "first_person": 1
+  },
+  "diversity_floor_applied": true,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=1_wUVS5szfw",
+    "source_type": "affiliate",
+    "score": 84,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:49",
+      "out": "1:38",
+      "outcue": "actually going to cost me"
+     }
+    ],
+    "reasoning": "Hope Orr on camera: claim for a nail in the tire and smoking ('I don't smoke'); host's evidence photos; Turo posts a $500 charge. Uploaded Oct 6, 2026, 4:35, 609K views. Avoid 0:45 ('that person is a liar').",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=zzVzgKAs8w8",
+    "source_type": "affiliate",
+    "score": 58,
+    "tone": 6,
+    "authenticity": 8,
+    "quality": 7,
+    "fit": 6,
+    "segments": [],
+    "reasoning": "Arizona's Family, a different renter; second case if wanted.",
+    "flags": []
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=uvM2pOxiF18",
+    "source_type": "affiliate",
+    "score": 62,
+    "reason": "lost pass two: WCPO 9, 1:52, 'Beware bills for rental car damage you didn't cause' (Aug 2025)"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=TOKgroMzhXs",
+    "source_type": "network",
+    "score": 54,
+    "reason": "lost pass two: CBS Chicago, 2:26, how to guard against excessive damage fees; tips"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=degY4pRd6Sg",
+    "source_type": "first_person",
+    "score": 48,
+    "reason": "lost pass two: FunnyGuy, 8:38, 'How I fought a $1,000 bill a month later'; first-person, generi"
+   }
+  ],
+  "cannot_determine": [],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-21-B3",
+  "original_beat_id": "10-21-B2",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=1_wUVS5szfw",
+  "platform": "youtube",
+  "title": "Car rental service attempts to scam Utah woman out of hundreds",
+  "source_mix": {
+   "affiliate": 1,
+   "first_person": 1,
+   "creator_long": 3
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=1_wUVS5szfw",
+    "source_type": "affiliate",
+    "score": 86,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "1:40",
+      "out": "2:51",
+      "outcue": "removed the bogus claims"
+     }
+    ],
+    "reasoning": "Host's 'I've done more than 5,000 tire claims' message, the mismatched tread, Turo first sides with the host, then the reverse image search finds the photo in a Reddit post 'from 4 years ago' and Turo removes the claims.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=QUujYfh1Fyg",
+    "source_type": "first_person",
+    "score": 44,
+    "tone": 6,
+    "authenticity": 7,
+    "quality": 5,
+    "fit": 4,
+    "segments": [],
+    "reasoning": "Different renter's story; not this case.",
+    "flags": []
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=ZbGCvYWWREA",
+    "source_type": "creator_long",
+    "score": 46,
+    "reason": "lost pass two: Aubrey Janik, 14:34, 'Turo scam, be careful, Turo host reacts'"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=H7IF5Su9DZI",
+    "source_type": "creator_long",
+    "score": 40,
+    "reason": "lost pass two: Insider Tech, 3:13, how to reverse image search (Google); a how-to for the fix"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=DdFPWE70bSc",
+    "source_type": "creator_long",
+    "score": 38,
+    "reason": "lost pass two: superspeedersRob, 11:18, how to avoid fake damage bills"
+   }
+  ],
+  "cannot_determine": [],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "10-21-C2",
+  "original_beat_id": "10-21-C3",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=kXnLrmP-Wm8",
+  "platform": "youtube",
+  "title": "Energy slamming: How you could be signed up for an energy service without approval",
+  "source_mix": {
+   "affiliate": 3,
+   "network": 1,
+   "creator_long": 1
+  },
+  "diversity_floor_applied": true,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=kXnLrmP-Wm8",
+    "source_type": "affiliate",
+    "score": 72,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 7,
+    "fit": 7,
+    "segments": [
+     {
+      "in": "0:48",
+      "out": "1:29",
+      "outcue": "never even heard of them"
+     },
+     {
+      "in": "1:56",
+      "out": "2:04",
+      "outcue": "and it's illegal"
+     },
+     {
+      "in": "3:13",
+      "out": "3:29",
+      "outcue": "has been terminated"
+     }
+    ],
+    "reasoning": "York County, Pennsylvania woman: a letter says she's enrolled with a supplier she never heard of; a door-to-door agent forged her signature; 'slamming' is illegal; the company says its third-party marketer was fired. Uploaded Sept 10, 2024. Door-to-door, not a phone call.",
+    "flags": []
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=9WgOQaSNEI8",
+    "source_type": "affiliate",
+    "score": 58,
+    "tone": 7,
+    "authenticity": 8,
+    "quality": 6,
+    "fit": 7,
+    "segments": [],
+    "reasoning": "WPXI Target 11 (2019): enrolled through his 17-year-old daughter at a movie theater, so it involves a minor.",
+    "flags": [
+     "LEGAL: minor"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=HAWuJfZUr6w",
+    "source_type": "network",
+    "score": 66,
+    "reason": "lost pass two: CBS Chicago, 2:52, summer expected to bring electric supplier rate scams (Illino"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=o4VEMJlsqGM",
+    "source_type": "affiliate",
+    "score": 58,
+    "reason": "lost pass two: WTVG Toledo, 2:00, scam alert: electric company scammers"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=vtH3veI5tXw",
+    "source_type": "creator_long",
+    "score": 42,
+    "reason": "lost pass two: Life In General, 12:24, 'How they scam you on your energy bill'"
+   }
+  ],
+  "cannot_determine": [
+   "her name: auto-captions garble it"
+  ],
+  "transcript_rung": 1
+ }
+]

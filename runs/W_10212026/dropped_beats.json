@@ -1,0 +1,120 @@
+[
+ {
+  "beat_id": "10-21-A3",
+  "episode": "10-21",
+  "segment_title": "YOUR TV IS WATCHING WHAT YOU WATCH: TURN THIS OFF TONIGHT",
+  "script_text": "Unnamed TV owner (2026) opens her smart TV settings on camera and finds the tracking (ACR / viewing information) switched on. Brands: Samsung Viewing Information Services, LG Live Plus, Vizio Viewing Data, Roku Use Info from TV Inputs.",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "news_anchor": "smart TV ACR viewing data tracking turned on by default",
+  "visual_spec": "handheld vertical, TV settings menu on screen, person reacting to camera",
+  "platforms": [
+   "tiktok",
+   "instagram",
+   "shorts"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "commentary_only",
+  "sourcability_note": "Shorts scan found 10 Tampa Bay News 'How to turn off the snooping settings' (45s, a reporter explainer, no owner on camera); no first-person find yet. TikTok/Reels unreachable from here.",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "smart TV tracking setting turned on"
+   ],
+   "victim": [
+    "I just found this setting on my TV",
+    "my TV has been tracking everything I watch"
+   ],
+   "platform": [
+    "#smarttv privacy setting",
+    "turn off ACR samsung",
+    "LG live plus turn off"
+   ],
+   "anchor": [
+    "smart TV ACR viewing data tracking turned on by default"
+   ],
+   "shorts": [
+    "#smarttv tracking setting",
+    "check this setting on your TV right now",
+    "your TV is spying on you turn this off",
+    "turn off viewing information samsung"
+   ]
+  },
+  "outcome": "DROPPED at Checkpoint 2 (producer, 10/13): no TV owner on camera; Lon carries the explainer"
+ },
+ {
+  "beat_id": "10-21-C2",
+  "original_beat_id": "10-21-C2",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=WJNBBKlWIyM",
+  "platform": "youtube",
+  "title": "'It's insane': Leesburg residents concerned by $700 and $800 electric bills",
+  "source_mix": {
+   "affiliate": 4,
+   "first_person": 1
+  },
+  "diversity_floor_applied": true,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=WJNBBKlWIyM",
+    "source_type": "affiliate",
+    "score": 55,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 6,
+    "fit": 5,
+    "segments": [
+     {
+      "in": "0:10",
+      "out": "0:36",
+      "outcue": "put on hold"
+     }
+    ],
+    "reasoning": "Leesburg, Florida homeowners at a city meeting: Carrie Anne Waddell's bill over $700, Derek Wallman's $823, 'medication this month is going to be put on hold.' But it's Sept 2022 and a summer bill. Mayor's political line at 1:26 is outside the cut.",
+    "flags": [
+     "OLD: Sept 2022",
+     "SEASON: summer bill"
+    ]
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=rLDFq1TTVIM",
+    "source_type": "affiliate",
+    "score": 48,
+    "tone": 6,
+    "authenticity": 6,
+    "quality": 6,
+    "fit": 5,
+    "segments": [],
+    "reasoning": "WHAS11 (the approved swap), Jan 2023, winter, bill from ~$200 to ~$700, but the customer never speaks on camera; reporter read plus tips.",
+    "flags": []
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=iYvr3a2Vols",
+    "source_type": "affiliate",
+    "score": 68,
+    "reason": "lost pass two: WPXI Pittsburgh, 2:23, shockingly high electric bills surprise homeowners"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=QTFx6LE3p2Y",
+    "source_type": "affiliate",
+    "score": 56,
+    "reason": "lost pass two: KTLA, 3:02, SoCal residents' skyrocketing bills (Aug 2024; summer, old)"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=0yiLtWl4W6g",
+    "source_type": "first_person",
+    "score": 44,
+    "reason": "lost pass two: The Fixit Shed, 4:55, 'My electric bill skyrocketed! Let's find out why'"
+   }
+  ],
+  "cannot_determine": [
+   "the two homeowners' ages"
+  ],
+  "transcript_rung": 1,
+  "outcome": "DROPPED at Checkpoint 3 (producer, 10/13): best find WEAK (Sept 2022, summer bill)"
+ }
+]
