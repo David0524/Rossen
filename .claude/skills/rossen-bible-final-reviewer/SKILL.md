@@ -30,6 +30,7 @@ is out of scope unless explicitly requested.
 | `references/producer-kit/sponsor-script-rules.md` | A sponsor read is in the bible, or sponsor copy was sent for review. |
 | `references/producer-kit/script-notes.md` + `references/examples/script-notes-kroger-*.md` | When the deliverable is notes for the writer. |
 | `references/producer-kit/jeff-brief.md` + `references/examples/jeff-brief-2026-09-24.md` | When asked for Jeff's 30-second brief. |
+| `references/examples/producer-edits-2026-10-28.md` | **Every review.** The team's edits to the 10/28 F2 draft, with 13 lessons. Dimension 11's rubric: what earns air, Jeff's archive, viewer-facing headers, hedges, the viewer close, and what a cut leaves dangling. |
 | `references/examples/ryan-notes-2026-10-09.md` | **Every review.** Ryan's 11 retention and precision notes on the 10/09 F1, with before/after pairs. Dimension 9's rubric, and the model for how a structural note is written (where, why, direction). |
 
 ## Step 0 — run the mechanical pass first
@@ -252,7 +253,11 @@ For every cue that does have a source:
   hedges by attribution ("employees say," "and I'm quoting here"), not by
   softening, so the fix is usually an attribution.
 - **The company's response** is in the bible, or the line that they didn't
-  respond. Missing is a fix.
+  respond. Missing is a fix. **Re-check it after every cut.** On 10/28 the
+  producer's trim removed Mazal's lawyers' statement and the no-admission
+  settlement line while the CBS clip naming Mazal and "nearly $1 million in
+  losses" stayed in. A clip that accuses a named company with no response line
+  anywhere after it is a BLOCKER on a revised bible, not a NOTE.
 
 - Any claim that could be defamatory if wrong — naming a specific company,
   person, or product as doing something illegal or dangerous. Flag for extra
@@ -343,8 +348,8 @@ best-performing episodes do), and a **direction**, not a rewrite.
   - blaming the evidence ("your statement could be lying to you").
 - **Show it (note 10).** A tip that could be demonstrated live (a search, a
   setting, a statement) but is only told: NOTE, with the demo suggested.
-- **Chat and close (note 11).** Live shows: one specific on-screen chat question
-  after `JOIN THE CHAT`. Every show: a written close (send this to someone it
+- **Chat and close (note 11).** Live shows only: one specific on-screen chat question
+  after `JOIN THE CHAT`; never on a taped F2. Every show: a written close (send this to someone it
   protects, the next video, see you next time; never "your parents"). Missing:
   NOTE.
 
@@ -362,6 +367,42 @@ two sentences, the point first. In the markdown draft it is
 are long, floating, or really a verification status (that's the source log) or
 a staging question (that's a red open decision). Full guidance:
 `rossen-script-writer/references/jeff-notes.md`.
+
+### 11. Producer edits (10/28) and what a cut leaves behind
+
+Rubric: `references/examples/producer-edits-2026-10-28.md`. All WARNING or NOTE
+unless marked.
+
+- **What a cut leaves dangling.** When reviewing a revised or trimmed bible, read
+  every header, tease line and "next" line against what still airs:
+  - a header whose payoff was cut (10/28: `SO REPORTERS KNOCKED ON THE COMPANY'S
+    DOOR… YOU WON'T BELIEVE THIS!!` stayed after the door-knock clip went):
+    WARNING;
+  - a tease or promise for a story that was cut (10/28: the C tease and its
+    `ONE CALL` promise stayed after C was cut): WARNING;
+  - clip numbers that no longer run 1..N in air order after cuts: WARNING;
+  - a named company left with no response line: BLOCKER (dimension 6).
+- **Jeff's own coverage.** If research or the outline shows Jeff covered the
+  scam before and the bible doesn't use it, either as a first-person framing
+  line or as `(((ROLL JEFF VIDEO …)))` ahead of a third-party explainer: NOTE.
+- **Headers** that open on a state or summarize a case's plot instead of warning
+  the viewer or escalating scope: NOTE, with the rewrite direction.
+- **Investigation the viewer doesn't need** on air (ownership chains, which
+  entity settled where, door-knocks with no consumer payoff), or four-plus
+  outside clips in a story: NOTE.
+- **Protective lines in black** (`SHE ASKED REPORTERS NOT TO USE HER NAME`, date
+  hedges) when attribution already carries the claim: NOTE, move to a JEFF note.
+  Exception: if dropping a date makes an old case sound current in a way that
+  changes viewer action, WARNING.
+- **Viewer segment** with no thank-you by name and no `INFO@ROSSENMEDIA.COM` tip
+  line: NOTE.
+- **`RED FLAG` used as a label more than about once a story:** NOTE.
+- **Outlets.** Named once, in the lead-in to its first clip, for fair use
+  (10/21). An outlet named in any other spoken line, or in more than one
+  lead-in: NOTE.
+- **Copy errors** in a producer-edited draft (missing plurals, `ITS`/`IT'S`,
+  doubled words, a dropped noun like `YOUR DOCTOR'S IS OFFERING`): list them all
+  as NOTEs. On 10/28 there were five.
 
 ## Fact-checking subsystem
 

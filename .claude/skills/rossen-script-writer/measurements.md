@@ -63,7 +63,7 @@ tease about 60–80 words a story. Those bands are derived from the per-block ro
 above, not separately measured — provisional until aired A + B bibles are in the
 library.
 
-**Outside clips: the rule is about two per segment** (Matt Raub's standard,
+**Outside clips: the rule is about two per segment** (the house standard, set by Matt Raub,
 cleared, not crowding Jeff off camera). The 10–12 per show and 5–7 per lead
 story above are historical counts from the four-story format, not targets.
 Count BROLL and demo beats separately. A trailing story with zero clip beats is

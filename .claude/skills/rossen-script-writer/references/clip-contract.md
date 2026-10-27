@@ -68,6 +68,34 @@ VERTICAL)))` on 06/22 and `(PLAY CLIP SHOP WITH POINTS 2 HORIZONTAL - BROLL JEFF
 WILL TALK OVER)` on 06/26. Add `**(JEFF TALK OVER)**` above the marker when it
 helps the control room.
 
+**B-roll lifted from another victim's story needs a crop cue, not just mute.**
+10/28: the KOB 4 B-roll of the New Mexico spa came from a package about a
+different customer, and her name was on screen. Kyle: "Crop out her name since
+this is technically a different case with the same store." When the outline or
+grader says the footage belongs to a different case, put a red cue above the
+marker:
+
+```
+(((EDIT - CLIP 2: CROP LOWER THIRD AND ANY ON-SCREEN NAME - DIFFERENT CUSTOMER)))
+```
+
+## Jeff's own video
+
+When Jeff has covered the scam on his own channel, his video is the first
+candidate for the explainer beat (10/28: his Dec 15, 2025 short replaced the
+CBS4 Indy explainer). It comes from the team's archive, not the clip pipeline,
+so it gets its own bold red cue with the date or title, not a numbered `PLAY
+CLIP` marker:
+
+```
+-I REPORTED ON A SIMILAR ONLINE VERSION OF THIS SCAM LAST YEAR.
+-TAKE A LOOK.
+(((ROLL JEFF VIDEO - DEC 15, 2025 SHORT)))
+```
+
+In a FINAL built from an outline, propose the swap as an open decision rather
+than making it silently, since it changes the outline's clips.
+
 ## Not clip beats
 
 Stills, art and screen work, all sourced separately. Never counted as clip beats:

@@ -13,9 +13,9 @@ live show he will read it aloud.
 
 ```bash
 python3 scripts/check_bible.py draft.md --day wednesday    # fix errors, repeat
-python3 scripts/build_bible.py draft.md "HE SAID HE WAS TOM SELLECK - WED 10_14.docx"
-python3 scripts/build_source_log.py sources.md "HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx"
-python3 scripts/verify_format.py "HE SAID HE WAS TOM SELLECK - WED 10_14.docx"
+python3 scripts/build_bible.py draft.md "F2 Wed 10_14 -- He Said He Was Tom Selleck.docx"
+python3 scripts/build_source_log.py sources.md "F2 Wed 10_14 -- He Said He Was Tom Selleck -- SOURCE LOG.docx"
+python3 scripts/verify_format.py "F2 Wed 10_14 -- He Said He Was Tom Selleck.docx"
 ```
 
 `build_bible.py` takes the same markdown draft `check_bible.py` reads, so one
@@ -81,12 +81,14 @@ error reads as one finding.
 
 ## Deliverables
 
-Two files, both named for the A-story headline plus the air day and date
-(` - DRAFT` before `.docx` on a draft bible):
+Two files, under the standard bible title (producer, 10/14/2026):
+`<SHOW> <Day> <M/DD> -- <Working Title>`, with `/` written as `_` in the file
+name, ` -- SOURCE LOG` on the source log and ` -- DRAFT` on a draft bible.
+The Google Doc / Drive name keeps the slash (`F2 Wed 10/14 -- He Said He Was Tom Selleck`).
 
 ```
-HE SAID HE WAS TOM SELLECK - WED 10_14.docx
-HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx
+F2 Wed 10_14 -- He Said He Was Tom Selleck.docx
+F2 Wed 10_14 -- He Said He Was Tom Selleck -- SOURCE LOG.docx
 ```
 
 **1. The bible.** No sources section and nothing under any clip marker but

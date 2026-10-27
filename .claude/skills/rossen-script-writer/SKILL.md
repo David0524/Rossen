@@ -20,6 +20,7 @@ description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Rep
 | `references/revising.md` | A marked-up bible coming back; a voice or length pass; promoting DRAFT to FINAL. |
 | `references/examples/bible-sent-10-14.txt` | **Every story-show draft.** The 10/14 F2 as the producer sent it to Jeff, after her edits. What a finished FINAL looks like (`.docx` beside it). |
 | `references/examples/ryan-notes-2026-10-09.md` | **Every draft.** Ryan's 11 structure and retention notes on the 10/09 F1, with before/after pairs. The worked example for "Retention: Ryan's structure rules". |
+| `references/examples/producer-edits-2026-10-28.md` | **Every draft.** The team's edits to the 10/28 F2 draft, with before/after pairs and 13 lessons: Jeff's own archive, viewer-facing headers, how much investigation earns air, hedges, the viewer-segment close. The worked example for "What the producer cut on 10/28". |
 | `review-loop.md` | **Every new bible or whole-bible rewrite, before building.** The BLOCKER-only reviewer loop: the agent prompt, the fix rules, the two-round stop. |
 | `references/producer-kit/facts-to-get-right.md` | Before any number goes in. |
 | `reference-segments.md` | Checking line-level layout against aired copy. |
@@ -67,7 +68,7 @@ conflict in the chat reply so the file can be fixed.
   good-news closer.
 - **Friday's deals guest is Trey Donovan** (co-founder of DealSeek). Use another
   name only if the user gives one, and then make every cue match.
-- **Outside clips: about two per segment** (Matt's standard), counted
+- **Outside clips: about two per segment** (the house standard, set by former Head of Content Matt Raub), counted
   separately from BROLL, screen shares and demos. Write to the material the
   outline carries; never invent a clip to fill a slot.
 - **Clip age is not a flag.** Footage back to 2010 is fine; don't annotate age.
@@ -226,6 +227,22 @@ CRAZIER`, `WAIT UNTIL YOU HEAR THIS`, `YOU AREN'T GOING TO BELIEVE THIS
 VIDEO…`). A noun phrase with no verb is almost always a label. The protection
 header is fixed and flat on purpose: `HERE'S HOW TO PROTECT YOURSELF`.
 
+**Headers talk to the viewer: a warning, or an escalation in scope (10/28).**
+The producer rewrote every place-led, plot-summary header:
+
+| Draft | Sent |
+|---|---|
+| `IN CALIFORNIA… EVEN HER BANK TRIED TO STOP IT!!` | `BANKS ARE TRYING TO STOP YOU FROM DOING THIS BUT ARE FAILING` |
+| `AND IN NEW MEXICO… SHE AGREED TO 600 DOLLARS. THEN SHE OPENED HER BANK APP!!` | `THIS IS HAPPENING NOT ONLY IN STORES BUT ALSO SPAS` |
+| `YOU AGREE TO THE PRICE… THEN THE CLERK SAYS ONE SENTENCE` | `THE CLERK IS ASKING YOU FOR ANOTHER CREDIT CARD, BE SUSPICIOUS` |
+
+Never open a header on a state (`IN CALIFORNIA…`, `AND IN NEW MEXICO…`): the place
+goes in the first line under it. Never summarize the case's plot in its header.
+Escalate by venue or reach (stores → spas → online). When a protection list
+covers several segments, put a header above it that ties them together: `IN
+STORES AND ONLINE, YOU NEED TO FOLLOW THE SAME STEPS`. The checker warns on a
+state-led header.
+
 ## The hard contract with the clip pipeline
 
 Scripts are parsed by `rossen-beat-extractor` and the rest of the pipeline.
@@ -308,8 +325,14 @@ the version the producer sent (1,373 words, 9 clips). The full sent text is in
 `references/examples/bible-sent-10-14.txt`. Write the first draft this way so
 the producer is not making the same cuts every week.
 
-**No other news outlet is named in a spoken line.** Extremely rare exceptions
-only, and the producer makes them. `CBS LOS ANGELES CAUGHT ONE STORE` became
+**Outlets: named once, in the clip lead-in, and nowhere else.** Since 10/21 the
+producer wants the outlet named when Jeff leads into its clip, to support fair
+use: `-HERE SHE IS, TALKING TO NPR. LISTEN.` / `-HERE'S CBS LOS ANGELES. LOOK AT
+THIS.` Name each outlet **once per show**, on the lead-in to its first clip. Every
+other line that leans on that outlet's reporting stays `REPORTERS` / `THE
+INVESTIGATION` (10/28: NPR named once at clip 1; the peg, the anonymity line and
+the door-knock header went back to `REPORTERS`). Every other line follows the
+10/14 cuts: `CBS LOS ANGELES CAUGHT ONE STORE` became
 `THIS REPORTER CAUGHT ONE STORE`; `THE OWNER TOLD ABC15` became `THE OWNER
 SAID`; `WMBF NEWS PULLED THE PAPERWORK` became `THE NEWS PULLED THE PAPERWORK`;
 `INSIDE EDITION COULDN'T REACH HER` became `REPORTERS COULDN'T REACH HER`;
@@ -395,6 +418,75 @@ SAME DAY**`). Not whole lines.
 they are for the producer: the version sent to Jeff has none. They get
 answered and removed before it goes out.
 
+## What the producer cut on 10/28
+
+Learned from the 10/28 F2: Claude's draft against the team's preliminarily final
+version. Full before/after pairs are in
+`references/examples/producer-edits-2026-10-28.md`. The bones held: story order,
+cases, the promise and its payoff, both protection lists, the guest block. What
+changed:
+
+- **Jeff's own coverage comes first.** When he has covered the scam before, open
+  the story with a first-person line that frames today against his warning
+  (`-I'VE BEEN WARNING YOU ABOUT ONLINE CARD DECLINE SCAMS, BUT THEY STILL HAPPEN
+  IN BRICK AND MORTAR STORES.`), and propose his video as that beat's clip ahead
+  of any third-party explainer: `(((ROLL JEFF VIDEO - DEC 15, 2025 SHORT)))`
+  (see `references/clip-contract.md`). His reporting history doesn't count
+  against the first-person cap. Never bury it in a JEFF note as "say so if you
+  like."
+- **Give the safety step in the intro.** The draft held it back for the "one
+  move" payoff; the team put it in the intro (`-BEFORE YOU HAND OVER ANOTHER
+  CARD… CHECK WHETHER THE FIRST ONE WAS ALREADY CHARGED.`) and kept the payoff
+  later, by name. A payoff may repeat a step the intro already gave.
+- **Air only the investigation the viewer needs.** Cut: who owns which brand,
+  which company settled where, the headquarters door-knock clip, the lawyers'
+  statement, the anonymous FTC-complaint case. A went from five outside clips to
+  three plus Jeff's video. Corporate structure lives in JEFF notes. When a story
+  has a guest and a viewer, plan **one** case, not two. The checker warns at four
+  or more outside sound clips in a story.
+- **The tease keeps the person generic and the scale national.** `AN
+  82-YEAR-OLD RETIRED TEACHER` became `A WOMAN`; `FROM CALIFORNIA TO NEW MEXICO`
+  became `IN STORES ACROSS AMERICA`; `A CLERK` became `AN EMPLOYEE` (it covers the
+  spa too); `ANOTHER ONE` became `ANOTHER CARD`. Age and job are body details. The
+  title line is just the date and day: `10/28 WED`.
+- **Second person over B-roll.** With no victim on screen, put the viewer in the
+  place: `-LATER THAT DAY SHE CHECKED HER BANK APP` became `-LATER YOU CHECK YOUR
+  BANK APP AND BOTH CARDS ARE CHARGED.`
+- **Hedges live in notes, not copy.** Cut: `SHE ASKED REPORTERS NOT TO USE HER
+  NAME.`, `A COUPLE OF YEARS AGO,`, `ON STORES LIKE THESE`. When `SHE SAYS` already
+  carries the attribution, a protective line in black is dead air. If dropping a
+  date would make an old case sound current *and* change what a viewer does,
+  raise it as an open decision instead of writing it in.
+- **Say "red flag" about once a story.** `-HERE'S YOUR RED FLAG: YOUR BANK FLAGS A
+  CHARGE AS FRAUD?` became `-WHEN YOUR BANK FLAGS A CHARGE AS FRAUD`. Keep the label
+  for the line that matters most (here, the "one move" payoff); state the other
+  takeaways as rules. The checker warns past one per story.
+- **Name the scam in plain words, and let Jeff react.** Added: `-IT'S A CLASSIC
+  PHISHING SCAM`, which also sets up the guest. Added: `UNREAL!` and `HAH! OKAY`.
+  One or two reaction beats per story; they never carry a fact.
+- **Viewer segments close with thanks and the tip line.** First name, when they
+  sent it, then `-THANK YOU [NAME] FOR SHARING YOUR STORY. VIEWERS CAN SHARE TIPS
+  WITH US AT INFO@ROSSENMEDIA.COM`. If the name isn't in yet, write `XXX` in the
+  line and a red producer cue for it.
+- **The pre-sponsor tease talks to the viewer.** `-NEXT… YOUR DOCTOR'S OFFICE IS
+  OFFERING A FREE MEDICARE KIT? THINK AGAIN` / `-A FORMER SECRET SERVICE AGENT IS
+  HERE TO TELL YOU HOW TO SPOT THIS COMMON SCAM.` Full sentences with verbs, not
+  noun phrases.
+- **Fewer notes and cues.** 27 JEFF notes became 11; every survivor guards a line
+  that still airs. Gone: the on-screen chat cue (taped F2), the guest
+  pre-interview cue, answered producer cues. Aim for about a dozen notes in a
+  Wednesday show.
+- **Crop names out of borrowed B-roll.** Kyle, on the KOB 4 B-roll: crop out her
+  name, it's a different case at the same store. Muting isn't enough; see
+  `references/clip-contract.md`.
+
+**When a cut removes something, check what depended on it.** The 10/28 cuts left
+two gaps the writer should catch on any revision: a header that promised the
+door-knock clip after the clip was gone, and a company named by the CBS clip
+with its response cut. The company's response rule still holds. When asked to
+cut, keep one response line (`-MAZAL'S LAWYERS SAY IT DOESN'T OWN OR OPERATE ANY
+STORES.`), and rewrite or drop any header whose payoff left with the cut.
+
 ## Length
 
 Size by the confirmed story count (`check_bible.py --stories N` does the same).
@@ -457,7 +549,10 @@ regardless:
   (`THAT'S A RED FLAG`, `RED FLAG NUMBER ONE`). The closing `HERE'S HOW TO
   PROTECT YOURSELF` list still runs, and may repeat a red flag as a numbered
   step. The red flag is Jeff's line, not the expert's. The checker warns on
-  three sound clips with no `RED FLAG` or protection line between them.
+  three sound clips with no takeaway between them. **The label `RED FLAG` is
+  said about once a story (10/28)**; the other cases still end on a takeaway,
+  written as a plain rule: `-WHEN YOUR BANK FLAGS A CHARGE AS FRAUD… BELIEVE YOUR
+  BANK. NOT THE CLERK.`
 - **Inside a story, lead with the case where the money is actually gone.** A
   real loss sets the stakes; a near-miss (stopped by a bank teller, caught in
   time) is a strong warning but lands second. Ryan, on 10/14: "Move the $26k scam
@@ -623,11 +718,13 @@ mirrored, with "let's do this together." When a tip can be done live (search
 statement), write it as a demo: `LET ME SHOW YOU. PULL UP MY PHONE.` /
 `(((LIVE DEMO: JEFF'S PHONE MIRRORED)))`, plus a red cue to rehearse it. When
 there's a real-versus-fake, put them side by side: `(((POP UP: FAKE CARD NEXT
-TO A REAL ONE)))`.
+TO A REAL ONE)))`. On a taped F2, offer a screenshot or a graphic as the
+default (10/28: "a screenshot or graphic but definitely nothing live") and
+write the live demo only when the producer asks for one.
 
 ### 11. Seed the chat and write the close
 
-- **Seed the chat (live shows).** After `JOIN THE CHAT`, one specific on-screen
+- **Seed the chat (live shows only; never on a taped F2).** After `JOIN THE CHAT`, one specific on-screen
   question as a red cue: `(((ON SCREEN: HAVE YOU GOTTEN ONE OF THESE CALLS? WHAT
   DID THEY SAY?)))`. A second in the first half can feed the guest; write `JEFF:
   (READS ONE QUESTION FROM THE CHAT)` into the guest block. Where-are-you-watching-
@@ -693,7 +790,7 @@ Confirm recency.
   description. You cannot confirm what's on screen or time a moment. Say so.
 - Live numbers (view counts, prices) are pulled on show day; mark them.
 
-## Output — two files, named for the A story
+## Output — two files, under the standard bible title
 
 1. **The bible** `.docx`, built with `scripts/build_bible.py` and confirmed with
    `scripts/verify_format.py`. Black is what Jeff says; red is a production
@@ -707,16 +804,22 @@ Confirm recency.
    what (transcript, title, description). Every caution flag carried from the
    input gets a row saying how the copy honours it.
 
-**File names: the A-story headline plus the air day and date**, never a generic
-show label:
+**Document titles (producer, 10/14/2026).** Every deliverable's Google Doc / Drive name and file name uses the standard title. A local file name writes `/` as `_`, because a file name can't hold a slash.
+
+| Stage | Title | Example (Drive) | Example (local file) |
+|---|---|---|---|
+| Pre-bible | `Prebible <SHOW> <M/DD>` | `Prebible F1 10/16` | `Prebible F1 10_16.docx` |
+| Outline w/ videos | `Outline <SHOW> <M/DD>` | `Outline F1 10/16` | `Outline F1 10_16.docx` |
+| Bible | `<SHOW> <Day> <M/DD> -- <Working Title>` | `F1 Fri 10/16 -- Your TV Is Watching You` | `F1 Fri 10_16 -- Your TV Is Watching You.docx` |
+
+`<SHOW>` is `F1` (Friday live) or `F2` (the Wednesday show); `<Day>` is `Fri` or `Wed`; `<Working Title>` is the A story's working title. The bible's source log adds ` -- SOURCE LOG`; a draft bible adds ` -- DRAFT`. One pre-bible covering two shows: `Prebible F1 10/16 + F2 10/21`.
 
 ```
-HE SAID HE WAS TOM SELLECK - WED 10_14.docx
-HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx
+F2 Wed 10_14 -- He Said He Was Tom Selleck.docx
+F2 Wed 10_14 -- He Said He Was Tom Selleck -- SOURCE LOG.docx
 ```
 
-Add ` - DRAFT` before `.docx` on a DRAFT bible. Format detail in
-`docx-format.md`.
+Format detail in `docx-format.md`.
 
 The chat reply is short: first the **review loop** summary (rounds run,
 BLOCKERs fixed with before → after, any still blocking, and the count of notes
@@ -764,7 +867,9 @@ script can't see:
 - No unbooked expert named in black copy; guest names match between copy and
   cues.
 - Every aphorism candidate the checker named has had the paraphrase test.
-- First person: one or two lines, nothing invented about Jeff's life.
+- First person: one or two lines, nothing invented about Jeff's life. Jeff's own
+  reporting history (`I'VE BEEN WARNING YOU…`, `I REPORTED ON…`) and the stock
+  sponsor bridge don't count against it.
 - Two or three open decisions left for the team.
 - Lines are short; no stat runs with nothing on screen; every story opens on a
   hook, not its title.
@@ -774,12 +879,12 @@ script can't see:
   name.
 - JEFF PLEASE NOTE comments carry what Jeff must know but not say — short,
   anchored on their line.
-- Both files exist and are named for the A story and date.
+- Both files exist under the standard bible title (`F2 Wed 10_14 -- <Working Title>`).
 - FINAL: clips match the outline, numbered in air order, `OUT:` and the red
   source line from the Videos rows, nothing added, cut or swapped without saying
   so.
 - The producer's cuts (`What the producer cuts before it goes to Jeff`): no news
-  outlet in a spoken line; victims by first name or `THIS WOMAN`/`THIS MAN`;
+  outlet in a spoken line except its clip lead-in, once per outlet; victims by first name or `THIS WOMAN`/`THIS MAN`;
   state, not town; no `YOUR PARENTS`; the tease and every `NEXT,` line hold the
   payoff back; no story's body opens on its tease headline; no slate or
   like/subscribe housekeeping copy.
@@ -790,7 +895,15 @@ script can't see:
   targets; every segment ends on what to do before the bridge or sponsor; the
   pre-sponsor tease names specific payoffs; Jeff restates the takeaway after the
   guest; precise claims (issuer, exceptions, QR line, dates that agree); a live
-  demo where a tip can be shown; an on-screen chat question; a written close.
+  demo where a tip can be shown (screenshot or graphic on a taped F2); an
+  on-screen chat question on live shows only; a written close.
+- The 10/28 edits (`references/examples/producer-edits-2026-10-28.md`): Jeff's
+  own coverage opens the story and is proposed as a clip; the safety step is in
+  the intro; one case per story with a guest; headers are warnings or scope
+  escalations, never state-led; the tease person is generic; second person over
+  B-roll; no hedge lines in black; `RED FLAG` about once a story; viewer segment
+  ends on thanks plus INFO@ROSSENMEDIA.COM; about a dozen JEFF notes; a crop cue
+  on borrowed B-roll; no header or accusation left dangling by a cut.
 - The review loop ran (or the producer waived it): BLOCKERs fixed or listed as
   still blocking, no WARNING or NOTE "fixed", any clip change stated and
   mirrored in the outline, `REVIEW_LOOP.md` written.
@@ -798,7 +911,7 @@ script can't see:
 Then build and verify:
 
 ```bash
-python3 scripts/build_bible.py draft.md "HE SAID HE WAS TOM SELLECK - WED 10_14 - DRAFT.docx"
-python3 scripts/build_source_log.py sources.md "HE SAID HE WAS TOM SELLECK - WED 10_14 - SOURCE LOG.docx"
-python3 scripts/verify_format.py "HE SAID HE WAS TOM SELLECK - WED 10_14 - DRAFT.docx"
+python3 scripts/build_bible.py draft.md "F2 Wed 10_14 -- He Said He Was Tom Selleck -- DRAFT.docx"
+python3 scripts/build_source_log.py sources.md "F2 Wed 10_14 -- He Said He Was Tom Selleck -- SOURCE LOG.docx"
+python3 scripts/verify_format.py "F2 Wed 10_14 -- He Said He Was Tom Selleck -- DRAFT.docx"
 ```

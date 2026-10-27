@@ -1,6 +1,6 @@
 # Sponsor script rules
 
-These are the house rules for sponsor reads, inherited from Jacob Salamon, who ran operations until August 31, 2026. Olivia Flynn drafts sponsor scripts. Matt reviews them. Apply these to every sponsor script.
+These are the house rules for sponsor reads, inherited from Jacob Salamon, who ran operations until August 31, 2026. Olivia Flynn drafts sponsor scripts. TJ Cooney (Head of Content) reviews them. Apply these to every sponsor script.
 
 **The override that beats every rule below:** always pull the sponsor's talking-points document first. Anything the sponsor marks "read verbatim" is untouchable, even if it breaks a house rule.
 
@@ -64,8 +64,10 @@ Disclosure up top. Placed at a natural break. Never in the middle of a victim's 
 
 ## Audience trust
 
-Our viewers take Jeff's sponsor reads and any nearby recommendation as his personal endorsement. Anything that blurs reporting and advertising is a priority fix. If a sponsor's category sits awkwardly with a consumer-protection show, raise it with Matt directly rather than in a document comment.
+Our viewers take Jeff's sponsor reads and any nearby recommendation as his personal endorsement. Anything that blurs reporting and advertising is a priority fix. If a sponsor's category sits awkwardly with a consumer-protection show, raise it with TJ directly rather than in a document comment.
 
-## How Matt wants notes on sponsor scripts
+## How the Head of Content wants notes on sponsor scripts
+
+Matt Raub's preference; keep it until TJ says otherwise.
 
 Straight find-and-replace edits. No explanation.

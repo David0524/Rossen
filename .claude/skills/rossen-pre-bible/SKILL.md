@@ -1,6 +1,6 @@
 ---
 name: "rossen-pre-bible"
-description: Research and pitch candidate stories for an upcoming Jeff Rossen (Rossen Reports) show, then render the approved slate as a Pre-Bible Pitch Sheet .docx — a ranked shortlist plus one page per story with the working tease, the hook, the mechanics, the footage needed, the protection payoff, and a segregated sources-and-verification block. Between the chat shortlist and the .docx, it drafts the plain-text pitch email that goes to Jeff for a yes/no. Use whenever the user asks for story ideas, pitches, a pitch sheet, a pre-bible, a slate, a pitch email, "write up the pitches for Jeff," a rundown of candidates, "what should we cover Wednesday," "find me stories for Friday," "vet these pitches," "have we covered this," "what's hot on other channels," or wants to brainstorm what a show could be before anyone writes it. Also use to re-rank, add to, or revise an existing pitch sheet. Do NOT use to write the bible itself — that is rossen-script-writer, and it runs after this.
+description: Research and pitch candidate stories for an upcoming Jeff Rossen (Rossen Reports) show, then render the approved slate as a Pre-Bible Pitch Sheet .docx — a ranked shortlist plus one page per story (tease, hook, mechanics, footage, protection payoff) and a segregated sources-and-verification block. Between the chat shortlist and the .docx, it drafts the plain-text pitch email that goes to Jeff for a yes/no. Use whenever the user asks for story ideas, pitches, a pitch sheet, a pre-bible, a slate, a pitch email, "write up the pitches for Jeff," a rundown of candidates, "what should we cover Wednesday," "find me stories for Friday," "vet these pitches," "have we covered this," "what's hot on other channels," "we keep getting the same stories," "find new angles," or wants to brainstorm what a show could be before anyone writes it. Also use to re-rank, add to, or revise an existing pitch sheet. Do NOT use to write the bible itself — that is rossen-script-writer, and it runs after this.
 ---
 
 # Pre-Bible Pitch Sheet
@@ -15,6 +15,14 @@ page can be handed straight to it.
 |---|---|
 | `references/producer-kit/jeff-and-ryan-rules.md` | **Load every run.** Jeff's A-story rules, Ryan's rubric, the audience data, the team's pitch workflow. From the producer kit; outranks this file where they differ. |
 | `references/ranking.md` | Ranking, the sexy beat, confidence, viral flags. **Load every run.** |
+| `references/quality-gate.md` | **Load every Step 1 run.** Hard gates, the 14-point score, the pitch threshold, asking for verdicts. |
+| `references/calibration-log.md` | Step 1, before scoring: the user's past verdicts and the adjustments made from them. |
+| `references/story-search.md` | **Load every Step 1 run, before searching.** How candidates are found: theme-first, fear-forward, the peg ladder, anti-repeat, breadth quota, what's off the list. |
+| `references/performance-map.md` | Choosing themes and breaking ties. Which categories and themes beat a typical show, from all 148 live shows. |
+| `references/theme-bank.md` | Choosing themes. Each theme's threat, record, what aired, and search directions. |
+| `references/seasonal-calendar.md` | Pegging a theme to the airdate's season when there's no fresh news. |
+| `scripts/channel_heat.py` | **First thing every Step 1 run.** What's exploding right now on audience-matched channels; the lead candidates come from here. |
+| `scripts/theme_search.py` | Searching a theme across time windows (`--list`, `--theme`, `--windows`). Needs `yt-dlp`. |
 | `references/producer-kit/show-formats-2026-09.md` | Step 0. What F1 and F2 are right now, who's who, the regular experts. |
 | `references/producer-kit/story-board-2026-09-29.md` | Before pitching. Aired, pipeline, banked, and **dead, and why**. A snapshot: ask for the live one. |
 | `scripts/coverage_check.py` | **Before any candidate reaches the shortlist.** Searches 62 aired transcripts. |
@@ -33,10 +41,21 @@ page can be handed straight to it.
 
 ## Step 0 — know what show this is, before anything else
 
+**The default run is the weekly slate** (from Oct 25, 2026). The team pitches
+on Sunday night or Monday for that week's Friday shoot: the **F1** (live that
+Friday) and the **F2** (taped that Friday, posts the next Wednesday). Four slots
+get used, F1 A plus F2 A, B and C, but the pitch is **10 to 12 stories**, as
+many A-caliber as the gate allows: the team would rather choose from ten A's than
+receive a ready-made A, B, C. Any A can be slotted down to a B or C in the
+meeting; a B can't be slotted up. Propose a slot for each, and a recommended F1
+lead and F2 A. A request for a single show still works the old way.
+
 Establish, in this order, and **state them back to the user in your first reply**:
 
 1. **Today's actual date.** Read it from the environment. Do not assume.
-2. **The airdate.** Ask if it wasn't given. "Next show" is not an airdate.
+2. **The airdate.** For the weekly slate, compute it: the coming Friday is the
+   F1 airdate and the F2 shoot, and the Wednesday after it is the F2 airdate.
+   Otherwise ask. "Next show" is not an airdate.
 3. **The day of the week for that airdate** — Wednesday or Friday. Compute it; don't
    take a verbal label on faith. A user who says "the Friday show" about a date that
    falls on a Wednesday has made a mistake you need to surface now, not after
@@ -54,6 +73,14 @@ here, because stories are not interchangeable between them: deals stories belong
 to Friday (Jeff moved the Prime Day price check to the F1), and an A story has
 to be a scam.
 
+5. **What's been done since the newest transcript.** The transcripts and story
+   board lag. Before searching, list every show aired since the newest
+   transcript (the channel's Live tab) **and ask the user what was filmed but
+   hasn't aired yet.** A story that was filmed last week is as dead as one that
+   aired. Look in Drive first: search titles containing F1, F2, Bible or
+   Outline modified since the newest transcript, plus any weekly pre-bible
+   already made for this week (its candidates are taken). In round 1, three of eight stories failed here (`references/calibration-log.md`).
+
 Time-sensitivity is scored against **the airdate**, not today. A back-to-school
 story with a window closing August 20 is live for an August 12 show and dead for a
 September 3 one.
@@ -62,20 +89,32 @@ September 3 one.
 
 This skill is three steps and **the gates are not optional**.
 
-**Step 1 — pitch, in chat.** Research candidates, rank them, and present the
-shortlist *as a message*, not a file. For each: headline, the sexy beat, proposed
+**Step 1 — pitch, in chat.** Find candidates **theme-first** with
+`references/story-search.md`: pitch the theme and build it out with cases (a
+MyChart phishing email is one case in a phishing story, not the story), search
+across time rather than only this month, peg to recent news *or* the season *or*
+proof it's still happening, push every candidate to its fear version, and check
+what's already been pitched so last week's passes don't come back. Every
+candidate must pass `references/quality-gate.md` before it's shown; keep
+searching new themes until 10 to 12 pass or the themes run out, and never pad.
+Then rank them and present the shortlist *as a message*, not a file, with each
+story's seven-number score, and a cut list of what failed and why. For each: headline, the sexy beat, proposed
 slot, confidence, viral flag, and one or two lines on why. Then stop and ask which
-ones are in. Offer more than the slate needs — the user is choosing, and a
-shortlist with no losers isn't a choice. **For A stories, four or five options
-with a recommended order** (Jeff: "Kyle & David need to provide more options
-each week"). Each A must be a scam with a villain, broad enough for the whole
+ones are in. Offer far more than the slate needs — the user is choosing, and a
+shortlist with no losers isn't a choice. **The weekly slate is 10 to 12 stories,
+mostly A-caliber, with a recommended F1 lead and F2 A** (Jeff: "Kyle & David
+need to provide more options each week"). End by asking the user to mark each
+story Pitch or Don't pitch, and log the answers (`quality-gate.md`). Each A must be a scam with a villain, broad enough for the whole
 audience, and big enough to carry the show; state the one-line viewer advice.
 Frame each pitch as broadly as its cases, and lead with a victim who actually
 lost money (Ryan's Oct 8 notes, `producer-kit/jeff-and-ryan-rules.md`).
 Test every scam pitch two ways and say so when either is weak: **audience fit**
 (is a 55+ viewer the target, or only a spectator?) and **the extended threat**
 (the beat that puts the viewer in personal danger). Check the story board's dead
-list before anything reaches the user.
+list before anything reaches the user. Never pitch refund or payout stories
+(Amazon refunds, settlements); the team doesn't want them. Under the shortlist,
+one line on breadth: themes searched, windows, and which candidates are new,
+returning themes or re-pitches.
 
 **Step 2 — the pitch email, after the user picks.** For the stories the user kept,
 draft the plain-text pitch email that goes to Jeff. Numbered stories, one dense
@@ -190,8 +229,8 @@ their money back.
 
 Attribute weak sources rather than laundering them: advocacy-group estimates,
 vendor blogs, single-outlet claims, and self-reported surveys get named as such at
-the point of use. `⚠️` for check-before-air, `🚨` for legal or a load-bearing
-inference.
+the point of use. `CHECK:` for check-before-air, `LEGAL:` for legal or a load-bearing
+inference. No emoji in any deliverable.
 
 ## Don't re-pitch what already aired — run the coverage check
 
@@ -202,9 +241,12 @@ over several minutes is a segment; a few is a B/C story or an aside; watch for
 false matches ("tractor" in "contractor"). Then check the story board snapshot,
 `references/channel-uploads.txt`, and the bible library for anything newer.
 
-**No repeat inside three months, and B and C stories count** — titles are vague
-on purpose and a livestream covers four or five topics. Older coverage is fine
-to revisit with a genuinely new angle; say when it ran. **A keyword miss is not
+**No repeat of the same scam inside six months if it had a segment** (ten or
+more transcript hits), **or inside three months if it was a B, C or aside** —
+titles are vague on purpose and a livestream covers four or five topics. A
+*theme* that performed well can come back sooner with new cases or a new angle:
+label it `RETURNING THEME — last aired <date>, <lift>` (`performance-map.md`).
+Older coverage is fine to revisit with a genuinely new angle; say when it ran. **A keyword miss is not
 proof:** the Mar 20 to Apr 15 shows have no transcripts (deed fraud ran as a B
 story Apr 8 and the checker can't see it). If you couldn't check, say so first.
 

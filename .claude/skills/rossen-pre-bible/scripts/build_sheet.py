@@ -2,7 +2,7 @@
 """Render a Pre-Bible Pitch Sheet markdown source into a .docx.
 
 Usage:
-    python3 build_sheet.py sheet.md -o "Pre_Bible_Pitch_Sheet.docx"
+    python3 build_sheet.py sheet.md -o "Prebible F1 10_16.docx"
 
 Source conventions this expects:
     # TITLE                      -> document title (first H1 only)
@@ -62,6 +62,25 @@ def setup(doc):
     style.paragraph_format.space_after = Pt(4)
 
 
+def shade_box(paragraph, fill):
+    """Shade a paragraph and give it a thick left rule (the viral-clip callout)."""
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+    ppr = paragraph._p.get_or_add_pPr()
+    shd = OxmlElement("w:shd")
+    shd.set(qn("w:val"), "clear"); shd.set(qn("w:color"), "auto"); shd.set(qn("w:fill"), fill)
+    bdr = OxmlElement("w:pBdr")
+    for side in ("top", "left", "bottom", "right"):
+        el = OxmlElement(f"w:{side}")
+        el.set(qn("w:val"), "single")
+        el.set(qn("w:sz"), "24" if side == "left" else "4")
+        el.set(qn("w:space"), "6")
+        el.set(qn("w:color"), "E8710A" if fill == "FCE4CC" else "999999")
+        bdr.append(el)
+    ppr.append(bdr)
+    ppr.append(shd)
+
+
 def page_break(doc):
     doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
 
@@ -71,9 +90,12 @@ def build_table(doc, rows):
     table = doc.add_table(rows=1, cols=len(header))
     table.style = "Table Grid"
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
-    # Column widths tuned for: # | Story | Sexy beat | Viral | Slot | Confidence
-    defaults = [0.35, 1.45, 2.35, 0.85, 1.15, 0.85]
-    widths = defaults if len(header) == 6 else [6.9 / len(header)] * len(header)
+    # Column widths tuned for: # | Story | Lead title | Viral clip | Slot | Confidence
+    defaults = [0.3, 1.55, 2.05, 1.15, 0.95, 0.9]
+    if len(header) == 4:   # # | Story | Lead title | Viral clip (with link) — the Oct 26 format
+        widths = [0.3, 1.9, 2.3, 2.4]
+    else:
+        widths = defaults if len(header) == 6 else [6.9 / len(header)] * len(header)
     for cell, text, w in zip(table.rows[0].cells, header, widths):
         cell.width = Inches(w)
         p = cell.paragraphs[0]
@@ -171,9 +193,19 @@ def render(md, out):
                 block.append(lines[i].strip().lstrip(">").strip())
                 i += 1
             p = doc.add_paragraph()
-            p.paragraph_format.left_indent = Inches(0.3)
             p.paragraph_format.space_before = Pt(4)
             p.paragraph_format.space_after = Pt(6)
+            first = next((x for x in block if x), "")
+            if "VIRAL CLIP" in first or first.lstrip("*").startswith("CLIP"):
+                # Clip callout: shaded box, one source line per line, not italic.
+                shade_box(p, "FCE4CC" if "VIRAL" in first else "EDEDED")
+                lines_in = [x for x in block if x]
+                for k, line in enumerate(lines_in):
+                    if k:
+                        p.add_run().add_break()
+                    add_runs(p, line)
+                continue
+            p.paragraph_format.left_indent = Inches(0.3)
             add_runs(p, " ".join(x for x in block if x))
             for run in p.runs:
                 run.italic = True
@@ -211,7 +243,7 @@ def render(md, out):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("source")
-    ap.add_argument("-o", "--output", default="Pre_Bible_Pitch_Sheet.docx")
+    ap.add_argument("-o", "--output", default="Prebible.docx")
     args = ap.parse_args()
 
     with open(args.source, encoding="utf-8") as fh:

@@ -69,10 +69,13 @@ equally, break ties in this order:
    channels: a local news clip over 200K or a creator video over 500K, upload
    date confirmed. Footage solved, beat pre-validated.
 2. **Any strong clip exists** — local news package, bust footage, victim interview.
-3. **Time-sensitivity**, scored against the airdate. Matters, but never promotes a
-   dull story over a live one.
-4. **Sourcing strength.**
-5. **Distance from what already aired**, and variety against the recent
+3. **The theme's track record** in `performance-map.md` (median lift). A theme
+   that runs 2× beats one that runs 0.7× at equal clickability.
+4. **Time-sensitivity**, scored against the airdate. Matters, but never promotes a
+   dull story over a live one. Recency is a bonus, not a requirement: a seasonal
+   peg or proof it's still happening is enough (`story-search.md`).
+5. **Sourcing strength.**
+6. **Distance from what already aired**, and variety against the recent
    lineup (Ryan liked a car story because the run was heavy on tech and finance).
 
 Original Jeff reporting — a demo, a price walk, a screen-share he owns — is worth a
@@ -120,7 +123,7 @@ Then, every time: **you did not watch it.** No timecode, no outcue, no claim abo
 what's on screen. Nobody downstream should be able to mistake a description for a
 confirmation.
 
-Mark the strongest one on the shortlist — `🔥 VIRAL` in its own column — and give it
+Mark the strongest one on the shortlist — the views and channel in the Viral clip column — and give it
 a callout on the story page. If a story's whole case rests on one viral clip, say
 that, because the story dies if the clip turns out to be unclearable.
 
@@ -136,20 +139,15 @@ by airdate.
 
 ## The shortlist table
 
-Page one. Columns, in order:
+Page one. Four columns, in order (David, Oct 26, 2026: no slot or confidence
+columns; slot and confidence live on each story page):
 
-| # | Story | The sexy beat | Viral | Slot | Confidence |
-|---|---|---|---|---|---|
+| # | Story | Lead title | Viral clip |
+|---|---|---|---|
 
 - **Story** — the headline as it would read on air. All caps, bold.
-- **The sexy beat** — one sentence, plain language, second person where it works.
-  *"The store watched your searches and raised the price because your baby is
-  sick."* Not a topic label.
-- **Viral** — `🔥` plus platform and rounded view count, or `—`.
-- **Slot** — `F2 A`, `F2 B`, `F2 C`, `Call-in caller`, `F1 A`, `F1 B`. Add `TIME-SENSITIVE` and the closing date where it
-  applies.
-- **Confidence** — HIGH / MEDIUM / LOW, plus a short reason where one helps:
-  *"HIGH — no victim yet."*
+- **Lead title** — the first of the three packaging options.
+- **Viral clip** — rounded views, channel, and the clip's URL. No emoji.
 
 Below the table: the slate-level slot-fit verdict. Does this fill the show, and if
 not, what's missing.

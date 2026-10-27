@@ -1,8 +1,8 @@
 # The help line: what viewers are calling about
 
-The help line is 866-9-ROSSEN. Matt triaged 338 voicemails left between March 4 and August 30, 2026, scored each one from 0 to 10 for the call-in show, and built a database.
+The help line is 866-9-ROSSEN. Matt Raub (former Head of Content) triaged 338 voicemails left between March 4 and August 30, 2026, scored each one from 0 to 10 for the call-in show, and built a database.
 
-**This page has no names or phone numbers on purpose.** Callers are private people, and some were in distress. The full database (`Rossen_Help_Line_Voicemail_Database.xlsx`) is with Matt. Ask him for access if you're booking callers. Refer to callers by ID number in emails and documents.
+**This page has no names or phone numbers on purpose.** Callers are private people, and some were in distress. The full database (`Rossen_Help_Line_Voicemail_Database.xlsx`) was kept by Matt Raub, who has left. Ask TJ Cooney (Head of Content) where it is now if you're booking callers. Refer to callers by ID number in emails and documents.
 
 ## Why producers should care
 

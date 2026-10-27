@@ -1,0 +1,117 @@
+{
+  "phishing": [
+    "patient portal scam text",
+    "fake hospital bill text scam",
+    "bank merger scam letter",
+    "fake bank alert text scam",
+    "toll text scam",
+    "DMV text scam",
+    "fake data breach letter scam",
+    "fake account suspended email scam warning",
+    "I clicked a text from my bank",
+    "pastor text gift card scam"
+  ],
+  "mail": [
+    "check washing mailbox",
+    "mail theft checks stolen",
+    "stolen mail carrier key",
+    "change of address scam",
+    "fake missed delivery notice scam",
+    "package stolen porch new scam",
+    "letter in mail scam seniors",
+    "mailbox fishing checks"
+  ],
+  "cards": [
+    "debit card drained scam",
+    "credit card skimmer warning",
+    "authorized user added to my credit card",
+    "gift card draining scam",
+    "tap to pay scam",
+    "bank fraud department call scam",
+    "Zelle scam bank won't refund",
+    "small charges on card scam"
+  ],
+  "watched": [
+    "smart tv spying settings",
+    "phone apps tracking you",
+    "AirTag stalking warning",
+    "hidden camera rental found",
+    "voice assistant recording you",
+    "data brokers selling your address",
+    "car tracking driving data insurance",
+    "smart home device hacked"
+  ],
+  "home": [
+    "caregiver power of attorney took house",
+    "home title theft",
+    "deed fraud stolen home",
+    "squatters took home",
+    "door to door scam seniors",
+    "contractor took deposit elderly",
+    "utility shut off scam call",
+    "storm chaser contractor scam"
+  ],
+  "online": [
+    "fake online store scam",
+    "fake tracking number scam",
+    "facebook ad scam seniors",
+    "scam ads AI products",
+    "counterfeit car seat online",
+    "fake charity scam disaster",
+    "gofundme scam",
+    "marketplace scam seniors"
+  ],
+  "impostor": [
+    "grandparent scam courier",
+    "police impostor scam call",
+    "jury duty scam call",
+    "military funeral honors scam",
+    "IRS impostor scam call",
+    "tech support scam seniors lost",
+    "medicare scam call",
+    "fake bank investigator scam"
+  ],
+  "arrest": [
+    "self checkout arrest",
+    "money mule arrested didn't know",
+    "cloned license plate tolls",
+    "identity stolen arrested",
+    "package reshipping job scam",
+    "romance scam victim charged"
+  ],
+  "cash_out": [
+    "bitcoin atm scam seniors",
+    "gold bar courier scam",
+    "lost life savings bitcoin atm",
+    "cash courier scam elderly"
+  ],
+  "prizes": [
+    "sweepstakes scam seniors",
+    "lottery scam call",
+    "receipt survey scam",
+    "publishers clearing house scam"
+  ],
+  "family_death": [
+    "obituary scam",
+    "funeral home scam family",
+    "prepaid funeral scam",
+    "estate scam after death"
+  ],
+  "health_id": [
+    "medical identity theft",
+    "medicare billed for care never received",
+    "phantom billing medicare",
+    "hospital bill scam seniors"
+  ],
+  "seasonal_holiday": [
+    "holiday package scam",
+    "black friday scam warning",
+    "gift card scam holiday",
+    "fake charity holiday scam"
+  ],
+  "seasonal_tax": [
+    "IRS scam call",
+    "tax refund scam text",
+    "tax identity theft"
+  ]
+}
