@@ -16,7 +16,7 @@ Wednesday scam shows were uneven because scam topics are lumpy week to week. A s
 ## Status as of late September 2026
 
 - Episode 1 aired September 16 with AARP's Amy Nofziger. It was a big booking lift for a modest result, and it played more like one person's story than advice viewers could use.
-- Matt recommended moving it from weekly to monthly or every other month. Jeff and Ryan had not ruled on that as of September 23.
+- Matt Raub (former Head of Content) recommended moving it from weekly to monthly or every other month. Jeff and Ryan had not ruled on that as of September 23.
 - F2 tapings since then have also been standard A, B, C story shows with an expert (car scams, taped September 25). So "F2" now means the taped Friday show, which is sometimes the call-in show.
 
 ## Run of show (Matt's proposal)
@@ -53,7 +53,7 @@ Guests are often taped in a different order than they air. To keep the edit clea
 
 ## Booking callers
 
-- Sourcing: Jeff forwards viewer emails, Matt and Ryan vet, a producer calls and books. The help line voicemail database is the main pool.
+- Sourcing: Jeff forwards viewer emails, TJ and Ryan vet, a producer calls and books. The help line voicemail database is the main pool.
 - Book five or six to land two or three.
 - Pre-interview every caller before booking. Confirm the story matches the voicemail.
 - Collect the paper: checks, wire receipts, police reports, the letter, screenshots. It's verification and b-roll.

@@ -70,3 +70,12 @@ it.**
 sentence architecture (`NOT TWENTY DOLLARS. NOT FIVE. ZERO.`). **Intensity comes
 from punctuation, caps and bold, which survive paraphrase — never from a built
 sentence.** `check_bible.py` lists aphorism candidates; run the test on each.
+
+## How many (10/28)
+
+The 10/28 draft carried 27 notes; the team kept 11. Every survivor guards a line
+that still airs: a nuance, the limit of a number, a legal status, a guest's
+credential to confirm. Aim for **about a dozen** in a Wednesday show. Cut notes on
+lines that only exist to protect the writer, and notes that restate what the copy
+already says. Corporate background the viewer doesn't need (who owns which brand,
+which settlement was how large) goes in a note *instead of* the copy, not in both.

@@ -1,6 +1,6 @@
 # Channel facts: what the data says
 
-Source: Matt's back-catalog teardown, built August 27, 2026 from YouTube Studio exports. 501 videos, March 2025 to August 2026. Medians, not averages. Videos under about 60 days old were left out as still maturing. Revenue figures are left out of this kit on purpose; ask Matt.
+Source: the back-catalog teardown by Matt Raub (former Head of Content), built August 27, 2026 from YouTube Studio exports. 501 videos, March 2025 to August 2026. Medians, not averages. Videos under about 60 days old were left out as still maturing. Revenue figures are left out of this kit on purpose; ask TJ Cooney (Head of Content).
 
 Numbers drift. Date-stamp anything you quote, and check Studio before it goes in a public post.
 
@@ -59,4 +59,4 @@ Four to five long uploads a week is the working ceiling. Weeks with six showed l
 
 ## Shorts
 
-Stopped in June 2026 because they were too time-consuming for the return. They drove about half of lifetime views and about 18% of subscribers gained in the trailing year, but almost no revenue. Matt treats the decision as settled. If anyone proposes restarting, they need both halves of that fact.
+Stopped in June 2026 because they were too time-consuming for the return. They drove about half of lifetime views and about 18% of subscribers gained in the trailing year, but almost no revenue. Matt Raub treated the decision as settled, and the producer kept it (10/12/2026). If anyone proposes restarting, they need both halves of that fact.

@@ -7,7 +7,7 @@ structural dead ends, so the bible can be written toward what sources exist.
 Columns: run · beat · role · orientation · outcome · why / source
 Outcomes: PICK (verified outcue) · LOCATED (case found, no caption-able source)
 · SWAP (needs script change) · EMPTY (nothing cleared the bar)
-· WEAK (flagged, low score or flags) · MANUAL (native post is the pick) · THROTTLED (bot wall; transcript not reached) · SHOW-PRODUCED (DEMO, never EMPTY) · REUSED (verified pick carried from a prior run, re-verified)
+· WEAK (flagged, low score or flags) · MANUAL (native post is the pick) · THROTTLED (bot wall; transcript not reached) · SHOW-PRODUCED (DEMO, never EMPTY) · REUSED (verified pick carried from a prior run, re-verified) · DROPPED (cut by the producer at a checkpoint, with the reason)
 
 ## Run F2_07292026 (AI voice-clone / agency impersonation / back-to-school)
 
@@ -78,3 +78,42 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 **Verify pass 10/8 (V3 bible, no search):** captions bot-walled + media blocked again; one 5-min spaced retry did not recover Inside Edition. 4 of 6 cached-caption segments needed in-point fixes: the 10/7 picks started on caption-cue boundaries, which land mid-sentence or on a dangling word. Snap to the sentence start, not the cue start.
 **Process bug — Arc Publishing duration lies:** wmbfnews.com (ArcPublishing extractor) reported 338 s / 64 s / 148 s; the actual media (progressive and HLS) was 34 s / 6 s / 15 s. The 9/30 "arrest package" is a 34 s anchor reader with no bodycam. Check real media length (ffprobe) before assuming a news-site video holds a planned segment.
 **Pattern:** a beat planned as "bodycam may be inside the arrest package" (10-14 B2) is a structural dead end until someone watches it; don't write runway for it.
+
+## Run F_10162026 (A only: AI could move into your smart home; guest Lon Seidman)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| 10-16-A2 | authority_report | H | PICK | ABC News 2yvhtqQ7bBk 0:00-0:19 "at least slow down that process" BUTT 0:53-1:30 "that's the real concern that Anthropic's raising" (CBS 9Swcki8Bhx8 bot-walled) |
+| 10-16-A3 | evidence | H | MANUAL | Anthropic cdn mp4: 13 s silent animated diagram, not camera footage of the boxes; permission needed. No outlet video of the real boxes found |
+| 10-16-A4 | debunk | H | PICK (late) | CBS RU6LGzvxrs4 (Jonas Guan) bot-walled twice, captioned on a third spaced try (~35 min after first): 1:55-2:24 "Absolutely, yes." + 2:40-3:35 "they can take over." |
+| 10-16-A5 | authority_report | H | PICK | FOX 29 BNjvqT2BBxI 0:00-0:16 "labeled as spam and never investigated" BUTT 0:46-0:54 "no matter how specifically you set them" (rolling captions, ±2 s) |
+| 10-16-A6 | authority_report | H | PICK | ABC News kczEi3dM0Ow 0:00-0:33 "This situation is obviously unacceptable." (alt BBC AUq2twt8mgM 0:00-0:20) |
+| 10-16-A7 | authority_report | H | PICK | CNN tj1dFIUAs7A 0:06-0:25 "a false tip about a homicide to Philadelphia police" BUTT 3:49-5:10 "a lot of negative surprises"; cross-checked with Whisper on the cnn.com cut |
+| 10-16-A8 | victim_interview | H | PICK | France 24 J5tv0twx2Es 0:00-0:24 "it was like opening an oven" BUTT 1:09-1:20 "no longer receive software or security updates" (alt ABC pFGhR5kWNO0) |
+
+**Yield:** 5 PICK / 1 MANUAL / 1 THROTTLED of 7. Captions 5 of 15 on the first pass, 3 more on one retry about 8 min later; media bytes blocked, but cnn.com's site video downloaded and Whisper ran on it.
+**Pattern:** a news-peg Friday with HAVE links from the pre-bible: every pick was a pre-bible link; harvest search returned mostly articles (news_web), and its YouTube leg found almost nothing new for a 2-day-old story.
+**Sourcability calibration:** a pre-bible "video" from a company research page can be an animation. Check a frame and ffprobe before planning it as the open package or b-roll of the real thing.
+**Process bug:** `check_outline.py` reads Who dates only as "(Mon YYYY)"; "(Oct. 12, 2026)" parses as January and raises a false six-month warning. It also wants transcript cues as {start,end,text} dicts, not lists.
+**Throttle note (F_10162026):** the caption bot wall cleared for one ID about 35 min after the first failure, matching the "30-minute wait" note in CLAUDE.md. Worth a third spaced try on a priority beat.
+
+## Run W_10212026 (A smart TV tracking · B Turo fake damage · C electric supplier slamming)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| 10-21-A3 (orig.) | first_person_rant | V | DROPPED | TV owner finding ACR on camera: Shorts returned only reporter/creator explainers (10 Tampa Bay, Kurt the CyberGuy); TikTok unreachable. Cut at CP2, Lon carries it |
+| 10-21-A3 | explainer_demo/creator_long | H | PICK | She Prepares 6WT5fc-LHSc 8:13–9:13 "what you buy" BUTT 10:02–10:33 "gives them to you" (pre-bible HAVE) |
+| 10-21-A4 | authority_report | H | PICK | KVUE 0ZWvqw17HIQ 0:00–0:49 "under this agreement" BUTT 1:08–1:16 "are still ongoing" |
+| 10-21-A5 | explainer_demo/creator_long | H | PICK | Gamers Nexus 6IFVTcM28KA 0:26–0:52 "user reconnected the network" · LEGAL (LG denial outside cut) (pre-bible HAVE) |
+| 10-21-B1 | victim_interview | H | PICK | KSL 1_wUVS5szfw 0:49–1:38 "actually going to cost me" (pre-bible HAVE) |
+| 10-21-B2 | victim_interview | H | PICK | KSL 1_wUVS5szfw 1:40–2:51 "removed the bogus claims" |
+| 10-21-C2 (orig.) | victim_interview | H | DROPPED | Manassas homeowner print-only; best video FOX 35 WJNBBKlWIyM 0:10–0:36 "put on hold" is Sept 2022 and a summer bill (WEAK); cut at CP3 |
+| 10-21-C2 | victim_interview | H | PICK (swap) | FOX43 kXnLrmP-Wm8 0:48–1:29 "never even heard of them" BUTT 1:56–2:04 "and it's illegal" BUTT 3:13–3:29 "has been terminated" (door-to-door slamming replaced the Rushmore call; producer CP3) |
+
+**Yield:** 6 PICK (1 swap) / 2 DROPPED of 8.
+**Pattern:** pre-bible HAVE links again carried the run (3 of 6 picks). Vertical first-person "owner finds the setting" beat: no Shorts owner found, a planned human beat that didn't exist; plan it as Jeff or guest. Named victims in print-only consumer stories (Manassas, Consumer Reports) don't source to video; swap at Checkpoint 1.
+**Sourcability calibration:** scan called A3, C2 and C3 commentary_only; A3 and C2 were dropped and C3 needed a case swap, so all three calls held.
+**Process note:** captions bot-walled at preflight and after a 4-minute retry; recovered about 13 minutes after the first probe, with search, beats and triage done in between. Run Steps 1–4 while waiting rather than idling.
+
+
+**Revision 10/14 (producer):** B reworked to rental cars in general. Added 10-21-B1 (authority_report/victim, H) PICK, producer-supplied link: CBS Evening News 0ANywiehCCA 0:19–1:03 "that I didn't even detect" BUTT 1:35–1:50 "showed no billable damage" BUTT 2:23–2:28 "waved the $350" (Hertz AI scanner, Aug 2025). KSL picks renumbered B2/B3. Lesson: a peer-to-peer app (Turo) reads as niche for a 55+ audience; lead a rental story with a legacy company.

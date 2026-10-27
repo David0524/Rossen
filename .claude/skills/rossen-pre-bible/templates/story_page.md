@@ -1,62 +1,40 @@
 # N. <STORY HEADLINE IN CAPS>
 
-**Slot:** <F2 A | F2 B | F2 C | Call-in caller | F1 A | F1 B> · **Confidence: HIGH|MEDIUM|LOW** · *<short reason, optional>*
+**Status:** <READY | NEEDS A CLIP | NEEDS A CASE | RETURNING THEME, last aired <date> | RE-PITCH, first pitched <date>> · **Score:** <total>/14 (Fear <n>, Heat <n>, Track record <n>, Breadth <n>, Peg <n>, Newness <n>, Producibility <n>) · **Lead test:** passes <n> of 3
 
-**SLOT FIT:** <does it carry this slot, and why or why not — be blunt>
+### POTENTIAL PACKAGING
 
-> 🔥 **VIRAL CLIP** — <platform>, ~<N> views (observed <date>), uploaded <date>
+- <Lead title, channel pattern: two halves, em dash, 2-4 CAPS words, THIS hides the reveal>
+- <Title two>
+- <Title three>
+
+**Built on:** <the proven title or format this copies, with its views or lift: "DEBIT CARD ALERT (2.8M, 12x)">
+
+### THE PITCH
+
+<Two to four sentences: the beat in plain words, why now, what the viewer can check tonight.>
+
+### CASES
+
+- **<Place> (<what happened, when>).** <Who, what, the loss.> *<Outlet, date.>* <CHECK: / LEGAL: if needed>
+- **<Place> (<date>).** <...> *<Outlet, date.>*
+- **<Place or "The scale"> (<date>).** <...> *<Outlet, date.>*
+
+> **VIRAL CLIP** — <platform, channel>, ~<N> views (observed <date>), uploaded <date>
 > <URL>
-> Appears to show: <from title/description/transcript only>
-> *Not watched — no timecode, no outcue, no confirmation of what's on screen.*
+> "<title>." <second clip if any>
+> *Not watched — no timecode, no outcue.*
 
-### WORKING TEASE
+### COVERAGE CHECK
 
-> <ALL CAPS. SHORT CLIPPED LINES. THE ALARMING THING FIRST. JEFF'S VOICE.
-> THE ROOM SHOULD HEAR THE COLD OPEN FROM THIS.>
-
-### THE HOOK
-
-<A paragraph. What happens to a person, in order. Plain prose.>
-
-### HOW IT WORKS
-
-- <mechanic, in the order it happens>
-- <the move that makes it work — bold it>
-- <what the criminal actually gets>
-
-### THE NUMBERS
-
-- <figure — with who published it>
-- <figure — flag advocacy/vendor/self-reported sources at the point of use>
-
-### WHY IT'S A ROSSEN STORY
-
-<Short. The line that wins the argument in the meeting.>
-
-<!-- Wallet stories only -->
-### WHY IT'S DEMOTED, NOT CUT
-
-<Why it doesn't lead, and what earns it the slot it has.>
-
-<!-- Only when adjacent to something already aired -->
-### WHAT'S NEW
-
-<What ran and when, and what's genuinely new here.>
+<One or two lines: the closest thing we've done and when, and what was checked: transcripts, the Rossen Stories coverage table, Drive bibles and outlines since the newest transcript, the story board.>
 
 ### FOOTAGE WE NEED
 
-- **<The get>** — the one piece that makes the segment. Say if it doesn't exist yet.
-- <supporting footage>
-- <Jeff demo or screen-share, if that's the segment>
-
-<!-- Use this header instead when footage is thin. Do not bury it. -->
-### FOOTAGE — BE HONEST ABOUT THIS
-
-<Plainly: what exists, what doesn't, and what the segment actually is without it.
-If it's Jeff, graphics and a screen-share, say that. The room decides going in.>
+- **The get:** <the local package that makes the segment>
+- <supporting footage, Jeff demo>
 
 ### THE PAYOFF
 
-- <actionable step — the physical thing to do>
-- <setting path, phone number, or URL — mark *(verify)* if unconfirmed>
-- <the one that matters most, bolded>
+- **<the one move, bolded>**
+- <setting path, phone number or URL; *(verify)* if unconfirmed; *(demo)* if Jeff can show it>

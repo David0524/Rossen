@@ -2,7 +2,7 @@
 """build_source_log.py — render the companion source log for a Rossen bible.
 
 Usage:
-    python3 scripts/build_source_log.py sources.md "A-STORY HEADLINE - WED 10_14 - SOURCE LOG.docx"
+    python3 scripts/build_source_log.py sources.md "F2 Wed 10_14 -- <Working Title> -- SOURCE LOG.docx"
 
 Input is markdown with two sections, each holding one pipe table:
 

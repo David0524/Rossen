@@ -19,6 +19,7 @@ TIMECODE = re.compile(r"\b\d{1,2}:\d{2}(?::\d{2})?\s*[-–]\s*\d{1,2}:\d{2}")
 CONFIDENCE = re.compile(r"\*\*Confidence:\s*(HIGH|MEDIUM|LOW)\*\*")
 
 errors, warnings = [], []
+EMOJI = re.compile("[\U0001F300-\U0001FAFF\u2600-\u27BF\uFE0F]")
 
 
 def err(msg):
@@ -41,6 +42,8 @@ def split_stories(md):
 
 def check(md):
     stories = split_stories(md)
+    if EMOJI.search(md):
+        err("Emoji found. The sheet uses no emoji: write CHECK, LEGAL and VIRAL CLIP as words.")
 
     # --- document-level -----------------------------------------------------
     if not stories:
@@ -78,25 +81,28 @@ def check(md):
     for num, headline, body in stories:
         tag = f"Story {num} ({headline[:40]})"
 
-        ratings = re.findall(r"\*\*Confidence:\s*([A-Za-z]+)", body)
-        if not ratings:
-            err(f"{tag}: no '**Confidence: HIGH|MEDIUM|LOW**' on the slot line.")
-        for r in ratings:
-            if r.upper() not in ("HIGH", "MEDIUM", "LOW"):
-                err(f"{tag}: confidence '{r}' is not HIGH / MEDIUM / LOW.")
+        # Template v3 (Oct 26, 2026): a Status line with the score replaces Slot/Confidence.
+        if not re.search(r"\*\*Status:\*\*", body):
+            err(f"{tag}: no '**Status:**' line (READY / NEEDS ... / RETURNING THEME / RE-PITCH).")
+        if not re.search(r"\*\*Score:\*\*\s*\d+\s*/\s*14", body):
+            err(f"{tag}: no '**Score:** N/14' with the seven numbers from quality-gate.md.")
+        if not re.search(r"Lead test", body, re.I):
+            warn(f"{tag}: no lead-test result on the status line.")
+        if not re.search(r"\*\*Built on:\*\*", body):
+            err(f"{tag}: no '**Built on:**' line under the packaging (the proven title it copies, with its numbers).")
+        if not re.search(r"### COVERAGE CHECK", body):
+            err(f"{tag}: no COVERAGE CHECK section (transcripts, Rossen Stories coverage table, Drive bibles).")
 
-        if not re.search(r"\*\*Slot:\*\*", body):
-            err(f"{tag}: no '**Slot:**' line.")
+        if not re.search(r"POTENTIAL PACKAGING", body, re.I):
+            err(f"{tag}: no POTENTIAL PACKAGING. The page leads with three titles.")
+        elif len(re.findall(r"^- ", body.split("POTENTIAL PACKAGING", 1)[1].split("###", 1)[0], re.M)) != 3:
+            warn(f"{tag}: POTENTIAL PACKAGING should list exactly three titles.")
 
-        if not re.search(r"SLOT FIT", body, re.I):
-            err(f"{tag}: no SLOT FIT line. Every story is tested against the "
-                f"day's shape.")
+        if not re.search(r"### CASES", body):
+            err(f"{tag}: no CASES section. Cases go under the packaging, each dated and sourced.")
 
-        if not re.search(r"WORKING TEASE", body, re.I):
-            err(f"{tag}: no WORKING TEASE.")
-
-        if not re.search(r"THE HOOK", body, re.I):
-            warn(f"{tag}: no THE HOOK section.")
+        if not re.search(r"THE PITCH|THE HOOK", body, re.I):
+            warn(f"{tag}: no THE PITCH section.")
 
         if not re.search(r"FOOTAGE", body, re.I):
             err(f"{tag}: no FOOTAGE section. Say what exists and what doesn't — "

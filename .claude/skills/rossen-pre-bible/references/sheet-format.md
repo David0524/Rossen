@@ -8,7 +8,7 @@ Load when building the document.
 PRE-BIBLE PITCH SHEET
 Prepared <date> · <slate description> · <how it was researched>
 
-THE SHORTLIST — RANKED          <- table, page 1
+THE SHORTLIST — RANKED          <- table, page 1: # | Story | Lead title | Viral clip (with URL); then HOW THESE WERE BUILT (two lines)
 SLATE FIT                        <- verdict line under the table
                                  [page break]
 1. <STORY HEADLINE>              <- one page, hard break after
@@ -35,24 +35,28 @@ how a legal problem reaches air.
 
 ## The story page
 
-Skeleton in `templates/story_page.md`. Section order:
+**Template v3, Oct 26, 2026.** Packaging first, cases underneath (Oct 26 v2), plus
+three additions from the packaging-first and coverage lessons: the score on the
+page, the title's origin, and a coverage line. Skeleton in `templates/story_page.md`.
 
 | Section | Always? | Notes |
 |---|---|---|
-| Slot / Confidence line | Yes | `**Slot:** X · **Confidence: HIGH** · <short reason>` |
-| `SLOT FIT` | Yes | The day-shape test. See `show-shapes.md`. |
-| `🔥 VIRAL CLIP` callout | When applicable | URL, platform, views + date observed, upload date, what it appears to show, and that you did not watch it. |
-| `WORKING TEASE` | Yes | Blockquote. All caps. Jeff's voice. |
-| `THE HOOK` | Yes | Prose. The story in a paragraph. **If the story hangs on news, it includes the why-now chain** (see below). |
-| `HOW IT WORKS` / `WHAT THEY'RE WATCHING` / `THE NUMBERS` | Yes, pick what fits | Bulleted mechanics or figures. |
-| `WHY IT'S A ROSSEN STORY` | When the case needs making | Short. |
-| `WHY IT'S DEMOTED, NOT CUT` | Wallet stories | Protects a good story from reading weak. |
-| `WHAT'S NEW` | Adjacent to something aired | What ran, and what's new here. |
-| `FOOTAGE WE NEED` or `FOOTAGE — BE HONEST ABOUT THIS` | Yes | Second header when footage is thin. |
-| `THE PAYOFF` | Yes | The protection list. Bulleted, actionable. |
+| Status line | Yes | `**Status:** READY · **Score:** 12/14 (Fear 2, Heat 1, ...) · **Lead test:** passes 2 of 3`. Replaces the old Slot / Confidence line; slots are decided in the meeting. RE-PITCH and RETURNING THEME go in Status. |
+| `POTENTIAL PACKAGING` | Yes | Exactly three titles. The first is the lead title on the cover table. |
+| `**Built on:**` line | Yes | Under the titles: the proven title or format it copies, with views or lift. This is the packaging-first trail. |
+| `THE PITCH` | Yes | Two to four sentences: beat, why now, what the viewer can check. |
+| `CASES` | Yes | One bullet per case, real loss first: bold place and date, what happened, outlet and date in italics. CHECK / LEGAL inline. For a roundup, one bullet per scam with its own clip. |
+| `VIRAL CLIP` callout | Yes | Blockquote starting `**VIRAL CLIP**` (or `**CLIP**` under the 500K bar). Shaded box. A story without one is not pitched. |
+| `COVERAGE CHECK` | Yes | The closest thing we've aired or filmed, with dates, and the sources checked: transcripts, the Rossen Stories coverage table, Drive bibles since the newest transcript, the story board. Added after the celebrity-scam miss (Oct 26). |
+| `FOOTAGE WE NEED` | Yes | The get, then supporting footage and demos. |
+| `THE PAYOFF` | Yes | The protection steps. |
 
-Not every section every time. The tease, the hook, the mechanics, the footage and
-the payoff are the load-bearing five.
+A WORKING TEASE is optional now; the packaging does its job on this page, and
+the bible writer drafts the tease.
+
+**No emoji anywhere** (David, Oct 26). Write markers as words: `CHECK:` for
+check before air, `LEGAL:` for legal risk or a load-bearing claim, `VIRAL CLIP`
+for the callout. `check_sheet.py` errors on emoji.
 
 ### WORKING TEASE
 
@@ -101,16 +105,26 @@ A step that can be shown on Jeff's phone gets `*(demo)*`.
 handles US Letter sizing, the shortlist table, hard page breaks between stories,
 and the caps/bold conventions.
 
+**Document titles (producer, 10/14/2026).** The pitch sheet's Google Doc / Drive name and file name uses the standard title. A local file name writes `/` as `_`, because a file name can't hold a slash.
+
+| Stage | Title | Example (Drive) | Example (local file) |
+|---|---|---|---|
+| Pre-bible | `Prebible <SHOW> <M/DD>` | `Prebible F1 10/16` | `Prebible F1 10_16.docx` |
+| Outline w/ videos | `Outline <SHOW> <M/DD>` | `Outline F1 10/16` | `Outline F1 10_16.docx` |
+| Bible | `<SHOW> <Day> <M/DD> -- <Working Title>` | `F1 Fri 10/16 -- Your TV Is Watching You` | `F1 Fri 10_16 -- Your TV Is Watching You.docx` |
+
+`<SHOW>` is `F1` (Friday live) or `F2` (the Wednesday show); `<Day>` is `Fri` or `Wed`; `<Working Title>` is the A story's working title. The bible's source log adds ` -- SOURCE LOG`; a draft bible adds ` -- DRAFT`. One pre-bible covering two shows: `Prebible F1 10/16 + F2 10/21`.
+
 ```bash
-python3 scripts/build_sheet.py sheet.md -o "Pre_Bible_Pitch_Sheet.docx"
+python3 scripts/build_sheet.py sheet.md -o "Prebible F1 10_16.docx"
 python3 scripts/check_sheet.py sheet.md
 ```
 
 Then **look at the pages**:
 
 ```bash
-soffice --headless --convert-to pdf "Pre_Bible_Pitch_Sheet.docx"
-pdftoppm -jpeg -r 80 "Pre_Bible_Pitch_Sheet.pdf" page
+soffice --headless --convert-to pdf "Prebible F1 10_16.docx"
+pdftoppm -jpeg -r 80 "Prebible F1 10_16.pdf" page
 ls page-*.jpg
 ```
 
@@ -125,5 +139,5 @@ material and rebuild — never shrink type or margins.
 - Everything else: sentence case prose. The sheet is read in a meeting, not off a
   teleprompter. **Do not write the whole document in caps** — that's the bible's
   convention, not this one. The exemplar reserves caps for headlines and teases.
-- `⚠️` check before air · `🚨` legal, or a load-bearing inference · `🔥` viral.
+- No emoji. `CHECK:` check before air · `LEGAL:` legal, or a load-bearing inference · `VIRAL CLIP` callout.
 - Bold the thing the reader must not miss. Sparingly, or it stops working.

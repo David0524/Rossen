@@ -20,7 +20,7 @@ import json
 import sys
 
 SOURCE_TYPES = {"affiliate", "network", "creator_long", "creator_short",
-                "first_person", "raw_footage"}
+                "first_person", "raw_footage", "rossen_own"}
 ROLES = {"victim_interview", "confrontation_bust", "evidence",
          "explainer_demo/creator_short", "explainer_demo/creator_long",
          "authority_report", "debunk", "first_person_rant"}

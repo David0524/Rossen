@@ -36,6 +36,6 @@ also sponsor. Take the sponsor from the assignment; Olivia Flynn is the source f
 offer language, links and codes.
 
 Who's who, briefly: Jeff Rossen (host, final say), Ryan Chaffee (YouTube
-strategy, titles, thumbnails), Matt Raub (Head of Content; pitches go through
-him, he reviews every script), Olivia Flynn (sponsorship), Kyle (AP: clips, graphics; pitches
+strategy, titles, thumbnails), TJ Cooney (Head of Content since Oct 12, 2026,
+replacing Matt Raub; pitches go through TJ, who reviews every script), Olivia Flynn (sponsorship), Kyle (AP: clips, graphics; pitches
 with David).

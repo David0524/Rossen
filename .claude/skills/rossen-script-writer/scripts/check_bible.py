@@ -44,7 +44,7 @@ T = {
     "open_decisions": (2, 3),
     # Wednesday bands are per story and scale with --stories. Derived from the
     # four-story per-block rows in measurements.md; provisional until aired
-    # A + B bibles are measured. Clips follow Matt's ~2 outside clips/segment.
+    # A + B bibles are measured. Clips follow the house ~2 outside clips/segment.
     "wed_story": {"a_words": (600, 850), "later_words": (230, 520),
                   "tease_base": (50, 100), "tease_per": (60, 80),
                   "clips_per": 2},
@@ -112,7 +112,22 @@ NUMWORDS = {"1": "ONE", "2": "TWO", "3": "THREE", "4": "FOUR", "5": "FIVE",
             "6": "SIX", "7": "SEVEN", "8": "EIGHT", "9": "NINE", "10": "TEN"}
 # a takeaway the viewer can use: a labeled tell, a red flag, or the list itself
 TAKEAWAY_RE = re.compile(r"RED FLAG|\bTHE TELL\b|HERE'?S HOW TO PROTECT|ONE MOVE I PROMISED|"
-                         r"^-?\s*NUMBER ONE\b")
+                         r"^-?\s*NUMBER ONE\b|"
+                         # 10/28: most takeaways are plain rules, not labeled
+                         r"^-?\s*(WHEN YOUR|BELIEVE|DON'?T|NEVER|STOP|CALL|CHECK|CLOSE|"
+                         r"HANG UP|ALREADY (CHARGED|PAID)|THEN,? STOP)\b")
+US_STATES = (r"ALABAMA|ALASKA|ARIZONA|ARKANSAS|CALIFORNIA|COLORADO|CONNECTICUT|"
+             r"DELAWARE|FLORIDA|GEORGIA|HAWAII|IDAHO|ILLINOIS|INDIANA|IOWA|KANSAS|"
+             r"KENTUCKY|LOUISIANA|MAINE|MARYLAND|MASSACHUSETTS|MICHIGAN|MINNESOTA|"
+             r"MISSISSIPPI|MISSOURI|MONTANA|NEBRASKA|NEVADA|NEW HAMPSHIRE|NEW JERSEY|"
+             r"NEW MEXICO|NEW YORK|NORTH CAROLINA|NORTH DAKOTA|OHIO|OKLAHOMA|OREGON|"
+             r"PENNSYLVANIA|RHODE ISLAND|SOUTH CAROLINA|SOUTH DAKOTA|TENNESSEE|TEXAS|"
+             r"UTAH|VERMONT|VIRGINIA|WASHINGTON|WEST VIRGINIA|WISCONSIN|WYOMING")
+# 10/28: Jeff's own reporting history, the sponsor bridge and promise payoffs
+# are exempt from the first-person cap
+FP_EXEMPT = re.compile(r"\bI(?:'VE)? (BEEN WARNING|WARNED|REPORTED|TOLD YOU|COVERED)\b|"
+                       r"I'VE DEDICATED MY LIFE|I'M THRILLED ABOUT TODAY'S SPONSOR|"
+                       r"\bI PROMISED\b")
 
 
 def norm_phrase(s):
@@ -496,6 +511,13 @@ def check(path, day="wednesday", stories=2, stage="draft"):
         r.warn(f"{len(flat)} of {len(mid)} mid-story headers carry no "
                f"escalation marker — check they are sayable turns and not "
                f"article subheads: {flat[:3]}")
+    state_led = [h for h in mid if re.match(
+        r"^(AND |BUT |NOW )?IN (" + US_STATES + r")\b", h.upper())]
+    if state_led:
+        r.warn(f"{len(state_led)} header(s) open on a state: {state_led[:2]}. "
+               f"A header is a warning or a scope escalation (10/28: 'THIS IS "
+               f"HAPPENING NOT ONLY IN STORES BUT ALSO SPAS'); the place goes in "
+               f"the first line under it.")
     for h in mid:
         if not re.search(r"(?<![A-Z'])(" + HEADER_VERBS + r")(?![A-Z'])", h.upper()):
             r.warn(f"header {h!r} has no verb — a noun phrase is almost always "
@@ -515,13 +537,15 @@ def check(path, day="wednesday", stories=2, stage="draft"):
     # ---------------------------------------------------- first person
     fp = [s for s in spoken
           if re.search(r"(^|[^A-Z])I('M|'VE|'D|'LL)?([^A-Z]|$)", s)
-          and not re.search(r'"', s)]
+          and not re.search(r'"', s)
+          and not FP_EXEMPT.search(s.upper().replace("\u2019", "'"))]
     r.stats["first_person_lines"] = fp
     lo, hi = T["first_person"]
     if len(fp) > hi:
-        r.warn(f"{len(fp)} first-person lines; cap is {hi}. Check none is "
-               f"editorial opinion, and that nothing about Jeff's life, habits "
-               f"or accounts was invented.")
+        r.warn(f"{len(fp)} first-person lines; cap is {hi} (Jeff's own reporting "
+               f"history, the sponsor bridge and 'I PROMISED' payoffs don't count). "
+               f"Check none is editorial opinion, and that nothing about Jeff's "
+               f"life, habits or accounts was invented.")
 
     # ---------------------------------------------------- open decisions
     od = len([l for l in lines
@@ -542,14 +566,34 @@ def check(path, day="wednesday", stories=2, stage="draft"):
         r"USA TODAY|WASHINGTON POST|NEW YORK TIMES|WALL STREET JOURNAL|"
         r"ASSOCIATED PRESS|REUTERS|INVESTIGATETV|ABC\d+|[KW][A-Z]{2,3} NEWS|[KW][A-Z]{3} ?\d+|"
         r"[KW][A-Z]{2,3}'S (REPORTING|STORY|INVESTIGATION))\b")
-    outlet_hits = [s for s in spoken if OUTLETS.search(s.upper())
-                   and not s.upper().startswith("(")]
+    # 10/21: name the outlet once, in the lead-in to its first clip (fair use).
+    outlet_hits, lead_ins, seen = [], [], {}
+    for i, l in enumerate(body):
+        s_ = strip_md(l)
+        if (not s_ or CUE_ANY.search(s_) or s_.upper().startswith(("(", "OUT:"))
+                or not OUTLETS.search(s_.upper())):
+            continue
+        nxt = [strip_md(x) for x in body[i + 1:i + 8] if strip_md(x)][:3]
+        if any(CLIP_LOOSE.search(x.upper()) for x in nxt):
+            lead_ins.append(s_)
+            m_ = OUTLETS.search(s_.upper())
+            key = re.split(r"[.,!?…]", s_.upper()[m_.start():])[0].strip()
+            key = " ".join(key.split()[:3])
+            seen[key] = seen.get(key, 0) + 1
+        else:
+            outlet_hits.append(s_)
     r.stats["outlet_mentions"] = len(outlet_hits)
+    r.stats["outlet_lead_ins"] = len(lead_ins)
     if outlet_hits:
-        r.warn(f"{len(outlet_hits)} spoken line(s) name a news outlet. No outlet "
-               f"names on air except the rare one the producer chooses: say "
-               f"'THIS REPORTER', 'REPORTERS', 'THE NEWS', or attribute to the "
-               f"police, court or agency. {outlet_hits[:3]}")
+        r.warn(f"{len(outlet_hits)} spoken line(s) name a news outlet outside a "
+               f"clip lead-in. Name the outlet only as Jeff brings in its clip; "
+               f"everywhere else say 'REPORTERS', 'THE INVESTIGATION', or "
+               f"attribute to the police, court or agency. {outlet_hits[:3]}")
+    again = [k for k, v in seen.items() if v > 1]
+    if again:
+        r.warn(f"outlet(s) named in more than one clip lead-in: {again}. Name "
+               f"each outlet once, on its first clip (10/21: 'just mention NPR "
+               f"once').")
     fam = [s for s in spoken if re.search(
         r"\b(YOUR (AGING |ELDERLY )?PARENTS?|YOUR MOM AND DAD|A PARENT WITH|"
         r"YOUR GRANDPARENTS?)\b", s.upper())]
@@ -820,6 +864,46 @@ def check(path, day="wednesday", stories=2, stage="draft"):
         if NOTE_RE.search(l) and not strip_md(l):
             r.err(f"line {i+1}: a JEFF PLEASE NOTE on a line of its own. Anchor "
                   f"it to the line it guards.")
+    if day == "wednesday" and len(notes) > 15:
+        r.warn(f"{len(notes)} JEFF PLEASE NOTEs. The team kept 11 of 27 on 10/28; "
+               f"aim for about a dozen, each guarding a line that airs.")
+
+    # ---------------------------------------------------- 10/28 producer edits
+    U_sp = [x.upper().replace("\u2019", "'") for x in spoken]
+    rf = [x for x in U_sp if "RED FLAG" in x and not x.startswith("(")]
+    r.stats["red_flag_lines"] = len(rf)
+    if len(rf) > max(stories, 1):
+        r.warn(f"'RED FLAG' said {len(rf)} times for {stories} stories. Keep the "
+               f"label for the line that matters most, about once a story; state "
+               f"the other takeaways as plain rules (10/28).")
+    seg, counts = 0, {}
+    for l in body:
+        t = strip_md(l).upper()
+        if PROTECTION_HEADER in t.replace("\u2019", "'"):
+            seg += 1
+        elif CLIP_LOOSE.search(t) and "BROLL" not in t:
+            counts[seg] = counts.get(seg, 0) + 1
+    heavy = {k: v for k, v in counts.items() if v >= 4}
+    if heavy:
+        r.warn(f"{max(heavy.values())} outside sound clips in one story. Matt's "
+               f"standard is about two a segment; 10/28 went from five to three "
+               f"plus Jeff's own video. Cut the investigation to what the viewer "
+               f"needs.")
+    hedge = [x for x in U_sp if re.search(
+        r"NOT TO USE (HER|HIS|THEIR) NAME|A COUPLE OF YEARS AGO", x)]
+    if hedge:
+        r.warn(f"protective line(s) in black copy: {hedge[:2]}. Attribution "
+               f"carries the legal weight; move the hedge to a JEFF note (10/28).")
+    if any(re.search(r"\b(SENT US|OUR VIEWERS?)\b", x) for x in U_sp) and \
+            "INFO@ROSSENMEDIA.COM" not in " ".join(U_sp):
+        r.warn("a viewer segment with no tip-line close. End it on thanks by "
+               "first name plus 'VIEWERS CAN SHARE TIPS WITH US AT "
+               "INFO@ROSSENMEDIA.COM' (10/28).")
+    aged = [strip_md(x) for x in tease if re.search(r"\b\d+-YEAR-OLD\b",
+                                                   strip_md(x).upper())]
+    if aged:
+        r.warn(f"the tease gives the person's age: {aged[:1]}. Keep the tease "
+               f"person generic ('A WOMAN'); age and job are body details (10/28).")
 
     return r
 
