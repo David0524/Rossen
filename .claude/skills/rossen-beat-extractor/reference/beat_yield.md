@@ -117,3 +117,26 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 
 
 **Revision 10/14 (producer):** B reworked to rental cars in general. Added 10-21-B1 (authority_report/victim, H) PICK, producer-supplied link: CBS Evening News 0ANywiehCCA 0:19–1:03 "that I didn't even detect" BUTT 1:35–1:50 "showed no billable damage" BUTT 2:23–2:28 "waved the $350" (Hertz AI scanner, Aug 2025). KSL picks renumbered B2/B3. Lesson: a peer-to-peer app (Turo) reads as niche for a 55+ audience; lead a rental story with a legacy company.
+
+## Run W_11042026 (A unclaimed money held by the state · B Dollar General shelf vs. register suit · C Walmart+/Sam's Club bundle)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| 11-04-A1 | explainer_demo/creator_short | V | MANUAL | TikTok @financeunfolded 7023899798654782726, BROLL; TikTok refuses requests from the container |
+| 11-04-A2 | first_person_rant | V | MANUAL | TikTok @pearlmania500 7220912200855178538; plan's three slices unchecked |
+| 11-04-A3 | victim_interview | H | PICK | FOX 13 page video (Sept 3, 2025), Whisper: 0:20–0:31 "gives money away" BUTT 0:56–1:22 "find out before I died" BUTT 1:35–1:51 "best thing that ever happened to me" |
+| 11-04-A5 | victim_interview | H | PICK | ABC7 Chicago dbBueUfmuSI (Jan 28, 2025): 0:15–0:25 "that I changed my name" BUTT 1:00–1:20 "a loophole that they need to figure out" |
+| 11-04-A6 | victim_interview | H | PICK · LEGAL | CBS Sacramento 80djyAsS-YE: plan outcues off their times; re-cut 0:12–0:46 BUTT 1:01–1:15 BUTT 2:32–2:48 "that's a lot of nerve"; state's answer at 2:58–3:05 outside the cut |
+| 11-04-A7 | authority_report | H | PICK | CBS News California 1Grj5UvPLwo: 2:09–2:23 "for just $8,000" BUTT 2:56–3:07 "by the time you find your unclaimed funds"; narration only, man unnamed |
+| 11-04-B1 | authority_report | H | PICK | abcnews.com video 137597689 (Oct 27, 2026), Whisper: 0:08–1:11 "we will defend this litigation vigorously" |
+| 11-04-B2 | victim_interview | V | MANUAL | TikTok @moreperfectunion 7350333548567596330; plan's four slices unchecked |
+| 11-04-B3 | victim_interview | H | PICK | LOCAL 12 page mp4 (Oct 27, 2022), Whisper: 0:20–0:54 "eight and a half" BUTT 1:10–1:58 "he says it's immoral" |
+| 11-04-B4 | victim_interview | H | PICK | WHIO page mp4 (Nov 23, 2022), Whisper: 0:59–1:43 "…on any particular week" BUTT 1:49–2:03 "not at the register" |
+| 11-04-C1 | authority_report | H | PICK | GMA PQORnk7zuLc bot-walled twice; Whisper on the abcnews.com copy (3:28 vs 3:29): 0:05–0:31 "Amazon's $139 a year prime" |
+| 11-04-C2 | first_person_rant | V | MANUAL | TikTok @paigeanne80 7698845156170042638; plan's slices unchecked |
+
+**Yield:** 8 PICK (1 LEGAL) / 4 MANUAL of 12. Verify pass, no search: every row was a show-plan HAVE with proposed in/out, and every reachable one verified.
+**Pattern:** a producer show plan with in/out points makes Phase 2 a verify pass. Its outcues held on 7 of 8 clips; one (A6, from CBS's own captions in chat) had drifted by up to 10 s per slice. Verify every plan timecode; don't copy it.
+**Process note:** news-site video carried the run again — FOX 13 (yt-dlp generic), LOCAL 12 (Sinclair VOD mp4 in page source), WHIO (CloudFront mp4) and abcnews.com (HLS in page source) all downloaded and ran through Whisper while YouTube audio was blocked. When a YouTube ID is bot-walled, look for the same piece on the network's own site (GMA → abcnews.com).
+**Process bug:** faster-whisper's `decode_audio` fails on this container's PyAV (`metadata_errors` kwarg). Pass a numpy array from `wave` instead of a path.
+**Process bug:** Whisper small.en returned clipped first lines (~25 chars) on the abcnews.com GMA file even with `condition_on_previous_text=False`; later lines were whole. Check the outcue line itself, not the first cues.

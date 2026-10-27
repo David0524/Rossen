@@ -1,0 +1,532 @@
+[
+ {
+  "beat_id": "11-04-A1",
+  "pass": 2,
+  "flagged": "https://www.tiktok.com/@financeunfolded/video/7023899798654782726",
+  "platform": "tiktok",
+  "title": "@financeunfolded unclaimed-money page",
+  "source_mix": {
+   "creator_short": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@financeunfolded/video/7023899798654782726",
+    "source_type": "creator_short",
+    "score": 70,
+    "tone": 6,
+    "authenticity": 8,
+    "quality": 7,
+    "fit": 7,
+    "segments": [],
+    "reasoning": "Native TikTok from the show plan; picture-only BROLL (music + on-screen text). Plan in/out 0:00-0:13, before the sign-off. Not watched; TikTok refuses requests from this container.",
+    "flags": [
+     "manual_lane",
+     "unverified"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "whether 0:00-0:13 ends before the follow-for-more sign-off"
+  ],
+  "transcript_rung": 3,
+  "transcript_key": null,
+  "orientation": "vertical",
+  "priority": 3,
+  "expected_segments": 1,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-A2",
+  "pass": 2,
+  "flagged": "https://www.tiktok.com/@pearlmania500/video/7220912200855178538",
+  "platform": "tiktok",
+  "title": "@pearlmania500 unclaimed property",
+  "source_mix": {
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@pearlmania500/video/7220912200855178538",
+    "source_type": "first_person",
+    "score": 78,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Native TikTok, Pearlman on camera; Ruby Tuesday 2002 line confirmed in Yahoo/AT&T coverage (Nov 2023). Plan in/out: 0:05-0:12 'A THING CALLED UNCLAIMED PROPERTY' BUTT 0:52-0:58 'ANYTHING ELSE COULD BE A SCAM' BUTT 1:56-2:15 'A JOB SHE DID TWO DECADES AGO' \u2014 not transcript-verified here.",
+    "flags": [
+     "manual_lane",
+     "unverified"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "all three plan outcues"
+  ],
+  "transcript_rung": 3,
+  "transcript_key": null,
+  "orientation": "vertical",
+  "priority": 2,
+  "expected_segments": 3,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-A3",
+  "pass": 2,
+  "flagged": "https://www.fox13news.com/news/elderly-florida-woman-collects-108k-unclaimed-funds-after-thinking-she-was-getting-scammed",
+  "platform": "news_web",
+  "title": "FOX 13 \u2014 Woman receives thousands in unclaimed funds",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.fox13news.com/news/elderly-florida-woman-collects-108k-unclaimed-funds-after-thinking-she-was-getting-scammed",
+    "source_type": "affiliate",
+    "score": 86,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:20",
+      "out": "0:31",
+      "outcue": "gives money away"
+     },
+     {
+      "in": "0:56",
+      "out": "1:22",
+      "outcue": "find out before I died"
+     },
+     {
+      "in": "1:35",
+      "out": "1:51",
+      "outcue": "best thing that ever happened to me"
+     }
+    ],
+    "reasoning": "Barbara on camera, three clean slices; the plan's outcues verify against Whisper on the FOX 13 page video. Package dated Sept 3, 2025.",
+    "flags": [
+     "date_on_air",
+     "whisper_nobody_vs_everybody"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "Whisper hears 'Everybody gives money away' at 0:29; plan says 'Nobody' \u2014 one listen"
+  ],
+  "transcript_rung": 2,
+  "transcript_key": "fox13_barbara",
+  "orientation": "horizontal",
+  "priority": 1,
+  "expected_segments": 3,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-A5",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=dbBueUfmuSI",
+  "platform": "youtube",
+  "title": "ABC7 Chicago I-Team \u2014 Illinois unclaimed property loophole",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=dbBueUfmuSI",
+    "source_type": "affiliate",
+    "score": 80,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:15",
+      "out": "0:25",
+      "outcue": "that I changed my name"
+     },
+     {
+      "in": "1:00",
+      "out": "1:20",
+      "outcue": "a loophole that they need to figure out"
+     }
+    ],
+    "reasoning": "Udvance on camera; both plan slices verify on YouTube captions. Story is Jan 28, 2025 (not Oct 2025). Second in-point lands on her 'they rightly admitted that it was my money'.",
+    "flags": [
+     "date_on_air"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [],
+  "transcript_rung": 1,
+  "transcript_key": "dbBueUfmuSI",
+  "orientation": "horizontal",
+  "priority": 2,
+  "expected_segments": 2,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-A6",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=80djyAsS-YE",
+  "platform": "youtube",
+  "title": "CBS Sacramento \u2014 Call Kurtis: $275K unclaimed",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=80djyAsS-YE",
+    "source_type": "affiliate",
+    "score": 82,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:12",
+      "out": "0:46",
+      "outcue": "to the state's unclaimed property program for safekeeping"
+     },
+     {
+      "in": "1:01",
+      "out": "1:15",
+      "outcue": "this is unconstitutional stealing"
+     },
+     {
+      "in": "2:32",
+      "out": "2:48",
+      "outcue": "that's a lot of nerve"
+     }
+    ],
+    "reasoning": "Plan timecodes drifted: its 0:52 out lands on 'website', its 1:21 out on the attorney intro, its 2:58 out on 'the state says it has six months'. Re-cut to verified sentence ends. Eugene calls it 'theft'/'stealing'; the state's answer (warning letters sent) sits at 2:56-3:05, outside the cut.",
+    "flags": [
+     "legal_unanswered_claim",
+     "date_on_air"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "whether Ann appears on camera"
+  ],
+  "transcript_rung": 1,
+  "transcript_key": "80djyAsS-YE",
+  "orientation": "horizontal",
+  "priority": 1,
+  "expected_segments": 3,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-A7",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=1Grj5UvPLwo",
+  "platform": "youtube",
+  "title": "CBS News California \u2014 unclaimed property",
+  "source_mix": {
+   "network": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=1Grj5UvPLwo",
+    "source_type": "network",
+    "score": 72,
+    "tone": 7,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 7,
+    "segments": [
+     {
+      "in": "2:09",
+      "out": "2:23",
+      "outcue": "for just $8,000"
+     },
+     {
+      "in": "2:56",
+      "out": "3:07",
+      "outcue": "by the time you find your unclaimed funds"
+     }
+    ],
+    "reasoning": "Both plan slices verify (snapped to sentence starts). Narration only: the Delaware man is never named or shown, so the beat is a policy beat.",
+    "flags": [
+     "no_person_on_camera"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "the man's name (not in the clip)"
+  ],
+  "transcript_rung": 1,
+  "transcript_key": "1Grj5UvPLwo",
+  "orientation": "horizontal",
+  "priority": 2,
+  "expected_segments": 2,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-B1",
+  "pass": 2,
+  "flagged": "https://abcnews.com/video/137597689/",
+  "platform": "news_web",
+  "title": "ABC News / GMA \u2014 Dollar General sued",
+  "source_mix": {
+   "network": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://abcnews.com/video/137597689/",
+    "source_type": "network",
+    "score": 84,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 9,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:08",
+      "out": "1:11",
+      "outcue": "we will defend this litigation vigorously"
+     }
+    ],
+    "reasoning": "Verifies on Whisper of the abcnews.com video (Oct 27, 2026, 1:31). Allegations and Dollar General's answer both inside the window.",
+    "flags": []
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [],
+  "transcript_rung": 2,
+  "transcript_key": "abc_gma_dg",
+  "orientation": "horizontal",
+  "priority": 1,
+  "expected_segments": 1,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-B2",
+  "pass": 2,
+  "flagged": "https://www.tiktok.com/@moreperfectunion/video/7350333548567596330",
+  "platform": "tiktok",
+  "title": "More Perfect Union \u2014 Dollar General",
+  "source_mix": {
+   "documentary": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@moreperfectunion/video/7350333548567596330",
+    "source_type": "documentary",
+    "score": 82,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [],
+    "reasoning": "Native TikTok from More Perfect Union; plan uses Lori's words only across four slices (1:46-2:29 BUTT 2:31-2:49 BUTT 3:04-3:23 BUTT 8:18-8:34). Not transcript-verified here.",
+    "flags": [
+     "manual_lane",
+     "unverified"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "all four plan outcues",
+   "whether narration bleeds into Lori's slices"
+  ],
+  "transcript_rung": 3,
+  "transcript_key": null,
+  "orientation": "vertical",
+  "priority": 1,
+  "expected_segments": 4,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-B3",
+  "pass": 2,
+  "flagged": "https://local12.com/news/local/local-dollar-general-customers-were-you-overcharged-for-your-items-overpriced-receipt-auditor-audit-county-butler-stores-retail-tombstone-pizza-diet-coke-lower-list-prices-complaint-dishonest-cincinnati-ohio",
+  "platform": "news_web",
+  "title": "LOCAL 12 \u2014 Dollar General customers overcharged",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://local12.com/news/local/local-dollar-general-customers-were-you-overcharged-for-your-items-overpriced-receipt-auditor-audit-county-butler-stores-retail-tombstone-pizza-diet-coke-lower-list-prices-complaint-dishonest-cincinnati-ohio",
+    "source_type": "affiliate",
+    "score": 84,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:20",
+      "out": "0:54",
+      "outcue": "eight and a half"
+     },
+     {
+      "in": "1:10",
+      "out": "1:58",
+      "outcue": "he says it's immoral"
+     }
+    ],
+    "reasoning": "Both plan slices verify on Whisper of the LOCAL 12 page video (Oct 27, 2022, 2:20). Optional: extend the out to 2:00 'that to me is like lying' (Anderson's own line). Dollar General 'hasn't returned our emails' (2:17) is outside the cut; no answer existed.",
+    "flags": [
+     "date_on_air"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [],
+  "transcript_rung": 2,
+  "transcript_key": "local12_anderson",
+  "orientation": "horizontal",
+  "priority": 2,
+  "expected_segments": 2,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-B4",
+  "pass": 2,
+  "flagged": "https://www.whio.com/news/local/i-team-former-dollar-general-employee-speaks-out-about-price-swapping-allegations/GJYUFBCY4NFHBLGLBCWOVLOEUQ/",
+  "platform": "news_web",
+  "title": "WHIO \u2014 former Dollar General employee speaks out",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.whio.com/news/local/i-team-former-dollar-general-employee-speaks-out-about-price-swapping-allegations/GJYUFBCY4NFHBLGLBCWOVLOEUQ/",
+    "source_type": "affiliate",
+    "score": 80,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 8,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:59",
+      "out": "1:43",
+      "outcue": "price changes that needed to be done on any particular week"
+     },
+     {
+      "in": "1:49",
+      "out": "2:03",
+      "outcue": "not at the register"
+     }
+    ],
+    "reasoning": "Both plan slices verify on Whisper of the WHIO page video (Nov 23, 2022, 2:47); first in snapped to 0:59 'Lynda Swank worked for Dollar General'. The manager is unnamed.",
+    "flags": [
+     "date_on_air"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [],
+  "transcript_rung": 2,
+  "transcript_key": "whio_swank",
+  "orientation": "horizontal",
+  "priority": 2,
+  "expected_segments": 2,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-C1",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=PQORnk7zuLc",
+  "platform": "youtube",
+  "title": "GMA \u2014 Walmart CEO unveils new membership offer",
+  "source_mix": {
+   "network": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=PQORnk7zuLc",
+    "source_type": "network",
+    "score": 78,
+    "tone": 7,
+    "authenticity": 9,
+    "quality": 9,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:05",
+      "out": "0:31",
+      "outcue": "Amazon's $139 a year prime"
+     }
+    ],
+    "reasoning": "YouTube captions bot-walled twice; verified on Whisper of the same GMA piece on abcnews.com (Oct 20, 2026, 3:28). YouTube copy is 3:29: timecodes may sit \u00b11 s; one look.",
+    "flags": [
+     "timecodes_from_abcnews_copy"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "exact offset between the YouTube and abcnews.com copies"
+  ],
+  "transcript_rung": 2,
+  "transcript_key": "gma_walmart_ceo",
+  "orientation": "horizontal",
+  "priority": 2,
+  "expected_segments": 1,
+  "verify_only": true
+ },
+ {
+  "beat_id": "11-04-C2",
+  "pass": 2,
+  "flagged": "https://www.tiktok.com/@paigeanne80/video/7698845156170042638",
+  "platform": "tiktok",
+  "title": "@paigeanne80 Sam's Club refund",
+  "source_mix": {
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@paigeanne80/video/7698845156170042638",
+    "source_type": "first_person",
+    "score": 70,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 6,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Native TikTok (0:26); plan 0:00-0:13 'PRO-RATED WALMART PLUS MEMBERSHIP' BUTT 0:20-0:26 'TAKE WHAT WE CAN GET IN THIS ECONOMY' not verified here. Surname and permission open.",
+    "flags": [
+     "manual_lane",
+     "unverified"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "plan outcues",
+   "Paige's surname; a Facebook 'Paige Boykin' Sam's-vs-Walmart video surfaced, unconfirmed as the same person"
+  ],
+  "transcript_rung": 3,
+  "transcript_key": null,
+  "orientation": "vertical",
+  "priority": 3,
+  "expected_segments": 2,
+  "verify_only": true
+ }
+]

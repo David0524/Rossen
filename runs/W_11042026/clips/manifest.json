@@ -1,0 +1,222 @@
+[
+ {
+  "beat_id": "11-04-A1",
+  "url": "https://www.tiktok.com/@financeunfolded/video/7023899798654782726",
+  "platform": "tiktok",
+  "title": "@financeunfolded unclaimed-money page",
+  "source_type": "creator_short",
+  "orientation": "vertical",
+  "segments": [],
+  "transcript_rung": 3,
+  "status": "MANUAL \u00b7 UNVERIFIED"
+ },
+ {
+  "beat_id": "11-04-A2",
+  "url": "https://www.tiktok.com/@pearlmania500/video/7220912200855178538",
+  "platform": "tiktok",
+  "title": "@pearlmania500 unclaimed property",
+  "source_type": "first_person",
+  "orientation": "vertical",
+  "segments": [],
+  "transcript_rung": 3,
+  "status": "MANUAL \u00b7 UNVERIFIED"
+ },
+ {
+  "beat_id": "11-04-A3",
+  "url": "https://www.fox13news.com/news/elderly-florida-woman-collects-108k-unclaimed-funds-after-thinking-she-was-getting-scammed",
+  "platform": "news_web",
+  "title": "FOX 13 \u2014 Woman receives thousands in unclaimed funds",
+  "source_type": "affiliate",
+  "orientation": "horizontal",
+  "segments": [
+   {
+    "in": "0:20",
+    "out": "0:31",
+    "outcue": "gives money away"
+   },
+   {
+    "in": "0:56",
+    "out": "1:22",
+    "outcue": "find out before I died"
+   },
+   {
+    "in": "1:35",
+    "out": "1:51",
+    "outcue": "best thing that ever happened to me"
+   }
+  ],
+  "transcript_rung": 2,
+  "status": "PICK"
+ },
+ {
+  "beat_id": "11-04-A5",
+  "url": "https://www.youtube.com/watch?v=dbBueUfmuSI",
+  "platform": "youtube",
+  "title": "ABC7 Chicago I-Team \u2014 Illinois unclaimed property loophole",
+  "source_type": "affiliate",
+  "orientation": "horizontal",
+  "segments": [
+   {
+    "in": "0:15",
+    "out": "0:25",
+    "outcue": "that I changed my name"
+   },
+   {
+    "in": "1:00",
+    "out": "1:20",
+    "outcue": "a loophole that they need to figure out"
+   }
+  ],
+  "transcript_rung": 1,
+  "status": "PICK"
+ },
+ {
+  "beat_id": "11-04-A6",
+  "url": "https://www.youtube.com/watch?v=80djyAsS-YE",
+  "platform": "youtube",
+  "title": "CBS Sacramento \u2014 Call Kurtis: $275K unclaimed",
+  "source_type": "affiliate",
+  "orientation": "horizontal",
+  "segments": [
+   {
+    "in": "0:12",
+    "out": "0:46",
+    "outcue": "to the state's unclaimed property program for safekeeping"
+   },
+   {
+    "in": "1:01",
+    "out": "1:15",
+    "outcue": "this is unconstitutional stealing"
+   },
+   {
+    "in": "2:32",
+    "out": "2:48",
+    "outcue": "that's a lot of nerve"
+   }
+  ],
+  "transcript_rung": 1,
+  "status": "PICK \u00b7 LEGAL"
+ },
+ {
+  "beat_id": "11-04-A7",
+  "url": "https://www.youtube.com/watch?v=1Grj5UvPLwo",
+  "platform": "youtube",
+  "title": "CBS News California \u2014 unclaimed property",
+  "source_type": "network",
+  "orientation": "horizontal",
+  "segments": [
+   {
+    "in": "2:09",
+    "out": "2:23",
+    "outcue": "for just $8,000"
+   },
+   {
+    "in": "2:56",
+    "out": "3:07",
+    "outcue": "by the time you find your unclaimed funds"
+   }
+  ],
+  "transcript_rung": 1,
+  "status": "PICK"
+ },
+ {
+  "beat_id": "11-04-B1",
+  "url": "https://abcnews.com/video/137597689/",
+  "platform": "news_web",
+  "title": "ABC News / GMA \u2014 Dollar General sued",
+  "source_type": "network",
+  "orientation": "horizontal",
+  "segments": [
+   {
+    "in": "0:08",
+    "out": "1:11",
+    "outcue": "we will defend this litigation vigorously"
+   }
+  ],
+  "transcript_rung": 2,
+  "status": "PICK"
+ },
+ {
+  "beat_id": "11-04-B2",
+  "url": "https://www.tiktok.com/@moreperfectunion/video/7350333548567596330",
+  "platform": "tiktok",
+  "title": "More Perfect Union \u2014 Dollar General",
+  "source_type": "documentary",
+  "orientation": "vertical",
+  "segments": [],
+  "transcript_rung": 3,
+  "status": "MANUAL \u00b7 UNVERIFIED"
+ },
+ {
+  "beat_id": "11-04-B3",
+  "url": "https://local12.com/news/local/local-dollar-general-customers-were-you-overcharged-for-your-items-overpriced-receipt-auditor-audit-county-butler-stores-retail-tombstone-pizza-diet-coke-lower-list-prices-complaint-dishonest-cincinnati-ohio",
+  "platform": "news_web",
+  "title": "LOCAL 12 \u2014 Dollar General customers overcharged",
+  "source_type": "affiliate",
+  "orientation": "horizontal",
+  "segments": [
+   {
+    "in": "0:20",
+    "out": "0:54",
+    "outcue": "eight and a half"
+   },
+   {
+    "in": "1:10",
+    "out": "1:58",
+    "outcue": "he says it's immoral"
+   }
+  ],
+  "transcript_rung": 2,
+  "status": "PICK"
+ },
+ {
+  "beat_id": "11-04-B4",
+  "url": "https://www.whio.com/news/local/i-team-former-dollar-general-employee-speaks-out-about-price-swapping-allegations/GJYUFBCY4NFHBLGLBCWOVLOEUQ/",
+  "platform": "news_web",
+  "title": "WHIO \u2014 former Dollar General employee speaks out",
+  "source_type": "affiliate",
+  "orientation": "horizontal",
+  "segments": [
+   {
+    "in": "0:59",
+    "out": "1:43",
+    "outcue": "price changes that needed to be done on any particular week"
+   },
+   {
+    "in": "1:49",
+    "out": "2:03",
+    "outcue": "not at the register"
+   }
+  ],
+  "transcript_rung": 2,
+  "status": "PICK"
+ },
+ {
+  "beat_id": "11-04-C1",
+  "url": "https://www.youtube.com/watch?v=PQORnk7zuLc",
+  "platform": "youtube",
+  "title": "GMA \u2014 Walmart CEO unveils new membership offer",
+  "source_type": "network",
+  "orientation": "horizontal",
+  "segments": [
+   {
+    "in": "0:05",
+    "out": "0:31",
+    "outcue": "Amazon's $139 a year prime"
+   }
+  ],
+  "transcript_rung": 2,
+  "status": "PICK"
+ },
+ {
+  "beat_id": "11-04-C2",
+  "url": "https://www.tiktok.com/@paigeanne80/video/7698845156170042638",
+  "platform": "tiktok",
+  "title": "@paigeanne80 Sam's Club refund",
+  "source_type": "first_person",
+  "orientation": "vertical",
+  "segments": [],
+  "transcript_rung": 3,
+  "status": "MANUAL \u00b7 UNVERIFIED"
+ }
+]

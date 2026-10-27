@@ -1,0 +1,442 @@
+[
+ {
+  "beat_id": "11-04-A1",
+  "segment_title": "THE STATE MAY BE HOLDING YOUR MONEY",
+  "orientation": "vertical",
+  "clip_role": "explainer_demo/creator_short",
+  "script_text": "You (the viewer): states hold an estimated $70 billion for about 1 in 7 Americans, and most never look. TikTok @financeunfolded, ~3M views: the government's own unclaimed-money page, 'usually between $0 - $1000'. Music and on-screen text only; Jeff talks over it.",
+  "news_anchor": "unclaimed money search TikTok government page",
+  "visual_spec": "vertical screen recording of an unclaimed-money search page, on-screen text, music bed",
+  "platforms": [
+   "tiktok",
+   "shorts"
+  ],
+  "offsite_likely": false,
+  "priority": 3,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "native TikTok in the show plan (@financeunfolded/video/7023899798654782726); manual lane",
+  "source_native": "tiktok",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "unclaimed money search TikTok government page"
+   ],
+   "victim": [],
+   "platform": [
+    "unclaimed money search tiktok government page"
+   ],
+   "anchor": [
+    "unclaimed money search TikTok government page"
+   ],
+   "shorts": [
+    "unclaimed money search tiktok government page #shorts"
+   ]
+  },
+  "have_url": "https://www.tiktok.com/@financeunfolded/video/7023899798654782726"
+ },
+ {
+  "beat_id": "11-04-A2",
+  "segment_title": "THE STATE MAY BE HOLDING YOUR MONEY",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "script_text": "Alex Pearlman, TikTok creator (Apr 2023), ~5M views: searching for his wife, he finds a paycheck from a Ruby Tuesday she worked at in 2002; that location gone 20 years.",
+  "news_anchor": "Alex Pearlman unclaimed property Ruby Tuesday TikTok",
+  "visual_spec": "creator talking to his phone camera, vertical, home setting",
+  "platforms": [
+   "tiktok",
+   "shorts"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 3,
+  "sourcability": "high",
+  "sourcability_note": "native TikTok (@pearlmania500/video/7220912200855178538); Yahoo/AT&T coverage Nov 2023 confirms the Ruby Tuesday line; manual lane",
+  "source_native": "tiktok",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "Alex Pearlman unclaimed property Ruby Tuesday TikTok"
+   ],
+   "victim": [],
+   "platform": [
+    "alex pearlman unclaimed property ruby tuesday tiktok"
+   ],
+   "anchor": [
+    "Alex Pearlman unclaimed property Ruby Tuesday TikTok"
+   ],
+   "shorts": [
+    "alex pearlman unclaimed property ruby tuesday tiktok #shorts"
+   ]
+  },
+  "have_url": "https://www.tiktok.com/@pearlmania500/video/7220912200855178538"
+ },
+ {
+  "beat_id": "11-04-A3",
+  "segment_title": "THE STATE MAY BE HOLDING YOUR MONEY",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "script_text": "Barbara, 88, Bradenton FL: sure the letters were a scam, she called police; elder fraud detective found the real letter from Florida DFS, $108,000. FOX 13 Tampa Bay.",
+  "news_anchor": "88-year-old Bradenton woman $108,000 unclaimed funds FOX 13",
+  "visual_spec": "older woman at home, local news interview, FOX 13 lower-third",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 3,
+  "sourcability": "high",
+  "sourcability_note": "FOX 13 page video reachable (yt-dlp generic extractor), 2:43, Sept 3 2025",
+  "source_native": "none",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "88-year-old Bradenton woman $108,000 unclaimed funds FOX 13"
+   ],
+   "victim": [],
+   "platform": [
+    "88-year-old bradenton woman $108,000 unclaimed funds fox 13"
+   ],
+   "anchor": [
+    "88-year-old Bradenton woman $108,000 unclaimed funds FOX 13"
+   ],
+   "shorts": [
+    "88-year-old bradenton woman $108,000 unclaimed funds fox 13 #shorts"
+   ]
+  },
+  "have_url": "https://www.fox13news.com/news/elderly-florida-woman-collects-108k-unclaimed-funds-after-thinking-she-was-getting-scammed"
+ },
+ {
+  "beat_id": "11-04-A5",
+  "segment_title": "THE STATE MAY BE HOLDING YOUR MONEY",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "script_text": "Susan Udvance, Illinois: found $19,379 of her own escrow money on Illinois' site; the state wants signatures from two defunct companies. ABC7 Chicago I-Team.",
+  "news_anchor": "Illinois unclaimed property loophole $19K escrow ABC7 I-Team",
+  "visual_spec": "woman interviewed by I-Team, paperwork, ABC7 Chicago lower-third",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "ABC7 Chicago YouTube dbBueUfmuSI, captions fetched; story dated Jan 28 2025",
+  "source_native": "none",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "Illinois unclaimed property loophole $19K escrow ABC7 I-Team"
+   ],
+   "victim": [],
+   "platform": [
+    "illinois unclaimed property loophole $19k escrow abc7 i-team"
+   ],
+   "anchor": [
+    "Illinois unclaimed property loophole $19K escrow ABC7 I-Team"
+   ],
+   "shorts": [
+    "illinois unclaimed property loophole $19k escrow abc7 i-team #shorts"
+   ]
+  },
+  "have_url": "https://www.youtube.com/watch?v=dbBueUfmuSI"
+ },
+ {
+  "beat_id": "11-04-A6",
+  "segment_title": "THE STATE MAY BE HOLDING YOUR MONEY",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "script_text": "Eugene and Ann Breznock, California: same house 30 years; California took $275,000 in Schwab investments after three untouched years. CBS Sacramento Call Kurtis.",
+  "news_anchor": "Breznock $275,000 California unclaimed property Schwab CBS Sacramento",
+  "visual_spec": "retired couple at home, CBS13 investigative lower-third",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 3,
+  "sourcability": "high",
+  "sourcability_note": "CBS Sacramento YouTube 80djyAsS-YE, captions fetched",
+  "source_native": "none",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "Breznock $275,000 California unclaimed property Schwab CBS Sacramento"
+   ],
+   "victim": [],
+   "platform": [
+    "breznock $275,000 california unclaimed property schwab cbs sacramento"
+   ],
+   "anchor": [
+    "Breznock $275,000 California unclaimed property Schwab CBS Sacramento"
+   ],
+   "shorts": [
+    "breznock $275,000 california unclaimed property schwab cbs sacramento #shorts"
+   ]
+  },
+  "have_url": "https://www.youtube.com/watch?v=80djyAsS-YE"
+ },
+ {
+  "beat_id": "11-04-A7",
+  "segment_title": "THE STATE MAY BE HOLDING YOUR MONEY",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "script_text": "Delaware allegedly sold a man's Amazon stock for $8,000 years before it was worth more than $100,000; California must sell unclaimed stock within 20 months. CBS News California investigation (Julie Watts).",
+  "news_anchor": "Delaware sold Amazon stock unclaimed property $8,000 CBS News California",
+  "visual_spec": "network investigative package, graphics and lawmakers, no victim on camera",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "CBS News California YouTube 1Grj5UvPLwo, captions fetched; the Delaware man is narrated only, never named or on camera",
+  "source_native": "none",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "Delaware sold Amazon stock unclaimed property $8,000 CBS News California"
+   ],
+   "victim": [],
+   "platform": [
+    "delaware sold amazon stock unclaimed property $8,000 cbs news california"
+   ],
+   "anchor": [
+    "Delaware sold Amazon stock unclaimed property $8,000 CBS News California"
+   ],
+   "shorts": [
+    "delaware sold amazon stock unclaimed property $8,000 cbs news california #shorts"
+   ]
+  },
+  "have_url": "https://www.youtube.com/watch?v=1Grj5UvPLwo"
+ },
+ {
+  "beat_id": "11-04-B1",
+  "segment_title": "DOLLAR GENERAL SUED OVER SHELF VS. REGISTER PRICES",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "script_text": "FTC and 20 states sue Dollar General (Oct 27, 2026): charged more at the register than the shelf for years; trail mix $2.75 on the shelf, $5 at checkout. ABC News / GMA, Elizabeth Schulz.",
+  "news_anchor": "FTC 20 states sue Dollar General overcharging register shelf price",
+  "visual_spec": "network correspondent package, Dollar General storefronts, GMA",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "abcnews.com video 137597689 (HLS reachable), 1:31, Oct 27 2026",
+  "source_native": "none",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "FTC 20 states sue Dollar General overcharging register shelf price"
+   ],
+   "victim": [],
+   "platform": [
+    "ftc 20 states sue dollar general overcharging register shelf price"
+   ],
+   "anchor": [
+    "FTC 20 states sue Dollar General overcharging register shelf price"
+   ],
+   "shorts": [
+    "ftc 20 states sue dollar general overcharging register shelf price #shorts"
+   ]
+  },
+  "have_url": "https://abcnews.com/video/137597689/"
+ },
+ {
+  "beat_id": "11-04-B2",
+  "segment_title": "DOLLAR GENERAL SUED OVER SHELF VS. REGISTER PRICES",
+  "orientation": "vertical",
+  "clip_role": "victim_interview",
+  "script_text": "Lori Hartline, Oklahoma shopper (Mar 2024): kitty litter tagged $8.95 rang up $10 week after week; Dollar General's answer was a $10 gift card. More Perfect Union.",
+  "news_anchor": "Dollar General overcharging More Perfect Union Lori Hartline",
+  "visual_spec": "vertical documentary interview with an Oklahoma shopper, More Perfect Union",
+  "platforms": [
+   "tiktok",
+   "shorts"
+  ],
+  "offsite_likely": false,
+  "priority": 1,
+  "expected_segments": 4,
+  "sourcability": "high",
+  "sourcability_note": "native TikTok (@moreperfectunion/video/7350333548567596330); manual lane",
+  "source_native": "tiktok",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "Dollar General overcharging More Perfect Union Lori Hartline"
+   ],
+   "victim": [],
+   "platform": [
+    "dollar general overcharging more perfect union lori hartline"
+   ],
+   "anchor": [
+    "Dollar General overcharging More Perfect Union Lori Hartline"
+   ],
+   "shorts": [
+    "dollar general overcharging more perfect union lori hartline #shorts"
+   ]
+  },
+  "have_url": "https://www.tiktok.com/@moreperfectunion/video/7350333548567596330"
+ },
+ {
+  "beat_id": "11-04-B3",
+  "segment_title": "DOLLAR GENERAL SUED OVER SHELF VS. REGISTER PRICES",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "script_text": "William Anderson, Butler County OH (Oct 2022): took his receipts to the auditor; all 20 Dollar General stores failed; creamer $2 rang up $4.35. LOCAL 12 Cincinnati.",
+  "news_anchor": "Butler County auditor Dollar General 20 stores overcharge LOCAL 12",
+  "visual_spec": "older man interviewed, receipts, LOCAL 12 lower-third, store exteriors",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "LOCAL 12 page mp4 (Sinclair VOD) reachable, 2:20, Oct 27 2022",
+  "source_native": "none",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "Butler County auditor Dollar General 20 stores overcharge LOCAL 12"
+   ],
+   "victim": [],
+   "platform": [
+    "butler county auditor dollar general 20 stores overcharge local 12"
+   ],
+   "anchor": [
+    "Butler County auditor Dollar General 20 stores overcharge LOCAL 12"
+   ],
+   "shorts": [
+    "butler county auditor dollar general 20 stores overcharge local 12 #shorts"
+   ]
+  },
+  "have_url": "https://local12.com/news/local/local-dollar-general-customers-were-you-overcharged-for-your-items-overpriced-receipt-auditor-audit-county-butler-stores-retail-tombstone-pizza-diet-coke-lower-list-prices-complaint-dishonest-cincinnati-ohio"
+ },
+ {
+  "beat_id": "11-04-B4",
+  "segment_title": "DOLLAR GENERAL SUED OVER SHELF VS. REGISTER PRICES",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "script_text": "Lynda Swank, former Dollar General employee (Nov 2022): a manager told her they weren't allowed to fix prices at the register. WHIO Dayton I-Team.",
+  "news_anchor": "former Dollar General employee price changes WHIO I-Team Montgomery County",
+  "visual_spec": "former employee interviewed, WHIO News Center 7 lower-third",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "WHIO page mp4 (CloudFront) reachable, 2:47, Nov 23 2022",
+  "source_native": "none",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "former Dollar General employee price changes WHIO I-Team Montgomery County"
+   ],
+   "victim": [],
+   "platform": [
+    "former dollar general employee price changes whio i-team montgomery county"
+   ],
+   "anchor": [
+    "former Dollar General employee price changes WHIO I-Team Montgomery County"
+   ],
+   "shorts": [
+    "former dollar general employee price changes whio i-team montgomery county #shorts"
+   ]
+  },
+  "have_url": "https://www.whio.com/news/local/i-team-former-dollar-general-employee-speaks-out-about-price-swapping-allegations/GJYUFBCY4NFHBLGLBCWOVLOEUQ/"
+ },
+ {
+  "beat_id": "11-04-C1",
+  "segment_title": "PERKS YOU'RE PAYING FOR",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "script_text": "Walmart's CEO on GMA (Oct 20, 2026): Walmart+ and Sam's Club Plus now come together for $120 a year, cheaper than Amazon's $139 Prime.",
+  "news_anchor": "Walmart CEO Walmart+ Sam's Club $120 membership bundle GMA",
+  "visual_spec": "CEO interview in the GMA studio",
+  "platforms": [
+   "youtube",
+   "shorts",
+   "news_web"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "YouTube PQORnk7zuLc bot-walled twice; the same GMA piece is on abcnews.com (HLS reachable), 3:28",
+  "source_native": "none",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "Walmart CEO Walmart+ Sam's Club $120 membership bundle GMA"
+   ],
+   "victim": [],
+   "platform": [
+    "walmart ceo walmart+ sam's club $120 membership bundle gma"
+   ],
+   "anchor": [
+    "Walmart CEO Walmart+ Sam's Club $120 membership bundle GMA"
+   ],
+   "shorts": [
+    "walmart ceo walmart+ sam's club $120 membership bundle gma #shorts"
+   ]
+  },
+  "have_url": "https://www.youtube.com/watch?v=PQORnk7zuLc"
+ },
+ {
+  "beat_id": "11-04-C2",
+  "segment_title": "PERKS YOU'RE PAYING FOR",
+  "orientation": "vertical",
+  "clip_role": "first_person_rant",
+  "script_text": "Paige, Sam's Club shopper (Oct 2026): linked her accounts and got a prorated Walmart+ refund, $14.29: 'take what we can get in this economy'.",
+  "news_anchor": "Sam's Club Plus Walmart+ prorated refund TikTok",
+  "visual_spec": "shopper talking to her phone camera, vertical",
+  "platforms": [
+   "tiktok",
+   "shorts"
+  ],
+  "offsite_likely": false,
+  "priority": 3,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "native TikTok (@paigeanne80/video/7698845156170042638); manual lane",
+  "source_native": "tiktok",
+  "episode": "11-04",
+  "queries": {
+   "news": [
+    "Sam's Club Plus Walmart+ prorated refund TikTok"
+   ],
+   "victim": [],
+   "platform": [
+    "sam's club plus walmart+ prorated refund tiktok"
+   ],
+   "anchor": [
+    "Sam's Club Plus Walmart+ prorated refund TikTok"
+   ],
+   "shorts": [
+    "sam's club plus walmart+ prorated refund tiktok #shorts"
+   ]
+  },
+  "have_url": "https://www.tiktok.com/@paigeanne80/video/7698845156170042638"
+ }
+]
