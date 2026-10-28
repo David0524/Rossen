@@ -9,6 +9,22 @@ Quality beats count: **never pad the slate with a story that fails.** If fewer
 than ten pass after the full search, deliver the ones that passed, say how many
 fell short, and list what would get the near-misses over the line.
 
+## Two tracks: scam and consumer news (added Oct 28, 2026)
+
+Jeff: "I am here to save you money and protect you from the big companies, from
+retailers, but sometimes from yourself." About half the channel's lead stories
+are the second half of that sentence, with no scammer in them. Before grading,
+put every candidate on one track and say which on its card (`Track: SCAM` or
+`Track: CONSUMER`):
+
+- **Scam track:** a scammer, thief or con artist is the villain. Everything
+  below, unchanged.
+- **Consumer track:** no scammer. A company, store, platform or rule does
+  something to the viewer. Same gates and score, with the changes in
+  **The consumer track** further down.
+
+A story with both (a store's policy that scammers exploit) goes on the scam track.
+
 ## Hard gates (all must pass)
 
 | Gate | Passes when |
@@ -40,7 +56,71 @@ user overrule a cut.
 - **A-caliber** at **10 or more with a Fear beat of 2.** The weekly slate should
   be mostly A-caliber; a story under that is labelled `B/C only`.
 - Show the score on every card as the seven numbers, so the user can see why.
+- Consumer-track stories use Stakes instead of Fear, and their own track-record
+  lanes (see **The consumer track** below).
 - **Tie-break (soft, from round 1):** at equal scores, prefer a scam or con the viewer can be tricked into over street theft ("I don't love these blue collar crime ones but it's okay"). Street-theft stories still pitch; they just don't lead the slate. Revisit after round 2.
+
+## The consumer track
+
+From the archive (all 149 livestreams by lead topic, Oct 28, 2026; detail in
+`performance-map.md`, "Consumer-news lanes"). Consumer news wins when it is told
+like a scam story with a company as the villain:
+- **The company does something to you.** It bans you, arrests you, watches you
+  or charges you twice.
+- **The consequence is stated.**
+- **It's something the viewer uses every day.**
+- **The viewer can check it right now.**
+
+The hits:
+- Apps spying on you, 1.9M
+- Tip screens and receipt fees, 1.2M
+- Self-checkout arrests, 1.0M and 701K
+- Amazon Keep-It "trap," 889K
+- TV spying, 659K
+- Electric bill, 489K
+- Amazon returns ban, 443K
+
+The misses: lawsuit headlines, payouts, "secrets" with no threat, travel and health.
+- Uber sued, 11K
+- Medical claim denied, 9K
+- Disney money traps, 7.5K
+- Hidden hotel fees, 30K
+- Amazon "secret file," 43K
+- Red-light fines erased, 74K
+
+**Gates that change on the consumer track** (H2, H4, H5 and H6 are unchanged,
+and a clip is still required):
+
+| Gate | Passes when |
+|---|---|
+| **H1 Villain and target (consumer)** | A company, store, platform or rule does something to the viewer's money, privacy or rights that they don't know about, through something they use every day (phone, TV, card, car, bills, the grocery store, returns, the pharmacy counter). The 55+ viewer is the one affected. **Fails:** perks and freebies, curiosity, deals and price comparisons (Friday deals slot only), travel-only stories, and a lawsuit or ruling about someone else. Same niche test as the scam track. |
+| **H3 A real case (consumer)** | At least one documented person affected (a named outlet, court or agency), **or** an official action in the last 12 months: a regulator, a ruling, a law taking effect, or the company's own published policy or announcement. |
+
+**Score changes on the consumer track:**
+
+| | 2 | 1 | 0 |
+|---|---|---|---|
+| **Stakes** (replaces Fear) | The company can ban, arrest, track or double-charge you, and the consequence is stated | You're overpaying or missing money you're owed | A perk, a hack or curiosity |
+| **Track record** | Consumer lane at 1.5× or better: company watching you (2.0×); ban or arrest titles (2.3× and up) | 0.8× to 1.5×: overcharging, service tips, grocery | Under 0.8×: travel, health, deals, lawsuit and payout headlines |
+
+Heat, Breadth, Peg, Newness and Producibility score the same as the scam track.
+The pitch threshold is the same (9 or more, Heat at least 1).
+
+**Slotting:**
+- A consumer story is labelled `B/C` by default.
+- It is labelled `A-caliber (consumer)` only at 10 or more with Stakes 2, and it
+  must pass the lead test to be recommended as a lead.
+- **Jeff's rule (Sep 28): an A "has to be a scam."** The archive shows
+  consumer-villain leads doing well (apps spying, self-checkout arrests,
+  Keep-It, returns ban), so don't drop them. Put a consumer A-caliber story on
+  the slate as an A option with a `JEFF'S CALL: not a scam` flag, and let him
+  rule. Log his answer here.
+
+**Packaging, consumer track:**
+- Frame the company doing it to you: TRAP, BAN, ARREST, SPYING, "What They're Hiding."
+- Never frame it as a deal, a fee explainer or a lawsuit headline.
+- Don't call a non-scam a "scam" in the title. Tipping did and it worked, but
+  it's a credibility risk.
 
 ## The lead test (for anything recommended as F1 lead or F2 A)
 

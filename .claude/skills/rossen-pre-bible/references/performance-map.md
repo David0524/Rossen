@@ -68,3 +68,22 @@ The channel's most-used themes (Amazon, prices, deals) are its weakest. The
 themes where the viewer's money, mail or freedom is at risk are its strongest.
 "Phone & calls" as a title-word theme runs low even though the phone *scam*
 category runs 1.7×: the winners there are framed on the threat, not the device.
+
+## Consumer-news lanes (lead topic, all 149 livestreams, Oct 28, 2026)
+
+Added for the consumer track in `quality-gate.md`.
+- **Source:** the Live tab pulled Oct 28 with YouTube's approximate upload month. Lift = views ÷ the median of the same approximate month.
+- **Classification:** by lead topic from the title. Shows whose title misleads were corrected from the 62 transcripts: tipping and self-checkout are consumer stories, not scammer stories.
+- **Excluded:** the "5 Walmart / 3 Costco / 4 Amazon Scams" roundups, which predate the transcripts.
+- **Caveats:** months are approximate and the oldest bucket runs high. These are whole-show numbers; a consumer B inside a scam show can't be measured until the retention data arrives.
+
+| Lane | Shows | Median lift | Hits | Misses |
+|---|---|---|---|---|
+| Company watching you (apps, TV, stores, car, devices) | 17 | 2.0× | Apps spying 1.9M; TV spying 659K; smart device photos 464K; stores spying 269K | Amazon "secret file" 43K; "one question Amazon won't answer" 33K |
+| Scammer scams (scam track) | 49 | 1.3× | Debit card 2.8M; tap to pay 1.6M; envelope 1.1M | — |
+| A rule that bans, arrests or charges you | 10 | 1.1× (ban and arrest titles 2.3×–22×) | Self-checkout arrests 1.0M / 701K; Amazon returns ban 443K; Amazon will ban you 142K | Uber sued 11K; medical claim denied 9K; catching shoplifters 35K |
+| Service, hacks, freebies, "who really makes" | 19 | 0.8× | Great Value maker 120K; Walmart workers tell all 138K | Marshalls price tags 11K; "As Seen on TV" 14K |
+| "They're overcharging you" | 27 | 0.8× | Tipping 1.2M; Keep-It trap 889K; electric bill 489K; Kirkland 447K; food ripoff 371K | Hidden hotel fees 30K; Instacart pricing 23K; Disney traps 7.5K |
+| Deals roundups | 21 | 0.55× | Costco discontinuing 327K | Weekly Amazon deals, 9K–27K |
+
+The full show list is in the run folder that built it (`runs/W_11042026/live_streams_2026-10-28.txt`, `consumer_news_archive.md`).

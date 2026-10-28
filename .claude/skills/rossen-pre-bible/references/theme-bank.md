@@ -74,6 +74,30 @@ tab first.
 
 - `family_death`: funeral, obituary and estate scams. David, Oct 25: "Too niche. Our audience is [only] relating to this one … if they had a recent death."
 
+## Consumer-news themes (consumer track, added Oct 28, 2026)
+
+No scammer; a company, store or rule does it to the viewer. Grade these on the
+consumer track in `quality-gate.md`. Lifts are from `performance-map.md`.
+
+### `company_watching` — the company is watching you
+- **Threatens:** privacy through the phone, TV, car, store and smart devices.
+- **Record:** 2.0× (17 shows). Apps spying 1.9M; TV 659K; smart device photos 464K.
+- **Already aired:** TV (Dec 2025, Jul 17, Oct 21); stores spying (Jan); car spying (Jan); doorbell settings (Mar); shopping-cart tracking (Oct 7); Alexa recording (Jul 17).
+- **Search directions:** robot vacuums and home maps; hearing aids and health apps; smart meters; retail facial recognition, if the viewer is the one flagged.
+
+### `rules_ban` — a store or company rule that bans, arrests or charges you
+- **Threatens:** being refused, banned, accused or charged at a place you shop.
+- **Record:** ban and arrest titles 2.3× to 22×; self-checkout arrests 1.0M; Amazon returns ban 443K.
+- **Already aired:** self-checkout (Jan, Jul 1, Sep 29 video); Amazon return bans (Nov 2025, Mar 20, Apr 24 Keep-It).
+- **Search directions:** return tracking at walk-in stores (The Retail Equation reports); receipt checks at the door; account closures at banks and payment apps; holiday return-policy changes.
+
+### `bills` — a bill everyone pays
+- **Threatens:** the monthly money: electric, phone, insurance, subscriptions.
+- **Record:** electric bill 489K (4.2×).
+- **Search directions:** winter heating and budget billing; carrier promo-credit bills; subscription auto-renew at year end.
+
+Not consumer-track material (off the list or weak): deals and price comparisons (Friday deals slot only); travel-only stories (0.1×–0.7×); lawsuits and payouts.
+
 ## Weak lanes (B, C or Friday only)
 
 Retail and brands (0.9×), Amazon policy (0.9×), travel and dining (0.7×), deals

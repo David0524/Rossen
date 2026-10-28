@@ -86,6 +86,10 @@ def check(md):
             err(f"{tag}: no '**Status:**' line (READY / NEEDS ... / RETURNING THEME / RE-PITCH).")
         if not re.search(r"\*\*Score:\*\*\s*\d+\s*/\s*14", body):
             err(f"{tag}: no '**Score:** N/14' with the seven numbers from quality-gate.md.")
+        if not re.search(r"\*\*Track:\*\*\s*(SCAM|CONSUMER)", body):
+            warn(f"{tag}: no '**Track:** SCAM' or '**Track:** CONSUMER' on the status line (quality-gate.md, two tracks).")
+        if re.search(r"\*\*Track:\*\*\s*CONSUMER", body) and not re.search(r"Stakes\s*\d", body):
+            warn(f"{tag}: consumer-track card should score Stakes, not Fear.")
         if not re.search(r"Lead test", body, re.I):
             warn(f"{tag}: no lead-test result on the status line.")
         if not re.search(r"\*\*Built on:\*\*", body):

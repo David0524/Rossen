@@ -102,6 +102,10 @@ Pick at least **six themes** from `theme-bank.md` for every run, with this mix:
   fear test).
 - **At most one** from the weak lanes (retail, Amazon policy, deals, travel,
   health), and only for a B or C or the Friday deals slot.
+- **One consumer-news theme** (`company_watching`, `rules_ban`, `bills` in
+  `theme-bank.md`), graded on the consumer track in `quality-gate.md`. Added
+  Oct 28, 2026: the weekly slate had become all scams, but about half the
+  channel's leads are consumer news.
 
 Rotate: don't open with the same theme two weeks running, and don't let two A
 options share a theme.

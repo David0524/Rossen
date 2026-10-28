@@ -1,6 +1,6 @@
 # N. <STORY HEADLINE IN CAPS>
 
-**Status:** <READY | NEEDS A CLIP | NEEDS A CASE | RETURNING THEME, last aired <date> | RE-PITCH, first pitched <date>> · **Score:** <total>/14 (Fear <n>, Heat <n>, Track record <n>, Breadth <n>, Peg <n>, Newness <n>, Producibility <n>) · **Lead test:** passes <n> of 3
+**Status:** <READY | NEEDS A CLIP | NEEDS A CASE | RETURNING THEME, last aired <date> | RE-PITCH, first pitched <date>> · **Track:** <SCAM | CONSUMER> · **Score:** <total>/14 (<Fear | Stakes> <n>, Heat <n>, Track record <n>, Breadth <n>, Peg <n>, Newness <n>, Producibility <n>) · **Lead test:** passes <n> of 3
 
 ### POTENTIAL PACKAGING
 

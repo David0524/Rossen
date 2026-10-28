@@ -9,6 +9,15 @@ Adjustments made from the log go under "Changes" with the date and the reason.
 
 ## Changes
 
+**2026-10-28, consumer track** (David: "the pre-bible skill is designed around grainy scam stories, but Jeff does cover other consumer news"; approved the change the same day):
+- Added a consumer-news track to `quality-gate.md`.
+  - H1 accepts a company, store or rule as the villain.
+  - H3 accepts an official action as the case.
+  - Stakes replaces Fear.
+  - Track record uses the consumer lanes from all 149 livestreams (`performance-map.md`).
+- Consumer stories are B/C by default. A consumer A-caliber story is pitched as an A option flagged `JEFF'S CALL: not a scam`, since Jeff's Sep 28 rule says an A has to be a scam. Log his ruling here.
+- `story-search.md` breadth quota now includes one consumer-news theme; `theme-bank.md` gains `company_watching`, `rules_ban`, `bills`.
+
 **2026-10-25, after round 1** (David's verdicts below):
 - H4 now runs on fresh coverage: Step 0 asks what aired *and* what was filmed since the newest transcript. Three of eight stories failed on this alone (gift cards, card declined, the house story).
 - Same scam with a segment inside six months is covered, even with new cases (gift cards had a segment Jul 29).

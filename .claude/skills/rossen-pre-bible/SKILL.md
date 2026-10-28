@@ -15,7 +15,7 @@ page can be handed straight to it.
 |---|---|
 | `references/producer-kit/jeff-and-ryan-rules.md` | **Load every run.** Jeff's A-story rules, Ryan's rubric, the audience data, the team's pitch workflow. From the producer kit; outranks this file where they differ. |
 | `references/ranking.md` | Ranking, the sexy beat, confidence, viral flags. **Load every run.** |
-| `references/quality-gate.md` | **Load every Step 1 run.** Hard gates, the 14-point score, the pitch threshold, asking for verdicts. |
+| `references/quality-gate.md` | **Load every Step 1 run.** Hard gates, the 14-point score, the pitch threshold, asking for verdicts. Two tracks: scam and consumer news (Oct 28, 2026). |
 | `references/calibration-log.md` | Step 1, before scoring: the user's past verdicts and the adjustments made from them. |
 | `references/story-search.md` | **Load every Step 1 run, before searching.** How candidates are found: theme-first, fear-forward, the peg ladder, anti-repeat, breadth quota, what's off the list. |
 | `references/performance-map.md` | Choosing themes and breaking ties. Which categories and themes beat a typical show, from all 148 live shows. |
@@ -94,8 +94,10 @@ This skill is three steps and **the gates are not optional**.
 MyChart phishing email is one case in a phishing story, not the story), search
 across time rather than only this month, peg to recent news *or* the season *or*
 proof it's still happening, push every candidate to its fear version, and check
-what's already been pitched so last week's passes don't come back. Every
-candidate must pass `references/quality-gate.md` before it's shown; keep
+what's already been pitched so last week's passes don't come back. Put every
+candidate on a track first: **scam** (a scammer is the villain) or **consumer**
+(no scammer; a company, store or rule does it to the viewer). Grade it on that
+track. Every candidate must pass `references/quality-gate.md` before it's shown; keep
 searching new themes until 10 to 12 pass or the themes run out, and never pad.
 Then rank them and present the shortlist *as a message*, not a file, with each
 story's seven-number score, and a cut list of what failed and why. For each: headline, the sexy beat, proposed
@@ -106,6 +108,8 @@ mostly A-caliber, with a recommended F1 lead and F2 A** (Jeff: "Kyle & David
 need to provide more options each week"). End by asking the user to mark each
 story Pitch or Don't pitch, and log the answers (`quality-gate.md`). Each A must be a scam with a villain, broad enough for the whole
 audience, and big enough to carry the show; state the one-line viewer advice.
+A consumer story that reaches A-caliber goes on the slate as an A option flagged
+`JEFF'S CALL: not a scam`, so Jeff rules on it (`quality-gate.md`, the consumer track).
 Frame each pitch as broadly as its cases, and lead with a victim who actually
 lost money (Ryan's Oct 8 notes, `producer-kit/jeff-and-ryan-rules.md`).
 Test every scam pitch two ways and say so when either is weak: **audience fit**

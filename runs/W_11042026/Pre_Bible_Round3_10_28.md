@@ -18,7 +18,7 @@ Prepared Oct 28 · F1 Oct 30, F2 Nov 4 · 13 pass the gate · Replaces the Oct 2
 | 10 | **THE BITCOIN MACHINE AT YOUR GAS STATION** · 11/14 · re-pitch | If Someone Sends You to THIS Machine — HANG UP | 140K, https://youtu.be/sCC3Qx4AzoE |
 | 11 | **"YOU WON!" — THE PRIZE CALL THAT COST $25,000** · 11/14 · B/C | "You WON!" — THIS Prize Call Cost $25,000 | 124K, https://youtu.be/bn8_0tHSAgU |
 | 12 | **THE RENTAL CAR DAMAGE THAT WASN'T THERE** · 11/14 · B/C | Returned the Rental Spotless — THEN Came THIS Bill | 647K, https://youtu.be/1_wUVS5szfw |
-| 13 | **YOUR CONTRACTOR WENT BANKRUPT WITH YOUR DEPOSIT** · 10/14 · B/C | They Took Her $122,000 — Then Filed for BANKRUPTCY | 348K, https://youtu.be/yw43Ah_b5UQ |
+| 13 | **YOUR CONTRACTOR WENT BANKRUPT WITH YOUR DEPOSIT** · 9/14 consumer · B/C | They Took Her $122,000 — Then Filed for BANKRUPTCY | 348K, https://youtu.be/yw43Ah_b5UQ |
 
 **HOW THESE WERE BUILT:** 75-day heat scan, then 11 themes across month, year and all-time windows; about 70 candidates checked. New themes: #1, #2, #5, #8. Re-pitches: #3, #10.
 
@@ -26,7 +26,7 @@ Prepared Oct 28 · F1 Oct 30, F2 Nov 4 · 13 pass the gate · Replaces the Oct 2
 
 # 1. SOMEONE ELSE IS STILL WATCHING YOUR CAMERAS
 
-**Status:** READY · **Score:** 13/14 (Fear 2, Heat 2, Track record 2, Breadth 2, Peg 2, Newness 1, Producibility 2) · **Lead test:** passes 2 of 3 (stop-and-check, title)
+**Status:** READY · **Track:** SCAM · **Score:** 13/14 (Fear 2, Heat 2, Track record 2, Breadth 2, Peg 2, Newness 1, Producibility 2) · **Lead test:** passes 2 of 3 (stop-and-check, title)
 
 ### POTENTIAL PACKAGING
 
@@ -68,7 +68,7 @@ The transcripts (Mar 18 to Sep 29, 9+ phrasings) have only a four-line mention o
 
 # 2. THE $2 CHARGE THAT EMPTIES YOUR CARD
 
-**Status:** READY · **Score:** 11/14 (Fear 2, Heat 1, Track record 2, Breadth 2, Peg 1, Newness 1, Producibility 2) · **Lead test:** passes 2 of 3 (stop-and-check, title)
+**Status:** READY · **Track:** SCAM · **Score:** 11/14 (Fear 2, Heat 1, Track record 2, Breadth 2, Peg 1, Newness 1, Producibility 2) · **Lead test:** passes 2 of 3 (stop-and-check, title)
 
 ### POTENTIAL PACKAGING
 
@@ -111,7 +111,7 @@ Open across nine phrasings. Sep 2 ghost tapping and May 20 skimming are differen
 
 # 3. THE LIGHTS BEHIND YOU AREN'T POLICE
 
-**Status:** RE-PITCH, first pitched Sept 29 for the Oct 7 F2 · **Score:** 12/14 (Fear 2, Heat 2, Track record 2, Breadth 2, Peg 1, Newness 1, Producibility 2) · **Lead test:** passes 1 of 3 (title)
+**Status:** RE-PITCH, first pitched Sept 29 for the Oct 7 F2 · **Track:** SCAM · **Score:** 12/14 (Fear 2, Heat 2, Track record 2, Breadth 2, Peg 1, Newness 1, Producibility 2) · **Lead test:** passes 1 of 3 (title)
 
 ### POTENTIAL PACKAGING
 
@@ -153,7 +153,7 @@ Never a segment (10 phrasings). Jun 3 had a two-minute fake cop at the door. Pit
 
 # 4. THEY FOLLOW YOU HOME FROM THE BANK
 
-**Status:** READY · **Score:** 13/14 (Fear 2, Heat 1, Track record 2, Breadth 2, Peg 2, Newness 2, Producibility 2) · **Lead test:** passes 1 of 3 (title) · *street crime: tie-break says don't lead with it*
+**Status:** READY · **Track:** SCAM · **Score:** 13/14 (Fear 2, Heat 1, Track record 2, Breadth 2, Peg 2, Newness 2, Producibility 2) · **Lead test:** passes 1 of 3 (title) · *street crime: tie-break says don't lead with it*
 
 ### POTENTIAL PACKAGING
 
@@ -195,7 +195,7 @@ Open (jugging, followed home, bank bag). ATM cash trapping (Sep 9) was about the
 
 # 5. THEY SIGNED YOU UP FOR HOSPICE
 
-**Status:** READY · **Score:** 11/14 (Fear 2, Heat 2, Track record 1, Breadth 2, Peg 1, Newness 1, Producibility 2) · **Lead test:** passes 2 of 3 (stop-and-check, title)
+**Status:** READY · **Track:** SCAM · **Score:** 11/14 (Fear 2, Heat 2, Track record 1, Breadth 2, Peg 1, Newness 1, Producibility 2) · **Lead test:** passes 2 of 3 (stop-and-check, title)
 
 ### POTENTIAL PACKAGING
 
@@ -237,7 +237,7 @@ Hospice is open in the transcripts. CHECK the collision: the Oct 9 Medicare card
 
 # 6. THE CREW THAT BREAKS YOUR ROOF
 
-**Status:** RETURNING THEME, last aired Mar 18 (home repair) · **Score:** 12/14 (Fear 2, Heat 2, Track record 2, Breadth 2, Peg 1, Newness 1, Producibility 2) · **Lead test:** passes 1 of 3 (title)
+**Status:** RETURNING THEME, last aired Mar 18 (home repair) · **Track:** SCAM · **Score:** 12/14 (Fear 2, Heat 2, Track record 2, Breadth 2, Peg 1, Newness 1, Producibility 2) · **Lead test:** passes 1 of 3 (title)
 
 ### POTENTIAL PACKAGING
 
@@ -279,7 +279,7 @@ Mar 18 covered fake contractor websites and bad repairs (7.5 months ago). CHECK 
 
 # 7. THE HUG THAT STEALS YOUR NECKLACE
 
-**Status:** READY · **Score:** 12/14 (Fear 2, Heat 1, Track record 2, Breadth 2, Peg 2, Newness 2, Producibility 1) · **Lead test:** passes 1 of 3 (title) · *street crime*
+**Status:** READY · **Track:** SCAM · **Score:** 12/14 (Fear 2, Heat 1, Track record 2, Breadth 2, Peg 2, Newness 2, Producibility 1) · **Lead test:** passes 1 of 3 (title) · *street crime*
 
 ### POTENTIAL PACKAGING
 
@@ -320,7 +320,7 @@ Open (hug, jewelry swap, blessing, necklace). The Jul 29 $20 distraction show wa
 
 # 8. THOSE GLASSES ARE RECORDING YOU
 
-**Status:** READY (B) · **Score:** 12/14 (Fear 2, Heat 2, Track record 2, Breadth 1, Peg 1, Newness 2, Producibility 2) · **Lead test:** passes 1 of 3 (title)
+**Status:** READY (B) · **Track:** SCAM · **Score:** 12/14 (Fear 2, Heat 2, Track record 2, Breadth 1, Peg 1, Newness 2, Producibility 2) · **Lead test:** passes 1 of 3 (title)
 
 ### POTENTIAL PACKAGING
 
@@ -362,7 +362,7 @@ Zero transcript hits (7 phrasings). The Oct 25 cut was Amazon *drivers'* camera 
 
 # 9. THEY STOLE YOUR NAME — AND YOU GOT ARRESTED
 
-**Status:** READY · **Score:** 11/14 (Fear 2, Heat 2, Track record 2, Breadth 2, Peg 1, Newness 0, Producibility 2) · **Lead test:** passes 1 of 3 (title)
+**Status:** READY · **Track:** SCAM · **Score:** 11/14 (Fear 2, Heat 2, Track record 2, Breadth 2, Peg 1, Newness 0, Producibility 2) · **Lead test:** passes 1 of 3 (title)
 
 ### POTENTIAL PACKAGING
 
@@ -404,7 +404,7 @@ The mechanism is open in the transcripts. CHECK: the Oct 7 A ("A computer said i
 
 # 10. THE BITCOIN MACHINE AT YOUR GAS STATION
 
-**Status:** RE-PITCH, first pitched Sept 28 · **Score:** 11/14 (Fear 2, Heat 1, Track record 1, Breadth 2, Peg 2, Newness 1, Producibility 2) · **Lead test:** passes 1 of 3 (title)
+**Status:** RE-PITCH, first pitched Sept 28 · **Track:** SCAM · **Score:** 11/14 (Fear 2, Heat 1, Track record 1, Breadth 2, Peg 2, Newness 1, Producibility 2) · **Lead test:** passes 1 of 3 (title)
 
 ### POTENTIAL PACKAGING
 
@@ -446,7 +446,7 @@ An aside on Aug 26 (three hits); never a segment. Pitched Sept 28; what's new is
 
 # 11. "YOU WON!" — THE PRIZE CALL THAT COST $25,000
 
-**Status:** READY (B/C only) · **Score:** 11/14 (Fear 1, Heat 1, Track record 1, Breadth 2, Peg 2, Newness 2, Producibility 2) · **Lead test:** passes 1 of 3 (title)
+**Status:** READY (B/C only) · **Track:** SCAM · **Score:** 11/14 (Fear 1, Heat 1, Track record 1, Breadth 2, Peg 2, Newness 2, Producibility 2) · **Lead test:** passes 1 of 3 (title)
 
 ### POTENTIAL PACKAGING
 
@@ -486,7 +486,7 @@ Never covered (prize, sweepstakes, lottery, "you won"). Banked on the Sept 29 bo
 
 # 12. THE RENTAL CAR DAMAGE THAT WASN'T THERE
 
-**Status:** READY (B/C only) · **Score:** 11/14 (Fear 1, Heat 2, Track record 0, Breadth 2, Peg 2, Newness 2, Producibility 2) · **Lead test:** passes 1 of 3 (title)
+**Status:** READY (B/C only) · **Track:** SCAM · **Score:** 11/14 (Fear 1, Heat 2, Track record 0, Breadth 2, Peg 2, Newness 2, Producibility 2) · **Lead test:** passes 1 of 3 (title)
 
 ### POTENTIAL PACKAGING
 
@@ -527,7 +527,7 @@ Open (rental car, Turo, Hertz, damage claim). Travel is a weak lane (0.7×).
 
 # 13. YOUR CONTRACTOR WENT BANKRUPT WITH YOUR DEPOSIT
 
-**Status:** READY (B/C only) · **Score:** 10/14 (Fear 1, Heat 2, Track record 2, Breadth 1, Peg 2, Newness 1, Producibility 1) · **Lead test:** passes 0 of 3
+**Status:** READY (B/C only) · **Track:** CONSUMER · **Score:** 9/14 (Stakes 1, Heat 2, Track record 1, Breadth 1, Peg 2, Newness 1, Producibility 1) · **Lead test:** passes 0 of 3
 
 ### POTENTIAL PACKAGING
 
@@ -539,7 +539,7 @@ Open (rental car, Turo, Hertz, damage claim). Travel is a weak lane (0.7×).
 
 ### THE PITCH
 
-You pay the deposit and the project never starts. In Arizona, four Holtzman companies filed Chapter 7 owing about $8 million; one homeowner says she paid $122,000. The state fund caps recovery at $30,000 per homeowner. A company failure, not a scam, so it's a B at most.
+You pay the deposit and the project never starts. In Arizona, four Holtzman companies filed Chapter 7 owing about $8 million; one homeowner says she paid $122,000. The state fund caps recovery at $30,000 per homeowner. No scammer here: a company failure, graded on the consumer track (Stakes 1: money you're owed). B/C at most.
 
 ### CASES
 

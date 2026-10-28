@@ -41,7 +41,7 @@ page, the title's origin, and a coverage line. Skeleton in `templates/story_page
 
 | Section | Always? | Notes |
 |---|---|---|
-| Status line | Yes | `**Status:** READY · **Score:** 12/14 (Fear 2, Heat 1, ...) · **Lead test:** passes 2 of 3`. Replaces the old Slot / Confidence line; slots are decided in the meeting. RE-PITCH and RETURNING THEME go in Status. |
+| Status line | Yes | `**Status:** READY · **Track:** SCAM · **Score:** 12/14 (Fear 2, Heat 1, ...) · **Lead test:** passes 2 of 3`. Consumer-track cards say `**Track:** CONSUMER` and score Stakes instead of Fear (`quality-gate.md`). Replaces the old Slot / Confidence line; slots are decided in the meeting. RE-PITCH and RETURNING THEME go in Status. |
 | `POTENTIAL PACKAGING` | Yes | Exactly three titles. The first is the lead title on the cover table. |
 | `**Built on:**` line | Yes | Under the titles: the proven title or format it copies, with views or lift. This is the packaging-first trail. |
 | `THE PITCH` | Yes | Two to four sentences: beat, why now, what the viewer can check. |
