@@ -25,6 +25,9 @@ rather than the most; **local news** is the preferred source and the heat
 signal; confirm upload dates and put the freshest first; a pick that lives only
 on a news-site page gets flagged so Kyle pulls it before the taping; never name
 private individuals from body cam or victim footage in titles or descriptions.
+From 10/28: Jeff's own earlier video on the scam is a candidate ahead of any
+third-party explainer (`rossen_own`, below), and B-roll from a different
+victim's story gets a crop flag for on-screen names.
 
 ## Beats that should not reach you
 
@@ -119,6 +122,7 @@ the output.
 | `creator_short` | Same kind of channel, Shorts or vertical output |
 | `first_person` | Individual account, the person it happened to, no production apparatus |
 | `raw_footage` | Doorbell, dashcam, security, screen recording, bystander phone video |
+| `rossen_own` | Jeff's own earlier video on this scam (his channel, a Short, a past show segment) |
 
 **Channel credibility is scored relative to the role, not on an absolute ladder.**
 There is no tier that is best everywhere. Each role has a natural source type and
@@ -135,6 +139,16 @@ substitute, not against affiliates.
 | `first_person_rant` | **first_person**, creator_short | affiliate, network |
 | `authority_report` | network, affiliate | first_person, raw_footage |
 | `debunk` | affiliate, network, creator_long | raw_footage |
+
+**`rossen_own` is natural for every role it can fill, and first for
+`explainer_demo`.** On 10/28 the team replaced the CBS4 Indy explainer (graded 72,
+the A story's weakest pick) with Jeff's own Dec 15, 2025 short on the same scam.
+When the beat record, the outline or the pre-bible shows Jeff covered the scam,
+add his video as a candidate even if the harvest didn't return it, and say so in
+`reasoning`. It needs no clearance and keeps Jeff on screen. It doesn't count
+toward Matt's two-outside-clips standard. It sources from the team's archive, so
+the writer cues it as `(((ROLL JEFF VIDEO - [DATE / TITLE])))`, not a numbered
+`PLAY CLIP`.
 
 The three bolded cells are the correction. A well-produced creator video is not a
 degraded affiliate package for those roles — it is the right source, and it should
@@ -288,6 +302,12 @@ batteries.
   clearance and optics problem. Demote. A TikTok username watermark is normal and
   fine.
 - **Resolution.** 720p is the floor for full-screen play.
+- **On-screen names that belong to someone else.** When a clip is used as
+  B-roll for a case it wasn't shot about (10/28: KOB 4's footage of the New
+  Mexico spa, from a package about a different customer), check for lower
+  thirds, name supers and faces of that other person. Add a flag (`"lower third
+  names a different customer: crop"`) so the writer puts a red crop cue above
+  the marker. Kyle caught this one; muting the sound wasn't enough.
 
 ### Fit to the beat
 

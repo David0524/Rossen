@@ -6,7 +6,8 @@
 #   bash scripts/competitor_search.sh month "bitcoin atm scam" "squatter" "deed fraud"
 #   bash scripts/competitor_search.sh year  "sweepstakes scam"
 #
-# First argument: month = uploaded this month, year = uploaded this year.
+# First argument: month = uploaded this month, year = uploaded this year, any = all time.
+# For a whole theme across windows, use scripts/theme_search.py instead.
 # Then one or more search phrases in quotes.
 #
 # Reading the output (views | video id | channel | length | title):
@@ -16,7 +17,7 @@
 #   - A local news clip over 200K or a creator video over 500K is real heat for our lane.
 YTDLP=$(command -v yt-dlp || echo "$(dirname "$0")/.venv/bin/yt-dlp")
 WHEN="$1"; shift
-[ "$WHEN" = "year" ] && SP="CAMSAggF" || SP="CAMSAggE"
+case "$WHEN" in year) SP="CAMSAggF";; any) SP="CAM%253D";; *) SP="CAMSAggE";; esac
 for Q in "$@"; do
   echo "=== $Q ($WHEN, by views)"
   "$YTDLP" --flat-playlist --playlist-end 25 \

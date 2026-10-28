@@ -36,7 +36,8 @@ pass. These are written into the document.
   overlords), where-are-you-watching-from and the launch line; the producer cut
   them from the page (10/14). **On a live show, follow them with one specific
   on-screen chat question as a red cue** (Ryan, 10/9): `(((ON SCREEN: HAVE YOU
-  GOTTEN ONE OF THESE CALLS? WHAT DID THEY SAY?)))`.
+  GOTTEN ONE OF THESE CALLS? WHAT DID THEY SAY?)))`. Not on a taped F2; the
+  producer cut it on 10/28.
 
 ## Clips
 
@@ -77,8 +78,9 @@ pass. These are written into the document.
 - **Hedge by attribution, never by softening:** `POLICE SAY`, `EMPLOYEES SAY`,
   `CONSUMER REPORTS FOUND`, `AND I'M QUOTING HERE`. Attribute to the agency,
   the court, the testing body or the person, **never to the news outlet that
-  reported it** (no outlet names in spoken lines; see SKILL.md, "What the
-  producer cuts"). No "on purpose" without
+  reported it**. The one exception is the clip lead-in: name the outlet once,
+  as Jeff brings in its first clip (`-HERE'S CBS LOS ANGELES. LOOK AT THIS.`), for
+  fair use; see SKILL.md, "What the producer cuts". No "on purpose" without
   evidence, no "told us" when they told someone else, no national claim from one
   state's data, no "never fixed" without dates, no vendor or advocacy statistic
   stated as settled fact. Where a legal note requires it — someone arrested but
@@ -104,7 +106,13 @@ pass. These are written into the document.
   before `-END OF SHOW` (share it with someone it protects, the next video, see
   you next time). See "Seed the chat and write the close" in SKILL.md.
 - **First person: one or two lines per document, hard cap.** Lived, not
-  editorial — `I HATE SCAMMERS, BUT I LOVE IT WHEN THEY GET BUSTED`.
+  editorial — `I HATE SCAMMERS, BUT I LOVE IT WHEN THEY GET BUSTED`. **Exempt:**
+  Jeff's own reporting history, which the producer *adds* when it exists
+  (10/28: `-I'VE BEEN WARNING YOU ABOUT ONLINE CARD DECLINE SCAMS, BUT THEY STILL
+  HAPPEN IN BRICK AND MORTAR STORES.` / `I REPORTED ON A SIMILAR ONLINE VERSION
+  OF THIS SCAM LAST YEAR`), the stock sponsor bridge, and `I PROMISED YOU`
+  payoffs. Only write a reporting-history line when the outline or research
+  shows the earlier coverage.
 - **Reaction lines are optional by design.** `I LOVE IT WHEN SOMEBODY STEPS IN`
   can stay, but Jeff trims them — his reactions are his own riffs (Ryan, Oct 8,
   2026). So a reaction line never carries a fact, a figure or a transition the
@@ -122,3 +130,24 @@ cues; caps typos Jeff will read cold (`SENIOR DIRECT`, `PRIVACY POLICE`); a
 placeholder left in (`MARY FROM TK`); an image cue after the moment it
 illustrates; inconsistent guest credentials; old footage sitting under a
 "brand new" or "this week" claim.
+
+## Added from the 10/28 edits
+
+- **Tease:** the person stays generic (`A WOMAN`, not her age and job); scale is
+  national (`IN STORES ACROSS AMERICA`); the noun fits every venue in the story
+  (`AN EMPLOYEE`, not `A CLERK`, when one case is a spa); name the object
+  (`ANOTHER CARD`, not `ANOTHER ONE`).
+- **Over B-roll with no victim on screen, use second person, present tense:**
+  `-LATER YOU CHECK YOUR BANK APP AND BOTH CARDS ARE CHARGED.`
+- **No protective lines in black.** `SHE ASKED REPORTERS NOT TO USE HER NAME`, `A
+  COUPLE OF YEARS AGO`, `ON STORES LIKE THESE` all came out. Attribution (`SHE
+  SAYS`) carries the legal weight; the rest goes in a JEFF note.
+- **Name the scam in plain words** once: `-IT'S A CLASSIC PHISHING SCAM`.
+- **Reaction beats are welcome, one or two a story:** `UNREAL!`, `HAH! OKAY`.
+  They never carry a fact (see "Reaction lines are optional by design").
+- **`RED FLAG` about once a story.** Other takeaways are plain rules: `-WHEN YOUR
+  BANK FLAGS A CHARGE AS FRAUD… BELIEVE YOUR BANK. NOT THE CLERK.`
+- **Viewer close:** `-THANK YOU [NAME] FOR SHARING YOUR STORY. VIEWERS CAN SHARE
+  TIPS WITH US AT INFO@ROSSENMEDIA.COM`
+- **Pre-sponsor "next" lines are full sentences to the viewer:** `-NEXT… YOUR
+  DOCTOR'S OFFICE IS OFFERING A FREE MEDICARE KIT? THINK AGAIN`.

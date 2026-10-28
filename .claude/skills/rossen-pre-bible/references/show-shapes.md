@@ -57,12 +57,12 @@ figure, two strong local news clips, Stickley can demo the fix.
 ```
 
 ```
-**SLOT FIT:** ⚠️ Proposed as F2 A, but it's a deals story. Jeff sends those to
+**SLOT FIT:** Proposed as F2 A, but it's a deals story. Jeff sends those to
 the F1.
 ```
 
 ```
-**SLOT FIT:** ⚠️ F2 A, but the Aug 5 show covered this and flopped. Dead
+**SLOT FIT:** F2 A, but the Aug 5 show covered this and flopped. Dead
 unless there's a genuinely new angle.
 ```
 
@@ -76,7 +76,7 @@ Page one, under the shortlist:
 > **SLATE FIT:** Supports the F2: four A options (recommend #1), a B and a C.
 > The F1 lead is already set (Prime Day), so nothing here is pitched for it.
 
-> **SLATE FIT:** ⚠️ Only two A candidates survive the coverage check. Jeff
+> **SLATE FIT:** Only two A candidates survive the coverage check. Jeff
 > wants four or five. Candidates to research are under THE GAP.
 
 When the slate is short, add a `THE GAP — AND WHAT I'D RESEARCH NEXT` section at

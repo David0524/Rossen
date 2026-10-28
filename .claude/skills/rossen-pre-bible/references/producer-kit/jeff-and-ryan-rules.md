@@ -112,15 +112,20 @@ mechanism. The kit sharpens it three ways:
 
 ## The pitch workflow (the team's order)
 
-1. **Find candidates.** Competitor search (this month, this year). News: FTC
-   consumer alerts first, then FBI PSAs, state AGs, AARP, BBB Scam Tracker, local
-   TV investigative units. The help line (`help-line-summary.md`, caller IDs
-   only). Viewer emails Jeff forwards. Our own top Facebook posts.
+1. **Find candidates, theme-first** (updated Oct 25, 2026; `../story-search.md`).
+   Start from proven themes, the season and new territory, not from this
+   month's news. Search each theme across time (`scripts/theme_search.py`),
+   then plain-language victim searches, local TV investigative units, the help
+   line (`help-line-summary.md`, caller IDs only), viewer emails, our top
+   Facebook posts. FTC, FBI, state AG, AARP and BBB alerts confirm a theme is
+   current and source its numbers; they are not the idea source. Check the last
+   four weeks of pitches first so passed stories don't come back.
 2. **Check the heat.** At least one competitor video with real views, and its
    upload date confirmed.
 3. **Check our coverage.** `scripts/coverage_check.py "pattern|synonym" --context`
    over `references/transcripts/` (62 shows, Mar 18 to Sep 29, 2026). No repeat
-   inside three months. Ten-plus hits over several minutes is a segment; a few is
+   inside three months for the same story (a proven theme can return with new
+   cases; label it). Ten-plus hits over several minutes is a segment; a few is
    a B/C or an aside. Check B and C stories, not just titles: our titles are
    vague on purpose. Then the story board snapshot and the upload list for
    anything newer. Check the calendar for collisions (a Social Security pitch was

@@ -9,7 +9,8 @@ headline and the titles first. A real one is in
 ## Shape
 
 ```
-Subject: F2 Pitches for [tape date] ([air date] Air)
+Subject: Pitches for the week of [shoot date]: F1 [date] and F2 ([air date] Air)
+(Single-show runs: F2 Pitches for [tape date] ([air date] Air))
 
 Jeff, Ryan,
 
@@ -61,7 +62,9 @@ part is an inference, it goes in a flag line, not the paragraph.
 ## Coverage
 
 3–5 bullets, `- ` (or `* `). **At least one competitor video with its view count,
-and at least one news or agency source from the last six weeks.** Put the one
+and at least one dated source showing it's still happening (last 12 months;
+the last six weeks when there's a fresh peg).** Recency is a bonus, not a
+requirement (`story-search.md`). Put the one
 detail each source is there for in a parenthetical before the colon.
 
 Every link opened and every date confirmed. YouTube search results don't show

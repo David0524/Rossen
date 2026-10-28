@@ -25,3 +25,19 @@ Apply when grading or picking clips. These come from Matt Raub and Ryan Chaffee.
   not convicted.
 - **Machine transcripts of body cam audio are rough.** Proofread names, dollar
   amounts and legal terms before an outcue or quote goes in a bible.
+
+## Added from the 10/28 F2 edits
+
+- **Jeff's own video first.** When Jeff has covered the scam before, his video is
+  the first candidate for the explainer beat. On 10/28 the team rolled his Dec 15,
+  2025 short in place of the CBS4 Indy explainer. It needs no clearance and keeps
+  Jeff on screen.
+- **Crop names out of borrowed B-roll.** Footage from another outlet's package
+  about a *different* victim can carry that person's name on screen. Kyle, 10/28:
+  "Crop out her name since this is technically a different case with the same
+  store." Flag it in the grade; muting the sound isn't enough.
+- **Fewer outside clips.** The 10/28 A story went from five outside clips to
+  three. Matt's two-a-segment standard is real: grade for the best two, and
+  expect the producer to cut the investigative chain (corporate ownership,
+  door-knocks, lawyers) before the victim and the explainer.
+
