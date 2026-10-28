@@ -61,6 +61,7 @@ Companion to `draft.md` / `11_04 LIVE BIBLE.docx`. Written 10/28/2026 from `outl
 - **Outline Decisions not ruled on by the room** (handled in copy, listed so someone signs off): plan label Oct 28 vs 11/4 (bible written for 11/4); B tease holds back the register (written so); C kept to the new bundle; A8 is a 2010 case, shown as a still and dated on air; A is a "claim money" story under Jeff's approval.
 - **Dropped from the show plan, unsourced:** the Florida "I have to overcharge you" quote and the Virginia TikTok-surge figures (not in copy).
 - **Graphic 001** (B protection list): image prompt in the chat reply.
+- **Chapter (added 10/28):** second sponsor, inside B after the Butler County case (Anderson) and before Lynda. OmniWatch stays first, after A. Chapter talking points and any read-verbatim lines still to come; red cue in copy.
 
 ## CLIPS
 

@@ -10,6 +10,7 @@
 | A | The state may be holding your money | ~50% of show | 5/5 (1 manual) |
 | Break | OmniWatch — bridged from A beat 8 (forged claims, stolen identities) | — | — |
 | B | Dollar General sued over shelf vs. register prices | ~35% | 4/4 (1 manual) + Jeff's 10/14 video |
+| Break | Chapter — inside B, after beat 4 (Butler County) and before beat 5 (Lynda); added 10/28 | — | — |
 | C | Perks you're paying for | ~15% | 2/2 (1 manual) |
 | End | End of show | — | — |
 
