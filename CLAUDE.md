@@ -49,6 +49,11 @@ Producer rulings that hold every week:
 - Target is fine, but never the title or the main story.
 - F1: never pitch a story that knocks Amazon (settlements, refunds, Amazon traps). The deals block sends viewers to buy there (producer, 10/11/2026).
 - Pitch bar (producer, 10/11): would a 55+ middle-America viewer stop scrolling, and why does it matter to them? A small payout or a narrow niche fails it.
+- Sponsor breaks (producer, 10/28/2026): go into every sponsor with a smooth transition, not a tease of what's
+  coming. Two or three lines that bridge from the story just told to the sponsor's product, ending on the
+  sponsor's name (e.g. the father-and-son forgery → "you'd want to know if your information is out there" →
+  OmniWatch). No "NEXT…" lines and no "BUT FIRST, A QUICK WORD" before a break. This overrides the
+  script-writer skill's tease-then-break rule (Ryan note 7) until the skill is updated.
 - Graphic requests: deliver a ChatGPT-ready image prompt in chat. Keep "police say" / accused framing on screen.
 
 Workarounds:
