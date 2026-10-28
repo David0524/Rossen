@@ -17,7 +17,7 @@ Companion to `draft.md` / `11_04 LIVE BIBLE.docx`. Written 10/28/2026 from `outl
 | California father and son charged with stealing $1.6 million+ in unclaimed funds using forged documents and fictitious addresses | CONFIRMED | California AG press release, July 30, 2010 (oag.ca.gov) | **2010.** Charged, outcome not confirmed; they ran a finder business their victims hired. Copy says "back in 2010" and "prosecutors say" |
 | FTC and 20 states sued Dollar General: charged more at the register than shelf prices, for years | CONFIRMED | FTC press release (ftc.gov, Oct 2026); ABC News, CNBC, USA Today (Oct 26–27, 2026) | **Filed Monday, Oct 26** (the outline said Oct 27; the GMA piece aired Oct 27). Allegations |
 | Trail mix $2.75 on the shelf, $5 at checkout; Dollar General will "defend this litigation vigorously"; 20,000+ stores | CONFIRMED | ABC News/GMA video 137597689, Whisper 0:08–1:15 | A Massachusetts shopper's complaint quoted in the suit |
-| Lori, Oklahoma: kitty litter $8.95 tag, $10 register; $10 gift card | CONFIRMED | More Perfect Union video transcript and Substack (per review, 10/28); show plan | Overcharges are from her 2023 complaint; video March 2024. Clip in/out still unverified (TikTok) |
+| Lori, Oklahoma: kitty litter $8.95 tag, $10 register; wrote to the Oklahoma AG; Dollar General offered a $10 gift card | CONFIRMED | More Perfect Union YouTube captions uE5THiD-kTk 1:38–3:25 | Began May 2022 (narration 1:38); video March 2024. Said as "back in 2022" |
 | Butler County, Ohio: one shopper's receipts; all 20 Dollar General stores failed; creamer $2 tag, $4.35 register | CONFIRMED | LOCAL 12 page video, Whisper 0:20–1:58 (Oct 27, 2022) | Said as "back in 2022" |
 | Lynda Swank, four years at Dollar General; one day a week for price changes; two workers; manager said "not at the register"; no company response | CONFIRMED | WHIO page video, Whisper 0:59–2:27 (Nov 23, 2022); spelling from whio.com | Said as "back in 2022" |
 | New York AG secret shoppers: 11 stores, overcharged on about 14% of items; stores must post lowest-price signs | CONFIRMED | ag.ny.gov press release (mid-Oct 2026); Democrat & Chronicle 10/16/2026 | Said as "last month" (airdate 11/4) |
@@ -31,7 +31,6 @@ Companion to `draft.md` / `11_04 LIVE BIBLE.docx`. Written 10/28/2026 from `outl
 | "Log into every account at least once a year" (A6 takeaway) | UNVERIFIED | Show plan / general practice | Common treasurer advice; find a state treasurer or NAUPA page saying activity resets dormancy |
 | "Family can often claim it" (heirs) | PARTIALLY CONFIRMED | Show plan / general practice | Show plan; check one state's heir-claim page |
 | Alex's wife's 2002 Ruby Tuesday paycheck | PARTIALLY CONFIRMED | Show plan / general practice | Yahoo/AT&T (Nov 2023) quotes Pearlman; the clip itself is unverified (TikTok) |
-| Lori's quotes and the four in/out points | UNVERIFIED | Show plan / general practice | Pull the TikTok and check against Whisper |
 | Paige's $14.29 refund and in/out points | UNVERIFIED | Show plan / general practice | Pull the TikTok; get surname and permission |
 | "Get the Costco Auto coupon before you approve the work" | PARTIALLY CONFIRMED | Show plan / general practice | costcoauto.com has a savings sign-up; confirm the coupon step |
 | "Oil changes and tires don't count" (Costco) | CONFIRMED | costcoauto.com | costcoauto.com excludes oil changes and tires (also air bags, state inspections), per review 10/28. JEFF note still says unconfirmed: update |
@@ -44,7 +43,6 @@ Companion to `draft.md` / `11_04 LIVE BIBLE.docx`. Written 10/28/2026 from `outl
 - **"Log into every account at least once a year" (A6 takeaway)** (UNVERIFIED): Common treasurer advice; find a state treasurer or NAUPA page saying activity resets dormancy
 - **"Family can often claim it" (heirs)** (PARTIALLY CONFIRMED): Show plan; check one state's heir-claim page
 - **Alex's wife's 2002 Ruby Tuesday paycheck** (PARTIALLY CONFIRMED): Yahoo/AT&T (Nov 2023) quotes Pearlman; the clip itself is unverified (TikTok)
-- **Lori's quotes and the four in/out points** (UNVERIFIED): Pull the TikTok and check against Whisper
 - **Paige's $14.29 refund and in/out points** (UNVERIFIED): Pull the TikTok; get surname and permission
 - **"Get the Costco Auto coupon before you approve the work"** (PARTIALLY CONFIRMED): costcoauto.com has a savings sign-up; confirm the coupon step
 - **Sam's Club Plus stand-alone price ($110 or $120)** (UNVERIFIED): Needed before Jeff gives any savings number beyond Walmart's "almost $100"
@@ -74,7 +72,7 @@ Companion to `draft.md` / `11_04 LIVE BIBLE.docx`. Written 10/28/2026 from `outl
 | 5 | 11-04-A7 | H | authority_report | https://www.youtube.com/watch?v=1Grj5UvPLwo | 2:09–2:23 (FOR JUST $8,000) BUTT 2:56–3:07 (BY THE TIME YOU FIND YOUR UNCLAIMED FUNDS) | Captions | PICK; open decision to cut |
 | — | 11-04-B1 (new) | H | Jeff archive | 10/14 show, https://www.youtube.com/watch?v=enqBc2rmTsk | supercut still to cut | Sent 10/14 bible | Added 10/28 at the producer's OK |
 | 6 | 11-04-B1 | H | authority_report | https://abcnews.com/video/137597689/ | 0:08–1:14 (WE WILL DEFEND THIS LITIGATION VIGOROUSLY) | Whisper | PICK |
-| 7 | 11-04-B2 | V | victim_interview | https://www.tiktok.com/@moreperfectunion/video/7350333548567596330 | plan: 1:46–2:29 BUTT 2:31–2:49 BUTT 3:04–3:23 BUTT 8:18–8:34 (unchecked) | Show plan | MANUAL · UNVERIFIED |
+| 7 | 11-04-B2 | H | victim_interview | https://www.youtube.com/watch?v=uE5THiD-kTk | 1:46–2:29 (WHAT THE PRICE SAYS ON THE SHELF) BUTT 2:32–2:49 (I KNOW IT'S JUST NOT ME) BUTT 3:03–3:25 (IT WAS INSULTING) BUTT 8:18–8:34 (WELL, I DO) | Human caption track (producer-supplied YouTube copy, 10/28); TikTok 7350333548567596330 is the alternate | PICK. Started May 2022; she wrote to the Oklahoma AG (transcript 2:49–3:25) |
 | 8 | 11-04-B3 | H | victim_interview | https://local12.com/news/local/local-dollar-general-customers-were-you-overcharged-for-your-items-overpriced-receipt-auditor-audit-county-butler-stores-retail-tombstone-pizza-diet-coke-lower-list-prices-complaint-dishonest-cincinnati-ohio | 0:20–0:54 (EIGHT AND A HALF) BUTT 1:10–1:58 (HE SAYS IT'S IMMORAL) | Whisper | PICK |
 | 9 | 11-04-B4 | H | victim_interview | https://www.whio.com/news/local/i-team-former-dollar-general-employee-speaks-out-about-price-swapping-allegations/GJYUFBCY4NFHBLGLBCWOVLOEUQ/ | 0:59–1:43 BUTT 1:49–2:03 (NOT AT THE REGISTER) | Whisper | PICK |
 | 10 | 11-04-C1 | H | authority_report | https://www.youtube.com/watch?v=PQORnk7zuLc | 0:05–0:31 (AMAZON'S $139 A YEAR PRIME) | Whisper (abcnews.com copy) | PICK, ±1 s |

@@ -319,8 +319,8 @@
  {
   "beat_id": "11-04-B2",
   "pass": 2,
-  "flagged": "https://www.tiktok.com/@moreperfectunion/video/7350333548567596330",
-  "platform": "tiktok",
+  "flagged": "https://www.youtube.com/watch?v=uE5THiD-kTk",
+  "platform": "youtube",
   "title": "More Perfect Union \u2014 Dollar General",
   "source_mix": {
    "documentary": 1
@@ -328,29 +328,50 @@
   "diversity_floor_applied": false,
   "ranked": [
    {
-    "url": "https://www.tiktok.com/@moreperfectunion/video/7350333548567596330",
+    "url": "https://www.youtube.com/watch?v=uE5THiD-kTk",
     "source_type": "documentary",
     "score": 82,
     "tone": 9,
     "authenticity": 9,
     "quality": 8,
     "fit": 9,
-    "segments": [],
-    "reasoning": "Native TikTok from More Perfect Union; plan uses Lori's words only across four slices (1:46-2:29 BUTT 2:31-2:49 BUTT 3:04-3:23 BUTT 8:18-8:34). Not transcript-verified here.",
+    "segments": [
+     {
+      "in": "1:46",
+      "out": "2:29",
+      "outcue": "what the price says on the shelf"
+     },
+     {
+      "in": "2:32",
+      "out": "2:49",
+      "outcue": "I know it's just not me"
+     },
+     {
+      "in": "3:03",
+      "out": "3:25",
+      "outcue": "it was insulting"
+     },
+     {
+      "in": "8:18",
+      "out": "8:34",
+      "outcue": "Well, I do"
+     }
+    ],
+    "reasoning": "Producer-supplied YouTube copy of the TikTok; all four plan slices verify on the human caption track, in-points snapped to Lori's sentence starts.",
     "flags": [
-     "manual_lane",
-     "unverified"
+     "date_on_air",
+     "alt_tiktok_7350333548567596330"
     ]
    }
   ],
   "rejected": [],
   "cannot_determine": [
-   "all four plan outcues",
-   "whether narration bleeds into Lori's slices"
+   "slice 4 speaker label (assumed Lori)",
+   "frame orientation of the YouTube copy"
   ],
-  "transcript_rung": 3,
-  "transcript_key": null,
-  "orientation": "vertical",
+  "transcript_rung": 1,
+  "transcript_key": "uE5THiD-kTk",
+  "orientation": "horizontal",
   "priority": 1,
   "expected_segments": 4,
   "verify_only": true

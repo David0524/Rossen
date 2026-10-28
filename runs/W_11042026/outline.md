@@ -120,7 +120,7 @@ Starts hopeful (free money), turns to outrage as the state keeps, then sells, pe
 |---|---|---|---|---|
 | 1 | We warned you | Jeff, 10/14 show (Oct 14, 2026) | Jeff's own 10/14 segment on the register charging more than the shelf, cut to its store-neutral lines. | JEFF — ROLL JEFF VIDEO, 10/14 supercut (still to cut) |
 | 2 | The lawsuit | FTC and 20 states (Oct 27, 2026) | They sue Dollar General, saying it charged more at the register than the shelf for years. | HAVE · HORIZONTAL — ABC News / GMA |
-| 3 | She noticed | Lori Hartline, Oklahoma shopper (Mar 2024) | Kitty litter tagged $8.95 rang up $10 week after week; her complaint got a $10 gift card. | HAVE · VERTICAL — TikTok @moreperfectunion |
+| 3 | She noticed | Lori Hartline, Oklahoma shopper (May 2022; video Mar 2024) | Kitty litter tagged $8.95 rang up $10 week after week; she wrote to the Oklahoma AG, and Dollar General offered a $10 gift card. | HAVE · HORIZONTAL — More Perfect Union (YouTube; TikTok copy unreachable) |
 | 4 | The whole county | William Anderson, Butler County OH (Oct 2022) | He took his receipts to the auditor; all 20 Dollar General stores inspected failed. | HAVE · HORIZONTAL — LOCAL 12 Cincinnati |
 | 5 | Why it isn't fixed | Lynda Swank, former Dollar General employee (Nov 2022) | She says a manager told her they weren't allowed to fix prices at the register. | HAVE · HORIZONTAL — WHIO Dayton |
 | 6 | Still happening | You (the viewer) | New York secret shoppers were overcharged on 14% of items this month; snap the tag before you pay. | JEFF |
@@ -130,11 +130,11 @@ Starts hopeful (free money), turns to outrage as the state keeps, then sells, pe
 | # | Clip | Shows | In–Out | Status |
 |---|---|---|---|---|
 | 2 | [ABC News / GMA — Dollar General sued](https://abcnews.com/video/137597689/) | The FTC and 20 states' complaint, the $2.75 trail mix rung up at $5, then Dollar General's statement. Oct 27, 2026, 1:31. | 0:08–1:14 "we will defend this litigation vigorously" | PICK |
-| 3 | [More Perfect Union — Dollar General](https://www.tiktok.com/@moreperfectunion/video/7350333548567596330) | Lori Hartline on the kitty litter and the $10 gift card (per the plan). 8:41. | — | MANUAL · UNVERIFIED |
+| 3 | [More Perfect Union — Dollar General](https://www.youtube.com/watch?v=uE5THiD-kTk) | Lori on the kitty litter ringing up $10, the Ohio lawsuit, the $10 gift card, then "Well, I do." 8:34. | 1:46–2:29 "what the price says on the shelf" BUTT 2:32–2:49 "I know it's just not me" BUTT 3:03–3:25 "it was insulting" BUTT 8:18–8:34 "Well, I do." | PICK |
 | 4 | [LOCAL 12 — Dollar General customers overcharged](https://local12.com/news/local/local-dollar-general-customers-were-you-overcharged-for-your-items-overpriced-receipt-auditor-audit-county-butler-stores-retail-tombstone-pizza-diet-coke-lower-list-prices-complaint-dishonest-cincinnati-ohio) | Anderson on his cereal receipts, then the auditor's 20 failed stores and the $2 creamer that rang up $4.35. Oct 27, 2022, 2:20. | 0:20–0:54 "eight and a half" BUTT 1:10–1:58 "he says it's immoral" | PICK |
 | 5 | [WHIO — Former Dollar General employee speaks out](https://www.whio.com/news/local/i-team-former-dollar-general-employee-speaks-out-about-price-swapping-allegations/GJYUFBCY4NFHBLGLBCWOVLOEUQ/) | Swank on "Super Tuesday" price changes with two staff, then the manager who said "not at the register". Nov 23, 2022, 2:47. | 0:59–1:43 "price changes that needed to be done on any particular week" BUTT 1:49–2:03 "not at the register" | PICK |
 
-*Row 1: Jeff's 10/14 video, store-neutral lines only (no Walmart); cut list in SUPERCUT_HANDOFF.md, added 10/28 at the producer's OK. Row 3: TikTok refuses requests from here; the plan's four slices of Lori's own words (1:46–2:29 BUTT 2:31–2:49 BUTT 3:04–3:23 BUTT 8:18–8:34) are unchecked. Row 4: optional, run the out to 2:00 "that to me is like lying", Anderson's own line. Dollar General "hasn't returned our emails" at 2:17, outside the cut. Rows 4–5 are Whisper on the stations' page video; both are news-site links, not YouTube.*
+*Row 1: Jeff's 10/14 video, store-neutral lines only (no Walmart); cut list in SUPERCUT_HANDOFF.md, added 10/28 at the producer's OK. Row 3: the producer supplied the YouTube copy (10/28); the plan's four slices verify on its caption track (human-made), in-points snapped; Lori's words only. The TikTok copy (7350333548567596330) stays as the alternate. Orientation switched to HORIZONTAL to match the YouTube copy; check the frame. Slice 4's speaker isn't labeled in the captions; give it one listen. Row 4: optional, run the out to 2:00 "that to me is like lying", Anderson's own line. Dollar General "hasn't returned our emails" at 2:17, outside the cut. Rows 4–5 are Whisper on the stations' page video; both are news-site links, not YouTube.*
 
 ### The fix
 
@@ -146,7 +146,7 @@ Starts hopeful (free money), turns to outrage as the state keeps, then sells, pe
 
 ### Gaps
 
-- ⚠️ B3 Lori is March 2024: date it on air.
+- ⚠️ B3 Lori's overcharges began May 2022 (video March 2024): date it on air.
 - ⚠️ B4 Anderson is October 2022: date it on air.
 - ⚠️ B5 Swank is November 2022: date it on air.
 - ⚠️ The 14% New York figure and the Florida "I have to overcharge you" quote need sources.

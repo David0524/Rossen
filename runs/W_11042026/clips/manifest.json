@@ -138,14 +138,35 @@
  },
  {
   "beat_id": "11-04-B2",
-  "url": "https://www.tiktok.com/@moreperfectunion/video/7350333548567596330",
-  "platform": "tiktok",
+  "url": "https://www.youtube.com/watch?v=uE5THiD-kTk",
+  "platform": "youtube",
   "title": "More Perfect Union \u2014 Dollar General",
   "source_type": "documentary",
-  "orientation": "vertical",
-  "segments": [],
-  "transcript_rung": 3,
-  "status": "MANUAL \u00b7 UNVERIFIED"
+  "orientation": "horizontal",
+  "segments": [
+   {
+    "in": "1:46",
+    "out": "2:29",
+    "outcue": "what the price says on the shelf"
+   },
+   {
+    "in": "2:32",
+    "out": "2:49",
+    "outcue": "I know it's just not me"
+   },
+   {
+    "in": "3:03",
+    "out": "3:25",
+    "outcue": "it was insulting"
+   },
+   {
+    "in": "8:18",
+    "out": "8:34",
+    "outcue": "Well, I do"
+   }
+  ],
+  "transcript_rung": 1,
+  "status": "PICK"
  },
  {
   "beat_id": "11-04-B3",
