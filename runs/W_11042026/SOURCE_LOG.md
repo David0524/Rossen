@@ -38,6 +38,7 @@ Companion to `draft.md` / `11_04 LIVE BIBLE.docx`. Written 10/28/2026 from `outl
 | "Oil changes and tires don't count" (Costco) | CONFIRMED | costcoauto.com | costcoauto.com excludes oil changes and tires (also air bags, state inspections), per review 10/28. JEFF note still says unconfirmed: update |
 | Sam's Club Plus stand-alone price ($110 or $120) | UNVERIFIED | Show plan / general practice | Needed before Jeff gives any savings number beyond Walmart's "almost $100" |
 | Report overcharges to the state attorney general (or weights and measures) | PARTIALLY CONFIRMED | Show plan / general practice | General; the Ohio case went through the county auditor. Link per state if a graphic carries it |
+| BBB of Eastern Oklahoma: 800+ reports in a month of calls/texts about unclaimed funds; $50 processing fee; no check (clip 5, added 10/28) | CONFIRMED | One BBB region, Oklahoma, Oct 2025 | FOX23 Tulsa captions kTrQ-7TzYL4 0:29–1:28 (Oct 13, 2025) |
 
 ## NEEDS VERIFICATION
 
