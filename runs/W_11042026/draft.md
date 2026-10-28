@@ -435,7 +435,7 @@ OUT: (NOT AT THE REGISTER)
 
 -WALMART SAYS THAT'S ALMOST 100 DOLLARS LESS THAN PAYING FOR BOTH.
 
--AND IT'S GOING RIGHT AT AMAZON.
+-AND IT'S COMING RIGHT FOR AMAZON.
 
 -SO HOW DOES IT STACK UP AGAINST PRIME???
 
@@ -446,13 +446,23 @@ OUT: (AMAZON'S $139 A YEAR PRIME)
 
 ((([Good Morning America](https://www.youtube.com/watch?v=PQORnk7zuLc) · 0:05 - 0:31 (AMAZON'S $139 A YEAR PRIME))))
 
--**120** VERSUS **139**. {{JEFF PLEASE NOTE: The bundle only pays off if you'd use both memberships. Sam's Club Plus's stand-alone price is still to confirm, so no savings figure beyond Walmart's own "almost $100."}}
+-**120 DOLLARS** VERSUS 139. {{JEFF PLEASE NOTE: The bundle only pays off if you'd use both memberships. Sam's Club Plus's stand-alone price is still to confirm, so no savings figure beyond Walmart's own "almost $100."}}
 
--ONLY HAVE WALMART+? IT'S **22 DOLLARS** MORE TO ADD SAM'S CLUB PLUS.
+-SO WHAT DO YOU GET FOR THE 120?
 
--SAM'S CLUB MEMBER? UPGRADE TO PLUS FOR **60 DOLLARS** MORE… AND WALMART+ COMES WITH IT.
+-**FREE DELIVERY**… FROM WALMART AND FROM SAM'S CLUB.
 
--ALREADY HAVE SAM'S CLUB PLUS? WALMART+ IS FREE. BUT YOU HAVE TO TURN IT ON.
+-A STREAMING SERVICE. YOUR PICK OF **PEACOCK** OR **PARAMOUNT+**.
+
+-**10 CENTS OFF** A GALLON OF GAS… AT MORE THAN 17,000 STATIONS. {{JEFF PLEASE NOTE: Walmart's list: participating stations only; delivery, streaming and Sam's Cash all carry fine print on Walmart's page (footnotes 1–5).}}
+
+-AND YOU GET INTO **SAM'S CLUB**… WITH **2 PERCENT BACK** ON ELIGIBLE PURCHASES!!
+
+-ONLY HAVE WALMART+? IT'S **22 DOLLARS** MORE TO ADD ALL THE SAM'S CLUB PLUS PERKS.
+
+-SAM'S CLUB MEMBER? **60 DOLLARS** MORE GETS YOU PLUS… AND WALMART+ COMES WITH IT.
+
+-ALREADY HAVE SAM'S CLUB PLUS? WALMART+ IS FREE. JUST TURN IT ON.
 
 **ALREADY PAYING FOR BOTH? YOU MAY BE OWED MONEY BACK**
 
