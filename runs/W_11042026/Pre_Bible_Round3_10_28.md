@@ -1,6 +1,6 @@
 # PRE-BIBLE PITCH SHEET — OCT 30 SHOOT
 
-Prepared Oct 28 · F1 Oct 30, F2 Nov 4 · 13 pass the gate · Replaces the Oct 26 and 28 sheets.
+Prepared Oct 28 · F1 Oct 30, F2 Nov 4 · 15 pass (13 scam, 2 consumer) · Replaces the Oct 26 and 28 sheets.
 
 ## THE SHORTLIST — RANKED
 
@@ -19,10 +19,12 @@ Prepared Oct 28 · F1 Oct 30, F2 Nov 4 · 13 pass the gate · Replaces the Oct 2
 | 11 | **"YOU WON!" — THE PRIZE CALL THAT COST $25,000** · 11/14 · B/C | "You WON!" — THIS Prize Call Cost $25,000 | 124K, https://youtu.be/bn8_0tHSAgU |
 | 12 | **THE RENTAL CAR DAMAGE THAT WASN'T THERE** · 11/14 · B/C | Returned the Rental Spotless — THEN Came THIS Bill | 647K, https://youtu.be/1_wUVS5szfw |
 | 13 | **YOUR CONTRACTOR WENT BANKRUPT WITH YOUR DEPOSIT** · 9/14 consumer · B/C | They Took Her $122,000 — Then Filed for BANKRUPTCY | 348K, https://youtu.be/yw43Ah_b5UQ |
+| 14 | **STORES ARE KEEPING A FILE ON YOUR RETURNS** · 12/14 consumer | Stores Are BANNING You For THIS — Check Your Return File | 2.3M, https://youtu.be/XZemo1KVQMA |
+| 15 | **THE "FREE" PHONE THAT COST $1,200** · 11/14 consumer | The FREE Phone Deal — THEN Came a $1,200 Bill | 47K, https://youtu.be/PeUvfRhTVCw |
 
 **HOW THESE WERE BUILT:** 75-day heat scan, then 11 themes across month, year and all-time windows; about 70 candidates checked. New themes: #1, #2, #5, #8. Re-pitches: #3, #10.
 
-**SLATE FIT:** **F1 lead: #1** (stop-and-check; Ring is Amazon's). **F2 A: #2** (card lane; stop-and-check), alternate #3. CHECK: nothing passes lead check 1 (1M+ in 75 days), so no blow-away lead.
+**SLATE FIT:** Consumer options: #14 and #15 are A-caliber on the consumer track (JEFF'S CALL: not a scam). **F1 lead: #1** (stop-and-check; Ring is Amazon's). **F2 A: #2** (card lane; stop-and-check), alternate #3. CHECK: nothing passes lead check 1 (1M+ in 75 days), so no blow-away lead.
 
 # 1. SOMEONE ELSE IS STILL WATCHING YOUR CAMERAS
 
@@ -564,6 +566,89 @@ Mar 18 home repair is the nearest. It shares the home theme with #6.
 - Pay by credit card, not cash or check.
 - Check your state's contractor recovery fund. *(verify per state)*
 
+# 14. STORES ARE KEEPING A FILE ON YOUR RETURNS
+
+**Status:** READY (needs a named shopper before air) · **Track:** CONSUMER · **Score:** 12/14 (Stakes 2, Heat 2, Track record 2, Breadth 2, Peg 1, Newness 1, Producibility 2) · **Lead test:** passes 1 of 3 (title) · *JEFF'S CALL: not a scam*
+
+### POTENTIAL PACKAGING
+
+- Stores Are BANNING You For THIS — Check Your Return File
+- If THIS Prints on Your Receipt — You're Being TRACKED
+- The Return That Gets You BANNED — What Stores Won't Tell You
+
+**Built on:** The TRUTH About Amazon Returns — They'll BAN You For This (443K, 3.8×); Amazon Will BAN You For THIS (2.3×).
+
+### THE PITCH
+
+You bring something back with the receipt, and the register says no. An outside company keeps a file on your returns and tells the store whether to take them. Shoppers complained this summer of refused or flagged returns. You can request your report and dispute it. Best pegged to post-holiday returns.
+
+### CASES
+
+- **Meijer (August 2026).** A return of seven sweatshirts ($209.93) was refused through The Retail Equation; the shopper disputes the reason given. *BBB complaint, filed Aug 10, 2026.* CHECK: anonymous first-person complaint, not news.
+- **Store not named (January 2026).** A $49.08 return was refused under a "TRE restriction"; the appeal went unanswered. *BBB complaint, Jun 27, 2026.* More complaints Sep 1 and Sep 12.
+- **The company's own policy.** The Retail Equation gives stores an approve, warn or deny call, and shoppers can request their report. *theretailequation.com; CFPB list.*
+
+> **VIRAL CLIP** — YouTube, CNBC, 2,291,298 views (observed Oct 28), upload date unconfirmed (a text copy is dated May 10, 2024)
+> https://www.youtube.com/watch?v=XZemo1KVQMA
+> "How Retailers Like T.J. Maxx And Home Depot Quietly Target 'Problem' Returners."
+> *Not watched — no timecode, no outcue.*
+
+### COVERAGE CHECK
+
+The transcripts have no Retail Equation mention. Amazon return bans aired Nov 2025, Mar 20 and Apr 24 (Keep-It); this is walk-in stores and an outside company, the same theme with a different mechanism. Not in the Oct 25 rounds.
+
+### FOOTAGE WE NEED
+
+- **The get:** CNBC's package, and a shopper on camera (none found yet).
+- Jeff requests his own Return Activity Report. *(demo)*
+
+### THE PAYOFF
+
+- **Warned or refused at the register? Request your Return Activity Report and dispute anything wrong.** (800) 652-2331, consumerinquiry@theretailequation.com. *(CFPB list and TRE site; verify before air)*
+- Keep the receipt; the online request needs its transaction ID within 60 days.
+
+# 15. THE "FREE" PHONE THAT COST $1,200
+
+**Status:** READY · **Track:** CONSUMER · **Score:** 11/14 (Stakes 2, Heat 1, Track record 1, Breadth 2, Peg 2, Newness 1, Producibility 2) · **Lead test:** passes 2 of 3 (stop-and-check, title) · *JEFF'S CALL: not a scam*
+
+### POTENTIAL PACKAGING
+
+- The FREE Phone Deal — THEN Came a $1,200 Bill
+- Check Your Phone Bill For THIS — Your "Free" Phone ISN'T Free
+- Your Carrier Charged You For a Phone You SENT BACK
+
+**Built on:** The Amazon Fee HITTING Prime Accounts — You're Paying TWICE! (229K).
+
+### THE PITCH
+
+The carrier says the new phone is free. Then the credit disappears, or the phone you sent back gets "lost," and you're billed $1,200. Black Friday phone deals start in three weeks. Viewers can check tonight: look at the bill for the promo credit they were promised.
+
+### CASES
+
+- **Kansas (Feb 2026).** Steve Crawford was offered a free iPhone 16 upgrade, was told the promo had ended, and shipped the phone back with tracking. AT&T billed him nearly $1,200 for a "lost" phone, then refunded it after KMBC stepped in: "We acknowledged that we fell short." *KMBC 9, Feb 3, 2026.* CHECK: kmbc.com blocks this container; confirm the page.
+- **T-Mobile (April 2026).** A customer was promised three iPhone 17 Pros for $0 and was credited only a few hundred dollars; unresolved. *TmoNews citing PhoneArena, Apr 17, 2026.*
+- **Pottstown, PA (Sept 2025).** Billed for a "free" Xfinity Mobile Apple Watch; Comcast dropped $237. *CBS Philadelphia, Sep 19, 2025.*
+
+> **CLIP** — YouTube, KMBC 9, 47,432 views (observed Oct 28), video dated Feb 4, 2026 on KMBC's page
+> https://www.youtube.com/watch?v=PeUvfRhTVCw
+> "Kansas AT&T customer charged nearly $1,200 after returning iPhone despite proof of shipment." Also WCVB "free" T-Mobile offer, 163,174 (Z31mP2YXapM), and NBC10, 130,333 (227BkcYfTxo); both dates unconfirmed.
+> *Not watched — no timecode, no outcue.*
+
+### COVERAGE CHECK
+
+Never covered (promo, bill credit, trade-in). Sep 25 ("Don't Return THIS Package") was a fake-carrier scam; this is the real carrier's billing.
+
+### FOOTAGE WE NEED
+
+- **The get:** KMBC's package, or WCVB or NBC10 if their dates check out.
+- Jeff reads a real promo's fine print: 36 months of credits that stop if you leave. *(demo)*
+
+### THE PAYOFF
+
+- **Screenshot the deal's terms before you say yes, and check your next two bills for the credit.**
+- Return a phone only with tracking and insurance, and keep the receipt.
+- Billed anyway? Dispute it in writing, then file with the FCC. *(verify)*
+
 # RESEARCH SOURCES & VERIFICATION FLAGS
 
 ## READ THIS FIRST
@@ -676,6 +761,22 @@ Mar 18 home repair is the nearest. It shares the home theme with #6.
 
 **NEEDS VERIFICATION:** CHECK: only one named homeowner.
 
+## STORY 14 — RETURN FILES
+
+**Confirmed:** CFPB lists The Retail Equation as a consumer reporting company (returns), with a free report: (800) 652-2331, P.O. Box 51373, Irvine, CA (v). TRE's site: approve, warn or deny recommendations; Return Activity Report requests within 60 days of the transaction, or by email (v).
+
+**Sources:** https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/companies-list/retail-equation/ · https://www.theretailequation.com/ · BBB complaints: https://www.bbb.org/us/ca/irvine/profile/point-of-sale-systems/the-retail-equation-1126-13140940/complaints · Appriss benchmark (reported Feb 20, 2026) · NY S2440 (re-referred Jan 7, 2026)
+
+**NEEDS VERIFICATION:** CHECK: no named shopper in news coverage from the last 12 months; the cases are anonymous BBB complaints (research pass). CHECK: the CNBC clip's upload date. LEGAL: don't imply one shared blacklist across stores, or any credit-score effect. Name a store only if a source names it.
+
+## STORY 15 — "FREE" PHONE BILL
+
+**Confirmed (research pass):** KMBC Feb 3, 2026, the Crawford case and AT&T's statement. TmoNews Apr 17, 2026. CBS Philadelphia Sep 19, 2025.
+
+**Sources:** https://www.kmbc.com/article/kmbc-9-investigates-helps-kansas-man-after-att-iphone-promotion-leads-to-1200-charge/70239515 · https://www.tmonews.com/?p=59525
+
+**NEEDS VERIFICATION:** CHECK: I couldn't open KMBC from here. CHECK: the WCVB and NBC10 clip dates and stories. Every case was refunded or credited, so say "billed," not "lost."
+
 ## STORIES CUT — SOURCING PRESERVED
 
 The gate each story failed comes first.
@@ -708,8 +809,6 @@ The gate each story failed comes first.
 - FaceTime screen-share impostor.
 
 **No clip on the specific scam, or Heat 0 (H6):**
-- Hotel reseller sites (from your file): no 9NEWS video found. The Medina couple was refunded; the unrefunded case is Australian.
-- AT&T free-phone bill (from your file): no clip found; KMBC wouldn't load. Also next to the Sep 25 phone-return show.
 - Bank courier for your card (clips under 2K).
 - Bank-merger phishing.
 - Fake data-breach letters.
@@ -719,20 +818,22 @@ The gate each story failed comes first.
 - Military funeral honors (also H1).
 
 **Not happening now (H2):**
-- Store return-tracking files (from your file): newest coverage 2018–2020; no 2025–26 case. Gets over with a 2026 shopper denied and a package.
-- Hotel sheets (from your file): newest investigation 2020. Also H1: no villain.
 - Medical-alert scams.
 - Authorized user on its own (2024; folded into #2).
 
 **No villain, or the viewer isn't the target (H1):**
-- Airline bump payouts (from your file): a perk, not a scam.
+- Airline bump payouts (from your file): a perk, and it fails consumer H1 too.
 - Recalled heated blankets.
 - Tristar pressure cooker.
 - iOS 27 settings and "stop taking screenshots": settings tips with no villain.
 - Hospice fraud as a taxpayer story.
 
 **Off the list:**
-- Thanksgiving dinner prices (from your file): price comparison, Friday deals slot only.
+- Thanksgiving dinner prices (from your file): a price comparison, which fails consumer H1. Not killed: it belongs in the Friday deals block (Nov 20 or 27), with Jeff shopping the baskets himself.
+
+**Consumer track, failed (Oct 28 re-grade):**
+- Hotel reseller sites (from your file): travel-only fails consumer H1; also H6 (no clip found; the Medina couple was refunded; the unrefunded case is Australian).
+- Hotel sheets not changed (from your file): travel-only fails H1; H2 (newest investigation 2020).
 - Prime refunds.
 
 **Niche (H1):**
@@ -749,4 +850,5 @@ The gate each story failed comes first.
    - #5 vs. the Oct 9 Medicare show.
 4. **Filmed since Oct 25** that I can't see?
 5. **Street crime:** do #4 and #7 pitch at all, given the "blue collar crime" note?
-6. **Rights:** bodycam aggregators (#3), the compilation (#1), Nat Geo-style network footage.
+6. **Consumer A's:** does Jeff take #14 or #15 as an A, given his "has to be a scam" rule? Log his answer in the calibration log.
+7. **Rights:** bodycam aggregators (#3), the compilation (#1), Nat Geo-style network footage.

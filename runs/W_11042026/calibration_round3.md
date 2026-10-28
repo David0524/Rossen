@@ -18,3 +18,7 @@ H4 cut the most: already pitched Oct 25, already in the Oct 30 pre-bible, or air
 2026-10-28 | "You won!" prize call | prizes | 1/1/1/2/2/2/2 = 11 (B/C only) | pending |
 2026-10-28 | Rental car damage that wasn't there | travel | 1/2/0/2/2/2/2 = 11 (B/C only) | pending |
 2026-10-28 | Contractor bankrupt with your deposit | home | 1/2/2/1/2/1/1 = 10 (B/C only) | pending |
+2026-10-28 | Stores keep a file on your returns (consumer track) | rules_ban | Stakes 2/H2/T2/B2/P1/N1/Pr2 = 12 (JEFF'S CALL: not a scam) | pending |
+2026-10-28 | "Free" phone that cost $1,200 (consumer track) | bills | Stakes 2/H1/T1/B2/P2/N1/Pr2 = 11 (JEFF'S CALL: not a scam) | pending |
+
+Consumer-track cuts (scan file): hotel reseller (H1 travel-only, H6), hotel sheets (H1 travel-only, H2), airline bump payouts (H1 perk), Thanksgiving dinner (H1 price comparison; moved to the Friday deals block), phone deactivation (scam track: H3, H6).

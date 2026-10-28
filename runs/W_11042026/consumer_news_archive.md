@@ -108,7 +108,9 @@ Keep the scam track as is. Add a second track for stories with no scammer, chose
 
 **Packaging rule:** frame it as the company doing it to you (TRAP, BAN, ARREST, SPYING, "What They're Hiding"), never as a deal, a fee explainer or a lawsuit headline. Don't call a non-scam a "scam" in the title (tipping did, and it worked, but it's a credibility risk).
 
-## The seven scan pitches, graded on the draft consumer track
+## The seven scan pitches, graded on the consumer track
+
+Installed in the skill Oct 28. Final grades, after the returns and phone research: return files 12/14 and "free" phone 11/14 both pass as A-caliber (consumer), flagged JEFF'S CALL. Thanksgiving goes to the Friday deals block. Hotel reseller, hotel sheets and airline payouts fail H1. Cards 14 and 15 are on Pre_Bible_Round3_10_28. The table below is the first-pass read.
 
 | Pitch | H1 | Archive analog | Stakes / Track | Verdict |
 |---|---|---|---|---|
