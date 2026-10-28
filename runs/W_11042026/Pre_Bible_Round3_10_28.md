@@ -765,7 +765,7 @@ Never covered (promo, bill credit, trade-in). Sep 25 ("Don't Return THIS Package
 
 **Confirmed:** CFPB lists The Retail Equation as a consumer reporting company (returns), with a free report: (800) 652-2331, P.O. Box 51373, Irvine, CA (v). TRE's site: approve, warn or deny recommendations; Return Activity Report requests within 60 days of the transaction, or by email (v).
 
-**Sources:** https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/companies-list/retail-equation/ · https://www.theretailequation.com/ · BBB complaints: https://www.bbb.org/us/ca/irvine/profile/point-of-sale-systems/the-retail-equation-1126-13140940/complaints · Appriss benchmark (reported Feb 20, 2026) · NY S2440 (re-referred Jan 7, 2026)
+**Sources:** https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/companies-list/retail-equation/ · https://www.theretailequation.com/ · BBB complaints: https://www.bbb.org/us/ca/irvine/profile/point-of-sale-systems/the-retail-equation-1126-13140940/complaints · News4JAX, Aug 19, 2026: https://www.news4jax.com/money/2026/08/19/retailers-are-banning-shoppers-for-life-in-return-fraud-crackdown/ · NRF, Oct 15, 2025: https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025 · Appriss benchmark, Feb 20, 2026 (vendor): https://e-commerce.news/story/retailers-face-usd-796bn-in-losses-from-returns-shrink · NY S2440: https://www.nysenate.gov/legislation/bills/2025/S2440
 
 **NEEDS VERIFICATION:** CHECK: no named shopper in news coverage from the last 12 months; the cases are anonymous BBB complaints (research pass). CHECK: the CNBC clip's upload date. LEGAL: don't imply one shared blacklist across stores, or any credit-score effect. Name a store only if a source names it.
 
@@ -773,7 +773,7 @@ Never covered (promo, bill credit, trade-in). Sep 25 ("Don't Return THIS Package
 
 **Confirmed (research pass):** KMBC Feb 3, 2026, the Crawford case and AT&T's statement. TmoNews Apr 17, 2026. CBS Philadelphia Sep 19, 2025.
 
-**Sources:** https://www.kmbc.com/article/kmbc-9-investigates-helps-kansas-man-after-att-iphone-promotion-leads-to-1200-charge/70239515 · https://www.tmonews.com/?p=59525
+**Sources:** https://www.kmbc.com/article/kmbc-9-investigates-helps-kansas-man-after-att-iphone-promotion-leads-to-1200-charge/70239515 · https://www.tmonews.com/?p=59525 · CBS Philadelphia, Sep 19, 2025: https://www.cbsnews.com/philadelphia/news/free-iphone-promotion-legit-xfinity-verizon-tmobile/
 
 **NEEDS VERIFICATION:** CHECK: I couldn't open KMBC from here. CHECK: the WCVB and NBC10 clip dates and stories. Every case was refunded or credited, so say "billed," not "lost."
 
