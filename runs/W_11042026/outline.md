@@ -7,9 +7,9 @@
 | Slot | What | Weight | Clips |
 |---|---|---|---|
 | Tease | The state may be holding your money; the shelf said one price and the register another; the Walmart and Sam's bundle; hold-back: the free search | — | — |
-| A | The state may be holding your money | ~50% of show | 6/6 (2 manual) |
+| A | The state may be holding your money | ~50% of show | 5/5 (1 manual) |
 | Break | OmniWatch — bridged from A beat 8 (forged claims, stolen identities) | — | — |
-| B | Dollar General sued over shelf vs. register prices | ~35% | 4/4 (1 manual) |
+| B | Dollar General sued over shelf vs. register prices | ~35% | 4/4 (1 manual) + Jeff's 10/14 video |
 | C | Perks you're paying for | ~15% | 2/2 (1 manual) |
 | End | End of show | — | — |
 
@@ -31,9 +31,9 @@ Starts hopeful (free money), turns to outrage as the state keeps, then sells, pe
 - C overlaps the August 7 show "10 Things Walmart Gives You FREE," which covered Walmart+ at length. The Sam's Club bundle (Oct 20) is the new part; keep it to that.
 - A runs 9 beats, the maximum. Every A case except one is old (2021 to 2025). If A needs to lose a beat, cut beat 7 or fold beat 5 into beat 6.
 - A beat 7's man can't be named from the CBS clip: the reporter narrates the Delaware sale over graphics, and he is never named or shown. Keep it as a policy beat (Jeff plus the clip), find a package with him, or fold it into beat 6.
-- B runs 5 beats, over the 2–4 for a B, because of the news peg. Keep it heavy, or fold beat 5 into the fix. B beat 1's Who is the FTC and 20 states, not a person; the lawsuit is the peg, and Lori (beat 2) is the human lead.
+- B runs 6 beats with the 10/14 callback (added 10/28), over the 2–4 for a B. Keep it heavy, or fold beat 6 into the fix. B beat 2's Who is the FTC and 20 states, not a person; the lawsuit is the peg, and Lori (beat 3) is the human lead. The callback turns the 10/14 repeat risk into "we warned you"; never "we made a difference" (the FTC suit came out of its own investigation).
 - A beat 8 is a still (the California AG release). Keep it as a quick still, or find a local package on the father and son?
-- Videos: 4 TikTok beats (A1, A2, B2, C2) are in the manual lane. TikTok refuses requests from this container, so the plan's in/out points for them are unverified; pull and check them by hand.
+- Videos: 3 TikTok beats (A2, B3, C2; the room cut A1's on 10/28) are in the manual lane. TikTok refuses requests from this container, so the plan's in/out points for them are unverified; pull and check them by hand.
 - A6 · LEGAL: Eugene calls it "theft" and "stealing"; the answer (Schwab and the state both say they sent warning letters) sits just after the cut. Extend the last slice to "he never received them" (Videos row 6), or have Jeff say it.
 - A6 re-cut: the plan's outcues didn't match its times (its first out lands on "website", its last on "the state says it has six months"). The Videos row has verified cuts.
 - C1: the YouTube copy's captions were bot-walled; timecodes come from Whisper on the identical GMA piece on abcnews.com, one second shorter. Give it one look.
@@ -54,7 +54,7 @@ Starts hopeful (free money), turns to outrage as the state keeps, then sells, pe
 
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
-| 1 | The hook | You (the viewer) | States hold an estimated $70 billion for about 1 in 7 Americans, and most never look. | HAVE · VERTICAL BROLL — TikTok @financeunfolded |
+| 1 | The hook | You (the viewer) | States hold an estimated $70 billion for about 1 in 7 Americans, and most never look. | JEFF — clip cut by the room, 10/28 |
 | 2 | The search | Alex Pearlman, TikTok creator (Apr 2023) | Searching for his wife, he finds a paycheck from a Ruby Tuesday she worked at in 2002. | HAVE · VERTICAL — TikTok @pearlmania500 |
 | 3 | The letter | Barbara, 88, Bradenton FL woman (Sept 2025) | Sure the letters were a scam, she called police; the detective found the real one, worth $108,000. | HAVE · HORIZONTAL — FOX 13 Tampa Bay |
 | 4 | How it works | You (the viewer) | A company that can't reach you for about three years must hand the money to the state; claiming is free. | JEFF |
@@ -68,14 +68,13 @@ Starts hopeful (free money), turns to outrage as the state keeps, then sells, pe
 
 | # | Clip | Shows | In–Out | Status |
 |---|---|---|---|---|
-| 1 | [@financeunfolded — unclaimed-money search](https://www.tiktok.com/@financeunfolded/video/7023899798654782726) | The government's unclaimed-money page, "usually between $0 - $1000", on-screen text over music (per the plan). | — | MANUAL · UNVERIFIED |
 | 2 | [@pearlmania500 — unclaimed property](https://www.tiktok.com/@pearlmania500/video/7220912200855178538) | Pearlman to camera: he searched for his wife and found a 2002 Ruby Tuesday paycheck (line confirmed in Yahoo/AT&T coverage, Nov 2023). | — | MANUAL · UNVERIFIED |
 | 3 | [FOX 13 — Woman receives thousands in unclaimed funds](https://www.fox13news.com/news/elderly-florida-woman-collects-108k-unclaimed-funds-after-thinking-she-was-getting-scammed) | Barbara on the letters she thought were a scam, the detective who found the state's letter, $108,000. Sept 3, 2025, 2:43. | 0:20–0:31 "gives money away" BUTT 0:56–1:22 "find out before I died" BUTT 1:35–1:51 "best thing that ever happened to me" | PICK |
 | 5 | [ABC7 Chicago I-Team — Illinois unclaimed property loophole](https://www.youtube.com/watch?v=dbBueUfmuSI) | Udvance on the paperwork she sent, then the $19,379 the state won't release without two defunct companies. Jan 28, 2025. | 0:15–0:25 "that I changed my name" BUTT 1:00–1:20 "a loophole that they need to figure out" | PICK |
 | 6 | [CBS Sacramento — Call Kurtis: $275K unclaimed](https://www.youtube.com/watch?v=80djyAsS-YE) | The Breznocks' $275,000 Schwab account sent to the state after three untouched years; Eugene on the sleepless nights. | 0:12–0:46 "to the state's unclaimed property program for safekeeping" BUTT 1:01–1:15 "this is unconstitutional stealing" BUTT 2:32–2:48 "that's a lot of nerve" | PICK · LEGAL |
 | 7 | [CBS News California — unclaimed property investigation](https://www.youtube.com/watch?v=1Grj5UvPLwo) | Reporter narration: Delaware allegedly sold a man's Amazon stock for $8,000; California must sell within 20 months. No victim on camera. | 2:09–2:23 "for just $8,000" BUTT 2:56–3:07 "by the time you find your unclaimed funds" | PICK |
 
-*Row 3: Whisper hears "Everybody gives money away" at 0:29; the plan heard "Nobody". One listen. Row 6: the plan's own outcues didn't match its times; these are re-cut to verified sentence ends. Proposed LEGAL fix: run the last slice to 3:05 "he never received them" so the state's answer airs. Rows 1–2: TikTok refuses requests from here; the plan's in/out (row 2: 0:05–0:12 BUTT 0:52–0:58 BUTT 1:56–2:15) are unchecked.*
+*Row 3: Whisper hears "Everybody gives money away" at 0:29; the plan heard "Nobody". One listen. Row 6: the plan's own outcues didn't match its times; these are re-cut to verified sentence ends. Proposed LEGAL fix: run the last slice to 3:05 "he never received them" so the state's answer airs. Row 2: TikTok refuses requests from here; the plan's in/out (0:05–0:12 BUTT 0:52–0:58 BUTT 1:56–2:15) are unchecked. Row 1's TikTok was cut by the room (10/28).*
 
 ### The fix
 
@@ -98,8 +97,8 @@ Starts hopeful (free money), turns to outrage as the state keeps, then sells, pe
 
 ### Jeff should know
 
-- Beat 1: the TikTok's "usually between $0 and $1,000" is the government page's own wording; most finds are small.
-- Beat 6: the Breznocks do get it all back (per the plan, at 2:41 in the clip).
+- Beat 1: most finds are small (the government page says "usually between $0 and $1,000").
+- Beat 6: after CBS stepped in he could claim it all; at the time of the report the state had returned $50,000 in cash and the stock was still transferring (clip, 2:32–2:56).
 - Beat 7: the Delaware sale is an allegation in the CBS report; California law requires the state to sell unclaimed stock within 20 months.
 - Beat 8: the father and son are charged, not convicted.
 
@@ -112,28 +111,29 @@ Starts hopeful (free money), turns to outrage as the state keeps, then sells, pe
 **Peg:** The FTC and 20 states sued Dollar General on October 27 → shoppers wonder if it's happening to them → it's a quarter here, 50 cents there, so nobody checks. "The tag is a promise. The register doesn't keep it."
 **Framing:** at the register, in a store.
 
-**Climb:** a lawsuit → one shopper who noticed → a whole county that failed → an employee who says they weren't allowed to fix it.
+**Climb:** we warned you → a lawsuit → one shopper who noticed → a whole county that failed → an employee who says they weren't allowed to fix it.
 
 **Weight:** ~35% of show · 4 clip beats
 
 | # | Beat | Who | What happens | Clip |
 |---|---|---|---|---|
-| 1 | The lawsuit | FTC and 20 states (Oct 27, 2026) | They sue Dollar General, saying it charged more at the register than the shelf for years. | HAVE · HORIZONTAL — ABC News / GMA |
-| 2 | She noticed | Lori Hartline, Oklahoma shopper (Mar 2024) | Kitty litter tagged $8.95 rang up $10 week after week; her complaint got a $10 gift card. | HAVE · VERTICAL — TikTok @moreperfectunion |
-| 3 | The whole county | William Anderson, Butler County OH (Oct 2022) | He took his receipts to the auditor; all 20 Dollar General stores inspected failed. | HAVE · HORIZONTAL — LOCAL 12 Cincinnati |
-| 4 | Why it isn't fixed | Lynda Swank, former Dollar General employee (Nov 2022) | She says a manager told her they weren't allowed to fix prices at the register. | HAVE · HORIZONTAL — WHIO Dayton |
-| 5 | Still happening | You (the viewer) | New York secret shoppers were overcharged on 14% of items this month; snap the tag before you pay. | JEFF |
+| 1 | We warned you | Jeff, 10/14 show (Oct 14, 2026) | Jeff's own 10/14 segment on the register charging more than the shelf, cut to its store-neutral lines. | JEFF — ROLL JEFF VIDEO, 10/14 supercut (still to cut) |
+| 2 | The lawsuit | FTC and 20 states (Oct 27, 2026) | They sue Dollar General, saying it charged more at the register than the shelf for years. | HAVE · HORIZONTAL — ABC News / GMA |
+| 3 | She noticed | Lori Hartline, Oklahoma shopper (Mar 2024) | Kitty litter tagged $8.95 rang up $10 week after week; her complaint got a $10 gift card. | HAVE · VERTICAL — TikTok @moreperfectunion |
+| 4 | The whole county | William Anderson, Butler County OH (Oct 2022) | He took his receipts to the auditor; all 20 Dollar General stores inspected failed. | HAVE · HORIZONTAL — LOCAL 12 Cincinnati |
+| 5 | Why it isn't fixed | Lynda Swank, former Dollar General employee (Nov 2022) | She says a manager told her they weren't allowed to fix prices at the register. | HAVE · HORIZONTAL — WHIO Dayton |
+| 6 | Still happening | You (the viewer) | New York secret shoppers were overcharged on 14% of items this month; snap the tag before you pay. | JEFF |
 
 ### Videos
 
 | # | Clip | Shows | In–Out | Status |
 |---|---|---|---|---|
-| 1 | [ABC News / GMA — Dollar General sued](https://abcnews.com/video/137597689/) | The FTC and 20 states' complaint, the $2.75 trail mix rung up at $5, then Dollar General's statement. Oct 27, 2026, 1:31. | 0:08–1:11 "we will defend this litigation vigorously" | PICK |
-| 2 | [More Perfect Union — Dollar General](https://www.tiktok.com/@moreperfectunion/video/7350333548567596330) | Lori Hartline on the kitty litter and the $10 gift card (per the plan). 8:41. | — | MANUAL · UNVERIFIED |
-| 3 | [LOCAL 12 — Dollar General customers overcharged](https://local12.com/news/local/local-dollar-general-customers-were-you-overcharged-for-your-items-overpriced-receipt-auditor-audit-county-butler-stores-retail-tombstone-pizza-diet-coke-lower-list-prices-complaint-dishonest-cincinnati-ohio) | Anderson on his cereal receipts, then the auditor's 20 failed stores and the $2 creamer that rang up $4.35. Oct 27, 2022, 2:20. | 0:20–0:54 "eight and a half" BUTT 1:10–1:58 "he says it's immoral" | PICK |
-| 4 | [WHIO — Former Dollar General employee speaks out](https://www.whio.com/news/local/i-team-former-dollar-general-employee-speaks-out-about-price-swapping-allegations/GJYUFBCY4NFHBLGLBCWOVLOEUQ/) | Swank on "Super Tuesday" price changes with two staff, then the manager who said "not at the register". Nov 23, 2022, 2:47. | 0:59–1:43 "price changes that needed to be done on any particular week" BUTT 1:49–2:03 "not at the register" | PICK |
+| 2 | [ABC News / GMA — Dollar General sued](https://abcnews.com/video/137597689/) | The FTC and 20 states' complaint, the $2.75 trail mix rung up at $5, then Dollar General's statement. Oct 27, 2026, 1:31. | 0:08–1:11 "we will defend this litigation vigorously" | PICK |
+| 3 | [More Perfect Union — Dollar General](https://www.tiktok.com/@moreperfectunion/video/7350333548567596330) | Lori Hartline on the kitty litter and the $10 gift card (per the plan). 8:41. | — | MANUAL · UNVERIFIED |
+| 4 | [LOCAL 12 — Dollar General customers overcharged](https://local12.com/news/local/local-dollar-general-customers-were-you-overcharged-for-your-items-overpriced-receipt-auditor-audit-county-butler-stores-retail-tombstone-pizza-diet-coke-lower-list-prices-complaint-dishonest-cincinnati-ohio) | Anderson on his cereal receipts, then the auditor's 20 failed stores and the $2 creamer that rang up $4.35. Oct 27, 2022, 2:20. | 0:20–0:54 "eight and a half" BUTT 1:10–1:58 "he says it's immoral" | PICK |
+| 5 | [WHIO — Former Dollar General employee speaks out](https://www.whio.com/news/local/i-team-former-dollar-general-employee-speaks-out-about-price-swapping-allegations/GJYUFBCY4NFHBLGLBCWOVLOEUQ/) | Swank on "Super Tuesday" price changes with two staff, then the manager who said "not at the register". Nov 23, 2022, 2:47. | 0:59–1:43 "price changes that needed to be done on any particular week" BUTT 1:49–2:03 "not at the register" | PICK |
 
-*Row 2: TikTok refuses requests from here; the plan's four slices of Lori's own words (1:46–2:29 BUTT 2:31–2:49 BUTT 3:04–3:23 BUTT 8:18–8:34) are unchecked. Row 3: optional, run the out to 2:00 "that to me is like lying", Anderson's own line. Dollar General "hasn't returned our emails" at 2:17, outside the cut. Rows 3–4 are Whisper on the stations' page video; both are news-site links, not YouTube.*
+*Row 1: Jeff's 10/14 video, store-neutral lines only (no Walmart); cut list in SUPERCUT_HANDOFF.md, added 10/28 at the producer's OK. Row 3: TikTok refuses requests from here; the plan's four slices of Lori's own words (1:46–2:29 BUTT 2:31–2:49 BUTT 3:04–3:23 BUTT 8:18–8:34) are unchecked. Row 4: optional, run the out to 2:00 "that to me is like lying", Anderson's own line. Dollar General "hasn't returned our emails" at 2:17, outside the cut. Rows 4–5 are Whisper on the stations' page video; both are news-site links, not YouTube.*
 
 ### The fix
 
@@ -145,16 +145,17 @@ Starts hopeful (free money), turns to outrage as the state keeps, then sells, pe
 
 ### Gaps
 
-- ⚠️ B2 Lori is March 2024: date it on air.
-- ⚠️ B3 Anderson is October 2022 and B4 Swank is November 2022: date both on air.
+- ⚠️ B3 Lori is March 2024: date it on air.
+- ⚠️ B4 Anderson is October 2022: date it on air.
+- ⚠️ B5 Swank is November 2022: date it on air.
 - ⚠️ The 14% New York figure and the Florida "I have to overcharge you" quote need sources.
 - ⚠️ Check for new filings or a fuller company statement the morning of taping (from the plan).
 
 ### Jeff should know
 
-- Beat 1: Dollar General says it will defend the litigation vigorously.
-- Beat 3: Family Dollar stores in the same county also failed (13 of 13).
-- Beat 5: Walmart paid $45 million to settle claims over weighted-goods pricing and denied wrongdoing; don't call it the same scheme.
+- Beat 2: Dollar General says it will defend the litigation vigorously.
+- Beat 4: Family Dollar stores in the same county also failed (13 of 13).
+- Beat 6: Walmart paid $45 million to settle claims over weighted-goods pricing and denied wrongdoing; don't call it the same scheme.
 
 # C. PERKS YOU'RE PAYING FOR
 
