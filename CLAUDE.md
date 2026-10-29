@@ -55,6 +55,7 @@ Producer rulings that hold every week:
   OmniWatch). No "NEXT…" lines and no "BUT FIRST, A QUICK WORD" before a break. This overrides the
   script-writer skill's tease-then-break rule (Ryan note 7) until the skill is updated.
 - Graphic requests: deliver a ChatGPT-ready image prompt in chat. Keep "police say" / accused framing on screen.
+  Follow `docs/GRAPHICS_STYLE_GUIDE.md` (Style Guide 2.0, 10/29/2026); headlines only, Jeff adds context in voiceover.
 
 Workarounds:
 - Drive, only when asked: .docx → `tools/bible_docx_to_html.py` → upload the HTML as a new Google Doc in the
