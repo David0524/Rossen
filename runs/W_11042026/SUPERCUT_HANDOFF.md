@@ -93,6 +93,39 @@ For each bite:
 **Show David the cut list (bite, in, out, verbatim outcue, what's on screen) before
 rendering.**
 
+
+## Editorial brief (producer, 10/29/2026)
+
+**The story it serves.** 11/4 F2, story B: the FTC and 20 states sued Dollar General (filed Oct 26, 2026) for charging more at the register than on the shelf. The supercut opens B and says, in Jeff's own voice from 10/14: *we've been on this, we told you, and now there's legal action.*
+
+**Where it sits in the bible:**
+
+```
+THE PRICE ON THE SHELF IS A PROMISE… AND THE REGISTER ISN'T ALWAYS KEEPING IT
+-I'VE BEEN WARNING YOU ABOUT THIS.
+-THREE WEEKS AGO, WE SHOWED YOU WHAT CAN HAPPEN AT CHECKOUT.
+-WATCH THIS.
+(((ROLL JEFF VIDEO - OCT 14, 2026 SHOW - REGISTER SUPERCUT)))     <- this
+NOW THE FTC AND 20 STATES ARE SUING                                <- Jeff, live, right after
+-THEY SAY FOR YEARS, DOLLAR GENERAL CHARGED MORE AT THE REGISTER THAN ON THE SHELF.
+```
+
+So the supercut is the bridge between "I've been warning you" and "now the FTC and 20 states are suing." It has to (1) show the problem in Jeff's words, (2) show it's not one store, and (3) end on a line that makes "Now the FTC and 20 states are suing" land as the payoff.
+
+**Order of the bites (arc, not script order):**
+1. The setup: "You see the sale sign. You grab it. You scan it at self-checkout."
+2. The blind spot: "Do you actually look at the price on the checkout screen? Most of us don't."
+3. The habit (optional, if time): "Check the tag against the screen. Every time."
+4. **End on:** "And it's not just one store. Last year Target and Dollar General stores were fined for ringing up more than the shelf." This is the closer: it names Dollar General in Jeff's 10/14 voice, and Jeff's next live line is "Now the FTC and 20 states are suing."
+
+20–40 seconds. Bite 4 is required; 1 + 2 + 4 alone works.
+
+**Hard rules:**
+- **No Walmart**, in audio or on screen: not Amanda's Chef Boyardee TikTok, not the digital price tags, not the $5.6 million settlement, not James Wrigg's TikTok, not "we reached out to Walmart." Check stills from the start, middle and end of each bite for Walmart signs, logos, lower-thirds or B-roll; trim around them or drop the bite.
+- **Don't overstate what 10/14 was.** It was a report built on viewers' videos, not an investigation of Dollar General, and our story didn't cause the lawsuit (the FTC's case came out of its own multi-year investigation). The cut and Jeff's lines say "we told you" and "we showed you," never "we investigated Dollar General" or "because of us."
+- Cut on what Jeff actually said (transcript), not the script; he riffs. Clean in/out on sentence boundaries; short dips or audio crossfades between bites.
+- Show David the cut list (bite, in, out, verbatim outcue, what's on screen) and wait for his OK before rendering.
+
 ## 5. Render
 
 Cut each bite, then join them with a short dip (about 6 frames to black, or a 0.2 s audio
