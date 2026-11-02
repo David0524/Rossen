@@ -1,0 +1,139 @@
+{
+ "note": "Timecodes are on the outlets' site cuts (Whisper). Nothing downloaded or cut for edit.",
+ "clips": [
+  {
+   "beat": "11-11-A2",
+   "url": "https://www.cbsnews.com/boston/news/braintree-burglaries-hidden-camera-spy/",
+   "platform": "news_web",
+   "source_type": "affiliate",
+   "alt_youtube": "https://www.youtube.com/watch?v=K-0vvz2MhsE",
+   "segments": [
+    [
+     "0:30",
+     "1:00",
+     "really, really shocking"
+    ],
+    [
+     "1:21",
+     "1:32",
+     "camouflaged into the bushes"
+    ],
+    [
+     "2:04",
+     "2:20",
+     "in the middle of the night"
+    ]
+   ],
+   "transcript_rung": 2
+  },
+  {
+   "beat": "11-11-A3",
+   "url": "https://www.cbsnews.com/losangeles/news/rancho-cucamonga-hidden-cameras-police-warning/",
+   "platform": "news_web",
+   "source_type": "affiliate",
+   "alt_youtube": "https://www.youtube.com/watch?v=hLl9btk1VxU",
+   "segments": [
+    [
+     "0:16",
+     "0:36",
+     "in the past two weeks"
+    ],
+    [
+     "1:02",
+     "1:14",
+     "been in your home"
+    ]
+   ],
+   "transcript_rung": 2
+  },
+  {
+   "beat": "11-11-A4",
+   "url": "https://www.cbsnews.com/losangeles/news/suspects-break-into-west-hills-home-during-daytime-burglary",
+   "platform": "news_web",
+   "source_type": "affiliate",
+   "segments": [
+    [
+     "0:53",
+     "1:44",
+     "the camera that they dropped off last night"
+    ]
+   ],
+   "transcript_rung": 2
+  },
+  {
+   "beat": "11-11-A5",
+   "url": "https://abc7.com/videoClip/19140194/",
+   "platform": "news_web",
+   "source_type": "affiliate",
+   "segments": [
+    [
+     "0:00",
+     "0:05",
+     "are now behind bars"
+    ],
+    [
+     "0:24",
+     "0:46",
+     "monitor possible targets"
+    ]
+   ],
+   "transcript_rung": 2,
+   "flags": [
+    "LEGAL"
+   ]
+  },
+  {
+   "beat": "11-11-A6",
+   "url": "https://www.nbcnews.com/news/amp-video/mmvo253857861920",
+   "platform": "news_web",
+   "source_type": "network",
+   "alt_youtube": "https://www.youtube.com/watch?v=LuNTbekmqnM",
+   "segments": [
+    [
+     "0:00",
+     "0:28",
+     "10 to 20 feet"
+    ]
+   ],
+   "transcript_rung": 2
+  },
+  {
+   "beat": "11-11-A7",
+   "url": "https://abc13.com/post/members-international-organized-residential-burglary-ring-arrested-posing-amazon-drivers-irvine-ca-break-video/16472783/",
+   "platform": "news_web",
+   "source_type": "affiliate",
+   "segments": [
+    [
+     "0:31",
+     "1:18",
+     "literally everything"
+    ],
+    [
+     "2:32",
+     "2:47",
+     "show up on your property"
+    ]
+   ],
+   "transcript_rung": 2
+  },
+  {
+   "beat": "11-11-A9",
+   "url": "https://abc7.com/videoClip/19140194/",
+   "platform": "news_web",
+   "source_type": "affiliate",
+   "segments": [
+    [
+     "1:04",
+     "1:15",
+     "like Wi-Fi jammers"
+    ],
+    [
+     "1:16",
+     "1:51",
+     "what's going on"
+    ]
+   ],
+   "transcript_rung": 2
+  }
+ ]
+}

@@ -117,3 +117,21 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 
 
 **Revision 10/14 (producer):** B reworked to rental cars in general. Added 10-21-B1 (authority_report/victim, H) PICK, producer-supplied link: CBS Evening News 0ANywiehCCA 0:19–1:03 "that I didn't even detect" BUTT 1:35–1:50 "showed no billable damage" BUTT 2:23–2:28 "waved the $350" (Hertz AI scanner, Aug 2025). KSL picks renumbered B2/B3. Lesson: a peer-to-peer app (Turo) reads as niche for a 55+ audience; lead a rental story with a legacy company.
+
+## Run W_11112026 (one-story F2: burglars' cameras in the bushes)
+
+| Beat | Role | Or. | Outcome | Why / source |
+|---|---|---|---|---|
+| 11-11-A2 | victim_interview | H | PICK | CBS Boston site cut (cbsnews.com/boston braintree-burglaries-hidden-camera-spy) 0:30–1:00 "really, really shocking" BUTT 1:21–1:32 "camouflaged into the bushes" BUTT 2:04–2:20 "in the middle of the night"; Whisper rung 2 (YouTube K-0vvz2MhsE bot-walled) |
+| 11-11-A3 | victim_interview | H | PICK | CBS LA site cut (rancho-cucamonga-hidden-cameras-police-warning) 0:16–0:36 "in the past two weeks" BUTT 1:02–1:14 "been in your home"; Whisper (YouTube hLl9btk1VxU) |
+| 11-11-A4 | eyewitness | H | PICK | CBS LA/KCAL site cut (west-hills daytime burglary) 0:53–1:44 "the camera that they dropped off last night"; Whisper |
+| 11-11-A5 | authority_report | H | PICK · LEGAL | ABC7 videoClip/19140194 0:00–0:05 "are now behind bars" BUTT 0:24–0:46 "monitor possible targets"; Whisper; "alleged"/not-guilty line |
+| 11-11-A6 | evidence | H | PICK | NBC News site mmvo253857861920 0:00–0:28 "10 to 20 feet"; Whisper (YouTube LuNTbekmqnM) |
+| 11-11-A7 | victim_interview | H | PICK | ABC7 via abc13.com Irvine fake-delivery burglary 0:31–1:18 "literally everything" BUTT 2:32–2:47 "show up on your property"; Whisper |
+| 11-11-A8 | demo | H | SHOW-PRODUCED | Jeff walks a yard with a mock bush camera |
+| 11-11-A9 | authority_report | H | PICK | ABC7 videoClip/19140194 1:04–1:15 "like Wi-Fi jammers" BUTT 1:16–1:51 "what's going on"; Whisper |
+
+**Yield:** 7 PICK (1 · LEGAL) / 1 SHOW-PRODUCED of 8.
+**Pattern:** YouTube per-video pages bot-walled all session (captions and metadata, 3 tries over ~40 min), search fine. Network and affiliate site players (cbsnews.com, nbcnews.com, abc7.com videoClip, abc13.com post pages) downloaded through yt-dlp, so every pick went rung 2 on the outlet's own cut. Worth trying a site URL first when the bot wall is up. nbclosangeles.com and foxla.com pages had no extractable video.
+**Process bug:** faster-whisper's own audio decoder failed on this PyAV build (`open() got an unexpected keyword argument 'metadata_errors'`, also after upgrading av to 19.0.2). Decoding with ffmpeg to 16 kHz float32 and passing the array worked (`runs/W_11112026/site_whisper.py`). `check_outline.py --transcripts` keys on YouTube IDs, so site-cut picks skip the window scan; the windows were scanned by hand with its risk words.
+**Harvest note:** `rossen_harvest search` wasn't run; candidates came from yt-dlp flat search plus a research agent's case file (`research/`). No beats.json/picks.json this run.
