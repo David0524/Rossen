@@ -30,10 +30,10 @@ Police say burglary crews hide cameras in bushes across the street, aimed at you
 
 ### CASES
 
-- **Braintree, MA (June–July 2024).** Burglarized on vacation (their camera shows a masked man crawling in the living room). A neighbor found a taped camera in the bushes; police had the family fake a second trip and arrested three who came back for it. *CBS Boston, WCVB, Jul 16, 2024.* CHECK: date it.
-- **West Hills, LA (Mar 20, 2025).** A neighbor saw two people plant something in a bush at 2 a.m.; at 11 a.m. a masked crew ran out of a home with bags and grabbed the camera on the way. *CBS LA, Mar 20, 2025.*
-- **Irvine, CA (Easter 2025).** A knock, then a fake Amazon driver; three men leave with a suitcase; the homeowner says tens of thousands gone. Five arrested. *ABC7, May 2025.*
-- **Rancho Cucamonga (Oct 2026)** cameras found twice in two weeks; **LA County (May 20, 2026)** seven charged, cameras in turf-covered boxes plus Wi-Fi jammers. *CBS LA 10/7/26; ABC7 5/20/26.* LEGAL: "police say"; not-guilty pleas.
+- **Braintree, MA (June–July 2024).** Burglarized on vacation (their camera shows a masked man crawling in the living room). A neighbor found a taped camera in the bushes; police had the family fake a second trip and arrested three who came back for it. *[CBS Boston](https://www.cbsnews.com/boston/news/braintree-burglaries-hidden-camera-spy/), [WCVB](https://ktvz.com/?p=1387085), Jul 16, 2024.* CHECK: date it.
+- **West Hills, LA (Mar 20, 2025).** A neighbor saw two people plant something in a bush at 2 a.m.; at 11 a.m. a masked crew ran out of a home with bags and grabbed the camera on the way. *[CBS LA](https://www.cbsnews.com/losangeles/news/suspects-break-into-west-hills-home-during-daytime-burglary), Mar 20, 2025.*
+- **Irvine, CA (Easter 2025).** A knock, then a fake Amazon driver; three men leave with a suitcase; the homeowner says tens of thousands gone. Five arrested. *[ABC7](https://abc13.com/post/members-international-organized-residential-burglary-ring-arrested-posing-amazon-drivers-irvine-ca-break-video/16472783/), May 2025.*
+- **Rancho Cucamonga (Oct 2026)** cameras found twice in two weeks; **LA County (May 20, 2026)** seven charged, cameras in turf-covered boxes plus Wi-Fi jammers. *[CBS LA](https://www.cbsnews.com/losangeles/news/rancho-cucamonga-hidden-cameras-police-warning/) 10/7/26; [ABC7](https://abc7.com/post/7-arrested-socal-home-burglaries-tied-south-american-theft-group-authorities-say/19138631/) 5/20/26.* LEGAL: "police say"; not-guilty pleas.
 
 > **VIRAL CLIP** — NBC News, ~497K views (observed 11/2), story date Apr 30, 2025
 > https://www.youtube.com/watch?v=kEQircxHdHQ
@@ -59,11 +59,11 @@ Each angle, with what it adds and whether it's in the show. The outline puts the
 
 ### 1. THEY GOT CAUGHT — Braintree (IN, beat 2: the real result)
 
-Neighbor finds the camera, police stage a fake vacation, the crew walks back into the trap. **Adds:** the result Jeff wants early, plus a loss (the break-in) in the same package. Clip: CBS Boston site video. Dated 2024.
+Neighbor finds the camera, police stage a fake vacation, the crew walks back into the trap. **Adds:** the result Jeff wants early, plus a loss (the break-in) in the same package. Clip: [CBS Boston](https://www.cbsnews.com/boston/news/braintree-burglaries-hidden-camera-spy/). Dated 2024.
 
 ### 2. IT'S HERE NOW — Rancho Cucamonga (IN, beat 3: the peg)
 
-Cameras twice in two weeks this fall; a couple 40 years in their home, burglarized twice, go check their bushes. **Adds:** stakes, a 55+ face, a 2026 date. Clip: CBS LA, ~192K.
+Cameras twice in two weeks this fall; a couple 40 years in their home, burglarized twice, go check their bushes. **Adds:** stakes, a 55+ face, a 2026 date. Clip: [CBS LA](https://www.youtube.com/watch?v=hLl9btk1VxU), ~192K.
 
 ### 3. NINE HOURS — West Hills (IN, beat 4)
 
@@ -75,11 +75,11 @@ LA County charged seven in May; police say crews used turf-covered camera boxes 
 
 ### 5. YOUR CAMERA GOES DARK — Wi-Fi jammers (IN, beat 6)
 
-A doorbell picture warps as thieves walk up (Bellaire, TX). Jammers cost $60–70, police say. **Adds:** the next risk: the viewer's own camera won't save them. Clip: NBC News, ~361K.
+A doorbell picture warps as thieves walk up (Bellaire, TX). Jammers cost $60–70, police say. **Adds:** the next risk: the viewer's own camera won't save them. Clip: [NBC News](https://www.youtube.com/watch?v=LuNTbekmqnM), ~361K.
 
 ### 6. THEY KNOCK FIRST — fake delivery drivers (IN, beat 7)
 
-Irvine, Easter 2025: a knock, a fake Amazon driver, a suitcase out the side; police: be wary of a delivery you didn't order. Burbank PD: knock-knock burglars check whether anyone's home. **Adds:** the threat reaches the door, and a tell viewers can use today. Clip: ABC7.
+Irvine, Easter 2025: a knock, a fake Amazon driver, a suitcase out the side; police: be wary of a delivery you didn't order. Burbank PD: knock-knock burglars check whether anyone's home. **Adds:** the threat reaches the door, and a tell viewers can use today. Clip: [ABC7](https://abc13.com/post/members-international-organized-residential-burglary-ring-arrested-posing-amazon-drivers-irvine-ca-break-video/16472783/).
 
 ### 7. THEY READ YOUR POSTS — travel on social media (JEFF LINE)
 
@@ -97,7 +97,7 @@ Real (Jacksonville, Las Vegas, Milford clips exist), but our gate rules it too n
 
 ### READ THIS FIRST
 
-- **I cannot watch video.** Clips are described from titles, pages and transcripts. Timecodes and outcues live only in the outline, from Whisper transcripts of the outlets' own site videos (cbsnews.com, nbcnews.com, abc7.com/abc13.com); YouTube blocked every per-video lookup on 11/2 (two tries, 5+ minutes apart). The YouTube copies may run a few seconds off the site cuts.
+- **I cannot watch video.** Clips are described from titles, pages and transcripts. Timecodes and outcues live only in the outline, from Whisper transcripts of the outlets' own site videos (CBS, NBC News and ABC7); YouTube blocked every per-video lookup on 11/2 (two tries, 5+ minutes apart). The YouTube copies may run a few seconds off the site cuts.
 - YouTube **search** worked: view counts are from 11/2. Upload dates are the outlets' story dates; confirm before the bible.
 - The schedule-angles research was cut short; travel posts, car trackers and obituary burglaries rest on the sources below only.
 
@@ -114,7 +114,7 @@ Real (Jacksonville, Las Vegas, Milford clips exist), but our gate rules it too n
 - Michigan-based ring: 20+ homes, 8 states, "over $1,500,000," "hidden surveillance cameras to watch potential victims"; six sentenced Apr 9, 2026 (Fox News, Apr 9, 2026; WNEM, Apr 10, 2026).
 - Police yard advice: walk the yard, check bushes and planters, trim shrubs (Whittier PD via KTLA 9/16/26; Brea PD via KTLA 6/23/26; LASD via Patch 5/15/26); tell your gardener (LASD Lost Hills via ABC7 5/29/24).
 
-**Sources:** cbsnews.com/boston/news/braintree-burglaries-hidden-camera-spy/ · cbsnews.com/boston/news/braintree-spy-camera-international-crime-ring · cbsnews.com/losangeles/news/suspects-break-into-west-hills-home-during-daytime-burglary · cbsnews.com/losangeles/news/rancho-cucamonga-hidden-cameras-police-warning/ · yahoo.com/news/articles/rancho-cucamonga-police-issue-warning-175231511.html · abc7.com/post/7-arrested-socal-home-burglaries-tied-south-american-theft-group-authorities-say/19138631/ · abc7.com/videoClip/19140194/ · westsidecurrent.com (DoorDash delivery trick, May 2026) · abc13.com/post/members-international-organized-residential-burglary-ring-arrested-posing-amazon-drivers-irvine-ca-break-video/16472783/ · nbcnews.com/news/amp-video/mmvo253857861920 · nbcnews.com/news/amp-video/mmvo238585413773 · cbsnews.com/losangeles/news/burbank-police-warn-residents-of-rise-in-knock-knock-burglaries · foxnews.com/us/judge-describes-illegal-immigrant-burglary-crews-cross-country-operation-oceans-eleven-style-conduct · wnem.com/2026/04/10/6-undocumented-immigrants-sentenced-multistate-burglary-ring/ · patch.com/california/los-angeles/hidden-cameras-found-outside-homes-likely-planted-burglary-stakeouts-lasd · Full case file: runs/W_11112026/research/research_bush_cameras.md
+**Sources:** cbsnews.com/boston/news/braintree-burglaries-hidden-camera-spy/ · cbsnews.com/boston/news/braintree-spy-camera-international-crime-ring · cbsnews.com/losangeles/news/suspects-break-into-west-hills-home-during-daytime-burglary · cbsnews.com/losangeles/news/rancho-cucamonga-hidden-cameras-police-warning/ · yahoo.com/news/articles/rancho-cucamonga-police-issue-warning-175231511.html · abc7.com/post/7-arrested-socal-home-burglaries-tied-south-american-theft-group-authorities-say/19138631/ · abc7.com/videoClip/19140194/ · https://www.westsidecurrent.com/crime/doordash-delivery-trick-used-in-southland-burglary-cases-officials-say/article_1733746c-5ab2-4888-84e3-4ffeed400fbf.html · abc13.com/post/members-international-organized-residential-burglary-ring-arrested-posing-amazon-drivers-irvine-ca-break-video/16472783/ · nbcnews.com/news/amp-video/mmvo253857861920 · nbcnews.com/news/amp-video/mmvo238585413773 · cbsnews.com/losangeles/news/burbank-police-warn-residents-of-rise-in-knock-knock-burglaries · foxnews.com/us/judge-describes-illegal-immigrant-burglary-crews-cross-country-operation-oceans-eleven-style-conduct · wnem.com/2026/04/10/6-undocumented-immigrants-sentenced-multistate-burglary-ring/ · patch.com/california/los-angeles/hidden-cameras-found-outside-homes-likely-planted-burglary-stakeouts-lasd · [Full case file (repo)](https://github.com/david0524/rossen/blob/claude/modest-keller-in04yv/runs/W_11112026/research/research_bush_cameras.md)
 
 **NEEDS VERIFICATION:**
 - **The cold open's line, "the camera belongs to the crew that's about to rob you," is an inference in most cases.** Police tie the camera to the burglary in Braintree, West Hills, San Dimas and Whittier; elsewhere a camera was found and nothing happened (Rancho Cucamonga, West Covina). Say "police say" and lead with a case where both happened.

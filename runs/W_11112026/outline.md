@@ -93,22 +93,22 @@ Direction for the bible, not final copy. Each headline names the subject first a
 
 ### The fix
 
-- After Braintree: a camera pointed at a house is a crime in progress, police said; that's why they left it and set the trap (CBS Boston, Braintree PD).
-- After Rancho Cucamonga: if you find one, police say don't touch it and call them right away (CBS LA, Rancho Cucamonga PD). This is the one protective line before the payoff.
-- After West Hills: someone putting something in a bush at 2 a.m. is a call to police that night; LAPD says report anything suspicious directly (CBS LA, Mar 20, 2025).
-- After the LA bust: the camera is there to learn your routine, when the car leaves and comes back (Rancho Cucamonga PD via KTLA, Oct 8, 2026; Arcadia police via NBC News, Apr 30, 2025).
-- After the jammer: a doorbell that glitches or drops just as someone walks up isn't always bad Wi-Fi; a wired camera, or one that records to its own memory card, keeps recording (NBC News, Dec 5, 2025; Sheriff Luna, May 20, 2026).
-- After Irvine: a delivery you didn't order is a reason to talk through the door, never to open it (Irvine PD via ABC7, May 17, 2025; Burbank PD via CBS LA, Feb 23, 2025).
-- **The two-minute walk, the one move from the tease:** check bushes, planters, trees, fences and the yard across the street for anything pointed at your door (Whittier PD via KTLA, Sep 16, 2026; Brea PD via KTLA, Jun 23, 2026; LASD via Patch, May 15, 2026).
+- After Braintree: a camera pointed at a house is a crime in progress, police said; that's why they left it and set the trap ([CBS Boston, Braintree PD](https://www.cbsnews.com/boston/news/braintree-burglaries-hidden-camera-spy/)).
+- After Rancho Cucamonga: if you find one, police say don't touch it and call them right away ([CBS LA, Rancho Cucamonga PD](https://www.cbsnews.com/losangeles/news/rancho-cucamonga-hidden-cameras-police-warning/)). This is the one protective line before the payoff.
+- After West Hills: someone putting something in a bush at 2 a.m. is a call to police that night; LAPD says report anything suspicious directly ([CBS LA, Mar 20, 2025](https://www.cbsnews.com/losangeles/news/suspects-break-into-west-hills-home-during-daytime-burglary)).
+- After the LA bust: the camera is there to learn your routine, when the car leaves and comes back (Rancho Cucamonga PD via [KTLA, Oct 8, 2026](https://www.yahoo.com/news/articles/rancho-cucamonga-police-issue-warning-175231511.html); Arcadia police via [NBC News, Apr 30, 2025](https://www.nbcnews.com/news/amp-video/mmvo238585413773)).
+- After the jammer: a doorbell that glitches or drops just as someone walks up isn't always bad Wi-Fi; a wired camera, or one that records to its own memory card, keeps recording ([NBC News, Dec 5, 2025](https://www.nbcnews.com/news/amp-video/mmvo253857861920); [Sheriff Luna, May 20, 2026](https://www.westsidecurrent.com/crime/doordash-delivery-trick-used-in-southland-burglary-cases-officials-say/article_1733746c-5ab2-4888-84e3-4ffeed400fbf.html)).
+- After Irvine: a delivery you didn't order is a reason to talk through the door, never to open it (Irvine PD via [ABC7, May 17, 2025](https://abc13.com/post/members-international-organized-residential-burglary-ring-arrested-posing-amazon-drivers-irvine-ca-break-video/16472783/); Burbank PD via [CBS LA, Feb 23, 2025](https://www.cbsnews.com/losangeles/news/burbank-police-warn-residents-of-rise-in-knock-knock-burglaries)).
+- **The two-minute walk, the one move from the tease:** check bushes, planters, trees, fences and the yard across the street for anything pointed at your door (Whittier PD via [KTLA, Sep 16, 2026](https://www.yahoo.com/news/articles/hidden-camera-found-aimed-burglarized-221017663.html); Brea PD via [KTLA, Jun 23, 2026](https://www.yahoo.com/news/us/articles/police-warn-o-c-residents-063805599.html); LASD via [Patch, May 15, 2026](https://patch.com/california/los-angeles/hidden-cameras-found-outside-homes-likely-planted-burglary-stakeouts-lasd)).
 - Found one? Don't touch, move or remove it. Leave it in place and call police (LASD; Rancho Cucamonga PD; Brea PD).
 - Trim the shrubs that face your door (Whittier PD; Brea PD; LASD San Dimas).
-- Ask whoever does your yard to look too (LASD Lost Hills via ABC7, May 29, 2024).
-- Look at your neighbor's yard too; most of these point across the street (Rancho Cucamonga PD; Sheriff Luna, May 20, 2026).
+- Ask whoever does your yard to look too (LASD Lost Hills via [ABC7, May 29, 2024](https://abc7.com/post/burglary-tourists-hidden-cameras-break-socal-homes-authorities/14885445/)).
+- Look at your neighbor's yard too; most of these point across the street (Rancho Cucamonga PD; [Sheriff Luna, May 20, 2026](https://www.westsidecurrent.com/crime/doordash-delivery-trick-used-in-southland-burglary-cases-officials-say/article_1733746c-5ab2-4888-84e3-4ffeed400fbf.html)).
 - Hard-wired security, or cameras that record locally (Sheriff Luna; NBC News experts, Dec 5, 2025).
-- Don't post the trip until you're home; tell a neighbor or police when you'll be away (LA County officials, May 20, 2026).
-- Lights on timers so the house looks lived in (LASD via Patch, May 15, 2026).
+- Don't post the trip until you're home; tell a neighbor or police when you'll be away ([LA County officials, May 20, 2026](https://abc7.com/post/7-arrested-socal-home-burglaries-tied-south-american-theft-group-authorities-say/19138631/)).
+- Lights on timers so the house looks lived in (LASD via [Patch, May 15, 2026](https://patch.com/california/los-angeles/hidden-cameras-found-outside-homes-likely-planted-burglary-stakeouts-lasd)).
 - Stop the mail while you're away. ⚠️ USPS Hold Mail: confirm the page and the 30-day limit at usps.com before air.
-- Do-nothing test: doing only the walk still leaves the jammer and the knock, so beat 9 closes those; do nothing, and a crew can watch for one to three weeks (Kent County, MI sheriff's sergeant via WOOD TV)
+- Do-nothing test: doing only the walk still leaves the jammer and the knock, so beat 9 closes those; do nothing, and a crew can watch for one to three weeks (Kent County, MI sheriff's sergeant via [WOOD TV](https://www.woodtv.com/news/kent-county/deputies-organized-theft-ring-targeted-home-in-cascade-township/amp/))
 
 ### Gaps
 

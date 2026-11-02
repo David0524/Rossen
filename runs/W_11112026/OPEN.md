@@ -2,6 +2,7 @@
 
 One-story show (producer, 11/2): burglars' cameras in the bushes, a longer A (+20–25%), more clips. Built on Jeff's 11/04 notes.
 Delivered: `Prebible F2 11_11.docx` (source `prebible.md`) and `Outline F2 11_11.docx` (source `outline.md`, Stage: videos, 7/7 picks, Whisper on the outlets' site cuts).
+Google Docs in the `11/11 --` show folder (producer asked, 11/2): [Prebible F2 11/11](https://docs.google.com/document/d/1R51FSBI9Ila7K0u7xih1cjwZUJbQwHGnOXZqqG4lWoE/edit) and [Outline F2 11/11](https://docs.google.com/document/d/11DJUiLkZb8z124DMkWzS3vw07kepGQv01tse6qpNZ-Y/edit), made from the markdown with `tools/md_to_gdoc_html.py` (every URL a live link). Edit the Docs in place from now on and keep `prebible.md` / `outline.md` in sync.
 Research: `research/research_bush_cameras.md` (case file). The schedule-angles research agent was stopped mid-run; its angles rest on the sources in the pre-bible.
 
 - [ ] Guest or none? (retired burglary detective / home-security expert for the yard walk)
