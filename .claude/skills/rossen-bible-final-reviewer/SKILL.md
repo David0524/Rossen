@@ -31,6 +31,7 @@ is out of scope unless explicitly requested.
 | `references/producer-kit/script-notes.md` + `references/examples/script-notes-kroger-*.md` | When the deliverable is notes for the writer. |
 | `references/producer-kit/jeff-brief.md` + `references/examples/jeff-brief-2026-09-24.md` | When asked for Jeff's 30-second brief. |
 | `references/examples/producer-edits-2026-10-28.md` | **Every review.** The team's edits to the 10/28 F2 draft, with 13 lessons. Dimension 11's rubric: what earns air, Jeff's archive, viewer-facing headers, hedges, the viewer close, and what a cut leaves dangling. |
+| `references/examples/jeff-notes-2026-11-04.md` | **Every review.** Jeff's own seven story-shape notes on the 11/04 F2, with the misses from that bible and their fixes. Dimension 12's rubric. |
 | `references/examples/ryan-notes-2026-10-09.md` | **Every review.** Ryan's 11 retention and precision notes on the 10/09 F1, with before/after pairs. Dimension 9's rubric, and the model for how a structural note is written (where, why, direction). |
 
 ## Step 0 — run the mechanical pass first
@@ -142,7 +143,8 @@ Mostly covered by Step 0. Read its findings, then check by eye what it cannot:
   between callers, `[LEAVE BUFFER FOR EDITING]` between sections, callers by
   first name, no promise of getting money back).
 - The ending closes; it doesn't dissolve. The how-to arrives without long
-  preamble.
+  preamble once the story reaches it, but not in the opening (Jeff, 11/04:
+  build to the payoff; dimension 12).
 - The tease block and the body agree — no story teased that isn't in the body,
   none in the body that isn't teased.
 - **Every tease promise is paid off by name.** `THE ONE MOVE` in the open means
@@ -403,6 +405,36 @@ unless marked.
 - **Copy errors** in a producer-edited draft (missing plurals, `ITS`/`IT'S`,
   doubled words, a dropped noun like `YOUR DOCTOR'S IS OFFERING`): list them all
   as NOTEs. On 10/28 there were five.
+
+### 12. Story shape: Jeff's notes (11/04)
+
+Rubric: `references/examples/jeff-notes-2026-11-04.md`. These are Jeff's own
+notes, so they outrank older producer allowances (a first name used on camera,
+a full safety walkthrough in the intro). `check_bible.py` warns on one-off
+names, process-verb headers, a stat-led A story, an early walkthrough and flat
+re-entry lines; read for the rest. Write findings as where / why / direction.
+
+- **Payoff given away.** The opening or the first case hands over the method
+  (a walkthrough, a demo clip, the full list of steps) before the success
+  story, the stakes and a complication: WARNING. One protective line is fine.
+- **No real result early.** A story opens on statistics or a policy before its
+  strongest real outcome (the win in a money-back story, the loss in a threat
+  story): WARNING.
+- **A clip that adds nothing.** For each clip, name what it adds: evidence,
+  stakes or a development. Two clips with the same answer, or copy that re-proves
+  the same point around several clips: WARNING, naming which to cut or rewrite.
+- **Headlines.** A header that doesn't name its subject in the first words, uses
+  a process verb (`ANNOUNCED`, `FILED`, `ARE SUING`), or never reaches the
+  viewer: NOTE, with a newspaper-style direction (`DOLLAR GENERAL JUST GOT
+  BUSTED FOR OVERCHARGING YOU`).
+- **Energy at transitions.** A re-entry line after a clip that only dates,
+  hedges or attributes (`THIS WAS BACK IN 2021.`), a clip with no button, or a
+  topic change that opens on a recap instead of a reason to stay: NOTE.
+- **Momentum.** A payoff followed by nothing new (no next complication, risk
+  or takeaway) before a story ends or a bridge: NOTE.
+- **Names.** A one-off subject named in copy (`SHERRI` where `THIS WOMAN`
+  works): NOTE. A person developed across beats may keep the name; if unsure,
+  raise it as a question for the producer, not a fix.
 
 ## Fact-checking subsystem
 

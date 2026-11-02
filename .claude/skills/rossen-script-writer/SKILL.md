@@ -21,6 +21,7 @@ description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Rep
 | `references/examples/bible-sent-10-14.txt` | **Every story-show draft.** The 10/14 F2 as the producer sent it to Jeff, after her edits. What a finished FINAL looks like (`.docx` beside it). |
 | `references/examples/ryan-notes-2026-10-09.md` | **Every draft.** Ryan's 11 structure and retention notes on the 10/09 F1, with before/after pairs. The worked example for "Retention: Ryan's structure rules". |
 | `references/examples/producer-edits-2026-10-28.md` | **Every draft.** The team's edits to the 10/28 F2 draft, with before/after pairs and 13 lessons: Jeff's own archive, viewer-facing headers, how much investigation earns air, hedges, the viewer-segment close. The worked example for "What the producer cut on 10/28". |
+| `references/examples/jeff-notes-2026-11-04.md` | **Every draft.** Jeff's own seven notes on the 11/04 F2: build to the payoff, a real result early, every clip adds something, newspaper headlines, energy at every transition, momentum after each payoff, no one-off names. The worked example for "Story shape: Jeff's notes (11/04)". |
 | `review-loop.md` | **Every new bible or whole-bible rewrite, before building.** The BLOCKER-only reviewer loop: the agent prompt, the fix rules, the two-round stop. |
 | `references/producer-kit/facts-to-get-right.md` | Before any number goes in. |
 | `reference-segments.md` | Checking line-level layout against aired copy. |
@@ -190,11 +191,21 @@ them the subject.
 
 - Every clip beat in a threat story introduces its human **before** the clip,
   by identity — never "her," then roll.
+- **Keep the introduction simple (Jeff, 11/04).** Identity means who they are,
+  not what they're called: `THIS WOMAN IS 88`, `THIS COUPLE IN CALIFORNIA`, `A
+  FORMER EMPLOYEE`. **No first name for a one-off subject** — someone who
+  appears in one case and is gone. A name is for a person the story develops:
+  they carry more than one beat, or Jeff comes back to them later (the recap,
+  the close). If you think someone qualifies, keep the name and raise it as an
+  open decision. Exceptions: booked guests, the accused (full names, with the
+  police department and the charge), and viewers who sent in their story (the
+  thank-you close uses their first name).
 - **Identity comes from the source, never from inference.** Use what the
-  reporting says: name, age, place, relationship, job. Do not upgrade it to make
+  reporting says: age, place, relationship, job. Do not upgrade it to make
   the person vivid — no `GRANDMOTHER`, `WIDOW`, `RETIRED`, `LIFE SAVINGS`,
   `SINGLE MOM` unless a source says so. If all you have is
-  `KAREN WHITAKER, 79, BERMUDA DUNES`, that is the introduction. The same rule
+  `KAREN WHITAKER, 79, BERMUDA DUNES`, the introduction is `THIS WOMAN IS 79`
+  (the full name stays in the outline and the source log). The same rule
   covers what happened: no detail about the scam, the loss or the outcome that
   the source doesn't state.
 - Policy and settlement mechanics belong in the mechanics run and the protection
@@ -226,6 +237,23 @@ sayable and the sequence escalates (`BUT`, `EVEN MORE`, `NOW`, `WORSE`, `IT GETS
 CRAZIER`, `WAIT UNTIL YOU HEAR THIS`, `YOU AREN'T GOING TO BELIEVE THIS
 VIDEO…`). A noun phrase with no verb is almost always a label. The protection
 header is fixed and flat on purpose: `HERE'S HOW TO PROTECT YOURSELF`.
+
+**Headers are newspaper headlines (Jeff, 11/04).** Jeff's own rewrite:
+
+| Written | Jeff |
+|---|---|
+| `NOW THE FTC AND 20 STATES ARE SUING DOLLAR GENERAL` | `DOLLAR GENERAL JUST GOT BUSTED FOR OVERCHARGING YOU` |
+
+The formula is **who + what they did, in plain words + what it means for you.**
+Name the subject in the first words (the company, the state, the scam — not
+the agency or the process acting on it). Use a verdict verb a reader gets at a
+glance (`BUSTED`, `CAUGHT`, `OVERCHARGING`, `TAKING`), not a process verb
+(`ANNOUNCED`, `FILED`, `ARE SUING`). End on the viewer: `YOU`, `YOUR MONEY`,
+`YOUR STATE`. The process (who sued, how many states) goes in the lines under
+it. Escalators (`BUT`, `NOW`, `EVEN WORSE`) still help, in front of a named
+subject, never instead of one. This applies to story headers, mid-story
+headers and the tease headline. The protection header stays fixed and flat.
+More rewrites in `references/examples/jeff-notes-2026-11-04.md`.
 
 **Headers talk to the viewer: a warning, or an escalation in scope (10/28).**
 The producer rewrote every place-led, plot-summary header:
@@ -340,11 +368,14 @@ SAID`; `WMBF NEWS PULLED THE PAPERWORK` became `THE NEWS PULLED THE PAPERWORK`;
 still appear in the red clip source lines, which Jeff does not read. Agencies,
 police departments, regulators, courts and companies are still named.
 
-**Victims: first name or "this woman," never a surname.** `KATHRYN TAYLOR IS
-84` became `THIS WOMAN IS 84`; `LETTIE IS 79` became `NOW THIS WOMAN IS 79`;
-`NORA ROWLAND` became `NORA`; `JIMMY WRIGG` became `THIS MAN`. A first name the
-victim used on camera is fine (Donna, Amanda, Nora). Identify people by who
-they are (age, situation), which still satisfies the people rule. **The
+**Victims: "this woman," never a surname — and since 11/04, no first name
+either unless the story develops them.** `KATHRYN TAYLOR IS 84` became `THIS
+WOMAN IS 84`; `LETTIE IS 79` became `NOW THIS WOMAN IS 79`; `JIMMY WRIGG` became
+`THIS MAN`. The 10/14 allowance for a first name used on camera (Donna, Amanda,
+Nora) is replaced by Jeff's 11/04 note: `THIS WOMAN`, not `SHERRI`, unless the
+person carries more than one beat (see "Build stories out of people").
+Identify people by who they are (age, situation), which still satisfies the
+people rule. **The
 accused keep their full names**, with the police department and the charge.
 
 **Locate by state, not by town.** `IN FLORIDA…` / `AND IN ARIZONA…` / `BUT IN
@@ -434,10 +465,13 @@ changed:
   (see `references/clip-contract.md`). His reporting history doesn't count
   against the first-person cap. Never bury it in a JEFF note as "say so if you
   like."
-- **Give the safety step in the intro.** The draft held it back for the "one
-  move" payoff; the team put it in the intro (`-BEFORE YOU HAND OVER ANOTHER
-  CARD… CHECK WHETHER THE FIRST ONE WAS ALREADY CHARGED.`) and kept the payoff
-  later, by name. A payoff may repeat a step the intro already gave.
+- **Give one safety line in the intro, not the answer.** The draft held it
+  back for the "one move" payoff; the team put it in the intro (`-BEFORE YOU
+  HAND OVER ANOTHER CARD… CHECK WHETHER THE FIRST ONE WAS ALREADY CHARGED.`)
+  and kept the payoff later, by name. A payoff may repeat a step the intro
+  already gave. **Limit (Jeff, 11/04):** one protective line, never the method.
+  A how-to, a walkthrough or the full answer waits for the payoff point (see
+  "Story shape: Jeff's notes (11/04)").
 - **Air only the investigation the viewer needs.** Cut: who owns which brand,
   which company settled where, the headquarters door-knock clip, the lawyers'
   statement, the anonymous FTC-complaint case. A went from five outside clips to
@@ -597,6 +631,53 @@ regardless:
   `TREY, WHAT'S GOING ON? LET'S GET RIGHT TO IT.` Ask for the deal list and
   prices if not supplied; **do not invent products or prices.** Quote the current
   price from the deal link, and say when a price is Subscribe and Save.
+
+## Story shape: Jeff's notes (11/04)
+
+Jeff's own notes on the 11/04 F2, the worked example with before/after lines
+in `references/examples/jeff-notes-2026-11-04.md` (read it). They sit above
+Ryan's retention rules below and agree with them; where an older rule here
+says otherwise, these win. Headlines (note 4) are in "Mid-story headers" and
+names (note 7) in "Build stories out of people".
+
+1. **Build toward the payoff.** The opening states the **promise** and the
+   **stakes**, never the full answer. A how-to, a walkthrough, a demo clip or
+   the complete list of steps lands after the success story, the stakes and at
+   least one complication have earned it. One protective line in the intro is
+   fine (10/28); a tutorial is not. If the lead clip itself teaches the method,
+   pick a different lead clip or trim it to the result.
+2. **Show a real result early.** The first case in a story is its most
+   compelling real outcome, before the scale numbers: the woman who found 108
+   thousand dollars, then `SHE'S NOT ALONE. STATES ARE HOLDING ABOUT 70 BILLION
+   DOLLARS.` In a threat story the real result is the loss (the money-gone case
+   still leads); in a money-back or how-to story it is the win. Never open a
+   story on a run of statistics with no person attached.
+3. **Every clip adds something.** For each clip, write in your head what it
+   adds: **evidence** (proves the claim, or a bigger version of it), **stakes**
+   (it is worse, or closer to the viewer, than we thought), or a **development**
+   (a new turn: the company's response, why it isn't fixed, the next risk). Two
+   clips with the same answer: cut one, and flag it, since it changes the
+   outline. Clips may share a theme, but the copy around them never re-proves
+   the same point (11/04 ran the shelf-versus-register price comparison three
+   times).
+4. **Rebuild energy coming out of every clip and into every topic.** The bold
+   re-entry line after a clip is a reaction **plus a forward pull**: what the
+   clip proved, then why to keep watching (`A LOT OF NERVE… AND IT GETS WORSE IF
+   YOUR MONEY WAS IN STOCK.`). Never re-enter on a date, a hedge or an
+   attribution (`THIS WAS BACK IN 2021.` / `SHE SAYS THAT'S WHAT A MANAGER TOLD
+   HER.`); those go in a JEFF note or the setup. Every change of topic opens on a
+   line that gives a fresh reason to stay, not a recap of what just happened.
+   Every clip gets a button, including the last one before the close.
+5. **Keep momentum after each payoff.** Once a question is answered, the next
+   line opens the next complication, risk or takeaway. 11/04 did this well:
+   after the free search, `FINDING YOUR MONEY IS STEP ONE… GETTING IT CAN BE
+   HARDER`; after the state-seizure case, `AND THE MINUTE YOU START LOOKING… SO
+   DO THE CROOKS`. A story only ends on its close or its protection list,
+   never on an answer with nothing after it.
+
+`check_bible.py` warns on one-off first names, header formula misses,
+stat-led story openings, flat re-entry lines and a walkthrough cue in the
+first third of a story. Read the rest.
 
 ## Retention: Ryan's structure rules
 
@@ -857,7 +938,13 @@ script can't see:
 - Every caution flag from the input is honoured in the copy, including the
   tease, and logged.
 - Every person is introduced by identity drawn from the source, with nothing
-  added to make them vivid.
+  added to make them vivid, and no one-off subject is named (`THIS WOMAN`, not
+  `SHERRI`).
+- Jeff's 11/04 story-shape notes: the opening promises without teaching; each
+  story opens on its strongest real result; every clip adds evidence, stakes or
+  a development, with no point proved twice; headers name the subject first and
+  end on the viewer; every re-entry line and topic change gives a reason to keep
+  watching; every payoff is followed by the next complication or takeaway.
 - No setup spoils its clip; no setup asks a question the clip can't be shown to
   answer; no setup is interchangeable.
 - Mid-story headers are sayable and climb.
@@ -884,7 +971,7 @@ script can't see:
   source line from the Videos rows, nothing added, cut or swapped without saying
   so.
 - The producer's cuts (`What the producer cuts before it goes to Jeff`): no news
-  outlet in a spoken line except its clip lead-in, once per outlet; victims by first name or `THIS WOMAN`/`THIS MAN`;
+  outlet in a spoken line except its clip lead-in, once per outlet; victims as `THIS WOMAN`/`THIS MAN` unless the story develops them;
   state, not town; no `YOUR PARENTS`; the tease and every `NEXT,` line hold the
   payoff back; no story's body opens on its tease headline; no slate or
   like/subscribe housekeeping copy.
@@ -898,7 +985,7 @@ script can't see:
   demo where a tip can be shown (screenshot or graphic on a taped F2); an
   on-screen chat question on live shows only; a written close.
 - The 10/28 edits (`references/examples/producer-edits-2026-10-28.md`): Jeff's
-  own coverage opens the story and is proposed as a clip; the safety step is in
+  own coverage opens the story and is proposed as a clip; one safety line (not the method) is in
   the intro; one case per story with a guest; headers are warnings or scope
   escalations, never state-led; the tease person is generic; second person over
   B-roll; no hedge lines in black; `RED FLAG` about once a story; viewer segment

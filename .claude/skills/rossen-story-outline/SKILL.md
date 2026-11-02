@@ -88,13 +88,23 @@ gets a ⚠️ line in Gaps (`⚠️ A2 Taylor is June 2025: date it on air`) so 
 bible says `LAST YEAR` / `LAST FALL` instead of presenting it as new. Three
 2025 cases went out reading as fresh in one week (10/9 and 10/14); this is the
 fix.
+**Names are for the room, not the air (Jeff, 11/04).** The bible calls a
+one-off subject `THIS WOMAN`, not by name. If a person carries more than one
+beat or the story comes back to them (the recap, the close), add `· character`
+after the date so the bible knows it may keep the first name.
 `You (the viewer)` is fine for the hook and the fix. **This column is where the
 people-not-policies rule becomes visible.** A company (*Lowe's*), an institution
 (*Texas Attorney General*), a category (*shoppers*, *people posting online*) or a
 blank is not a person — the room should see that at a glance. Write the gap
 honestly (`Unnamed — need a name`) rather than dressing a category up as a person.
 
-**Clip** — a tag, then optionally a short note:
+**Clip** — a tag, then a short note that says **what the clip adds** (Jeff,
+11/04): `adds evidence` (proves the claim, or a bigger version of it), `adds
+stakes` (worse, or closer to the viewer), or `adds a development` (a new turn:
+the company's response, why it isn't fixed, the next risk), plus a few words.
+If two clips in a story would carry the same note, cut one now and say so in
+Decisions; the 11/04 Dollar General story proved shelf-versus-register three
+times.
 
 | Tag | Means | Phase 2 |
 |---|---|---|
@@ -115,6 +125,11 @@ or a screen recording is `VERTICAL` (TikTok, Reels, Facebook).
 
 Never invent a clip to fill a slot. A B story with zero clip beats is normal.
 
+**Open on a real result (Jeff, 11/04).** The first beat after the hook is the
+story's most compelling real outcome, ahead of any statistics: the woman who
+found 108 thousand dollars, then the 70 billion. In a money-back or how-to
+story that is the biggest win; in a threat story it is the loss, as below.
+
 **Case order inside a story: the case where the money is actually gone leads.**
 A near-miss — a teller who stopped it, a payment caught in time — is a good
 warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
@@ -123,6 +138,11 @@ warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
 ## Per story, around the table
 
 - **In one sentence** — the whole story, start to end, as you'd tell a friend.
+- **Payoff point** — where the method lands: the beat number of the how-to,
+  the walkthrough or the demo. It comes after the real result, the stakes and
+  at least one complication, never in the opening beats (Jeff, 11/04: build to
+  the payoff). After it, the next beat opens a new complication, risk or
+  takeaway, not the end of the story.
 - **Hold back** — the payoff the tease must not give away, in one line: *the
   caregiver answers that he's dead*; *the register charges more than the
   sign*; *which store it is*. The outline is where the story's payoff is

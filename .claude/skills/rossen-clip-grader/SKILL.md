@@ -455,6 +455,20 @@ candidate did not survive pass two. That pattern repeating across episodes means
 floor is promoting filler and the hard filters upstream need a look, not that variety
 is unavailable.
 
+## Every pick adds something (Jeff, 11/04)
+
+After pass two, read each story's winners in air order and give each a
+one-word "adds" tag at the end of its one-line reason (`adds: evidence`), so the table's columns don't change: **evidence** (proves the claim, or
+a bigger version), **stakes** (worse, or closer to the viewer) or **development**
+(a new turn: the company's response, why it isn't fixed, the next risk). When
+two winners in one story would carry the same tag *for the same point* — the
+11/04 Dollar General story ran shelf-versus-register prices in three clips —
+flag the pair and name the runner-up that would add something new instead. Do
+not drop the beat yourself; cutting a beat is the outline's call. Separately,
+flag a lead-beat winner that teaches the method (a full walkthrough) when the
+beat only needs the result: Jeff wants the payoff held for later in the story,
+so propose in and out points that keep the result and stop before the how-to.
+
 ## When nothing is good enough
 
 Say so. Return `flagged: null` with a `null_reason`, and say what query would find

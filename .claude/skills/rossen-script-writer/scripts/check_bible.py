@@ -905,7 +905,146 @@ def check(path, day="wednesday", stories=2, stage="draft"):
         r.warn(f"the tease gives the person's age: {aged[:1]}. Keep the tease "
                f"person generic ('A WOMAN'); age and job are body details (10/28).")
 
+    # ---------------------------------------------------- Jeff's notes, 11/04
+    jeff_1104(r, lines, boundary, body, clips, day)
+
     return r
+
+
+# Jeff (11/04 F2 notes, relayed Oct 30 2026): one-off subjects are THIS WOMAN,
+# not SHERRI; headlines read like a newspaper (subject first, impact on you);
+# a real result before the stats; no tutorial before the story earns it; the
+# re-entry line out of a clip rebuilds energy instead of dating or hedging.
+NAME_STOP = set("""THIS THAT THESE THOSE SHE HE THEY IT WHO WHAT WHEN WHERE WHY HOW
+EVERY EVERYONE EVERYBODY ONE SOMEONE SOMEBODY NOBODY ANYONE POLICE REPORTERS
+INSPECTORS DETECTIVES INVESTIGATORS OFFICIALS EXPERTS JEFF YOU WE I THERE HERE
+STATES BANKS SCAMMERS CROOKS THIEVES WORKERS EMPLOYEES MEMBERS PEOPLE MOST SOME
+MANY FAMILY FAMILIES NOW THEN BUT AND SO LATER TODAY CUSTOMERS SHOPPERS VIEWERS
+AMAZON WALMART TARGET COSTCO KROGER CHASE APPLE GOOGLE FACEBOOK MEDICARE
+TEMU PAYPAL ZELLE VENMO NETFLIX LET LETS FBI FTC IRS CBS ABC NBC FOX""".split())
+NAME_VERBS = (r"IS|WAS|SAYS|SAID|SEARCHED|BUYS|BOUGHT|SHOPS|SHOPPED|WORKED|WORKS|"
+              r"LOST|PAID|PAYS|GOT|HAD|HAS|LIVED|LIVES|THOUGHT|CALLED|FOUND|SENT|"
+              r"NOTICED|CHECKED|OPENED|ANSWERED|CLICKED|WENT|TOLD|TRIED|WANTED|"
+              r"KEPT|GETS|SPENT|JUST|NEVER|ALMOST|NEARLY")
+NAME_RE = re.compile(r"^-?\s*(?:(?:AND|BUT|SO|NOW|THEN)\s+)?(?:IN [A-Z ]+,\s*)?"
+                     r"([A-Z]{3,})(?:\s+AND\s+([A-Z]{3,}))?(?:'S\b|\s+(?:" + NAME_VERBS +
+                     r")\b)")
+PROCESS_VERBS = re.compile(r"\b(ANNOUNCED|ANNOUNCES|ANNOUNCING|FILED|FILES|"
+                           r"ARE SUING|IS SUING|SUED|LAUNCHED|LAUNCHES|UNVEILED|"
+                           r"RELEASED|ISSUED|REPORTED)\b")
+VIEWER_RE = re.compile(r"\b(YOU|YOUR|YOU'RE|YOU'VE|YOURS|YOURSELF)\b")
+PERSON_RE = re.compile(r"\b(WOMAN|MAN|COUPLE|SHE|HE|HER|HIS|HUSBAND|WIFE|MOM|DAD|"
+                       r"GRANDMOTHER|FAMILY|VETERAN|SHOPPER|NEIGHBOR)\b")
+WALK_CUE = re.compile(r"NARRATES OVER|LIVE DEMO|WALKTHROUGH|SCREEN SHARE|SCREEN RECORDING")
+STEP_RE = re.compile(r"^-?\s*(?:THEN |FINALLY |NEXT,? )?(CLICK|TYPE|ENTER|TAP|SELECT|"
+                     r"GO TO|OPEN|SCROLL|CHOOSE|PICK)\b")
+FLAT_REENTRY = re.compile(r"\b(THIS|THAT|IT) (WAS|HAPPENED) (BACK )?IN (19|20)\d\d\b|"
+                          r"^-?\s*(SHE|HE|THEY) SAYS? THAT'?S WHAT|"
+                          r"^-?\s*(THIS|THAT) WAS (LAST|BACK)\b")
+
+
+def jeff_1104(r, lines, boundary, body, clips, day="wednesday"):
+    up = lambda x: strip_md(x).upper().replace("\u2019", "'")
+    spoken = [(i, up(l)) for i, l in enumerate(lines) if i >= boundary
+              and strip_md(l).startswith("-") and not CUE_ANY.search(strip_md(l))]
+    headers = [(i, up(l)) for i, l in enumerate(lines)
+               if l.strip().startswith("**") and not CUE_ANY.search(l)
+               and up(l) and up(l) == strip_md(l).upper() and not up(l).startswith("-")
+               and not up(l).startswith("OUT:") and words(up(l)) <= 22]
+    head_words = set(w for _, h in headers for w in re.findall(r"[A-Z]+", h))
+
+    # 1. one-off first names
+    found = {}
+    for i, t in spoken:
+        m = NAME_RE.match(t)
+        if not m:
+            continue
+        for nm in (m.group(1), m.group(2)):
+            if nm and nm not in NAME_STOP and nm not in head_words \
+                    and not nm.endswith("PD") and not re.fullmatch(US_STATES, nm):
+                found.setdefault(nm, i + 1)
+    names = []
+    if day == "callin":  # callers are the show; they keep the cleared name
+        found = {}
+    for nm, first in found.items():
+        hits = [i for i, t in spoken if re.search(r"\b" + nm + r"\b", t)]
+        # developed = mentioned on both sides of at least one clip
+        developed = any(c for c in clips if min(hits) < c < max(hits)) and len(hits) >= 3
+        if not developed:
+            names.append(f"{nm} (line {first})")
+    r.stats["one_off_names"] = len(names)
+    if names:
+        r.warn(f"{len(names)} one-off subject(s) named in copy: {names[:6]}. "
+               f"Jeff (11/04): 'THIS WOMAN', not 'SHERRI', unless the story "
+               f"develops them across beats. Booked guests, the accused and "
+               f"thanked viewers keep names. Check any false hits (a brand).")
+
+    # 2. newspaper headlines: subject first, impact on the viewer
+    proc = [h for _, h in headers if PROCESS_VERBS.search(h)
+            and PROTECTION_HEADER not in h]
+    if proc:
+        r.warn(f"header(s) lead with a process verb: {proc[:3]}. Jeff (11/04): "
+               f"write it like a newspaper, subject first, verdict verb, impact "
+               f"on you — 'DOLLAR GENERAL JUST GOT BUSTED FOR OVERCHARGING YOU', "
+               f"not 'NOW THE FTC AND 20 STATES ARE SUING'.")
+    body_heads = [h for i, h in headers if i > boundary and PROTECTION_HEADER not in h]
+    no_you = [h for h in body_heads if not VIEWER_RE.search(h)]
+    if body_heads and len(no_you) > len(body_heads) // 2:
+        r.warn(f"{len(no_you)} of {len(body_heads)} body headers never reach the "
+               f"viewer (no YOU/YOUR): {no_you[:3]}. Jeff (11/04): make the impact "
+               f"on the viewer clear in the headline.")
+
+    # 3. a real result before the stats (first story)
+    first = next((i for i, _ in headers if i > boundary), None)
+    if first is not None:
+        opening = [t for i, t in spoken if i > first][:4]
+        figs = sum(1 for t in opening if FIGURE_RE.search(t))
+        people = sum(1 for t in opening if PERSON_RE.search(t))
+        if figs >= 2 and people == 0:
+            r.warn(f"the A story opens on {figs} stat lines with no person "
+                   f"(line {first + 1}). Jeff (11/04): show a real result early "
+                   f"— lead with the strongest success or loss, then the scale.")
+
+    # 4. tutorial before the story has earned it (per segment between sponsors)
+    seg_bounds = [boundary] + [i for i, l in enumerate(lines) if i > boundary
+                               and re.search(r"SPONSOR|OMNIWATCH SPOT", up(l))
+                               and CUE_ANY.search(strip_md(l))] + [len(lines)]
+    for a, b in zip(seg_bounds, seg_bounds[1:]):
+        sound = [c for c in clips if a < c < b and "BROLL" not in up(lines[c])]
+        walk = None
+        for i in range(a, b):
+            t = up(lines[i])
+            if WALK_CUE.search(t):
+                walk = i
+                break
+            if STEP_RE.match(t):
+                run = [j for j in range(i, min(b, i + 14)) if STEP_RE.match(up(lines[j]))]
+                if len(run) >= 3:
+                    walk = i
+                    break
+        if walk is not None and len(sound) >= 3:
+            before = sum(1 for c in sound if c < walk)
+            if before * 2 < len(sound):
+                r.warn(f"line {walk + 1}: the walkthrough runs after {before} of "
+                       f"{len(sound)} sound clips in its story. Jeff (11/04): build "
+                       f"to the payoff — promise the method early, deliver it after "
+                       f"the success story, the stakes and the complications.")
+
+    # 5. flat re-entry out of a clip
+    flat = []
+    for c in clips:
+        for j in range(c + 1, min(len(lines), c + 6)):
+            t = up(lines[j])
+            if not t or t.startswith("OUT:") or SOURCE_LINE.match(strip_md(lines[j])) \
+                    or t.startswith("BUTT"):
+                continue
+            if FLAT_REENTRY.search(t):
+                flat.append(f"line {j + 1}: {strip_md(lines[j])[:50]!r}")
+            break
+    if flat:
+        r.warn(f"{len(flat)} re-entry line(s) after a clip let the air out: "
+               f"{flat[:3]}. Jeff (11/04): react, then give a fresh reason to keep "
+               f"watching; dates and attributions go in a JEFF note or the setup.")
 
 
 def main():
