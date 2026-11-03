@@ -17,6 +17,7 @@ Research: `research/research_bush_cameras.md` (case file). The schedule-angles r
 ## Bible (11/3)
 TJ's outline is final (`Outline F2 11_11 -- TJ.docx`, text in `outline_TJ.md`): 9 clips, one break (OmniWatch + Chapter spots), no demo, five-step protection list. `outline.md` is the original, kept for its research flags.
 Bible written from TJ's outline: `draft.md` → `F2 Wed 11_11 -- BURGLARS ARE HIDING CAMERAS IN YOUR BUSHES.docx` + SOURCE LOG (FINAL). Review loop: `REVIEW_LOOP.md`.
+Google Docs in the `11/11 --` folder (producer asked, 11/3): [F2 Wed 11/11 -- BURGLARS ARE HIDING CAMERAS IN YOUR BUSHES](https://docs.google.com/document/d/1VLUcrjeEA-JFxUYCCGdu7sq21-sr21qcHvxVd79pmoc/edit) (from the .docx via `tools/bible_docx_to_html.py`, page breaks added) and its [SOURCE LOG](https://docs.google.com/document/d/1mNDcgBjrHjF8ofNujCUMjuCYNYjCbUlETcWn74Gr-Ms/edit) (via `tools/md_to_gdoc_html.py`). The 15 JEFF PLEASE NOTE comments are in the .docx only; the HTML route drops Word comments. Edit the Docs in place from now on and keep `draft.md` in sync.
 
 - [ ] Open package: which video runs under the tease (lines written to a bush camera)
 - [ ] Michigan: screenshot of the U.S. Attorney's release, or talk it
