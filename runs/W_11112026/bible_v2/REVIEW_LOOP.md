@@ -13,7 +13,11 @@ Confirmed: clips 1–6 windows and outcues against the site cuts; clip 7 against
 
 ## Round 2
 
-ROUND2
+No BLOCKERs. The charge is confirmed by Patch (May 20, 2026: all seven, first-degree residential burglary). WARNING passed on: "NOT CONVICTIONS" is true as of May 20; case status since then isn't confirmed, so check the docket before taping. Don't restore the plea line.
+
+## Still blocking
+
+None.
 
 ## Passed to the producer untouched (9 WARNINGs, 6 NOTEs)
 
