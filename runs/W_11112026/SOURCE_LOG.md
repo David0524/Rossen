@@ -81,6 +81,6 @@ Companion to `draft.md` / `F2 Wed 11_11 -- BURGLARS ARE HIDING CAMERAS IN YOUR B
 
 ## OPEN QUESTIONS (red cues in the draft)
 
-1. Open package: which video runs under the tease? Lines are written to a hidden bush camera.
+1. Open package: decided 11/3, clip 1 bush camera then clip 4 turf box; Braintree held for clip 3.
 2. Michigan: screenshot of the U.S. Attorney's release, or Jeff talks it?
 3. Protection list: Graphic 001, or rapid-fire?
