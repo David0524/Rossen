@@ -27,3 +27,7 @@ Superseded 11/3: the producer trashed the Google Doc and uploaded the .docx (com
 - [ ] Outcues for clips 1 (FOX40) and 4 (ABC7 YouTube) are TJ's, untranscribed here; clip 7's first outcue (CASH) too
 - [ ] Unsourced: window-sticker line; neighbor grabs mail / keep lawn cut; OmniWatch "free dark web scan" in TJ's bridge
 - [x] Verified: FCC jammer rule; USPS Hold Mail (free, 3–30 days); Michigan sentencing (20 homes, $1.5M+, cameras, GPS trackers); Oregon case (Eugene, June 2026)
+
+## Live bible (11/3)
+The producer's native Google Doc in the `11/11 --` folder is the live bible: [F2 Wed 11/11 -- BURGLARS ARE HIDING CAMERAS IN YOUR BUSHES](https://docs.google.com/document/d/1zlY-mzAyXYtVuzzumy9kkNzLTBNsxKlR58MBq1s6csw/edit) (converted from the .docx, Jeff notes as comments). Edit it in place (Docs connector, revisionId guard) and keep `draft.md` in sync.
+- [x] Jeff's 11/04 notes pass (11/3): two headers rewritten (the trap; hit your house by morning), Irvine button fixed (getaway driver), bridge line added into the protection list. Left for TJ: move Braintree first; cut clip 2.
