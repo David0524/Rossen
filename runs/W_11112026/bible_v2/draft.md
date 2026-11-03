@@ -152,7 +152,7 @@ OUT: (MONITOR POSSIBLE TARGETS)
 
 -A BOX OF **FAKE GRASS**. YOU'D NEVER LOOK TWICE!!
 
--ALL SEVEN HAVE PLEADED **NOT GUILTY**. {{JEFF PLEASE NOTE: Police say at least three burglaries; other reports say more. "South American theft group" is the police's phrase; never broaden it to a nationality or to immigrants.}}
+-ALL SEVEN ARE CHARGED WITH **BURGLARY**. THESE ARE CHARGES… NOT CONVICTIONS. {{JEFF PLEASE NOTE: Police say at least three burglaries; other reports say more. "South American theft group" is the police's phrase; never broaden it to a nationality or to immigrants.}}
 
 -POLICE SAY THE CAMERA IS THERE TO LEARN YOUR **ROUTINE**.
 

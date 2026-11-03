@@ -9,7 +9,7 @@ Research: `research/research_bush_cameras.md` (case file). The schedule-angles r
 - [ ] Demo: build a mock bush camera; whose yard; who shoots
 - [ ] Title pick: SPYING vs DON'T TOUCH IT
 - [ ] Re-time picks against the YouTube copies once the bot wall clears (or pull the site cuts); confirm YouTube upload dates
-- [ ] A5 LEGAL: "all seven pleaded not guilty" right after the clip; "police say" on every crew line
+- [x] A5 LEGAL: the plea line was unsourced (pre-bible likely drew it from a 2025 case); bible v2 says "charged… not convictions"
 - [ ] Verify: FCC jammer rule (fcc.gov); USPS Hold Mail page; Braintree arrest count (3, not NBC's 4)
 - [ ] Date on air: Braintree 2024, West Hills Mar 2025, Bellaire Dec 2025, Irvine Easter 2025, LA bust May 2026
 - [ ] Coverage after Oct 21 and anything filmed but not aired: not checked
