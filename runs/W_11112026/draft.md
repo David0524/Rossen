@@ -316,7 +316,7 @@ OUT: (RECORDS ON AN SD CARD)
 
 ((([NBC News](https://www.youtube.com/watch?v=LuNTbekmqnM) · 1:03 - 1:17 (RECORDS ON AN SD CARD))))
 
--**WIRED IS BEST**, IF YOU CAN AFFORD IT.
+-A SYSTEM THAT **DOESN'T NEED WI-FI** AT ALL IS BEST, IF YOU CAN AFFORD IT. {{JEFF PLEASE NOTE: A "wired" doorbell is usually wired for power only and still runs on Wi-Fi, so a jammer still blinds it. What resists a jammer is a camera that doesn't need Wi-Fi to record.}}
 
 -IF NOT, GET A WI-FI CAMERA THAT RECORDS TO A **MEMORY CARD** INSIDE THE CAMERA.
 

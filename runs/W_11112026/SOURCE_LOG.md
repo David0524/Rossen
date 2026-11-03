@@ -14,7 +14,7 @@ Companion to `draft.md` / `F2 Wed 11_11 -- BURGLARS ARE HIDING CAMERAS IN YOUR B
 | Nobody arrested in Rancho Cucamonga | CONFIRMED | CBS LA site transcript 1:30 | As of Oct 7–8, 2026 |
 | Police say don't touch it, call them right away | CONFIRMED | CBS LA site transcript 1:32–1:38 | Rancho Cucamonga PD |
 | Braintree family burglarized while away; own camera shows burglars crawling in the living room | CONFIRMED | CBS Boston site transcript 0:30–0:48 | June 20, 2024; dated in a JEFF note, not in copy (TJ's outline dates nothing) |
-| Neighbor saw a camera in the bushes across the street, duct tape to camouflage it | CONFIRMED | CBS Boston site transcript 1:16–1:32 | |
+| Neighbor saw a camera in the bushes across the street, duct tape to camouflage it | CONFIRMED | CBS Boston site transcript 1:16–1:32 | As stated in the cited report |
 | Police left the camera, had the family fake a vacation; undercover officers caught the suspects coming back in the middle of the night; three arrested | CONFIRMED | CBS Boston site transcript 2:03–2:19; WCVB Jul 16, 2024; case file | Three (NBC national said four; JEFF note). Outcome in court not reported |
 | LA County: deputies arrested a crew this spring; sheriff held up a camera in a turf-wrapped box he says they used | CONFIRMED | ABC7 5/20/26 (https://abc7.com/post/7-arrested-socal-home-burglaries-tied-south-american-theft-group-authorities-say/19138631/); Westside Current 5/20/26 | Seven charged, all pleaded not guilty (JEFF note); copy calls nobody guilty |
 | West Hills: man saw two people put something in a bush at night; masked crew left a home at 11 a.m. and went back for the camera | CONFIRMED | CBS LA (KCAL) site transcript 0:53–1:44 (https://www.cbsnews.com/losangeles/news/suspects-break-into-west-hills-home-during-daytime-burglary) | Mar 20, 2025 = "last year." No arrests, no reported loss (JEFF note) |
@@ -28,13 +28,14 @@ Companion to `draft.md` / `F2 Wed 11_11 -- BURGLARS ARE HIDING CAMERAS IN YOUR B
 | Don't open the door for a delivery you didn't order; let them know someone's home | CONFIRMED | Burbank PD via CBS LA, Feb 23, 2025 (https://www.cbsnews.com/losangeles/news/burbank-police-warn-residents-of-rise-in-knock-knock-burglaries); Irvine PD via ABC13 | **Added** (not in TJ's outline): one action line so the knock segment ends on a move. Original outline's fix list |
 | Where to look: bushes, planters, trees, fences; anything pointed at the door or driveway; camera or old phone, battery pack, tape, fake leaves or grass | CONFIRMED | Rancho Cucamonga PD (CBS LA 1:14–1:22); Whittier PD via KTLA 9/16/26; Brea PD via KTLA 6/23/26; LASD via Patch 5/15/26 | Payoff of the tease promise "exactly what to look for" |
 | Most point at the house across the street | PARTIALLY CONFIRMED | Braintree, West Hills, Alhambra, Whittier, San Dimas (case file); Rancho Cucamonga PD; Sheriff Luna ("your neighbor's home") | "Most" is a pattern across reported cases, not a police statistic |
-| Trim bushes; ask your yard person | CONFIRMED | Whittier PD; Brea PD; LASD San Dimas; LASD Lost Hills via ABC7 5/29/24 | |
+| Trim bushes; ask your yard person | CONFIRMED | Whittier PD; Brea PD; LASD San Dimas; LASD Lost Hills via ABC7 5/29/24 | Police advice as given in the cited reports |
 | Found one: don't touch or move it, call police | CONFIRMED | LASD; Rancho Cucamonga PD; Brea PD | West Covina homeowner who kicked one out is not the model (JEFF note) |
-| Hard-wired cameras resist jammers; SD-card recording | CONFIRMED | NBC News site transcript 1:03–1:17; Sheriff Luna (ABC7 5/20/26; ABC7 clip 1:04–1:16) | |
+| Hard-wired cameras resist jammers; SD-card recording | CONFIRMED | NBC News site transcript 1:03–1:17; Sheriff Luna (ABC7 5/20/26; ABC7 clip 1:04–1:16) | As stated in the cited report |
+| A system that doesn't need Wi-Fi is best against a jammer; "wired" doorbells are often wired for power only and still use Wi-Fi | CONFIRMED | NBC News transcript 1:03–1:09; Sheriff Luna via ABC7 5/20/26; Ring Video Doorbell Wired spec (2.4 GHz Wi-Fi) | Review loop BLOCKER fix (was "WIRED IS BEST"); JEFF note on the line |
 | A Wi-Fi camera recording to a memory card keeps recording when Wi-Fi is cut; cloud-only doesn't | PARTIALLY CONFIRMED | NBC News experts (SD card); TJ's outline | General camera behavior; holds only while the camera has power |
 | North Hollywood neighbors started a group text after several break-ins in recent weeks | CONFIRMED | ABC7 clip transcript 1:16–1:51 (https://abc7.com/videoClip/19140194/) | Copy says "Los Angeles" |
-| Don't post the trip until you're back | CONFIRMED | LA County officials via ABC7 5/20/26; Westside Current | |
-| Lights on timers | CONFIRMED | LASD via Patch 5/15/26 | |
+| Don't post the trip until you're back | CONFIRMED | LA County officials via ABC7 5/20/26; Westside Current | Police advice as given in the cited reports |
+| Lights on timers | CONFIRMED | LASD via Patch 5/15/26 | Police advice as given in the cited reports |
 | Neighbor grabs mail, newspaper, packages; keep the lawn cut | UNVERIFIED | TJ's outline | Standard police travel advice; no specific source in this run |
 | USPS Hold Mail is free, up to 30 days | CONFIRMED | USPS FAQ "Hold Mail: The Basics" (https://faq.usps.com/articles/FAQ/USPS-Hold-Mail-The-Basics/1000) | 3 to 30 days; longer, use forwarding (JEFF note). Closes the outline's ⚠️ flag |
 | A security sign or window sticker can send a burglar to the next house | UNVERIFIED | TJ's outline | No source in this run; producer to confirm or keep as Jeff's advice |
