@@ -157,3 +157,22 @@ on every clip, the transcript window scan, sources on fix steps, beats per story
 2. **Soundbite length.** The sample quotes the full window, up to about 60 words a segment. Shorter (outcue plus
    one line)?
 3. **Headlines in caps** in the outline (as they'll appear in the bible), or sentence case?
+
+## Producer edits to the sample (11/3)
+
+File: `runs/W_11112026/Outline F2 11_11 -- v3 SAMPLE (producer edits).docx`. What changed, and what it means for the spec:
+
+1. **Breaks.** Running order: one break, labeled `GENERIC AD LEAD IN` instead of naming OmniWatch; Break 2 removed.
+   Spec: the outline marks where the break goes and a generic lead-in; it doesn't name the sponsor or carry sponsor
+   tease copy. (The body still shows two `OMNIWATCH SPOT` blocks; to confirm, one break and no sponsor name there either.)
+2. **Decisions before we write: removed.** Spec: drop it from the outline. Open calls go to chat and `OPEN.md`.
+3. **Protection list: replaced with TJ's version.** Plain, sayable steps in sentence case with sub-bullets; no source
+   parentheticals; no demo block; no `Jeff should know` or do-nothing test inside the list; clips 8 and 9 in TJ's
+   nested form (`CLIP n (ORIENTATION): link · date · length`, then a sub-bullet for the timecode and one for the
+   SOUNDBITE), no status, and the setup line ends `Listen.`
+   Spec: the fix section is written as the producer will read it. Sources, the do-nothing test and fix-step Jeff notes
+   move to the back page, keyed by step number, so the bible writer and the source log still get them.
+
+Open questions raised by the edits: whether TJ's nested clip format replaces the v3 clip block everywhere, or only
+in the protection list; and whether clip status (`PICK`, `UNVERIFIED`, `LEGAL`) stays visible in the body or moves
+to the back page.
