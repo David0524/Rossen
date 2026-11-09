@@ -232,6 +232,11 @@ def check(md, stage, tx=None):
             warn(f"{label}: no **Climb:** line. Name the axis the beats get "
                  f"worse on so every bridge can say why the next one is worse "
                  f"(Ryan, 10/9).")
+        if "**Payoff point:**" not in block and re.search(
+                r"\b(DEMO|walkthrough|how-to|tutorial)\b", block, re.I):
+            warn(f"{label}: has a how-to or demo but no **Payoff point:** line. "
+                 f"Say which beat the method lands on; it comes after the real "
+                 f"result, the stakes and a complication (Jeff, 11/04).")
         gaps = block.split("### Gaps", 1)[-1]
         fix = block.split("### The fix", 1)[-1].split("###", 1)[0]
         if "### The fix" in block and not re.search(r"\bafter\b[^\n]*:", fix, re.I):
@@ -284,7 +289,8 @@ def check(md, stage, tx=None):
                                 rf"{m.group(1)}{n}\b.*?date", gaps, re.I | re.S):
                             warn(f"{label} beat {n}: case dated {dm.group(0)} is more "
                                  "than six months before the airdate. Add a ⚠️ Gaps "
-                                 f"line ('{m.group(1)}{n} … date it on air').")
+                                 f"line ('{m.group(1)}{n} … date in a Jeff note'); the bible's copy "
+                                 "stays evergreen (Jeff, 11/11).")
             if len(what.split()) > 25:
                 err(f"{label} beat {n}: 'What happens' is {len(what.split())} "
                     "words (max 25). Split the beat.")

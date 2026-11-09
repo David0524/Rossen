@@ -84,17 +84,29 @@ new-phone owner*; *Utah man, never ordered a phone*; *Jim Stickley, ethical hack
 Taylor, 84, Fernandina Beach FL (June 2025)*. The outline keeps full names,
 towns and dates for the room; the bible drops surnames and towns, so this
 column is where they live. A case more than **six months before the airdate**
-gets a ⚠️ line in Gaps (`⚠️ A2 Taylor is June 2025: date it on air`) so the
-bible says `LAST YEAR` / `LAST FALL` instead of presenting it as new. Three
-2025 cases went out reading as fresh in one week (10/9 and 10/14); this is the
-fix.
+gets a ⚠️ line in Gaps (`⚠️ A2 Taylor is June 2025: date in a Jeff note`) so
+the bible never presents it as new. Three 2025 cases went out reading as fresh
+in one week (10/9 and 10/14). **The copy stays evergreen (Jeff, 11/11):** the
+bible puts the date in a JEFF PLEASE NOTE, not `LAST YEAR` / `LAST FALL` on air.
+Add `: say the year on air` only when leaving it out would mislead a viewer
+about what to do (a rule that has since changed); the bible then says `IN 2025`.
+**Names are for the room, not the air (Jeff, 11/04).** The bible calls a
+one-off subject `THIS WOMAN`, not by name. If a person carries more than one
+beat or the story comes back to them (the recap, the close), add `· character`
+after the date so the bible knows it may keep the first name.
 `You (the viewer)` is fine for the hook and the fix. **This column is where the
 people-not-policies rule becomes visible.** A company (*Lowe's*), an institution
 (*Texas Attorney General*), a category (*shoppers*, *people posting online*) or a
 blank is not a person — the room should see that at a glance. Write the gap
 honestly (`Unnamed — need a name`) rather than dressing a category up as a person.
 
-**Clip** — a tag, then optionally a short note:
+**Clip** — a tag, then a short note that says **what the clip adds** (Jeff,
+11/04): `adds evidence` (proves the claim, or a bigger version of it), `adds
+stakes` (worse, or closer to the viewer), or `adds a development` (a new turn:
+the company's response, why it isn't fixed, the next risk), plus a few words.
+If two clips in a story would carry the same note, cut one now and say so in
+Decisions; the 11/04 Dollar General story proved shelf-versus-register three
+times.
 
 | Tag | Means | Phase 2 |
 |---|---|---|
@@ -115,6 +127,11 @@ or a screen recording is `VERTICAL` (TikTok, Reels, Facebook).
 
 Never invent a clip to fill a slot. A B story with zero clip beats is normal.
 
+**Open on a real result (Jeff, 11/04).** The first beat after the hook is the
+story's most compelling real outcome, ahead of any statistics: the woman who
+found 108 thousand dollars, then the 70 billion. In a money-back or how-to
+story that is the biggest win; in a threat story it is the loss, as below.
+
 **Case order inside a story: the case where the money is actually gone leads.**
 A near-miss — a teller who stopped it, a payment caught in time — is a good
 warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
@@ -123,6 +140,11 @@ warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
 ## Per story, around the table
 
 - **In one sentence** — the whole story, start to end, as you'd tell a friend.
+- **Payoff point** — where the method lands: the beat number of the how-to,
+  the walkthrough or the demo. It comes after the real result, the stakes and
+  at least one complication, never in the opening beats (Jeff, 11/04: build to
+  the payoff). After it, the next beat opens a new complication, risk or
+  takeaway, not the end of the story.
 - **Hold back** — the payoff the tease must not give away, in one line: *the
   caregiver answers that he's dead*; *the register charges more than the
   sign*; *which store it is*. The outline is where the story's payoff is
@@ -131,6 +153,8 @@ warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
   producer pulled "YOUR DAD DIED" and "THE REGISTER IS RINGING UP MORE THAN THE
   SIGN" out of the tease. Both gave away exactly this line.)
 - **Peg** — why it's on *this* show. Old footage is fine; an old peg is not.
+  The peg is for the room: it picks the story, but the bible's copy stays
+  evergreen, with no holiday, season or "this week" hook (Jeff, 11/11).
   **When the peg is news, write the why-now chain** in the same line: the news →
   the confusion it causes → the scammer's opening, ending on the one line that
   anchors it (*plans are being cut → mailboxes full of Medicare mail, people
@@ -143,6 +167,9 @@ warning but lands second, because a real loss sets the stakes (Ryan, Oct 8,
   can hang up → it's in your mailbox → you go looking for it → it's already
   happening). Order the beats so the axis climbs. If you can't name an axis, the
   order is arbitrary and the bible will fall back on labels ("scam number two").
+  The bible climbs it out loud: every clip after the first is brought in on
+  an escalator along this axis (`AND NOW IT'S SPREADING`, `BUT IT GETS WORSE`;
+  Jeff, 11/11).
 - **Framing** — the one phrase for how the scam starts and where. It has to be
   true of every case in the story: `a free sample or a crazy discount`, `in a
   store`, not `at the mall`, when one case is a facial in a storefront. Narrow it
@@ -321,8 +348,9 @@ Once the room approves the outline w/ videos, `rossen-script-writer` writes from
 it: **same stories, same order, same beats, same clips.** Each beat row becomes a
 bold mid-story header. Each Videos row becomes a numbered clip marker carrying its
 URL, in–out ranges and outcue. `JEFF`, `GUEST` and `DEMO` rows become header plus
-dash lines. The **Hold back** line is the tease's limit; a ⚠️ "date it on air"
-gap becomes `LAST YEAR` / `LAST FALL` in the copy; each fix step carries over
+dash lines. The **Hold back** line is the tease's limit; a ⚠️ dating gap
+becomes a JEFF PLEASE NOTE with the date (or `IN 2025` on air, when the gap says
+so), never a relative date or a season in the copy (Jeff, 11/11); each fix step carries over
 with its source going to the source log, not the prompter. Each **Jeff should
 know** line becomes a `JEFF PLEASE NOTE` comment anchored on the bible line it
 guards. The **Open package** sets the tease's first lines. A beat or clip the writer wants to add, cut, move or swap is a change

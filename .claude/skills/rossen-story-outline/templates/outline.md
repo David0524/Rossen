@@ -30,6 +30,7 @@
 
 **In one sentence:** <start to end>
 
+**Payoff point:** <beat # where the how-to/demo lands — after the real result, stakes and a complication>
 **Hold back:** <the payoff the tease must not give away>
 
 **Peg:** <why this show, this week. If news: news → confusion → the scammer's opening, + the anchor line>

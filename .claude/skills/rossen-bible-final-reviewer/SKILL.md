@@ -31,6 +31,8 @@ is out of scope unless explicitly requested.
 | `references/producer-kit/script-notes.md` + `references/examples/script-notes-kroger-*.md` | When the deliverable is notes for the writer. |
 | `references/producer-kit/jeff-brief.md` + `references/examples/jeff-brief-2026-09-24.md` | When asked for Jeff's 30-second brief. |
 | `references/examples/producer-edits-2026-10-28.md` | **Every review.** The team's edits to the 10/28 F2 draft, with 13 lessons. Dimension 11's rubric: what earns air, Jeff's archive, viewer-facing headers, hedges, the viewer close, and what a cut leaves dangling. |
+| `references/examples/jeff-notes-2026-11-04.md` | **Every review.** Jeff's own seven story-shape notes on the 11/04 F2, with the misses from that bible and their fixes. Dimension 12's rubric. |
+| `references/examples/jeff-notes-2026-11-11.md` | **Every review.** Jeff's five notes on the 11/11 F2: grab them at the top, evergreen, `YOU'RE GOING TO SEE` people in the tease, amp up between clips, no outlets in spoken copy. Dimension 13's rubric. |
 | `references/examples/ryan-notes-2026-10-09.md` | **Every review.** Ryan's 11 retention and precision notes on the 10/09 F1, with before/after pairs. Dimension 9's rubric, and the model for how a structural note is written (where, why, direction). |
 
 ## Step 0 — run the mechanical pass first
@@ -142,7 +144,8 @@ Mostly covered by Step 0. Read its findings, then check by eye what it cannot:
   between callers, `[LEAVE BUFFER FOR EDITING]` between sections, callers by
   first name, no promise of getting money back).
 - The ending closes; it doesn't dissolve. The how-to arrives without long
-  preamble.
+  preamble once the story reaches it, but not in the opening (Jeff, 11/04:
+  build to the payoff; dimension 12).
 - The tease block and the body agree — no story teased that isn't in the body,
   none in the body that isn't teased.
 - **Every tease promise is paid off by name.** `THE ONE MOVE` in the open means
@@ -397,12 +400,67 @@ unless marked.
 - **Viewer segment** with no thank-you by name and no `INFO@ROSSENMEDIA.COM` tip
   line: NOTE.
 - **`RED FLAG` used as a label more than about once a story:** NOTE.
-- **Outlets.** Named once, in the lead-in to its first clip, for fair use
-  (10/21). An outlet named in any other spoken line, or in more than one
-  lead-in: NOTE.
+- **Outlets.** Never in a spoken line, clip lead-ins included (Jeff, 11/11:
+  "no need for 'CBS shows this'"; replaces the 10/21 lead-in rule). The red
+  source line and the on-screen credit name the outlet. An outlet in spoken
+  copy: NOTE, with the lead-in rewritten on the moment (`-WATCH THIS.`).
 - **Copy errors** in a producer-edited draft (missing plurals, `ITS`/`IT'S`,
   doubled words, a dropped noun like `YOUR DOCTOR'S IS OFFERING`): list them all
   as NOTEs. On 10/28 there were five.
+
+### 12. Story shape: Jeff's notes (11/04)
+
+Rubric: `references/examples/jeff-notes-2026-11-04.md`. These are Jeff's own
+notes, so they outrank older producer allowances (a first name used on camera,
+a full safety walkthrough in the intro). `check_bible.py` warns on one-off
+names, process-verb headers, a stat-led A story, an early walkthrough and flat
+re-entry lines; read for the rest. Write findings as where / why / direction.
+
+- **Payoff given away.** The opening or the first case hands over the method
+  (a walkthrough, a demo clip, the full list of steps) before the success
+  story, the stakes and a complication: WARNING. One protective line is fine.
+- **No real result early.** A story opens on statistics or a policy before its
+  strongest real outcome (the win in a money-back story, the loss in a threat
+  story): WARNING.
+- **A clip that adds nothing.** For each clip, name what it adds: evidence,
+  stakes or a development. Two clips with the same answer, or copy that re-proves
+  the same point around several clips: WARNING, naming which to cut or rewrite.
+- **Headlines.** A header that doesn't name its subject in the first words, uses
+  a process verb (`ANNOUNCED`, `FILED`, `ARE SUING`), or never reaches the
+  viewer: NOTE, with a newspaper-style direction (`DOLLAR GENERAL JUST GOT
+  BUSTED FOR OVERCHARGING YOU`).
+- **Energy at transitions.** A re-entry line after a clip that only dates,
+  hedges or attributes (`THIS WAS BACK IN 2021.`), a clip with no button, or a
+  topic change that opens on a recap instead of a reason to stay: NOTE.
+- **Momentum.** A payoff followed by nothing new (no next complication, risk
+  or takeaway) before a story ends or a bridge: NOTE.
+- **Names.** A one-off subject named in copy (`SHERRI` where `THIS WOMAN`
+  works): NOTE. A person developed across beats may keep the name; if unsure,
+  raise it as a question for the producer, not a fix.
+
+### 13. Grab, evergreen, amp up: Jeff's notes (11/11)
+
+Rubric: `references/examples/jeff-notes-2026-11-11.md`. Jeff's own notes, so
+they outrank older rules (the 10/21 outlet lead-in, the outline's `LAST YEAR` /
+`LAST FALL` dating). `check_bible.py` warns on dated lines, `THIS …` people in
+the tease, clip-to-clip stretches with no escalator and outlets in spoken copy;
+read for the rest.
+
+- **The top doesn't grab.** Read the first three spoken lines against the open
+  package. If the most startling moment (the picture, the loss, the person) isn't
+  in the first two lines, or a warm-up (`BEFORE YOU…`, a date, a general line
+  about the topic) comes first: WARNING, with the moment named as the direction.
+- **Dated copy.** A holiday, season or relative date in a spoken line (`THIS
+  HOLIDAY SEASON`, `THIS FALL`, `LAST DECEMBER`, `LAST YEAR`, `THIS WEEK`):
+  NOTE, with the date moved to a JEFF note. If the date is also wrong (11/11:
+  `THIS HOLIDAY SEASON` for October cases): WARNING. If dropping it would
+  mislead a viewer about what to do, the fix is the year (`IN 2024`).
+- **`THIS FAMILY` in the tease.** A person introduced as `THIS …` before
+  anything is on screen: NOTE, direction `YOU'RE GOING TO SEE…` / `YOU'LL MEET…`.
+- **Energy drops between clips.** A clip after the first brought in flat (on
+  place and date, a recap, or a plain fact) instead of an escalator that moves
+  the story forward (`AND NOW IT'S SPREADING`, `BUT IT GETS WORSE`): WARNING
+  when two or more clips in a row are flat, NOTE for one.
 
 ## Fact-checking subsystem
 
