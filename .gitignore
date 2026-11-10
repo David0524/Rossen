@@ -3,3 +3,4 @@ __pycache__/
 *.db
 .venv/
 runs/*/site_audio/
+runs/*/*/site_audio/
