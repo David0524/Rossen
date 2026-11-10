@@ -12,7 +12,7 @@ pre-bible → pre-bible email → **outline w/ videos** → bible → bible revi
 One approved outline in (plus the pre-bible it came from), a picks manifest plus the
 filled **outline w/ videos** `.docx` out. The bible is written afterwards, from that
 outline, by `rossen-script-writer` — it never comes back through this pipeline. The
-outline format, its Videos table and status vocabulary belong to
+outline format (v3: the front and the Build Sheet), clip blocks and status vocabulary belong to
 `rossen-story-outline`; read it before Step 8.
 
 You do the judgment. The `rossen_harvest` package does the mechanical work. Never
@@ -81,8 +81,9 @@ in Step 3 with those numbers in mind.
 
 Read the `rossen-beat-extractor` skill, **outline mode**, and its `aired_examples.md`.
 Input is the approved outline's markdown source and the pre-bible. One beat per
-`HAVE`/`FIND` row; `beat_id` is `MM-DD-<story><row>` (`10-07-A5`), so every pick maps
-back to its outline row. `DEMO` rows are logged `SHOW-PRODUCED` at Checkpoint 1;
+`HAVE`/`FIND` row of the Build Sheet's Beats table (v3; in an old table-format outline,
+per row of the beat table); `beat_id` is `MM-DD-<beat id>` (`11-11-A5`), so every pick
+maps back to its block. `DEMO` rows are logged `SHOW-PRODUCED` at Checkpoint 1;
 `GUEST`, `JEFF` and `STILLS` rows are not beats.
 
 Script mode — an aired bible via `pandoc -t plain --wrap=none` — is for back-filling
@@ -236,7 +237,7 @@ waste time in this step.
 network paths that fail independently. When media bytes are blocked Whisper cannot
 run at all; when the video page is bot-walled captions die too. Where both are
 blocked, rung 3 is the only rung, and the correct output is a pick with an
-explicitly unverified outcue, flagged in the report and the outline's Videos table. Never
+explicitly unverified outcue, flagged in the report and on the outline's clip block (a ⚠️ UNVERIFIED line). Never
 promote a guess. **Spend rung 2 on `priority: 1` beats first** — that is what the
 field is for.
 
@@ -329,15 +330,18 @@ aspirational.
 
 ## Step 8 — Report + outline w/ videos
 
-**Primary deliverable: the outline w/ videos `.docx`.** Write each pick back into its
-story as a `### Videos` row, exactly as `rossen-story-outline` specifies — beat row
-number, `[source — title](URL)`, what it shows, in–out with the verbatim outcue
-(`BUTT` between segments), and status. Manual-lane beats get the native post link and
-`MANUAL`, no invented timecode. Rung-3 beats get `· UNVERIFIED`. Empty beats get
-`EMPTY` and a reason, and go into the outline's Decisions. When an approved swap
-changes the case, rewrite that beat row's Who and What happens in the outline —
-there is no script yet to rewrite. Flip the header to `**Stage:** videos`, update the
-running order's `found/needed`, then:
+**Primary deliverable: the outline w/ videos `.docx`.** Write each pick back exactly
+as `rossen-story-outline` specifies (v3, 11/10/2026): in the **front**, replace the
+beat's `**CLIP — FIND · …:**` placeholder with the clip block — `**CLIP n
+(ORIENTATION):** [source — title](URL) · date · length`, a bold in–out line with each
+segment's outcue (`//` and `BUTT` between segments), and a `*Soundbite: "…"*` line
+quoted from the transcript — numbering clips 1..N in air order. In the **Build
+Sheet**, fill the beat's Status and Clip number. Manual-lane beats get the native post
+link and a `⚠️ MANUAL` line, no invented timecode. Rung-3 beats get `· UNVERIFIED` and
+a `⚠️ UNVERIFIED` line. Empty beats get `EMPTY` and a reason, and go into Open calls.
+When an approved swap changes the case, rewrite that block's talking points and the
+row's Who. Time each clip on the copy its link points to. Flip the header to
+`Stage: videos`, update THE SHOW's clip numbers, then:
 
 ```bash
 python3 <skills-dir>/rossen-story-outline/scripts/check_outline.py outline.md --stage videos

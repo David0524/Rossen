@@ -31,7 +31,7 @@ OUT: (AND THAT'S WHEN SHE KNEW)
 ((([Outlet](URL) · 0:18 - 0:53 (AND THAT'S WHEN SHE KNEW))))
 ```
 
-The red source line under a FINAL clip is the outline's Videos row: the outlet
+The red source line under a FINAL clip is the outline's clip block: the outlet
 linked to the clip, in - out with each segment's outcue, `BUTT` between
 segments. Copy it from the outline; never retime it here. A MANUAL clip (no
 transcript) keeps a blank `OUT:` and only the linked outlet. This is the form

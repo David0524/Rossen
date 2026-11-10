@@ -85,11 +85,18 @@ conflict in the chat reply so the file can be fixed.
 
 ## Input and stage
 
-The bible is written **from the approved Outline w/ Videos** (`rossen-story-outline`):
-the beats, the clip picked for each, its transcript excerpt, orientation and
-timecodes. Its **Open package** line sets the tease's first lines, and each
-**Jeff should know** line becomes a `JEFF PLEASE NOTE` comment on the line it
-guards. The pre-bible pitch sheet is upstream of that and is a weaker input —
+The bible is written **from the approved Outline w/ Videos** (`rossen-story-outline`).
+Since 11/10/2026 (v3) it has two layers. **The front** is the show in air order:
+each block's headline becomes the bible header as written, its talking points
+become the runway, its clip block (link, in–out, soundbite) becomes the numbered
+marker, `OUT:` and red source line, its `Out:` line the re-entry line and its `Red
+flag:` the takeaway; the break, the protection steps and the close carry over in
+order. **The Build Sheet** behind it carries what the copy obeys but doesn't say:
+the Hold back (the tease's limit), the Open package (the tease's first lines), the
+Climb (the escalators between clips), Who with full names and dates (the source
+log), the **Jeff should know** lines and dating gaps (each a `JEFF PLEASE NOTE` on
+the line it guards) and the fix sources (the source log). An old table-format
+outline (v2) maps the same way: beat rows to headers, Videos rows to clips. The pre-bible pitch sheet is upstream of that and is a weaker input —
 it has unwatched candidate clips and stories Jeff hasn't approved.
 
 Decide the stage first and say which one you are writing:
@@ -103,8 +110,8 @@ Decide the stage first and say which one you are writing:
 approved outline before the bible is written, so the normal case is a FINAL
 written from the Outline w/ Videos with its clips already picked, numbered and
 timed. A FINAL clip beat is the marker, `OUT:` with the outcue, then one red
-source line exactly as the outline's Videos row gives it (the sent 10/14 bible
-is the model):
+source line exactly as the outline's clip block gives it (link, in–out and
+outcues; the sent 10/14 bible is the model):
 
 ```
 (((PLAY CLIP 3 HORIZONTAL)))
@@ -1006,7 +1013,7 @@ script can't see:
   anchored on their line.
 - Both files exist under the standard bible title (`F2 Wed 10_14 -- <Working Title>`).
 - FINAL: clips match the outline, numbered in air order, `OUT:` and the red
-  source line from the Videos rows, nothing added, cut or swapped without saying
+  source line from the clip blocks, nothing added, cut or swapped without saying
   so.
 - The producer's cuts (`What the producer cuts before it goes to Jeff`): no news
   outlet in any spoken line, lead-ins included (Jeff, 11/11); victims as `THIS WOMAN`/`THIS MAN` unless the story develops them;

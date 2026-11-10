@@ -4,7 +4,9 @@
 Usage:
     python3 build_outline.py outline.md -o "Outline F2 10_21.docx"
 
-Source conventions this expects:
+Source conventions this expects (v3 additions: `[[PAGE BREAK]]` before the
+Build Sheet, a beat tag line in backticks -> small grey, nested bullets by
+indent, *Soundbite* bullets grey, ⚠️ bullets and //// break rules red):
     # TITLE                      -> document title (first H1 only)
     ## SECTION                   -> major section (shortlist, back matter)
     # A. STORY HEADLINE          -> a story page (letter or number); page break before it
@@ -145,6 +147,7 @@ def render(md, out):
     lines = md.splitlines()
     i = 0
     seen_title = False
+    just_broke = False
     pending_table = []
 
     def flush_table():
@@ -167,6 +170,21 @@ def render(md, out):
         flush_table()
 
         if not stripped:
+            i += 1
+            continue
+
+        # --- v3: page break marker, beat tag lines --------------------------
+        if stripped == "[[PAGE BREAK]]":
+            page_break(doc)
+            just_broke = True
+            i += 1
+            continue
+        if re.fullmatch(r"`[^`]+`", stripped):
+            p = doc.add_paragraph()
+            p.paragraph_format.space_after = Pt(4)
+            r = p.add_run(stripped.strip("`"))
+            r.font.size = Pt(8.5)
+            r.font.color.rgb = RGBColor(0x77, 0x77, 0x77)
             i += 1
             continue
 
@@ -203,7 +221,8 @@ def render(md, out):
                 h = doc.add_heading(text, level=0)
                 seen_title = True
             else:
-                page_break(doc)
+                if not just_broke:
+                    page_break(doc)
                 h = doc.add_heading(text, level=1)
             for run in h.runs:
                 run.font.color.rgb = RGBColor(0, 0, 0)
@@ -225,18 +244,39 @@ def render(md, out):
                 run.italic = True
             continue
 
-        # --- bullets ------------------------------------------------------
+        # --- bullets (v3: nested by indent; soundbites grey; ⚠️ lines red) --
         if stripped.startswith(("- ", "* ")):
-            p = doc.add_paragraph(style="List Bullet")
+            depth = min(2, (len(line) - len(line.lstrip(" "))) // 2)
+            style = ["List Bullet", "List Bullet 2", "List Bullet 3"][depth]
+            try:
+                p = doc.add_paragraph(style=style)
+            except KeyError:
+                p = doc.add_paragraph(style="List Bullet")
+                p.paragraph_format.left_indent = Inches(0.25 + 0.3 * depth)
             p.paragraph_format.space_after = Pt(2)
             add_runs(p, stripped[2:])
+            text = stripped[2:].lstrip("*_ ")
+            if text.lower().startswith("soundbite"):
+                for run in p.runs:
+                    run.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
+            elif text.startswith("⚠️"):
+                for run in p.runs:
+                    run.font.color.rgb = RED
             i += 1
+            just_broke = False
             continue
 
         if re.match(r"^\d+\.\s", stripped):
-            p = doc.add_paragraph(style="List Number")
+            # literal numbers: Word's List Number continues across lists
+            # (THE SHOW 1-10, then the protection steps would read 11-15)
+            num = re.match(r"^(\d+)\.\s", stripped).group(1)
+            p = doc.add_paragraph()
+            p.paragraph_format.left_indent = Inches(0.3)
+            p.paragraph_format.first_line_indent = Inches(-0.25)
             p.paragraph_format.space_after = Pt(2)
+            p.add_run(f"{num}.  ")
             add_runs(p, re.sub(r"^\d+\.\s", "", stripped))
+            just_broke = False
             i += 1
             continue
 
@@ -247,6 +287,10 @@ def render(md, out):
         # --- prose --------------------------------------------------------
         p = doc.add_paragraph()
         add_runs(p, stripped)
+        if stripped.startswith("/" * 6):
+            for run in p.runs:
+                run.font.color.rgb = RED
+        just_broke = False
         i += 1
 
     flush_table()

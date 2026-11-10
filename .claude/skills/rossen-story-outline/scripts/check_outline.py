@@ -1,381 +1,295 @@
 #!/usr/bin/env python3
-"""Mechanical check for a Rossen Outline w/ Videos markdown source.
+"""Mechanical check for a Rossen Outline w/ Videos (v3: the outline + Build Sheet).
 
 Usage:
     python3 check_outline.py outline.md --stage beats     # after Phase 1
     python3 check_outline.py outline.md --stage videos    # after Phase 2
     python3 check_outline.py outline.md --stage videos --transcripts transcripts.json
-        # also scans every clip window for accusations, a cut-off rebuttal,
-        # minors and personal data (the 10/14 clip A5 lesson)
 
-Stage defaults to whatever the header's **Stage:** says.
+v3 layout (producer, 11/10/2026): the front is the show in air order for the
+room (headlines, talking points, clip blocks with soundbites, the break, the
+protection steps, the close); the Build Sheet after a page break carries the
+spine, the beats table, Jeff notes, fix sources, gaps and open calls. This
+checker makes the two agree. An old table-format outline (v2: "| # | Beat | Who
+| What happens | Clip |") is handed to check_outline_v2.py.
+
+Stage defaults to whatever the header's "Stage:" says.
 ERROR = fix before building. WARN = read it and decide. Exit 1 on any ERROR.
 """
 
 import argparse
 import datetime as dt
 import json
+import os
 import re
 import sys
 
-STORY_H1 = re.compile(r"^#\s+([A-Z]|\d+)\.\s+(.*)$", re.M)
-BEAT_HEADER = ["#", "beat", "who", "what happens", "clip"]
-VIDEO_HEADER = ["#", "clip", "shows", "in–out", "status"]
-FOOTAGE = re.compile(r"^(HAVE|FIND)\s*·\s*(HORIZONTAL|VERTICAL)(\s+BROLL)?\b")
-OTHER_TAGS = ("DEMO", "GUEST", "JEFF", "STILLS")
-STATUSES = ("PICK", "WEAK", "MANUAL", "SWAP", "THROTTLED", "EMPTY")
-STATUS_RE = re.compile(r"^(%s)(\s*·\s*(UNVERIFIED|CROP|LEGAL))*$" % "|".join(STATUSES))
-LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
-TIMECODE = re.compile(r"\b\d{1,2}:\d{2}\b(?!\s*(am|pm))", re.I)
-RANGE = re.compile(r"\d{1,2}:\d{2}\s*[–-]\s*\d{1,2}:\d{2}")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import check_outline_v2 as v2  # noqa: E402  (helpers + legacy checker)
 
-# --- Who column: is there a person in it? ----------------------------------
-PLURAL_CATEGORY = re.compile(
-    r"\b(shoppers|people|users|customers|victims|consumers|drivers|parents|"
-    r"seniors|families|homeowners|renters|travelers|patients|workers|employees|"
-    r"owners|viewers|fans|buyers|sellers|residents|members|fact-checkers|"
-    r"experts|officials|carriers|companies|retailers|stores|banks)\b", re.I)
-ROLE_NOUN = re.compile(
-    r"\b(woman|man|mom|mother|dad|father|son|daughter|wife|husband|couple|"
-    r"family|grandmother|grandfather|grandma|grandpa|teen|girl|boy|student|"
-    r"worker|employee|shopper|customer|owner|creator|expert|hacker|officer|"
-    r"detective|sheriff|trooper|reporter|nurse|doctor|lawyer|veteran|"
-    r"retiree|driver|patient|whistleblower|founder|ceo|host|guest|victim|"
-    r"homeowner|renter|traveler|professor|investigator|agent|senator|mayor)\b",
-    re.I)
-ORG_WORDS = re.compile(
-    r"\b(Attorney General|AG|FBI|FTC|FCC|FDA|Department|Commission|Bureau|"
-    r"Office|Agency|Inc|LLC|Corp|Company|Bank|Police|Court|Association|"
-    r"University|Group|App|Cart|Statement|Policy|Settlement)\b")
-NAME_PAIR = re.compile(r"\b[A-Z][a-z]+(?:[-'][A-Za-z]+)?\s+[A-Z][a-z]+")
-NO_PERSON = re.compile(
-    r"^(—|-|n/?a|none|tbd|unnamed|unknown|policy|the policy|settlement)\b", re.I)
-
-
-def who_problem(who):
-    """None if Who reads as a person; otherwise a short reason."""
-    w = who.strip()
-    if not w:
-        return "blank"
-    if re.match(r"you\b|the scammers?\b", w, re.I):
-        return None
-    if NO_PERSON.match(w):
-        return "no person"
-    if PLURAL_CATEGORY.search(w) and not ROLE_NOUN.search(w):
-        return "a category, not a person"
-    if ROLE_NOUN.search(w):
-        return None
-    if NAME_PAIR.search(ORG_WORDS.sub(" ", w)):
-        return None
-    if ORG_WORDS.search(w):
-        return "an institution, not a person"
-    if re.fullmatch(r"[A-Z][a-z]+", w):
-        return "a first name with no identity — say who they are"
-    return "a company or document, not a person"
-
-
-def is_human(who):
-    return who_problem(who) is None and not re.match(r"you\b|the scammers?\b",
-                                                     who.strip(), re.I)
-
-
-# --- Dates in Who, and the six-month rule --------------------------------
-MONTHS = {m: i + 1 for i, m in enumerate(
-    ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct",
-     "nov", "dec"])}
-WHO_DATE = re.compile(
-    r"\((?:[^()]*?\b)?(?:(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+)?"
-    r"(20\d\d)\)", re.I)
-
-
-def airdate(page_one):
-    m = re.search(r"\*\*Airdate:\*\*\s*[A-Za-z]*,?\s*([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})",
-                  page_one)
-    if not m or m.group(1)[:3].lower() not in MONTHS:
-        return None
-    return dt.date(int(m.group(3)), MONTHS[m.group(1)[:3].lower()], int(m.group(2)))
-
-
-# --- Clip window legal scan ------------------------------------------------
-# Always worth a read: sexual or violent accusations, minors, personal data.
-RISK = re.compile(
-    r"\b(harass\w*|sexual\w*|assault\w*|abus\w*|rap(e|ed|ist)|molest\w*|"
-    r"stole|steal(s|ing)?|lied|liar|"
-    r"minor|child(ren)?|kids?|teen\w*|\d{1,2} years? old|"
-    r"home address|license plate|account number|social security number)\b", re.I)
-# Normal in a scam story; only worth a warning when the answer is cut off.
-SOFT_RISK = re.compile(
-    r"\b(fraud\w*|scam\w*|charged|arrest\w*|crimin\w*|guilty|convict\w*|"
-    r"predator\w*|theft|accus\w*)\b", re.I)
-ANSWER = re.compile(
-    r"\b(baseless|denie[sd]|deny|responded|response|in a statement|declined "
-    r"to comment|did not respond|didn't respond|attorney|lawyer|disputes?)\b", re.I)
-REPLY = re.compile(
-    r"\b(baseless|denie[sd]|deny|responded|in a statement|declined to comment|"
-    r"disputes?)\b", re.I)
-YT_ID = re.compile(r"(?:v=|shorts/|youtu\.be/)([\w-]{11})")
-WINDOW = re.compile(r"(\d{1,2}):(\d{2})\s*[–-]\s*(\d{1,2}):(\d{2})")
-
-
-def window_scan(label, n, clip, inout, status, decisions, tx, story):
-    m = YT_ID.search(clip)
-    if not m or m.group(1) not in tx or not tx[m.group(1)]:
-        return
-    cues = tx[m.group(1)].get("cues") or []
-    for a, b, c, d in WINDOW.findall(inout):
-        t0, t1 = int(a) * 60 + int(b), int(c) * 60 + int(d)
-        inside = " ".join(q["text"] for q in cues if t0 - 1 <= q["start"] <= t1)
-        after = " ".join(q["text"] for q in cues if t1 < q["start"] <= t1 + 20)
-        # "attorney" inside the window is often the accuser's lawyer, so only a
-        # real answer word inside (denied, baseless, responded…) counts.
-        cut_off = ANSWER.search(after) and not REPLY.search(inside)
-        hits = sorted({h.group(0).lower() for h in RISK.finditer(inside)})
-        if cut_off:
-            hits += sorted({h.group(0).lower() for h in SOFT_RISK.finditer(inside)})
-        if not hits:
-            continue
-        msg = (f"{label} Videos row {n}: window {a}:{b}–{c}:{d} contains "
-               f"{', '.join(hits[:5])}")
-        if cut_off:
-            msg += (f"; an answer ('{ANSWER.search(after).group(0)}') starts just "
-                    f"after the out point, so the claim airs without it")
-        if "LEGAL" not in status.upper():
-            warn(msg + ". Read the window; if it is an accusation, an unanswered "
-                 "claim, a minor or personal data, mark it · LEGAL and propose a "
-                 "tighter cut in Decisions. (Words like 'scam' in a scam story are "
-                 "usually fine: read before marking.)")
-
-
-errors, warns = [], []
+errors, warns = v2.errors, v2.warns          # window_scan reports into these
 err, warn = errors.append, warns.append
 
+BUILD = re.compile(r"^#\s+BUILD SHEET\b.*$", re.M)
+TAG = re.compile(r"^`([A-Z]\d{1,2})\s*·\s*([^`]*)`\s*$", re.M)
+HEAD2 = re.compile(r"^##\s+(.+?)\s*$", re.M)
+CLIP_LINE = re.compile(
+    r"^\s*(?:-\s*)?\*\*CLIP\s+(\d+)\s*\((HORIZONTAL|VERTICAL)(\s+BROLL)?\)\s*:\*\*\s*(.*)$", re.M)
+CLIP_PH = re.compile(
+    r"^\s*(?:-\s*)?\*\*CLIP\s+—\s*(HAVE|FIND)\s*·\s*(HORIZONTAL|VERTICAL)(\s+BROLL)?\s*:\*\*\s*(.*)$", re.M)
+INOUT = re.compile(r"^\s*-\s*\*\*\s*\d{1,2}:\d{2}\s*[–-]\s*\d{1,2}:\d{2}.*\*\*\s*$")
+SOUND = re.compile(r"^\s*-\s*\*Soundbite:", re.I)
+FLAG = re.compile(r"^\s*-\s*⚠️\s*(LEGAL|UNVERIFIED|MANUAL|WEAK|CROP)\b", re.I)
+BEAT_HEADER = ["beat", "clip", "who", "tag", "status", "adds", "search specifics"]
+SPINE = ["In one sentence", "Hold back", "Peg", "Climb", "Framing", "Open package",
+         "Weight"]
+TAGS = re.compile(r"^((HAVE|FIND)\s*·\s*(HORIZONTAL|VERTICAL)(\s+BROLL)?|DEMO|GUEST|JEFF|STILLS)$")
+DATED = re.compile(
+    r"\b(holidays?|holiday season|thanksgiving|christmas|hanukkah|new year'?s|"
+    r"black friday|cyber monday|halloween|(this|last|next) (fall|autumn|winter|"
+    r"spring|summer|season|week|weekend|month|year)|this time of year)\b", re.I)
+TEASE_THIS = re.compile(r"^\s*-\s*(and |but |then |plus )?(this|these) (family|woman|man|"
+                        r"couple|neighbor|homeowner|shopper|grandmother|veteran)\b", re.I)
+OUTLET = re.compile(r"\b(CBS|NBC|ABC\d*|FOX\s?\d*|CNN|NPR|KTLA|KCAL|WBZ|WCVB|"
+                    r"Inside Edition|Good Morning America|Dateline)\b")
+AMP = re.compile(r"\b(now|but|even|worse|spreading|not just|bigger|closer|next|"
+                 r"gets|another|already|again|faster|so who|wait)\b", re.I)
 
-def tables(block):
-    """Yield (header, rows) for each pipe table in block."""
-    cur = []
-    for line in block.splitlines() + [""]:
-        s = line.strip()
-        if s.startswith("|"):
-            cells = [c.strip() for c in s.strip("|").split("|")]
-            if not all(re.fullmatch(r":?-{2,}:?", c) for c in cells):
-                cur.append(cells)
-        elif cur:
-            yield [re.sub(r"\*", "", c).lower() for c in cur[0]], cur[1:]
-            cur = []
+
+def split_front(md):
+    m = BUILD.search(md)
+    return (md[: m.start()], md[m.start():]) if m else (md, "")
+
+
+def blocks(front):
+    """Yield (headline, body) for each ## section of the front, in order."""
+    heads = list(HEAD2.finditer(front))
+    for i, h in enumerate(heads):
+        end = heads[i + 1].start() if i + 1 < len(heads) else len(front)
+        yield h.group(1), front[h.end():end]
 
 
 def check(md, stage, tx=None):
     body = re.sub(r"<!--.*?-->", "", md, flags=re.S)
+    if re.search(r"^\|\s*#\s*\|\s*Beat\s*\|\s*Who\s*\|", body, re.M | re.I):
+        print("(v2 table outline: using check_outline_v2)")
+        return v2.check(md, stage, tx)
 
     if "(((" in body or re.search(r"\bOUT:", body):
         err("Bible markers found ((((…))) or OUT:). The outline never carries them.")
     for m in re.finditer(r"<[^>\n]{1,60}>", body):
         err(f"Unfilled template slot: {m.group(0)}")
 
-    first = STORY_H1.search(body)
-    page_one = body[: first.start()] if first else body
+    front, sheet = split_front(body)
+    if not sheet:
+        err("No '# BUILD SHEET' after the close. v3 outlines carry it behind a page break.")
+    elif "[[PAGE BREAK]]" not in front[-400:] + sheet[:50]:
+        warn("Put [[PAGE BREAK]] right before '# BUILD SHEET' so the room can stop there.")
 
-    header = re.search(r"\*\*Stage:\*\*\s*(\w+)", page_one)
-    declared = header.group(1).lower() if header else None
+    # ---- header and page one ------------------------------------------------
+    hm = re.search(r"Stage:\s*(beats|videos)", front[:800], re.I)
+    declared = hm.group(1).lower() if hm else None
     if not declared:
-        err("Header has no **Stage:** (beats or videos).")
+        err("Header line has no 'Stage: beats' or 'Stage: videos'.")
     stage = stage or declared or "beats"
     if declared and declared != stage:
         err(f"Header says Stage: {declared}, checking as {stage}. Make them agree.")
-
-    if not re.search(r"^#\s+\S", page_one, re.M):
+    if not re.search(r"^#\s+\S", front, re.M):
         err("No title H1.")
-    for h in ("**Airdate:**", "**Stories:**"):
-        if h not in page_one:
-            err(f"Header has no {h}")
-    if "## RUNNING ORDER" not in page_one:
-        err("Page one has no '## RUNNING ORDER'.")
-    else:
-        ro = page_one.split("## RUNNING ORDER", 1)[1].split("###", 1)[0]
-        rows = [r for _, rs in tables(ro) for r in rs]
-        if not rows:
-            err("RUNNING ORDER has no table.")
-        elif not any("omniwatch" in " ".join(r).lower() for r in rows):
-            warn("No OmniWatch break in the running order.")
-    for h in ("### The show in three sentences", "### The ride",
-              "### Decisions before we write"):
-        if h not in page_one:
-            err(f"Page one missing '{h}'.")
-    if TIMECODE.search(page_one):
-        err("Timecode on page one. Timecodes live only in Videos tables.")
+    am = re.search(r"Airdate\s+[A-Za-z]{3}\s+([A-Za-z]{3})[a-z]*\s+(\d{1,2}),\s*(\d{4})", front[:800])
+    aired = (dt.date(int(am.group(3)), v2.MONTHS[am.group(1).lower()], int(am.group(2)))
+             if am and am.group(1).lower() in v2.MONTHS else None)
+    if not aired:
+        warn("Header line has no 'Airdate Wed Nov 11, 2026'; the six-month dating check is skipped.")
+    for h in ("SUMMARY", "THE SHOW", "THE TEASE", "CLOSE"):
+        if not re.search(rf"^##\s+{h}\b", front, re.M):
+            err(f"Front has no '## {h}'.")
+    show = re.search(r"^##\s+THE SHOW\b(.*?)(?=^##\s)", front, re.M | re.S)
+    if show and not re.search(r"^\s*1\.\s", show.group(1), re.M):
+        err("THE SHOW is a numbered list (one line per headline, break and close).")
+    if show and "|" in show.group(1):
+        warn("THE SHOW is a list, not a table (v3).")
+    if re.search(r"^##\s+(DECISIONS|RUNNING ORDER)\b", front, re.M):
+        warn("Decisions and the running-order table moved: Open calls go in the Build "
+             "Sheet (and chat/OPEN.md); THE SHOW is a list.")
 
-    starts = list(STORY_H1.finditer(body))
-    if not starts:
-        err("No story sections (# A. HEADLINE).")
-    if "WEDNESDAY" in page_one.upper() and len(starts) > 2 \
-            and not re.search(r"confirm", page_one, re.I):
-        warn(f"Wednesday with {len(starts)} stories. Default is A + B. "
-             "Say it was confirmed in the **Stories:** line.")
-
-    decisions = page_one.split("### Decisions before we write", 1)[-1]
-    aired = airdate(page_one)
-    if stage == "videos" and tx is None:
-        warn("No --transcripts file given: clip windows were not scanned for "
-             "accusations, cut-off rebuttals, minors or personal data. Pass the "
-             "pipeline run's transcripts.json.")
-
-    for idx, m in enumerate(starts):
-        label = f"Story {m.group(1)}"
-        end = starts[idx + 1].start() if idx + 1 < len(starts) else len(body)
-        block = body[m.start():end]
-        for req in ("**In one sentence:**", "**Hold back:**", "**Peg:**",
-                    "**Weight:**", "### The fix", "### Gaps"):
-            if req not in block:
-                err(f"{label}: missing {req}")
-
-        if "**Climb:**" not in block and len(re.findall(r"^\|\s*\d+\s*\|", block, re.M)) >= 4:
-            warn(f"{label}: no **Climb:** line. Name the axis the beats get "
-                 f"worse on so every bridge can say why the next one is worse "
-                 f"(Ryan, 10/9).")
-        if "**Payoff point:**" not in block and re.search(
-                r"\b(DEMO|walkthrough|how-to|tutorial)\b", block, re.I):
-            warn(f"{label}: has a how-to or demo but no **Payoff point:** line. "
-                 f"Say which beat the method lands on; it comes after the real "
-                 f"result, the stakes and a complication (Jeff, 11/04).")
-        gaps = block.split("### Gaps", 1)[-1]
-        fix = block.split("### The fix", 1)[-1].split("###", 1)[0]
-        if "### The fix" in block and not re.search(r"\bafter\b[^\n]*:", fix, re.I):
-            warn(f"{label}: The fix has no per-case red flags ('After <case>: ...'). "
-                 "Each victim case gets a one-line takeaway the bible places "
-                 "right after it.")
-        for line in fix.splitlines():
-            t = line.strip()
-            if t.startswith("- ") and not t.lower().startswith("- after ") \
-                    and not re.search(r"\([^)]{3,}\)\s*\.?$|⚠️", t):
-                warn(f"{label} fix step has no source: '{t[2:60]}'. End it with the "
-                     "issuing body's page in parentheses, or ⚠️ if unsourced. Run "
-                     "the do-nothing test on any deadline, enrollment or default.")
-
-        found = dict((tuple(h), rs) for h, rs in tables(block))
-        beats = found.get(tuple(BEAT_HEADER))
-        if beats is None:
-            err(f"{label}: no beat table | # | Beat | Who | What happens | Clip |")
+    # ---- front blocks -------------------------------------------------------
+    front_beats, clip_nums, footage_front = [], [], {}
+    prev_clip_seen = False
+    for head, txt in blocks(front):
+        if head.upper().startswith(("SUMMARY", "THE SHOW", "CLOSE")):
             continue
-
-        lo, hi = (5, 9) if idx == 0 else (2, 4)
-        if not lo <= len(beats) <= hi:
-            warn(f"{label}: {len(beats)} beats (expected {lo}–{hi} for this slot).")
-
-        footage, video, stills, humans = {}, 0, 0, 0
-        for r in beats:
-            if len(r) != 5:
-                err(f"{label} beat {r[0] if r else '?'}: row needs 5 cells.")
-                continue
-            n, _, who, what, clip = r
-            prob = who_problem(who)
-            if prob == "blank":
-                err(f"{label} beat {n}: Who is blank. Write the gap "
-                    "(e.g. 'Unnamed — need a name').")
-            elif prob:
-                warn(f"{label} beat {n}: Who '{who}' is {prob}. "
-                     "Name one, or flag it in Decisions.")
-            elif is_human(who):
-                humans += 1
-                if FOOTAGE.match(clip):
-                    dm = WHO_DATE.search(who)
-                    if not dm:
-                        warn(f"{label} beat {n}: Who '{who}' has no date. End it "
-                             "with when it happened or aired, e.g. '(June 2025)'.")
-                    elif aired:
-                        mon = MONTHS.get((dm.group(1) or "jan")[:3].lower(), 1)
-                        when = dt.date(int(dm.group(2)), mon, 1)
-                        if (aired - when).days > 183 and not re.search(
-                                rf"{m.group(1)}\s*(beat\s*)?{n}\b.*?date|"
-                                rf"{m.group(1)}{n}\b.*?date", gaps, re.I | re.S):
-                            warn(f"{label} beat {n}: case dated {dm.group(0)} is more "
-                                 "than six months before the airdate. Add a ⚠️ Gaps "
-                                 f"line ('{m.group(1)}{n} … date in a Jeff note'); the bible's copy "
-                                 "stays evergreen (Jeff, 11/11).")
-            if len(what.split()) > 25:
-                err(f"{label} beat {n}: 'What happens' is {len(what.split())} "
-                    "words (max 25). Split the beat.")
-            if TIMECODE.search(what):
-                err(f"{label} beat {n}: timecode in the beat table.")
-            tag0 = clip.split()[0].rstrip("—-:,") if clip else ""
-            fm = FOOTAGE.match(clip)
-            if fm:
-                footage[n] = fm.group(2)
-                video += 1
-            elif tag0 in ("HAVE", "FIND"):
-                err(f"{label} beat {n}: footage tag needs an orientation — "
-                    "'HAVE · VERTICAL', 'FIND · HORIZONTAL'.")
-            elif tag0 not in OTHER_TAGS:
-                err(f"{label} beat {n}: Clip must start with HAVE · <ORIENTATION>, "
-                    "FIND · <ORIENTATION>, DEMO, GUEST, JEFF or STILLS.")
-            if tag0 == "STILLS":
-                stills += 1
-            caps = re.findall(r"[A-Za-z]{3,}", what)
-            if caps and sum(w.isupper() for w in caps) / len(caps) > 0.6:
-                warn(f"{label} beat {n}: reads in ALL CAPS. The outline is sentence case.")
-
-        if stills and stills >= video:
-            warn(f"{label}: {stills} STILLS beat(s) vs {video} video. The show wants video.")
-        if humans == 0:
-            warn(f"{label}: no named human anywhere in Who.")
-
-        vids = found.get(tuple(VIDEO_HEADER))
-        has_heading = "### Videos" in block
-        if stage == "beats":
-            if has_heading or vids is not None:
-                err(f"{label}: Videos table present at Stage: beats. "
-                    "Flip the header to videos, or remove it.")
+        if head.upper().startswith("THE TEASE"):
+            tt = TAG.search(txt)
+            if tt:
+                front_beats.append(tt.group(1))
+            pts = [l for l in txt.splitlines() if l.strip().startswith("-")]
+            for l in pts:
+                if TEASE_THIS.match(l):
+                    warn(f"Tease: '{l.strip()[:60]}'. Jeff (11/11): 'You're going to "
+                         f"see this family…', not 'This family…'.")
             continue
+        tg = TAG.search(txt)
+        if not tg:
+            err(f"Block '{head[:50]}' has no beat tag line (`A2 · place · Mon YYYY`).")
+            continue
+        bid = tg.group(1)
+        front_beats.append(bid)
+        if head != head.upper():
+            warn(f"{bid}: headline isn't in caps; it's the on-air header as written.")
+        if re.match(r"^(AND |BUT )?IN [A-Z][A-Z ]+…", head):
+            warn(f"{bid}: headline opens on a place ('{head[:40]}'). Subject first, impact on you.")
+        pts = [l for l in txt.splitlines() if re.match(r"^-\s", l) and not
+               re.match(r"^-\s*\*\*(Out|Red flag):", l)]
+        for l in pts:
+            t = l[1:].strip()
+            if len(t.split()) > 25:
+                warn(f"{bid}: talking point over 25 words: '{t[:50]}…'")
+            if t.isupper() and len(t) > 20:
+                warn(f"{bid}: talking point in caps; the outline is sentence case.")
+            if DATED.search(t):
+                warn(f"{bid}: '{DATED.search(t).group(0)}' dates the video. Jeff (11/11): "
+                     f"evergreen; the date goes in a Jeff note.")
+            if OUTLET.search(t):
+                warn(f"{bid}: talking point names an outlet ('{OUTLET.search(t).group(0)}'). "
+                     f"Jeff (11/11): no 'CBS shows this'; the clip line credits it.")
+        for l in txt.splitlines():
+            m = re.match(r"^-\s*\*\*(Out|Red flag):\*\*\s*(.*)", l)
+            if m and DATED.search(m.group(2)):
+                warn(f"{bid}: '{DATED.search(m.group(2)).group(0)}' in the {m.group(1)} line dates the video.")
+        has_clip = False
+        for m in CLIP_LINE.finditer(txt):
+            has_clip = True
+            n = int(m.group(1))
+            clip_nums.append(n)
+            footage_front.setdefault(bid, []).append(n)
+            rest = txt[m.end():].splitlines()[1:6]
+            inout = next((r for r in rest if INOUT.match(r)), None)
+            flag = next((r for r in rest if FLAG.match(r)), "")
+            manual = "MANUAL" in flag.upper()
+            if not v2.LINK.search(m.group(4)):
+                err(f"Clip {n}: no [Outlet — title](URL) link on the clip line.")
+            if not inout and not manual:
+                err(f"Clip {n}: no bold in–out line under the clip (or a ⚠️ MANUAL line).")
+            if not any(SOUND.match(r) for r in rest) and not manual \
+                    and "UNVERIFIED" not in flag.upper():
+                err(f"Clip {n}: no *Soundbite:* line. The room judges the clip from it.")
+            if re.search(r"\b(watched|confirmed on screen|we saw)\b", txt[m.start():m.start() + 600], re.I):
+                err(f"Clip {n}: claims the footage was watched.")
+            if tx is not None and inout:
+                v2.window_scan(bid, n, m.group(4), inout, "PICK" + (" · LEGAL" if "LEGAL" in flag.upper() else ""),
+                               "", tx, bid)
+        ph = list(CLIP_PH.finditer(txt))
+        if ph:
+            has_clip = True
+            if stage == "videos":
+                err(f"{bid}: clip placeholder left in at Stage: videos.")
+            footage_front.setdefault(bid, [])
+        if has_clip and prev_clip_seen and pts and not AMP.search(pts[0]):
+            warn(f"{bid}: the block's first point doesn't move the story forward "
+                 f"('{pts[0][1:].strip()[:50]}'). Jeff (11/11): amp up into every clip "
+                 f"after the first ('And now it's spreading…').")
+        if has_clip:
+            prev_clip_seen = True
+    if clip_nums and clip_nums != list(range(1, len(clip_nums) + 1)):
+        err(f"Clips must run 1..N in air order; found {clip_nums}.")
+    if not re.search(r"^/{6,}", front, re.M):
+        warn("No //// break block in the front.")
+    if not re.search(r"^##\s+HERE'S HOW TO PROTECT YOURSELF", front, re.M):
+        warn("No '## HERE'S HOW TO PROTECT YOURSELF'.")
 
-        # ---- stage: videos
-        if not footage:
+    if not sheet:
+        return stage
+    # ---- Build Sheet ----------------------------------------------------------
+    for f in SPINE:
+        if not re.search(rf"\*\*{re.escape(f)}:\*\*\s*\S", sheet):
+            err(f"Build Sheet Spine has no '{f}:' line.")
+    for h in ("Spine", "Beats", "Jeff should know", "The fix: sources", "Gaps", "Open calls"):
+        if not re.search(rf"^##\s+{re.escape(h)}\b", sheet, re.M):
+            err(f"Build Sheet has no '## {h}'.")
+    rows = []
+    for hdr, rs in v2.tables(sheet):
+        if hdr[:len(BEAT_HEADER)] == BEAT_HEADER:
+            rows += rs
+    if not rows:
+        err("Build Sheet has no Beats table: | Beat | Clip | Who | Tag | Status | Adds | Search specifics |")
+        return stage
+    gaps = sheet.split("## Gaps", 1)[1] if "## Gaps" in sheet else ""
+    sheet_ids = [r[0] for r in rows]
+    if sheet_ids != front_beats:
+        missing = [b for b in front_beats if b not in sheet_ids]
+        extra = [b for b in sheet_ids if b not in front_beats]
+        if missing or extra:
+            err(f"Front blocks and Beats rows disagree. In front only: {missing}; "
+                f"in the Build Sheet only: {extra}. The front is the show; fix the sheet.")
+        else:
+            err(f"Beats rows are in a different order from the front: {sheet_ids} vs "
+                f"{front_beats}. Reorder the sheet to match.")
+    adds_seen = {}
+    humans = 0
+    stories = {}
+    for r in rows:
+        if len(r) < 7:
+            err(f"Beats row {r[0]} has {len(r)} cells; it needs 7.")
             continue
-        if vids is None:
-            err(f"{label}: {len(footage)} footage beat(s) but no ### Videos table "
-                "| # | Clip | Shows | In–Out | Status |.")
-            continue
-        seen = {}
-        for r in vids:
-            if len(r) != 5:
-                err(f"{label} Videos row {r[0] if r else '?'}: needs 5 cells.")
-                continue
-            n, clip, shows, inout, status = r
-            if n in seen:
-                err(f"{label} Videos: beat {n} has two rows. One pick per beat.")
-            seen[n] = status
-            if n not in footage:
-                err(f"{label} Videos: row {n} is not a HAVE/FIND beat.")
-            st = status.upper().replace(" ", "")
-            if not STATUS_RE.match(status.strip()):
-                err(f"{label} Videos row {n}: status '{status}' — use "
-                    f"{', '.join(STATUSES)}, optionally '· UNVERIFIED' / '· CROP'.")
-                continue
-            base = status.split("·")[0].strip()
-            linked = LINK.search(clip)
-            if base in ("PICK", "WEAK", "MANUAL", "SWAP", "THROTTLED") and not linked:
-                err(f"{label} Videos row {n}: {base} needs a [title](URL) link.")
-            if base in ("PICK", "WEAK", "SWAP") and "UNVERIFIED" not in st:
-                if not (RANGE.search(inout) and '"' in inout) and \
-                        "WHOLE CLIP" not in inout.upper():
-                    err(f"{label} Videos row {n}: {base} without UNVERIFIED needs "
-                        'in–out and a verbatim outcue: 0:17–0:51 "outcue".')
-            if base in ("MANUAL", "THROTTLED", "EMPTY") or "UNVERIFIED" in st:
-                if RANGE.search(inout) and "UNVERIFIED" in st:
-                    err(f"{label} Videos row {n}: UNVERIFIED with a timecode. "
-                        "No transcript, no timecode.")
-            if base == "EMPTY" and len(shows.split()) < 3:
-                err(f"{label} Videos row {n}: EMPTY needs a reason in Shows.")
-            if tx is not None and base in ("PICK", "WEAK", "SWAP"):
-                window_scan(label, n, clip, inout, status, decisions, tx, m.group(1))
-            if base in ("EMPTY", "WEAK") or "CROP" in st or "LEGAL" in st:
-                if not re.search(rf"\b{m.group(1)}\s*(beat\s*)?{n}\b|{m.group(1)}{n}\b",
-                                 decisions):
-                    warn(f"{label} Videos row {n}: {status} should be in Decisions "
-                         f"(write '{m.group(1)} beat {n}').")
-            if re.search(r"confirm(ed)? on screen|we watched|watched it", shows, re.I):
-                err(f"{label} Videos row {n}: claims the footage was watched.")
-        for n in footage:
-            if n not in seen:
-                err(f"{label}: footage beat {n} has no Videos row.")
+        bid, clip, who, tag, status, adds, spec = r[:7]
+        stories.setdefault(bid[0], []).append(bid)
+        if not TAGS.match(tag):
+            err(f"{bid}: tag '{tag}' isn't one of HAVE/FIND · ORIENTATION, DEMO, GUEST, JEFF, STILLS.")
+        prob = v2.who_problem(re.sub(r"\(.*?\)|·\s*character", "", who))
+        if prob:
+            warn(f"{bid}: Who '{who[:50]}' is {prob}. Write the person, or the gap.")
+        if v2.is_human(who):
+            humans += 1
+        footage = tag.startswith(("HAVE", "FIND"))
+        if footage:
+            dm = v2.WHO_DATE.search(who)
+            if not dm:
+                warn(f"{bid}: Who has no date in parentheses (Mon YYYY).")
+            elif aired:
+                mon = v2.MONTHS.get((dm.group(1) or "jan")[:3].lower(), 1)
+                if (aired - dt.date(int(dm.group(2)), mon, 1)).days > 183 and \
+                        not re.search(rf"\b{bid}\b.*?date", gaps, re.I):
+                    warn(f"{bid}: case dated {dm.group(0)} is more than six months before the "
+                         f"airdate. Add '⚠️ {bid} … date in a Jeff note' to Gaps (copy stays evergreen).")
+            if not adds or adds == "—":
+                warn(f"{bid}: no Adds (evidence, stakes or development). Jeff (11/04).")
+            else:
+                k = adds.split(":")[0].strip().lower() + ":" + adds.split(":", 1)[-1].strip().lower()
+                if k in adds_seen:
+                    warn(f"{bid}: adds the same as {adds_seen[k]} ('{adds}'). Cut one, or say what's new.")
+                adds_seen[k] = bid
+            if not spec or spec in ("—", "-"):
+                warn(f"{bid}: no Search specifics; the pipeline searches on these (or write 'thin').")
+            nums = [int(x) for x in re.findall(r"\d+", clip)]
+            if stage == "videos":
+                if not status or status == "—":
+                    err(f"{bid}: footage row has no Status at Stage: videos.")
+                elif not all(v2.STATUS_RE.match(s.strip()) for s in status.split(",")):
+                    err(f"{bid}: Status '{status}' isn't in the vocabulary.")
+                if nums != footage_front.get(bid, []):
+                    err(f"{bid}: Beats row says clip {clip}, the front block has "
+                        f"{footage_front.get(bid) or 'none'}.")
+                if any(s in status for s in ("WEAK", "EMPTY", "LEGAL", "CROP")) and \
+                        not re.search(rf"\b{bid}\b|clip\s*{'|'.join(map(str, nums)) or 'x'}\b",
+                                      sheet.split("## Open calls", 1)[-1], re.I):
+                    warn(f"{bid}: {status} belongs in Open calls.")
+        elif clip not in ("—", "-", ""):
+            warn(f"{bid}: {tag} row carries clip {clip}.")
+    for s_, ids in stories.items():
+        lo, hi = (5, 10) if s_ == "A" else (2, 4)
+        if not lo <= len(ids) <= hi:
+            warn(f"Story {s_}: {len(ids)} beats (expected {lo}–{hi}).")
+    if humans == 0:
+        warn("No named human anywhere in Who. People, not policies.")
+    fix = sheet.split("## The fix: sources", 1)[-1].split("##", 1)[0]
+    for line in fix.splitlines():
+        t = line.strip()
+        if t.startswith("- Step") and not re.search(r"\(.+\)|⚠️", t):
+            warn(f"Fix source missing: '{t[:60]}'. End it with the issuing body's page, or ⚠️.")
+    if "do-nothing" not in fix.lower():
+        warn("The fix: sources has no do-nothing test line.")
+    return stage
 
 
 def main():

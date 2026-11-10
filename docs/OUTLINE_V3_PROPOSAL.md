@@ -1,5 +1,7 @@
 # Outline v3: TJ's layout, our content
 
+> **Adopted 11/10/2026** in `rossen-story-outline` as "one document, two readers": the front is TJ's show-order layout for the room (the producer's edits below included); everything Claude and the pipeline need moved to a Build Sheet behind a page break, keyed by beat id. The skill's SKILL.md and `references/example_v3_1111.md` are now the spec; this file is the history.
+
 Proposal, 11/3/2026. Nothing in the skills changes until the producer approves (CLAUDE.md).
 Worked example: `runs/W_11112026/Outline F2 11_11 -- v3 SAMPLE.docx` (source `outline_v3_sample.md`). It is our
 11/11 outline (`outline.md`), with the same beats, clips and research, laid out the v3 way.

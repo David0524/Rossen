@@ -1,97 +1,105 @@
-# <MM/DD> <WEDNESDAY|FRIDAY> — STORY OUTLINE
+# <MM/DD> <WED|FRI> — <WORKING TITLE IN CAPS>
 
-**Airdate:** <Day, Month D, YYYY> · **Stories:** <A + B | A only | N stories — confirmed with ___> · **Guest:** <name, role | none> · **Sponsor:** OmniWatch (<1|2> breaks) · **Stage:** beats
+*Airdate <Day Mon D, YYYY> · tapes <Day Mon D> · <A + B | A only | N stories> · <guest, role | no guest> · <1|2> break(s) · Stage: beats*
 
-## RUNNING ORDER
+## SUMMARY
 
-| Slot | What | Weight | Clips |
-|---|---|---|---|
-| Tease | <stories teased, in order> | — | — |
-| A | <headline> | <~% of show> | <n, or found/needed after Phase 2> |
-| Break | OmniWatch — <after A, or bridged from A beat N> | — | — |
-| B | <headline> | <~%> | <n> |
-| End | <End of show, or Deals — guest, live requests> | — | — |
+<Three sentences: what happens, why the viewer should care, what they walk away able to do.>
 
-**Open package:** <the video the super tease runs over — A story beat #, or "undecided" (then add it to Decisions)>
+## THE SHOW
 
-### The show in three sentences
+1. Tease (opens on clip <n>: <what is on screen>)
+2. <HEADLINE> (clip <n>)
+3. <HEADLINE> (clip <n>)
+4. //// Break: generic ad lead-in
+5. HERE'S HOW TO PROTECT YOURSELF (clip <n>)
+6. Close
 
-<Plain prose. What the viewer walks away scared of, and what they walk away able to do.>
+## THE TEASE
+`A1 · the hook`
 
-### The ride
+- <The most startling moment in the open package, and what it means for you.>
+- <You're going to see… / You'll meet…>
+- <The next threat, as a promise, never the answer.>
+- <The named payoff promise: "the <name>".>
 
-<One line: where tension builds, where it lets go.>
+## <HEADLINE IN CAPS: SUBJECT FIRST, VERDICT VERB, IMPACT ON YOU>
+`A2 · <place> · <Mon YYYY>`
 
-### Decisions before we write
+- <Talking point, one thought, sentence case.>
+- <Talking point.>
+- <The question the clip answers.>
 
-- <ruling the room owes before drafting — or "None.">
+**CLIP — FIND · HORIZONTAL:** <the footage wanted, in a few words>
 
-# A. <STORY HEADLINE>
+- **Out:** <react, then the next reason to keep watching.>
+- **Red flag:** <the takeaway after this case.>
 
-**In one sentence:** <start to end>
+## <NEXT HEADLINE>
+`A3 · <place> · <Mon YYYY>`
 
-**Payoff point:** <beat # where the how-to/demo lands — after the real result, stakes and a complication>
-**Hold back:** <the payoff the tease must not give away>
+- <First point moves the story forward: "And now it's spreading…">
+- <Talking point.>
 
-**Peg:** <why this show, this week. If news: news → confusion → the scammer's opening, + the anchor line>
-**Framing:** <how it starts and where — true of every case>
+**CLIP — FIND · VERTICAL:** <the footage wanted>
 
-**Climb:** <the axis the beats get worse on>
+- **Out:** <…>
 
-**Weight:** <~% of show> · <n> clip beats
+////////////////////
+**BREAK** — generic ad lead-in. *Next:* <two or three specific payoffs, as sentences to the viewer.>
+////////////////////
 
-| # | Beat | Who | What happens | Clip |
-|---|---|---|---|---|
-| 1 | <The hook> | You (the viewer) | <one sentence, 25 words max> | JEFF |
-| 2 | <turn> | <named human, by identity (Mon YYYY)> | <one sentence> | HAVE · VERTICAL — <handle or outlet> |
-| 3 | <turn> | <named human, by identity (Mon YYYY)> | <one sentence> | FIND · HORIZONTAL — <what footage> |
+## HERE'S HOW TO PROTECT YOURSELF
+`A<n> · the fix`
 
-<!-- Phase 2 adds, right here:
-### Videos
+1. **<COMMAND IN CAPS>**
+   - <Detail, sentence case.>
+2. **<COMMAND IN CAPS>**
+   - <Detail.>
 
-| # | Clip | Shows | In–Out | Status |
-|---|---|---|---|---|
-| 2 | [Creator — short title](https://...) | what it shows, one line | — | MANUAL · UNVERIFIED |
-| 3 | [Outlet — short title](https://...) | what it shows, one line | 0:17–0:51 "verbatim outcue" | PICK |
-| 4 | [Outlet — short title](https://...) | what it shows; window carries an accusation, tighter cut proposed | 0:22–1:01 "outcue" | PICK · LEGAL |
--->
+## CLOSE
 
-### The fix
+- <Send this to someone it protects.>
+- <The next video to watch. See you next time.>
 
-- After <case>: <the red flag, one line>
-- <step, plain> (<source: issuing body's page>)
+[[PAGE BREAK]]
 
-### Gaps
+# BUILD SHEET
 
-- <only what changes the shape, ⚠️ at the point of use — or "None.">
+*For Claude and the pipeline. The room can skip this page.*
 
-### Jeff should know
+## Spine
 
-- Beat <n>: <what Jeff needs to know but won't say on air, one line — or "None.">
+- **In one sentence:** <start to end>
+- **Hold back:** <the payoff the tease and headlines must not give away>
+- **Peg:** <why this show; why-now chain if news. The copy stays evergreen.>
+- **Climb:** <the axis the blocks get worse on>
+- **Framing:** <how it starts and where, true of every case>
+- **Open package:** clip <n>, <what is on screen>
+- **Payoff point:** <beat id>
+- **Weight:** <~% of show> · <n> clips
 
-# B. <STORY HEADLINE>
+## Beats
 
-**In one sentence:** <...>
+| Beat | Clip | Who | Tag | Status | Adds | Search specifics |
+|---|---|---|---|---|---|---|
+| A1 | — | You (the viewer) | JEFF | — | — | — |
+| A2 | 1 | <Full name or identity, age, place (Mon YYYY)> | FIND · HORIZONTAL | — | <evidence: …> | <names, figures, places, dates, outlets, agencies> |
+| A3 | 2 | <…> | FIND · VERTICAL | — | <stakes: …> | <…> |
 
-**Hold back:** <...>
+## Jeff should know
 
-**Peg:** <...>
+- <A2: one line Jeff needs but won't say — or "None.">
 
-**Weight:** <...>
+## The fix: sources
 
-| # | Beat | Who | What happens | Clip |
-|---|---|---|---|---|
-| 1 | <...> | <...> | <...> | <...> |
+- Step 1: <detail> (<issuing body's page>)
+- Do-nothing test: <what happens to the viewer who does nothing, or only step 1>
 
-### The fix
+## Gaps
 
-- After <case>: <...>
-- <...> (<source>)
+- <⚠️ A2 <case> is <Mon YYYY>: date in a Jeff note — or "None.">
 
-### Gaps
+## Open calls
 
-- <...>
-
-### Jeff should know
-
-- <...>
+- <ruling the room owes before the bible — or "None.">

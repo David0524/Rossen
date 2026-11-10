@@ -43,11 +43,11 @@ The approved outline's markdown source **and** the pre-bible it was built from.
 
 | Beat record field | Comes from |
 |---|---|
-| one record per | `HAVE · <ORIENTATION>` or `FIND · <ORIENTATION>` row. `DEMO` rows go to Checkpoint 1 as `SHOW-PRODUCED`; `GUEST`, `JEFF`, `STILLS` are not beats. |
-| `beat_id` | `MM-DD-<story><row>` — `10-07-A5` is story A, beat row 5 |
-| `segment_title` | The story's headline |
-| `orientation` | The Clip tag. Producer-authored; a hard constraint, as below. `BROLL` after it means picture-only. |
-| `script_text` | The row's Who and What happens, **plus that beat's specifics from the pre-bible** — names, handles, dollar figures, places, dates, outlets. |
+| one record per | `HAVE · <ORIENTATION>` or `FIND · <ORIENTATION>` row of the **Build Sheet's Beats table** (v3 outlines, 11/10/2026; an old table-format outline has the tag in its beat table's Clip column). `DEMO` rows go to Checkpoint 1 as `SHOW-PRODUCED`; `GUEST`, `JEFF`, `STILLS` are not beats. |
+| `beat_id` | `MM-DD-<beat id>` — `11-11-A5` is the block tagged `A5` |
+| `segment_title` | The block's headline (v3) or the story's headline (v2) |
+| `orientation` | The row's Tag. Producer-authored; a hard constraint, as below. `BROLL` after it means picture-only. |
+| `script_text` | The block's talking points and placeholder (`**CLIP — FIND · …:** <footage wanted>`), the row's Who and **Search specifics**, **plus that beat's specifics from the pre-bible** — names, handles, dollar figures, places, dates, outlets. |
 | `news_anchor` | The story's Peg and any dated event in the pre-bible, written as a search string |
 | `source_native` | A `HAVE` row whose pre-bible line names a native TikTok/Reels/X post → that platform. It goes to the manual lane. |
 | `expected_segments` | 1, unless the row or pre-bible describes two moments from one source |
