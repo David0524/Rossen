@@ -1,0 +1,428 @@
+{
+ "wkyt": {
+  "url": "https://www.wkyt.com/2025/03/31/credit-union-warns-call-forwarding-scam/",
+  "duration": "134.453688",
+  "cues": [
+   {
+    "start": 0.0,
+    "end": 1.6,
+    "text": "they're impersonating the"
+   },
+   {
+    "start": 1.66,
+    "end": 2.7,
+    "text": "commonwealth credit union."
+   },
+   {
+    "start": 2.76,
+    "end": 3.9,
+    "text": "It's always something."
+   },
+   {
+    "start": 3.96,
+    "end": 5.0,
+    "text": "This recent scam is called a"
+   },
+   {
+    "start": 5.06,
+    "end": 6.1,
+    "text": "call forwarding scam."
+   },
+   {
+    "start": 6.16,
+    "end": 7.1,
+    "text": "This allows scammers to"
+   },
+   {
+    "start": 7.16,
+    "end": 8.34,
+    "text": "redirect your calls and"
+   },
+   {
+    "start": 8.4,
+    "end": 9.84,
+    "text": "text messages, potentially"
+   },
+   {
+    "start": 9.9,
+    "end": 11.24,
+    "text": "even giving them access to"
+   },
+   {
+    "start": 11.3,
+    "end": 12.34,
+    "text": "your accounts."
+   },
+   {
+    "start": 12.4,
+    "end": 13.74,
+    "text": "WKYT's Mariah Conggito"
+   },
+   {
+    "start": 13.8,
+    "end": 14.94,
+    "text": "shares what happened to one"
+   },
+   {
+    "start": 15.0,
+    "end": 16.44,
+    "text": "Kentucky and the signs to"
+   },
+   {
+    "start": 16.5,
+    "end": 17.94,
+    "text": "look out for."
+   },
+   {
+    "start": 18.02,
+    "end": 19.68,
+    "text": "They sometimes can create"
+   },
+   {
+    "start": 19.74,
+    "end": 21.68,
+    "text": "such a fear in somebody and"
+   },
+   {
+    "start": 21.74,
+    "end": 23.18,
+    "text": "seem so legit."
+   },
+   {
+    "start": 23.24,
+    "end": 24.58,
+    "text": "This was the case recently"
+   },
+   {
+    "start": 24.66,
+    "end": 26.12,
+    "text": "for one commonwealth credit"
+   },
+   {
+    "start": 26.18,
+    "end": 27.82,
+    "text": "union member who was"
+   },
+   {
+    "start": 27.82,
+    "end": 29.52,
+    "text": "sent his story to WKYT."
+   },
+   {
+    "start": 29.58,
+    "end": 30.82,
+    "text": "He didn't want to go on"
+   },
+   {
+    "start": 30.88,
+    "end": 32.32,
+    "text": "camera, but did want to"
+   },
+   {
+    "start": 32.38,
+    "end": 33.82,
+    "text": "make sure others are aware."
+   },
+   {
+    "start": 33.88,
+    "end": 35.82,
+    "text": "We were thrilled to be able"
+   },
+   {
+    "start": 35.88,
+    "end": 36.82,
+    "text": "to say, you know, I think"
+   },
+   {
+    "start": 36.88,
+    "end": 38.52,
+    "text": "this individual that talked"
+   },
+   {
+    "start": 38.58,
+    "end": 39.56,
+    "text": "with you, $27,000."
+   },
+   {
+    "start": 39.62,
+    "end": 41.62,
+    "text": "Patty Smith with commonwealth"
+   },
+   {
+    "start": 41.7,
+    "end": 42.82,
+    "text": "credit union says it was a"
+   },
+   {
+    "start": 42.9,
+    "end": 43.82,
+    "text": "call forwarding scam."
+   },
+   {
+    "start": 43.9,
+    "end": 45.56,
+    "text": "The scammer called the"
+   },
+   {
+    "start": 45.62,
+    "end": 47.56,
+    "text": "victim using CCU's number."
+   },
+   {
+    "start": 47.64,
+    "end": 49.56,
+    "text": "He told us the scammer knew"
+   },
+   {
+    "start": 49.64,
+    "end": 51.1,
+    "text": "a lot of personal information"
+   },
+   {
+    "start": 51.16,
+    "end": 52.4,
+    "text": "and hour later he says he"
+   },
+   {
+    "start": 52.46,
+    "end": 53.8,
+    "text": "got another call saying they"
+   },
+   {
+    "start": 53.86,
+    "end": 54.8,
+    "text": "needed more information"
+   },
+   {
+    "start": 54.86,
+    "end": 56.6,
+    "text": "and more information."
+   },
+   {
+    "start": 56.6,
+    "end": 58.6,
+    "text": "In order to send him a new"
+   },
+   {
+    "start": 58.66,
+    "end": 60.6,
+    "text": "card to do so, he'd need to"
+   },
+   {
+    "start": 60.66,
+    "end": 61.6,
+    "text": "dial an extension."
+   },
+   {
+    "start": 61.66,
+    "end": 63.6,
+    "text": "They said we're having a"
+   },
+   {
+    "start": 63.66,
+    "end": 65.6,
+    "text": "problem with your phone."
+   },
+   {
+    "start": 65.66,
+    "end": 67.6,
+    "text": "Could you please press star"
+   },
+   {
+    "start": 67.66,
+    "end": 68.6,
+    "text": "72?"
+   },
+   {
+    "start": 68.66,
+    "end": 70.6,
+    "text": "That is actually a code"
+   },
+   {
+    "start": 70.66,
+    "end": 72.6,
+    "text": "within an apple phone to"
+   },
+   {
+    "start": 72.66,
+    "end": 74.6,
+    "text": "redirect your phone."
+   },
+   {
+    "start": 74.66,
+    "end": 76.6,
+    "text": "The victim told WKYT when"
+   },
+   {
+    "start": 76.66,
+    "end": 78.6,
+    "text": "he dialed it, his phone"
+   },
+   {
+    "start": 78.66,
+    "end": 80.6,
+    "text": "shut off and was unusable."
+   },
+   {
+    "start": 80.66,
+    "end": 82.6,
+    "text": "Smith says, in other words,"
+   },
+   {
+    "start": 82.66,
+    "end": 84.6,
+    "text": "that phone is hacked and a"
+   },
+   {
+    "start": 84.66,
+    "end": 86.58,
+    "text": "scammer can commit fraud."
+   },
+   {
+    "start": 86.6,
+    "end": 87.6,
+    "text": "Most financial institutions"
+   },
+   {
+    "start": 87.66,
+    "end": 89.6,
+    "text": "will never be contacting you,"
+   },
+   {
+    "start": 89.66,
+    "end": 90.6,
+    "text": "asking you to press in codes"
+   },
+   {
+    "start": 90.66,
+    "end": 91.6,
+    "text": "on your phone."
+   },
+   {
+    "start": 91.66,
+    "end": 92.6,
+    "text": "In this case, the scammer"
+   },
+   {
+    "start": 92.66,
+    "end": 94.6,
+    "text": "then called CCU, acting as"
+   },
+   {
+    "start": 94.66,
+    "end": 96.6,
+    "text": "their victim, requesting $27,000"
+   },
+   {
+    "start": 96.66,
+    "end": 98.6,
+    "text": "be transferred for something"
+   },
+   {
+    "start": 98.66,
+    "end": 100.6,
+    "text": "he had just bought."
+   },
+   {
+    "start": 100.66,
+    "end": 101.6,
+    "text": "CCU workers say they were"
+   },
+   {
+    "start": 101.66,
+    "end": 103.6,
+    "text": "suspicious and declined the"
+   },
+   {
+    "start": 103.66,
+    "end": 104.6,
+    "text": "request."
+   },
+   {
+    "start": 104.66,
+    "end": 106.6,
+    "text": "We do the exact same diligence"
+   },
+   {
+    "start": 106.66,
+    "end": 108.6,
+    "text": "and the exact same validation"
+   },
+   {
+    "start": 108.66,
+    "end": 110.6,
+    "text": "whether somebody is looking to,"
+   },
+   {
+    "start": 110.66,
+    "end": 113.6,
+    "text": "you know, transfer, move $200"
+   },
+   {
+    "start": 113.6,
+    "end": 116.6,
+    "text": "versus, you know, $200,000."
+   },
+   {
+    "start": 116.66,
+    "end": 118.6,
+    "text": "She says, if you get a call"
+   },
+   {
+    "start": 118.66,
+    "end": 119.6,
+    "text": "from someone saying they're"
+   },
+   {
+    "start": 119.66,
+    "end": 120.6,
+    "text": "with Commonwealth Credit"
+   },
+   {
+    "start": 120.66,
+    "end": 122.6,
+    "text": "Union, hang up and call them"
+   },
+   {
+    "start": 122.66,
+    "end": 123.6,
+    "text": "back at the number they have"
+   },
+   {
+    "start": 123.66,
+    "end": 124.6,
+    "text": "listed on their website."
+   },
+   {
+    "start": 124.66,
+    "end": 126.6,
+    "text": "Take a moment."
+   },
+   {
+    "start": 126.66,
+    "end": 127.6,
+    "text": "Think about what they're saying."
+   },
+   {
+    "start": 127.66,
+    "end": 128.6,
+    "text": "Does it make sense?"
+   },
+   {
+    "start": 128.66,
+    "end": 130.6,
+    "text": "And reach out to us because we'll"
+   },
+   {
+    "start": 130.66,
+    "end": 131.6,
+    "text": "help you evaluate that."
+   },
+   {
+    "start": 131.66,
+    "end": 133.6,
+    "text": "Mariah, can you do WKYT?"
+   }
+  ]
+ }
+}
