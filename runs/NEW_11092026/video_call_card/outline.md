@@ -25,15 +25,15 @@ A sheriff in North Carolina is warning that a stranger video-called children and
 - Plus the one conversation to have with your grandkids before their next call.
 
 ## A STRANGER GOT A BOY TO SEND PHOTOS OF HIS MOM'S CREDIT CARDS… WHILE HE PLAYED A GAME
-`A2 · Lakeville, MN · Aug 2018 · ⚠️ old case`
+`A2 · Lakeville, MN · Aug 2018`
 
 - If a child in your life plays online games or video-chats, this is for you.
 - This boy was 8. A stranger reached him through his video game's chat and promised him game money.
 - All the stranger wanted in return was a few photos. So what did the boy send?
 
 **CLIP 1 (HORIZONTAL):** [KARE 11 — Minnesota mom says Fortnite scammer targeted son, stole ID](https://www.youtube.com/watch?v=av07XWxOnTg) · Aug 2, 2018 · 2:52
-  - ⚠️ UNVERIFIED: no in–out or soundbite yet. YouTube blocked the captions twice and KARE's own site page refused us. Pull it by hand or re-run captions; set the cut from the mom's account.
-  - ⚠️ LEGAL: the boy may be on camera and print coverage names him. Blur him, don't use his name, and check for card or license numbers on screen.
+  - No times yet: YouTube blocked the captions twice and KARE's own site page refused us. Pull it by hand or re-run captions; set the cut from the mom's account.
+  - Legal: the boy may be on camera and print coverage names him. Blur him, don't use his name, and check for card or license numbers on screen.
 
 - **Out:** Photos of her credit cards and her driver's license, sent by an 8-year-old who thought he was getting game money. And now it's not just games.
 - **Red flag:** anyone online who asks a child for a photo of anything in your wallet.
@@ -107,13 +107,13 @@ A sheriff in North Carolina is warning that a stranger video-called children and
 
 ## Beats
 
-| Beat | Clip | Who | Tag | Status | Adds | Search specifics |
-|---|---|---|---|---|---|---|
-| A1 | — | You (the viewer) | JEFF | — | — | — |
-| A2 | 1 | A Lakeville, MN mother and her 8-year-old son (Aug 2018) | HAVE · HORIZONTAL | THROTTLED · UNVERIFIED | evidence: a real case where cards were exposed | [KARE 11, Aug 2, 2018](https://www.youtube.com/watch?v=av07XWxOnTg); [Newsweek](https://www.newsweek.com/8-year-old-fortnite-player-sent-moms-license-credit-card-information-stranger-1054798); [WKYC syndication](https://www.wkyc.com/article/tech/mom-says-fortnite-scammer-targeted-her-son-stole-her-id/95-579617799); Fortnite chat; V-Bucks; credit cards and driver's license |
-| A3 | — | Hyde County, NC Sheriff's Office; children, unnamed (Sep 2026) | STILLS | — | — | [WCTI 12, Sep 29, 2026](https://wcti12.com/news/local/hyde-county-sheriff-warns-parents-about-video-call-scam-targeting-children); [Outer Banks Voice, full release](https://www.outerbanksvoice.com/2026/09/29/hyde-county-sheriff-warns-of-video-call-scam-targeting-children/); Google Duo / Google video calling; Gmail account; [Sharjah Police via Gulf News, Nov 2025](https://gulfnews.com/amp/story/uae%2Fcrime%2Fbe-aware-sharjah-police-expose-new-online-scams-targeting-parents-and-children-1.500355487) |
-| A4 | — | Jeff Rossen, with a producer (show-produced) | DEMO | — | — | sample card, front and back, on a video call |
-| A5 | — | You (the viewer) | JEFF | — | — | — |
+| Beat | Clip | Who | Tag | Adds | Search specifics |
+|---|---|---|---|---|---|
+| A1 | — | You (the viewer) | JEFF | — | — |
+| A2 | 1 | A Lakeville, MN mother and her 8-year-old son (Aug 2018) | HAVE · HORIZONTAL | evidence: a real case where cards were exposed | [KARE 11, Aug 2, 2018](https://www.youtube.com/watch?v=av07XWxOnTg); [Newsweek](https://www.newsweek.com/8-year-old-fortnite-player-sent-moms-license-credit-card-information-stranger-1054798); [WKYC syndication](https://www.wkyc.com/article/tech/mom-says-fortnite-scammer-targeted-her-son-stole-her-id/95-579617799); Fortnite chat; V-Bucks; credit cards and driver's license |
+| A3 | — | Hyde County, NC Sheriff's Office; children, unnamed (Sep 2026) | STILLS | — | [WCTI 12, Sep 29, 2026](https://wcti12.com/news/local/hyde-county-sheriff-warns-parents-about-video-call-scam-targeting-children); [Outer Banks Voice, full release](https://www.outerbanksvoice.com/2026/09/29/hyde-county-sheriff-warns-of-video-call-scam-targeting-children/); Google Duo / Google video calling; Gmail account; [Sharjah Police via Gulf News, Nov 2025](https://gulfnews.com/amp/story/uae%2Fcrime%2Fbe-aware-sharjah-police-expose-new-online-scams-targeting-parents-and-children-1.500355487) |
+| A4 | — | Jeff Rossen, with a producer (show-produced) | DEMO | — | sample card, front and back, on a video call |
+| A5 | — | You (the viewer) | JEFF | — | — |
 
 ## Jeff should know
 
@@ -126,24 +126,19 @@ A sheriff in North Carolina is warning that a stranger video-called children and
 ## The fix: sources
 
 - Step 1: never get, show, read or photograph a card; end the call, block, tell an adult, save screenshots ([Hyde County Sheriff's Office release via Outer Banks Voice](https://www.outerbanksvoice.com/2026/09/29/hyde-county-sheriff-warns-of-video-call-scam-targeting-children/)).
-- Step 2: keep cards out of sight and reach (same release: "review the privacy and communication settings"; ⚠️ "out of reach" is our wording, not the sheriff's).
+- Step 2: keep cards out of sight and reach (same release: "review the privacy and communication settings". "Out of reach" is our wording, not the sheriff's).
 - Step 3: limit calls to approved contacts ([Google Family Link: who your child can call](https://support.google.com/families/answer/7110462)); purchase approvals ([Google Play](https://support.google.com/googleplay/answer/7039872)); spending limits ([Roblox](https://en.help.roblox.com/hc/articles/4409125091348)).
 - Step 4: don't store a card on kids' game accounts; alerts ([CFPB advisory, Aug 28, 2024](https://www.consumerfinance.gov/about-us/newsroom/consumer-advisory-video-games-are-targeting-your-children-to-get-into-your-wallet)).
 - Step 5: call the bank, lock and replace ([FTC: lost or stolen cards](https://consumer.ftc.gov/articles/lost-or-stolen-credit-atm-and-debit-cards)); report ([ReportFraud.ftc.gov](https://reportfraud.ftc.gov); [FTC: what to do if you were scammed](https://consumer.ftc.gov/articles/what-do-if-you-were-scammed); [IC3](https://www.ic3.gov)).
-- Do-nothing test: a credit card number used without the card is $0 liability; a debit card's liability grows the longer you wait ($0/$50/$500/possibly everything, per the FTC), so step 5 says "today." ⚠️ Confirm how the debit tiers apply when only the number was exposed.
-
-## Gaps
-
-- ⚠️ A2 the Lakeville case is August 2018: date in a Jeff note.
-- ⚠️ The video-call version rests on one sheriff's release (single source, an attempt, no loss, no video).
-- ⚠️ No US family has reported a loss to this exact scam that we could find.
-- ⚠️ Clip 1 has no transcript; no in–out, outcue or soundbite.
-- ⚠️ No explainer clip found; the demo carries the "what they can do" beat.
+- Do-nothing test: a credit card number used without the card is $0 liability; a debit card's liability grows the longer you wait ($0/$50/$500/possibly everything, per the FTC), so step 5 says "today." How the debit tiers apply when only the number was exposed is still to confirm (Open calls).
 
 ## Open calls
 
-- **Is the story strong enough?** It needs one of: an interview with the Hyde County Sheriff's Office (was a card shown, was money lost); a US family with a real loss (a viewer callout); a bank fraud-team quote on what a card's front and back is enough for.
-- Pull the KARE 11 clip by hand, or retry captions after a wait.
+- **Is the story strong enough?** Right now the video-call version rests on one sheriff's release (an attempt, no loss, no video), and we found no US family with a loss. It needs one of: an interview with the Hyde County Sheriff's Office (was a card shown, was money lost); a US family with a real loss (a viewer callout); a bank fraud-team quote on what a card's front and back is enough for.
+- Pull the KARE 11 clip by hand, or retry captions after a wait; it has no times or soundbite yet.
+- No explainer clip found; the demo carries the "what they can do" beat. Keep it that way, or search again?
+- Confirm with the FTC or a bank how debit liability works when only the card number was exposed.
+- Clip 1 legal: blur the boy, don't use his name, and check the frames for card or license numbers.
 - Build the demo: who plays the caller, and a dummy card.
 - Jeff hasn't approved this one yet.
 - Sponsor spots for the break.

@@ -25,7 +25,7 @@ People collecting for a funeral or a charity on the street say they don't take c
 - Plus the one thing to look at before you tap, every single time.
 
 ## A $10 DONATION TAP COST THIS WOMAN $4,800… AND HER BANK WOULDN'T GIVE IT BACK
-`A2 · Chicago, IL · Nov 2024 · ⚠️ old case`
+`A2 · Chicago, IL · Nov 2024`
 
 - If a stranger on the street ever says "we don't take cash, just tap," walk away.
 - This woman was leaving the grocery store when two men asked for money for a brother who had died.
@@ -40,7 +40,7 @@ People collecting for a funeral or a charity on the street say they don't take c
 - **Red flag:** "We don't take cash" from someone collecting on the street. Walk away.
 
 ## A $20 DONATION TURNED INTO $4,500… IN SECONDS
-`A3 · Chicago, IL · Jan 2025 · ⚠️ old case`
+`A3 · Chicago, IL · Jan 2025`
 
 - And now it's spreading to the busiest parking lots in town.
 - This couple agreed to give $20 to men raising money to bury a baby brother. Cash? No.
@@ -49,7 +49,7 @@ People collecting for a funeral or a charity on the street say they don't take c
 **CLIP 2 (HORIZONTAL):** [CBS News Chicago — Tap-to-pay scam takes couple for $4,500 in Chicago](https://www.cbsnews.com/chicago/video/tap-to-pay-scam-takes-couple-for-4500-in-chicago-man-ends-up-injured/) · Jan 8, 2025 · 2:30
   - **0:33–0:59 ("CLOSE TO $5,000 INSTEAD OF $20") // BUTT 1:38–1:54 ("THE SCAMMERS PUNCHED IN $4,500")**
   - *Soundbite: "They were trying to help bury their baby little brother." … "The couple agreed to donate $20." "Yeah, they wouldn't take cash." "I already had my phone out so I just went to use my Apple card… I looked down to my phone and realized that they took close to $5,000 instead of $20." // "As you can see from this demo video, iPhone users can set a price and accept payment from another phone with the quick tap. Instead of setting the price at 20 bucks, the scammers punched in $4,500."*
-  - ⚠️ UNVERIFIED on YouTube: timed on the CBS site copy. If the editor pulls the YouTube upload (hWO_cjh6NNY), re-time it.
+  - Note: timed on the CBS site copy; the YouTube copy wasn't transcribed. If the editor pulls the YouTube upload (hWO_cjh6NNY), re-time it.
 
 - **Out:** One tap. $4,500. And he got it back. She had to fight for three months. The difference? He used a credit card.
 - **Red flag:** if they won't let you see the screen before you tap, don't tap.
@@ -59,7 +59,7 @@ People collecting for a funeral or a charity on the street say they don't take c
 ////////////////////
 
 ## POLICE SAY ONE CREW HIT EIGHT PEOPLE IN 17 DAYS… FOR MORE THAN $35,000
-`A4 · Evanston, IL · Dec 2025 · ⚠️ old case`
+`A4 · Evanston, IL · Dec 2025`
 
 - So who's doing this? Outside Chicago, police say a crew pulled this on eight people in a little over two weeks.
 - They say the fake causes included funerals, and the losses topped $35,000.
@@ -110,13 +110,13 @@ People collecting for a funeral or a charity on the street say they don't take c
 
 ## Beats
 
-| Beat | Clip | Who | Tag | Status | Adds | Search specifics |
-|---|---|---|---|---|---|---|
-| A1 | — | You (the viewer) | JEFF | — | — | — |
-| A2 | 1 | Monika Wieske, personal chef, Lakeview, Chicago (Nov 2024) | HAVE · HORIZONTAL | PICK | evidence: the real loss and the bank fight | [CBS News Chicago, Feb 21, 2025](https://www.cbsnews.com/chicago/news/tap-to-pay-scam-victim-lost-thousands/), Charlie De Mar; Whole Foods Lakeview; two $2,400 charges; Fifth Third Bank; refunded after 3 months |
-| A3 | 2 | Drew and Leilani, a couple, Near North Side, Chicago (Jan 2025) | HAVE · HORIZONTAL | PICK · UNVERIFIED | stakes: it's spreading; how they set the price | [CBS News Chicago, Jan 7, 2025](https://www.cbsnews.com/amp/chicago/news/couple-scammed-chicago-target-store-man-thrown-by-car); Target, Division and Larrabee; $20 agreed, $4,500 charged; Apple Card; refunded |
-| A4 | — | Eight victims, unnamed, Evanston IL; four men charged (Dec 2025) | JEFF | — | — | [CBS Chicago, Dec 22, 2025](https://www.cbsnews.com/chicago/news/4-charged-tap-to-pay-scam-evanston); 8 scams Dec 1–17; $35K+; [Boston.com, Sep 19, 2025](https://www.boston.com/news/crime/2025/09/19/boston-police-seek-men-allegedly-stole-thousands-fake-donations); [FOX 13 Seattle, May 22, 2026](https://www.fox13seattle.com/news/tourists-digital-payment-scam) |
-| A5 | 3 | You (the viewer); GMA consumer contributor (2025) | FIND · HORIZONTAL | PICK | evidence: check the total | dwgCZVD7U00; GMA "Tap-to-pay scam: How to protect yourself" |
+| Beat | Clip | Who | Tag | Adds | Search specifics |
+|---|---|---|---|---|---|
+| A1 | — | You (the viewer) | JEFF | — | — |
+| A2 | 1 | Monika Wieske, personal chef, Lakeview, Chicago (Nov 2024) | HAVE · HORIZONTAL | evidence: the real loss and the bank fight | [CBS News Chicago, Feb 21, 2025](https://www.cbsnews.com/chicago/news/tap-to-pay-scam-victim-lost-thousands/), Charlie De Mar; Whole Foods Lakeview; two $2,400 charges; Fifth Third Bank; refunded after 3 months |
+| A3 | 2 | Drew and Leilani, a couple, Near North Side, Chicago (Jan 2025) | HAVE · HORIZONTAL | stakes: it's spreading; how they set the price | [CBS News Chicago, Jan 7, 2025](https://www.cbsnews.com/amp/chicago/news/couple-scammed-chicago-target-store-man-thrown-by-car); Target, Division and Larrabee; $20 agreed, $4,500 charged; Apple Card; refunded |
+| A4 | — | Eight victims, unnamed, Evanston IL; four men charged (Dec 2025) | JEFF | — | [CBS Chicago, Dec 22, 2025](https://www.cbsnews.com/chicago/news/4-charged-tap-to-pay-scam-evanston); 8 scams Dec 1–17; $35K+; [Boston.com, Sep 19, 2025](https://www.boston.com/news/crime/2025/09/19/boston-police-seek-men-allegedly-stole-thousands-fake-donations); [FOX 13 Seattle, May 22, 2026](https://www.fox13seattle.com/news/tourists-digital-payment-scam) |
+| A5 | 3 | You (the viewer); GMA consumer contributor (2025) | FIND · HORIZONTAL | evidence: check the total | dwgCZVD7U00; GMA "Tap-to-pay scam: How to protect yourself" |
 
 ## Jeff should know
 
@@ -133,21 +133,13 @@ People collecting for a funeral or a charity on the street say they don't take c
 - Step 2: "no cash" is the red flag; give through the charity's own site or [Give.org](https://give.org) ([CBS Chicago](https://www.cbsnews.com/chicago/news/tap-to-pay-scam-victim-lost-thousands/); [Seattle PD via FOX 13, May 22, 2026](https://www.fox13seattle.com/news/tourists-digital-payment-scam); Shaler Twp, PA police via Moneywise, Mar 2026; [FTC: how to donate wisely](https://consumer.ftc.gov/articles/how-donate-wisely-and-avoid-charity-scams)).
 - Step 3: credit over debit (FTC charity guidance; [Fair Credit Billing Act, 15 U.S.C. 1666](https://www.law.cornell.edu/uscode/text/15/1666), a charge "not in the amount reflected"; [FTC: disputing credit card charges, $50 cap](https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges)).
 - Step 4: alerts on every transaction ([BBB alert](https://www.fox26houston.com/news/bbb-warning-consumers-tap-to-pay-scams-ghost-tapping); [GMA clip](https://www.youtube.com/watch?v=dwgCZVD7U00) 1:24–1:35).
-- Step 5: dispute within 60 days of the statement ([Reg Z 12 CFR 1026.13](https://www.consumerfinance.gov/rules-policy/regulations/1026/13/) for credit; [Reg E 12 CFR 1005.11](https://www.consumerfinance.gov/rules-policy/regulations/1005/11/), "incorrect electronic fund transfer," for debit; [CFPB EFT FAQ](https://www.consumerfinance.gov/compliance/compliance-resources/deposit-accounts-resources/electronic-fund-transfers/electronic-fund-transfers-faqs/) on "fraudulently induced"); [CFPB complaint](https://www.consumerfinance.gov/complaint/). ⚠️ Legal/TJ to sign off on the dispute wording.
+- Step 5: dispute within 60 days of the statement ([Reg Z 12 CFR 1026.13](https://www.consumerfinance.gov/rules-policy/regulations/1026/13/) for credit; [Reg E 12 CFR 1005.11](https://www.consumerfinance.gov/rules-policy/regulations/1005/11/), "incorrect electronic fund transfer," for debit; [CFPB EFT FAQ](https://www.consumerfinance.gov/compliance/compliance-resources/deposit-accounts-resources/electronic-fund-transfers/electronic-fund-transfers-faqs/) on "fraudulently induced"); [CFPB complaint](https://www.consumerfinance.gov/complaint/). Legal or TJ still has to sign off on the dispute wording (Open calls).
 - Do-nothing test: a tap on the 10th, statement sent on the 1st of next month, gives a deadline around the end of the month after (about 80 days); someone who never opens statements can miss it. Hence "call the day you see it."
-
-## Gaps
-
-- ⚠️ A2 Wieske is November 2024: date in a Jeff note.
-- ⚠️ A3 the Chicago couple is January 2025: date in a Jeff note.
-- ⚠️ A4 Evanston is December 2025: date in a Jeff note.
-- ⚠️ A5 the GMA clip's upload date and contributor's name aren't confirmed (bot wall).
-- ⚠️ Clip 2 is timed on the CBS site copy; the YouTube copy (hWO_cjh6NNY) wasn't transcribed.
-- ⚠️ No clip yet from a 2026 case. NBC 5 Chicago (Jul 22, 2026) has a woman's own recording of the men; not pulled.
 
 ## Open calls
 
 - Optional fifth clip: [CBS Chicago's Streeterville video](https://www.cbsnews.com/chicago/video/tap-to-pay-scam-attempt-caught-on-video-in-streeterville/) (a woman records the men refusing cash). The men's faces are visible and no one was arrested, so it needs blurring; and its BBB bite says banks "don't have to reimburse," which contradicts step 5. Use it or not?
-- Pull [NBC 5 Chicago's July 2026 recording](https://www.nbcchicago.com/consumer/caught-on-camera-woman-records-possible-donation-scam-that-left-chicago-residents-out-thousands/3964946/) as a fresher clip for A3?
+- No clip yet from a 2026 case. Pull [NBC 5 Chicago's July 2026 recording](https://www.nbcchicago.com/consumer/caught-on-camera-woman-records-possible-donation-scam-that-left-chicago-residents-out-thousands/3964946/) (a woman's own recording of the men) as a fresher clip for A3?
 - Legal or TJ sign-off on step 5's dispute wording.
+- Confirm the GMA clip's upload date and the contributor's name (YouTube blocked the metadata).
 - Sponsor spots for the break.
