@@ -223,4 +223,10 @@ YouTube captions were bot-walled from this container on 2026-11-10. KARE 11 was 
 - None found from here. TikTok refuses requests from this container. Any parent POV video would be a MANUAL pull, and none is identified.
 
 ### Transcript status
-See `transcripts.json` in this folder.
+- **KARE 11 (av07XWxOnTg): UNVERIFIED.**
+  - YouTube bot-walled the caption request ("Sign in to confirm you're not a bot") at about 02:39 UTC and again on a retry about 5 minutes later.
+  - The TEGNA station pages return 403.
+  - There is no transcript, so there are no timecodes or soundbites. Next steps: retry `fetch_many` after a 30-minute wait, or pull the clip manually.
+- **GMA (DtWvQaFtJcQ): transcribed** with YouTube auto-captions and saved in `transcripts.json`. It is off-topic and not recommended.
+- **Sky News (HyKmv-om58E):** "This video is not available" from here.
+- **Claire Sweeney re-upload (LPg5zp7qAw0, "American Sports" channel, 1:38):** bot-walled. It is a low-grade re-upload, so I'd skip it anyway.

@@ -169,8 +169,9 @@ def check(md, stage, tx=None):
             manual = "MANUAL" in flag.upper()
             if not v2.LINK.search(m.group(4)):
                 err(f"Clip {n}: no [Outlet — title](URL) link on the clip line.")
-            if not inout and not manual:
-                err(f"Clip {n}: no bold in–out line under the clip (or a ⚠️ MANUAL line).")
+            if not inout and not manual and "UNVERIFIED" not in flag.upper():
+                err(f"Clip {n}: no bold in–out line under the clip (or a ⚠️ MANUAL / "
+                    f"⚠️ UNVERIFIED line saying why there are no times).")
             if not any(SOUND.match(r) for r in rest) and not manual \
                     and "UNVERIFIED" not in flag.upper():
                 err(f"Clip {n}: no *Soundbite:* line. The room judges the clip from it.")
