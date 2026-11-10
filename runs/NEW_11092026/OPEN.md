@@ -11,7 +11,7 @@ Edit the Docs in place from now on and keep each `outline.md` in sync. Research:
 - [ ] Pull NBC 5 Chicago's Jul 2026 recording for a fresher case?
 - [ ] Legal/TJ sign-off on the dispute wording (step 5)
 - [ ] Clip 3 timed on the CBS site copy; re-time if the YouTube copy is used
-- [ ] Confirm GMA contributor name and the 9/2 date of Jeff's video
+- [ ] Confirm GMA contributor name and upload date (Jeff's own video dropped as a clip, 11/10)
 
 ## Video call (not yet approved)
 - [ ] Thin: one sheriff's release, an attempt, no loss, no video. Needs a Hyde County SO interview, a US family with a loss, or a bank fraud-team quote

@@ -10,12 +10,11 @@ People collecting for a funeral or a charity on the street say they don't take c
 
 1. Tease (opens on clip 1: a woman who tapped to give $10 and lost $4,800)
 2. A $10 DONATION TAP COST THIS WOMAN $4,800… AND HER BANK WOULDN'T GIVE IT BACK (clip 1)
-3. THEIR PHONE IS THE CARD READER… AND THEY TYPE IN THE PRICE (clip 2)
-4. A $20 DONATION TURNED INTO $4,500… IN SECONDS (clip 3)
-5. //// Break: generic ad lead-in
-6. POLICE SAY ONE CREW HIT EIGHT PEOPLE IN 17 DAYS… FOR MORE THAN $35,000 (no clip)
-7. HERE'S HOW TO PROTECT YOURSELF (clip 4)
-8. Close
+3. A $20 DONATION TURNED INTO $4,500… IN SECONDS (clip 2)
+4. //// Break: generic ad lead-in
+5. POLICE SAY ONE CREW HIT EIGHT PEOPLE IN 17 DAYS… FOR MORE THAN $35,000 (no clip)
+6. HERE'S HOW TO PROTECT YOURSELF (clip 3)
+7. Close
 
 ## THE TEASE
 `A1 · the hook`
@@ -37,30 +36,17 @@ People collecting for a funeral or a charity on the street say they don't take c
   - **0:55–1:32 ("AUTHORIZED TWO $2,400 TRANSACTIONS") // BUTT 2:02–2:25 ("I DON'T THINK THAT'S A COINCIDENCE")**
   - *Soundbite: "They had a brother that, you know, the same age as my son that died tragically, and I had $10 cash." … "I'm sorry, we don't take cash." … "Instead of 10 bucks, two $2,400 transactions seconds apart, the scammers charged her nearly $5,000." "On no planet would I have authorized two $2,400 transactions." // "She disputed them with Fifth Third Bank but was denied over and over again." "I've had to fight tooth and nail for three months." … "Just before our arrival at Wieske's home Friday, Fifth Third Bank returned the money." "No, no, no. I don't think that was random… I don't think that's a coincidence."*
 
-- **Out:** Three months of fighting her own bank, and the money came back the day reporters showed up. Unreal. And I've been warning you about this.
+- **Out:** Three months of fighting her own bank, and the money came back the day reporters showed up. Unreal. And it's not just one woman.
 - **Red flag:** "We don't take cash" from someone collecting on the street. Walk away.
 
-## THEIR PHONE IS THE CARD READER… AND THEY TYPE IN THE PRICE
-`A3 · Rossen Reports · Sep 2026`
-
-- I've been warning you about tap-to-pay scams, and now they're using your kindness.
-- Any phone can be a card reader now. Whoever holds it types in the amount.
-- You think you're spending $10. Watch what I told you was happening.
-
-**CLIP 2 (HORIZONTAL):** [Rossen Reports — CREDIT CARD ALERT: This NEW "Tap to Pay" Scam Drains EVERYTHING On Your Card](https://www.youtube.com/watch?v=jmUfTCWWDVM) · 32:58
-  - **2:21–2:49 ("TO DISTRACT YOUR ATTENTION")**
-  - *Soundbite: "The first tactic actually isn't your common criminal. This is what makes it so scary… You're pulling out your credit card to pay for something at your local farm stand on the street… you think you're spending $10, they're taking a hundred, they're taking a thousand, and you don't realize it until later because of a little thing they're doing to distract your attention."*
-
-- **Out:** And it's not just one woman, or one city. It's spreading.
-
 ## A $20 DONATION TURNED INTO $4,500… IN SECONDS
-`A4 · Chicago, IL · Jan 2025 · ⚠️ old case`
+`A3 · Chicago, IL · Jan 2025 · ⚠️ old case`
 
 - And now it's spreading to the busiest parking lots in town.
 - This couple agreed to give $20 to men raising money to bury a baby brother. Cash? No.
 - He tapped his phone. Then he looked down at the screen.
 
-**CLIP 3 (HORIZONTAL):** [CBS News Chicago — Tap-to-pay scam takes couple for $4,500 in Chicago](https://www.cbsnews.com/chicago/video/tap-to-pay-scam-takes-couple-for-4500-in-chicago-man-ends-up-injured/) · Jan 8, 2025 · 2:30
+**CLIP 2 (HORIZONTAL):** [CBS News Chicago — Tap-to-pay scam takes couple for $4,500 in Chicago](https://www.cbsnews.com/chicago/video/tap-to-pay-scam-takes-couple-for-4500-in-chicago-man-ends-up-injured/) · Jan 8, 2025 · 2:30
   - **0:33–0:59 ("CLOSE TO $5,000 INSTEAD OF $20") // BUTT 1:38–1:54 ("THE SCAMMERS PUNCHED IN $4,500")**
   - *Soundbite: "They were trying to help bury their baby little brother." … "The couple agreed to donate $20." "Yeah, they wouldn't take cash." "I already had my phone out so I just went to use my Apple card… I looked down to my phone and realized that they took close to $5,000 instead of $20." // "As you can see from this demo video, iPhone users can set a price and accept payment from another phone with the quick tap. Instead of setting the price at 20 bucks, the scammers punched in $4,500."*
   - ⚠️ UNVERIFIED on YouTube: timed on the CBS site copy. If the editor pulls the YouTube upload (hWO_cjh6NNY), re-time it.
@@ -73,7 +59,7 @@ People collecting for a funeral or a charity on the street say they don't take c
 ////////////////////
 
 ## POLICE SAY ONE CREW HIT EIGHT PEOPLE IN 17 DAYS… FOR MORE THAN $35,000
-`A5 · Evanston, IL · Dec 2025 · ⚠️ old case`
+`A4 · Evanston, IL · Dec 2025 · ⚠️ old case`
 
 - So who's doing this? Outside Chicago, police say a crew pulled this on eight people in a little over two weeks.
 - They say the fake causes included funerals, and the losses topped $35,000.
@@ -81,12 +67,12 @@ People collecting for a funeral or a charity on the street say they don't take c
 - And it's not just Illinois. In Boston, police say one man was told $5 and charged $5,000. In Seattle, more than 20 people.
 
 ## HERE'S HOW TO PROTECT YOURSELF
-`A6 · the fix`
+`A5 · the fix`
 
 1. **LOOK AT THE AMOUNT BEFORE YOU TAP** (the one thing from the tease)
    - Every single time, on any reader or phone. If they cover the screen, don't tap.
    - Keep your card or your phone in your own hand. Never hand it over.
-   - **CLIP 4 (HORIZONTAL):** [Good Morning America — Tap-to-pay scam: How to protect yourself](https://www.youtube.com/watch?v=dwgCZVD7U00) · 2:09
+   - **CLIP 3 (HORIZONTAL):** [Good Morning America — Tap-to-pay scam: How to protect yourself](https://www.youtube.com/watch?v=dwgCZVD7U00) · 2:09
      - **0:29–0:42 ("SO, CHECK THE TOTAL")**
      - *Soundbite: "When someone tries to sell you an item, they may charge you way more than the actual item costs. And because you're not signing a receipt and getting your card back, you may not check the total. So, check the total."*
 2. **"WE DON'T TAKE CASH"? WALK AWAY**
@@ -116,11 +102,11 @@ People collecting for a funeral or a charity on the street say they don't take c
 - **In one sentence:** Street "collectors" who refuse cash have you tap their phone, type in thousands instead of $10 or $20, and banks can make you fight to get it back; look at the amount before you tap.
 - **Hold back:** the fix (look at the amount, keep your card in your hand, use credit) and the fact that she got her money back. The tease says her bank refused; it doesn't say how it ended.
 - **Peg:** a pattern across 2024–2026 with fresh 2026 cases (Seattle May 2026, Chicago NBC 5 Jul 2026) and arrests in Evanston (Dec 2025); Jeff's own 9/2 tap-to-pay show (about 1.7M views) proved the topic. Evergreen copy; no holiday hook.
-- **Climb:** one woman → it's how the phone works → it's spreading to parking lots everywhere → organized crews, eight victims in 17 days → you take it back.
+- **Climb:** one woman → it's spreading to parking lots everywhere (and here's how their phone does it) → organized crews, eight victims in 17 days → you take it back.
 - **Framing:** someone collecting money on the street or in a parking lot (a funeral, a charity, a sick child, a vendor) who won't take cash and has you tap their phone or reader.
 - **Open package:** clip 1, the woman who tapped to give $10 and was charged $4,800.
-- **Payoff point:** A6 step 1 (look at the amount before you tap).
-- **Weight:** one story · 4 clips (3 outside + Jeff's own).
+- **Payoff point:** A5 step 1 (look at the amount before you tap).
+- **Weight:** one story · 3 outside clips.
 
 ## Beats
 
@@ -128,20 +114,18 @@ People collecting for a funeral or a charity on the street say they don't take c
 |---|---|---|---|---|---|---|
 | A1 | — | You (the viewer) | JEFF | — | — | — |
 | A2 | 1 | Monika Wieske, personal chef, Lakeview, Chicago (Nov 2024) | HAVE · HORIZONTAL | PICK | evidence: the real loss and the bank fight | [CBS News Chicago, Feb 21, 2025](https://www.cbsnews.com/chicago/news/tap-to-pay-scam-victim-lost-thousands/), Charlie De Mar; Whole Foods Lakeview; two $2,400 charges; Fifth Third Bank; refunded after 3 months |
-| A3 | 2 | Jeff Rossen, Rossen Reports (Sep 2026) | FIND · HORIZONTAL | PICK | development: how the phone becomes the reader (Jeff's own coverage) | jmUfTCWWDVM; "Tap to Pay" livestream; about 1.7M views |
-| A4 | 3 | Drew and Leilani, a couple, Near North Side, Chicago (Jan 2025) | HAVE · HORIZONTAL | PICK · UNVERIFIED | stakes: it's spreading; how they set the price | [CBS News Chicago, Jan 7, 2025](https://www.cbsnews.com/amp/chicago/news/couple-scammed-chicago-target-store-man-thrown-by-car); Target, Division and Larrabee; $20 agreed, $4,500 charged; Apple Card; refunded |
-| A5 | — | Eight victims, unnamed, Evanston IL; four men charged (Dec 2025) | JEFF | — | — | [CBS Chicago, Dec 22, 2025](https://www.cbsnews.com/chicago/news/4-charged-tap-to-pay-scam-evanston); 8 scams Dec 1–17; $35K+; [Boston.com, Sep 19, 2025](https://www.boston.com/news/crime/2025/09/19/boston-police-seek-men-allegedly-stole-thousands-fake-donations); [FOX 13 Seattle, May 22, 2026](https://www.fox13seattle.com/news/tourists-digital-payment-scam) |
-| A6 | 4 | You (the viewer); GMA consumer contributor (2025) | FIND · HORIZONTAL | PICK | evidence: check the total | dwgCZVD7U00; GMA "Tap-to-pay scam: How to protect yourself" |
+| A3 | 2 | Drew and Leilani, a couple, Near North Side, Chicago (Jan 2025) | HAVE · HORIZONTAL | PICK · UNVERIFIED | stakes: it's spreading; how they set the price | [CBS News Chicago, Jan 7, 2025](https://www.cbsnews.com/amp/chicago/news/couple-scammed-chicago-target-store-man-thrown-by-car); Target, Division and Larrabee; $20 agreed, $4,500 charged; Apple Card; refunded |
+| A4 | — | Eight victims, unnamed, Evanston IL; four men charged (Dec 2025) | JEFF | — | — | [CBS Chicago, Dec 22, 2025](https://www.cbsnews.com/chicago/news/4-charged-tap-to-pay-scam-evanston); 8 scams Dec 1–17; $35K+; [Boston.com, Sep 19, 2025](https://www.boston.com/news/crime/2025/09/19/boston-police-seek-men-allegedly-stole-thousands-fake-donations); [FOX 13 Seattle, May 22, 2026](https://www.fox13seattle.com/news/tourists-digital-payment-scam) |
+| A5 | 3 | You (the viewer); GMA consumer contributor (2025) | FIND · HORIZONTAL | PICK | evidence: check the total | dwgCZVD7U00; GMA "Tap-to-pay scam: How to protect yourself" |
 
 ## Jeff should know
 
 - A2: November 2024, reported Feb 2025. Her name is Monika Wieske; on air she's "this woman." Fifth Third declined to comment; she believes the refund was timed to the reporters' visit, and that's her opinion.
-- A3: your own 9/2 show. The clip window is clean; at 4:52 the show mentions Amazon (skimmers) and at 12:14 it airs the Seattle confrontation with men who deny it. Don't extend the cut into either.
-- A4: January 2025. He chased the men and was injured; that's outside our cut on purpose. He got the money back through his card dispute.
-- A5: Evanston, Dec 2025: four men arrested, three charged with aggravated identity theft of a person over 60. Charges, not convictions; the bible doesn't name them.
-- A5: Boston (Sep 2025) and Seattle (May 2026) cases: no arrests.
-- A6: there's no dollar cap on a tap in the US; the bank's own fraud rules are the only limit. Don't say "there's a legal limit."
-- A6 step 5: whether an overcharged tap counts as a billing error (credit) or an "incorrect transfer" (debit) is our reading of the law; banks do deny these. Say "push back," not "the bank has to pay you."
+- A3: January 2025. He chased the men and was injured; that's outside our cut on purpose. He got the money back through his card dispute.
+- A4: Evanston, Dec 2025: four men arrested, three charged with aggravated identity theft of a person over 60. Charges, not convictions; the bible doesn't name them.
+- A4: Boston (Sep 2025) and Seattle (May 2026) cases: no arrests.
+- A5: there's no dollar cap on a tap in the US; the bank's own fraud rules are the only limit. Don't say "there's a legal limit."
+- A5 step 5: whether an overcharged tap counts as a billing error (credit) or an "incorrect transfer" (debit) is our reading of the law; banks do deny these. Say "push back," not "the bank has to pay you."
 
 ## The fix: sources
 
@@ -155,16 +139,15 @@ People collecting for a funeral or a charity on the street say they don't take c
 ## Gaps
 
 - ⚠️ A2 Wieske is November 2024: date in a Jeff note.
-- ⚠️ A4 the Chicago couple is January 2025: date in a Jeff note.
-- ⚠️ A5 Evanston is December 2025: date in a Jeff note.
-- ⚠️ A6 the GMA clip's upload date and contributor's name aren't confirmed (bot wall).
-- ⚠️ Clip 3 is timed on the CBS site copy; the YouTube copy (hWO_cjh6NNY) wasn't transcribed.
+- ⚠️ A3 the Chicago couple is January 2025: date in a Jeff note.
+- ⚠️ A4 Evanston is December 2025: date in a Jeff note.
+- ⚠️ A5 the GMA clip's upload date and contributor's name aren't confirmed (bot wall).
+- ⚠️ Clip 2 is timed on the CBS site copy; the YouTube copy (hWO_cjh6NNY) wasn't transcribed.
 - ⚠️ No clip yet from a 2026 case. NBC 5 Chicago (Jul 22, 2026) has a woman's own recording of the men; not pulled.
-- ⚠️ The 9/2 date of Jeff's video is from our records; YouTube metadata was bot-walled.
 
 ## Open calls
 
 - Optional fifth clip: [CBS Chicago's Streeterville video](https://www.cbsnews.com/chicago/video/tap-to-pay-scam-attempt-caught-on-video-in-streeterville/) (a woman records the men refusing cash). The men's faces are visible and no one was arrested, so it needs blurring; and its BBB bite says banks "don't have to reimburse," which contradicts step 5. Use it or not?
-- Pull [NBC 5 Chicago's July 2026 recording](https://www.nbcchicago.com/consumer/caught-on-camera-woman-records-possible-donation-scam-that-left-chicago-residents-out-thousands/3964946/) as a fresher clip for A4?
+- Pull [NBC 5 Chicago's July 2026 recording](https://www.nbcchicago.com/consumer/caught-on-camera-woman-records-possible-donation-scam-that-left-chicago-residents-out-thousands/3964946/) as a fresher clip for A3?
 - Legal or TJ sign-off on step 5's dispute wording.
 - Sponsor spots for the break.
