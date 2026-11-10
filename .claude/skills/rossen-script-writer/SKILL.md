@@ -94,8 +94,8 @@ flag:` the takeaway; the break, the protection steps and the close carry over in
 order. **The Build Sheet** behind it carries what the copy obeys but doesn't say:
 the Hold back (the tease's limit), the Open package (the tease's first lines), the
 Climb (the escalators between clips), Who with full names and dates (the source
-log), the **Jeff should know** lines and dating gaps (each a `JEFF PLEASE NOTE` on
-the line it guards) and the fix sources (the source log). An old table-format
+log), the **Jeff should know** lines, case dates included (each a `JEFF PLEASE NOTE`
+on the line it guards; older outlines put dates in a Gaps section) and the fix sources (the source log). An old table-format
 outline (v2) maps the same way: beat rows to headers, Videos rows to clips. The pre-bible pitch sheet is upstream of that and is a weaker input —
 it has unwatched candidate clips and stories Jeff hasn't approved.
 

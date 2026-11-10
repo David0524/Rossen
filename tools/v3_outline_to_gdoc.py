@@ -1,5 +1,5 @@
 """v3 outline markdown -> HTML for a Google Doc upload: live links, nested clip bullets,
-grey beat tags, red ⚠️ lines, a page break before the Build Sheet.
+grey beat tags, red clip-note lines (No times yet: / Legal: / Note:), a page break before the Build Sheet.
 Usage: python3 tools/v3_outline_to_gdoc.py outline.md out.html   (then upload as text/html)
 """
 import re, subprocess, sys, tempfile, os
@@ -22,6 +22,6 @@ h = open(out, encoding="utf-8").read()
 h = h.replace("<p>[[PAGE BREAK]]</p>", "")
 h = re.sub(r"<p><code>(.*?)</code></p>", r'<p style="color:#777777;font-size:9pt">\1</p>', h)
 h = re.sub(r"<li><em>(Soundbite:.*?)</em>", r'<li><em style="color:#555555">\1</em>', h, flags=re.S)
-h = re.sub(r"<li>(⚠️.*?)</li>", r'<li style="color:#C0392B">\1</li>', h, flags=re.S)
+h = re.sub(r"<li>((?:⚠️|(?:<strong>)?(?:No times yet|Legal|Note):).*?)</li>", r'<li style="color:#C0392B">\1</li>', h, flags=re.S)
 open(out, "w", encoding="utf-8").write(h)
 print(out, len(h), "links:", h.count("<a "))

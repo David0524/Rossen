@@ -31,13 +31,17 @@ outline is now **one document with two layers**:
 | Layer | Who it's for | What it is |
 |---|---|---|
 | **The outline** (front) | The room: producer, TJ, Jeff | The show top to bottom in air order. On-air headlines, talking points, each clip where it plays with its timecodes and soundbite, the break, the protection steps, the close. No tables. A beat is one block; moving a beat is cut and paste. |
-| **The Build Sheet** (back, after a page break) | Claude and the pipeline | The story's spine, the beats table (full names, places, dates, tags, status, what each clip adds, search specifics), Jeff notes, fix sources, gaps, open calls. Keyed to the front by beat id and clip number. The room can skip it. |
+| **The Build Sheet** (back, after a page break) | Claude and the pipeline | The story's spine, the beats table (full names, places, dates, tags, what each clip adds, search specifics), Jeff notes, fix sources, open calls. Keyed to the front by beat id and clip number. The room can skip it. |
 
 **The front is the source of truth for the show**: order, headlines, talking points,
 which clips, which cuts. When the room edits the front (moves a block, cuts a clip,
 rewrites a line), Claude brings the Build Sheet into line before anything else, and
 `check_outline.py` fails until the two agree. **The Build Sheet is the source of
-truth for the facts** behind the show: who, when, sources, status.
+truth for the facts** behind the show: who, when, sources.
+
+Both layers are written in plain sentences, with no ⚠️, status words or other
+machine markers (producer, 11/10/2026); see the clip notes under *One block per
+beat*.
 
 | File | Load when |
 |---|---|
@@ -61,7 +65,7 @@ it after.
 | Named people in the hook and sources | Who (Build Sheet) |
 | FOOTAGE WE NEED / BE HONEST ABOUT THIS | Clip tags (`HAVE` = a URL is already in the pre-bible) |
 | THE PAYOFF | The protection steps (front) and their sources (Build Sheet) |
-| NEEDS VERIFICATION, flagged lines | Gaps and Open calls (Build Sheet) |
+| NEEDS VERIFICATION, flagged lines | Jeff should know and Open calls (Build Sheet) |
 | Slot, confidence | The show list and Weight |
 
 **Keep the pre-bible to hand through Phase 2.** Its names, handles, figures, places
@@ -111,7 +115,7 @@ Three sentences: what happens, why the viewer should care, what they walk away a
   its clip numbers, every break, the guest's entrance, the deals handoff on a
   Friday, the close. The first line names the **open package**, the video the
   super tease runs over (usually the A story's strongest real result).
-- Nothing else on page one. The story's spine, the decisions and the gaps live in
+- Nothing else on page one. The story's spine and the open calls live in
   the Build Sheet; open calls also go in the chat reply and the run's `OPEN.md`.
 
 ## The tease
@@ -157,8 +161,8 @@ The parts, in order:
    plain verdict verb, and the impact on you**. Headlines climb: each is worse,
    closer or bigger than the last. Never open on a state (`IN CALIFORNIA…`) and
    never summarize the plot or give away the payoff.
-2. **Beat tag** (one line in backticks): `<beat id> · <place> · <month year>`, plus
-   ` · ⚠️ old case` when the case is more than six months before the airdate. Beat
+2. **Beat tag** (one line in backticks): `<beat id> · <place> · <month year>`. An
+   old case is dated by a Jeff should know line, not a flag on the tag. Beat
    ids are the story letter plus the beat number (`A2`); they key the block to its
    Build Sheet row. The tag is all the room needs to place the case; the full
    identity lives in the Build Sheet.
@@ -186,14 +190,26 @@ The parts, in order:
      quotes, `//` and `BUTT` between segments: `**0:31–1:01 ("REALLY, REALLY
      SHOCKING") // BUTT 1:21–1:32 ("CAMOUFLAGED INTO THE BUSHES")**`. The times are
      on the copy the link points to (if the transcript came from a different copy,
-     re-time it or say so in Gaps).
+     re-time it or say so in a `Note:` line).
    - Sub-bullet: `*Soundbite: "…" // "…"*`, verbatim from the transcript, the key
      words of each segment, about 60 words a segment at most, `…` for cuts. This is
      how the room judges a clip without opening it.
-   - Sub-bullet, **only when it applies**: `⚠️ LEGAL: …`, `⚠️ UNVERIFIED: …`,
-     `⚠️ MANUAL: …`, `⚠️ WEAK: …` or `⚠️ CROP: …`, one line on what the editor or
-     the producer has to do. A clean `PICK` shows nothing; its status is in the
-     Build Sheet.
+   - Sub-bullet, **only when it applies**, one plain sentence on what the editor
+     or the producer has to do, under one of three labels:
+     - `No times yet: …` when no transcript reached the clip (a manual-lane post,
+       or captions and Whisper both blocked). Say why and how to get the times;
+       no in–out line, no soundbite, never an invented timecode.
+     - `Legal: …` when the window carries an accusation, an unanswered claim, a
+       minor or personal data. Give the tighter cut or the blur.
+     - `Note: …` for anything else the edit needs: a weak pick, an orientation
+       crop, times taken from a different copy than the link.
+     A clean clip shows nothing.
+
+   **The outline carries no machine markers** (producer, 11/10/2026): no ⚠️ or
+   other emoji, no status words (`PICK`, `WEAK`, `MANUAL`, `THROTTLED`, `EMPTY`,
+   `UNVERIFIED`, `LEGAL`, `CROP`) and no Status column. Everything is said in a
+   plain sentence the room can read. The pipeline's status vocabulary stays in its
+   run folder (`picks.json`, `report.md`) and the run's `OPEN.md`.
 5. **Out:** the line Jeff comes back in on: react, then pull forward to the next
    reason to keep watching (Jeff, 11/04). Never a date, a hedge or an attribution.
 6. **Red flag:** after each victim case, the takeaway in one plain line, tested
@@ -288,7 +304,7 @@ One line each, per story:
 
 ## Beats
 
-`| Beat | Clip | Who | Tag | Status | Adds | Search specifics |`
+`| Beat | Clip | Who | Tag | Adds | Search specifics |`
 
 One row per front block, same order, same ids.
 
@@ -317,20 +333,6 @@ One row per front block, same order, same ids.
   A victim telling a reporter is `HORIZONTAL`; someone talking to their own phone,
   a doorbell or security camera, or a screen recording is `VERTICAL`. Never invent
   a clip to fill a slot.
-- **Status** (Phase 2; `—` before it): the pipeline's vocabulary.
-
-| Status | Means |
-|---|---|
-| `PICK` | Found, graded, outcue verified against a transcript. |
-| `WEAK` | Low-scoring or carrying flags. Front ⚠️ line and an Open call. |
-| `MANUAL` | The native post is the pick. Link handed over, no invented timecode. |
-| `SWAP` | The room approved a different case than the block named. Rewrite the block to match. |
-| `THROTTLED` | Shortlist exists; transcript fetch was blocked. Re-run the pipeline's Step 5. |
-| `EMPTY` | Searched, nothing usable, with the reason. Open call: cut the beat, swap the case, or Jeff on camera. |
-| `· UNVERIFIED` | Suffix: the outcue never reached a transcript. Front ⚠️ line. |
-| `· LEGAL` | Suffix: the window carries an accusation, an unanswered claim, a minor or personal data. Front ⚠️ line with the tighter cut, and an Open call. |
-| `· CROP` | Suffix: the pick's orientation crosses the tag's. Front ⚠️ line. |
-
 - **Adds**: what the clip adds, in a few words: `evidence: the real result`,
   `stakes: hours, not weeks`, `development: they can blind your camera`.
 - **Search specifics**: the names, handles, figures, places, dates, outlets and
@@ -349,35 +351,32 @@ in a Wednesday show; `None.` if none.
 
 One line per protection step, keyed by number, each ending with the issuing body's
 page in parentheses (`Step 4: hold mail, free, 3 to 30 days (USPS FAQ)`). A step you
-couldn't source gets ⚠️. Every phone number and URL is checked against the issuer's
+couldn't source says `no source yet` and goes in Open calls. Every phone number and URL is checked against the issuer's
 own page. Then the **do-nothing test** for any step involving a deadline, an
 enrollment, a plan, a dispute window or a default: what happens to the viewer who
 does nothing, or only this step? If it leaves them worse off, add the step that
 closes it (10/9: "do nothing and you go back to Original Medicare" would have cost
 Advantage members their drug coverage).
 
-## Gaps
-
-Only what is missing or unconfirmed that changes the show's shape, ⚠️ at the start:
-an unnamed victim, a clip that may not exist, a line resting on one source, times
-taken from a different copy than the link. **Every case more than six months
-before the airdate** gets `⚠️ A2 Braintree is June 2024: date in a Jeff note` (the
-copy stays evergreen; add `: say the year on air` only when leaving it out would
-mislead a viewer, and the bible then says `IN 2024`). Full sourcing stays in the
-pre-bible's source block; don't recopy it.
+**Dating.** Every case more than six months before the airdate gets a Jeff
+should know line that starts with its date (`A2: June 2024, reported July 2024.`).
+The copy stays evergreen; add `Say the year on air.` only when leaving it out would
+mislead a viewer, and the bible then says `IN 2024`. There is no Gaps section
+(producer, 11/10/2026): a fact the copy must guard is a Jeff should know line; a
+thing a person still has to do is an Open call.
 
 ## Open calls
 
-The rulings the room owes before the bible is written: which story leads, a
-missing name, a `WEAK`, `EMPTY`, `LEGAL` or `CROP` clip, a stills-heavy beat, the
-sponsor spots. `None.` if none. Repeat them in the chat reply and the run's
+The rulings and the work the room owes before the bible is written, each a plain
+sentence: which story leads, a missing name, a clip with no times yet, a weak or
+risky clip, a beat with no clip found, a stills-heavy beat, a fix step with no
+source yet, a single-source claim, the sponsor spots. `None.` if none. Repeat them in the chat reply and the run's
 `OPEN.md`: the producer reads those, not the back page.
 
 # Phase 1 — Beats
 
 From the approved pre-bible: page one, the tease, a block per beat with headline,
-tag and talking points, the protection steps, the close, and the whole Build Sheet
-with `—` in Status. Each clip slot is a placeholder the pipeline fills:
+tag and talking points, the protection steps, the close, and the whole Build Sheet. Each clip slot is a placeholder the pipeline fills:
 
 ```
 **CLIP — FIND · VERTICAL:** a doorbell or security-camera video of someone planting a camera in a bush
@@ -409,17 +408,17 @@ Phase 1, deliver the beats outline, and say Phase 2 runs in Claude Code.
    Search specifics.
 2. **Queries, search, grade**: the pipeline's Steps 2–6, with its Checkpoints 1–3.
 3. **Write the picks back**: replace each placeholder with the clip line, the
-   in–out line and the soundbite (and a ⚠️ line if one applies); fill the row's
-   Status; number the clips 1..N in air order; update THE SHOW; flip the header to
+   in–out line and the soundbite (and a `No times yet:`, `Legal:` or `Note:` line
+   if one applies); fill the row's Clip number; number the clips 1..N in air order; update THE SHOW; flip the header to
    `Stage: videos`.
 
 Full candidate lists, shortlists, queries and grades stay in the pipeline's run
 folder (`picks.json`, `report.md`).
 
-**Read the whole window, not just the outcue.** Before a clip becomes `PICK`, read
+**Read the whole window, not just the outcue.** Before a clip is written in, read
 every transcript line between its in and out points (each segment of a butt cut)
-plus about 20 seconds past the out. Mark it `· LEGAL` (front ⚠️ line + Open call,
-with a tighter cut proposed from the transcript) when the window contains an
+plus about 20 seconds past the out. Give it a `Legal:` line and an Open call,
+with a tighter cut proposed from the transcript, when the window contains an
 accusation against an identifiable person, a claim whose answer falls outside the
 cut, a minor, a medical detail beyond what the story needs, or an address, plate
 or account number. (10/14: a butt cut aired the store's claim that the victim
@@ -429,11 +428,11 @@ the out.) `check_outline.py --transcripts transcripts.json` scans every window.
 **Time it on the copy you link.** A site cut and its YouTube upload drift by
 seconds and sometimes are different packages (11/11: a source line relabeled to
 KTLA's upload of a different story). If the transcript is from another copy, say
-which in Gaps.
+which in a `Note:` line under the clip.
 
 You cannot watch video. Every timecode, outcue and soundbite comes from a
-transcript or it isn't written. A missing clip is a finding: an honest `EMPTY` costs
-less than a bad pick discovered in the edit bay.
+transcript or it isn't written. A missing clip is a finding: an honest "no clip
+found" Open call costs less than a bad pick discovered in the edit bay.
 
 Check: `python3 scripts/check_outline.py outline.md --stage videos --transcripts transcripts.json`.
 
@@ -464,13 +463,13 @@ blocks, same order, same clips.**
 | Talking points | The runway lines, in caps |
 | Clip line + in–out line | `(((PLAY CLIP n ORIENTATION)))`, `OUT:` with the last outcue, and the red source line |
 | Soundbite | What the runway's question sets up; never copied into the bible |
-| ⚠️ line | A red producer cue, or the fix it names |
+| `No times yet:`, `Legal:`, `Note:` | A red producer cue, or the fix it names |
 | Out | The bold re-entry line after the clip |
 | Red flag | The takeaway line after the case |
 | Break | `BUT FIRST, A QUICK WORD FROM OUR SPONSORS` and the sponsor cues |
 | Protection steps | `HERE'S HOW TO PROTECT YOURSELF`, numbered; sources go to the source log |
 | Build Sheet: Hold back | The limit on the tease, headlines and *Next* lines |
-| Build Sheet: Jeff should know, dating gaps | `JEFF PLEASE NOTE` comments |
+| Build Sheet: Jeff should know (dating included) | `JEFF PLEASE NOTE` comments |
 | Build Sheet: Who | The source log; the bible says `THIS WOMAN` |
 
 A beat or clip the writer wants to add, cut, move or swap is a change to the

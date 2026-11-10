@@ -9,8 +9,11 @@ Usage:
 v3 layout (producer, 11/10/2026): the front is the show in air order for the
 room (headlines, talking points, clip blocks with soundbites, the break, the
 protection steps, the close); the Build Sheet after a page break carries the
-spine, the beats table, Jeff notes, fix sources, gaps and open calls. This
-checker makes the two agree. An old table-format outline (v2: "| # | Beat | Who
+spine, the beats table, Jeff notes, fix sources and open calls. This
+checker makes the two agree. Both layers are plain sentences with no machine
+markers (producer, 11/10/2026): no ⚠️ or other emoji, no status words, no Status
+column, no Gaps section; a clip that needs something carries a `No times yet:`,
+`Legal:` or `Note:` line. An old table-format outline (v2: "| # | Beat | Who
 | What happens | Clip |") is handed to check_outline_v2.py.
 
 Stage defaults to whatever the header's "Stage:" says.
@@ -39,8 +42,11 @@ CLIP_PH = re.compile(
     r"^\s*(?:-\s*)?\*\*CLIP\s+—\s*(HAVE|FIND)\s*·\s*(HORIZONTAL|VERTICAL)(\s+BROLL)?\s*:\*\*\s*(.*)$", re.M)
 INOUT = re.compile(r"^\s*-\s*\*\*\s*\d{1,2}:\d{2}\s*[–-]\s*\d{1,2}:\d{2}.*\*\*\s*$")
 SOUND = re.compile(r"^\s*-\s*\*Soundbite:", re.I)
-FLAG = re.compile(r"^\s*-\s*⚠️\s*(LEGAL|UNVERIFIED|MANUAL|WEAK|CROP)\b", re.I)
-BEAT_HEADER = ["beat", "clip", "who", "tag", "status", "adds", "search specifics"]
+NOTE = re.compile(r"^\s*-\s*(?:\*\*)?(No times yet|Legal|Note):", re.I)
+BEAT_HEADER = ["beat", "clip", "who", "tag", "adds", "search specifics"]
+BEAT_HEADER_OLD = ["beat", "clip", "who", "tag", "status", "adds", "search specifics"]
+EMOJI = re.compile("[\u2600-\u27BF\U0001F300-\U0001FAFF\uFE0F]")
+STATUS_WORD = re.compile(r"(?<![A-Za-z])(PICK|THROTTLED|UNVERIFIED|WEAK|CROP|EMPTY|MANUAL)(?![A-Za-z])|·\s*LEGAL\b")
 SPINE = ["In one sentence", "Hold back", "Peg", "Climb", "Framing", "Open package",
          "Weight"]
 TAGS = re.compile(r"^((HAVE|FIND)\s*·\s*(HORIZONTAL|VERTICAL)(\s+BROLL)?|DEMO|GUEST|JEFF|STILLS)$")
@@ -80,6 +86,16 @@ def check(md, stage, tx=None):
     for m in re.finditer(r"<[^>\n]{1,60}>", body):
         err(f"Unfilled template slot: {m.group(0)}")
 
+    for i, line in enumerate(body.splitlines(), 1):
+        if EMOJI.search(line):
+            err(f"Line {i}: emoji or ⚠️ ('{line.strip()[:50]}'). The outline is plain sentences "
+                f"(producer, 11/10): say what's needed in words.")
+        elif not line.startswith("#") and not re.match(r"^\s*\d+\.\s+\*\*", line) \
+                and STATUS_WORD.search(line):
+            warn(f"Line {i}: status word '{STATUS_WORD.search(line).group(0)}' "
+                 f"('{line.strip()[:50]}'). Pipeline status stays in the run folder; "
+                 f"write a plain sentence (producer, 11/10).")
+
     front, sheet = split_front(body)
     if not sheet:
         err("No '# BUILD SHEET' after the close. v3 outlines carry it behind a page break.")
@@ -114,7 +130,7 @@ def check(md, stage, tx=None):
              "Sheet (and chat/OPEN.md); THE SHOW is a list.")
 
     # ---- front blocks -------------------------------------------------------
-    front_beats, clip_nums, footage_front = [], [], {}
+    front_beats, clip_nums, footage_front, legal_clips = [], [], {}, []
     prev_clip_seen = False
     for head, txt in blocks(front):
         if head.upper().startswith(("SUMMARY", "THE SHOW", "CLOSE")):
@@ -165,20 +181,23 @@ def check(md, stage, tx=None):
             footage_front.setdefault(bid, []).append(n)
             rest = txt[m.end():].splitlines()[1:6]
             inout = next((r for r in rest if INOUT.match(r)), None)
-            flag = next((r for r in rest if FLAG.match(r)), "")
-            manual = "MANUAL" in flag.upper()
+            notes = [NOTE.match(r).group(1).lower() for r in rest if NOTE.match(r)]
+            no_times = "no times yet" in notes
+            if "legal" in notes:
+                legal_clips.append((bid, n))
             if not v2.LINK.search(m.group(4)):
                 err(f"Clip {n}: no [Outlet — title](URL) link on the clip line.")
-            if not inout and not manual and "UNVERIFIED" not in flag.upper():
-                err(f"Clip {n}: no bold in–out line under the clip (or a ⚠️ MANUAL / "
-                    f"⚠️ UNVERIFIED line saying why there are no times).")
-            if not any(SOUND.match(r) for r in rest) and not manual \
-                    and "UNVERIFIED" not in flag.upper():
+            if not inout and not no_times:
+                err(f"Clip {n}: no bold in–out line under the clip (or a 'No times yet:' "
+                    f"line saying why and how to get them).")
+            if inout and no_times:
+                err(f"Clip {n}: has an in–out line and 'No times yet:'. One or the other.")
+            if not any(SOUND.match(r) for r in rest) and not no_times:
                 err(f"Clip {n}: no *Soundbite:* line. The room judges the clip from it.")
             if re.search(r"\b(watched|confirmed on screen|we saw)\b", txt[m.start():m.start() + 600], re.I):
                 err(f"Clip {n}: claims the footage was watched.")
             if tx is not None and inout:
-                v2.window_scan(bid, n, m.group(4), inout, "PICK" + (" · LEGAL" if "LEGAL" in flag.upper() else ""),
+                v2.window_scan(bid, n, m.group(4), inout, "PICK" + (" · LEGAL" if "legal" in notes else ""),
                                "", tx, bid)
         ph = list(CLIP_PH.finditer(txt))
         if ph:
@@ -205,17 +224,30 @@ def check(md, stage, tx=None):
     for f in SPINE:
         if not re.search(rf"\*\*{re.escape(f)}:\*\*\s*\S", sheet):
             err(f"Build Sheet Spine has no '{f}:' line.")
-    for h in ("Spine", "Beats", "Jeff should know", "The fix: sources", "Gaps", "Open calls"):
+    for h in ("Spine", "Beats", "Jeff should know", "The fix: sources", "Open calls"):
         if not re.search(rf"^##\s+{re.escape(h)}\b", sheet, re.M):
             err(f"Build Sheet has no '## {h}'.")
-    rows = []
+    if re.search(r"^##\s+Gaps\b", sheet, re.M):
+        warn("Build Sheet has a '## Gaps' section. Gone since 11/10: dates and guarded facts "
+             "go in Jeff should know; work still owed goes in Open calls.")
+    rows, old = [], False
     for hdr, rs in v2.tables(sheet):
         if hdr[:len(BEAT_HEADER)] == BEAT_HEADER:
             rows += rs
+        elif hdr[:len(BEAT_HEADER_OLD)] == BEAT_HEADER_OLD:
+            old = True
+            rows += [r[:4] + r[5:] for r in rs]
+    if old:
+        warn("Beats table has a Status column. Dropped 11/10 (producer): "
+             "| Beat | Clip | Who | Tag | Adds | Search specifics |")
     if not rows:
-        err("Build Sheet has no Beats table: | Beat | Clip | Who | Tag | Status | Adds | Search specifics |")
+        err("Build Sheet has no Beats table: | Beat | Clip | Who | Tag | Adds | Search specifics |")
         return stage
-    gaps = sheet.split("## Gaps", 1)[1] if "## Gaps" in sheet else ""
+    jeff = sheet.split("## Jeff should know", 1)[-1].split("\n## ", 1)[0]
+    opencalls = sheet.split("## Open calls", 1)[-1]
+    for bid_, n_ in legal_clips:
+        if not re.search(rf"\b{bid_}\b|clip\s*{n_}\b|legal", opencalls, re.I):
+            warn(f"Clip {n_} has a Legal: line; put the call in Open calls too.")
     sheet_ids = [r[0] for r in rows]
     if sheet_ids != front_beats:
         missing = [b for b in front_beats if b not in sheet_ids]
@@ -230,10 +262,10 @@ def check(md, stage, tx=None):
     humans = 0
     stories = {}
     for r in rows:
-        if len(r) < 7:
-            err(f"Beats row {r[0]} has {len(r)} cells; it needs 7.")
+        if len(r) < 6:
+            err(f"Beats row {r[0]} has {len(r)} cells; it needs 6.")
             continue
-        bid, clip, who, tag, status, adds, spec = r[:7]
+        bid, clip, who, tag, adds, spec = r[:6]
         stories.setdefault(bid[0], []).append(bid)
         if not TAGS.match(tag):
             err(f"{bid}: tag '{tag}' isn't one of HAVE/FIND · ORIENTATION, DEMO, GUEST, JEFF, STILLS.")
@@ -250,9 +282,10 @@ def check(md, stage, tx=None):
             elif aired:
                 mon = v2.MONTHS.get((dm.group(1) or "jan")[:3].lower(), 1)
                 if (aired - dt.date(int(dm.group(2)), mon, 1)).days > 183 and \
-                        not re.search(rf"\b{bid}\b.*?date", gaps, re.I):
+                        not re.search(rf"^-\s*{bid}\b[^\n]*\b{dm.group(2)}\b", jeff, re.M):
                     warn(f"{bid}: case dated {dm.group(0)} is more than six months before the "
-                         f"airdate. Add '⚠️ {bid} … date in a Jeff note' to Gaps (copy stays evergreen).")
+                         f"airdate. Start a Jeff should know line with its date "
+                         f"('{bid}: <Month> {dm.group(2)}.'); the copy stays evergreen.")
             if not adds or adds == "—":
                 warn(f"{bid}: no Adds (evidence, stakes or development). Jeff (11/04).")
             else:
@@ -263,18 +296,9 @@ def check(md, stage, tx=None):
             if not spec or spec in ("—", "-"):
                 warn(f"{bid}: no Search specifics; the pipeline searches on these (or write 'thin').")
             nums = [int(x) for x in re.findall(r"\d+", clip)]
-            if stage == "videos":
-                if not status or status == "—":
-                    err(f"{bid}: footage row has no Status at Stage: videos.")
-                elif not all(v2.STATUS_RE.match(s.strip()) for s in status.split(",")):
-                    err(f"{bid}: Status '{status}' isn't in the vocabulary.")
-                if nums != footage_front.get(bid, []):
-                    err(f"{bid}: Beats row says clip {clip}, the front block has "
-                        f"{footage_front.get(bid) or 'none'}.")
-                if any(s in status for s in ("WEAK", "EMPTY", "LEGAL", "CROP")) and \
-                        not re.search(rf"\b{bid}\b|clip\s*{'|'.join(map(str, nums)) or 'x'}\b",
-                                      sheet.split("## Open calls", 1)[-1], re.I):
-                    warn(f"{bid}: {status} belongs in Open calls.")
+            if stage == "videos" and nums != footage_front.get(bid, []):
+                err(f"{bid}: Beats row says clip {clip}, the front block has "
+                    f"{footage_front.get(bid) or 'none'}.")
         elif clip not in ("—", "-", ""):
             warn(f"{bid}: {tag} row carries clip {clip}.")
     for s_, ids in stories.items():
@@ -283,11 +307,12 @@ def check(md, stage, tx=None):
             warn(f"Story {s_}: {len(ids)} beats (expected {lo}–{hi}).")
     if humans == 0:
         warn("No named human anywhere in Who. People, not policies.")
-    fix = sheet.split("## The fix: sources", 1)[-1].split("##", 1)[0]
+    fix = sheet.split("## The fix: sources", 1)[-1].split("\n## ", 1)[0]
     for line in fix.splitlines():
         t = line.strip()
-        if t.startswith("- Step") and not re.search(r"\(.+\)|⚠️", t):
-            warn(f"Fix source missing: '{t[:60]}'. End it with the issuing body's page, or ⚠️.")
+        if t.startswith("- Step") and not re.search(r"\(.+\)|no source yet", t, re.I):
+            warn(f"Fix source missing: '{t[:60]}'. End it with the issuing body's page, or "
+                 f"say 'no source yet' and add an Open call.")
     if "do-nothing" not in fix.lower():
         warn("The fix: sources has no do-nothing test line.")
     return stage

@@ -12,8 +12,9 @@ pre-bible → pre-bible email → **outline w/ videos** → bible → bible revi
 One approved outline in (plus the pre-bible it came from), a picks manifest plus the
 filled **outline w/ videos** `.docx` out. The bible is written afterwards, from that
 outline, by `rossen-script-writer` — it never comes back through this pipeline. The
-outline format (v3: the front and the Build Sheet), clip blocks and status vocabulary belong to
-`rossen-story-outline`; read it before Step 8.
+outline format (v3: the front and the Build Sheet) and clip blocks belong to
+`rossen-story-outline`; read it before Step 8. The pick status vocabulary (Step 8)
+is this skill's and never appears in the outline.
 
 You do the judgment. The `rossen_harvest` package does the mechanical work. Never
 reimplement a stage in an ad-hoc script; the CLI already handles caching, dedupe,
@@ -237,7 +238,7 @@ waste time in this step.
 network paths that fail independently. When media bytes are blocked Whisper cannot
 run at all; when the video page is bot-walled captions die too. Where both are
 blocked, rung 3 is the only rung, and the correct output is a pick with an
-explicitly unverified outcue, flagged in the report and on the outline's clip block (a ⚠️ UNVERIFIED line). Never
+explicitly unverified outcue, flagged in the report and on the outline's clip block (a plain `No times yet:` line saying why). Never
 promote a guess. **Spend rung 2 on `priority: 1` beats first** — that is what the
 field is for.
 
@@ -336,9 +337,26 @@ beat's `**CLIP — FIND · …:**` placeholder with the clip block — `**CLIP n
 (ORIENTATION):** [source — title](URL) · date · length`, a bold in–out line with each
 segment's outcue (`//` and `BUTT` between segments), and a `*Soundbite: "…"*` line
 quoted from the transcript — numbering clips 1..N in air order. In the **Build
-Sheet**, fill the beat's Status and Clip number. Manual-lane beats get the native post
-link and a `⚠️ MANUAL` line, no invented timecode. Rung-3 beats get `· UNVERIFIED` and
-a `⚠️ UNVERIFIED` line. Empty beats get `EMPTY` and a reason, and go into Open calls.
+Sheet**, fill the beat's Clip number. The outline carries no status words, ⚠️ or
+Status column (producer, 11/10/2026). Each pick's status stays in `picks.json`,
+`report.md` and the run's `OPEN.md`:
+
+| Status | Means | In the outline |
+|---|---|---|
+| `PICK` | Found, graded, outcue verified against a transcript. | The clip block, nothing more |
+| `WEAK` | Low-scoring or carrying flags. | `Note:` line and an Open call |
+| `MANUAL` | The native post is the pick; link handed over, no invented timecode. | `No times yet:` line |
+| `SWAP` | The room approved a different case than the block named. | Block rewritten to match |
+| `THROTTLED` | Shortlist exists; transcript fetch was blocked. Re-run Step 5. | `No times yet:` line and an Open call |
+| `EMPTY` | Searched, nothing usable, with the reason. | Placeholder kept; Open call: cut the beat, swap the case, or Jeff on camera |
+| `· UNVERIFIED` | Suffix: the outcue never reached a transcript. | `No times yet:` line |
+| `· LEGAL` | Suffix: the window carries an accusation, an unanswered claim, a minor or personal data. | `Legal:` line with the tighter cut, and an Open call |
+| `· CROP` | Suffix: the pick's orientation crosses the tag's. | `Note:` line |
+ In the outline, manual-lane and
+rung-3 beats get the native post link and a `No times yet:` line (why, and how to
+get them), no invented timecode; a legal window gets a `Legal:` line; a weak pick,
+a crop or times from another copy get a `Note:` line. Empty beats keep their
+placeholder and get an Open call saying what was searched and what to do.
 When an approved swap changes the case, rewrite that block's talking points and the
 row's Who. Time each clip on the copy its link points to. Flip the header to
 `Stage: videos`, update THE SHOW's clip numbers, then:

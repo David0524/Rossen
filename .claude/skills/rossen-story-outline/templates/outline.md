@@ -81,25 +81,21 @@
 
 ## Beats
 
-| Beat | Clip | Who | Tag | Status | Adds | Search specifics |
-|---|---|---|---|---|---|---|
-| A1 | — | You (the viewer) | JEFF | — | — | — |
-| A2 | 1 | <Full name or identity, age, place (Mon YYYY)> | FIND · HORIZONTAL | — | <evidence: …> | <names, figures, places, dates, outlets, agencies> |
-| A3 | 2 | <…> | FIND · VERTICAL | — | <stakes: …> | <…> |
+| Beat | Clip | Who | Tag | Adds | Search specifics |
+|---|---|---|---|---|---|
+| A1 | — | You (the viewer) | JEFF | — | — |
+| A2 | 1 | <Full name or identity, age, place (Mon YYYY)> | FIND · HORIZONTAL | <evidence: …> | <names, figures, places, dates, outlets, agencies> |
+| A3 | 2 | <…> | FIND · VERTICAL | <stakes: …> | <…> |
 
 ## Jeff should know
 
-- <A2: one line Jeff needs but won't say — or "None.">
+- <A2: <Mon YYYY> for any case over six months old, then one line Jeff needs but won't say — or "None.">
 
 ## The fix: sources
 
 - Step 1: <detail> (<issuing body's page>)
 - Do-nothing test: <what happens to the viewer who does nothing, or only step 1>
 
-## Gaps
-
-- <⚠️ A2 <case> is <Mon YYYY>: date in a Jeff note — or "None.">
-
 ## Open calls
 
-- <ruling the room owes before the bible — or "None.">
+- <ruling or work the room owes before the bible, as a plain sentence — or "None.">

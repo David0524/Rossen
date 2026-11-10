@@ -29,7 +29,7 @@ Burglary crews are hiding cameras in bushes, pointed at front doors, to learn wh
 - Plus the 30-second walk that finds their camera before they use it.
 
 ## ONE NEIGHBOR FOUND THE BURGLARS' CAMERA… AND POLICE TURNED IT INTO A TRAP
-`A2 · Braintree, MA · June 2024 · ⚠️ old case`
+`A2 · Braintree, MA · June 2024`
 
 - If you ever find a camera in a bush pointed at your house, call the police.
 - Police say burglars are using them to learn exactly when you leave.
@@ -59,7 +59,7 @@ Burglary crews are hiding cameras in bushes, pointed at front doors, to learn wh
 - **Red flag:** found one? Don't touch it. Police there say call them right away.
 
 ## BURGLARS PLANTED A CAMERA AT 2 A.M.… AND HIT THE HOUSE BY 11
-`A4 · West Hills, Los Angeles · Mar 2025 · ⚠️ old case`
+`A4 · West Hills, Los Angeles · Mar 2025`
 
 - But it gets worse: they don't even wait a day.
 - It's the middle of the night. A man looks out at his street.
@@ -78,7 +78,7 @@ Burglary crews are hiding cameras in bushes, pointed at front doors, to learn wh
 ////////////////////
 
 ## POLICE SAY THIS CREW WATCHED HOMES LIKE YOURS FROM A BOX OF FAKE GRASS
-`A5 · Los Angeles County · May 2026 · ⚠️ old case`
+`A5 · Los Angeles County · May 2026`
 
 - So who are these crews? Authorities in Los Angeles County arrested seven people.
 - Police say they hid a camera to watch their targets, and carried a jammer to knock out your security.
@@ -91,7 +91,7 @@ Burglary crews are hiding cameras in bushes, pointed at front doors, to learn wh
 - **Out:** A box of fake grass. You'd never look twice. All seven are charged; these are charges, not convictions.
 
 ## BURGLARS CAN BLIND YOUR SECURITY CAMERA… FOR ABOUT 60 DOLLARS
-`A6 · Bellaire, TX · Dec 2025 · ⚠️ old case`
+`A6 · Bellaire, TX · Dec 2025`
 
 - But it gets worse: their camera watching you is only half of it. They can blind yours.
 - It's called a jammer, a small device that blocks the Wi-Fi your camera runs on.
@@ -105,7 +105,7 @@ Burglary crews are hiding cameras in bushes, pointed at front doors, to learn wh
 - **Red flag:** if your camera glitches right as someone walks up, it may not be your Wi-Fi.
 
 ## THAT DELIVERY DRIVER AT YOUR DOOR MAY BE CHECKING IF YOU'RE HOME
-`A7 · Irvine, CA · Apr 2025 · ⚠️ old case`
+`A7 · Irvine, CA · Apr 2025`
 
 - And now they're not even hiding. They walk right up to your door.
 - This man wasn't home, and his doorbell camera caught a woman knocking. Nobody answered. So who showed up next?
@@ -170,26 +170,26 @@ Burglary crews are hiding cameras in bushes, pointed at front doors, to learn wh
 
 ## Beats
 
-| Beat | Clip | Who | Tag | Status | Adds | Search specifics |
-|---|---|---|---|---|---|---|
-| A1 | — | You (the viewer) | JEFF | — | — | — |
-| A2 | 1 | Braintree, MA family and their neighbor Kaylin (Jun 2024) | HAVE · HORIZONTAL | PICK | evidence: the real result, a loss and a win | CBS Boston Jul 16, 2024; WCVB; Braintree PD, Lt. Det. Brian Cohoon; three arrested Jul 11, 2024; fake vacation |
-| A3 | 2 | Linda and Larry Williams, Rancho Cucamonga CA, 40+ years in their home (Oct 2026) | HAVE · HORIZONTAL | PICK | stakes: it's in neighborhoods like yours now | CBS LA Oct 7, 2026; Rancho Cucamonga PD; two cameras in two weeks; no arrests |
-| A4 | 3 | West Hills neighbor, unnamed (Mar 2025) | HAVE · HORIZONTAL | PICK | stakes: hours, not weeks | CBS LA (KCAL) Mar 20, 2025; white Kia; ~2 a.m. to ~11 a.m.; LAPD |
-| A5 | 4 | Robert Luna, LA County sheriff (May 2026) | FIND · HORIZONTAL | PICK | development: organized crews, caught | May 20, 2026 news conference; DA Hochman; seven charged, first-degree residential burglary; turf box; Wi-Fi jammer |
-| A6 | 5 | Bellaire, TX homeowner's doorbell camera, via police (Dec 2025) | HAVE · HORIZONTAL | PICK | development: your own camera goes blind | NBC News Dec 5, 2025; Bellaire PD; $60–70; 10–20 feet |
-| A7 | 6 | Irvine, CA homeowner, unnamed (Apr 2025) | HAVE · HORIZONTAL | PICK | stakes: they're at your door | ABC7 May 17, 2025; Easter Sunday 2025; fake Amazon driver; five arrested |
-| A8 | 7, 8 | You (the viewer); North Hollywood neighbors (May 2026) | HAVE · HORIZONTAL | PICK | evidence: what holds up; the neighbors | NBC News experts (SD card, hardwired); ABC7 North Hollywood group text |
+| Beat | Clip | Who | Tag | Adds | Search specifics |
+|---|---|---|---|---|---|
+| A1 | — | You (the viewer) | JEFF | — | — |
+| A2 | 1 | Braintree, MA family and their neighbor Kaylin (Jun 2024) | HAVE · HORIZONTAL | evidence: the real result, a loss and a win | CBS Boston Jul 16, 2024; WCVB; Braintree PD, Lt. Det. Brian Cohoon; three arrested Jul 11, 2024; fake vacation |
+| A3 | 2 | Linda and Larry Williams, Rancho Cucamonga CA, 40+ years in their home (Oct 2026) | HAVE · HORIZONTAL | stakes: it's in neighborhoods like yours now | CBS LA Oct 7, 2026; Rancho Cucamonga PD; two cameras in two weeks; no arrests |
+| A4 | 3 | West Hills neighbor, unnamed (Mar 2025) | HAVE · HORIZONTAL | stakes: hours, not weeks | CBS LA (KCAL) Mar 20, 2025; white Kia; ~2 a.m. to ~11 a.m.; LAPD |
+| A5 | 4 | Robert Luna, LA County sheriff (May 2026) | FIND · HORIZONTAL | development: organized crews, caught | May 20, 2026 news conference; DA Hochman; seven charged, first-degree residential burglary; turf box; Wi-Fi jammer |
+| A6 | 5 | Bellaire, TX homeowner's doorbell camera, via police (Dec 2025) | HAVE · HORIZONTAL | development: your own camera goes blind | NBC News Dec 5, 2025; Bellaire PD; $60–70; 10–20 feet |
+| A7 | 6 | Irvine, CA homeowner, unnamed (Apr 2025) | HAVE · HORIZONTAL | stakes: they're at your door | ABC7 May 17, 2025; Easter Sunday 2025; fake Amazon driver; five arrested |
+| A8 | 7, 8 | You (the viewer); North Hollywood neighbors (May 2026) | HAVE · HORIZONTAL | evidence: what holds up; the neighbors | NBC News experts (SD card, hardwired); ABC7 North Hollywood group text |
 
 ## Jeff should know
 
 - A2: June 2024, Braintree. Local reports say three arrested (NBC national said four); the family never showed their faces. Police say the camera cased the house before the break-in.
 - A3: the couple's two burglaries span 40-plus years; police haven't tied any break-in to these cameras.
-- A4: no arrests and no reported loss.
+- A4: March 2025. No arrests and no reported loss.
 - A5: all seven charged in May 2026; none convicted as of then (check the docket before taping). "South American theft group" is the police's phrase; never broaden it.
-- A6: federal law bars operating, marketing or selling a jammer (FCC). Sources differ on doorbell vs. backyard camera.
-- A7: Easter 2025; "tens of thousands" is the homeowner's own figure.
-- A8: a "wired" doorbell is usually wired for power only and still runs on Wi-Fi, so a jammer still blinds it.
+- A6: December 2025. Federal law bars operating, marketing or selling a jammer (FCC). Sources differ on doorbell vs. backyard camera.
+- A7: April 2025 (Easter); "tens of thousands" is the homeowner's own figure.
+- A8: the North Hollywood neighbors are May 2026. A "wired" doorbell is usually wired for power only and still runs on Wi-Fi, so a jammer still blinds it.
 
 ## The fix: sources
 
@@ -197,20 +197,12 @@ Burglary crews are hiding cameras in bushes, pointed at front doors, to learn wh
 - Step 2: don't touch it, call police (LASD; Rancho Cucamonga PD; Brea PD).
 - Step 3: a system that doesn't need Wi-Fi; SD-card recording (NBC News security experts, Dec 5, 2025; Sheriff Luna via ABC7, May 20, 2026).
 - Step 4: neighbors and a group text (ABC7, May 21, 2026).
-- Step 5: don't post the trip (LA County officials via ABC7); lights on timers (LASD via Patch); hold mail, free, 3 to 30 days (USPS FAQ). ⚠️ Neighbor grabbing the mail: no specific source.
+- Step 5: don't post the trip (LA County officials via ABC7); lights on timers (LASD via Patch); hold mail, free, 3 to 30 days (USPS FAQ). Neighbor grabbing the mail: no source yet (Open calls).
 - Do-nothing test: the walk alone still leaves the jammer and the knock, so steps 3–5 close those.
-
-## Gaps
-
-- ⚠️ A2 Braintree is June 2024: date in a Jeff note.
-- ⚠️ A4 West Hills is March 2025: date in a Jeff note.
-- ⚠️ A5 the LA County arrests are May 2026: date in a Jeff note.
-- ⚠️ A6 Bellaire is December 2025: date in a Jeff note.
-- ⚠️ A7 Irvine is April 2025: date in a Jeff note.
-- ⚠️ A8 the North Hollywood neighbors are May 2026: date in a Jeff note.
-- ⚠️ No 2026 camera case has a dollar figure.
 
 ## Open calls
 
 - Sponsor spots for the break.
 - Graphics for the five steps, or Jeff rapid-fires them.
+- No 2026 camera case has a dollar figure. Find one, or keep the stakes to break-ins.
+- Step 5's "have a neighbor grab the mail" has no source yet. Find one or cut it.

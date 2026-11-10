@@ -6,7 +6,8 @@ Usage:
 
 Source conventions this expects (v3 additions: `[[PAGE BREAK]]` before the
 Build Sheet, a beat tag line in backticks -> small grey, nested bullets by
-indent, *Soundbite* bullets grey, ⚠️ bullets and //// break rules red):
+indent, *Soundbite* bullets grey, `No times yet:` / `Legal:` / `Note:` clip notes (and legacy
+⚠️ bullets) and //// break rules red):
     # TITLE                      -> document title (first H1 only)
     ## SECTION                   -> major section (shortlist, back matter)
     # A. STORY HEADLINE          -> a story page (letter or number); page break before it
@@ -259,7 +260,7 @@ def render(md, out):
             if text.lower().startswith("soundbite"):
                 for run in p.runs:
                     run.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
-            elif text.startswith("⚠️"):
+            elif text.startswith("⚠️") or re.match(r"(No times yet|Legal|Note):", text, re.I):
                 for run in p.runs:
                     run.font.color.rgb = RED
             i += 1
