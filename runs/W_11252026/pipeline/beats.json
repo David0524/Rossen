@@ -1,0 +1,240 @@
+[
+ {
+  "beat_id": "11-25-A2",
+  "episode": "11-25",
+  "segment_title": "THE COSTCO PARKING LOT SCAMS",
+  "script_text": "San Jose Costco Almaden Plaza: two women put a fake 'gift' necklace on an 86-year-old man loading groceries with his 75-year-old wife; took his 18K heirloom medallion; second car blocked them in. NBC Bay Area Aug 23 2026.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "elderly San Jose couple robbed Costco parking lot necklace",
+  "visual_spec": "daughter or couple with NBC Bay Area reporter; Costco lot",
+  "platforms": [
+   "youtube",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "NBC Bay Area story Aug 2026",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "elderly San Jose couple robbed in Costco parking lot",
+    "San Jose Costco necklace swap elderly",
+    "jewelry distraction theft Costco parking lot"
+   ],
+   "victim": [
+    "they put a necklace on my dad"
+   ],
+   "platform": [
+    "costco parking lot necklace scam"
+   ],
+   "anchor": [
+    "NBC Bay Area elderly San Jose couple robbed in parking lot"
+   ],
+   "shorts": [
+    "costco necklace scam #shorts"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-25-A3",
+  "episode": "11-25",
+  "segment_title": "THE COSTCO PARKING LOT SCAMS",
+  "script_text": "Bellevue PD 'blessing' scam: 71-year-old Rickey Foreman at Renton Walmart, necklace with Tuskegee Airman brother's ring stolen and recovered; three arrested. FOX 13 Seattle Feb 2026.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Bellevue police blessing scam jewelry ring returned Tuskegee",
+  "visual_spec": "victim with FOX 13 reporter; ring returned",
+  "platforms": [
+   "youtube"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "FOX 13 X_pAsqSPpgY, cRVoOUcA6_0",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "blessing scam jewelry thefts arrested Bellevue",
+    "priceless ring returned organized crime group"
+   ],
+   "victim": [
+    "was clamping it around my neck"
+   ],
+   "platform": [
+    "blessing scam necklace"
+   ],
+   "anchor": [
+    "FOX 13 Seattle blessing jewelry thefts"
+   ],
+   "shorts": [
+    "blessing scam #shorts"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-25-A4",
+  "episode": "11-25",
+  "segment_title": "THE COSTCO PARKING LOT SCAMS",
+  "script_text": "Purse grabbed while loading groceries: Vallejo Costco car camera, woman knocked down, purse taken (NBC Bay Area Aug 2025); Portland Costco 93-year-old wallet lifted, $1,500 gift cards in 30 minutes (KATU May 2024).",
+  "orientation": "horizontal",
+  "clip_role": "evidence",
+  "news_anchor": "woman robbed Costco parking lot Vallejo caught on camera",
+  "visual_spec": "car camera video of purse robbery while loading",
+  "platforms": [
+   "youtube",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "NBC Bay Area video page; KATU XgkNrTUgYgU",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "woman robbed Costco parking lot Vallejo",
+    "93-year-old pickpocketed Portland Costco gift cards",
+    "purse snatched Costco parking lot caught on camera"
+   ],
+   "victim": [
+    "they took my purse while I was loading"
+   ],
+   "platform": [
+    "costco parking lot purse theft"
+   ],
+   "anchor": [
+    "NBC Bay Area woman robbed in Costco parking lot in Vallejo",
+    "KATU 93-year-old Portland man pickpocketed gift cards"
+   ],
+   "shorts": [
+    "costco parking lot robbery #shorts"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-25-A5",
+  "episode": "11-25",
+  "segment_title": "THE COSTCO PARKING LOT SCAMS",
+  "script_text": "Fake gold for gas money: Mettawa IL Costco lot, shopper paid $15,800 for fake jewelry, police stakeout, two guilty pleas (Aug 2026). Same script Kauai Walmart, Eugene, Hillsboro Lowe's. Pawn shop real-or-fake.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "fake gold jewelry scam parking lot gas money",
+  "visual_spec": "police or pawn shop showing fake gold sold in store parking lots",
+  "platforms": [
+   "youtube",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "KREM HXvfyXqtIoU, KOAA bF4ysj53h7U",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "fake gold jewelry scam parking lot police warn",
+    "fake gold gas money scam arrested",
+    "pawn shop fake gold scam warning"
+   ],
+   "victim": [
+    "he said he needed gas money and sold me a gold chain"
+   ],
+   "platform": [
+    "fake gold parking lot scam"
+   ],
+   "anchor": [
+    "Spokane pawn shops warn fake gold scam",
+    "Don't be fooled by parking lot fake gold scheme"
+   ],
+   "shorts": [
+    "fake gold scam #shorts"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-25-A6",
+  "episode": "11-25",
+  "segment_title": "THE COSTCO PARKING LOT SCAMS",
+  "script_text": "Car won't start after shopping at Lehi/American Fork Utah Costco; two men 'help', pull a fuse, ask $200 (June 2026, TikTok @jasnahooke 447K per Motor1); American Fork PD repair scam warning (2025); Culpeper flat-tire scam.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "parking lot car repair scam fake mechanic Utah",
+  "visual_spec": "news package or victim on car tampering in a store lot",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "TikTok native + local news possible",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "parking lot car repair scam American Fork police",
+    "Costco parking lot car tampering scam Utah",
+    "flat tire scam parking lot good samaritan"
+   ],
+   "victim": [
+    "my car wouldn't start and these two guys offered to help"
+   ],
+   "platform": [
+    "costco car scam corolla",
+    "parking lot mechanic scam"
+   ],
+   "anchor": [
+    "American Fork police vehicle repair scams parking lots",
+    "Toyota Corolla Costco mechanic scam"
+   ],
+   "shorts": [
+    "parking lot car scam #shorts",
+    "costco corolla scam"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-25-A7",
+  "episode": "11-25",
+  "segment_title": "THE COSTCO PARKING LOT SCAMS",
+  "script_text": "Tracker on the car: Auburn AL woman's iPhone alert, GPS tracker under her car first pinged at Sam's Club, believes placed at Opelika Walmart (WTVM Sept 2025); Fort Wayne zip-tied tracker (21Alive Aug 2025).",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "tracker found under woman's car Auburn",
+  "visual_spec": "victim showing the tracker found under her car",
+  "platforms": [
+   "youtube",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "WTVM and 21Alive packages",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "tracker found underneath woman's car Auburn",
+    "GPS tracker found under car bumper Fort Wayne",
+    "AirTag found on car after shopping"
+   ],
+   "victim": [
+    "my phone said a tracker was moving with me"
+   ],
+   "platform": [
+    "airtag on my car parking lot"
+   ],
+   "anchor": [
+    "WTVM tracker found underneath woman's car Auburn"
+   ],
+   "shorts": [
+    "airtag found on car #shorts"
+   ]
+  }
+ }
+]

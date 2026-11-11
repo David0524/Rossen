@@ -1,0 +1,27 @@
+INFO beat 11-25-A2: 7 queries via youtube -> 137 raw candidates
+INFO beat 11-25-A2: 6 queries via brave -> 101 raw candidates
+INFO beat 11-25-A2: 3 queries via brave -> 50 raw candidates
+ERROR: query "was clamping it around my neck" page 2: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)
+INFO beat 11-25-A3: 6 queries via youtube -> 147 raw candidates
+INFO beat 11-25-A4: 8 queries via youtube -> 146 raw candidates
+INFO beat 11-25-A4: 7 queries via brave -> 107 raw candidates
+INFO beat 11-25-A4: 3 queries via brave -> 54 raw candidates
+INFO beat 11-25-A5: 8 queries via youtube -> 225 raw candidates
+INFO beat 11-25-A5: 7 queries via brave -> 121 raw candidates
+INFO beat 11-25-A5: 3 queries via brave -> 60 raw candidates
+ERROR: query "Toyota Corolla Costco mechanic scam" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)
+INFO beat 11-25-A6: 10 queries via youtube -> 252 raw candidates
+INFO beat 11-25-A6: 8 queries via brave -> 155 raw candidates
+INFO beat 11-25-A6: 5 queries via brave -> 97 raw candidates
+INFO beat 11-25-A7: 7 queries via youtube -> 167 raw candidates
+INFO beat 11-25-A7: 6 queries via brave -> 110 raw candidates
+INFO beat 11-25-A7: 3 queries via brave -> 60 raw candidates
+1989 raw -> 1602 after dedupe across 6 beats (youtube + brave)
+  by platform: youtube 1148 · news_web 322 · reddit 126 · tiktok 4 · x 1 · instagram 1
+  11-25-A2: 239
+  11-25-A3: 140
+  11-25-A4: 224
+  11-25-A5: 316
+  11-25-A6: 410
+  11-25-A7: 273
+wrote candidates.json

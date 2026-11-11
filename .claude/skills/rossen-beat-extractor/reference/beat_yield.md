@@ -134,3 +134,18 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 **Yield:** 6 PICK (2 UNVERIFIED) / 1 WEAK / 1 MANUAL of 8.
 **Pattern:** news-site players carried the run again: WOWT (ArcPublishing) and ABC15 (Uplynk asset id from the page's poster image) Whispered cleanly when YouTube was walled. Scripps/ABC15 pages report "Unsupported URL"; look for an uplynk.com poster and try content.uplynk.com/<asset>.m3u8.
 **Process note:** captions bot-walled at 16:44 and again at ~17:25; a retry at ~17:35 got 5 of 8. Brave search worked throughout and found the YouTube copies of two site videos.
+
+## Run W_11252026 (A only: Costco parking lot scams; run 11/11/2026)
+
+| beat | role | sourcability | outcome | note |
+|---|---|---|---|---|
+| 11-25-A2 | victim_interview | H | PICK | NBC Bay Area qR0sQsMqBJc 0:29–0:55 BUTT 1:16–1:54 "temporarily blocked them from leaving"; captions on retry |
+| 11-25-A3 | victim_interview | H | PICK | FOX 13 X_pAsqSPpgY 1:32–2:14 BUTT 3:23–3:45; LEGAL (accused, not-guilty pleas; nationality outside cut) |
+| 11-25-A4 | evidence | H | PICK · UNVERIFIED | NBC Bay Area site video (NBCStations) 0:00–0:27 whole; Whisper; no YouTube copy found; LEGAL (minors) |
+| 11-25-A5 | evidence | H | PICK | KATU XgkNrTUgYgU 0:19–0:38 BUTT 0:59–1:05 (May 2024) |
+| 11-25-A6 | authority_report | H | WEAK | KOAA bF4ysj53h7U 0:29–0:50 BUTT 0:52–1:12; Mettawa victim case print-only |
+| 11-25-A7 | victim_interview | H | THROTTLED | ABC4 kUy077XD5To captions blocked twice; TikTok @jasnahooke manual (URL unpublished) |
+| 11-25-A8 | victim_interview | H | PICK · UNVERIFIED | WTVM site video (ArcPublishing, listed 32:05, real 3:13) 0:47–1:20 BUTT 1:20–1:41; Whisper |
+
+**Yield:** 5 PICK (2 UNVERIFIED) / 1 WEAK / 1 THROTTLED of 7.
+**Pattern:** NBCStations and ArcPublishing (Gray) site players Whisper cleanly; ArcPublishing durations were wrong again (10x). YouTube copies exist for most affiliate packages; search the outlet + headline first (producer rule 11/11: link YouTube over the site).
