@@ -17,3 +17,16 @@ Skill: rossen-script-writer, FINAL stage. Both versions skipped the review-loop 
 | JEFF notes | 4 | 6 |
 | Open decisions | 2 | 3 |
 | Needed reviewer fixes | n/a | 6 notes (research gaps, a clip spoiler, no RED FLAG) |
+
+## Round 2: Sonnet only, directed toward Jeff's voice (producer, 11/11)
+
+The text is Sonnet's throughout. Claude directed and reviewed it but wrote no lines.
+- v2 (`sonnet_draft_v2_before_voice.md`): after the fact and structure notes.
+- v3 (`sonnet_draft_v3.md`): after the voice brief (rossen-voice.md plus aired transcripts
+  jmUfTCWWDVM, Gh1ueu7ovlQ, SjaMwcIQXyU), with reaction-first buttons, repetition, an anger
+  beat, and a second-person rental car scene.
+- final (`sonnet_draft.md` / SONNET.docx): fixes a line Sonnet lifted from Claude's brief,
+  the unanswered objection in the tease, "never heard of" changed to "never dealt with"
+  (matching the clip), the demo no longer called live, and an invented feeling cut.
+- Checker: 0 errors, 7 warnings. The tease is 206 words, over the 180 ceiling.
+- Lesson: example wording in a brief gets copied. Describe the move, don't write the line.
