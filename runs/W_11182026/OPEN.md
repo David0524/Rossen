@@ -3,7 +3,7 @@
 One-story show (producer, 11/11): holiday travel scams, a longer A. Pre-bible: `Prebible F2 11_18.docx` (source `prebible.md`).
 Google Doc in the new `11/18 -- TRAVEL SCAMS` show folder (producer asked, 11/11): [Prebible F2 11/18](https://docs.google.com/document/d/1I6nSt7XuaqG9p9uLf2dLvEeci1zBD2E72Dg0UTvBaF0/edit), made with `tools/md_to_gdoc_html.py`. Edit the Doc in place from now on and keep `prebible.md` in sync.
 Research: `research/research_travel.md`.
-Outline w/ videos (11/11): `Outline F2 11_18.docx` (source `outline.md`, Stage: videos, 8 clips: 6 PICK incl. 2 UNVERIFIED, 1 WEAK, 1 MANUAL). Pipeline files in `pipeline/` (beats, candidates, picks, transcripts); manifest `clips/manifest.json`.
+Outline w/ videos (11/11): `Outline F2 11_18.docx`, Google Doc [Outline F2 11/18](https://docs.google.com/document/d/1CaMeXa3wQk6zHzwLnPJdKpzDBnosG-KIF7h5AU137n8/edit) in the 11/18 folder (edit the Doc in place from now on and keep `outline.md` in sync), (source `outline.md`, Stage: videos, 8 clips: 6 PICK incl. 2 UNVERIFIED, 1 WEAK, 1 MANUAL). Pipeline files in `pipeline/` (beats, candidates, picks, transcripts); manifest `clips/manifest.json`.
 
 - [ ] Jeff's yes/no on the pre-bible, then the outline w/ videos
 - [ ] The producer's Instagram reel (Dbs_h8yDoyy): couldn't load (login wall); someone watches it and places it
