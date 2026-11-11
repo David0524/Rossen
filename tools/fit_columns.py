@@ -98,11 +98,16 @@ def fit(rows, total, m, pt, header_bold=True):
             t, b = clean(c)
             row.append((t, b or (ri == 0 and header_bold)))
         cells.append(row)
+    # Floors. The goal is the shortest table (producer, 11/11), so a long word may
+    # break across lines when that makes the table shorter: the 11/25 outline came
+    # out wrong when every column was held to its longest word ("HORIZONTAL",
+    # "UNVERIFIED") and the text-heavy column got the leftovers. Only the header
+    # word (and a 2-character id like "A2") is kept whole.
     mins = []
     for j in range(ncol):
-        longest = max((m.w(wd, b) for row in cells for (t, b) in [row[j]] for wd in t.split()), default=0)
-        mins.append(min(longest, 110.0) + PAD + 1)   # a URL-length token may wrap
-    if sum(mins) > total:      # can't avoid breaking words; scale down
+        head = max((m.w(wd, cells[0][j][1]) for wd in cells[0][j][0].split()), default=0)
+        mins.append(max(head, 14.0) + PAD + 1)
+    if sum(mins) > total:
         k = total / sum(mins); mins = [x * k for x in mins]
 
     def height(ws):
