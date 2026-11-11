@@ -20,7 +20,10 @@ pass. These are written into the document.
   sentence, which fails the paraphrase test.
 - **The tease's first lines match the opening video package** — what is on
   screen as Jeff talks (the moment, the person, the object), not a general line
-  about the topic. Then tease; **never give the story away**: no red flags, no
+  about the topic. **They grab (Jeff, 11/11):** the first two lines are the most
+  startling moment, said plainly, and what it means for you; the command hook
+  can come third. People in the tease are someone the viewer is `GOING TO SEE` or
+  `MEET`, never `THIS FAMILY` (nobody is on screen yet). Then tease; **never give the story away**: no red flags, no
   protection steps, no outcome a clip reveals. Promise the fix, don't state it.
 - **Open every tease with a concrete payoff promise**, not only a threat — and
   write down every promise you make. Each one (`THE ONE MOVE`, `THE 5-SECOND
@@ -51,9 +54,23 @@ pass. These are written into the document.
 - **Clip out: a one-line button** that reacts and restates what the clip proved:
   `JUST THAT FAST, AND NOBODY KNOWS.` Never clip-to-clip or clip-to-header without
   one (a `BUTT` between segments of one source is the exception).
+- **Amp up into every clip after the first (Jeff, 11/11).** The line that
+  brings in the next clip escalates: `AND NOW IT'S SPREADING`, `BUT IT GETS
+  WORSE`, `RIGHT UP TO YOUR DOOR`. Place and date never open a new clip.
+- **The button rebuilds energy (Jeff, 11/04).** React, then pull forward: the
+  next line (or the button's second half) gives a fresh reason to keep watching
+  — the next risk, the next case, the next question. Never re-enter on a date,
+  a hedge or an attribution (`THIS WAS BACK IN 2021.`); those go in a JEFF note.
+  The last clip before the close gets a button too.
 
 ## Story openings, line length and data
 
+- **Headers are newspaper headlines (Jeff, 11/04):** subject first, plain
+  verdict verb, impact on the viewer. `DOLLAR GENERAL JUST GOT BUSTED FOR
+  OVERCHARGING YOU`, not `NOW THE FTC AND 20 STATES ARE SUING`. Process and
+  agencies go in the lines under it.
+- **Open each story on its strongest real result, then the scale (Jeff,
+  11/04)** — not on a run of statistics.
 - **Open each story on a hook, not a rewrite of its title.** If the header is
   `YOUR PLAN IS "ENDING?"`, the first line is not `-INSURERS ARE ENDING PLANS`.
 - **Short lines.** One thought per line; over 16 words is almost always two
@@ -78,9 +95,9 @@ pass. These are written into the document.
 - **Hedge by attribution, never by softening:** `POLICE SAY`, `EMPLOYEES SAY`,
   `CONSUMER REPORTS FOUND`, `AND I'M QUOTING HERE`. Attribute to the agency,
   the court, the testing body or the person, **never to the news outlet that
-  reported it**. The one exception is the clip lead-in: name the outlet once,
-  as Jeff brings in its first clip (`-HERE'S CBS LOS ANGELES. LOOK AT THIS.`), for
-  fair use; see SKILL.md, "What the producer cuts". No "on purpose" without
+  reported it**, not even in a clip lead-in (Jeff, 11/11: "no need for 'CBS shows
+  this'"; this replaces the 10/21 lead-in exception). The red source line and the
+  on-screen credit name the outlet. No "on purpose" without
   evidence, no "told us" when they told someone else, no national claim from one
   state's data, no "never fixed" without dates, no vendor or advocacy statistic
   stated as settled fact. Where a legal note requires it — someone arrested but
@@ -97,7 +114,10 @@ pass. These are written into the document.
   personal danger. **Get to the how-to faster**; viewers have asked for less
   preamble. **The ending closes**; it doesn't dissolve.
 - **VOD language, not broadcast clock.** `RIGHT AFTER THIS VIDEO`, never
-  `TONIGHT`. Don't date-stamp a story with a month reference that ages it.
+  `TONIGHT`. **Evergreen (Jeff, 11/11):** no holidays, seasons or relative dates
+  in spoken copy (`THIS HOLIDAY SEASON`, `THIS FALL`, `LAST DECEMBER`, `LAST YEAR`,
+  `THIS WEEK`). A case's date goes in a JEFF note; say the year (`IN 2024`) only
+  when leaving it out would mislead a viewer about what to do.
 
 ## Ad-lib and first person
 
@@ -133,6 +153,9 @@ illustrates; inconsistent guest credentials; old footage sitting under a
 
 ## Added from the 10/28 edits
 
+- **Names (Jeff, 11/04):** no first name for a one-off subject anywhere in the
+  document — `THIS WOMAN`, not `SHERRI`. Names are for people the story develops
+  across beats, booked guests, the accused, and viewers thanked by name.
 - **Tease:** the person stays generic (`A WOMAN`, not her age and job); scale is
   national (`IN STORES ACROSS AMERICA`); the noun fits every venue in the story
   (`AN EMPLOYEE`, not `A CLERK`, when one case is a spa); name the object

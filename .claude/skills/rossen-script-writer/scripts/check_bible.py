@@ -566,34 +566,26 @@ def check(path, day="wednesday", stories=2, stage="draft"):
         r"USA TODAY|WASHINGTON POST|NEW YORK TIMES|WALL STREET JOURNAL|"
         r"ASSOCIATED PRESS|REUTERS|INVESTIGATETV|ABC\d+|[KW][A-Z]{2,3} NEWS|[KW][A-Z]{3} ?\d+|"
         r"[KW][A-Z]{2,3}'S (REPORTING|STORY|INVESTIGATION))\b")
-    # 10/21: name the outlet once, in the lead-in to its first clip (fair use).
-    outlet_hits, lead_ins, seen = [], [], {}
+    # Jeff (11/11 notes): "no need for 'CBS shows this'". Outlets stay out of
+    # every spoken line, clip lead-ins included (replaces the 10/21 lead-in
+    # rule). The red source line credits the outlet; the edit credits it on screen.
+    outlet_hits, lead_ins = [], []
     for i, l in enumerate(body):
         s_ = strip_md(l)
         if (not s_ or CUE_ANY.search(s_) or s_.upper().startswith(("(", "OUT:"))
                 or not OUTLETS.search(s_.upper())):
             continue
         nxt = [strip_md(x) for x in body[i + 1:i + 8] if strip_md(x)][:3]
-        if any(CLIP_LOOSE.search(x.upper()) for x in nxt):
-            lead_ins.append(s_)
-            m_ = OUTLETS.search(s_.upper())
-            key = re.split(r"[.,!?…]", s_.upper()[m_.start():])[0].strip()
-            key = " ".join(key.split()[:3])
-            seen[key] = seen.get(key, 0) + 1
-        else:
-            outlet_hits.append(s_)
+        (lead_ins if any(CLIP_LOOSE.search(x.upper()) for x in nxt)
+         else outlet_hits).append(s_)
     r.stats["outlet_mentions"] = len(outlet_hits)
     r.stats["outlet_lead_ins"] = len(lead_ins)
-    if outlet_hits:
-        r.warn(f"{len(outlet_hits)} spoken line(s) name a news outlet outside a "
-               f"clip lead-in. Name the outlet only as Jeff brings in its clip; "
-               f"everywhere else say 'REPORTERS', 'THE INVESTIGATION', or "
-               f"attribute to the police, court or agency. {outlet_hits[:3]}")
-    again = [k for k, v in seen.items() if v > 1]
-    if again:
-        r.warn(f"outlet(s) named in more than one clip lead-in: {again}. Name "
-               f"each outlet once, on its first clip (10/21: 'just mention NPR "
-               f"once').")
+    if outlet_hits or lead_ins:
+        r.warn(f"{len(outlet_hits) + len(lead_ins)} spoken line(s) name a news "
+               f"outlet: {(lead_ins + outlet_hits)[:3]}. Jeff (11/11): no 'CBS "
+               f"shows this'. Lead into the clip on the moment ('WATCH THIS.'); "
+               f"elsewhere say 'REPORTERS' or attribute to the police, court or "
+               f"agency. The red source line and the on-screen credit name the outlet.")
     fam = [s for s in spoken if re.search(
         r"\b(YOUR (AGING |ELDERLY )?PARENTS?|YOUR MOM AND DAD|A PARENT WITH|"
         r"YOUR GRANDPARENTS?)\b", s.upper())]
@@ -905,7 +897,212 @@ def check(path, day="wednesday", stories=2, stage="draft"):
         r.warn(f"the tease gives the person's age: {aged[:1]}. Keep the tease "
                f"person generic ('A WOMAN'); age and job are body details (10/28).")
 
+    # ---------------------------------------------------- Jeff's notes, 11/04
+    jeff_1104(r, lines, boundary, body, clips, day)
+    jeff_1111(r, lines, boundary, clips)
+
     return r
+
+
+# Jeff (11/04 F2 notes, relayed Oct 30 2026): one-off subjects are THIS WOMAN,
+# not SHERRI; headlines read like a newspaper (subject first, impact on you);
+# a real result before the stats; no tutorial before the story earns it; the
+# re-entry line out of a clip rebuilds energy instead of dating or hedging.
+NAME_STOP = set("""THIS THAT THESE THOSE SHE HE THEY IT WHO WHAT WHEN WHERE WHY HOW
+EVERY EVERYONE EVERYBODY ONE SOMEONE SOMEBODY NOBODY ANYONE POLICE REPORTERS
+INSPECTORS DETECTIVES INVESTIGATORS OFFICIALS EXPERTS JEFF YOU WE I THERE HERE
+STATES BANKS SCAMMERS CROOKS THIEVES WORKERS EMPLOYEES MEMBERS PEOPLE MOST SOME
+MANY FAMILY FAMILIES NOW THEN BUT AND SO LATER TODAY CUSTOMERS SHOPPERS VIEWERS
+AMAZON WALMART TARGET COSTCO KROGER CHASE APPLE GOOGLE FACEBOOK MEDICARE
+TEMU PAYPAL ZELLE VENMO NETFLIX LET LETS FBI FTC IRS CBS ABC NBC FOX""".split())
+NAME_VERBS = (r"IS|WAS|SAYS|SAID|SEARCHED|BUYS|BOUGHT|SHOPS|SHOPPED|WORKED|WORKS|"
+              r"LOST|PAID|PAYS|GOT|HAD|HAS|LIVED|LIVES|THOUGHT|CALLED|FOUND|SENT|"
+              r"NOTICED|CHECKED|OPENED|ANSWERED|CLICKED|WENT|TOLD|TRIED|WANTED|"
+              r"KEPT|GETS|SPENT|JUST|NEVER|ALMOST|NEARLY")
+NAME_RE = re.compile(r"^-?\s*(?:(?:AND|BUT|SO|NOW|THEN)\s+)?(?:IN [A-Z ]+,\s*)?"
+                     r"([A-Z]{3,})(?:\s+AND\s+([A-Z]{3,}))?(?:'S\b|\s+(?:" + NAME_VERBS +
+                     r")\b)")
+PROCESS_VERBS = re.compile(r"\b(ANNOUNCED|ANNOUNCES|ANNOUNCING|FILED|FILES|"
+                           r"ARE SUING|IS SUING|SUED|LAUNCHED|LAUNCHES|UNVEILED|"
+                           r"RELEASED|ISSUED|REPORTED)\b")
+VIEWER_RE = re.compile(r"\b(YOU|YOUR|YOU'RE|YOU'VE|YOURS|YOURSELF)\b")
+PERSON_RE = re.compile(r"\b(WOMAN|MAN|COUPLE|SHE|HE|HER|HIS|HUSBAND|WIFE|MOM|DAD|"
+                       r"GRANDMOTHER|FAMILY|VETERAN|SHOPPER|NEIGHBOR)\b")
+WALK_CUE = re.compile(r"NARRATES OVER|LIVE DEMO|WALKTHROUGH|SCREEN SHARE|SCREEN RECORDING")
+STEP_RE = re.compile(r"^-?\s*(?:THEN |FINALLY |NEXT,? )?(CLICK|TYPE|ENTER|TAP|SELECT|"
+                     r"GO TO|OPEN|SCROLL|CHOOSE|PICK)\b")
+FLAT_REENTRY = re.compile(r"\b(THIS|THAT|IT) (WAS|HAPPENED) (BACK )?IN (19|20)\d\d\b|"
+                          r"^-?\s*(SHE|HE|THEY) SAYS? THAT'?S WHAT|"
+                          r"^-?\s*(THIS|THAT) WAS (LAST|BACK)\b")
+
+
+def jeff_1104(r, lines, boundary, body, clips, day="wednesday"):
+    up = lambda x: strip_md(x).upper().replace("\u2019", "'")
+    spoken = [(i, up(l)) for i, l in enumerate(lines) if i >= boundary
+              and strip_md(l).startswith("-") and not CUE_ANY.search(strip_md(l))]
+    headers = [(i, up(l)) for i, l in enumerate(lines)
+               if l.strip().startswith("**") and not CUE_ANY.search(l)
+               and up(l) and up(l) == strip_md(l).upper() and not up(l).startswith("-")
+               and not up(l).startswith("OUT:") and words(up(l)) <= 22]
+    head_words = set(w for _, h in headers for w in re.findall(r"[A-Z]+", h))
+
+    # 1. one-off first names
+    found = {}
+    for i, t in spoken:
+        m = NAME_RE.match(t)
+        if not m:
+            continue
+        for nm in (m.group(1), m.group(2)):
+            if nm and nm not in NAME_STOP and nm not in head_words \
+                    and not nm.endswith("PD") and not re.fullmatch(US_STATES, nm):
+                found.setdefault(nm, i + 1)
+    names = []
+    if day == "callin":  # callers are the show; they keep the cleared name
+        found = {}
+    for nm, first in found.items():
+        hits = [i for i, t in spoken if re.search(r"\b" + nm + r"\b", t)]
+        # developed = mentioned on both sides of at least one clip
+        developed = any(c for c in clips if min(hits) < c < max(hits)) and len(hits) >= 3
+        if not developed:
+            names.append(f"{nm} (line {first})")
+    r.stats["one_off_names"] = len(names)
+    if names:
+        r.warn(f"{len(names)} one-off subject(s) named in copy: {names[:6]}. "
+               f"Jeff (11/04): 'THIS WOMAN', not 'SHERRI', unless the story "
+               f"develops them across beats. Booked guests, the accused and "
+               f"thanked viewers keep names. Check any false hits (a brand).")
+
+    # 2. newspaper headlines: subject first, impact on the viewer
+    proc = [h for _, h in headers if PROCESS_VERBS.search(h)
+            and PROTECTION_HEADER not in h]
+    if proc:
+        r.warn(f"header(s) lead with a process verb: {proc[:3]}. Jeff (11/04): "
+               f"write it like a newspaper, subject first, verdict verb, impact "
+               f"on you — 'DOLLAR GENERAL JUST GOT BUSTED FOR OVERCHARGING YOU', "
+               f"not 'NOW THE FTC AND 20 STATES ARE SUING'.")
+    body_heads = [h for i, h in headers if i > boundary and PROTECTION_HEADER not in h]
+    no_you = [h for h in body_heads if not VIEWER_RE.search(h)]
+    if body_heads and len(no_you) > len(body_heads) // 2:
+        r.warn(f"{len(no_you)} of {len(body_heads)} body headers never reach the "
+               f"viewer (no YOU/YOUR): {no_you[:3]}. Jeff (11/04): make the impact "
+               f"on the viewer clear in the headline.")
+
+    # 3. a real result before the stats (first story)
+    first = next((i for i, _ in headers if i > boundary), None)
+    if first is not None:
+        opening = [t for i, t in spoken if i > first][:4]
+        figs = sum(1 for t in opening if FIGURE_RE.search(t))
+        people = sum(1 for t in opening if PERSON_RE.search(t))
+        if figs >= 2 and people == 0:
+            r.warn(f"the A story opens on {figs} stat lines with no person "
+                   f"(line {first + 1}). Jeff (11/04): show a real result early "
+                   f"— lead with the strongest success or loss, then the scale.")
+
+    # 4. tutorial before the story has earned it (per segment between sponsors)
+    seg_bounds = [boundary] + [i for i, l in enumerate(lines) if i > boundary
+                               and re.search(r"SPONSOR|OMNIWATCH SPOT", up(l))
+                               and CUE_ANY.search(strip_md(l))] + [len(lines)]
+    for a, b in zip(seg_bounds, seg_bounds[1:]):
+        sound = [c for c in clips if a < c < b and "BROLL" not in up(lines[c])]
+        walk = None
+        for i in range(a, b):
+            t = up(lines[i])
+            if WALK_CUE.search(t):
+                walk = i
+                break
+            if STEP_RE.match(t):
+                run = [j for j in range(i, min(b, i + 14)) if STEP_RE.match(up(lines[j]))]
+                if len(run) >= 3:
+                    walk = i
+                    break
+        if walk is not None and len(sound) >= 3:
+            before = sum(1 for c in sound if c < walk)
+            if before * 2 < len(sound):
+                r.warn(f"line {walk + 1}: the walkthrough runs after {before} of "
+                       f"{len(sound)} sound clips in its story. Jeff (11/04): build "
+                       f"to the payoff — promise the method early, deliver it after "
+                       f"the success story, the stakes and the complications.")
+
+    # 5. flat re-entry out of a clip
+    flat = []
+    for c in clips:
+        for j in range(c + 1, min(len(lines), c + 6)):
+            t = up(lines[j])
+            if not t or t.startswith("OUT:") or SOURCE_LINE.match(strip_md(lines[j])) \
+                    or t.startswith("BUTT"):
+                continue
+            if FLAT_REENTRY.search(t):
+                flat.append(f"line {j + 1}: {strip_md(lines[j])[:50]!r}")
+            break
+    if flat:
+        r.warn(f"{len(flat)} re-entry line(s) after a clip let the air out: "
+               f"{flat[:3]}. Jeff (11/04): react, then give a fresh reason to keep "
+               f"watching; dates and attributions go in a JEFF note or the setup.")
+
+
+# Jeff (feedback on the 11/11 F2, relayed Nov 9 2026): grab people harder at
+# the top; keep it evergreen (no holidays, no seasons, nothing that dates the
+# video); in the tease, show the viewer who they'll see ("YOU'RE GOING TO SEE
+# THIS FAMILY…"), not "THIS FAMILY"; amp up between videos, every bridge moves
+# the story forward ("AND NOW IT'S SPREADING"); no outlet names (above).
+MONTHS = (r"JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|"
+          r"NOVEMBER|DECEMBER")
+DATED_RE = re.compile(
+    r"\b(HOLIDAYS?|HOLIDAY SEASON|THANKSGIVING|CHRISTMAS|HANUKKAH|NEW YEAR'?S|"
+    r"BLACK FRIDAY|CYBER MONDAY|EASTER|FOURTH OF JULY|LABOR DAY|MEMORIAL DAY|"
+    r"HALLOWEEN|VALENTINE'?S|SPRING BREAK|BACK[- ]TO[- ]SCHOOL|TAX SEASON|"
+    r"(THIS|LAST|NEXT|EARLIER THIS|LATER THIS) (FALL|AUTUMN|WINTER|SPRING|SUMMER|"
+    r"SEASON|WEEK|WEEKEND|MONTH|YEAR|" + MONTHS + r")|"
+    r"(IN|THIS|LAST) (" + MONTHS + r")\b(?! \d)|THIS TIME OF YEAR)\b")
+TEASE_THIS_RE = re.compile(r"^-?\s*(AND |BUT |THEN |PLUS )?(THIS|THESE) (FAMILY|WOMAN|"
+                           r"MAN|COUPLE|GRANDMOTHER|GRANDFATHER|MOM|DAD|VETERAN|"
+                           r"NEIGHBOR|HOMEOWNER|SHOPPER|DRIVER|BOY|GIRL|TEEN|PEOPLE|"
+                           r"FAMILIES|NEIGHBORS|WOMEN|MEN)\b")
+AMP_RE = re.compile(r"\b(NOW|BUT|EVEN|WORSE|WORST|SPREADING|SPREAD|NOT JUST|NOT ONLY|"
+                    r"BIGGER|CLOSER|NEXT|GETS|GETTING|AGAIN|ANOTHER|NEW|ALREADY|"
+                    r"EVERYWHERE|ACROSS THE COUNTRY|NATIONWIDE|WAIT|MORE|FASTER|"
+                    r"HERE'S THE PROBLEM|HERE'S THE KICKER|IT'S NOT|THEN)\b")
+
+
+def jeff_1111(r, lines, boundary, clips):
+    up = lambda x: strip_md(x).upper().replace("\u2019", "'")
+    spoken = [(i, up(l)) for i, l in enumerate(lines)
+              if up(l) and not CUE_ANY.search(strip_md(l))
+              and not up(l).startswith(("(", "OUT:"))
+              and not SOURCE_LINE.match(strip_md(l))]
+
+    # evergreen: nothing that dates the video
+    dated = [f"line {i + 1}: {m.group(0)}" for i, t in spoken
+             for m in [DATED_RE.search(t)] if m]
+    r.stats["dated_lines"] = len(dated)
+    if dated:
+        r.warn(f"{len(dated)} line(s) date the video: {dated[:4]}. Jeff (11/11): "
+               f"keep it evergreen — no holidays, seasons or 'this week'. Old cases "
+               f"aren't dated in copy; the date goes in a JEFF note, or say the "
+               f"year ('IN 2024') if leaving it out would mislead.")
+
+    # the tease shows the viewer who they'll see
+    tease_this = [f"line {i + 1}: {t[:50]}" for i, t in spoken
+                  if i < boundary and TEASE_THIS_RE.match(t)]
+    if tease_this:
+        r.warn(f"tease introduces someone as 'THIS …': {tease_this[:3]}. Jeff "
+               f"(11/11): in the tease, 'YOU'RE GOING TO SEE THIS FAMILY…' / "
+               f"'YOU'LL MEET A WOMAN WHO…'. 'THIS WOMAN' is for the body, "
+               f"over the video.")
+
+    # amp up between videos: each run of copy from one clip to the next moves
+    # the story forward with an escalator
+    flat = []
+    for a, b in zip(clips, clips[1:]):
+        seg = [t for i, t in spoken if a < i < b]
+        if seg and not any(AMP_RE.search(t) for t in seg):
+            flat.append(f"lines {a + 1}-{b + 1}")
+    r.stats["flat_bridges"] = len(flat)
+    if flat:
+        r.warn(f"{len(flat)} stretch(es) between clips with no escalator: "
+               f"{flat[:4]}. Jeff (11/11): keep amping up between videos — each "
+               f"bridge moves the story forward ('AND NOW IT'S SPREADING', 'BUT "
+               f"IT GETS WORSE', 'IT'S NOT JUST ONE HOUSE').")
 
 
 def main():
