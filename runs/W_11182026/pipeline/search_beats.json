@@ -1,0 +1,290 @@
+[
+ {
+  "beat_id": "11-18-A2",
+  "episode": "11-18",
+  "segment_title": "THE AIRLINE SCAM THAT CAN STRAND YOU",
+  "script_text": "A FAKE AIRLINE AGENT TOOK $7,000 FROM THIS FAMILY AND LEFT THEM STRANDED. Omaha family stranded in Cancun searched for the airline's customer service number; agent said all four tickets on standby; paid $7,000 for a refundable fix; never refunded. WOWT Omaha, KSTP, BBB Josh Planos, June 2026.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "Omaha family fake airline customer service number Cancun $7,000",
+  "visual_spec": "family on camera with local reporter describing the standby call and the $7,000",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "WOWT/KSTP package likely; candidate BwmVMm4M2X0",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "fake airline customer service number scam family",
+    "Omaha family airline scam Cancun",
+    "fake airline number stranded Mexico"
+   ],
+   "victim": [
+    "all four tickets are on standby",
+    "we paid seven thousand dollars to the airline"
+   ],
+   "platform": [
+    "fake airline phone number scam",
+    "airline customer service scam google number"
+   ],
+   "anchor": [
+    "Omaha family fake airline customer service number Cancun $7,000",
+    "WOWT airline scam standby $7,000"
+   ],
+   "shorts": [
+    "fake airline number scam #shorts",
+    "airline customer service scam stranded"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-18-A3",
+  "episode": "11-18",
+  "segment_title": "THE AIRLINE SCAM THAT CAN STRAND YOU",
+  "script_text": "THE FAKE AGENT CAME BACK AND ASKED FOR MORE MONEY. Phoenix woman Cher; American Airlines canceled flight; searched online for number, reached impostor; charged $1,010 to rebook, months later asked another $1,010 to get $2,020 refund. ABC15 Let ABC15 Know.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "ABC15 Phoenix woman American Airlines imposter scam flight cancellation",
+  "visual_spec": "woman on camera with ABC15 consumer reporter about the American Airlines impostor",
+  "platforms": [
+   "youtube",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "ABC15 page video; YouTube copy likely",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "Phoenix woman scammed American Airlines imposter",
+    "Let ABC15 Know airline scam",
+    "American Airlines impostor flight cancellation scam"
+   ],
+   "victim": [
+    "I wanna get my $2,020 back",
+    "they charged me to rebook my flight"
+   ],
+   "platform": [
+    "american airlines scam call",
+    "fake american airlines customer service"
+   ],
+   "anchor": [
+    "ABC15 Phoenix woman American Airlines imposter scam flight cancellation"
+   ],
+   "shorts": [
+    "american airlines scam #shorts",
+    "fake airline agent refund scam"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-18-A4",
+  "episode": "11-18",
+  "segment_title": "THE AIRLINE SCAM THAT CAN STRAND YOU",
+  "script_text": "THE FAKE AGENT LOGGED INTO HER ACCOUNT AND CANCELED HER REAL FLIGHT. River Forest IL woman Joanna Moroz Domino; fake Icelandair live chat and number; scammer logged into account, charged ~$4,000 upgrade, canceled real reservation; AmEx refunded. ABC7 Chicago I-Team Jason Knowles July 23 2026.",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "ABC7 I-Team River Forest woman fake Icelandair support scam $4K",
+  "visual_spec": "woman on camera with ABC7 I-Team describing scammer canceling her reservation",
+  "platforms": [
+   "youtube",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 1,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "ABC7 Chicago page video likely",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "River Forest woman fake Icelandair support scam",
+    "ABC7 I-Team fake airline support scam",
+    "Icelandair scam canceled reservation"
+   ],
+   "victim": [
+    "the scammer logged into my account he was the one who canceled it"
+   ],
+   "platform": [
+    "fake airline live chat scam",
+    "icelandair scam"
+   ],
+   "anchor": [
+    "ABC7 I-Team River Forest woman fake Icelandair support scam $4K",
+    "Jason Knowles Icelandair scam"
+   ],
+   "shorts": [
+    "fake airline chat scam #shorts"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-18-A5",
+  "episode": "11-18",
+  "segment_title": "THE AIRLINE SCAM THAT CAN STRAND YOU",
+  "script_text": "NOW GOOGLE'S OWN AI CAN HAND YOU THE SCAMMER'S NUMBER. Google AI Overviews / AI Mode giving scam customer service numbers for airlines and cruise lines; numbers planted on hacked sites; The Points Guy Oct 2026; Royal Caribbean Alex Rivlin Washington Post 2025.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "Google AI Overview scam customer service phone number airline",
+  "visual_spec": "news package showing a Google AI answer with a fake airline or cruise number",
+  "platforms": [
+   "youtube",
+   "news_web",
+   "shorts"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "commentary_only",
+  "sourcability_note": "national coverage of AI Overview fake numbers exists (2025); demo backs it",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "Google AI overview scam phone number",
+    "AI search fake customer service number scam",
+    "Google AI fake airline number"
+   ],
+   "victim": [
+    "I called the number Google gave me and it was a scammer"
+   ],
+   "platform": [
+    "google ai overview scam number",
+    "ai overview fake customer service"
+   ],
+   "anchor": [
+    "Google AI Overview scam customer service phone number airline",
+    "Royal Caribbean AI overview scam number"
+   ],
+   "shorts": [
+    "google ai scam number #shorts",
+    "ai overview phone number scam"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-18-A7",
+  "episode": "11-18",
+  "segment_title": "THE AIRLINE SCAM THAT CAN STRAND YOU",
+  "script_text": "THEY PAID FOR 14 TICKETS, THE AIRLINE HAD ONLY 3. Fake third-party booking sites; The Villages couple $11,975.63, 14 tickets, 3 issued (WESH 2); Dallas cousins Fly-n-Fare $2,500 tickets flagged by Frontier (FOX 4 Sept 2025); Goshen IN grandfather $400 flight specials site (WRTV June 2026).",
+  "orientation": "horizontal",
+  "clip_role": "victim_interview",
+  "news_anchor": "fake third-party booking site tickets not issued airline",
+  "visual_spec": "family on camera with local reporter: booked through a cheap site, tickets turned out fake",
+  "platforms": [
+   "youtube",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 2,
+  "expected_segments": 2,
+  "sourcability": "high",
+  "sourcability_note": "FOX 4 and WRTV page videos",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "fake booking site plane tickets scam family",
+    "Fly-n-Fare tickets fraud",
+    "third party airline booking scam BBB"
+   ],
+   "victim": [
+    "we got to the airport and our tickets were fake",
+    "the airline said we didn't have a ticket"
+   ],
+   "platform": [
+    "fake flight booking website scam",
+    "cheap flight website scam"
+   ],
+   "anchor": [
+    "FOX 4 Fly-n-Fare BBB $2,500",
+    "WESH Villages couple travel site scam 14 tickets",
+    "WRTV grandfather travel scam flight specials"
+   ],
+   "shorts": [
+    "fake flight booking site scam #shorts"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-18-A8",
+  "episode": "11-18",
+  "segment_title": "THE AIRLINE SCAM THAT CAN STRAND YOU",
+  "script_text": "THIEVES ARE WORKING THE BAGGAGE CAROUSEL. Miami International Airport; two men accused of stealing $27,205 in luggage from carousels; surveillance; WPLG Local 10 July 31 2026 (Ls4epgcpeIg).",
+  "orientation": "horizontal",
+  "clip_role": "evidence",
+  "news_anchor": "Pair accused of stealing more than $27K worth of luggage at MIA",
+  "visual_spec": "surveillance of men taking bags off the carousel",
+  "platforms": [
+   "youtube"
+  ],
+  "offsite_likely": false,
+  "priority": 2,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "WPLG upload confirmed (25K, Aug 1 2026)",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "luggage thieves Miami airport baggage claim arrested",
+    "baggage carousel theft caught on camera airport"
+   ],
+   "victim": [
+    "someone took my bag off the carousel"
+   ],
+   "platform": [
+    "airport luggage thief caught on camera"
+   ],
+   "anchor": [
+    "Pair accused of stealing more than $27K worth of luggage at MIA"
+   ],
+   "shorts": [
+    "baggage claim thief caught #shorts"
+   ]
+  }
+ },
+ {
+  "beat_id": "11-18-A9",
+  "episode": "11-18",
+  "segment_title": "THE AIRLINE SCAM THAT CAN STRAND YOU",
+  "script_text": "HERE'S HOW TO PROTECT YOURSELF: make sure your ticket is real; book direct; pay by credit card. BBB warns about third-party booking sites, Local 3 News Nov 9 2026, BBB president Michele Mason; KPRC Nov 10 2026 Leah Napoliello BBB Greater Houston.",
+  "orientation": "horizontal",
+  "clip_role": "authority_report",
+  "news_anchor": "BBB warns travelers third-party booking sites holiday",
+  "visual_spec": "BBB official advising travelers to book direct and pay with a credit card",
+  "platforms": [
+   "youtube",
+   "news_web"
+  ],
+  "offsite_likely": true,
+  "priority": 3,
+  "expected_segments": 1,
+  "sourcability": "high",
+  "sourcability_note": "Local 3 0:40 site video; KPRC",
+  "source_native": "none",
+  "queries": {
+   "news": [
+    "BBB warns travelers third-party booking sites",
+    "fake airline booking sites holiday travel BBB",
+    "how to avoid fake airline booking sites"
+   ],
+   "victim": [],
+   "platform": [
+    "book flights directly with airline tip"
+   ],
+   "anchor": [
+    "BBB warns travelers about third-party booking sites ahead of holiday season",
+    "holiday travel scams fake airline booking sites KPRC"
+   ],
+   "shorts": [
+    "fake booking site warning #shorts"
+   ]
+  }
+ }
+]

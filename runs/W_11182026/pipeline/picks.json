@@ -1,0 +1,369 @@
+[
+ {
+  "beat_id": "11-18-A2",
+  "pass": 2,
+  "flagged": "https://www.wowt.com/2026/06/04/omaha-family-loses-7k-airline-scam/",
+  "platform": "news_web",
+  "title": "Alleged scam uses phony number for airline (WOWT)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.wowt.com/2026/06/04/omaha-family-loses-7k-airline-scam/",
+    "source_type": "affiliate",
+    "score": 86,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:21",
+      "out": "0:43",
+      "outcue": "I was totally panicking"
+     },
+     {
+      "in": "0:48",
+      "out": "1:13",
+      "outcue": "keep on repeating the same story"
+     },
+     {
+      "in": "1:20",
+      "out": "1:31",
+      "outcue": "a situation to walk away from"
+     }
+    ],
+    "reasoning": "The family's own words on the standby call, the Google search, $7,000, plus a BBB bite that is the red flag.",
+    "flags": [
+     "whisper base.en on the site video; WOWT says they thought it was Delta",
+     "outcome pending: credit card fraud report filed"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=BwmVMm4M2X0",
+    "source_type": "affiliate",
+    "score": 55,
+    "reason": "KTLA Consumer Confidential, 21 min long-form, no captions reached, case not confirmed"
+   }
+  ],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 2
+ },
+ {
+  "beat_id": "11-18-A3",
+  "pass": 2,
+  "flagged": "https://www.abc15.com/news/let-abc15-know/phoenix-woman-scammed-by-american-airlines-imposter-after-flight-cancellation-heres-what-you-should-know",
+  "platform": "news_web",
+  "title": "Phoenix woman scammed by American Airlines imposter after flight cancellation (ABC15)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.abc15.com/news/let-abc15-know/phoenix-woman-scammed-by-american-airlines-imposter-after-flight-cancellation-heres-what-you-should-know",
+    "source_type": "affiliate",
+    "score": 84,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:28",
+      "out": "0:50",
+      "outcue": "repaid very, very soon"
+     },
+     {
+      "in": "0:55",
+      "out": "1:23",
+      "outcue": "to get your refund"
+     },
+     {
+      "in": "1:30",
+      "out": "1:46",
+      "outcue": "pretending to be American Airlines"
+     }
+    ],
+    "reasoning": "Victim on camera; the pay-to-get-a-refund line; the reveal that it was an impostor.",
+    "flags": [
+     "timed on the page's Uplynk stream (asset 73b99639327b4959805039a63a537274), Whisper",
+     "segment 1 blames American Airlines until segment 3's reveal: keep 3 if 1 runs"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 2
+ },
+ {
+  "beat_id": "11-18-A4",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=LG3ZJa_OnOU",
+  "platform": "youtube",
+  "title": "Suburban woman recovers nearly $4K after fake airline support scam (ABC 7 Chicago)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=LG3ZJa_OnOU",
+    "source_type": "affiliate",
+    "score": 85,
+    "tone": 9,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "0:14",
+      "out": "0:31",
+      "outcue": "a non-refundable purchase"
+     },
+     {
+      "in": "1:00",
+      "out": "1:24",
+      "outcue": "He was the one who canceled it"
+     }
+    ],
+    "reasoning": "The victim says the scammer logged in and canceled her real flight; the cut skips her claim that Icelandair's own chat gave the number (airline denies).",
+    "flags": [
+     "cut avoids 0:34-0:59 (her claim about the airline's chat + Icelandair's denial)"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "11-18-A5",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=rHYWE9JfnXQ",
+  "platform": "youtube",
+  "title": "I Got Scammed by a Fake Royal Caribbean Number | AI Search Scam Warning! (The Rivlin Group)",
+  "source_mix": {
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=rHYWE9JfnXQ",
+    "source_type": "first_person",
+    "score": 58,
+    "tone": 7,
+    "authenticity": 9,
+    "quality": 4,
+    "fit": 7,
+    "segments": [
+     {
+      "in": "1:18",
+      "out": "1:38",
+      "outcue": "the AI result came up"
+     },
+     {
+      "in": "2:11",
+      "out": "2:40",
+      "outcue": "It is not their phone number at all"
+     }
+    ],
+    "reasoning": "First person, shows the Google AI answer with the scam number; very low views, green-screen creator video, 2025 case.",
+    "flags": [
+     "low views (~23 at search)",
+     "upload date unconfirmed (bot wall); WaPo dates the case Aug 2025",
+     "scam phone number visible on screen: blur"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=X5NFK1_EpjE",
+    "source_type": "creator_long",
+    "score": 40,
+    "reason": "JJ Cruise, 8:28, long preamble, no victim"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=UsT2Z459gfw",
+    "source_type": "creator_long",
+    "score": 45,
+    "reason": "KurttheCyberGuy 11:52, no captions reached"
+   }
+  ],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "11-18-A6",
+  "pass": 2,
+  "flagged": "https://www.tiktok.com/@jayayers3/video/7703296931115683103",
+  "platform": "tiktok",
+  "title": "Jay Ayers on the fake Frontier refund email",
+  "source_mix": {
+   "first_person": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.tiktok.com/@jayayers3/video/7703296931115683103",
+    "source_type": "first_person",
+    "score": 70,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 6,
+    "fit": 9,
+    "segments": [],
+    "reasoning": "Native post is the pick (manual lane).",
+    "flags": [
+     "TikTok refuses requests from here: manual pull, no timecode",
+     "views ~151K per BroBible Nov 7, 2026, not seen"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "11-18-A7",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=XbEQyTWZFYE",
+  "platform": "youtube",
+  "title": "BBB warns consumers after family's $2,500 travel loss (FOX 4 Dallas-Fort Worth)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=XbEQyTWZFYE",
+    "source_type": "affiliate",
+    "score": 78,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:20",
+      "out": "0:38",
+      "outcue": "were out $2500"
+     },
+     {
+      "in": "0:55",
+      "out": "1:10",
+      "outcue": "forwarding my call to voicemail"
+     }
+    ],
+    "reasoning": "Family on camera: cheap third-party tickets flagged as fraud at Frontier's desk, missed the wedding.",
+    "flags": [
+     "LEGAL: names the booking company ('Flying Fair' / Fly-n-Fare); its non-response (2:19) is outside the cut",
+     "case Sep 2025",
+     "Frontier later refunded the airport tickets (2:09)"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "11-18-A8",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=Ls4epgcpeIg",
+  "platform": "youtube",
+  "title": "Pair accused of stealing more than $27K worth of luggage at MIA (WPLG Local 10)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=Ls4epgcpeIg",
+    "source_type": "affiliate",
+    "score": 76,
+    "tone": 7,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:56",
+      "out": "1:09",
+      "outcue": "quickly leaving in getaway cars"
+     }
+    ],
+    "reasoning": "Surveillance description of the carousel thefts; fresh (Aug 1, 2026).",
+    "flags": [
+     "LEGAL: accused men identified elsewhere in the package; keep 'investigators say'"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=WDOR0oT9PA4",
+    "source_type": "affiliate",
+    "score": 80,
+    "reason": "ABC 10 News San Diego serial luggage thief, ~2.2M views, older victim on camera, upload date unconfirmed: room's call"
+   }
+  ],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "11-18-A9",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=LG3ZJa_OnOU",
+  "platform": "youtube",
+  "title": "Suburban woman recovers nearly $4K after fake airline support scam (ABC 7 Chicago)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=LG3ZJa_OnOU",
+    "source_type": "affiliate",
+    "score": 74,
+    "tone": 7,
+    "authenticity": 9,
+    "quality": 8,
+    "fit": 9,
+    "segments": [
+     {
+      "in": "3:27",
+      "out": "3:50",
+      "outcue": "your hotel credit card"
+     }
+    ],
+    "reasoning": "Reporter's tip: get real numbers through your app or the number on the back of your card (step 1).",
+    "flags": [
+     "SWAP: BBB clip (Local 3) not reachable; this proves step 1 instead"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 1
+ }
+]

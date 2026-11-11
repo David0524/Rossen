@@ -1,0 +1,135 @@
+[
+ {
+  "beat_id": "11-18-A2",
+  "url": "https://www.wowt.com/2026/06/04/omaha-family-loses-7k-airline-scam/",
+  "platform": "news_web",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:21",
+    "out": "0:43",
+    "outcue": "I was totally panicking"
+   },
+   {
+    "in": "0:48",
+    "out": "1:13",
+    "outcue": "keep on repeating the same story"
+   },
+   {
+    "in": "1:20",
+    "out": "1:31",
+    "outcue": "a situation to walk away from"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-18-A3",
+  "url": "https://www.abc15.com/news/let-abc15-know/phoenix-woman-scammed-by-american-airlines-imposter-after-flight-cancellation-heres-what-you-should-know",
+  "platform": "news_web",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:28",
+    "out": "0:50",
+    "outcue": "repaid very, very soon"
+   },
+   {
+    "in": "0:55",
+    "out": "1:23",
+    "outcue": "to get your refund"
+   },
+   {
+    "in": "1:30",
+    "out": "1:46",
+    "outcue": "pretending to be American Airlines"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-18-A4",
+  "url": "https://www.youtube.com/watch?v=LG3ZJa_OnOU",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:14",
+    "out": "0:31",
+    "outcue": "a non-refundable purchase"
+   },
+   {
+    "in": "1:00",
+    "out": "1:24",
+    "outcue": "He was the one who canceled it"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-18-A5",
+  "url": "https://www.youtube.com/watch?v=rHYWE9JfnXQ",
+  "platform": "youtube",
+  "source_type": "first_person",
+  "segments": [
+   {
+    "in": "1:18",
+    "out": "1:38",
+    "outcue": "the AI result came up"
+   },
+   {
+    "in": "2:11",
+    "out": "2:40",
+    "outcue": "It is not their phone number at all"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-18-A6",
+  "url": "https://www.tiktok.com/@jayayers3/video/7703296931115683103",
+  "platform": "tiktok",
+  "source_type": "first_person",
+  "segments": []
+ },
+ {
+  "beat_id": "11-18-A7",
+  "url": "https://www.youtube.com/watch?v=XbEQyTWZFYE",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:20",
+    "out": "0:38",
+    "outcue": "were out $2500"
+   },
+   {
+    "in": "0:55",
+    "out": "1:10",
+    "outcue": "forwarding my call to voicemail"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-18-A8",
+  "url": "https://www.youtube.com/watch?v=Ls4epgcpeIg",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:56",
+    "out": "1:09",
+    "outcue": "quickly leaving in getaway cars"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-18-A9",
+  "url": "https://www.youtube.com/watch?v=LG3ZJa_OnOU",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "3:27",
+    "out": "3:50",
+    "outcue": "your hotel credit card"
+   }
+  ]
+ }
+]

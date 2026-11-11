@@ -117,3 +117,20 @@ Brave news_web leg was decisive: b02/b01/b04/b05/b06 exact cases surfaced only t
 
 
 **Revision 10/14 (producer):** B reworked to rental cars in general. Added 10-21-B1 (authority_report/victim, H) PICK, producer-supplied link: CBS Evening News 0ANywiehCCA 0:19–1:03 "that I didn't even detect" BUTT 1:35–1:50 "showed no billable damage" BUTT 2:23–2:28 "waved the $350" (Hertz AI scanner, Aug 2025). KSL picks renumbered B2/B3. Lesson: a peer-to-peer app (Turo) reads as niche for a 55+ audience; lead a rental story with a legacy company.
+
+## Run W_11182026 (A only: airline and travel scams; run 11/11/2026)
+
+| beat | role | sourcability | outcome | note |
+|---|---|---|---|---|
+| 11-18-A2 | victim_interview | H | PICK · UNVERIFIED | WOWT site video (ArcPublishing) 0:21–0:43 "I was totally panicking" BUTT 0:48–1:13 BUTT 1:20–1:31; Whisper rung 2; site metadata said 28:56, real 2:54 |
+| 11-18-A3 | victim_interview | H | PICK · UNVERIFIED | ABC15 page video via its Uplynk asset (poster URL gave the asset id) 0:28–0:50 BUTT 0:55–1:23 BUTT 1:30–1:46; LEGAL (keep the impostor reveal) |
+| 11-18-A4 | victim_interview | H | PICK | ABC 7 Chicago LG3ZJa_OnOU 0:14–0:31 BUTT 1:00–1:24 "he was the one who canceled it"; LEGAL (cut skips her claim vs. Icelandair's denial) |
+| 11-18-A5 | authority_report | commentary_only | WEAK | Rivlin Group rHYWE9JfnXQ 1:18–1:38 BUTT 2:11–2:40; no news package on AI-answer scam numbers found; demo carries the beat |
+| 11-18-A6 | first_person | H | MANUAL | TikTok @jayayers3 7703296931115683103 (URL from BroBible); TikTok refuses requests |
+| 11-18-A7 | victim_interview | H | PICK | FOX 4 XbEQyTWZFYE 0:20–0:38 BUTT 0:55–1:10; case swapped from the print-only Florida couple; LEGAL |
+| 11-18-A8 | evidence | H | PICK | WPLG Ls4epgcpeIg 0:56–1:09; LEGAL (accused); alt ABC 10 WDOR0oT9PA4 ~2.2M, date unconfirmed |
+| 11-18-A9 | authority_report | H | PICK | planned BBB (Local 3) site video unreachable; ABC 7 Chicago LG3ZJa_OnOU 3:27–3:50 tip instead |
+
+**Yield:** 6 PICK (2 UNVERIFIED) / 1 WEAK / 1 MANUAL of 8.
+**Pattern:** news-site players carried the run again: WOWT (ArcPublishing) and ABC15 (Uplynk asset id from the page's poster image) Whispered cleanly when YouTube was walled. Scripps/ABC15 pages report "Unsupported URL"; look for an uplynk.com poster and try content.uplynk.com/<asset>.m3u8.
+**Process note:** captions bot-walled at 16:44 and again at ~17:25; a retry at ~17:35 got 5 of 8. Brave search worked throughout and found the YouTube copies of two site videos.
