@@ -1,8 +1,8 @@
 [
  {
   "beat_id": "11-18-A2",
-  "url": "https://www.wowt.com/2026/06/04/omaha-family-loses-7k-airline-scam/",
-  "platform": "news_web",
+  "url": "https://www.youtube.com/watch?v=1mDM5IJySmk",
+  "platform": "youtube",
   "source_type": "affiliate",
   "segments": [
    {
@@ -20,7 +20,8 @@
     "out": "1:31",
     "outcue": "a situation to walk away from"
    }
-  ]
+  ],
+  "site_copy": "https://www.wowt.com/2026/06/04/omaha-family-loses-7k-airline-scam/"
  },
  {
   "beat_id": "11-18-A3",

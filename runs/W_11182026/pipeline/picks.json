@@ -2,16 +2,16 @@
  {
   "beat_id": "11-18-A2",
   "pass": 2,
-  "flagged": "https://www.wowt.com/2026/06/04/omaha-family-loses-7k-airline-scam/",
-  "platform": "news_web",
-  "title": "Alleged scam uses phony number for airline (WOWT)",
+  "flagged": "https://www.youtube.com/watch?v=1mDM5IJySmk",
+  "platform": "youtube",
+  "title": "Alleged scam uses phony number for airline (First Alert 6 / WOWT)",
   "source_mix": {
    "affiliate": 1
   },
   "diversity_floor_applied": false,
   "ranked": [
    {
-    "url": "https://www.wowt.com/2026/06/04/omaha-family-loses-7k-airline-scam/",
+    "url": "https://www.youtube.com/watch?v=1mDM5IJySmk",
     "source_type": "affiliate",
     "score": 86,
     "tone": 9,
@@ -38,7 +38,8 @@
     "reasoning": "The family's own words on the standby call, the Google search, $7,000, plus a BBB bite that is the red flag.",
     "flags": [
      "whisper base.en on the site video; WOWT says they thought it was Delta",
-     "outcome pending: credit card fraud report filed"
+     "outcome pending: credit card fraud report filed",
+     "timed on the WOWT site copy (same 2:54 package); YouTube captions blocked"
     ]
    }
   ],

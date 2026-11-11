@@ -37,10 +37,10 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 - So they searched for the airline's customer service number on their phone and called it.
 - The agent said all four tickets were on standby, and there was a way to fix it right away. So what did it cost them?
 
-**CLIP 1 (HORIZONTAL):** [WOWT 6 News — Omaha family loses $7K to airline scam](https://www.wowt.com/2026/06/04/omaha-family-loses-7k-airline-scam/) · Jun 4, 2026 · 2:54
+**CLIP 1 (HORIZONTAL):** [First Alert 6 (WOWT) — Alleged scam uses phony number for airline](https://www.youtube.com/watch?v=1mDM5IJySmk) · Jun 4, 2026 · 2:54
   - **0:21–0:43 ("I WAS TOTALLY PANICKING") // BUTT 0:48–1:13 ("KEEP ON REPEATING THE SAME STORY") // BUTT 1:20–1:31 ("A SITUATION TO WALK AWAY FROM")**
   - *Soundbite: "A relaxing week in Cancun ended with shaken nerves… when she tried to check in the family for the return flight. 'He said like, hey, you're all four tickets are in standby… the moment I heard that word standby, you know, I was totally panicking.'" // "…you googled the number, thinking it was Delta, but that turned out to be scammers. And they wanted $7,000 to rebook the tickets, which the couple paid, but had been promised to refund. 'Every 14 days we used to call and they… keep on repeating the same story…'" // "If somebody says your confirmed reservation is suddenly on standby and you need to pay right now to fix it, that is not how airlines work, and that is a situation to walk away from."*
-  - ⚠️ UNVERIFIED: timed from a Whisper transcript of WOWT's site video (no captions exist); the editor confirms the outcues on the pull.
+  - ⚠️ UNVERIFIED: timed from a Whisper transcript of WOWT's site copy of the same 2:54 package (YouTube captions were blocked); the editor confirms the outcues on the YouTube copy.
 
 - **Out:** Seven thousand dollars, to a man who never worked for the airline. And once they have you, they don't let go.
 - **Red flag:** "your confirmed seat is suddenly on standby, pay now to fix it." That's not how airlines work. Hang up.
@@ -198,7 +198,7 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 | Beat | Clip | Who | Tag | Status | Adds | Search specifics |
 |---|---|---|---|---|---|---|
 | A1 | — | You (the viewer) | JEFF | — | — | — |
-| A2 | 1 | Anitha (surname withheld) and family, Omaha NE, in Cancun (Jun 2026) | FIND · HORIZONTAL | PICK · UNVERIFIED | evidence: the real loss | WOWT Jun 4, 2026, Mike McKnight; "all your four tickets are on standby"; googled the number thinking it was Delta; $7,000; credit-card fraud report filed; Donna Dutcher, Celebrate Travel; IBTimes UK Jun 5, 2026 |
+| A2 | 1 | Anitha (surname withheld) and family, Omaha NE, in Cancun (Jun 2026) | FIND · HORIZONTAL | PICK · UNVERIFIED | evidence: the real loss | WOWT Jun 4, 2026, Mike McKnight; YouTube 1mDM5IJySmk (First Alert 6); "all your four tickets are on standby"; googled the number thinking it was Delta; $7,000; credit-card fraud report filed; Donna Dutcher, Celebrate Travel; IBTimes UK Jun 5, 2026 |
 | A3 | 2 | Phoenix woman who goes by Cher (Sep 2025) | HAVE · HORIZONTAL | PICK · LEGAL · UNVERIFIED | stakes: they come back for more | ABC15 Let ABC15 Know, investigator Christel Bell; Uplynk asset 73b99639327b4959805039a63a537274; American Airlines impostor; $1,010 to rebook, then $1,010 to get a $2,020 refund; disputing with her bank |
 | A4 | 3 | Joanna Moroz Domino, River Forest IL (Jul 2026) | FIND · HORIZONTAL | PICK · LEGAL | development: they take the trip itself | ABC 7 Chicago, Jason Knowles and Rob Elgas, Jul 23, 2026; YouTube LG3ZJa_OnOU (captions); Icelandair; ~$4,000 "flexible" upgrade; real reservation canceled; AmEx refunded $4,000; ~$2,000 lost |
 | A5 | 4 | Alex Rivlin, Las Vegas NV (Aug 2025); Marcia Hannon, Boston MA (Jul 2026) | FIND · HORIZONTAL | WEAK | development: the search engine's answer sends you there | The Rivlin Group YouTube rHYWE9JfnXQ (captions); Royal Caribbean shuttle; Google AI answer; Washington Post Aug 15, 2025; The Points Guy, Michelle Couch-Friedman, Oct 27, 2026; The Villages FL, City of Freeport TX |
@@ -231,7 +231,7 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 
 ## Gaps
 
-- ⚠️ A2 timed on a Whisper transcript of WOWT's site video; no captions exist. Confirm the outcues on the pull.
+- ⚠️ A2 timed on a Whisper transcript of WOWT's site copy, the same 2:54 package as the linked YouTube upload (1mDM5IJySmk); YouTube captions were blocked. Confirm the outcues on the YouTube copy.
 - ⚠️ A3 Phoenix is September 2025 (the cancellation): date in a Jeff note. Timed on a Whisper transcript of the page's video stream.
 - ⚠️ A4 and A9 are timed on the YouTube copy's captions (LG3ZJa_OnOU, 4:14); ABC7's site copy runs one second shorter.
 - ⚠️ A5 Rivlin is August 2025: date in a Jeff note. Upload date unconfirmed (YouTube blocked the lookup).
