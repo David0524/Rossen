@@ -35,3 +35,25 @@ Round 1 landed: the "saying no isn't enough" turn, the attributed Lynnwood runwa
 7. **The demo cue needs the tracker type.** The phone alerts only fire for AirTag-type Bluetooth trackers, the exact limit line 258 states. Tell production the demo has to use one of those, or the Android half won't alert on camera.
 
 Save as `draft_v3.md` (leave v2 untouched), re-run the checker, update `sources.md` if a claim changes.
+
+## Review loop round 1 fixes (sent to the writer as notes)
+
+The reviewer found 2 BLOCKERs, both errors in the director's packet:
+
+1. **San Jose: arrests were made (BLOCKER, CONTRADICTED).** NBC Bay Area updated the couple's story on Aug 24, 2026: "San Jose police on Monday confirmed arrests have been made in connection to the case." Its Aug 26 story has three people detained over strong-armed jewelry robberies of elderly people on the same block of Almaden Expressway. They're arrested, not charged or convicted. Fix the JEFF note on line 50 to match. The copy may now say police say they made arrests, as long as it's attributed and nothing is proven. Whether to use that as a beat after clip 1 is your call. It must not undercut the "saying no isn't enough" point. One of the three arrested has the same name as the woman in the Lynnwood case. Put that in a JEFF note only: never say on air that it's the same person.
+2. **Renton: not everyone pleaded not guilty (BLOCKER).** Two pleaded not guilty at arraignment; one didn't appear (bench warrant); no plea is reported for the fourth. Line 87 says it of the whole group, and the note on line 70 says "all." Change both to what's true: the group is charged, not convicted.
+
+I'm also fixing three things the reviewer listed as warnings. They're timecode and legal-status errors in the packet, not taste:
+
+3. **Lynnwood status (line 118).** The only report is that both were booked on suspicion of first-degree robbery; no formal charges are reported. Say arrested, not convicted, and fix the note.
+4. **Clip timecodes, corrected against the captions:**
+   - Open package: 1:21 - 1:28, so it ends after "removing his chain".
+   - Clip 1, segment 2: in at 1:15, so it starts on "The couple says".
+   - Clip 2: out at 3:44, before "Prosecutors charged".
+   - Clip 3: out 1 stays 5:48, but cut before the first name; put that in the source line. Out 2 is 6:00, before "She's free on bail".
+   - Clip 5: out 2 is 1:04, cut right after "people".
+   - Clip 7: 0:46 - 1:42, starting on "I was riding home" and ending after "to law enforcement".
+
+   The outcues don't change.
+
+Everything else passes through to the producer as notes.
