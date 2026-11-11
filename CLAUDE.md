@@ -15,6 +15,8 @@ Exception (producer, 10/7/2026): when the producer has converted a deliverable t
 | 4. Bible | rossen-script-writer | `F1 Fri 10/16 -- <Working Title>` (+ ` -- DRAFT` on a draft) and `F1 Fri 10/16 -- <Working Title> -- SOURCE LOG` |
 | 5. Bible review | rossen-bible-final-reviewer | Review, annotated bible, source log (.docx) |
 
+**Google Doc tables (producer, 11/11/2026): every Google Doc we build or edit gets its table columns sized so each table is as short as possible.** Never leave Docs' even columns. After the upload (or any table edit): `python3 tools/fit_columns.py <source.md>` for the widths in PT, `read_doc` to find each table's `startIndex` and the text width (`python3 tools/doc_tables.py <saved read_doc json>`), then one `update_doc` with `updateTableColumnProperties` (`widthType: FIXED_WIDTH`) per column, guarded by revisionId. Pass `--width` if the Doc's text width isn't 468pt.
+
 **Standard titles (producer, 10/14/2026):** `Prebible F1 10/16`, `Outline F1 10/16`, `F1 Fri 10/16 -- <Working Title>` (F2 = the Wednesday show: `F2 Wed 10/21 -- …`). Drive/Doc names keep the slash; local file names write it as `_` (`Outline F1 10_16.docx`). A pre-bible covering two shows: `Prebible F1 10/16 + F2 10/21`.
 
 Reference if Drive is requested: `!Shows` folder id `1uwPmH5sTUldGiUkgILvmr2vu6Opavr5H`; show folders are named
