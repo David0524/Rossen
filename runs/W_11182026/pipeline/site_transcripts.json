@@ -571,5 +571,136 @@
     "text": "Just look for this story on abc15.com."
    }
   ]
+ },
+ "fox6_hotel": {
+  "url": "https://www.fox6now.com/video/fmc-4t0zw4k2xzqznuwp",
+  "duration": "95.881313",
+  "cues": [
+   {
+    "start": 0.0,
+    "end": 6.24,
+    "text": "If you're planning a last minute getaway this summer and you should, state officials want"
+   },
+   {
+    "start": 6.24,
+    "end": 11.28,
+    "text": "you to learn from one person's bad experience after booking a hotel online."
+   },
+   {
+    "start": 11.28,
+    "end": 15.16,
+    "text": "Jenna Sacks has this context six alert."
+   },
+   {
+    "start": 15.16,
+    "end": 20.12,
+    "text": "You book a hotel room for a family reunion, then find out the room was never reserved."
+   },
+   {
+    "start": 20.12,
+    "end": 22.2,
+    "text": "It happened to one Wisconsin family."
+   },
+   {
+    "start": 22.2,
+    "end": 24.2,
+    "text": "State officials explain why."
+   },
+   {
+    "start": 24.2,
+    "end": 28.68,
+    "text": "They found out that when they got there, they hadn't really booked through the hotel."
+   },
+   {
+    "start": 28.68,
+    "end": 32.48,
+    "text": "They had been directed through a fake imposter website."
+   },
+   {
+    "start": 32.48,
+    "end": 36.0,
+    "text": "The family not only lost their money, they had no place to stay."
+   },
+   {
+    "start": 36.0,
+    "end": 40.36,
+    "text": "So they used another website to book a new room and ran into more trouble."
+   },
+   {
+    "start": 40.36,
+    "end": 46.76,
+    "text": "A box had been pre-checked for them for a refund protection program that they had to"
+   },
+   {
+    "start": 46.76,
+    "end": 48.56,
+    "text": "pay $200 for."
+   },
+   {
+    "start": 48.56,
+    "end": 53.44,
+    "text": "So now they lost another $200 because they didn't unclick a box."
+   },
+   {
+    "start": 53.44,
+    "end": 55.32,
+    "text": "There are a couple of big lessons here."
+   },
+   {
+    "start": 55.32,
+    "end": 58.64,
+    "text": "First, don't click on any links and ads on social media."
+   },
+   {
+    "start": 58.64,
+    "end": 61.08,
+    "text": "They could lead to copycat websites."
+   },
+   {
+    "start": 61.08,
+    "end": 66.4,
+    "text": "Type in that web address all on your own or call the hotel directly and make sure you're"
+   },
+   {
+    "start": 66.4,
+    "end": 68.96,
+    "text": "actually talking to the front desk."
+   },
+   {
+    "start": 68.96,
+    "end": 74.44,
+    "text": "Second, pay attention to the total charge at checkout and any pre-checked boxes."
+   },
+   {
+    "start": 74.44,
+    "end": 78.4,
+    "text": "Is there an extra program that you've signed up for that you don't want to be part of?"
+   },
+   {
+    "start": 78.4,
+    "end": 84.04,
+    "text": "Remember that the first search result for a hotel is not always the correct one."
+   },
+   {
+    "start": 84.04,
+    "end": 89.84,
+    "text": "Others will sometimes add words to a web address or swap a .com for a .net."
+   },
+   {
+    "start": 89.84,
+    "end": 92.56,
+    "text": "So the address looks correct at a glance."
+   },
+   {
+    "start": 92.56,
+    "end": 94.0,
+    "text": "I'm Jenna Sacks."
+   },
+   {
+    "start": 94.0,
+    "end": 94.92,
+    "text": "Contact 6."
+   }
+  ]
  }
 }
