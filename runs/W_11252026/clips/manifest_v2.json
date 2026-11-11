@@ -1,0 +1,112 @@
+[
+ {
+  "beat_id": "11-25-A2",
+  "url": "https://www.youtube.com/watch?v=qR0sQsMqBJc",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:29",
+    "out": "0:55",
+    "outcue": "we have to help the elderly"
+   },
+   {
+    "in": "1:16",
+    "out": "1:54",
+    "outcue": "temporarily blocked them from leaving"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-25-A3",
+  "url": "https://www.youtube.com/watch?v=X_pAsqSPpgY",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "1:32",
+    "out": "2:14",
+    "outcue": "pilots in U.S. history"
+   },
+   {
+    "in": "3:23",
+    "out": "3:45",
+    "outcue": "That belonged to my brother"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-25-A4",
+  "url": "https://www.youtube.com/watch?v=X_pAsqSPpgY",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "5:36",
+    "out": "5:48",
+    "outcue": "broke a vertebrae"
+   },
+   {
+    "in": "5:52",
+    "out": "6:00",
+    "outcue": "cash money they seized as"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-25-A5",
+  "url": "https://www.nbcbayarea.com/video/news/local/woman-robbed-costco-parking-lot-vallejo/3936466/",
+  "platform": "news_web",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:00",
+    "out": "0:27",
+    "outcue": "about an hour later"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-25-A6",
+  "url": "https://www.youtube.com/watch?v=XgkNrTUgYgU",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:19",
+    "out": "0:38",
+    "outcue": "spent $1,500 on"
+   },
+   {
+    "in": "0:59",
+    "out": "1:05",
+    "outcue": "older more"
+   }
+  ]
+ },
+ {
+  "beat_id": "11-25-A7",
+  "url": "https://www.youtube.com/watch?v=kUy077XD5To",
+  "platform": "youtube",
+  "source_type": "affiliate",
+  "segments": []
+ },
+ {
+  "beat_id": "11-25-A8",
+  "url": "https://www.wtvm.com/2025/09/15/tracker-found-underneath-womans-car-auburn/",
+  "platform": "news_web",
+  "source_type": "affiliate",
+  "segments": [
+   {
+    "in": "0:47",
+    "out": "1:20",
+    "outcue": "all over from where I went"
+   },
+   {
+    "in": "1:20",
+    "out": "1:41",
+    "outcue": "report it to law enforcement"
+   }
+  ]
+ }
+]

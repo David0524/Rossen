@@ -24,3 +24,8 @@ Outline open calls (11/11):
 - [ ] A2: NBC's video predates any arrests; don't say they were caught
 - [ ] Book Jim Stickley for the tracker demo (Fri 11/20)
 - [ ] Ask Costco for comment; watch the old "3 Costco SCAMS" video
+
+Outline V2 (producer, 11/11: 3-4 scams in more depth, not all Costco): `Outline F2 11_25 V2.docx` (source `outline_v2.md`; picks `pipeline/picks_v2.json`; manifest `clips/manifest_v2.json`), Google Doc [Outline F2 11/25 V2](https://docs.google.com/document/d/1jFTJLN6AbxGrutnQAT01j3ccbzQkp4alMBqvD0wCb9g/edit) in the 11/25 folder (columns fitted, render checked). V1 files and Doc kept as they were.
+Four scams: necklace swap (A2-A4, adds the Lynnwood H-Mart violence + $40K socks from FOX 13), purse grab + cards drained (A5-A6), car won't start (A7), tracker (A8). Fake gold cut.
+- [ ] V2 A7 still THROTTLED (ABC4 captions blocked 3x); TikTok manual alternate
+- [ ] V2 A4 reuses the FOX 13 package; KCRA rnZwK4JOuL8 is the alternate once captions come through

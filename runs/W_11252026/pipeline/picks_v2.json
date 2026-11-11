@@ -1,0 +1,294 @@
+[
+ {
+  "beat_id": "11-25-A2",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=qR0sQsMqBJc",
+  "platform": "youtube",
+  "title": "Elderly San Jose couple robbed of treasured heirloom (NBC Bay Area)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=qR0sQsMqBJc",
+    "source_type": "affiliate",
+    "score": 88,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:29",
+      "out": "0:55",
+      "outcue": "we have to help the elderly"
+     },
+     {
+      "in": "1:16",
+      "out": "1:54",
+      "outcue": "temporarily blocked them from leaving"
+     }
+    ],
+    "reasoning": "Elderly San Jose couple robbed of treasured heirloom (NBC Bay Area)",
+    "flags": []
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "11-25-A3",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=X_pAsqSPpgY",
+  "platform": "youtube",
+  "title": "Police arrest alleged crime group accused of 'blessing' jewelry thefts (FOX 13 Seattle)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=X_pAsqSPpgY",
+    "source_type": "affiliate",
+    "score": 86,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "1:32",
+      "out": "2:14",
+      "outcue": "pilots in U.S. history"
+     },
+     {
+      "in": "3:23",
+      "out": "3:45",
+      "outcue": "That belonged to my brother"
+     }
+    ],
+    "reasoning": "Police arrest alleged crime group accused of 'blessing' jewelry thefts (FOX 13 Seattle)",
+    "flags": [
+     "LEGAL: accused; not-guilty pleas outside the cut",
+     "nationality named at 0:05-0:40, outside the cut"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "11-25-A4",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=X_pAsqSPpgY",
+  "platform": "youtube",
+  "title": "FOX 13 Seattle blessing thefts (later segment: Lynnwood H-Mart)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=X_pAsqSPpgY",
+    "source_type": "affiliate",
+    "score": 80,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "5:36",
+      "out": "5:48",
+      "outcue": "broke a vertebrae"
+     },
+     {
+      "in": "5:52",
+      "out": "6:00",
+      "outcue": "cash money they seized as"
+     }
+    ],
+    "reasoning": "Same package as A3, later segment: violence and $40,000 socks.",
+    "flags": [
+     "LEGAL: names at 5:48-5:52 skipped"
+    ]
+   }
+  ],
+  "rejected": [
+   {
+    "url": "https://www.youtube.com/watch?v=rnZwK4JOuL8",
+    "source_type": "affiliate",
+    "score": 70,
+    "reason": "KCRA violent jewelry thefts; captions blocked"
+   }
+  ],
+  "cannot_determine": [
+   "what is on screen"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "11-25-A5",
+  "pass": 2,
+  "flagged": "https://www.nbcbayarea.com/video/news/local/woman-robbed-costco-parking-lot-vallejo/3936466/",
+  "platform": "news_web",
+  "title": "Woman robbed in Costco parking lot in Vallejo (NBC Bay Area)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.nbcbayarea.com/video/news/local/woman-robbed-costco-parking-lot-vallejo/3936466/",
+    "source_type": "affiliate",
+    "score": 80,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:00",
+      "out": "0:27",
+      "outcue": "about an hour later"
+     }
+    ],
+    "reasoning": "Woman robbed in Costco parking lot in Vallejo (NBC Bay Area)",
+    "flags": [
+     "LEGAL: minors (unnamed)",
+     "Whisper on site video; no YouTube copy found"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 2
+ },
+ {
+  "beat_id": "11-25-A6",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=XgkNrTUgYgU",
+  "platform": "youtube",
+  "title": "93-year-old Portland man pickpocketed; thieves bought gift cards (KATU)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=XgkNrTUgYgU",
+    "source_type": "affiliate",
+    "score": 82,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:19",
+      "out": "0:38",
+      "outcue": "spent $1,500 on"
+     },
+     {
+      "in": "0:59",
+      "out": "1:05",
+      "outcue": "older more"
+     }
+    ],
+    "reasoning": "93-year-old Portland man pickpocketed; thieves bought gift cards (KATU)",
+    "flags": [
+     "May 2024"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 1
+ },
+ {
+  "beat_id": "11-25-A7",
+  "pass": 2,
+  "flagged": "https://www.youtube.com/watch?v=kUy077XD5To",
+  "platform": "youtube",
+  "title": "SCAM Alert! In Utah County, people are being targeted in parking lots (ABC4 Utah)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.youtube.com/watch?v=kUy077XD5To",
+    "source_type": "affiliate",
+    "score": 55,
+    "tone": 7,
+    "authenticity": 8,
+    "quality": 6,
+    "fit": 7,
+    "segments": [],
+    "reasoning": "THROTTLED: captions blocked twice; manual alternate TikTok @jasnahooke",
+    "flags": [
+     "THROTTLED"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "in-out (no transcript)"
+  ],
+  "transcript_rung": 3
+ },
+ {
+  "beat_id": "11-25-A8",
+  "pass": 2,
+  "flagged": "https://www.wtvm.com/2025/09/15/tracker-found-underneath-womans-car-auburn/",
+  "platform": "news_web",
+  "title": "Tracker found underneath woman's car in Auburn (WTVM)",
+  "source_mix": {
+   "affiliate": 1
+  },
+  "diversity_floor_applied": false,
+  "ranked": [
+   {
+    "url": "https://www.wtvm.com/2025/09/15/tracker-found-underneath-womans-car-auburn/",
+    "source_type": "affiliate",
+    "score": 80,
+    "tone": 8,
+    "authenticity": 9,
+    "quality": 7,
+    "fit": 8,
+    "segments": [
+     {
+      "in": "0:47",
+      "out": "1:20",
+      "outcue": "all over from where I went"
+     },
+     {
+      "in": "1:20",
+      "out": "1:41",
+      "outcue": "report it to law enforcement"
+     }
+    ],
+    "reasoning": "Tracker found underneath woman's car in Auburn (WTVM)",
+    "flags": [
+     "Whisper on site video; site metadata 32:05, real 3:13; no YouTube copy found"
+    ]
+   }
+  ],
+  "rejected": [],
+  "cannot_determine": [
+   "what is on screen (not watched)"
+  ],
+  "transcript_rung": 2
+ }
+]
