@@ -34,3 +34,13 @@ Then re-run check_bible.py, save as sonnet_draft_v3.md, update the source log if
 - Bible: /home/user/Rossen/runs/W_11182026/sonnet-bible/F2 Wed 11_18 -- <Working Title> -- SONNET.docx
 - Source log: /home/user/Rossen/runs/W_11182026/sonnet-bible/F2 Wed 11_18 -- <Working Title> -- SONNET -- SOURCE LOG.docx
 Pick the working title from Kyle's three title options in the outline. Use the synced skill's scripts.
+
+## Round 3 (final check on sonnet_draft_v3.md; no notes sent, three-round stop)
+
+Checker: 0 errors, 6 warnings (clip count, word band, aphorism candidates, nine outside clips, false name hit on ICELANDAIR, demo placement). 1,586 spoken body words, tease 176 by the checker's count (144 spoken), 13 JEFF notes, 1 RED FLAG line. verify_format: house format confirmed.
+
+Still open (not sent back):
+- Texas header "...AND WERE STUCK WITH THE BILL!!" overstates: clip 8 shows them getting some money back (Frontier refunded the airport flights plus vouchers). A header that holds the outcome without asserting the opposite would be safer.
+- Lines after the Google demo are a producer cue until the demo is recorded.
+- Clip 9 (FOX 5) and clip 1 (WOWT) timed on site copies; clip 4 (TikTok) manual.
+- Open decisions in copy: demo lines, clip 9 cut (FOX 5 vs Reid's original), AirTag link. Not in copy: title, demo owner, guest (none booked), the Instagram reel.
