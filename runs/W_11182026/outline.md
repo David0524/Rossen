@@ -14,10 +14,10 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 4. THE FAKE AGENT LOGGED INTO HER ACCOUNT… AND CANCELED HER REAL FLIGHT (clip 3)
 5. //// Break: generic ad lead-in
 6. NOW GOOGLE'S OWN AI CAN HAND YOU THE SCAMMER'S NUMBER (clip 4, demo)
-7. THIS FAKE AIRLINE EMAIL KNOWS YOUR NAME… AND YOUR CONFIRMATION CODE (clip 5)
-8. THE AIRLINE TOLD THIS FAMILY THEIR TICKETS WERE FAKE… AT THE COUNTER (clip 6)
-9. THIEVES ARE WORKING THE BAGGAGE CAROUSEL… AND YOUR BAG IS NEXT (clip 7)
-10. HERE'S HOW TO PROTECT YOURSELF (clip 8)
+7. THIS FAKE AIRLINE EMAIL KNOWS YOUR NAME… AND YOUR CONFIRMATION CODE (clips 5–6)
+8. THE AIRLINE TOLD THIS FAMILY THEIR TICKETS WERE FAKE… AT THE COUNTER (clip 7)
+9. THIEVES ARE WORKING THE BAGGAGE CAROUSEL… AND YOUR BAG IS NEXT (clip 8)
+10. HERE'S HOW TO PROTECT YOURSELF (clip 9)
 11. Close
 
 ## THE TEASE
@@ -112,6 +112,10 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 **CLIP 5 (VERTICAL):** [TikTok @jayayers3 — the fake Frontier refund email](https://www.tiktok.com/@jayayers3/video/7703296931115683103) · Nov 2026 · length unknown
   - ⚠️ MANUAL: TikTok blocks requests from here, so there's no transcript or timecode. Kyle pulls it and picks the slice where he reads the $387.90 refund offer.
 
+
+**CLIP 6 (VERTICAL):** [TikTok @shane.wilson0712 — another fake airline email (producer pick)](https://www.tiktok.com/@shane.wilson0712/video/7703736440391306509) · Nov 2026 · length unknown
+  - ⚠️ MANUAL: producer-supplied (11/11). TikTok blocks requests from here and the post has no public caption, so I haven't seen what it says. Kyle pulls it, picks the slice and confirms it's about an airline email before the bible.
+
 - **Out:** Your real name and your real confirmation code, and it's still a scam. Frontier says it never emails you asking for payment or reservation details.
 - **Red flag:** it knows your trip and asks for your card. Close it, and open the airline's app yourself.
 
@@ -123,7 +127,7 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 - They got to the airport, walked up to the check-in counter, and handed over their confirmation.
 - So what did the airline tell them?
 
-**CLIP 6 (HORIZONTAL):** [FOX 4 Dallas-Fort Worth — BBB warns consumers after family's $2,500 travel loss](https://www.youtube.com/watch?v=XbEQyTWZFYE) · Sep 25, 2025 · 3:32
+**CLIP 7 (HORIZONTAL):** [FOX 4 Dallas-Fort Worth — BBB warns consumers after family's $2,500 travel loss](https://www.youtube.com/watch?v=XbEQyTWZFYE) · Sep 25, 2025 · 3:32
   - **0:20–0:38 ("WERE OUT $2500") // BUTT 0:55–1:10 ("FORWARDING MY CALL TO VOICEMAIL")**
   - *Soundbite: "…two Dallas cousins were trying to attend a family member's wedding in Las Vegas, but after an airline flagged their tickets bought through a company called Flying Fair, they ended up missing the wedding and were out $2500." // "She was like, 'No, these tickets were flagged as fraud. We can't let you guys get on the flight.'… so I started calling Flying Fair and they wouldn't answer. They kept forwarding my call to voicemail."*
   - ⚠️ LEGAL: the clip names the booking company; its silence (no answer to four emails, an F from the BBB) comes later in the package, at 2:19. Jeff says it in the out.
@@ -138,7 +142,7 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 - At Miami's airport, deputies say two men came in from the curb, pulled bags off the carousel and drove away.
 - Investigators say it added up to more than twenty-seven thousand dollars in luggage. So how fast does it happen?
 
-**CLIP 7 (HORIZONTAL):** [WPLG Local 10 — Pair accused of stealing more than $27K worth of luggage at MIA](https://www.youtube.com/watch?v=Ls4epgcpeIg) · Aug 1, 2026 · 2:02
+**CLIP 8 (HORIZONTAL):** [WPLG Local 10 — Pair accused of stealing more than $27K worth of luggage at MIA](https://www.youtube.com/watch?v=Ls4epgcpeIg) · Aug 1, 2026 · 2:02
   - **0:56–1:09 ("QUICKLY LEAVING IN GETAWAY CARS")**
   - *Soundbite: "Investigators say surveillance video shows them in walking into the airport, making a bee line for baggage carousels, grabbing suitcases, and quickly leaving in getaway cars."*
   - ⚠️ LEGAL: the two men are named and shown elsewhere in the package. Keep "investigators say"; these are charges, not convictions.
@@ -153,7 +157,7 @@ When a flight goes wrong, people search for the airline's number, and the "agent
    - Open the airline's app, your confirmation email, or your boarding pass. The real number is right there.
    - Never call a number from a search result, an ad, or an AI answer.
    - Save the real number in your phone today, before you need it. So what do the experts say? Listen.
-   - **CLIP 8 (HORIZONTAL):** [ABC 7 Chicago — Suburban woman recovers nearly $4K after fake airline support scam](https://www.youtube.com/watch?v=LG3ZJa_OnOU) · Jul 23, 2026 · 4:14
+   - **CLIP 9 (HORIZONTAL):** [ABC 7 Chicago — Suburban woman recovers nearly $4K after fake airline support scam](https://www.youtube.com/watch?v=LG3ZJa_OnOU) · Jul 23, 2026 · 4:14
      - **3:27–3:50 ("YOUR HOTEL CREDIT CARD")**
      - *Soundbite: "…can also send you phishing messages claiming that something is wrong with your current travel. They can trick you into sending payment information, so always contact companies directly… get real numbers through your app or by calling the number on the back of your airline credit card or your hotel credit card."*
 2. **NO REAL AIRLINE CHARGES YOU TO FIX ITS OWN PROBLEM**
@@ -191,7 +195,7 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 - **Framing:** a scammer posing as the airline (on the phone, in an email, in a search result, on a booking site) when you're trying to fix or book a trip. A8 is the exception: a thief, not a scam; it sits last, short, ahead of the fix.
 - **Open package:** clip 1, the Omaha mom: "the moment I heard that word standby… I was totally panicking."
 - **Payoff point:** A9 (step 1, the one place to get your airline's number).
-- **Weight:** 100% of show · 8 clips.
+- **Weight:** 100% of show · 9 clips.
 
 ## Beats
 
@@ -202,10 +206,10 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 | A3 | 2 | Phoenix woman who goes by Cher (Sep 2025) | HAVE · HORIZONTAL | PICK · LEGAL · UNVERIFIED | stakes: they come back for more | ABC15 Let ABC15 Know, investigator Christel Bell; Uplynk asset 73b99639327b4959805039a63a537274; American Airlines impostor; $1,010 to rebook, then $1,010 to get a $2,020 refund; disputing with her bank |
 | A4 | 3 | Joanna Moroz Domino, River Forest IL (Jul 2026) | FIND · HORIZONTAL | PICK · LEGAL | development: they take the trip itself | ABC 7 Chicago, Jason Knowles and Rob Elgas, Jul 23, 2026; YouTube LG3ZJa_OnOU (captions); Icelandair; ~$4,000 "flexible" upgrade; real reservation canceled; AmEx refunded $4,000; ~$2,000 lost |
 | A5 | 4 | Alex Rivlin, Las Vegas NV (Aug 2025); Marcia Hannon, Boston MA (Jul 2026) | FIND · HORIZONTAL | WEAK | development: the search engine's answer sends you there | The Rivlin Group YouTube rHYWE9JfnXQ (captions); Royal Caribbean shuttle; Google AI answer; Washington Post Aug 15, 2025; The Points Guy, Michelle Couch-Friedman, Oct 27, 2026; The Villages FL, City of Freeport TX |
-| A6 | 5 | Jay Ayers (@jayayers3), a Frontier passenger (Nov 2026) | HAVE · VERTICAL | MANUAL · UNVERIFIED | development: they write to you with your real booking | tiktok.com/@jayayers3/video/7703296931115683103; ~151K per BroBible Nov 7, 2026; fake $387.90 refund; sender noreply@reviewpro.com; Frontier statement Nov 2, 2026 |
-| A7 | 6 | Shamira James and Tamara Burton, cousins, Dallas TX (Sep 2025) | FIND · HORIZONTAL | PICK · LEGAL | stakes: the ticket you bought yourself isn't real | FOX 4 Sep 25, 2025, Lori Brown; YouTube XbEQyTWZFYE (captions); "Flying Fair" / Fly-n-Fare; $625 one-way; Frontier flagged the tickets; missed the wedding; $2,500; BBB F rating, Monica Horton; Frontier later refunded |
-| A8 | 7 | Two men accused of the thefts, Miami International Airport (Jul 2026) | HAVE · HORIZONTAL | PICK · LEGAL | stakes: they're waiting after you land | WPLG Local 10, Eric Mabon, Aug 1, 2026 (~25K views); YouTube Ls4epgcpeIg (captions); Miami-Dade Sheriff's Office; $27,205; felony grand theft |
-| A9 | 8 | You (the viewer); ABC 7 Chicago consumer reporter (Jul 2026) | FIND · HORIZONTAL | PICK | evidence: get the number from the app | YouTube LG3ZJa_OnOU 3:27–3:50; the planned BBB clip (Local 3, Nov 9, 2026) has no reachable video |
+| A6 | 5, 6 | Jay Ayers (@jayayers3), a Frontier passenger (Nov 2026); @shane.wilson0712, unidentified poster (Nov 2026) | HAVE · VERTICAL | MANUAL · UNVERIFIED | development: they write to you with your real booking | tiktok.com/@jayayers3/video/7703296931115683103; clip 6 tiktok.com/@shane.wilson0712/video/7703736440391306509 (producer, 11/11; content unseen); ~151K per BroBible Nov 7, 2026; fake $387.90 refund; sender noreply@reviewpro.com; Frontier statement Nov 2, 2026 |
+| A7 | 7 | Shamira James and Tamara Burton, cousins, Dallas TX (Sep 2025) | FIND · HORIZONTAL | PICK · LEGAL | stakes: the ticket you bought yourself isn't real | FOX 4 Sep 25, 2025, Lori Brown; YouTube XbEQyTWZFYE (captions); "Flying Fair" / Fly-n-Fare; $625 one-way; Frontier flagged the tickets; missed the wedding; $2,500; BBB F rating, Monica Horton; Frontier later refunded |
+| A8 | 8 | Two men accused of the thefts, Miami International Airport (Jul 2026) | HAVE · HORIZONTAL | PICK · LEGAL | stakes: they're waiting after you land | WPLG Local 10, Eric Mabon, Aug 1, 2026 (~25K views); YouTube Ls4epgcpeIg (captions); Miami-Dade Sheriff's Office; $27,205; felony grand theft |
+| A9 | 9 | You (the viewer); ABC 7 Chicago consumer reporter (Jul 2026) | FIND · HORIZONTAL | PICK | evidence: get the number from the app | YouTube LG3ZJa_OnOU 3:27–3:50; the planned BBB clip (Local 3, Nov 9, 2026) has no reachable video |
 
 ## Jeff should know
 
@@ -221,7 +225,7 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 
 ## The fix: sources
 
-- Step 1: get the number from the app, confirmation email or boarding pass; never from a search or AI answer (ABC 7 Chicago, Jul 23, 2026, clip 8; ABC15: "go directly to a business website to find their contact information"; The Points Guy, Oct 27, 2026). Save it before you leave (BBB and Delta via WOWT, Jun 4, 2026).
+- Step 1: get the number from the app, confirmation email or boarding pass; never from a search or AI answer (ABC 7 Chicago, Jul 23, 2026, clip 9; ABC15: "go directly to a business website to find their contact information"; The Points Guy, Oct 27, 2026). Save it before you leave (BBB and Delta via WOWT, Jun 4, 2026).
 - Step 2: you're owed a full refund when the airline cancels; never pay to get one (ABC15, citing federal rules; ⚠️ load the DOT page, transportation.gov/airconsumer, before air).
 - Step 3: Frontier won't email asking you to revalidate a flight, re-enter a card, pay for a refund or confirm billing ([flyfrontier.com/phishing-awareness](https://www.flyfrontier.com/phishing-awareness/); ABC7 KGO, Nov 11, 2026).
 - Step 4: check the confirmation code in the airline's app or site within a day (Delta via ANF, Aug 11, 2026 ⚠️ secondary); book direct and pay by credit card (BBB via FOX 4, Sep 25, 2025; BBB via Local 3, Nov 9, 2026).
@@ -235,7 +239,7 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 - ⚠️ A3 Phoenix is September 2025 (the cancellation): date in a Jeff note. Timed on a Whisper transcript of the page's video stream.
 - ⚠️ A4 and A9 are timed on the YouTube copy's captions (LG3ZJa_OnOU, 4:14); ABC7's site copy runs one second shorter.
 - ⚠️ A5 Rivlin is August 2025: date in a Jeff note. Upload date unconfirmed (YouTube blocked the lookup).
-- ⚠️ A6 no transcript or length; manual pull.
+- ⚠️ A6 no transcript or length for either TikTok; manual pulls. Clip 6 (@shane.wilson0712) was added by the producer and I couldn't see its content: confirm it's an airline email.
 - ⚠️ A7 Dallas is September 2025: date in a Jeff note. The Florida couple in the out is March 2024: date in a Jeff note.
 - ⚠️ YouTube view counts and upload dates: confirmed only for WPLG (Aug 1, 2026, ~25K). The other dates are the outlets' story dates.
 - ⚠️ The Instagram reel the producer sent (Dbs_h8yDoyy) is unplaced: it wouldn't load here.
@@ -245,11 +249,12 @@ When a flight goes wrong, people search for the airline's number, and the "agent
 - A3 LEGAL: the cut keeps the impostor reveal (segment 3) with her complaint about American Airlines (segment 1). Approve the three-part cut, or trim segment 1.
 - A4 LEGAL: the cut leaves out her claim that Icelandair's own chat gave her the number (the airline denies it). Approve.
 - A7 and A8 LEGAL: the booking company and the two accused men are named in the packages; the copy attributes ("investigators say") and says the company didn't answer. Approve.
+- A6: two TikToks now (clips 5 and 6). Keep both, or pick the stronger one after the manual pull?
 - A5 is WEAK: keep the Rivlin clip under the demo, or let the demo carry the beat alone? If the demo turns up a scam number on camera, cut the clip.
 - The demo (A5): who sets up and screen-records Jeff asking Google's AI for an airline's number?
 - A8 is a thief, not a scam: keep it, cut it, or swap in ABC 10 San Diego's serial luggage thief ([WDOR0oT9PA4](https://www.youtube.com/watch?v=WDOR0oT9PA4), ~2.2M views, older victim on camera, upload date unconfirmed)? It's the biggest clip we found, but it's likely older.
 - A7: the case changed from the pre-bible's Florida couple (no video) to the Dallas cousins (FOX 4, on camera); the Florida couple is now one line in the out. OK? If yes, the row becomes SWAP.
-- A9: the planned BBB clip had no reachable video, so clip 8 is ABC 7 Chicago's tip under step 1. OK? If yes, the row becomes SWAP.
+- A9: the planned BBB clip had no reachable video, so clip 9 is ABC 7 Chicago's tip under step 1. OK? If yes, the row becomes SWAP.
 - The producer's Instagram reel: what is it, and which block does it belong in?
 - Sponsor spots for the break.
 - Guest: none booked. Amy Nofziger (AARP) or The Points Guy's Michelle Couch-Friedman if the room wants one.

@@ -231,6 +231,21 @@
      "TikTok refuses requests from here: manual pull, no timecode",
      "views ~151K per BroBible Nov 7, 2026, not seen"
     ]
+   },
+   {
+    "url": "https://www.tiktok.com/@shane.wilson0712/video/7703736440391306509",
+    "source_type": "first_person",
+    "score": 70,
+    "tone": 8,
+    "authenticity": 8,
+    "quality": 6,
+    "fit": 8,
+    "segments": [],
+    "reasoning": "Producer-supplied second TikTok (11/11); content unseen.",
+    "flags": [
+     "MANUAL",
+     "content unseen"
+    ]
    }
   ],
   "rejected": [],
