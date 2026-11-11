@@ -16,3 +16,21 @@ Strong draft. The research is careful and the voice is close. Fix these, as move
 10. The sponsor bridge: keep it to the stock bridge only. The skill says sponsor copy is written only if asked, so cue the spot and leave the read to the producer.
 
 Then re-run check_bible.py, save as sonnet_draft_v2.md, update the source log if anything changed, and reply with the checker counts and what you changed.
+
+## Round 2 (on sonnet_draft_v2.md)
+
+All ten round-1 notes landed. The spoilers are gone, the Illinois callback reads clearly, Fly-n-Fare is resolved, and the overclaim is fixed. The bridge question is fine: keep the stock bridge as you have it.
+
+One thing left, and it's the biggest: length. At about 1,800 spoken words, Jeff is reading more than he can riff on, and the room will cut it anyway. This is not about the word band. Do a tightening pass on these moves, with no new facts and no new lines:
+
+1. Inside each stop, cut lines that restate what the clip just said, or what the button just said. Keep the specific (number, place, company) and drop the paraphrase around it.
+2. The Points Guy beat runs long for a beat with no clip of its own. Keep the finding, where the numbers sat, and Google's response; drop the connective lines.
+3. The AmEx segment: one of its lines is the company's boilerplate about reviewing claims. Keep it only if it carries something the viewer can use.
+4. The protection section: the credit-card explanation and the dispute advice now say the same thing in three places (the AmEx segment, the Texas button and the protection list). Keep it once in the stops and once in the list.
+5. The pre-sponsor tease and the tease at the top both promise the one rule. That's correct; just make sure nothing else in the pre-sponsor tease repeats the top tease word for word.
+6. Aim for every stop to end on one usable takeaway line, not two or three.
+
+Then re-run check_bible.py, save as sonnet_draft_v3.md, update the source log if needed, build both deliverables with build_bible.py and build_source_log.py (titles below), run verify_format.py on the bible, and reply with the checker counts, the spoken body word count and the tease word count.
+- Bible: /home/user/Rossen/runs/W_11182026/sonnet-bible/F2 Wed 11_18 -- <Working Title> -- SONNET.docx
+- Source log: /home/user/Rossen/runs/W_11182026/sonnet-bible/F2 Wed 11_18 -- <Working Title> -- SONNET -- SOURCE LOG.docx
+Pick the working title from Kyle's three title options in the outline. Use the synced skill's scripts.
