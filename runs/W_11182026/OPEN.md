@@ -26,3 +26,10 @@ Outline open calls (11/11):
 - [ ] A2/A3 outcues from Whisper on site video: confirm on the pull
 - [ ] Pre-bible correction from the WOWT video: the family thought it was Delta, filed a card fraud report (outcome unknown), wasn't stranded in the end
 - [ ] A6 clip 6 (producer-added 11/11): TikTok @shane.wilson0712 7703736440391306509, manual pull; content unseen here, confirm it's an airline email; keep both TikToks or pick one
+
+Bible (11/11), from Kyle's outline (producer upload): `bible/F2 Wed 11_18 -- These NEW Travel Scams Can RUIN Your Entire Trip.docx` + `-- SOURCE LOG.docx` (source `bible/draft.md`, `bible/sources.md`). FINAL, 9 clips (Kyle's 2-11 renumbered 1-9; his 1 = open package cue, his 4 = demo cue), one sponsor break, no guest. Review loop: 2 rounds, 7 BLOCKERs fixed (`bible/REVIEW_LOOP.md`).
+- [ ] Sponsor for the one break (OmniWatch?)
+- [ ] Google demo: who records it before Fri 11/13
+- [ ] Confirm on the pull: clip 2 in at 2:24 (scam number read aloud just before), clip 9 FOX 5 timecodes (Kyle's, site copy), clip 4 TikTok, clip 1 WOWT
+- [ ] AirTag airline list against Apple's page; AirTag link (Amazon or Apple)
+- [ ] Graphics 001-002 (prompts in chat)
