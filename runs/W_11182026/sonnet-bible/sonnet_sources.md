@@ -1,7 +1,7 @@
 ## CLAIMS
 | Claim | Status | Source | Scope |
 |---|---|---|---|
-| Open package: the voice says "This is Ethan calling you from Icelandair support desk"; the copy calls it a scammer pretending to be an airline | CONFIRMED | https://www.youtube.com/watch?v=LG3ZJa_OnOU (92.6-98.9s) | Reporter says the number was not Icelandair's; Icelandair says the refund communications were with a third party. Copy never says Ethan is the man who logged in and canceled; JEFF note on the Icelandair line says so. "Voicemail" and the "SCAM VOICEMAIL" banner come from Kyle's outline; the captions don't say voicemail. |
+| In the ABC7 report, a voice says "This is Ethan calling you from Icelandair support desk" on the later refund calls | CONFIRMED | https://www.youtube.com/watch?v=LG3ZJa_OnOU (92.6-98.9s) | Reporter says the number was not Icelandair's; Icelandair says the refund communications were with a third party. Copy never says Ethan is the man who logged in and canceled; JEFF note on the Icelandair line says so. |
 | She says a scammer logged into her account and canceled her real flight | CONFIRMED | https://www.youtube.com/watch?v=LG3ZJa_OnOU (81-84s) | Her words; copy attributes in the tease and the re-entry line ("SHE SAYS"). |
 | Her claim that Icelandair's own chat gave her the number is left out | CONFIRMED | https://www.youtube.com/watch?v=LG3ZJa_OnOU (34-58s) | Producer instruction. Clip 3 starts at 0:59, after the claim and Icelandair's denial. Not in tease, runway or button. |
 | Illinois woman paid about 2,000 dollars for non-refundable Icelandair tickets, never got it back, was refunded her taxes | CONFIRMED | https://www.youtube.com/watch?v=LG3ZJa_OnOU (84-90s) | Copy: "2 thousand dollars", "all she got back was her taxes". |
@@ -65,7 +65,7 @@
 Clip numbering: the outline's Clips 2, 3, 5, 6, 7, 8, 9, 10, 11 are bible clips 1 through 9. The outline's Clip 1 is the open package cue and its Clip 4 is the Google demo cue.
 Timecodes: Round 1 moved the outs on clips 2, 3, 5, 6 and 7 to the caption boundaries (see the CLIPS table). Clip 2's middle out (2:40) and clips 1, 4, 8 and 9 are still as Kyle gave them. Clip 2 now starts its second segment at 2:24 and clip 7 starts at 0:15.
 YouTube vs site copy: WOWT (clip 1) and FOX 5 (clip 9) were timed on the site copy. The YouTube links are the producer's, and their lengths haven't been checked.
-Two clips come from one ABC7 package three times (open, clip 3, clip 5). Each adds something different (the voice, the cancellation, the refund), so they were kept.
+Clips 3 and 5 come from one ABC7 package. Each adds something different (the cancellation, the refund), so both were kept.
 Google demo: the lines after the roll are a red PRODUCER cue until the recording exists.
 Unverified items kept out of the copy: the hospital leg of the AirTag route, the "got everything back except the clothes" line, the FAA claim, and the airline names in Kyle's AirTag payoff.
 Not re-read in this pass: the WSB-TV, WMAR 2, TPG, BroBible, NBC10 and Newsweek pages. Their facts come from the producer's research brief.
