@@ -21,3 +21,17 @@ step 1 are all right. Notes, most important first:
 11. **"Costco" as a crime scene.** It's named at lines 29, 159 and 202, and clip 4 is a Costco lot too. Line 29 (Jeff's store) stays. At 159 and 202 the clips name the store, so the copy doesn't need to. That keeps Costco from reading as the dangerous lot.
 
 Save the result as `draft_v2.md` (leave v1 untouched), re-run the checker, and update `sources.md` if any claim changes.
+
+## Round 2 (on draft_v2.md)
+
+Round 1 landed: the "saying no isn't enough" turn, the attributed Lynnwood runway and the de-spoiled clip 7 runway are all better. This is a tightening pass. Notes:
+
+1. **The Lynnwood button lost the injury (reaction first).** The stop is about the turn to violence, but line 112 opens on the cash. React to what happened to the wife first, then the money as the second beat. One line each.
+2. **The clip 1 fix needs the door shut fast (advice that fails the target).** In the clip, the woman reached him as he was getting into the car. "Get inside and lock" only works if the door is shut and locked right away, before anyone reaches it. Make that the point of lines 56-58.
+3. **Vallejo button still replays the clip.** Line 141 repeats the arrest and the second robbery, both in the clip's last ten seconds. Keep the minors note on the reaction line, or cut the line and let line 143 follow the reaction.
+4. **Third mention of thirty minutes.** It's in the tease and the clip 5 button, and step 3 says it again (line 290). The list carries the move, not the case again.
+5. **"It started at a Walmart" (line 66) adds a sequence the source doesn't give.** The Walmart was one stop on several days of approaches. Keep it to where it happened.
+6. **"Store" twice in the Portland runway (lines 151-153).** One of them can go.
+7. **The demo cue needs the tracker type.** The phone alerts only fire for AirTag-type Bluetooth trackers, the exact limit line 258 states. Tell production the demo has to use one of those, or the Android half won't alert on camera.
+
+Save as `draft_v3.md` (leave v2 untouched), re-run the checker, update `sources.md` if a claim changes.
