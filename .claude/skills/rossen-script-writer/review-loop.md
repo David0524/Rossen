@@ -17,8 +17,12 @@ touches it.
 
 ## When it runs
 
-After `check_bible.py` is clean and **before** `build_bible.py`. That gives
-the order: draft → check → fix → **review loop** → build → verify → deliver.
+After the director's last round (`writing-team.md`, step 4), with
+`check_bible.py` clean and **before** `build_bible.py`. That gives the order:
+research packet → writer draft → director rounds → **review loop** → build →
+verify → deliver. When a writer subagent wrote the draft, the director sends each
+fix below to that writer as a note (the problem and the move, not the line), and
+the writer makes the edit.
 
 Skip it only if the producer says so ("skip the review"), or if the request is
 a small targeted edit to an existing bible: a line or two, with no new facts,

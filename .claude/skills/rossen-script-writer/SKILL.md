@@ -9,9 +9,12 @@ description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Rep
 
 | File | Load when |
 |---|---|
+| `writing-team.md` | **Every new bible or whole-bible rewrite, first.** How it gets written: the director's research packet, the writer subagent's voice prep and draft, up to three director rounds, then the review loop. |
+| `templates/research-packet.md` | Building the research packet (the director, before anyone writes). |
+| `templates/writer-brief.md` | Briefing the writer subagent. |
 | `references/line-rules.md` | **Every draft and every voice pass.** The team's line-level rules: open, clip in/out, tips, hedging, first person. |
 | `references/jeff-notes.md` | **Every draft.** What goes in a JEFF PLEASE NOTE comment instead of the copy. |
-| `references/producer-kit/rossen-voice.md` | Every draft. Jeff's voice from five livestreams and the 12-point checklist. |
+| `references/producer-kit/rossen-voice.md` | **Every draft, all of it, before writing a line**, with three aired livestream transcripts (`writing-team.md`, step 2). Jeff's voice from five livestreams and the 12-point checklist. |
 | `references/clip-contract.md` | Placing clip beats; any marker error from the checker. DRAFT/FINAL markers, BROLL, orientation, lead-ins. |
 | `running-orders.md` | Laying out a document. Skeletons for every show shape and the Friday walkthrough. |
 | `references/producer-kit/bible-format-ghost-tapping.md` | Background on the skeleton every scam bible follows. |
@@ -33,11 +36,25 @@ description: Write or revise a Bible Script for the Jeff Rossen show (Rossen Rep
 | `scripts/check_bible.py` | **Before delivering. Always.** |
 | `scripts/build_bible.py`, `scripts/build_source_log.py`, `scripts/verify_format.py` | Rendering and confirming. |
 
-The workflow is **draft → check → fix → repeat → review loop → build →
-verify**. The review loop (`review-loop.md`) runs the final reviewer on the
-draft in a background agent and fixes **BLOCKERs only**: wrong facts, unsafe
-advice, legal exposure. It stops after two rounds, and every WARNING and NOTE
-goes to the producer untouched.
+The workflow (producer, 11/11/2026) is **research packet → voice prep → writer
+draft → director rounds (up to 3) → review loop → build → verify**. Details are in
+`writing-team.md`:
+
+- **This session is the director.** It builds the research packet first: every
+  fact with its source and dates, every clip window re-read against its
+  transcript, and the traps.
+- **One writer subagent writes every word.** It reads Jeff's voice guide and three
+  aired livestreams before drafting, and runs `check_bible.py` itself.
+- **The director's notes name the problem and the move, never a replacement
+  line.** The director never edits the draft.
+- **The review loop (`review-loop.md`) runs last.** A fresh reviewer fixes
+  **BLOCKERs only**: wrong facts, unsafe advice, legal exposure. It stops after
+  two rounds, and every WARNING and NOTE goes to the producer untouched.
+
+A small targeted edit (a line or two, no new facts or clips) skips the split and
+the loop.
+
+Everything below is the craft the writer follows and the director checks against.
 
 ## Precedence — one order, applied everywhere
 
@@ -943,12 +960,14 @@ F2 Wed 10_14 -- He Said He Was Tom Selleck -- SOURCE LOG.docx
 
 Format detail in `docx-format.md`.
 
-The chat reply is short: first the **review loop** summary (rounds run,
+The chat reply is short: first the **director rounds** in a line each (what
+each round changed), then the **review loop** summary (rounds run,
 BLOCKERs fixed with before → after, any still blocking, and the count of notes
 left for the producer), then the stage, anything assumed (story count), any clip
 change against the outline, anything declined and why, the open decisions, and
-what in the source log needs a human before air. The loop's log is
-`REVIEW_LOOP.md` in the run folder.
+what in the source log needs a human before air. The run folder keeps the
+research packet, every draft round, `REVIEW_NOTES.md` (the director's notes) and
+`REVIEW_LOOP.md` (the loop's log).
 
 ## Do not over-correct
 
@@ -976,6 +995,16 @@ script can't see:
 
 - The user's instructions — show day, story count, guest, stage — were followed,
   and anything assumed is stated in the reply.
+- The process in `writing-team.md` ran: a research packet exists, the writer
+  read the voice guide and three aired livestreams before drafting, and every
+  director note named a problem and a move, not a line. No line in the bible
+  comes from the brief or the packet.
+- Every clip window was read whole, plus about 20 seconds after the out: no phone
+  number, address or minor, and no accusation left unanswered.
+- No header, runway, pre-sponsor tease or `NEXT` line gives away an outcome the
+  clip delivers. Accused people stay accused everywhere, including the tease.
+  Every refund, demo and rule is stated no bigger than the source.
+- Every piece of advice works for the people the scam targets.
 - Every caution flag from the input is honoured in the copy, including the
   tease, and logged.
 - Every person is introduced by identity drawn from the source, with nothing
