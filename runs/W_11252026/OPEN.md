@@ -33,6 +33,6 @@ Four scams: necklace swap (A2-A4, adds the Lynnwood H-Mart violence + $40K socks
 Bible (11/11, new writer/director process): `bible/F2 Wed 11_25 -- They're Waiting For You In The Parking Lot.docx` + SOURCE LOG, from Outline V2. Research packet, drafts v1-v4, REVIEW_NOTES.md, REVIEW_LOOP.md in `bible/`.
 - [ ] Clip 6 (ABC4 kUy077XD5To) MANUAL: pull and time it, or her TikTok; confirm it's her case, not the 2025 dent-repair warning
 - [ ] Book the tracker demo (AirTag-type tracker so Android alerts) or cut to phone screens
-- [ ] Sponsor for the one break
+- [x] Sponsor: OmniWatch (standing rule; stock bridge added 11/12)
 - [ ] Ask Costco for comment? (copy never says "we reached out")
 - [ ] Police source for "get in, shut and lock the door right away" / "let jewelry go"
