@@ -33,3 +33,13 @@ All seven round-1 notes landed. Two small ones; save as draft_v3.md.
 2. **Block 1 runway, "THIS ONE'S A BOY."** Reads as a fragment hanging off the AI line. Introduce him by what he is (a boy, crying, selling bags he crochets) in one plain line, then the views. Keep it short; don't rebuild what round 1 cut.
 
 Nothing else. Re-run the checker and reply with counts and warnings.
+
+## Review loop round 1 fixes (BLOCKERs only; on draft_v3.md)
+
+The independent reviewer found three BLOCKERs. Save as draft_v4.md. Fix only these.
+
+1. **Block 3 runway, "IN HIS OWN VOICE."** Contradicted by clip 4 itself (2:09, "neither is that voice"; 2:14, "that sounds just like me. It's AI"). The voice was faked to sound like him. Make the line say it sounded like him, not that it was his. The same slip is in sources.md (and was in my packet, fact 10): fix the claim row too.
+2. **Block 2 header, "IS SELLING YOU JUNK."** ABC never says the products are junk, and George's Caps disputed it on record. The producer approved this header, so don't rewrite it: keep it and add one red producer cue directly under it offering the version without that phrase, so the producer chooses.
+3. **Clip 2 names the Alune Lighting Company** (1:15–1:44) with no response line. Add to the existing Jeff note on the button after clip 2: ABC reported no response from it, and the site has since been taken down.
+
+Re-run the checker, update sources.md for #1, and reply with counts and the exact before → after for each.
