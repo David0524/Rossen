@@ -24,3 +24,12 @@ Strong draft: facts are clean, every trap in the packet avoided, the legal edit 
    - Step 1: "A SMALL AMERICAN SHOP RUN FROM ANOTHER COUNTRY? SAME THING." Plenty of real pages are managed from abroad. Keep the test to the mismatch between the story the page tells and what the box shows, as your Jeff note says.
 
 No other changes. Re-run the checker, then reply with counts, warnings, and a one-line list of what moved.
+
+## Round 2 (on draft_v2.md)
+
+All seven round-1 notes landed. Two small ones; save as draft_v3.md.
+
+1. **Block 5 runway, "SHE SAYS THERE WAS NOTHING FAKE ABOUT HOW IT SOUNDED."** Two problems: it paraphrases her line from inside the clip (1:44, "nothing that could have convinced me…") into something she didn't say, and it hands the viewer the clip's strongest beat before it plays. Cut it; the runway's question already sets the clip up.
+2. **Block 1 runway, "THIS ONE'S A BOY."** Reads as a fragment hanging off the AI line. Introduce him by what he is (a boy, crying, selling bags he crochets) in one plain line, then the views. Keep it short; don't rebuild what round 1 cut.
+
+Nothing else. Re-run the checker and reply with counts and warnings.
