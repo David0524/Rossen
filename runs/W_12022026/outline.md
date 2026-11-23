@@ -17,7 +17,7 @@ Scammers are using AI to build fake people with sad stories, a bullied boy and s
 7. //// Break: Omniwatch, led in from the phone story
 8. THE SAME CRYING CALL HIT THIS DAD WORD FOR WORD… AND YOUR PHONE COULD BE NEXT (clip 7)
 9. A FAKE TV STAR CAN TAKE YOUR HOME… THIS WOMAN SOLD HERS FOR HIM (clip 8)
-10. HERE'S HOW TO PROTECT YOURSELF (clips 9–11)
+10. HERE'S HOW TO PROTECT YOURSELF
 11. Close
 
 ## THE TEASE
@@ -145,36 +145,16 @@ Scammers are using AI to build fake people with sad stories, a bullied boy and s
 ## HERE'S HOW TO PROTECT YOURSELF
 `A9 · the fix`
 
-1. **BEFORE YOU BUY FROM A SAD STORY, OPEN THIS ONE BOX ON FACEBOOK** (the one box from the tease)
-   - Tap the page's name, then "Page transparency."
-   - It shows when the page was made, its old names, and what country the people running it are in.
-   - A shop "in business since 1950" with a page made last month is lying to you. Watch, then see what a second copy of the same page used to be called.
-   - **CLIP 9 (HORIZONTAL):** [Ask Grammy — This Sweet Old Couple Doesn't Exist, and Their "Handmade" Jewelry Is Just as Fake](https://www.youtube.com/watch?v=20SIJt893vU) · Jul 14, 2026 · 9:28
-     - **1:01–1:14 ("DECADES IN THE MAKING") // BUTT 1:39–2:03 ("GO OUT OF BUSINESS") // BUTT 2:37–3:06 ("DECADES OF HERITAGE")**
-     - *Soundbite: "Here's the first page. It calls itself Maya and Henry's, established 1950, a beloved family jewelry line decades in the making." // "I'm going to go ahead and click on the page name to find out when the Facebook account was created. So this page was created in June of 2026… Just on time to go out of business." // "I'm going to click on transparency… before it was Maya and Henry's jewelry, this page was called something in Spanish that roughly translates to 'the great blackout'… Then, overnight it became a beloved vintage jewelry brand with decades of heritage."*
-   - **DEMO (show-produced):** screen recording of the taps, for a graphic on the taped show.
-2. **"CLOSING FOREVER"? SEARCH THE SHOP NAME PLUS "SCAM"**
-   - Put the owner's photo into Google Lens. Fake owners show up on other shops too.
-   - Look for a real street address. A store that keeps running "last sale" ads isn't closing.
-3. **LOST PET? NO ONE GETS PAID BEFORE YOU SEE YOUR DOG**
-   - Pet hospitals there say they never ask for emergency payment over the phone.
-4. **A CRYING CALL FOR MONEY? HANG UP AND CALL THEM BACK**
-   - Call your loved one on the number already in your phone. Investigators in Houston say the same. Listen.
-   - **CLIP 10 (HORIZONTAL):** [FOX 26 Houston — 71-year-old loses $15K in AI voice clone scam](https://www.youtube.com/watch?v=qsfBbmPp_v0) · Sep 24, 2025 · 3:21
-     - **2:51–3:12 ("RED FLAGS THAT IT'S A SCAM") // BUTT 2:00–2:16 ("THE CALL THAT YOU JUST RECEIVED")**
-     - *Soundbite: "If you do get a call from a loved one saying they're in trouble and need money right away, investigators say call that person with the number that you have stored in your phone. Call the agency that's asking for the money from the phone number you find on their website. And if they are asking for crypto or gift cards, those are red flags that it's a scam." // "The Harris County Public Defender's Office wants you to know they will not call asking for money. Call the public defender's office and ask for that person, and ask to speak with someone about the call that you just received."*
-   - Public defenders don't call for bail money. No court takes cash by courier or a Bitcoin machine.
-   - And set a family safe word today. Pick a word only your family knows. A crying voice that can't say it isn't your family.
-5. **NEVER SEND MONEY TO SOMEONE YOU HAVEN'T MET IN PERSON**
-   - No matter who they look like, or how famous they are.
-6. **ZELLE, GIFT CARDS, CASH OR CRYPTO? IT'S A SCAM. BUYING ONLINE? USE A CREDIT CARD.**
-   - The fake police wanted Zelle. The fake lawyers wanted cash and Bitcoin. The fake TV star wanted gift cards.
-   - Now they're even faking kids with Down syndrome to sell you lamps. This man ordered one on purpose. It never came. So how did he get his money back? Listen.
-   - **CLIP 11 (HORIZONTAL):** [Scott Shafer — This AI generated kid is scamming people](https://www.youtube.com/watch?v=4hJ-Wqe4MMc) · Jun 27, 2026 · 13:40
-     - **9:14–9:38 ("MARKED DOWN FROM 129") // BUTT 9:47–10:32 ("NEVER SHOWED UP")**
-     - *Soundbite: "The kid with Down syndrome who was making the little resin Godzilla statues… I ordered one of those Godzilla lamps from Milo. And that thing was very expensive. It cost me $89 marked down from 129." // "When I purchased it, my credit card immediately flagged it… So, they didn't let the transaction go through… I waited 2 weeks and nothing happened… no communication whatsoever… Eventually, I had to cancel the order. I contacted my credit card company and they refunded the purchase. So, that one never showed up."*
-     - ⚠️ LEGAL: the AI videos in this piece mock disabilities and carry slurs after 1:10. Use only the windows above. The jump at 9:38–9:47 skips the shop's web address: never air it.
-   - His card company flagged it first, and when it never came, they gave him every penny back.
+1. **BEFORE YOU BUY FROM A SAD STORY, CHECK THIS ONE BOX** (the one box on Facebook from the tease)
+   - Tap the page's name, then "Page transparency." It shows when the page was really made, and what country the people running it are in.
+   - "Family business since 1950," but the page was made last month? It's fake.
+   - **DEMO (show-produced):** a screenshot of the Page transparency screen, as a graphic.
+2. **A CRYING CALL FOR MONEY? HANG UP AND CALL THEM BACK**
+   - Use the number already in your phone, not the one that called you.
+   - And pick a family safe word today. A voice that can't say it isn't your family.
+3. **SOMEONE IN TROUBLE WANTS ZELLE, GIFT CARDS, CASH OR CRYPTO? IT'S A SCAM.**
+   - Real police, lawyers, vets and TV stars don't ask for it. Scammers do.
+   - Buying online? Use a credit card, so you can get your money back.
 
 ## CLOSE
 
@@ -190,13 +170,13 @@ Scammers are using AI to build fake people with sad stories, a bullied boy and s
 ## Spine
 
 - **In one sentence:** Scammers use AI to build fake people with sad stories (a bullied kid, a closing shop, a real grandpa's stolen face), then turn the sob story on what's yours (your lost dog, your daughter's voice, your heart) to get you to pay; one box on Facebook, one call back and one payment rule stop them.
-- **Hold back:** the Page transparency box (step 1), the call-back rule and the safe word (step 4), the payment rule (step 6). The tease promises "the one box on Facebook"; it never names it.
+- **Hold back:** the Page transparency box (step 1), the call-back rule and the safe word (step 2), the payment rule (step 3). The tease promises "the one box on Facebook"; it never names it.
 - **Peg:** NBC's crying "Jaden" (Jul 2026) and fresh cases through Nov 2026 (Haverhill); fake "closing" shops multiply before the holidays. The copy stays evergreen: no Giving Tuesday, no Black Friday.
 - **Climb:** two acts, closer to you each block. Act 1, the sob story you scroll past: an invented kid → invented old shopkeepers by the dozen → a real senior's face, stolen (A4 hinge: "they took it from his own videos; now they're using what you post"). Act 2, the sob story built from what's yours: your lost dog's post → your daughter's voice → the same script, everywhere → your heart and your home. Stakes climb with it: ~$100 → $40 → $40 → $1,900 → $15,000 → $15,000 → $81,000 and a condo.
 - **Framing:** a sad story about someone who isn't real, built to get your money, online or on your phone.
 - **Open package:** clip 1, "Jaden" crying over his crocheted bags.
 - **Payoff point:** A9 (step 1, the one box on Facebook).
-- **Weight:** 100% of show · 11 clips (about 13:10 of clip time, up from 9:00; see Open calls).
+- **Weight:** 100% of show · 8 clips (about 10:20 of clip time; see Open calls).
 
 ## Beats
 
@@ -210,7 +190,7 @@ Scammers are using AI to build fake people with sad stories, a bullied boy and s
 | A6 | 6 | Sharon Brightwell, Dover FL, mom (Jul 2025) | HAVE · HORIZONTAL | PICK | stakes: your family's voice, cash at your door | FOX 13 Tampa Bay Jul 18, 2025; pregnant woman; public defender; $15,000; courier; asked for $30,000 more; Hillsborough Sheriff |
 | A7 | 7 | Charles Lafko(ff), 71, Houston dad (Sep 2025); Madison Miller and her mom, Haverhill MA (Nov 2026) | HAVE · HORIZONTAL | PICK | development: the same script everywhere (the post-break scale beat) | FOX 26 Sep 24, 2025; DUI, pregnant woman; "Michael Steele"; $15,000 via Coinme; Boston 25 Nov 20, 2026 |
 | A8 | 8 | Abigail, mother, and her daughter Vivian, Los Angeles (Aug 2025) | HAVE · HORIZONTAL | PICK · LEGAL | stakes: the biggest loss, her home | GMA Aug 28, 2025; fake Steve Burton; $81,000; condo $350,000; $70,000 stopped; LAPD |
-| A9 | 9, 10, 11 | You (the viewer); Ask Grammy reviewer (Jul 2026); Scott Shafer, YouTuber who ordered the products (Jun 2026) | HAVE · HORIZONTAL | PICK · LEGAL | evidence: the check works; investigators' rule; the card refund (the win to end on) | Ask Grammy Jul 14, 2026 (Maya and Henry's page made June 2026); FOX 26 investigators' advice; Jurassic Sips; Milo Makes Art; $89 Godzilla lamp; credit card refund |
+| A9 | — | You (the viewer) | JEFF | — | — | — |
 
 ## Jeff should know
 
@@ -222,17 +202,14 @@ Scammers are using AI to build fake people with sad stories, a bullied boy and s
 - A6: July 2025. "AI" is her belief; detectives were investigating. The callers came back for $30,000 more and she didn't pay.
 - A7: September 2025. The deposits went through Coinme kiosks; Coinme says the money was gone within minutes. Haverhill (Nov 17, 2026): no money lost, police hadn't commented; "AI" is the daughter's belief.
 - A8: August 2025, from a police report via the family. Leave out the mother's diagnosis.
-- A9 step 6: the refund was an $89 lamp that never arrived, from a fake kid's shop called Milo Makes Art, not a mug. Shafer's own account (June 2026).
+- A9 step 3: "don't ask for it" is about money demanded in an emergency; plenty of real people use Zelle with family. The line is scoped to someone in trouble on purpose.
 
 ## The fix: sources
 
-- Step 1: Page transparency shows a page's creation date, name history and the country of its managers (Meta newsroom, "Making Pages and Accounts More Transparent"); shown on screen in Ask Grammy, Jul 14, 2026. ⚠️ Confirm today's tap path on the Facebook app.
-- Step 2: Google Lens image search shown in Ask Grammy; "no real address" (GMA/ABC News, May 8, 2026). ⚠️ No issuing-body source for "search the name plus scam."
-- Step 3: pet hospitals never ask for emergency payment by phone (10 Tampa Bay, Jan 2026).
-- Step 4: call back on the number you have; red flags are crypto and gift cards (Houston investigators via FOX 26, Sep 2025); public defenders won't call for money (Harris County Public Defender's Office via FOX 26); family safe word (WCCO, Oct 20, 2026). ⚠️ Add an FTC or FBI source for the safe word.
-- Step 5: never send money to someone you haven't met (LAPD via GMA, Aug 2025).
-- Step 6: crypto and gift cards are red flags (Houston investigators via FOX 26, Sep 2025); card refund (Scott Shafer, Jun 2026). ⚠️ Add the FTC's page on how to pay, for the official line.
-- Do-nothing test: no deadline or enrollment in this story; doing only step 1 leaves the phone scam open, so steps 4–6 close it.
+- Step 1: Page transparency shows a page's creation date, name history and the country of its managers (Meta newsroom, "Making Pages and Accounts More Transparent"); shown on screen in Ask Grammy, Jul 14, 2026, and AFP's how-to, Feb 17, 2026. ⚠️ Confirm today's tap path on the Facebook app before taping (AFP shows it under the page category → Transparency).
+- Step 2: call back on the number you have stored (Houston investigators via FOX 26, Sep 2025); check they are who they say, even if they sound like a loved one (FTC, "Family Emergency Imposter Scams," ftc.gov/imposters); family safe word (WCCO, Oct 20, 2026). ⚠️ Add an FTC or FBI page for the safe word.
+- Step 3: crypto and gift cards are red flags (Houston investigators via FOX 26, Sep 2025); public defenders won't call for money (Harris County Public Defender's Office via FOX 26); pet hospitals never ask for emergency payment by phone (10 Tampa Bay, Jan 2026); never send money to someone you haven't met (LAPD via GMA, Aug 2025). ⚠️ Add the FTC's page on how scammers ask to be paid, for the credit-card line.
+- Do-nothing test: no deadline or enrollment in this story. Step 1 alone leaves the phone open; steps 2 and 3 close it.
 
 ## Gaps
 
@@ -242,7 +219,6 @@ Scammers are using AI to build fake people with sad stories, a bullied boy and s
 - ⚠️ A6 Dover is July 2025: date in a Jeff note.
 - ⚠️ A7 Houston is September 2025: date in a Jeff note.
 - ⚠️ A8 the fake Burton is August 2025: date in a Jeff note.
-- ⚠️ A9 Shafer's purchases are June 2026: date in a Jeff note.
 - ⚠️ A7 Haverhill has no clip: Boston 25's page video didn't transcribe. Talking point only, or pull it by hand.
 - ⚠️ The original AI videos (the TikTok bag seller, the cat-shelter grandpa, the AI veterans) didn't come through; the news clips show them on screen.
 - ⚠️ Clip 7's transcript came from a different caption track than the earlier copy; times are on the linked upload's track.
@@ -251,17 +227,16 @@ Scammers are using AI to build fake people with sad stories, a bullied boy and s
 ## Open calls
 
 - Re-order (12/2 revision): two acts. Act 1 is the fake people you scroll past (Jaden → the shops → the stolen grandpa). Act 2 is the sob story built from what's yours (dog → daughter → break → Houston → TV star). The shops now come before the grandpa, so the invented people come first and the real stolen face follows. The dog now comes before the daughter, so stakes climb ($1,900 → $15,000) and the dog's Facebook post bridges into "they researched her family online." Houston lands right after the break as the "this is not a one-off" scale beat.
-- The fake-disabled-kids block (old A5, Scott Shafer) is no longer its own block. It was the same story as Jaden (a fake bullied kid selling things) and ended on a refund mid-climb. Its refund clip now proves step 6, so the show ends on a win. To restore it, put it back after A2 as its own block.
+- The fake-disabled-kids case (old A5, Scott Shafer) is now out of the show. It was folded into the fix as the refund clip, and the fix clips are cut (12/2). To restore it, put it back after A2 as its own block.
 - Clip 4 (grandpa): dropped the 5:15–5:28 "WASTED 40 BUCKS" butt, because it repeated clip 3's $40 watch right before it. Restore it if the room wants a buyer in that block.
-- Fix: the safe word is now part of step 4 (the crying call), the "never met" line is its own step 5, and step 6 is the payment rule that ties every case together. The steps now follow the show's order, one per block.
+- Fix (12/2, producer): no clips, three quick steps instead of six. Dropped as steps: the shop-name search and Google Lens, the lost-pet rule, and "never met" (now folded into step 3's "TV stars"). Each body block still ends on its own red flag, so nothing is lost on air.
 - Break: Ryan's rule 7 says to name two or three payoffs before the ad. The Omniwatch lead-in has no "coming up" line. If the room wants one: *Next:* the same crying call hitting a dad two states away, word for word, and the TV star who took a woman's home.
-- Clip extensions (12/2): ten of eleven clips are longer, 9:00 → about 13:10 of clip time. Clip 2 (the GMA shops piece) stays as it was, since it was already the longest. The old outline said "a 15-minute show," but the house running orders put the first ad read 13–20 minutes in. Confirm the target length. If it really is 15 minutes, cut in this order: clip 5's fence open (start at 0:40, saves 21 seconds), clip 4's church butt (22 seconds), clip 8's Burton tail (back to 2:33, saves 17 seconds), then clip 3, the watch.
+- Clip extensions (12/2): seven of the eight body clips are longer; with the fix clips cut, clip time is about 10:20. Clip 2 (the GMA shops piece) stays as it was, since it was already the longest. The old outline said "a 15-minute show," but the house running orders put the first ad read 13–20 minutes in. Confirm the target length. If it really is 15 minutes, cut in this order: clip 5's fence open (start at 0:40, saves 21 seconds), clip 4's church butt (22 seconds), clip 8's Burton tail (back to 2:33, saves 17 seconds), then clip 3, the watch.
 - Not extended on purpose: clip 1's next beat (1:37–1:50, a real 19-year-old whose videos were stolen for "Jaden") would give away A4's turn ("they steal real people"). Clip 7's Coinme line (funds gone within minutes, 2:17–2:32) is already in a Jeff note.
 - Omniwatch at the break; where does Chapter go?
 - A stronger open? The China grandmother who can't read, who secretly boarded a train to meet an AI boy until police stopped her (MBN, Oct 2026), could open the show or be a Jeff line in A2.
 - Add "they used your face"? Kathy Metz's photo was turned into a fake "uncle going to a nursing home" sale, and her friends lost thousands (wgal, Feb 2026). In the new order it slots between A4 and A5, where it would make the act-2 hinge even stronger (a viewer's own photo).
 - Haverhill: pull Boston 25's video by hand, or keep it as a Jeff line.
-- Graphics for the six steps, or Jeff rapid-fires them.
-- Clip 11 (LEGAL): the AI kid videos mock disabilities and carry slurs after 1:10; the cut stays inside the windows given, and skips the shop's web address.
+- One graphic for the three steps (plus the Page transparency screenshot), or Jeff rapid-fires them.
 - Clip 8 (LEGAL): the mother's diagnosis is named at 1:39–1:44; the extended cut ends at 1:38, so cut tight.
 - Clip 4 (LEGAL): the scam channels and products are named at 3:13–3:18, just past the out; keep them out.
