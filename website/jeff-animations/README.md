@@ -55,6 +55,54 @@ You don't need to change any markup. The script finds `.circular`, `.receipts .t
 - Zip-line speed: `T` in `gagZip` (3.6 s desktop, 2.8 s phone).
 - The pencil mark is graphite (`GRAPHITE`), not red. The site reserves red for prices and warnings.
 
+## Next step (optional): make the scissors cut something real
+
+Right now the scissors gag cuts a line that's drawn on a canvas, and nothing on the page changes. The upgrade below makes the cut piece actually come away from the page. Do this after the four gags above are live and approved.
+
+**The idea.** When Jeff reaches the end of the line, the strip of navy page above the cut becomes a loose flap.
+- It's pinned at the right end, where Jeff is standing.
+- Its left end drops a few pixels and tips down.
+- Behind it, a sliver of bare white paper shows through.
+- The cut edge is hard and straight, like a guillotine trim. It is not torn or soft.
+
+It should look like Jeff really clipped the page.
+
+**The hook is already in `jeff-puppet.js`.** When the cut finishes, the script:
+- adds the class `jeff-cut-done` to `.closer`;
+- fires a bubbling `jeff:cut` event on it, with `detail = { still, lineY, strip }`.
+
+`lineY` is the cut's height in px from the top of the strip. `still` is `true` when the visitor prefers reduced motion. In that case, show the end state with no movement.
+
+**How to build it:**
+
+1. **Structure.** Inside `.jeff-cut`, add a `div.jeff-flap` that covers the strip from the top down to the cut line. Its `height` is `lineY` px, read from the event detail or measured. Paint it with the same navy and halftone as `.closer`:
+   ```css
+   background-color: var(--navy-deep);
+   background-image: var(--tex-halftone);
+   ```
+   It must line up with the section's background so it's invisible until it moves. Use `background-attachment` / `background-position` relative to `.closer` so the dots don't jump.
+2. **The paper behind.** Give `.jeff-cut` a `::before` covering the same area in bare paper: `var(--thermal)` (`#FBFAF6`), or plain white.
+   - Add a thin inner shadow along its top edge, for example `inset 0 6px 8px -6px rgba(0,0,0,.45)`, so it reads as a layer under the page.
+   - Keep it hidden (under the flap) until the cut.
+3. **The motion**, on `jeff:cut` and only when `!detail.still`:
+   - Set `transform-origin: right bottom` on the flap.
+   - Animate `transform: rotate(-2.2deg) translateY(5px)` over about 450 ms, with a small overshoot and settle, the way every stop in the films does. Something like `cubic-bezier(.3,1.5,.5,1)`, or a keyframe that goes to -2.6deg and back to -2.2deg.
+   - The wedge of white that opens on the left is the "glimpse." At its widest it should be about 10–14 px on desktop and 8 px on phones. Never let it reach the "Clip this" headline.
+4. **The edge.** The flap's bottom edge stays crisp, with no blur and no border-radius.
+   - Add a 1 px light line on that edge so the cut catches the light: `box-shadow: 0 1px 0 rgba(244,239,227,.5)`.
+   - Add a soft drop shadow under the flap onto the white, for example `filter: drop-shadow(0 3px 3px rgba(0,0,0,.35))`.
+5. **Jeff stays put.** The Jeff canvas (`.jeff-stage` inside the strip) must sit above the flap and must not rotate with it: give it a higher `z-index` and keep it a sibling of the flap, not a child. He stands at the pinned end, so nothing he's touching moves.
+6. **Optional beat.** After the flap settles, Jeff can glance down at the gap: tilt his head about 0.1 rad for half a second, then back to centre. Add it in `gagCut` as a short `play()` after `cutDone`. Do it only if it reads well; skip it if it feels busy.
+7. **Reduced motion and print.**
+   - When `detail.still` is true, apply the final transform with no transition.
+   - In `@media print`, hide `.jeff-flap` and the `::before`.
+
+**Check before shipping:**
+- No layout shift: the flap is decoration, `aria-hidden`, and `pointer-events: none`.
+- The email field and button in `.closer` still work.
+- The white sliver never covers text.
+- At phone width the gap stays small and the flap doesn't overflow the screen sideways (`overflow: hidden` on `.jeff-cut` if needed).
+
 ## Files
 
 | File | What it is |

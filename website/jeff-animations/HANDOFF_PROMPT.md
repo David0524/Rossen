@@ -20,3 +20,5 @@ Before deploying, check a preview build:
 - With "reduce motion" turned on in the OS, the zip line shouldn't appear, and the other three should show still.
 
 Deploy it as a normal Vercel deploy. Then send me the preview URL to approve before it goes to production.
+
+Once those four are approved, build the scissors upgrade in the README's section "Next step (optional): make the scissors cut something real". When Jeff finishes cutting, the strip of page above the cut comes loose as a flap with a hard, straight edge, and a sliver of white paper shows behind it. The script already fires a `jeff:cut` event for it to hook into. Send that as its own preview too.

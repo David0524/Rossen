@@ -339,7 +339,9 @@
     }
     function still() { var G = geom(); st.clear(); line(st.ctx, G, G.x1); sk.draw(st.ctx, pose(G, G.x1, 0, false, .15)); }
     resizers.push(function () { if (state === 'done') still(); else if (state === null) { var G = geom(); st.clear(); line(st.ctx, G, G.x0); } });
-    if (!MOTION) { load().then(still); return; }
+    // hook for the 'cut-off flap' upgrade (README): fires once the coupon line is fully cut
+    function cutDone(isStill) { host.classList.add('jeff-cut-done'); host.dispatchEvent(new CustomEvent('jeff:cut', { bubbles: true, detail: { still: isStill, lineY: geom().y, strip: strip } })); }
+    if (!MOTION) { load().then(function () { still(); cutDone(true); }); return; }
     var G0 = geom(); st.clear(); line(st.ctx, G0, G0.x0);
     whenVisible(strip, '0px 0px -18% 0px', function () { load().then(run); });
     function run() {
@@ -351,7 +353,7 @@
         if (!walking) snip = 1 - seg(t, T, T + .25) * .85;
         st.clear(); line(st.ctx, G, X);
         sk.draw(st.ctx, pose(G, X, t, walking, walking ? snip : snip));
-        if (t > T + .3) { state = 'done'; still(); return false; }
+        if (t > T + .3) { state = 'done'; still(); cutDone(false); return false; }
       });
     }
   }
